@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import ExpertisePage from '../components/ExpertisePage.astro';
+---
+<Base
+  title="Développeurs & experts data freelances | digitags.work"
+  description="Développeurs front, back, fullstack, data scientists et webanalysts freelances, vérifiés et recommandés par leurs pairs, pour construire et mesurer vos produits digitaux."
+>
+  <ExpertisePage
+    eyebrow="Votre hub Tech & Data"
+    title="Construire robuste, décider data-driven."
+    lead="Développeurs, data scientists, data engineers et webanalysts : des profils seniors vérifiés pour développer vos produits et transformer vos données en décisions."
+    ctaLabel="Recruter un expert"
+    skillsTitle="Les compétences tech & data du réseau"
+    skills={["Développeur Front-End", "Développeur Back-End", "Développeur Fullstack", "Développeur Mobile", "Tech Lead", "DevOps", "Data Scientist", "Data Engineer", "Data Analyst", "Web Analyst", "Business Analyst", "Chef de projet Data"]}
+    reussites={[
+      { tag: "Analytics", title: "Mission Webanalyst senior", points: ["Conseil et analyse", "Plan de taggage complet", "Reporting et tableaux de bord"] },
+      { tag: "Data Science", title: "Mission Data Scientist", points: ["Analyses data avancées", "Reportings stratégiques", "Recommandations actionnables"] },
+    ]}
+  />
+</Base>

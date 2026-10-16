@@ -1,0 +1,35 @@
+backend:
+  name: github
+  repo: mjharpon/digitags
+  branch: main
+  base_url: https://api.netlify.com
+
+site_url: https://digitags.netlify.app
+display_url: https://digitags.netlify.app
+logo_url: https://digitags.netlify.app/assets/logo-mark.svg
+
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: blog
+    label: Articles du blog
+    label_singular: Article
+    folder: src/content/blog
+    create: true
+    slug: "{{slug}}"
+    preview_path: blog/{{slug}}
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: Titre, widget: string }
+      - { name: description, label: Description (SEO), widget: text, required: false }
+      - { name: date, label: Date, widget: datetime, required: false }
+      - name: tags
+        label: Tags
+        widget: select
+        multiple: true
+        required: false
+        options: [design, freelancer, product, recrutement, tech-et-data, webmarketing]
+      - { name: image, label: Image de couverture, widget: image, required: false }
+      - { name: draft, label: Brouillon, widget: boolean, default: false, required: false }
+      - { name: body, label: Contenu, widget: markdown }

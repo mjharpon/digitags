@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import ExpertisePage from '../components/ExpertisePage.astro';
+---
+<Base
+  title="Product Managers & chefs de projet freelances | digitags.work"
+  description="Product Managers, Product Owners, Scrum Masters et coachs agiles freelances, sélectionnés et recommandés par leurs pairs, pour mener vos projets digitaux au bout."
+>
+  <ExpertisePage
+    eyebrow="Votre hub produit & projet"
+    title="Des produits pilotés, des projets livrés."
+    lead="Product Manager, Product Owner, Scrum Master ou Coach Agile : le Hub vous aide à trouver le profil senior qui structurera votre delivery et fera réussir votre projet."
+    ctaLabel="Recruter un expert"
+    skillsTitle="Les compétences produit & projet du réseau"
+    skills={["Product Manager", "Product Owner", "Product Designer", "Coach Agile / Scrum", "Chef de projet Digital", "Chef de projet IT", "Chef de projet AMOA", "Manager de transition", "Responsable CRM"]}
+    reussites={[
+      { tag: "Chef de projet", title: "Lancement e-commerce TOD'S", points: ["Coordination au sein des équipes digitales", "Lancement du nouveau site e-commerce", "Interface entre métiers, design et tech"] },
+      { tag: "Product Owner", title: "Simulateur de devis d'assurance", points: ["Mission de huit mois en équipe", "Cadrage et priorisation du backlog", "Développement efficace du simulateur"] },
+    ]}
+  />
+</Base>

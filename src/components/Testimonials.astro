@@ -1,0 +1,51 @@
+---
+const testimonials = [
+  {
+    quote: "Sur nos projets, nous avons eu besoin ponctuellement d'experts en design en renfort. Recherche utilisateurs, production design ou formation UX : digitags nous a permis de trouver à chaque fois la bonne personne.",
+    name: "Thibaut Villamur",
+    role: "Head of Design — La Manufacture Digitale du Crédit Agricole",
+    initials: "TV",
+    color: "#2b46f0",
+  },
+  {
+    quote: "Le Hub nous a permis de trouver des talents de haut niveau pour la refonte UX de notre espace client ainsi que pour des projets de data science. Nous avons facilement trouvé la bonne personne, et limité le risque d'échec.",
+    name: "Thibaut Pfeiffer",
+    role: "CEO — EmprunteMonToutou.com",
+    initials: "TP",
+    color: "#f5b731",
+  },
+  {
+    quote: "digitags.work accompagne notre réseau international de revendeurs Autodesk sur l'analyse et la recommandation de plans stratégiques digitaux. Esprit d'entrepreneur, efficacité et très bonne capacité d'analyse.",
+    name: "Vuthea Lim",
+    role: "Marketing Manager — Techdata",
+    initials: "VL",
+    color: "#f2543d",
+  },
+  {
+    quote: "Une grande écoute et une réactivité impressionnante pour réaliser notre nouveau site. Le résultat : un site esthétique, fonctionnel, intuitif et parfaitement aligné avec nos objectifs stratégiques.",
+    name: "Olivier Vandermoten",
+    role: "CEO — Lichens",
+    initials: "OV",
+    color: "#111c3f",
+  },
+];
+---
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Ils ont fait appel au Hub.</h2>
+    <div class="testi-grid">
+      {testimonials.map((t) => (
+        <article class="testi-card">
+          <blockquote>«&nbsp;{t.quote}&nbsp;»</blockquote>
+          <div class="testi-person">
+            <span class="testi-avatar" style={`background:${t.color}`}>{t.initials}</span>
+            <div>
+              <p class="testi-name">{t.name}</p>
+              <p class="testi-role">{t.role}</p>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import ExpertisePage from '../components/ExpertisePage.astro';
+---
+<Base
+  title="Designers freelances seniors — UX, UI, Product | digitags.work"
+  description="Product Designers, UX/UI Designers, directeurs artistiques : des designers freelances sélectionnés et recommandés par leurs pairs, seuls ou en studio, pour votre projet."
+>
+  <ExpertisePage
+    eyebrow="Votre hub de designers"
+    title="Des designers seniors pour des produits qui convertissent."
+    lead="Product Designer, UX Designer, UI Designer ou directeur artistique : le Hub vous connecte au designer freelance qui correspond exactement à votre projet — sélectionné pour ses compétences et recommandé par ses pairs."
+    ctaLabel="Recruter un designer"
+    skillsTitle="Les compétences design du réseau"
+    skills={["UX Designer", "UI Designer", "Product Designer", "Web designer", "Directeur artistique", "Illustrateur", "Motion designer", "Artiste 3D", "Creative Lead"]}
+    reussites={[
+      { tag: "UX / UI", title: "Refonte UX d'un espace client", points: ["Audit complet du parcours existant", "Maquettage et prototypage", "Accompagnement jusqu'à la mise en production"] },
+      { tag: "Graphisme", title: "Campagnes Autodesk × Techdata", points: ["Création des visuels de campagne", "Déclinaisons multi-formats", "Cohérence avec la charte internationale"] },
+      { tag: "UX Research", title: "Design UX de bout en bout", points: ["Recherche utilisateurs", "Audit et recommandations", "Maquettage et mise en production"] },
+    ]}
+  />
+</Base>

@@ -1,0 +1,48 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0));
+
+const tags = [...new Set(posts.flatMap((p) => p.data.tags))].sort();
+---
+<Base
+  title="Le blog du Hub | digitags.work"
+  description="Recrutement freelance, design, product, tech & data : les conseils et retours d'expérience du réseau digitags.work."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Le blog du Hub</p>
+      <h1>Conseils et retours d'expérience du réseau.</h1>
+      <p class="lead">Recrutement freelance, design, product, tech &amp; data : ce que les experts du Hub apprennent sur le terrain.</p>
+      {tags.length > 0 && (
+        <ul class="chips" style="margin-top: 8px;">
+          {tags.map((t) => <li><a class="chip" href={`/tag/${t}`}>#{t}</a></li>)}
+        </ul>
+      )}
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 30px;">
+    <div class="container">
+      <div class="blog-grid">
+        {posts.map((p) => (
+          <a class="blog-card" href={`/blog/${p.id}`}>
+            {p.data.image && <img src={p.data.image} alt="" loading="lazy" />}
+            <div class="blog-card-body">
+              {p.data.tags[0] && <p class="case-label label-blue">{p.data.tags[0]}</p>}
+              <h2>{p.data.title}</h2>
+              {p.data.description && <p class="blog-desc">{p.data.description}</p>}
+              <span class="arrow-link">Lire l'article <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        ))}
+      </div>
+      {posts.length === 0 && <p class="section-lead">Les articles arrivent — la migration est en cours.</p>}
+    </div>
+  </section>
+
+  <CtaBanner />
+</Base>

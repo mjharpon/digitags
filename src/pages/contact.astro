@@ -1,0 +1,96 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Parler de mon projet | digitags.work"
+  description="Décrivez votre besoin au Hub : nous revenons vers vous rapidement avec les experts freelances ou studios qui correspondent à votre projet."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Contact</p>
+      <h1>Parlons de votre prochain projet.</h1>
+      <p class="lead">Décrivez-nous votre besoin en quelques lignes : nous vous rappelons dans la foulée pour cadrer le brief et solliciter les bons profils du réseau.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 20px;">
+    <div class="container contact-wrap">
+
+      <form class="form-card" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/merci">
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="hidden" style="display:none;">
+          <label>Ne pas remplir : <input name="bot-field" /></label>
+        </p>
+
+        <div class="field">
+          <label>Vous êtes</label>
+          <div class="radio-pills" id="profil-pills">
+            <label><input type="radio" name="profil" value="entreprise" checked /> Je cherche un talent</label>
+            <label><input type="radio" name="profil" value="freelance" /> Je suis freelance</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="societe">Société</label>
+            <input type="text" id="societe" name="societe" autocomplete="organization" />
+          </div>
+          <div class="field">
+            <label for="expertise">Expertise concernée</label>
+            <select id="expertise" name="expertise">
+              <option value="">— Choisir —</option>
+              <option>Design &amp; UX</option>
+              <option>Marketing &amp; Acquisition</option>
+              <option>Product &amp; Projet</option>
+              <option>Tech &amp; Data</option>
+              <option>Plusieurs expertises / une équipe</option>
+              <option>Autre</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="message">Votre brief</label>
+          <textarea id="message" name="message" required placeholder="Contexte, objectifs, délais, budget si vous l'avez…"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-dark">Envoyer mon brief</button>
+      </form>
+
+      <aside class="contact-aside">
+        <h2>Ce qui se passe ensuite</h2>
+        <ul class="aside-list">
+          <li><span class="hex-icon hex-icon-blue"></span> Nous vous rappelons rapidement</li>
+          <li><span class="hex-icon hex-icon-yellow"></span> Nous cadrons le brief ensemble</li>
+          <li><span class="hex-icon hex-icon-red"></span> Vous rencontrez les bons profils</li>
+        </ul>
+        <p>Vous préférez l'email&nbsp;?</p>
+        <a href="mailto:hello@digitags.work">hello@digitags.work</a>
+        <p style="margin-top:22px;">Paris &middot; Remote<br />
+          <a href="https://www.linkedin.com/company/18871359">LinkedIn — digitags.work</a>
+        </p>
+      </aside>
+
+    </div>
+  </section>
+
+  <script>
+    // Pre-select "Je suis freelance" when arriving via /contact?profil=freelance
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('profil') === 'freelance') {
+      const radio = document.querySelector('input[name="profil"][value="freelance"]');
+      if (radio instanceof HTMLInputElement) radio.checked = true;
+    }
+  </script>
+</Base>

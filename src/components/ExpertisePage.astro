@@ -1,0 +1,66 @@
+---
+import HowItWorks from './HowItWorks.astro';
+import Testimonials from './Testimonials.astro';
+import CtaBanner from './CtaBanner.astro';
+
+interface Reussite {
+  tag: string;
+  title: string;
+  points: string[];
+}
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  lead: string;
+  ctaLabel?: string;
+  skillsTitle: string;
+  skills: string[];
+  reussites: Reussite[];
+}
+
+const { eyebrow, title, lead, ctaLabel = "Décrire mon besoin", skillsTitle, skills, reussites } = Astro.props;
+---
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">{eyebrow}</p>
+    <h1 set:html={title} />
+    <p class="lead">{lead}</p>
+    <div class="hero-cta">
+      <a href="/contact" class="btn btn-dark">{ctaLabel}</a>
+      <a href="/metiers" class="btn btn-outline">Explorer les métiers</a>
+    </div>
+  </div>
+</section>
+
+<section class="skills-band">
+  <div class="container">
+    <h2>{skillsTitle}</h2>
+    <ul class="chips">
+      {skills.map((s) => <li><span class="chip">{s}</span></li>)}
+    </ul>
+  </div>
+</section>
+
+<HowItWorks />
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Nos dernières réussites.</h2>
+    <div class={`reussites-grid${reussites.length === 2 ? ' cols-2' : ''}`}>
+      {reussites.map((r) => (
+        <article class="reussite-card">
+          <p class="case-label label-blue">{r.tag}</p>
+          <h3>{r.title}</h3>
+          <ul>
+            {r.points.map((p) => <li>{p}</li>)}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<Testimonials />
+
+<CtaBanner />

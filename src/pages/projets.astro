@@ -1,0 +1,50 @@
+---
+import Base from '../layouts/Base.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+
+const LIVE = "https://www.digitags.work/projets";
+const projets = [
+  { slug: "concevoir-un-produit-digital", label: "Concevoir un produit digital" },
+  { slug: "mener-une-phase-dux-research", label: "Mener une phase d'UX research" },
+  { slug: "audit-ux", label: "Réaliser un audit UX" },
+  { slug: "design-thinking", label: "Mener un Design Thinking" },
+  { slug: "discovery-produit", label: "Réaliser un discovery produit" },
+  { slug: "strategie-produit", label: "Définir une stratégie produit" },
+  { slug: "identite-visuelle-creation-ou-refonte", label: "Créer ou refondre une identité visuelle" },
+  { slug: "refonte-de-site-internet", label: "Refondre un site internet" },
+];
+---
+<Base
+  title="Vos projets digitaux, réalisés avec le Hub | digitags.work"
+  description="Audit UX, refonte de site, discovery produit, identité visuelle… les projets digitaux que les freelances et studios du réseau digitags.work réalisent pour vous."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Les projets du Hub</p>
+      <h1>Réalisez vos projets digitaux avec le Hub.</h1>
+      <p class="lead">À l'intersection des plateformes de freelances et des agences : la couche conseil et organisation d'une agence, avec l'agilité et le choix d'un réseau. Voici les projets sur lesquels nous intervenons le plus.</p>
+      <div class="hero-cta">
+        <a href="/contact" class="btn btn-dark">Lancer mon projet</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Les projets les plus réalisés.</h2>
+      <div class="dir-grid">
+        {projets.map((p) => (
+          <a href={`${LIVE}/${p.slug}`} class="dir-card">
+            <span>{p.label}</span>
+            <span class="dir-arrow" aria-hidden="true">→</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <HowItWorks />
+
+  <CtaBanner title="Votre projet ne rentre pas<br />dans une case&nbsp;?" text="Tant mieux. Décrivez-le nous,<br />nous composons l'équipe qui va avec." />
+</Base>

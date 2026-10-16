@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  const tags = [...new Set(posts.flatMap((p) => p.data.tags))];
+  return tags.map((tag) => ({
+    params: { tag },
+    props: { posts: posts.filter((p) => p.data.tags.includes(tag)) },
+  }));
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+const sorted = posts.sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0));
+---
+<Base title={`#${tag} — Le blog du Hub | digitags.work`} description={`Les articles du blog digitags.work sur le thème ${tag}.`}>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Le blog du Hub</p>
+      <h1>#{tag}</h1>
+      <p class="lead"><a href="/blog" class="arrow-link">← Tous les articles</a></p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 30px;">
+    <div class="container">
+      <div class="blog-grid">
+        {sorted.map((p) => (
+          <a class="blog-card" href={`/blog/${p.id}`}>
+            {p.data.image && <img src={p.data.image} alt="" loading="lazy" />}
+            <div class="blog-card-body">
+              <h2>{p.data.title}</h2>
+              {p.data.description && <p class="blog-desc">{p.data.description}</p>}
+              <span class="arrow-link">Lire l'article <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner />
+</Base>

@@ -1,0 +1,184 @@
+---
+import Base from '../layouts/Base.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Testimonials from '../components/Testimonials.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+
+const expertises = [
+  { href: "/design", icon: "icon-uxui", title: "Design & UX", desc: "Expériences utiles qui convertissent." },
+  { href: "/sea-social-ads-seo", icon: "icon-paid-media", title: "Marketing & Acquisition", desc: "SEO, SEA, Social Ads : une croissance mesurable." },
+  { href: "/product-et-project", icon: "icon-crm", title: "Product & Projet", desc: "Des produits pilotés, des projets livrés." },
+  { href: "/tech-data", icon: "icon-data", title: "Tech & Data", desc: "Développement robuste, décisions data-driven." },
+  { href: "/recrutement-freelance", icon: "icon-seo", title: "Recrutement freelance", desc: "Le bon expert, validé par ses pairs." },
+  { href: "https://www.digitags.work/studios-et-collectifs", icon: "icon-tech", title: "Studios & Collectifs", desc: "Des équipes constituées, prêtes à démarrer." },
+];
+---
+<Base
+  title="digitags.work — Le hub des talents digitaux"
+  description="Ni une plateforme, ni une ESN : un réseau de plus de 1 600 experts freelances du digital, vérifiés et recommandés par leurs pairs. Seuls ou en équipe, pour accélérer vos projets."
+>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="talents">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <a href="/equipe-ia" class="notice-pill"><span class="pill-tag">Nouveau</span> Équipe Produit IA : du POC à la production <span aria-hidden="true">→</span></a>
+        <p class="eyebrow">Le hub des talents digitaux</p>
+        <h1>Les meilleurs talents digitaux. Réunis pour votre projet.</h1>
+        <p class="lead">Ni une plateforme, ni une ESN : un réseau de plus de 1 600 experts freelances vérifiés et recommandés par leurs pairs, seuls ou en équipe, pour accélérer vos projets digitaux.</p>
+        <div class="hero-cta">
+          <a href="/contact" class="btn btn-dark">Trouver un talent</a>
+          <a href="/contact?profil=freelance" class="btn btn-outline">Rejoindre le collectif</a>
+        </div>
+      </div>
+
+      <div class="hero-collage" aria-hidden="true">
+        <svg class="collage-lines" viewBox="0 0 530 500" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M85 230 H30 V440 H160" stroke="#F2543D" stroke-width="5"/>
+          <path d="M180 70 H90 V180" stroke="#F5B731" stroke-width="5"/>
+          <path d="M300 150 V250 H380" stroke="#111C3F" stroke-width="5"/>
+          <path d="M430 400 H505 V170 H440" stroke="#2B46F0" stroke-width="5"/>
+        </svg>
+        <span class="hex hex-blue"></span>
+        <img class="collage-photo p1" src="/assets/photos/talent-1.png" alt="" width="150" height="200" />
+        <img class="collage-photo p2" src="/assets/photos/talent-2.png" alt="" width="150" height="200" />
+        <img class="collage-photo p3" src="/assets/photos/talent-3.png" alt="" width="150" height="200" />
+        <img class="collage-photo p4" src="/assets/photos/talent-4.png" alt="" width="150" height="200" />
+        <img class="collage-photo p5" src="/assets/photos/talent-5.png" alt="" width="150" height="200" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST BAR ============ -->
+  <section class="trustbar">
+    <div class="container">
+      <div class="trust-card">
+        <div class="trust-row">
+          <p class="trust-count">Plus de <strong>1 600 talents</strong><br />dans notre réseau</p>
+          <ul class="trust-logos" aria-label="Ils nous font confiance">
+            <li class="tl-qonto">Crédit Agricole</li>
+            <li class="tl-lacoste">TOD'S</li>
+            <li class="tl-manomano">Mon Compte<br />Formation</li>
+            <li class="tl-alan">Techdata</li>
+            <li class="tl-backmarket">Autodesk</li>
+            <li class="tl-ledger">Lichens</li>
+          </ul>
+        </div>
+        <div class="trust-stats">
+          <div class="stat">
+            <span class="hex-icon hex-icon-blue"></span>
+            <span>15+ expertises digitales</span>
+          </div>
+          <div class="stat">
+            <span class="hex-icon hex-icon-yellow"></span>
+            <span>10 studios &amp; collectifs</span>
+          </div>
+          <div class="stat">
+            <span class="hex-icon hex-icon-red"></span>
+            <span>8 ans d'expérience</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERTISES ============ -->
+  <section class="expertises" id="expertises">
+    <div class="container">
+      <h2 class="section-title">Une expertise pour chaque enjeu.</h2>
+      <div class="expertise-grid">
+        {expertises.map((e) => (
+          <a href={e.href} class="expertise-card">
+            <img src={`/assets/icons/${e.icon}.svg`} alt="" class="expertise-icon" loading="lazy" />
+            <h3>{e.title}</h3>
+            <p>{e.desc}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <HowItWorks />
+
+  <!-- ============ CAS CLIENTS ============ -->
+  <section class="cases" id="apropos">
+    <div class="container">
+      <h2 class="section-title">Des talents qui font avancer les projets.</h2>
+      <div class="cases-grid">
+
+        <article class="case-main">
+          <div class="case-copy">
+            <p class="case-label">Cas client</p>
+            <p class="case-brand">Mon Compte Formation</p>
+            <p class="case-desc">Lancement SEO de la plateforme nationale de la formation professionnelle, aux côtés de la Caisse des Dépôts</p>
+            <div class="case-kpis">
+              <div class="kpi">
+                <span class="kpi-value kpi-blue">30,4K</span>
+                <span class="kpi-label">mots-clés positionnés en 6 mois</span>
+              </div>
+              <div class="kpi">
+                <span class="kpi-value kpi-red">Top 1</span>
+                <span class="kpi-label">sur « CPF » (246K rech./mois)</span>
+              </div>
+            </div>
+            <a href="https://www.digitags.work/cas-client/mon-compte-formation" class="btn btn-outline btn-sm">Voir le cas client</a>
+          </div>
+          <div class="case-dash" aria-hidden="true">
+            <div class="dash-row">
+              <div class="dash-tile">
+                <p class="dash-label">Contenus créés ou optimisés</p>
+                <p class="dash-value">600+</p>
+                <p class="dash-delta up">▲ stratégie éditoriale SEO</p>
+              </div>
+              <div class="dash-tile">
+                <p class="dash-label">Mots-clés en top 3</p>
+                <p class="dash-value">1 853</p>
+                <p class="dash-delta up">▲ à 6 mois du lancement</p>
+              </div>
+            </div>
+            <div class="dash-chart">
+              <p class="dash-label">Mots-clés positionnés</p>
+              <svg viewBox="0 0 320 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="chart-svg">
+                <polyline points="10,115 60,104 110,92 160,70 210,52 260,30 310,36"
+                          fill="none" stroke="#2B46F0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="260" cy="30" r="4" fill="#2B46F0"/>
+              </svg>
+              <span class="chart-tip">Mois 6<br /><strong>30,4K</strong></span>
+              <div class="chart-axis">
+                <span>M1</span><span>M2</span><span>M3</span><span>M4</span><span>M5</span><span>M6</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="cases-side">
+          <article class="case-side-card">
+            <div>
+              <p class="case-label label-blue">Insight</p>
+              <h3>Audit flash : évaluez votre maturité « freelance ready » en 10 questions</h3>
+              <a href="https://www.digitags.work/blog/audit-flash-evaluer-votre-maturite-freelance-ready-en-10-questions" class="arrow-link">Lire l'article <span aria-hidden="true">→</span></a>
+            </div>
+            <span class="side-shape side-shape-blue" aria-hidden="true"></span>
+          </article>
+          <article class="case-side-card">
+            <div>
+              <p class="case-label label-red">Projet</p>
+              <h3>Refonte de site internet : cadrer, designer, livrer</h3>
+              <a href="https://www.digitags.work/projets/refonte-de-site-internet" class="arrow-link">Voir le projet <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="mini-cart" aria-hidden="true">
+              <p class="mini-cart-title">Votre panier</p>
+              <div class="mini-line"><span class="mini-thumb"></span><span class="mini-bar"></span></div>
+              <div class="mini-line"><span class="mini-thumb"></span><span class="mini-bar"></span></div>
+              <button class="mini-btn" type="button" tabindex="-1">Valider</button>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <Testimonials />
+
+  <CtaBanner />
+</Base>

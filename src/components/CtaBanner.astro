@@ -1,0 +1,15 @@
+---
+const { title = "Parlons de votre<br />prochain projet.", text = "Décrivez-nous votre besoin,<br />nous revenons vers vous rapidement.", label = "Décrire mon besoin" } = Astro.props;
+---
+<section class="cta">
+  <div class="container cta-inner">
+    <h2 set:html={title} />
+    <p set:html={text} />
+    <a href="/contact" class="btn btn-dark">{label}</a>
+    <div class="cta-shapes" aria-hidden="true">
+      <span class="shape shape-white-hex"></span>
+      <span class="shape shape-blue-sm"></span>
+      <span class="shape shape-yellow-sm"></span>
+    </div>
+  </div>
+</section>

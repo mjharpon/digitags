@@ -1,0 +1,122 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "Accédez rapidement à des experts freelances sélectionnés, seuls ou en équipe, pour accélérer vos projets digitaux.",
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="digitags.work — accueil">
+        <img src="/assets/logo-mark.svg" alt="" class="logo-mark" />
+        <span class="logo-text">digitags<span class="logo-tld">.work</span></span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+        <a href="/#expertises">Expertises</a>
+        <a href="/equipe-ia" class="nav-new">Équipe</a>
+        <a href="/metiers">Métiers</a>
+        <a href="/projets">Projets</a>
+        <a href="/#approche">Notre approche</a>
+        <a href="/blog">Blog</a>
+      </nav>
+      <div class="header-actions">
+        <a href="/contact?profil=freelance" class="link-freelance">Je suis freelance</a>
+        <a href="/contact" class="btn btn-dark btn-sm">Parler de mon projet</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo logo-light" aria-label="digitags.work — accueil">
+            <img src="/assets/logo-mark.svg" alt="" class="logo-mark" />
+            <span class="logo-text">digitags<span class="logo-tld">.work</span></span>
+          </a>
+          <p>Le hub des talents digitaux.</p>
+          <div class="socials">
+            <a href="https://www.linkedin.com/company/18871359" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24V8.31zM8.34 8.31h4.33v2h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.13c0-1.7-.03-3.89-2.37-3.89-2.37 0-2.73 1.85-2.73 3.76V23H8.34V8.31z"/></svg></a>
+          </div>
+        </div>
+        <nav class="footer-col" aria-label="Expertises">
+          <h4>Expertises</h4>
+          <a href="/design">Design &amp; UX</a>
+          <a href="/sea-social-ads-seo">Marketing &amp; Acquisition</a>
+          <a href="/product-et-project">Product &amp; Projet</a>
+          <a href="/tech-data">Tech &amp; Data</a>
+          <a href="/recrutement-freelance">Recrutement freelance</a>
+          <a href="/equipe-ia">Équipe Produit IA</a>
+        </nav>
+        <nav class="footer-col" aria-label="Le Hub">
+          <h4>Le Hub</h4>
+          <a href="/metiers">Métiers</a>
+          <a href="/projets">Projets</a>
+          <a href="https://www.digitags.work/studios-et-collectifs">Studios &amp; Collectifs</a>
+          <a href="https://www.digitags.work/cas-clients">Cas clients</a>
+        </nav>
+        <nav class="footer-col" aria-label="Ressources">
+          <h4>Ressources</h4>
+          <a href="/blog">Le blog du Hub</a>
+          <a href="/contact?profil=freelance">Devenir freelance</a>
+          <a href="https://donutzdigital.com/fr/">Donutz Digital</a>
+        </nav>
+        <div class="footer-col">
+          <h4>Nous contacter</h4>
+          <a href="/contact">Décrire mon besoin</a>
+          <a href="mailto:hello@digitags.work">hello@digitags.work</a>
+          <p class="footer-cities">Paris &middot; Remote</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; {new Date().getFullYear()} digitags.work &mdash; Tous droits réservés</p>
+        <div class="footer-legal">
+          <a href="https://www.digitags.work/politique-de-protection-des-donnees">Politique de confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('main-nav');
+    toggle?.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    nav?.addEventListener('click', (e) => {
+      if (e.target instanceof HTMLAnchorElement) {
+        nav.classList.remove('open');
+        toggle?.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+</body>
+</html>

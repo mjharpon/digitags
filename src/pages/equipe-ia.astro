@@ -1,0 +1,130 @@
+---
+import Base from '../layouts/Base.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+
+const stats = [
+  { color: "hex-icon-blue", big: "2/3", title: "des entreprises utilisent déjà l'IA générative", desc: "Mais l'usage reste majoritairement expérimental, avec des gains de productivité encore limités.", src: "Banque de France, enquête 2026" },
+  { color: "hex-icon-yellow", big: "+60%", title: "de demande sur les compétences « agents IA » en un an", desc: "Les profils capables d'orchestrer des agents IA sont les plus recherchés du marché français.", src: "Malt Tech Trends 2026" },
+  { color: "hex-icon-red", big: "N°2", title: "l'IA, deuxième compétence freelance la plus demandée", desc: "22 % des demandes de missions — même non techniques — exigent désormais une expertise IA.", src: "Malt Tech Trends 2026" },
+];
+
+const roles = [
+  { tag: "Pilotage", title: "Product Owner IA", points: ["Cadre le cas d'usage et le ROI attendu", "Pilote le backlog produit et les métriques IA (qualité, coût d'inférence, valeur métier)", "Prototype lui-même : un profil « product builder », pas un gestionnaire de tickets"] },
+  { tag: "Build", title: "Ingénieur IA", points: ["Conçoit l'architecture : LLM, RAG, agents, intégrations", "Développe, évalue et industrialise les modèles et les pipelines", "Garantit robustesse, sécurité et coûts maîtrisés en production"] },
+  { tag: "Data", title: "Data Engineer", points: ["Prépare et fiabilise les données qui nourrissent le produit", "Met en place les pipelines et le monitoring", "Assure la qualité continue : un produit IA vaut ce que valent ses données"] },
+  { tag: "Adoption", title: "Designer & change", points: ["Conçoit des interfaces IA utiles, pas des gadgets", "Forme vos équipes et organise la montée en compétence", "Ancre le produit dans les usages réels du métier"] },
+];
+
+const useCases = [
+  "Agent IA interne (support, RH, finance)",
+  "Copilote métier intégré à vos outils",
+  "RAG sur votre base de connaissances",
+  "Automatisation de process documentaires",
+  "POC IA à industrialiser",
+  "Audit & gouvernance IA (RGPD, AI Act)",
+];
+
+const steps = [
+  { title: "Cadrage & ROI — 2 semaines", desc: "Ateliers de détection et de priorisation des cas d'usage. On ne part pas d'une technologie, mais d'un besoin métier mesurable. Livrable : un brief clair et un business case." },
+  { title: "POC mesuré — 4 à 6 semaines", desc: "L'équipe construit un prototype fonctionnel sur vos données, avec des métriques définies dès le départ : qualité des réponses, coût, valeur générée. Go / no-go factuel." },
+  { title: "Industrialisation & transfert", desc: "Mise en production, monitoring, conformité RGPD / AI Act, et montée en compétence de vos équipes — pour que la valeur de l'IA reste chez vous." },
+];
+---
+<Base
+  title="Équipe Produit IA : du POC au produit en production | digitags.work"
+  description="Une équipe senior dédiée — Product Owner IA, ingénieur IA, data engineer — pour passer vos cas d'usage d'intelligence artificielle du POC à la production, avec gouvernance RGPD / AI Act."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Nouvelle offre — Équipe Produit IA</p>
+      <h1>L'IA est partout. Les produits IA, presque nulle part.</h1>
+      <p class="lead">Deux tiers des entreprises expérimentent l'IA générative ; très peu en tirent un produit en production qui crée de la valeur mesurable. Il ne manque pas d'outils : il manque une équipe. Le Hub vous la compose — senior, complémentaire, opérationnelle en 48h.</p>
+      <div class="hero-cta">
+        <a href="/contact" class="btn btn-dark">Cadrer mon cas d'usage</a>
+        <a href="#equipe-ia-roles" class="btn btn-outline">Découvrir l'équipe type</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 30px;">
+    <div class="container">
+      <h2 class="section-title">Le marché a basculé.</h2>
+      <div class="benefits-grid">
+        {stats.map((s) => (
+          <article class="benefit-card">
+            <span class={`hex-icon ${s.color}`}></span>
+            <span class="stat-big">{s.big}</span>
+            <h3>{s.title}</h3>
+            <p>{s.desc}</p>
+            <span class="stat-src">{s.src}</span>
+          </article>
+        ))}
+      </div>
+      <p class="section-lead" style="margin: 36px auto 0;">La demande se déplace vers le haut de la chaîne : cadrer les cas d'usage, reprendre les POC enlisés, industrialiser. C'est exactement là que l'équipe intervient.</p>
+    </div>
+  </section>
+
+  <section class="approche" id="equipe-ia-roles">
+    <div class="container" style="padding-bottom: 60px;">
+      <div class="approche-copy" style="max-width: 640px; margin-bottom: 44px;">
+        <h2>Pas un freelance isolé.<br />Une équipe produit IA complète.</h2>
+        <p style="color: #b9c0d8; font-size: 15px;">Un produit IA est un système vivant : il dépend de ses données, de son modèle et de sa gouvernance autant que de son code. Un seul profil ne suffit pas — nous composons une équipe courte et senior, issue du réseau, taillée pour votre cas d'usage.</p>
+      </div>
+      <div class="reussites-grid cols-4">
+        {roles.map((r) => (
+          <article class="reussite-card">
+            <p class="case-label label-blue">{r.tag}</p>
+            <h3>{r.title}</h3>
+            <ul>
+              {r.points.map((p) => <li>{p}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="skills-band" style="padding-top: 64px;">
+    <div class="container">
+      <h2>Les cas d'usage que nous traitons</h2>
+      <ul class="chips">
+        {useCases.map((u) => <li><span class="chip">{u}</span></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Du besoin métier à la production, en 3 phases.</h2>
+      <p class="section-lead">Pas de magie, pas de « transformation IA » hors-sol : une méthode produit, des métriques, et un transfert de compétence à la fin.</p>
+      <ol class="process-list">
+        {steps.map((s) => (
+          <li class="process-item">
+            <div>
+              <h3>{s.title}</h3>
+              <p>{s.desc}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="trust-card">
+        <div class="trust-stats" style="padding-top: 22px;">
+          <div class="stat"><span class="hex-icon hex-icon-blue"></span><span>Conformité RGPD &amp; AI Act dès le cadrage</span></div>
+          <div class="stat"><span class="hex-icon hex-icon-yellow"></span><span>Souveraineté : vos données restent chez vous</span></div>
+          <div class="stat"><span class="hex-icon hex-icon-red"></span><span>Outils agnostiques, pas d'écosystème fermé</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner
+    title="Un cas d'usage IA<br />à transformer en produit&nbsp;?"
+    text="Décrivez-le nous : nous composons l'équipe<br />et revenons vers vous sous 48h."
+    label="Cadrer mon cas d'usage"
+  />
+</Base>
