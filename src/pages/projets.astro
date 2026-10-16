@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import HowItWorks from '../components/HowItWorks.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 
 // Ordre éditorial des fiches ; les fiches hors liste sont ajoutées à la suite.
@@ -18,6 +17,31 @@ const ORDER = [
 const rank = (slug: string) => { const i = ORDER.indexOf(slug); return i === -1 ? ORDER.length : i; };
 const projets = (await getCollection('projets', ({ data }) => !data.draft))
   .sort((a, b) => rank(a.id) - rank(b.id) || a.data.title.localeCompare(b.data.title));
+
+const features = [
+  { color: "hex-icon-blue", text: "Des profils experts et spécialisés" },
+  { color: "hex-icon-yellow", text: "Une mise en place rapide" },
+  { color: "hex-icon-red", text: "Un accompagnement de bout en bout" },
+  { color: "hex-icon-blue", text: "Des résultats concrets et mesurables" },
+];
+
+const faq = [
+  { q: "Comment choisir le bon type de mission ?", a: "Pas besoin de trancher seul : décrivez votre besoin via le formulaire et nous le cadrons ensemble. Audit, discovery, refonte ou conception complète — nous vous orientons vers le format qui répond à vos enjeux, et le bon profil ou la bonne équipe pour le mener." },
+  { q: "Combien de temps dure une mission ?", a: "De la courte expertise (un audit UX en quelques jours) au projet long terme (une conception produit sur plusieurs mois). La durée est définie au cadrage, avec des jalons clairs, et peut s'ajuster au rythme réel du projet." },
+  { q: "Quel est le coût d'une mission ?", a: "Chaque expert fixe son TJM selon son métier et sa séniorité. Vous contractualisez une prestation précise sur une période donnée : le budget est connu et maîtrisé dès le départ. Pour y voir plus clair, consultez notre article sur <a href=\"/blog/tjm-freelance\">le TJM freelance</a>." },
+  { q: "Comment sont sélectionnés les freelances ?", a: "Le Hub n'est ni une plateforme ouverte ni une ESN : c'est un réseau fermé de plus de 1 600 experts, sélectionnés pour leurs compétences, leur expérience et leur état d'esprit, et recommandés par leurs pairs. Nous connaissons les points forts de chacun depuis 8 ans." },
+  { q: "Peut-on combiner plusieurs types de mission ?", a: "Oui, et c'est souvent la bonne approche : un discovery qui enchaîne sur la conception, un audit UX suivi d'une refonte… Nous composons alors une équipe complémentaire, ou vous connectons à l'un de nos 10 studios et collectifs indépendants." },
+];
+
+const faqJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a.replace(/<[^>]+>/g, '') },
+  })),
+});
 ---
 <Base
   title="Vos projets digitaux, réalisés avec le Hub | digitags.work"
@@ -27,28 +51,91 @@ const projets = (await getCollection('projets', ({ data }) => !data.draft))
     <div class="container">
       <p class="eyebrow">Les projets du Hub</p>
       <h1>Réalisez vos projets digitaux avec le Hub.</h1>
-      <p class="lead">À l'intersection des plateformes de freelances et des agences : la couche conseil et organisation d'une agence, avec l'agilité et le choix d'un réseau. Voici les projets sur lesquels nous intervenons le plus.</p>
+      <p class="lead">Nous accompagnons des entreprises sur des missions variées, de la courte expertise au projet long terme. Découvrez les différents types de projets que nous réalisons.</p>
       <div class="hero-cta">
-        <a href="/contact" class="btn btn-dark">Lancer mon projet</a>
+        <a href="/contact" class="btn btn-dark">Parler de mon projet</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero-banner">
+    <div class="container">
+      <img src="/uploads/projets/design-thinking-cover.webp" alt="Un atelier de conception autour de post-its et d'ordinateurs" loading="eager" />
+    </div>
+  </section>
+
+  <section>
+    <div class="container split-section">
+      <div class="split-text">
+        <h2>Des missions adaptées<br />à vos besoins</h2>
+        <p>Nous intervenons sur toutes les étapes d'un projet digital : de la réflexion stratégique à la mise en production, en passant par la conception, le design, le développement et l'analyse de la performance.</p>
+        <p>À l'intersection des plateformes de freelances et des agences, nous ajoutons la couche conseil et organisation d'une agence, avec l'agilité et la variété de choix d'un réseau. Chaque mission est montée sur mesure, avec les bons profils freelances et un accompagnement de A à Z.</p>
+      </div>
+      <div class="feature-panel">
+        {features.map((f) => (
+          <div class="feature-item">
+            <span class={`hex-icon ${f.color}`}></span>
+            <p>{f.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="liste">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">Nos types de mission</p>
+      <h2 class="section-title">Des formats flexibles pour chaque projet.</h2>
+      <div class="numbered-grid">
+        {projets.map((p, i) => (
+          <article class="numbered-card">
+            <div>
+              <span class="num-badge">{String(i + 1).padStart(2, '0')}</span>
+              <h3>{p.data.title}</h3>
+              {p.data.description && <p class="num-desc">{p.data.description}</p>}
+              <a href={`/projets/${p.id}`} class="arrow-link">En savoir plus <span aria-hidden="true">→</span></a>
+            </div>
+            {p.data.image && <img src={p.data.image} alt="" loading="lazy" />}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container atoz">
+      <img src="/uploads/projets/strategie-produit-cover.webp" alt="Deux personnes cadrent un projet sur un tableau blanc" loading="lazy" />
+      <div>
+        <p class="eyebrow">Des missions sur mesure</p>
+        <h2 class="atoz-title">Un accompagnement de A à Z</h2>
+        <p class="atoz-lead">Nous vous aidons à définir le bon type de mission, à sélectionner les meilleurs profils freelances et à piloter le projet jusqu'à l'atteinte de vos objectifs.</p>
+        <ul class="check-list">
+          <li>Cadrage du besoin</li>
+          <li>Sélection des profils</li>
+          <li>Suivi de projet</li>
+          <li>Livrables et résultats</li>
+        </ul>
+        <a href="/contact" class="btn btn-dark">Parler de mon projet</a>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Les projets les plus réalisés.</h2>
-      <div class="dir-grid">
-        {projets.map((p) => (
-          <a href={`/projets/${p.id}`} class="dir-card">
-            <span>{p.data.title}</span>
-            <span class="dir-arrow" aria-hidden="true">→</span>
-          </a>
+      <p class="eyebrow" style="text-align:center;">Questions fréquentes</p>
+      <h2 class="section-title">Tout savoir sur nos types de mission.</h2>
+      <div class="faq">
+        {faq.map((f) => (
+          <details class="faq-item">
+            <summary>{f.q}</summary>
+            <div class="faq-body" set:html={f.a} />
+          </details>
         ))}
       </div>
     </div>
   </section>
 
-  <HowItWorks />
-
   <CtaBanner title="Votre projet ne rentre pas<br />dans une case&nbsp;?" text="Tant mieux. Décrivez-le nous,<br />nous composons l'équipe qui va avec." />
+
+  <script type="application/ld+json" set:html={faqJsonLd} />
 </Base>
