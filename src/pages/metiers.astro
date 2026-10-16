@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import HowItWorks from '../components/HowItWorks.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 
 // Ordre éditorial des fiches ; les fiches hors liste sont ajoutées à la suite.
@@ -24,6 +23,31 @@ const ORDER = [
 const rank = (slug: string) => { const i = ORDER.indexOf(slug); return i === -1 ? ORDER.length : i; };
 const metiers = (await getCollection('metiers', ({ data }) => !data.draft))
   .sort((a, b) => rank(a.id) - rank(b.id) || a.data.title.localeCompare(b.data.title));
+
+const features = [
+  { color: "hex-icon-blue", text: "Des profils experts, vérifiés et recommandés par leurs pairs" },
+  { color: "hex-icon-yellow", text: "Une mise en place rapide, jusqu'à 48h pour démarrer" },
+  { color: "hex-icon-red", text: "Un accompagnement de bout en bout" },
+  { color: "hex-icon-blue", text: "Des résultats concrets et mesurables" },
+];
+
+const faq = [
+  { q: "Comment choisir le bon métier freelance pour mon projet ?", a: "Pas besoin de trancher seul : décrivez votre besoin via le formulaire et nous le cadrons ensemble. Selon vos enjeux, nous vous orientons vers le bon métier — ou la bonne combinaison de métiers — et vous proposons les profils du réseau réellement intéressés par votre projet." },
+  { q: "Sous quel délai un freelance peut-il démarrer ?", a: "Après le cadrage de votre brief, nous sollicitons les meilleurs profils du réseau et organisons les entretiens rapidement. Selon la disponibilité des talents, une mission peut démarrer en 48h." },
+  { q: "Combien coûte un freelance ?", a: "Chaque expert fixe son TJM selon son métier, sa séniorité et la nature de la mission. Vous contractualisez une prestation précise sur une période donnée : le budget est connu et maîtrisé dès le départ. Pour y voir plus clair, consultez notre article sur <a href=\"/blog/tjm-freelance\">le TJM freelance</a>." },
+  { q: "Comment les freelances du Hub sont-ils sélectionnés ?", a: "Le Hub n'est ni une plateforme ouverte ni une ESN : c'est un réseau fermé de plus de 1 600 experts, sélectionnés pour leurs compétences, leur expérience et leur état d'esprit, et recommandés par leurs pairs. Nous connaissons les points forts de chacun depuis 8 ans." },
+  { q: "Freelance seul ou équipe complète ?", a: "Les deux. Pour un besoin ponctuel, un expert seul suffit souvent. Pour un projet plus large, nous composons une équipe complémentaire — par exemple notre <a href=\"/equipe-ia\">Équipe Produit IA</a> — ou vous connectons à l'un de nos 10 studios et collectifs indépendants." },
+];
+
+const faqJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a.replace(/<[^>]+>/g, '') },
+  })),
+});
 ---
 <Base
   title="Les métiers freelances du Hub | digitags.work"
@@ -40,21 +64,84 @@ const metiers = (await getCollection('metiers', ({ data }) => !data.draft))
     </div>
   </section>
 
-  <section class="section">
+  <section class="hero-banner">
     <div class="container">
-      <h2 class="section-title">Les métiers les plus recherchés.</h2>
-      <div class="dir-grid">
-        {metiers.map((m) => (
-          <a href={`/metiers/${m.id}`} class="dir-card">
-            <span>{m.data.title}</span>
-            <span class="dir-arrow" aria-hidden="true">→</span>
-          </a>
+      <img src="/uploads/blog/reussir-collaboration-long-terme-avec-un-freelance-cover.png" alt="Une équipe projet réunie autour d'ordinateurs portables" loading="eager" />
+    </div>
+  </section>
+
+  <section>
+    <div class="container split-section">
+      <div class="split-text">
+        <h2>Des profils adaptés<br />à vos besoins</h2>
+        <p>Nous sommes là pour comprendre vos besoins et sélectionner les profils parfaits pour votre projet. Leur expertise couvre un large éventail de domaines, de la technologie au marketing.</p>
+        <p>Chaque mission est montée sur mesure, avec les bons profils freelances — seuls ou en équipe — et un accompagnement de A à Z.</p>
+      </div>
+      <div class="feature-panel">
+        {features.map((f) => (
+          <div class="feature-item">
+            <span class={`hex-icon ${f.color}`}></span>
+            <p>{f.text}</p>
+          </div>
         ))}
       </div>
     </div>
   </section>
 
-  <HowItWorks />
+  <section class="section" id="liste">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">Nos métiers freelances</p>
+      <h2 class="section-title">Les métiers les plus recherchés.</h2>
+      <div class="numbered-grid">
+        {metiers.map((m, i) => (
+          <article class="numbered-card">
+            <div>
+              <span class="num-badge">{String(i + 1).padStart(2, '0')}</span>
+              <h3>{m.data.title}</h3>
+              {m.data.description && <p class="num-desc">{m.data.description}</p>}
+              <a href={`/metiers/${m.id}`} class="arrow-link">En savoir plus <span aria-hidden="true">→</span></a>
+            </div>
+            {m.data.image && <img src={m.data.image} alt="" loading="lazy" />}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container atoz">
+      <img src="/uploads/blog/notre-processus-de-matching-freelance-entreprise-cover.png" alt="Une loupe qui distingue le bon profil parmi plusieurs" loading="lazy" />
+      <div>
+        <p class="eyebrow">Des missions sur mesure</p>
+        <h2 class="atoz-title">Un accompagnement de A à Z</h2>
+        <p class="atoz-lead">Nous vous aidons à définir le bon profil, à rencontrer les meilleurs talents du réseau et à piloter la mission jusqu'à l'atteinte de vos objectifs.</p>
+        <ul class="check-list">
+          <li>Cadrage de votre besoin et de votre brief</li>
+          <li>Sélection des profils réellement intéressés, avec leurs conditions</li>
+          <li>Entretien avec les talents retenus — le fit avant tout</li>
+          <li>Suivi et ajustements jusqu'aux résultats</li>
+        </ul>
+        <a href="/contact" class="btn btn-dark">Parler de mon projet</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">Questions fréquentes</p>
+      <h2 class="section-title">Tout savoir sur le recrutement freelance.</h2>
+      <div class="faq">
+        {faq.map((f) => (
+          <details class="faq-item">
+            <summary>{f.q}</summary>
+            <div class="faq-body" set:html={f.a} />
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
 
   <CtaBanner title="Un métier manque à l'appel&nbsp;?" text="Le réseau couvre plus de 33 métiers du digital.<br />Décrivez votre besoin, nous trouvons le profil." />
+
+  <script type="application/ld+json" set:html={faqJsonLd} />
 </Base>
