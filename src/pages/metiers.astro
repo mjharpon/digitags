@@ -1,25 +1,29 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import HowItWorks from '../components/HowItWorks.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 
-const LIVE = "https://www.digitags.work/metiers";
-const metiers = [
-  { slug: "ux-designer-freelance", label: "UX Designer" },
-  { slug: "ui-designer-freelance", label: "UI Designer" },
-  { slug: "product-manager-freelance", label: "Product Manager" },
-  { slug: "product-owner-freelance", label: "Product Owner" },
-  { slug: "chef-de-projet-freelance", label: "Chef de projet" },
-  { slug: "coach-agile", label: "Coach Agile" },
-  { slug: "freelance-seo", label: "Consultant SEO" },
-  { slug: "traffic-manager-freelance", label: "Traffic Manager" },
-  { slug: "developpeur-front-end-freelance", label: "Développeur Front-End" },
-  { slug: "developpeur-back-end-freelance", label: "Développeur Back-End" },
-  { slug: "full-stack-developpeur-freelance", label: "Développeur Full-Stack" },
-  { slug: "developeur-web-freelance", label: "Développeur Web" },
-  { slug: "ux-writer-freelance", label: "UX Writer" },
-  { slug: "account-manager-freelance", label: "Account Manager" },
+// Ordre éditorial des fiches ; les fiches hors liste sont ajoutées à la suite.
+const ORDER = [
+  "ux-designer-freelance",
+  "ui-designer-freelance",
+  "product-manager-freelance",
+  "product-owner-freelance",
+  "chef-de-projet-freelance",
+  "coach-agile",
+  "freelance-seo",
+  "traffic-manager-freelance",
+  "developpeur-front-end-freelance",
+  "developpeur-back-end-freelance",
+  "full-stack-developpeur-freelance",
+  "developeur-web-freelance",
+  "ux-writer-freelance",
+  "account-manager-freelance",
 ];
+const rank = (slug: string) => { const i = ORDER.indexOf(slug); return i === -1 ? ORDER.length : i; };
+const metiers = (await getCollection('metiers', ({ data }) => !data.draft))
+  .sort((a, b) => rank(a.id) - rank(b.id) || a.data.title.localeCompare(b.data.title));
 ---
 <Base
   title="Les métiers freelances du Hub | digitags.work"
@@ -41,8 +45,8 @@ const metiers = [
       <h2 class="section-title">Les métiers les plus recherchés.</h2>
       <div class="dir-grid">
         {metiers.map((m) => (
-          <a href={`${LIVE}/${m.slug}`} class="dir-card">
-            <span>{m.label} freelance</span>
+          <a href={`/metiers/${m.id}`} class="dir-card">
+            <span>{m.data.title}</span>
             <span class="dir-arrow" aria-hidden="true">→</span>
           </a>
         ))}

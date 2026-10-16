@@ -1,19 +1,23 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import HowItWorks from '../components/HowItWorks.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 
-const LIVE = "https://www.digitags.work/projets";
-const projets = [
-  { slug: "concevoir-un-produit-digital", label: "Concevoir un produit digital" },
-  { slug: "mener-une-phase-dux-research", label: "Mener une phase d'UX research" },
-  { slug: "audit-ux", label: "Réaliser un audit UX" },
-  { slug: "design-thinking", label: "Mener un Design Thinking" },
-  { slug: "discovery-produit", label: "Réaliser un discovery produit" },
-  { slug: "strategie-produit", label: "Définir une stratégie produit" },
-  { slug: "identite-visuelle-creation-ou-refonte", label: "Créer ou refondre une identité visuelle" },
-  { slug: "refonte-de-site-internet", label: "Refondre un site internet" },
+// Ordre éditorial des fiches ; les fiches hors liste sont ajoutées à la suite.
+const ORDER = [
+  "concevoir-un-produit-digital",
+  "mener-une-phase-dux-research",
+  "audit-ux",
+  "design-thinking",
+  "discovery-produit",
+  "strategie-produit",
+  "identite-visuelle-creation-ou-refonte",
+  "refonte-de-site-internet",
 ];
+const rank = (slug: string) => { const i = ORDER.indexOf(slug); return i === -1 ? ORDER.length : i; };
+const projets = (await getCollection('projets', ({ data }) => !data.draft))
+  .sort((a, b) => rank(a.id) - rank(b.id) || a.data.title.localeCompare(b.data.title));
 ---
 <Base
   title="Vos projets digitaux, réalisés avec le Hub | digitags.work"
@@ -35,8 +39,8 @@ const projets = [
       <h2 class="section-title">Les projets les plus réalisés.</h2>
       <div class="dir-grid">
         {projets.map((p) => (
-          <a href={`${LIVE}/${p.slug}`} class="dir-card">
-            <span>{p.label}</span>
+          <a href={`/projets/${p.id}`} class="dir-card">
+            <span>{p.data.title}</span>
             <span class="dir-arrow" aria-hidden="true">→</span>
           </a>
         ))}

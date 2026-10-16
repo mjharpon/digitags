@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+
+const cas = (await getCollection('casClients', ({ data }) => !data.draft))
+  .sort((a, b) => (a.data.order ?? 999) - (b.data.order ?? 999));
+---
+<Base
+  title="Cas clients | digitags.work"
+  description="SEO, product, design, tech : découvrez comment les freelances et équipes du réseau digitags.work accompagnent leurs clients sur le terrain."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Cas clients</p>
+      <h1>Ce que le Hub réalise sur le terrain.</h1>
+      <p class="lead">Des missions concrètes, menées par les freelances et équipes du réseau. Quelques exemples détaillés.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 30px;">
+    <div class="container">
+      <div class="blog-grid">
+        {cas.map((c) => (
+          <a class="blog-card" href={`/cas-client/${c.id}`}>
+            {c.data.image && <img src={c.data.image} alt="" loading="lazy" />}
+            <div class="blog-card-body">
+              <p class="case-label label-blue">Cas client</p>
+              <h2>{c.data.title}</h2>
+              {c.data.description && <p class="blog-desc">{c.data.description}</p>}
+              <span class="arrow-link">Lire le cas client <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner title="Un projet similaire&nbsp;?" text="Décrivez votre besoin,<br />nous composons l'équipe qui va avec." />
+</Base>

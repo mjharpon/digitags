@@ -1,0 +1,35 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+export async function getStaticPaths() {
+  const fiches = await getCollection('metiers', ({ data }) => !data.draft);
+  return fiches.map((fiche) => ({ params: { slug: fiche.id }, props: { fiche } }));
+}
+
+const { fiche } = Astro.props;
+const { Content } = await render(fiche);
+---
+<Base title={`${fiche.data.metaTitle ?? fiche.data.title} | digitags.work`} description={fiche.data.description}>
+  <article>
+    <section class="page-hero" style="padding-bottom: 36px;">
+      <div class="container">
+        <p class="eyebrow"><a href="/metiers">Les métiers du Hub</a></p>
+        <h1>{fiche.data.title}</h1>
+        <div class="hero-cta">
+          <a href="/contact" class="btn btn-dark">Recruter un freelance</a>
+        </div>
+      </div>
+    </section>
+    <div class="container prose">
+      {fiche.data.image && <img src={fiche.data.image} alt="" loading="eager" />}
+      <Content />
+      {fiche.data.blogCategory && (
+        <p><a href={`/tag/${fiche.data.blogCategory}`} class="arrow-link">Lire nos articles #{fiche.data.blogCategory} <span aria-hidden="true">→</span></a></p>
+      )}
+    </div>
+  </article>
+
+  <CtaBanner title="Besoin de ce profil&nbsp;?" text="Décrivez votre besoin,<br />nous vous proposons les bons freelances." />
+</Base>
