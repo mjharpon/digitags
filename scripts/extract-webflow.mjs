@@ -44,7 +44,8 @@ async function downloadImage(url, slug, index) {
     const ext = (new URL(url).pathname.match(/\.(png|jpe?g|webp|gif|avif|svg)$/i)?.[0] ?? '.jpg').toLowerCase();
     const filename = `${slug}-${index}${ext}`;
     const dest = path.join(OUT_UPLOADS, filename);
-    if (!DRY) {
+    const { existsSync } = await import('node:fs');
+    if (!DRY && !existsSync(dest)) {
       const res = await fetch(url);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       await pipeline(Readable.fromWeb(res.body), createWriteStream(dest));
@@ -74,10 +75,10 @@ async function main() {
   // Inspect the schema to find the right field keys.
   const colDetail = await wf(`/collections/${blogCol.id}`);
   console.log('Champs:', colDetail.fields.map((f) => `${f.slug}(${f.type})`).join(', '));
-  const richTextField = colDetail.fields.find((f) => f.type === 'RichText')?.slug;
+  const richTextFields = colDetail.fields.filter((f) => f.type === 'RichText').map((f) => f.slug);
   const imageField = colDetail.fields.find((f) => f.type === 'Image')?.slug;
   const summaryField = colDetail.fields.find((f) => /summary|resume|excerpt|description|meta/i.test(f.slug) && f.type === 'PlainText')?.slug;
-  const refTagField = colDetail.fields.find((f) => f.type === 'Reference' || f.type === 'MultiReference')?.slug;
+  const refTagField = colDetail.fields.find((f) => /tag|categor/i.test(f.slug) && (f.type === 'Reference' || f.type === 'MultiReference'))?.slug;
 
   // Resolve tag/category references if present.
   const tagNames = {};
@@ -108,7 +109,7 @@ async function main() {
     const f = item.fieldData;
     const slug = f.slug;
     const title = f.name;
-    let html = richTextField ? (f[richTextField] ?? '') : '';
+    let html = richTextFields.map((k) => f[k] ?? '').join('\n');
 
     // Download body images and rewrite URLs.
     let imgIndex = 0;
@@ -125,7 +126,8 @@ async function main() {
     const tags = refs.map((id) => tagNames[id]).filter(Boolean);
 
     const md = td.turndown(html);
-    const date = item.lastPublished ?? item.createdOn;
+    const dateField = colDetail.fields.find((fl) => fl.type === 'DateTime')?.slug;
+    const date = (dateField && f[dateField]) || item.lastPublished || item.createdOn;
     const isDraft = item.isDraft || !item.lastPublished;
 
     const fm = [
