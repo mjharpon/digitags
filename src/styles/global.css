@@ -1353,3 +1353,22 @@ a.chip:hover { border-color: var(--blue); }
   .method-cols { grid-template-columns: 1fr; gap: 26px; }
   .method-col { border-left: 0; padding: 0; }
 }
+
+/* Métiers par catégorie */
+.metier-cat { margin-bottom: 46px; }
+.metier-cat:last-child { margin-bottom: 0; }
+.cat-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+.cat-heading .hex-icon { width: 20px; height: 23px; }
+.cat-extra { margin-top: 16px; display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+.cat-extra > p { font-size: 13px; font-weight: 700; color: var(--ink-faint); flex: none; }
+.chips-left { justify-content: flex-start; margin: 0; max-width: none; flex: 1; }

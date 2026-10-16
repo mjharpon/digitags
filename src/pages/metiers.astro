@@ -3,26 +3,51 @@ import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 
-// Ordre éditorial des fiches ; les fiches hors liste sont ajoutées à la suite.
-const ORDER = [
-  "ux-designer-freelance",
-  "ui-designer-freelance",
-  "product-manager-freelance",
-  "product-owner-freelance",
-  "chef-de-projet-freelance",
-  "coach-agile",
-  "freelance-seo",
-  "traffic-manager-freelance",
-  "developpeur-front-end-freelance",
-  "developpeur-back-end-freelance",
-  "full-stack-developpeur-freelance",
-  "developeur-web-freelance",
-  "ux-writer-freelance",
-  "account-manager-freelance",
+// Métiers groupés par catégorie : les fiches existantes en cartes,
+// les autres métiers du réseau (listés sur les pages expertises) en chips.
+const CATEGORIES = [
+  {
+    name: "Design & UX",
+    color: "hex-icon-blue",
+    slugs: ["ux-designer-freelance", "ui-designer-freelance", "ux-writer-freelance"],
+    extra: ["Product Designer", "Web designer", "Directeur artistique", "Illustrateur", "Motion designer", "Artiste 3D", "Creative Lead"],
+  },
+  {
+    name: "Product & Projet",
+    color: "hex-icon-yellow",
+    slugs: ["product-manager-freelance", "product-owner-freelance", "chef-de-projet-freelance", "coach-agile"],
+    extra: ["Chef de projet IT", "Chef de projet Digital", "Chef de projet AMOA", "Manager de transition", "Responsable CRM"],
+  },
+  {
+    name: "Marketing & Acquisition",
+    color: "hex-icon-red",
+    slugs: ["freelance-seo", "traffic-manager-freelance", "community-manager-freelance", "account-manager-freelance"],
+    extra: ["Expert SMA/SEA", "Responsable Acquisition", "Growth Marketer", "Social Media Manager", "Brand Manager"],
+  },
+  {
+    name: "Développement",
+    color: "hex-icon-blue",
+    slugs: ["developpeur-front-end-freelance", "developpeur-back-end-freelance", "full-stack-developpeur-freelance", "developeur-web-freelance"],
+    extra: ["Développeur Mobile", "Tech Lead", "DevOps"],
+  },
+  {
+    name: "Data & Analytics",
+    color: "hex-icon-yellow",
+    slugs: [],
+    extra: ["Data Scientist", "Data Engineer", "Data Analyst", "Web Analyst", "Business Analyst", "Chef de projet Data"],
+  },
 ];
-const rank = (slug: string) => { const i = ORDER.indexOf(slug); return i === -1 ? ORDER.length : i; };
-const metiers = (await getCollection('metiers', ({ data }) => !data.draft))
-  .sort((a, b) => rank(a.id) - rank(b.id) || a.data.title.localeCompare(b.data.title));
+
+const all = await getCollection('metiers', ({ data }) => !data.draft);
+const bySlug = new Map(all.map((m) => [m.id, m]));
+const categorized = new Set(CATEGORIES.flatMap((c) => c.slugs));
+// Toute fiche non catégorisée est ajoutée à la fin de la première catégorie pertinente par défaut.
+const orphans = all.filter((m) => !categorized.has(m.id));
+const categories = CATEGORIES.map((c) => ({
+  ...c,
+  fiches: c.slugs.map((s) => bySlug.get(s)).filter(Boolean),
+}));
+if (orphans.length) categories[categories.length - 1].fiches.push(...orphans);
 
 const features = [
   { color: "hex-icon-blue", text: "Des profils experts, vérifiés et recommandés par leurs pairs" },
@@ -91,20 +116,35 @@ const faqJsonLd = JSON.stringify({
   <section class="section" id="liste">
     <div class="container">
       <p class="eyebrow" style="text-align:center;">Nos métiers freelances</p>
-      <h2 class="section-title">Les métiers les plus recherchés.</h2>
-      <div class="numbered-grid">
-        {metiers.map((m, i) => (
-          <article class="numbered-card">
-            <div>
-              <span class="num-badge">{String(i + 1).padStart(2, '0')}</span>
-              <h3>{m.data.title}</h3>
-              {m.data.description && <p class="num-desc">{m.data.description}</p>}
-              <a href={`/metiers/${m.id}`} class="arrow-link">En savoir plus <span aria-hidden="true">→</span></a>
+      <h2 class="section-title">Les métiers du réseau, par expertise.</h2>
+      {categories.map((cat) => (
+        <div class="metier-cat">
+          <h3 class="cat-heading"><span class={`hex-icon ${cat.color}`}></span> {cat.name}</h3>
+          {cat.fiches.length > 0 && (
+            <div class="numbered-grid">
+              {cat.fiches.map((m, i) => (
+                <article class="numbered-card">
+                  <div>
+                    <span class="num-badge">{String(i + 1).padStart(2, '0')}</span>
+                    <h3>{m.data.title}</h3>
+                    {m.data.description && <p class="num-desc">{m.data.description}</p>}
+                    <a href={`/metiers/${m.id}`} class="arrow-link">En savoir plus <span aria-hidden="true">→</span></a>
+                  </div>
+                  {m.data.image && <img src={m.data.image} alt="" loading="lazy" />}
+                </article>
+              ))}
             </div>
-            {m.data.image && <img src={m.data.image} alt="" loading="lazy" />}
-          </article>
-        ))}
-      </div>
+          )}
+          {cat.extra.length > 0 && (
+            <div class="cat-extra">
+              <p>Également dans le réseau&nbsp;:</p>
+              <ul class="chips chips-left">
+                {cat.extra.map((e) => <li><span class="chip">{e}</span></li>)}
+              </ul>
+            </div>
+          )}
+        </div>
+      ))}
     </div>
   </section>
 
