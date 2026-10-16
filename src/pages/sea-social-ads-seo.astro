@@ -1,22 +1,148 @@
 ---
 import Base from '../layouts/Base.astro';
-import ExpertisePage from '../components/ExpertisePage.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Testimonials from '../components/Testimonials.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+
+const features = [
+  { color: "hex-icon-blue", text: "Une acquisition pilotée au ROI, pas aux impressions" },
+  { color: "hex-icon-yellow", text: "Un tracking fiable pour des décisions éclairées" },
+  { color: "hex-icon-red", text: "Des experts vérifiés, recommandés par leurs pairs" },
+  { color: "hex-icon-blue", text: "Un reporting transparent : CPA, ROAS, leads qualifiés" },
+];
+
+const leviers = [
+  { slug: "/metiers/freelance-seo", title: "SEO & Content", desc: "Visibilité durable et croissance organique : stratégie éditoriale, optimisation technique, contenus qui positionnent — comme les 30,4K mots-clés gagnés en 6 mois pour Mon Compte Formation.", image: "/uploads/metiers/freelance-seo-cover.webp" },
+  { slug: "/metiers/expert-sea-freelance", title: "SEA — Google Ads", desc: "Capter la demande existante avec des campagnes Search, Shopping et YouTube structurées, des enchères optimisées et un coût d'acquisition maîtrisé.", image: "/uploads/metiers/traffic-manager-freelance-0.webp" },
+  { slug: "/metiers/expert-social-ads-freelance", title: "Social Ads — Meta, LinkedIn, TikTok", desc: "Créer la demande avec des audiences fines et des créas testées en continu : leads B2B sur LinkedIn, ventes B2C sur Meta et TikTok.", image: "/uploads/metiers/community-manager-freelance-0.jpg" },
+  { slug: "/metiers/traffic-manager-freelance", title: "Traffic Management & Analytics", desc: "Orchestrer tous les canaux, fiabiliser la mesure (GA4, plan de taggage) et arbitrer les budgets là où ils rapportent.", image: "/uploads/metiers/traffic-manager-freelance-cover.webp" },
+];
+
+const reussites = [
+  { tag: "SEA / SMA", title: "Pilotage Traffic Management", points: ["Gestion et optimisation des campagnes", "Ajustement continu des stratégies", "Analyse continue des données"] },
+  { tag: "SMA", title: "Campagne LinkedIn B2B", points: ["Stratégie lead — livre blanc", "Gestion et optimisations", "Génération de leads qualifiés"] },
+  { tag: "SEO", title: "Contenu & stratégie éditoriale", points: ["Rédaction des contenus", "Optimisations SEO", "Stratégie éditoriale durable"] },
+];
+
+const skills = ["Consultant SEO", "Expert SEA", "Expert Social Ads", "Traffic Manager", "Responsable Acquisition", "Growth Marketer", "Social Media Manager", "Community Manager", "Brand Manager", "Webanalyst"];
+
+const faq = [
+  { q: "SEO ou SEA : par quoi commencer ?", a: "Les deux répondent à des horizons différents : le SEA produit des résultats immédiats et pilotables, le SEO construit une visibilité durable qui réduit votre dépendance à la publicité. La bonne réponse dépend de votre marge, de votre marché et de votre calendrier — c'est exactement ce que nous cadrons avec vous avant de solliciter les profils." },
+  { q: "Quel budget publicitaire minimum pour démarrer ?", a: "Il n'y a pas de seuil magique, mais un principe : le budget doit permettre d'apprendre. Assez de volume pour tester des audiences et des annonces, mesurer un coût d'acquisition et itérer. L'expert dimensionne le budget média avec vous au cadrage, en fonction de vos objectifs et de votre panier moyen." },
+  { q: "Comment mesurez-vous le retour sur investissement ?", a: "Avant toute campagne, l'expert met en place un tracking fiable (GA4, gestion des conversions, plan de taggage). Le reporting porte ensuite sur des indicateurs business — coût par lead, ROAS, chiffre d'affaires généré — et non des métriques de vanité comme les impressions." },
+  { q: "Un seul expert peut-il gérer SEO, SEA et Social Ads ?", a: "Certains profils seniors couvrent plusieurs leviers, mais chaque canal a ses spécialistes. Selon l'ampleur de votre besoin, nous vous proposons un expert polyvalent ou une petite équipe complémentaire pilotée par un traffic manager — c'est l'avantage d'un réseau de 1 600 experts." },
+];
+
+const faqJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+});
 ---
 <Base
   title="Experts marketing digital freelances — SEO, SEA, Social Ads | digitags.work"
-  description="Consultants SEO, traffic managers, experts SEA et Social Ads freelances, vérifiés et recommandés par leurs pairs, pour augmenter votre trafic et votre chiffre d'affaires."
+  description="Consultants SEO, experts SEA et Social Ads freelances, vérifiés et recommandés par leurs pairs, pour augmenter votre trafic qualifié et votre chiffre d'affaires, avec un pilotage au ROI."
 >
-  <ExpertisePage
-    eyebrow="Votre hub de digital marketers"
-    title="Acquisition, SEO, Social Ads : une croissance qui se mesure."
-    lead="Accédez à des spécialistes du marketing digital — SEO, SEA, SMA, analytics — pour augmenter votre trafic qualifié et votre chiffre d'affaires en ligne, avec un pilotage data-driven."
-    ctaLabel="Recruter un expert"
-    skillsTitle="Les compétences marketing du réseau"
-    skills={["Consultant SEO", "Expert SMA/SEA", "Traffic Manager", "Responsable Acquisition", "Growth Marketer", "Social Media Manager", "Community Manager", "Brand Manager", "Webanalyst"]}
-    reussites={[
-      { tag: "SEA / SMA", title: "Pilotage Traffic Management", points: ["Gestion et optimisation des campagnes", "Ajustement continu des stratégies", "Analyse continue des données"] },
-      { tag: "SMA", title: "Campagne LinkedIn B2B", points: ["Stratégie lead — livre blanc", "Gestion et optimisations", "Génération de leads qualifiés"] },
-      { tag: "SEO", title: "Contenu & stratégie éditoriale", points: ["Rédaction des contenus", "Optimisations SEO", "Stratégie éditoriale durable"] },
-    ]}
-  />
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Votre hub de digital marketers</p>
+      <h1>Acquisition, SEO, Social Ads : une croissance qui se mesure.</h1>
+      <p class="lead">Accédez à des spécialistes du marketing digital — SEO, SEA, Social Ads, analytics — pour augmenter votre trafic qualifié et votre chiffre d'affaires en ligne, avec un pilotage data-driven.</p>
+      <div class="hero-cta">
+        <a href="/contact" class="btn btn-dark">Recruter un expert</a>
+        <a href="#leviers" class="btn btn-outline">Découvrir les leviers</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container split-section">
+      <div class="split-text">
+        <h2>Trois leviers,<br />un seul pilotage.</h2>
+        <p>Capter la demande avec le SEA, la créer avec le Social Ads, la consolider avec le SEO : les trois leviers se renforcent quand ils sont orchestrés ensemble, sur des données fiables.</p>
+        <p>Nous composons le bon dispositif pour votre marché — un expert pointu ou une petite équipe complémentaire — et vous gardez la main : budget contractualisé, reporting transparent, résultats mesurables.</p>
+      </div>
+      <div class="feature-panel">
+        {features.map((f) => (
+          <div class="feature-item">
+            <span class={`hex-icon ${f.color}`}></span>
+            <p>{f.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="leviers">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">Nos leviers d'acquisition</p>
+      <h2 class="section-title">Un expert pour chaque levier.</h2>
+      <div class="numbered-grid">
+        {leviers.map((l, i) => (
+          <article class="numbered-card">
+            <div>
+              <span class="num-badge">{String(i + 1).padStart(2, '0')}</span>
+              <h3>{l.title}</h3>
+              <p class="num-desc">{l.desc}</p>
+              <a href={l.slug} class="arrow-link">En savoir plus <span aria-hidden="true">→</span></a>
+            </div>
+            <img src={l.image} alt="" loading="lazy" />
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="skills-band">
+    <div class="container">
+      <h2>Les compétences marketing du réseau</h2>
+      <ul class="chips">
+        {skills.map((s) => <li><span class="chip">{s}</span></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <HowItWorks />
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Nos dernières réussites.</h2>
+      <div class="reussites-grid">
+        {reussites.map((r) => (
+          <article class="reussite-card">
+            <p class="case-label label-blue">{r.tag}</p>
+            <h3>{r.title}</h3>
+            <ul>
+              {r.points.map((p) => <li>{p}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Testimonials />
+
+  <section class="section" style="padding-top: 20px;">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">Questions fréquentes</p>
+      <h2 class="section-title">Tout savoir sur l'acquisition digitale.</h2>
+      <div class="faq">
+        {faq.map((f) => (
+          <details class="faq-item">
+            <summary>{f.q}</summary>
+            <div class="faq-body">{f.a}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner title="Un objectif de croissance&nbsp;?" text="Décrivez-nous votre besoin,<br />nous composons le bon dispositif." label="Recruter un expert" />
+
+  <script type="application/ld+json" set:html={faqJsonLd} />
 </Base>
