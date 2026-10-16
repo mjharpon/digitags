@@ -1,7 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import CtaBanner from '../../components/CtaBanner.astro';
 
 export async function getStaticPaths() {
   const fiches = await getCollection('projets', ({ data }) => !data.draft);
@@ -9,27 +8,162 @@ export async function getStaticPaths() {
 }
 
 const { fiche } = Astro.props;
+
+// ---- Découpage du HTML rendu en sections structurées (modèle "Types de mission") ----
+const strip = (h: string) => h.replace(/<[^>]+>/g, '').replace(/[‍​﻿]/g, '').trim();
+const firstImg = (h: string) => h.match(/<img[^>]*src="([^"]+)"[^>]*>/)?.[1];
+const dropImgs = (h: string) => h.replace(/<figure[\s\S]*?<\/figure>/g, '').replace(/<img[^>]*>/g, '').replace(/<p>\s*<\/p>/g, '');
+
+const rawHtml: string = (fiche as any).rendered?.html ?? '';
+const parts = rawHtml.split(/<h2[^>]*>([\s\S]*?)<\/h2>/);
+const preamble = parts[0] ?? '';
+
+type Sec =
+  | { kind: 'split'; title: string; html: string; image?: string }
+  | { kind: 'methods'; title: string; intro: string; items: { title: string; text: string }[] }
+  | { kind: 'timeline'; title: string; intro: string; steps: { title: string; html: string }[] }
+  | { kind: 'accomp'; title: string; html: string; image?: string }
+  | { kind: 'text'; title: string; html: string };
+
+const sections: Sec[] = [];
+let pendingImage: string | undefined;
+let splitDone = false;
+
+for (let i = 1; i < parts.length; i += 2) {
+  const title = strip(parts[i]);
+  const body = parts[i + 1] ?? '';
+  const text = strip(body);
+  const img = firstImg(body);
+
+  // Section "image seule" (titre dupliqué + visuel) : on garde l'image pour la section suivante.
+  if (img && text.length < 60) { pendingImage = img; continue; }
+
+  const h3s = body.split(/<h3[^>]*>([\s\S]*?)<\/h3>/);
+  const olMatch = body.match(/<ol>([\s\S]*?)<\/ol>/);
+
+  if (/digitags|confiez|faites appel|recruter les bons|expertise digitags/i.test(title)) {
+    sections.push({ kind: 'accomp', title, html: dropImgs(body), image: img ?? pendingImage });
+    pendingImage = undefined;
+  } else if (h3s.length >= 5) {
+    const steps = [];
+    for (let j = 1; j < h3s.length; j += 2) {
+      const st = strip(h3s[j]).replace(/^étape\s*\d+\s*:\s*/i, '');
+      steps.push({ title: st.charAt(0).toUpperCase() + st.slice(1), html: h3s[j + 1] ?? '' });
+    }
+    sections.push({ kind: 'timeline', title, intro: dropImgs(h3s[0] ?? ''), steps });
+  } else if (olMatch && !body.includes('<h3')) {
+    const items = [...olMatch[1].matchAll(/<li>([\s\S]*?)<\/li>/g)].map((m) => {
+      const t = strip(m[1]);
+      const sep = t.match(/^(.{3,60}?)\s*:\s*([\s\S]+)$/);
+      return sep
+        ? { title: sep[1].charAt(0).toUpperCase() + sep[1].slice(1), text: sep[2].charAt(0).toUpperCase() + sep[2].slice(1) }
+        : { title: '', text: t };
+    });
+    if (items.length >= 2) {
+      sections.push({ kind: 'methods', title, intro: strip(body.split('<ol>')[0]), items });
+    } else {
+      sections.push({ kind: 'text', title, html: body });
+    }
+  } else if (!splitDone) {
+    sections.push({ kind: 'split', title, html: dropImgs(body), image: img ?? pendingImage ?? fiche.data.image });
+    pendingImage = undefined;
+    splitDone = true;
+  } else {
+    sections.push({ kind: 'text', title, html: body });
+  }
+}
+
+// Chapo du hero : premiers paragraphes avant la première section.
+const lead = [...preamble.matchAll(/<p>([\s\S]*?)<\/p>/g)].map((m) => strip(m[1])).filter(Boolean).slice(0, 2).join(' ');
+
 const { Content } = await render(fiche);
+const parsed = sections.length > 0;
 ---
 <Base title={`${fiche.data.metaTitle ?? fiche.data.title} | digitags.work`} description={fiche.data.description}>
   <article>
-    <section class="page-hero" style="padding-bottom: 36px;">
+    <section class="fiche-hero">
       <div class="container">
-        <p class="eyebrow"><a href="/projets">Les projets du Hub</a></p>
-        <h1>{fiche.data.title}</h1>
-        <div class="hero-cta">
-          <a href="/contact" class="btn btn-dark">Lancer mon projet</a>
+        <div>
+          <p class="breadcrumb"><a href="/projets">Projets</a> / {fiche.data.title}</p>
+          <h1>{fiche.data.title}</h1>
+          {lead && <p class="lead">{lead}</p>}
+          <a href="/contact" class="btn btn-dark">Lancer mon projet <span aria-hidden="true">→</span></a>
         </div>
+        {fiche.data.image && <img class="hero-img" src={fiche.data.image} alt="" loading="eager" />}
       </div>
     </section>
-    <div class="container prose">
-      {fiche.data.image && <img src={fiche.data.image} alt="" loading="eager" />}
-      <Content />
-      {fiche.data.blogCategory && (
-        <p><a href={`/tag/${fiche.data.blogCategory}`} class="arrow-link">Lire nos articles #{fiche.data.blogCategory} <span aria-hidden="true">→</span></a></p>
-      )}
-    </div>
+
+    {parsed ? sections.map((s) => {
+      if (s.kind === 'split') return (
+        <section><div class="container fiche-split">
+          {s.image && <img src={s.image} alt="" loading="lazy" />}
+          <div><h2>{s.title}</h2><div class="fiche-body" set:html={s.html} /></div>
+        </div></section>
+      );
+      if (s.kind === 'methods') return (
+        <section class="method-section"><div class="container">
+          <h2>{s.title}</h2>
+          {s.intro && <p class="method-intro">{s.intro}</p>}
+          <div class="method-cols">
+            {s.items.map((it, i) => (
+              <div class="method-col">
+                <span class="num-round">{String(i + 1).padStart(2, '0')}</span>
+                {it.title && <h3>{it.title}</h3>}
+                <p>{it.text}</p>
+              </div>
+            ))}
+          </div>
+        </div></section>
+      );
+      if (s.kind === 'timeline') return (
+        <section class="timeline-section"><div class="container">
+          <h2>{s.title}</h2>
+          {strip(s.intro) && <div class="fiche-body method-intro" set:html={s.intro} />}
+          <div class="timeline">
+            {s.steps.map((st, i) => (
+              <div class="timeline-item">
+                <span class="num-round">{String(i + 1).padStart(2, '0')}</span>
+                <div><h3>{st.title}</h3><div class="fiche-body" set:html={st.html} /></div>
+              </div>
+            ))}
+          </div>
+        </div></section>
+      );
+      if (s.kind === 'accomp') return (
+        <section><div class="container"><div class="accomp">
+          <div>
+            <p class="eyebrow">Un accompagnement sur mesure</p>
+            <h2>{s.title}</h2>
+            <div class="fiche-body" set:html={s.html} />
+          </div>
+          {s.image && <img src={s.image} alt="" loading="lazy" />}
+        </div></div></section>
+      );
+      return (
+        <section><div class="container fiche-text">
+          <h2>{s.title}</h2>
+          <div class="fiche-body" set:html={s.html} />
+        </div></section>
+      );
+    }) : (
+      <div class="container prose">
+        <Content />
+      </div>
+    )}
+
+    {fiche.data.blogCategory && (
+      <div class="container" style="max-width: 820px; padding-top: 20px;">
+        <a href={`/tag/${fiche.data.blogCategory}`} class="arrow-link">Lire nos articles #{fiche.data.blogCategory} <span aria-hidden="true">→</span></a>
+      </div>
+    )}
   </article>
 
-  <CtaBanner title="Un projet comme celui-ci&nbsp;?" text="Décrivez-le nous,<br />nous composons l'équipe qui va avec." />
+  <section class="cta-navy">
+    <div class="cta-copy">
+      <p class="eyebrow">Un projet comme celui-ci&nbsp;?</p>
+      <h2>Discutons de votre projet</h2>
+      <p>Nous vous aidons à trouver les bons freelances pour {fiche.data.title.charAt(0).toLowerCase() + fiche.data.title.slice(1)}.</p>
+    </div>
+    <a href="/contact" class="btn">Décrire mon besoin <span aria-hidden="true">→</span></a>
+  </section>
 </Base>
