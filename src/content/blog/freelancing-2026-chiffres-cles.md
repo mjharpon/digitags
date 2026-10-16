@@ -23,35 +23,13 @@ Pour les entreprises, ces chiffres signifient une chose : le vivier de talents f
 
 ‍
 
-  Évolution du Freelancing .freelance-widget \*, .freelance-widget \*::before, .freelance-widget \*::after { box-sizing: border-box; margin: 0; padding: 0; } .freelance-widget { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; display: flex; justify-content: center; align-items: center; width: 100%; } .freelance-widget .fw-container { max-width: 800px; width: 100%; background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); padding: 40px; animation: fw-fadeIn 0.6s ease-out; } @keyframes fw-fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } } .freelance-widget h1 { color: #2d3748; font-size: clamp(1.5rem, 4vw, 2.2rem); margin-bottom: 10px; text-align: center; } .freelance-widget .fw-subtitle { color: #718096; font-size: clamp(0.9rem, 2vw, 1.1rem); text-align: center; margin-bottom: 40px; } .freelance-widget .fw-chart { position: relative; margin: 30px 0; } .freelance-widget .fw-bar-wrapper { display: flex; align-items: center; margin-bottom: 25px; gap: 15px; } .freelance-widget .fw-year { font-weight: 600; color: #4a5568; min-width: 60px; font-size: clamp(0.9rem, 2vw, 1rem); } .freelance-widget .fw-bar-track { flex: 1; background: #e2e8f0; border-radius: 10px; height: 45px; position: relative; overflow: hidden; } .freelance-widget .fw-bar { height: 100%; border-radius: 10px; display: flex; align-items: center; justify-content: flex-end; padding-right: 15px; color: white; font-weight: 700; font-size: clamp(0.85rem, 1.8vw, 1rem); width: 0; transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1); } .freelance-widget .fw-bar-2010 { background: linear-gradient(90deg, #4299e1, #3182ce); } .freelance-widget .fw-bar-2015 { background: linear-gradient(90deg, #48bb78, #38a169); } .freelance-widget .fw-bar-2020 { background: linear-gradient(90deg, #ed8936, #dd6b20); } .freelance-widget .fw-bar-2026 { background: linear-gradient(90deg, #9f7aea, #805ad5); } .freelance-widget .fw-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin-top: 40px; } .freelance-widget .fw-stat-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px 20px; border-radius: 15px; text-align: center; color: white; transition: transform 0.3s ease; } .freelance-widget .fw-stat-card:hover { transform: translateY(-5px); } .freelance-widget .fw-stat-number { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 8px; } .freelance-widget .fw-stat-label { font-size: clamp(0.8rem, 1.5vw, 0.95rem); opacity: 0.95; } .freelance-widget .fw-source { text-align: center; color: #a0aec0; font-size: clamp(0.75rem, 1.5vw, 0.85rem); margin-top: 30px; font-style: italic; } @media (max-width: 600px) { .freelance-widget .fw-container { padding: 25px 20px; } .freelance-widget .fw-bar-track { height: 35px; } .freelance-widget .fw-bar-wrapper { margin-bottom: 20px; } }
+  Évolution du Freelancing 
 
-# 📈 L'explosion du Freelancing en France
+<style>.freelance-widget *, .freelance-widget *::before, .freelance-widget *::after { box-sizing: border-box; margin: 0; padding: 0; } .freelance-widget { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; display: flex; justify-content: center; align-items: center; width: 100%; } .freelance-widget .fw-container { max-width: 800px; width: 100%; background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); padding: 40px; animation: fw-fadeIn 0.6s ease-out; } @keyframes fw-fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } } .freelance-widget h1 { color: #2d3748; font-size: clamp(1.5rem, 4vw, 2.2rem); margin-bottom: 10px; text-align: center; } .freelance-widget .fw-subtitle { color: #718096; font-size: clamp(0.9rem, 2vw, 1.1rem); text-align: center; margin-bottom: 40px; } .freelance-widget .fw-chart { position: relative; margin: 30px 0; } .freelance-widget .fw-bar-wrapper { display: flex; align-items: center; margin-bottom: 25px; gap: 15px; } .freelance-widget .fw-year { font-weight: 600; color: #4a5568; min-width: 60px; font-size: clamp(0.9rem, 2vw, 1rem); } .freelance-widget .fw-bar-track { flex: 1; background: #e2e8f0; border-radius: 10px; height: 45px; position: relative; overflow: hidden; } .freelance-widget .fw-bar { height: 100%; border-radius: 10px; display: flex; align-items: center; justify-content: flex-end; padding-right: 15px; color: white; font-weight: 700; font-size: clamp(0.85rem, 1.8vw, 1rem); width: 0; transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1); } .freelance-widget .fw-bar-2010 { background: linear-gradient(90deg, #4299e1, #3182ce); } .freelance-widget .fw-bar-2015 { background: linear-gradient(90deg, #48bb78, #38a169); } .freelance-widget .fw-bar-2020 { background: linear-gradient(90deg, #ed8936, #dd6b20); } .freelance-widget .fw-bar-2026 { background: linear-gradient(90deg, #9f7aea, #805ad5); } .freelance-widget .fw-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin-top: 40px; } .freelance-widget .fw-stat-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px 20px; border-radius: 15px; text-align: center; color: white; transition: transform 0.3s ease; } .freelance-widget .fw-stat-card:hover { transform: translateY(-5px); } .freelance-widget .fw-stat-number { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 8px; } .freelance-widget .fw-stat-label { font-size: clamp(0.8rem, 1.5vw, 0.95rem); opacity: 0.95; } .freelance-widget .fw-source { text-align: center; color: #a0aec0; font-size: clamp(0.75rem, 1.5vw, 0.85rem); margin-top: 30px; font-style: italic; } @media (max-width: 600px) { .freelance-widget .fw-container { padding: 25px 20px; } .freelance-widget .fw-bar-track { height: 35px; } .freelance-widget .fw-bar-wrapper { margin-bottom: 20px; } }</style>
 
-Évolution du nombre de travailleurs indépendants
+<div class="freelance-widget"><div class="fw-container"><h1>📈 L'explosion du Freelancing en France</h1><p class="fw-subtitle">Évolution du nombre de travailleurs indépendants</p><div class="fw-chart"><div class="fw-bar-wrapper"><div class="fw-year">2010</div><div class="fw-bar-track"><div class="fw-bar fw-bar-2010" data-width="40%" data-value="780K"></div></div></div><div class="fw-bar-wrapper"><div class="fw-year">2015</div><div class="fw-bar-track"><div class="fw-bar fw-bar-2015" data-width="60%" data-value="1.1M"></div></div></div><div class="fw-bar-wrapper"><div class="fw-year">2020</div><div class="fw-bar-track"><div class="fw-bar fw-bar-2020" data-width="80%" data-value="1.35M"></div></div></div><div class="fw-bar-wrapper"><div class="fw-year">2026</div><div class="fw-bar-track"><div class="fw-bar fw-bar-2026" data-width="100%" data-value="1.5M"></div></div></div></div><div class="fw-stats"><div class="fw-stat-card"><div class="fw-stat-number">+92%</div><div class="fw-stat-label">Croissance en 15 ans</div></div><div class="fw-stat-card"><div class="fw-stat-number">36%</div><div class="fw-stat-label">Des actifs US en freelance</div></div><div class="fw-stat-card"><div class="fw-stat-number">50%</div><div class="fw-stat-label">Projection 2028 (US)</div></div></div><p class="fw-source">Source : INSEE, McKinsey Global Institute 2026</p></div></div>
 
-2010
-
-2015
-
-2020
-
-2026
-
-+92%
-
-Croissance en 15 ans
-
-36%
-
-Des actifs US en freelance
-
-50%
-
-Projection 2028 (US)
-
-Source : INSEE, McKinsey Global Institute 2026
-
-(function() { function animateBars() { const bars = document.querySelectorAll('.freelance-widget .fw-bar'); bars.forEach((bar, index) => { setTimeout(() => { bar.style.width = bar.getAttribute('data-width'); setTimeout(() => { bar.textContent = bar.getAttribute('data-value'); }, 800); }, index \* 200); }); } if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', animateBars); } else { animateBars(); } })();
+<script>(function() { function animateBars() { const bars = document.querySelectorAll('.freelance-widget .fw-bar'); bars.forEach((bar, index) => { setTimeout(() => { bar.style.width = bar.getAttribute('data-width'); setTimeout(() => { bar.textContent = bar.getAttribute('data-value'); }, 800); }, index * 200); }); } if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', animateBars); } else { animateBars(); } })();</script>
 
 ‍
 
@@ -83,51 +61,13 @@ Graphistes, vidéastes, photographes, rédacteurs… Ces professions ont toujour
 
 ‍
 
-  Secteurs du Freelancing .sectors-widget \*, .sectors-widget \*::before, .sectors-widget \*::after { box-sizing: border-box; margin: 0; padding: 0; } .sectors-widget { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 20px; display: flex; justify-content: center; align-items: center; width: 100%; } .sectors-widget .sw-container { max-width: 800px; width: 100%; background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); padding: 40px; animation: sw-fadeIn 0.6s ease-out; } @keyframes sw-fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } } .sectors-widget h1 { color: #2d3748; font-size: clamp(1.5rem, 4vw, 2.2rem); margin-bottom: 10px; text-align: center; } .sectors-widget .sw-subtitle { color: #718096; font-size: clamp(0.9rem, 2vw, 1.1rem); text-align: center; margin-bottom: 40px; } .sectors-widget .sw-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; margin: 30px 0; } .sectors-widget .sw-card { background: #ffffff; border: 2px solid #e2e8f0; border-radius: 15px; padding: 30px 20px; text-align: center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; } .sectors-widget .sw-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--color-start), var(--color-end)); transform: scaleX(0); transition: transform 0.4s ease; } .sectors-widget .sw-card:hover::before { transform: scaleX(1); } .sectors-widget .sw-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,0,0,0.15); border-color: var(--color-start); } .sectors-widget .sw-card.tech { --color-start: #667eea; --color-end: #764ba2; } .sectors-widget .sw-card.marketing { --color-start: #f093fb; --color-end: #f5576c; } .sectors-widget .sw-card.creative { --color-start: #4facfe; --color-end: #00f2fe; } .sectors-widget .sw-card.consulting { --color-start: #43e97b; --color-end: #38f9d7; } .sectors-widget .sw-icon { font-size: clamp(2.5rem, 6vw, 3.5rem); margin-bottom: 15px; display: inline-block; animation: sw-bounce 2s infinite; } @keyframes sw-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } } .sectors-widget .sw-name { font-size: clamp(1.1rem, 2.5vw, 1.3rem); font-weight: 700; color: #2d3748; margin-bottom: 12px; } .sectors-widget .sw-pct { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; background: linear-gradient(135deg, var(--color-start), var(--color-end)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 8px; } .sectors-widget .sw-desc { color: #718096; font-size: clamp(0.8rem, 1.8vw, 0.95rem); line-height: 1.5; } .sectors-widget .sw-highlight { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 15px; margin-top: 40px; text-align: center; } .sectors-widget .sw-highlight h2 { font-size: clamp(1.2rem, 3vw, 1.6rem); margin-bottom: 15px; } .sectors-widget .sw-highlight p { font-size: clamp(0.9rem, 2vw, 1.05rem); line-height: 1.6; opacity: 0.95; } .sectors-widget .sw-source { text-align: center; color: #a0aec0; font-size: clamp(0.75rem, 1.5vw, 0.85rem); margin-top: 30px; font-style: italic; } @media (max-width: 600px) { .sectors-widget .sw-container { padding: 25px 20px; } .sectors-widget .sw-grid { gap: 20px; } .sectors-widget .sw-card { padding: 25px 15px; } .sectors-widget .sw-icon { animation: none; } }
+  Secteurs du Freelancing 
 
-# 🎯 Top Secteurs du Freelancing
+<style>.sectors-widget *, .sectors-widget *::before, .sectors-widget *::after { box-sizing: border-box; margin: 0; padding: 0; } .sectors-widget { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 20px; display: flex; justify-content: center; align-items: center; width: 100%; } .sectors-widget .sw-container { max-width: 800px; width: 100%; background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); padding: 40px; animation: sw-fadeIn 0.6s ease-out; } @keyframes sw-fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } } .sectors-widget h1 { color: #2d3748; font-size: clamp(1.5rem, 4vw, 2.2rem); margin-bottom: 10px; text-align: center; } .sectors-widget .sw-subtitle { color: #718096; font-size: clamp(0.9rem, 2vw, 1.1rem); text-align: center; margin-bottom: 40px; } .sectors-widget .sw-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; margin: 30px 0; } .sectors-widget .sw-card { background: #ffffff; border: 2px solid #e2e8f0; border-radius: 15px; padding: 30px 20px; text-align: center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; } .sectors-widget .sw-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--color-start), var(--color-end)); transform: scaleX(0); transition: transform 0.4s ease; } .sectors-widget .sw-card:hover::before { transform: scaleX(1); } .sectors-widget .sw-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,0,0,0.15); border-color: var(--color-start); } .sectors-widget .sw-card.tech { --color-start: #667eea; --color-end: #764ba2; } .sectors-widget .sw-card.marketing { --color-start: #f093fb; --color-end: #f5576c; } .sectors-widget .sw-card.creative { --color-start: #4facfe; --color-end: #00f2fe; } .sectors-widget .sw-card.consulting { --color-start: #43e97b; --color-end: #38f9d7; } .sectors-widget .sw-icon { font-size: clamp(2.5rem, 6vw, 3.5rem); margin-bottom: 15px; display: inline-block; animation: sw-bounce 2s infinite; } @keyframes sw-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } } .sectors-widget .sw-name { font-size: clamp(1.1rem, 2.5vw, 1.3rem); font-weight: 700; color: #2d3748; margin-bottom: 12px; } .sectors-widget .sw-pct { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; background: linear-gradient(135deg, var(--color-start), var(--color-end)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 8px; } .sectors-widget .sw-desc { color: #718096; font-size: clamp(0.8rem, 1.8vw, 0.95rem); line-height: 1.5; } .sectors-widget .sw-highlight { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 15px; margin-top: 40px; text-align: center; } .sectors-widget .sw-highlight h2 { font-size: clamp(1.2rem, 3vw, 1.6rem); margin-bottom: 15px; } .sectors-widget .sw-highlight p { font-size: clamp(0.9rem, 2vw, 1.05rem); line-height: 1.6; opacity: 0.95; } .sectors-widget .sw-source { text-align: center; color: #a0aec0; font-size: clamp(0.75rem, 1.5vw, 0.85rem); margin-top: 30px; font-style: italic; } @media (max-width: 600px) { .sectors-widget .sw-container { padding: 25px 20px; } .sectors-widget .sw-grid { gap: 20px; } .sectors-widget .sw-card { padding: 25px 15px; } .sectors-widget .sw-icon { animation: none; } }</style>
 
-Les domaines qui adoptent massivement l'indépendance
+<div class="sectors-widget"><div class="sw-container"><h1>🎯 Top Secteurs du Freelancing</h1><p class="sw-subtitle">Les domaines qui adoptent massivement l'indépendance</p><div class="sw-grid"><div class="sw-card tech"><div class="sw-icon">💻</div><div class="sw-name">Tech &amp; Digital</div><div class="sw-pct">68%</div><div class="sw-desc">des dev. -35 ans envisagent le freelancing</div></div><div class="sw-card marketing"><div class="sw-icon">📊</div><div class="sw-name">Marketing</div><div class="sw-pct">54%</div><div class="sw-desc">des experts marketing en mode projet</div></div><div class="sw-card creative"><div class="sw-icon">🎨</div><div class="sw-name">Créatifs</div><div class="sw-pct">72%</div><div class="sw-desc">des graphistes et vidéastes indépendants</div></div><div class="sw-card consulting"><div class="sw-icon">💼</div><div class="sw-name">Conseil</div><div class="sw-pct">61%</div><div class="sw-desc">des consultants seniors en freelance</div></div></div><div class="sw-highlight"><h2>🚀 Le constat clé pour 2026</h2><p>Les métiers à forte valeur ajoutée basculant vers l'indépendance. Les meilleurs talents choisissent désormais leur mode de collaboration. Votre entreprise est-elle prête à s'adapter ?</p></div><p class="sw-source">Source : Baromètre Malt 2026, Freelance.com Insights</p></div></div>
 
-💻
-
-Tech & Digital
-
-68%
-
-des dev. -35 ans envisagent le freelancing
-
-📊
-
-Marketing
-
-54%
-
-des experts marketing en mode projet
-
-🎨
-
-Créatifs
-
-72%
-
-des graphistes et vidéastes indépendants
-
-💼
-
-Conseil
-
-61%
-
-des consultants seniors en freelance
-
-## 🚀 Le constat clé pour 2026
-
-Les métiers à forte valeur ajoutée basculant vers l'indépendance. Les meilleurs talents choisissent désormais leur mode de collaboration. Votre entreprise est-elle prête à s'adapter ?
-
-Source : Baromètre Malt 2026, Freelance.com Insights
-
-(function() { const observerOptions = { threshold: 0.2, rootMargin: '0px 0px -50px 0px' }; const observer = new IntersectionObserver((entries) => { entries.forEach((entry, index) => { if (entry.isIntersecting) { setTimeout(() => { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; }, index \* 100); } }); }, observerOptions); document.querySelectorAll('.sectors-widget .sw-card').forEach((card) => { card.style.opacity = '0'; card.style.transform = 'translateY(20px)'; card.style.transition = 'all 0.6s ease-out'; observer.observe(card); }); })();
+<script>(function() { const observerOptions = { threshold: 0.2, rootMargin: '0px 0px -50px 0px' }; const observer = new IntersectionObserver((entries) => { entries.forEach((entry, index) => { if (entry.isIntersecting) { setTimeout(() => { entry.target.style.opacity = '1'; entry.target.style.transform = 'translateY(0)'; }, index * 100); } }); }, observerOptions); document.querySelectorAll('.sectors-widget .sw-card').forEach((card) => { card.style.opacity = '0'; card.style.transform = 'translateY(20px)'; card.style.transition = 'all 0.6s ease-out'; observer.observe(card); }); })();</script>
 
 ‍
 

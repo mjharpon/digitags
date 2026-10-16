@@ -95,47 +95,11 @@ Si votre équipe interne n'a pas les compétences pour valider un profil très s
 
 ‍
 
-  Processus d'évaluation freelance en 4 étapes /\* ============================================================ SCOPED STYLES — tous les sélecteurs sont préfixés par .dtz-widget pour ne jamais fuiter hors du composant. ============================================================ \*/ .dtz-widget \*, .dtz-widget \*::before, .dtz-widget \*::after { margin: 0; padding: 0; box-sizing: border-box; } .dtz-widget { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; min-height: 100vh; display: flex; align-items: center; justify-content: center; } .dtz-widget .container { max-width: 800px; width: 100%; background: white; border-radius: 20px; padding: 40px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); } .dtz-widget h1 { text-align: center; color: #2d3748; font-size: clamp(24px, 5vw, 36px); margin-bottom: 10px; font-weight: 800; } .dtz-widget .subtitle { text-align: center; color: #718096; font-size: clamp(14px, 3vw, 18px); margin-bottom: 40px; } .dtz-widget .timeline { position: relative; padding-left: 0; } .dtz-widget .step { position: relative; padding-left: 80px; margin-bottom: 50px; } .dtz-widget .step:last-child { margin-bottom: 0; } .dtz-widget .step-number { position: absolute; left: 0; top: 0; width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); z-index: 2; } .dtz-widget .step::before { content: ''; position: absolute; left: 29px; top: 60px; width: 2px; height: calc(100% + 50px); background: linear-gradient(180deg, #667eea 0%, #764ba2 100%); opacity: 0.3; } .dtz-widget .step:last-child::before { display: none; } .dtz-widget .step-content { background: #f7fafc; padding: 25px; border-radius: 12px; border-left: 4px solid #667eea; } .dtz-widget .step-title { color: #2d3748; font-size: clamp(18px, 4vw, 22px); font-weight: 700; margin-bottom: 10px; } .dtz-widget .step-description { color: #4a5568; font-size: clamp(14px, 3vw, 16px); line-height: 1.6; } .dtz-widget .step-time { display: inline-block; background: #667eea; color: white; padding: 4px 12px; border-radius: 20px; font-size: clamp(12px, 2.5vw, 14px); margin-top: 10px; font-weight: 600; } .dtz-widget .footer { margin-top: 40px; text-align: center; padding-top: 30px; border-top: 2px solid #e2e8f0; } .dtz-widget .footer-logo { color: #667eea; font-size: clamp(20px, 4vw, 28px); font-weight: 800; margin-bottom: 8px; } .dtz-widget .footer-text { color: #718096; font-size: clamp(12px, 2.5vw, 14px); } @media (max-width: 600px) { .dtz-widget .container { padding: 25px; } .dtz-widget .step { padding-left: 70px; margin-bottom: 40px; } .dtz-widget .step-number { width: 50px; height: 50px; font-size: 20px; } .dtz-widget .step::before { left: 24px; height: calc(100% + 40px); } .dtz-widget .step-content { padding: 20px; } }
+  Processus d'évaluation freelance en 4 étapes 
 
-# Évaluer un freelance en 4 étapes
+<style>/* ============================================================ SCOPED STYLES — tous les sélecteurs sont préfixés par .dtz-widget pour ne jamais fuiter hors du composant. ============================================================ */ .dtz-widget *, .dtz-widget *::before, .dtz-widget *::after { margin: 0; padding: 0; box-sizing: border-box; } .dtz-widget { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; min-height: 100vh; display: flex; align-items: center; justify-content: center; } .dtz-widget .container { max-width: 800px; width: 100%; background: white; border-radius: 20px; padding: 40px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); } .dtz-widget h1 { text-align: center; color: #2d3748; font-size: clamp(24px, 5vw, 36px); margin-bottom: 10px; font-weight: 800; } .dtz-widget .subtitle { text-align: center; color: #718096; font-size: clamp(14px, 3vw, 18px); margin-bottom: 40px; } .dtz-widget .timeline { position: relative; padding-left: 0; } .dtz-widget .step { position: relative; padding-left: 80px; margin-bottom: 50px; } .dtz-widget .step:last-child { margin-bottom: 0; } .dtz-widget .step-number { position: absolute; left: 0; top: 0; width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); z-index: 2; } .dtz-widget .step::before { content: ''; position: absolute; left: 29px; top: 60px; width: 2px; height: calc(100% + 50px); background: linear-gradient(180deg, #667eea 0%, #764ba2 100%); opacity: 0.3; } .dtz-widget .step:last-child::before { display: none; } .dtz-widget .step-content { background: #f7fafc; padding: 25px; border-radius: 12px; border-left: 4px solid #667eea; } .dtz-widget .step-title { color: #2d3748; font-size: clamp(18px, 4vw, 22px); font-weight: 700; margin-bottom: 10px; } .dtz-widget .step-description { color: #4a5568; font-size: clamp(14px, 3vw, 16px); line-height: 1.6; } .dtz-widget .step-time { display: inline-block; background: #667eea; color: white; padding: 4px 12px; border-radius: 20px; font-size: clamp(12px, 2.5vw, 14px); margin-top: 10px; font-weight: 600; } .dtz-widget .footer { margin-top: 40px; text-align: center; padding-top: 30px; border-top: 2px solid #e2e8f0; } .dtz-widget .footer-logo { color: #667eea; font-size: clamp(20px, 4vw, 28px); font-weight: 800; margin-bottom: 8px; } .dtz-widget .footer-text { color: #718096; font-size: clamp(12px, 2.5vw, 14px); } @media (max-width: 600px) { .dtz-widget .container { padding: 25px; } .dtz-widget .step { padding-left: 70px; margin-bottom: 40px; } .dtz-widget .step-number { width: 50px; height: 50px; font-size: 20px; } .dtz-widget .step::before { left: 24px; height: calc(100% + 40px); } .dtz-widget .step-content { padding: 20px; } }</style>
 
-Méthode rapide et efficace pour recruter sans erreur
-
-1
-
-### Portfolio & Code production
-
-Analysez du code réel en production. Vérifiez la qualité, l'architecture et la présence de tests. Zéro code partagé = red flag.
-
-⏱ 1h
-
-2
-
-### Entretien technique use-cases
-
-Posez 3-5 questions basées sur des situations réelles de votre projet. Évaluez la réflexion, pas les réponses par cœur.
-
-⏱ 1h
-
-3
-
-### Test technique ciblé & payé
-
-Un mini-projet contextualisé (max 2h), rémunéré. Évaluez la démarche autant que le résultat final.
-
-⏱ 2h
-
-4
-
-### Validation peer-review
-
-Faites valider le profil par un autre dev. Un échange technique de 30 min révèle le vrai niveau d'expertise.
-
-⏱ 30min
-
-DIGITAGS.WORK
-
-Recrutement freelance simplifié et qualifié
+<div class="dtz-widget"><div class="container"><h1>Évaluer un freelance en 4 étapes</h1><p class="subtitle">Méthode rapide et efficace pour recruter sans erreur</p><div class="timeline"><div class="step"><div class="step-number">1</div><div class="step-content"><h3 class="step-title">Portfolio &amp; Code production</h3><p class="step-description">Analysez du code réel en production. Vérifiez la qualité, l'architecture et la présence de tests. Zéro code partagé = red flag.</p><span class="step-time">⏱ 1h</span></div></div><div class="step"><div class="step-number">2</div><div class="step-content"><h3 class="step-title">Entretien technique use-cases</h3><p class="step-description">Posez 3-5 questions basées sur des situations réelles de votre projet. Évaluez la réflexion, pas les réponses par cœur.</p><span class="step-time">⏱ 1h</span></div></div><div class="step"><div class="step-number">3</div><div class="step-content"><h3 class="step-title">Test technique ciblé &amp; payé</h3><p class="step-description">Un mini-projet contextualisé (max 2h), rémunéré. Évaluez la démarche autant que le résultat final.</p><span class="step-time">⏱ 2h</span></div></div><div class="step"><div class="step-number">4</div><div class="step-content"><h3 class="step-title">Validation peer-review</h3><p class="step-description">Faites valider le profil par un autre dev. Un échange technique de 30 min révèle le vrai niveau d'expertise.</p><span class="step-time">⏱ 30min</span></div></div></div><div class="footer"><div class="footer-logo">DIGITAGS.WORK</div><p class="footer-text">Recrutement freelance simplifié et qualifié</p></div></div></div>
 
 ‍
 
@@ -153,37 +117,11 @@ Au-delà des tests formels, certains signaux comportementaux sont de très bons 
 
 ‍
 
-  Signaux d'alerte vs signaux positifs - Recrutement freelance .dtz-widget \*, .dtz-widget \*::before, .dtz-widget \*::after { margin: 0; padding: 0; box-sizing: border-box; } .dtz-widget { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 20px; min-height: 100vh; display: flex; align-items: center; justify-content: center; } .dtz-widget .container { max-width: 800px; width: 100%; background: white; border-radius: 20px; padding: 40px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); } .dtz-widget h1 { text-align: center; color: #2d3748; font-size: clamp(24px, 5vw, 36px); margin-bottom: 10px; font-weight: 800; } .dtz-widget .subtitle { text-align: center; color: #718096; font-size: clamp(14px, 3vw, 18px); margin-bottom: 40px; } .dtz-widget .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px; } .dtz-widget .column { background: #f7fafc; border-radius: 15px; padding: 30px; } .dtz-widget .column-red { border: 3px solid #fc466b; background: linear-gradient(135deg, #fff5f5 0%, #fff 100%); } .dtz-widget .column-green { border: 3px solid #3ebd93; background: linear-gradient(135deg, #f0fff4 0%, #fff 100%); } .dtz-widget .column-header { display: flex; align-items: center; gap: 12px; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 2px solid #e2e8f0; } .dtz-widget .icon { font-size: clamp(32px, 6vw, 40px); } .dtz-widget .column-title { font-size: clamp(20px, 4vw, 26px); font-weight: 700; } .dtz-widget .red-title { color: #fc466b; } .dtz-widget .green-title { color: #3ebd93; } .dtz-widget .signal-list { list-style: none; } .dtz-widget .signal-item { padding: 15px 0; border-bottom: 1px solid #e2e8f0; display: flex; align-items: flex-start; gap: 12px; } .dtz-widget .signal-item:last-child { border-bottom: none; padding-bottom: 0; } .dtz-widget .signal-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; } .dtz-widget .signal-text { color: #4a5568; font-size: clamp(14px, 3vw, 16px); line-height: 1.5; font-weight: 500; } .dtz-widget .cta-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; padding: 30px; text-align: center; color: white; } .dtz-widget .cta-title { font-size: clamp(20px, 4vw, 24px); font-weight: 700; margin-bottom: 10px; } .dtz-widget .cta-text { font-size: clamp(14px, 3vw, 16px); opacity: 0.95; line-height: 1.6; } .dtz-widget .footer { margin-top: 30px; text-align: center; } .dtz-widget .footer-logo { color: #667eea; font-size: clamp(20px, 4vw, 28px); font-weight: 800; } @media (max-width: 768px) { .dtz-widget .comparison-grid { grid-template-columns: 1fr; gap: 20px; } .dtz-widget .container { padding: 25px; } .dtz-widget .column { padding: 20px; } }
+  Signaux d'alerte vs signaux positifs - Recrutement freelance 
 
-# Les signaux qui ne trompent pas
+<style>.dtz-widget *, .dtz-widget *::before, .dtz-widget *::after { margin: 0; padding: 0; box-sizing: border-box; } .dtz-widget { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 20px; min-height: 100vh; display: flex; align-items: center; justify-content: center; } .dtz-widget .container { max-width: 800px; width: 100%; background: white; border-radius: 20px; padding: 40px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); } .dtz-widget h1 { text-align: center; color: #2d3748; font-size: clamp(24px, 5vw, 36px); margin-bottom: 10px; font-weight: 800; } .dtz-widget .subtitle { text-align: center; color: #718096; font-size: clamp(14px, 3vw, 18px); margin-bottom: 40px; } .dtz-widget .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px; } .dtz-widget .column { background: #f7fafc; border-radius: 15px; padding: 30px; } .dtz-widget .column-red { border: 3px solid #fc466b; background: linear-gradient(135deg, #fff5f5 0%, #fff 100%); } .dtz-widget .column-green { border: 3px solid #3ebd93; background: linear-gradient(135deg, #f0fff4 0%, #fff 100%); } .dtz-widget .column-header { display: flex; align-items: center; gap: 12px; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 2px solid #e2e8f0; } .dtz-widget .icon { font-size: clamp(32px, 6vw, 40px); } .dtz-widget .column-title { font-size: clamp(20px, 4vw, 26px); font-weight: 700; } .dtz-widget .red-title { color: #fc466b; } .dtz-widget .green-title { color: #3ebd93; } .dtz-widget .signal-list { list-style: none; } .dtz-widget .signal-item { padding: 15px 0; border-bottom: 1px solid #e2e8f0; display: flex; align-items: flex-start; gap: 12px; } .dtz-widget .signal-item:last-child { border-bottom: none; padding-bottom: 0; } .dtz-widget .signal-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; } .dtz-widget .signal-text { color: #4a5568; font-size: clamp(14px, 3vw, 16px); line-height: 1.5; font-weight: 500; } .dtz-widget .cta-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; padding: 30px; text-align: center; color: white; } .dtz-widget .cta-title { font-size: clamp(20px, 4vw, 24px); font-weight: 700; margin-bottom: 10px; } .dtz-widget .cta-text { font-size: clamp(14px, 3vw, 16px); opacity: 0.95; line-height: 1.6; } .dtz-widget .footer { margin-top: 30px; text-align: center; } .dtz-widget .footer-logo { color: #667eea; font-size: clamp(20px, 4vw, 28px); font-weight: 800; } @media (max-width: 768px) { .dtz-widget .comparison-grid { grid-template-columns: 1fr; gap: 20px; } .dtz-widget .container { padding: 25px; } .dtz-widget .column { padding: 20px; } }</style>
 
-Repérez instantanément les bons et mauvais profils freelance
-
-🚨
-
-## Red Flags
-
--   ❌ Refuse de partager du code en production
--   ❌ Prétend tout maîtriser sans jamais dire "je ne sais pas"
--   ❌ Ne pose aucune question sur votre contexte métier
--   ❌ Promet des délais irréalistes pour impressionner
--   ❌ Code sans aucun test unitaire ou documentation
-
-✅
-
-## Signaux positifs
-
--   ✔️ Partage du code propre, testé et documenté
--   ✔️ Reconnaît ses limites et propose de monter en compétence
--   ✔️ Pose des questions pertinentes sur vos contraintes
--   ✔️ Donne des estimations réalistes avec marges de sécurité
--   ✔️ Vulgarise les concepts techniques complexes
-
-### Recrutez sans prise de tête
-
-Mieux vaut passer 2 jours à bien recruter que 3 mois à rattraper un mauvais choix. Structurez votre process avec DIGITAGS.WORK.
-
-DIGITAGS.WORK
+<div class="dtz-widget"><div class="container"><h1>Les signaux qui ne trompent pas</h1><p class="subtitle">Repérez instantanément les bons et mauvais profils freelance</p><div class="comparison-grid"><div class="column column-red"><div class="column-header"><span class="icon">🚨</span><h2 class="column-title red-title">Red Flags</h2></div><ul class="signal-list"><li class="signal-item"><span class="signal-icon">❌</span> <span class="signal-text">Refuse de partager du code en production</span></li><li class="signal-item"><span class="signal-icon">❌</span> <span class="signal-text">Prétend tout maîtriser sans jamais dire "je ne sais pas"</span></li><li class="signal-item"><span class="signal-icon">❌</span> <span class="signal-text">Ne pose aucune question sur votre contexte métier</span></li><li class="signal-item"><span class="signal-icon">❌</span> <span class="signal-text">Promet des délais irréalistes pour impressionner</span></li><li class="signal-item"><span class="signal-icon">❌</span> <span class="signal-text">Code sans aucun test unitaire ou documentation</span></li></ul></div><div class="column column-green"><div class="column-header"><span class="icon">✅</span><h2 class="column-title green-title">Signaux positifs</h2></div><ul class="signal-list"><li class="signal-item"><span class="signal-icon">✔️</span> <span class="signal-text">Partage du code propre, testé et documenté</span></li><li class="signal-item"><span class="signal-icon">✔️</span> <span class="signal-text">Reconnaît ses limites et propose de monter en compétence</span></li><li class="signal-item"><span class="signal-icon">✔️</span> <span class="signal-text">Pose des questions pertinentes sur vos contraintes</span></li><li class="signal-item"><span class="signal-icon">✔️</span> <span class="signal-text">Donne des estimations réalistes avec marges de sécurité</span></li><li class="signal-item"><span class="signal-icon">✔️</span> <span class="signal-text">Vulgarise les concepts techniques complexes</span></li></ul></div></div><div class="cta-box"><h3 class="cta-title">Recrutez sans prise de tête</h3><p class="cta-text">Mieux vaut passer 2 jours à bien recruter que 3 mois à rattraper un mauvais choix. Structurez votre process avec DIGITAGS.WORK.</p></div><div class="footer"><div class="footer-logo">DIGITAGS.WORK</div></div></div></div>
 
 ‍
 

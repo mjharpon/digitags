@@ -129,89 +129,11 @@ C'est le raccourci légal vers de meilleurs résultats, plus vite, avec moins de
 
 ‍
 
-  Matrice Maturité Freelance Ready    .digitags-maturity-container { max-width: 800px; margin: 0 auto; font-family: 'DM Sans', sans-serif; padding: 0; box-sizing: border-box; } .digitags-maturity-container \* { box-sizing: border-box; } .digitags-maturity-card { background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 16px; padding: 40px; box-shadow: 0 4px 20px rgba(0, 102, 204, 0.08); } .digitags-maturity-header { text-align: center; margin-bottom: 40px; } .digitags-maturity-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 28px; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0; } .digitags-maturity-subtitle { font-size: 15px; color: #6c757d; margin: 0; } .digitags-pillars-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 32px; } .digitags-pillar-card { background: white; border-radius: 12px; padding: 24px; border: 2px solid #e9ecef; position: relative; overflow: hidden; transition: all 0.3s ease; } .digitags-pillar-card:hover { border-color: #0066CC; box-shadow: 0 8px 20px rgba(0, 102, 204, 0.12); transform: translateY(-4px); } .digitags-pillar-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #0066CC 0%, #FF8C00 100%); } .digitags-pillar-icon { width: 56px; height: 56px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin-bottom: 16px; } .digitags-pillar-1 { background: linear-gradient(135deg, #0066CC15 0%, #0066CC08 100%); } .digitags-pillar-2 { background: linear-gradient(135deg, #FF8C0015 0%, #FF8C0008 100%); } .digitags-pillar-3 { background: linear-gradient(135deg, #28a74515 0%, #28a74508 100%); } .digitags-pillar-4 { background: linear-gradient(135deg, #6f42c115 0%, #6f42c108 100%); } .digitags-pillar-name { font-family: 'Bricolage Grotesque', sans-serif; font-size: 18px; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0; } .digitags-pillar-description { font-size: 14px; color: #6c757d; line-height: 1.6; margin: 0 0 16px 0; } .digitags-maturity-levels { display: grid; gap: 8px; } .digitags-level-item { display: flex; align-items: center; gap: 10px; font-size: 13px; padding: 8px 0; } .digitags-level-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; } .digitags-level-beginner { background: #dc3545; } .digitags-level-intermediate { background: #ffc107; } .digitags-level-advanced { background: #28a745; } .digitags-level-text { flex-grow: 1; color: #495057; font-weight: 500; } .digitags-roadmap-section { background: white; border-radius: 12px; padding: 28px; border: 2px solid #e9ecef; margin-top: 32px; } .digitags-roadmap-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px; font-weight: 700; color: #1a1a1a; margin: 0 0 20px 0; display: flex; align-items: center; gap: 10px; } .digitags-roadmap-steps { display: grid; gap: 16px; } .digitags-step-card { background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 10px; padding: 16px 20px; display: flex; align-items: start; gap: 16px; transition: all 0.2s ease; } .digitags-step-card:hover { background: linear-gradient(135deg, #0066CC05 0%, #FF8C0005 100%); transform: translateX(4px); } .digitags-step-number { flex-shrink: 0; width: 36px; height: 36px; background: linear-gradient(135deg, #0066CC 0%, #FF8C00 100%); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; } .digitags-step-content { flex-grow: 1; } .digitags-step-title { font-size: 15px; font-weight: 700; color: #1a1a1a; margin: 0 0 6px 0; } .digitags-step-description { font-size: 13px; color: #6c757d; line-height: 1.5; margin: 0; } .digitags-cta-box { background: linear-gradient(135deg, #0066CC 0%, #0052a3 100%); border-radius: 12px; padding: 24px; margin-top: 32px; text-align: center; color: white; } .digitags-cta-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px; font-weight: 700; margin: 0 0 8px 0; } .digitags-cta-text { font-size: 14px; opacity: 0.95; margin: 0; line-height: 1.6; } @media (max-width: 640px) { .digitags-maturity-card { padding: 24px 20px; } .digitags-maturity-title { font-size: 22px; } .digitags-pillars-grid { grid-template-columns: 1fr; gap: 16px; } .digitags-pillar-card { padding: 20px; } }
+  Matrice Maturité Freelance Ready    
 
-### Les 4 piliers de la maturité "Freelance Ready"
+<style>.digitags-maturity-container { max-width: 800px; margin: 0 auto; font-family: 'DM Sans', sans-serif; padding: 0; box-sizing: border-box; } .digitags-maturity-container * { box-sizing: border-box; } .digitags-maturity-card { background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 16px; padding: 40px; box-shadow: 0 4px 20px rgba(0, 102, 204, 0.08); } .digitags-maturity-header { text-align: center; margin-bottom: 40px; } .digitags-maturity-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 28px; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0; } .digitags-maturity-subtitle { font-size: 15px; color: #6c757d; margin: 0; } .digitags-pillars-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 32px; } .digitags-pillar-card { background: white; border-radius: 12px; padding: 24px; border: 2px solid #e9ecef; position: relative; overflow: hidden; transition: all 0.3s ease; } .digitags-pillar-card:hover { border-color: #0066CC; box-shadow: 0 8px 20px rgba(0, 102, 204, 0.12); transform: translateY(-4px); } .digitags-pillar-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #0066CC 0%, #FF8C00 100%); } .digitags-pillar-icon { width: 56px; height: 56px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin-bottom: 16px; } .digitags-pillar-1 { background: linear-gradient(135deg, #0066CC15 0%, #0066CC08 100%); } .digitags-pillar-2 { background: linear-gradient(135deg, #FF8C0015 0%, #FF8C0008 100%); } .digitags-pillar-3 { background: linear-gradient(135deg, #28a74515 0%, #28a74508 100%); } .digitags-pillar-4 { background: linear-gradient(135deg, #6f42c115 0%, #6f42c108 100%); } .digitags-pillar-name { font-family: 'Bricolage Grotesque', sans-serif; font-size: 18px; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0; } .digitags-pillar-description { font-size: 14px; color: #6c757d; line-height: 1.6; margin: 0 0 16px 0; } .digitags-maturity-levels { display: grid; gap: 8px; } .digitags-level-item { display: flex; align-items: center; gap: 10px; font-size: 13px; padding: 8px 0; } .digitags-level-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; } .digitags-level-beginner { background: #dc3545; } .digitags-level-intermediate { background: #ffc107; } .digitags-level-advanced { background: #28a745; } .digitags-level-text { flex-grow: 1; color: #495057; font-weight: 500; } .digitags-roadmap-section { background: white; border-radius: 12px; padding: 28px; border: 2px solid #e9ecef; margin-top: 32px; } .digitags-roadmap-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px; font-weight: 700; color: #1a1a1a; margin: 0 0 20px 0; display: flex; align-items: center; gap: 10px; } .digitags-roadmap-steps { display: grid; gap: 16px; } .digitags-step-card { background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 10px; padding: 16px 20px; display: flex; align-items: start; gap: 16px; transition: all 0.2s ease; } .digitags-step-card:hover { background: linear-gradient(135deg, #0066CC05 0%, #FF8C0005 100%); transform: translateX(4px); } .digitags-step-number { flex-shrink: 0; width: 36px; height: 36px; background: linear-gradient(135deg, #0066CC 0%, #FF8C00 100%); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; } .digitags-step-content { flex-grow: 1; } .digitags-step-title { font-size: 15px; font-weight: 700; color: #1a1a1a; margin: 0 0 6px 0; } .digitags-step-description { font-size: 13px; color: #6c757d; line-height: 1.5; margin: 0; } .digitags-cta-box { background: linear-gradient(135deg, #0066CC 0%, #0052a3 100%); border-radius: 12px; padding: 24px; margin-top: 32px; text-align: center; color: white; } .digitags-cta-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px; font-weight: 700; margin: 0 0 8px 0; } .digitags-cta-text { font-size: 14px; opacity: 0.95; margin: 0; line-height: 1.6; } @media (max-width: 640px) { .digitags-maturity-card { padding: 24px 20px; } .digitags-maturity-title { font-size: 22px; } .digitags-pillars-grid { grid-template-columns: 1fr; gap: 16px; } .digitags-pillar-card { padding: 20px; } }</style>
 
-Évaluez votre niveau sur chaque dimension clé
-
-🎯
-
-#### Cadrage stratégique
-
-Capacité à définir des objectifs clairs, mesurables et alignés business
-
-Besoins flous, pas de KPIs définis
-
-Brief écrit, objectifs partiels
-
-Objectifs SMART, livrables définis
-
-🛠️
-
-#### Outillage collaboratif
-
-Infrastructure tech et outils pour faciliter le travail à distance
-
-Emails + fichiers dispersés
-
-Quelques outils partagés
-
-Stack complet (projet, comm, data)
-
-👥
-
-#### Culture managériale
-
-Posture de confiance, autonomie et pilotage par la valeur
-
-Contrôle permanent, méfiance
-
-Gouvernance floue, tensions
-
-Confiance, transparence, rituels
-
-📊
-
-#### Mesure de performance
-
-Capacité à évaluer l'impact et la valeur produite
-
-Évaluation au ressenti
-
-Suivi activité, peu de metrics
-
-KPIs clairs, impact business tracé
-
-#### 🚀 Feuille de route : passer au niveau supérieur
-
-1
-
-Audit flash (10 min)
-
-Répondez aux 10 questions et identifiez vos axes d'amélioration prioritaires
-
-2
-
-Quick wins (1-2 semaines)
-
-Brief type, onboarding checklist, choix d'outils collaboratifs basiques
-
-3
-
-Premier sprint pilote (3-4 semaines)
-
-Lancer une mission test avec un freelance senior pour valider vos processus
-
-4
-
-Industrialisation (2-3 mois)
-
-Documenter, former les équipes, démultiplier les collaborations freelance
-
-##### 💡 Besoin d'accompagnement ?
-
-Digitags.work vous aide à structurer votre démarche, vous met en relation avec des freelances seniors triés et vous accompagne sur le pilotage. Simple, rapide, efficace.
+<div class="digitags-maturity-container"><div class="digitags-maturity-card"><div class="digitags-maturity-header"><h3 class="digitags-maturity-title">Les 4 piliers de la maturité "Freelance Ready"</h3><p class="digitags-maturity-subtitle">Évaluez votre niveau sur chaque dimension clé</p></div><div class="digitags-pillars-grid"><div class="digitags-pillar-card"><div class="digitags-pillar-icon digitags-pillar-1">🎯</div><h4 class="digitags-pillar-name">Cadrage stratégique</h4><p class="digitags-pillar-description">Capacité à définir des objectifs clairs, mesurables et alignés business</p><div class="digitags-maturity-levels"><div class="digitags-level-item"><span class="digitags-level-dot digitags-level-beginner"></span><span class="digitags-level-text">Besoins flous, pas de KPIs définis</span></div><div class="digitags-level-item"><span class="digitags-level-dot digitags-level-intermediate"></span><span class="digitags-level-text">Brief écrit, objectifs partiels</span></div><div class="digitags-level-item"><span class="digitags-level-dot digitags-level-advanced"></span><span class="digitags-level-text">Objectifs SMART, livrables définis</span></div></div></div><div class="digitags-pillar-card"><div class="digitags-pillar-icon digitags-pillar-2">🛠️</div><h4 class="digitags-pillar-name">Outillage collaboratif</h4><p class="digitags-pillar-description">Infrastructure tech et outils pour faciliter le travail à distance</p><div class="digitags-maturity-levels"><div class="digitags-level-item"><span class="digitags-level-dot digitags-level-beginner"></span><span class="digitags-level-text">Emails + fichiers dispersés</span></div><div class="digitags-level-item"><span class="digitags-level-dot digitags-level-intermediate"></span><span class="digitags-level-text">Quelques outils partagés</span></div><div class="digitags-level-item"><span class="digitags-level-dot digitags-level-advanced"></span><span class="digitags-level-text">Stack complet (projet, comm, data)</span></div></div></div><div class="digitags-pillar-card"><div class="digitags-pillar-icon digitags-pillar-3">👥</div><h4 class="digitags-pillar-name">Culture managériale</h4><p class="digitags-pillar-description">Posture de confiance, autonomie et pilotage par la valeur</p><div class="digitags-maturity-levels"><div class="digitags-level-item"><span class="digitags-level-dot digitags-level-beginner"></span><span class="digitags-level-text">Contrôle permanent, méfiance</span></div><div class="digitags-level-item"><span class="digitags-level-dot digitags-level-intermediate"></span><span class="digitags-level-text">Gouvernance floue, tensions</span></div><div class="digitags-level-item"><span class="digitags-level-dot digitags-level-advanced"></span><span class="digitags-level-text">Confiance, transparence, rituels</span></div></div></div><div class="digitags-pillar-card"><div class="digitags-pillar-icon digitags-pillar-4">📊</div><h4 class="digitags-pillar-name">Mesure de performance</h4><p class="digitags-pillar-description">Capacité à évaluer l'impact et la valeur produite</p><div class="digitags-maturity-levels"><div class="digitags-level-item"><span class="digitags-level-dot digitags-level-beginner"></span><span class="digitags-level-text">Évaluation au ressenti</span></div><div class="digitags-level-item"><span class="digitags-level-dot digitags-level-intermediate"></span><span class="digitags-level-text">Suivi activité, peu de metrics</span></div><div class="digitags-level-item"><span class="digitags-level-dot digitags-level-advanced"></span><span class="digitags-level-text">KPIs clairs, impact business tracé</span></div></div></div></div><div class="digitags-roadmap-section"><h4 class="digitags-roadmap-title"><span>🚀</span> <span>Feuille de route : passer au niveau supérieur</span></h4><div class="digitags-roadmap-steps"><div class="digitags-step-card"><div class="digitags-step-number">1</div><div class="digitags-step-content"><div class="digitags-step-title">Audit flash (10 min)</div><p class="digitags-step-description">Répondez aux 10 questions et identifiez vos axes d'amélioration prioritaires</p></div></div><div class="digitags-step-card"><div class="digitags-step-number">2</div><div class="digitags-step-content"><div class="digitags-step-title">Quick wins (1-2 semaines)</div><p class="digitags-step-description">Brief type, onboarding checklist, choix d'outils collaboratifs basiques</p></div></div><div class="digitags-step-card"><div class="digitags-step-number">3</div><div class="digitags-step-content"><div class="digitags-step-title">Premier sprint pilote (3-4 semaines)</div><p class="digitags-step-description">Lancer une mission test avec un freelance senior pour valider vos processus</p></div></div><div class="digitags-step-card"><div class="digitags-step-number">4</div><div class="digitags-step-content"><div class="digitags-step-title">Industrialisation (2-3 mois)</div><p class="digitags-step-description">Documenter, former les équipes, démultiplier les collaborations freelance</p></div></div></div></div><div class="digitags-cta-box"><h5 class="digitags-cta-title">💡 Besoin d'accompagnement ?</h5><p class="digitags-cta-text">Digitags.work vous aide à structurer votre démarche, vous met en relation avec des freelances seniors triés et vous accompagne sur le pilotage. Simple, rapide, efficace.</p></div></div></div>
 
 ‍
 

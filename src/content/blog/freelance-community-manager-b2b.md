@@ -19,37 +19,11 @@ Pour une TPE ou une entreprise en phase de structuration, cette agilité fait to
 
 ‍
 
-  Pourquoi choisir un Freelance Community Manager \* { margin: 0; padding: 0; box-sizing: border-box; } /\* ✅ CORRECTION : plus de style sur body — on cible uniquement .cm-wrapper \*/ .cm-wrapper { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 24px; display: flex; align-items: center; justify-content: center; } .cm-container { max-width: 800px; width: 100%; background: white; border-radius: 24px; padding: 48px 40px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); } .cm-container h1 { font-size: clamp(24px, 5vw, 36px); color: #1a202c; margin-bottom: 12px; font-weight: 800; text-align: center; } .cm-subtitle { text-align: center; color: #718096; font-size: clamp(14px, 3vw, 18px); margin-bottom: 40px; } .cm-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 32px; } .cm-card { background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%); border-radius: 16px; padding: 28px 24px; border: 2px solid #e2e8f0; transition: all 0.3s ease; position: relative; overflow: hidden; } .cm-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: linear-gradient(180deg, #667eea 0%, #764ba2 100%); transform: scaleY(0); transition: transform 0.3s ease; } .cm-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(102, 126, 234, 0.15); border-color: #667eea; } .cm-card:hover::before { transform: scaleY(1); } .cm-card-icon { font-size: 42px; margin-bottom: 16px; display: block; } .cm-card-title { font-size: clamp(18px, 3vw, 22px); font-weight: 700; color: #2d3748; margin-bottom: 12px; } .cm-card-description { color: #4a5568; font-size: clamp(14px, 2.5vw, 16px); line-height: 1.6; } .cm-highlight { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700; } .cm-footer { margin-top: 48px; text-align: center; padding-top: 32px; border-top: 2px solid #e2e8f0; } .cm-footer-logo { font-size: clamp(18px, 3vw, 24px); font-weight: 800; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; } @media (max-width: 640px) { .cm-container { padding: 32px 24px; } .cm-cards-grid { grid-template-columns: 1fr; } }
+  Pourquoi choisir un Freelance Community Manager 
 
-# Pourquoi choisir un Freelance Community Manager ?
+<style>* { margin: 0; padding: 0; box-sizing: border-box; } /* ✅ CORRECTION : plus de style sur body — on cible uniquement .cm-wrapper */ .cm-wrapper { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 24px; display: flex; align-items: center; justify-content: center; } .cm-container { max-width: 800px; width: 100%; background: white; border-radius: 24px; padding: 48px 40px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); } .cm-container h1 { font-size: clamp(24px, 5vw, 36px); color: #1a202c; margin-bottom: 12px; font-weight: 800; text-align: center; } .cm-subtitle { text-align: center; color: #718096; font-size: clamp(14px, 3vw, 18px); margin-bottom: 40px; } .cm-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 32px; } .cm-card { background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%); border-radius: 16px; padding: 28px 24px; border: 2px solid #e2e8f0; transition: all 0.3s ease; position: relative; overflow: hidden; } .cm-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: linear-gradient(180deg, #667eea 0%, #764ba2 100%); transform: scaleY(0); transition: transform 0.3s ease; } .cm-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(102, 126, 234, 0.15); border-color: #667eea; } .cm-card:hover::before { transform: scaleY(1); } .cm-card-icon { font-size: 42px; margin-bottom: 16px; display: block; } .cm-card-title { font-size: clamp(18px, 3vw, 22px); font-weight: 700; color: #2d3748; margin-bottom: 12px; } .cm-card-description { color: #4a5568; font-size: clamp(14px, 2.5vw, 16px); line-height: 1.6; } .cm-highlight { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 700; } .cm-footer { margin-top: 48px; text-align: center; padding-top: 32px; border-top: 2px solid #e2e8f0; } .cm-footer-logo { font-size: clamp(18px, 3vw, 24px); font-weight: 800; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; } @media (max-width: 640px) { .cm-container { padding: 32px 24px; } .cm-cards-grid { grid-template-columns: 1fr; } }</style>
 
-4 avantages décisifs pour votre entreprise B2B
-
-💰
-
-### Budget Optimisé
-
-2 à 3x moins cher qu'un CDI. Payez uniquement la prestation dont vous avez besoin, sans charges patronales ni coûts cachés.
-
-⚡
-
-### Agilité Maximum
-
-Ajustez le volume et la durée selon vos besoins. Testez sans engagement long terme et scalez si ça fonctionne.
-
-🎯
-
-### Expertise Multi-Secteurs
-
-Bénéficiez d'une vision terrain enrichie par plusieurs projets et industries. L'expérience d'une agence, la proximité d'un collaborateur.
-
-🚀
-
-### Rapidité de Déploiement
-
-Pas de recrutement interminable. Démarrage sous 2 semaines avec un professionnel opérationnel immédiatement.
-
-DIGITAGS.WORK
+<div class="cm-wrapper"><div class="cm-container"><h1>Pourquoi choisir un Freelance Community Manager ?</h1><p class="cm-subtitle">4 avantages décisifs pour votre entreprise B2B</p><div class="cm-cards-grid"><div class="cm-card"><span class="cm-card-icon">💰</span><h3 class="cm-card-title">Budget Optimisé</h3><p class="cm-card-description"><span class="cm-highlight">2 à 3x moins cher</span> qu'un CDI. Payez uniquement la prestation dont vous avez besoin, sans charges patronales ni coûts cachés.</p></div><div class="cm-card"><span class="cm-card-icon">⚡</span><h3 class="cm-card-title">Agilité Maximum</h3><p class="cm-card-description">Ajustez le volume et la durée selon vos besoins. <span class="cm-highlight">Testez sans engagement</span> long terme et scalez si ça fonctionne.</p></div><div class="cm-card"><span class="cm-card-icon">🎯</span><h3 class="cm-card-title">Expertise Multi-Secteurs</h3><p class="cm-card-description">Bénéficiez d'une vision terrain enrichie par <span class="cm-highlight">plusieurs projets et industries</span>. L'expérience d'une agence, la proximité d'un collaborateur.</p></div><div class="cm-card"><span class="cm-card-icon">🚀</span><h3 class="cm-card-title">Rapidité de Déploiement</h3><p class="cm-card-description">Pas de recrutement interminable. <span class="cm-highlight">Démarrage sous 2 semaines</span> avec un professionnel opérationnel immédiatement.</p></div></div><div class="cm-footer"><p class="cm-footer-logo">DIGITAGS.WORK</p></div></div></div>
 
 ‍
 
@@ -129,49 +103,11 @@ Plutôt que de signer un contrat annuel d'emblée, commencez par une mission de 
 
 ‍
 
-  Ce que livre un Community Manager Freelance \* { margin: 0; padding: 0; box-sizing: border-box; } /\* ✅ CORRECTION : plus de style sur body — on cible uniquement .cmf-wrapper \*/ .cmf-wrapper { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 20px; border-radius: 24px; display: flex; align-items: center; justify-content: center; } .cmf-container { max-width: 800px; width: 100%; background: white; border-radius: 24px; padding: 48px 40px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); } .cmf-container h1 { font-size: clamp(24px, 5vw, 36px); color: #1a202c; margin-bottom: 16px; font-weight: 800; text-align: center; } .cmf-subtitle { text-align: center; color: #718096; font-size: clamp(14px, 3vw, 18px); margin-bottom: 48px; } .cmf-timeline { position: relative; padding-left: 40px; } .cmf-timeline::before { content: ''; position: absolute; left: 15px; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%); } .cmf-timeline-item { position: relative; margin-bottom: 36px; padding-left: 32px; } .cmf-timeline-item::before { content: ''; position: absolute; left: -28px; top: 8px; width: 16px; height: 16px; background: white; border: 3px solid #4facfe; border-radius: 50%; box-shadow: 0 0 0 4px rgba(79, 172, 254, 0.1); transition: all 0.3s ease; } .cmf-timeline-item:hover::before { transform: scale(1.3); box-shadow: 0 0 0 8px rgba(79, 172, 254, 0.2); } .cmf-item-header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; } .cmf-item-icon { font-size: 28px; flex-shrink: 0; } .cmf-item-title { font-size: clamp(18px, 3vw, 22px); font-weight: 700; color: #2d3748; } .cmf-item-description { color: #4a5568; font-size: clamp(14px, 2.5vw, 16px); line-height: 1.7; margin-left: 40px; } .cmf-stat-box { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 12px; padding: 20px; margin-top: 40px; border-left: 4px solid #4facfe; } .cmf-stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 24px; margin-top: 16px; } .cmf-stat-item { text-align: center; } .cmf-stat-number { font-size: clamp(28px, 5vw, 42px); font-weight: 800; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: block; margin-bottom: 4px; } .cmf-stat-label { font-size: clamp(12px, 2vw, 14px); color: #4a5568; font-weight: 600; } .cmf-footer { margin-top: 48px; text-align: center; padding-top: 32px; border-top: 2px solid #e2e8f0; } .cmf-footer-logo { font-size: clamp(18px, 3vw, 24px); font-weight: 800; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; } @media (max-width: 640px) { .cmf-container { padding: 32px 24px; } .cmf-timeline { padding-left: 32px; } .cmf-item-description { margin-left: 0; } }
+  Ce que livre un Community Manager Freelance 
 
-# Ce que livre concrètement un Freelance CM
+<style>* { margin: 0; padding: 0; box-sizing: border-box; } /* ✅ CORRECTION : plus de style sur body — on cible uniquement .cmf-wrapper */ .cmf-wrapper { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 20px; border-radius: 24px; display: flex; align-items: center; justify-content: center; } .cmf-container { max-width: 800px; width: 100%; background: white; border-radius: 24px; padding: 48px 40px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); } .cmf-container h1 { font-size: clamp(24px, 5vw, 36px); color: #1a202c; margin-bottom: 16px; font-weight: 800; text-align: center; } .cmf-subtitle { text-align: center; color: #718096; font-size: clamp(14px, 3vw, 18px); margin-bottom: 48px; } .cmf-timeline { position: relative; padding-left: 40px; } .cmf-timeline::before { content: ''; position: absolute; left: 15px; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%); } .cmf-timeline-item { position: relative; margin-bottom: 36px; padding-left: 32px; } .cmf-timeline-item::before { content: ''; position: absolute; left: -28px; top: 8px; width: 16px; height: 16px; background: white; border: 3px solid #4facfe; border-radius: 50%; box-shadow: 0 0 0 4px rgba(79, 172, 254, 0.1); transition: all 0.3s ease; } .cmf-timeline-item:hover::before { transform: scale(1.3); box-shadow: 0 0 0 8px rgba(79, 172, 254, 0.2); } .cmf-item-header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; } .cmf-item-icon { font-size: 28px; flex-shrink: 0; } .cmf-item-title { font-size: clamp(18px, 3vw, 22px); font-weight: 700; color: #2d3748; } .cmf-item-description { color: #4a5568; font-size: clamp(14px, 2.5vw, 16px); line-height: 1.7; margin-left: 40px; } .cmf-stat-box { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 12px; padding: 20px; margin-top: 40px; border-left: 4px solid #4facfe; } .cmf-stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 24px; margin-top: 16px; } .cmf-stat-item { text-align: center; } .cmf-stat-number { font-size: clamp(28px, 5vw, 42px); font-weight: 800; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: block; margin-bottom: 4px; } .cmf-stat-label { font-size: clamp(12px, 2vw, 14px); color: #4a5568; font-weight: 600; } .cmf-footer { margin-top: 48px; text-align: center; padding-top: 32px; border-top: 2px solid #e2e8f0; } .cmf-footer-logo { font-size: clamp(18px, 3vw, 24px); font-weight: 800; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; } @media (max-width: 640px) { .cmf-container { padding: 32px 24px; } .cmf-timeline { padding-left: 32px; } .cmf-item-description { margin-left: 0; } }</style>
 
-Les livrables clés pour transformer votre présence digitale
-
-🎯
-
-### Stratégie Social Media sur-mesure
-
-Analyse concurrentielle, définition des objectifs, choix des plateformes et ligne éditoriale adaptée à vos personas B2B.
-
-📅
-
-### Calendrier Éditorial Complet
-
-Planning mensuel avec thématiques, formats, visuels et copies prêts à publier. Anticipation des temps forts de votre secteur.
-
-✍️
-
-### Production de Contenu Régulière
-
-Posts optimisés, visuels professionnels, vidéos courtes, infographies. Chaque format adapté aux codes de chaque plateforme.
-
-💬
-
-### Community Management Réactif
-
-Réponses aux commentaires, modération, gestion de crise, animation des conversations et veille e-réputation.
-
-📊
-
-### Reporting & Analytics
-
-Dashboard mensuel avec KPIs clés : engagement, reach, conversions, insights actionnables pour optimiser en continu.
-
-8-15h par semaine
-
-10-15 posts/mois
-
-< 24h temps réponse
-
-DIGITAGS.WORK
+<div class="cmf-wrapper"><div class="cmf-container"><h1>Ce que livre concrètement un Freelance CM</h1><p class="cmf-subtitle">Les livrables clés pour transformer votre présence digitale</p><div class="cmf-timeline"><div class="cmf-timeline-item"><div class="cmf-item-header"><span class="cmf-item-icon">🎯</span><h3 class="cmf-item-title">Stratégie Social Media sur-mesure</h3></div><p class="cmf-item-description">Analyse concurrentielle, définition des objectifs, choix des plateformes et ligne éditoriale adaptée à vos personas B2B.</p></div><div class="cmf-timeline-item"><div class="cmf-item-header"><span class="cmf-item-icon">📅</span><h3 class="cmf-item-title">Calendrier Éditorial Complet</h3></div><p class="cmf-item-description">Planning mensuel avec thématiques, formats, visuels et copies prêts à publier. Anticipation des temps forts de votre secteur.</p></div><div class="cmf-timeline-item"><div class="cmf-item-header"><span class="cmf-item-icon">✍️</span><h3 class="cmf-item-title">Production de Contenu Régulière</h3></div><p class="cmf-item-description">Posts optimisés, visuels professionnels, vidéos courtes, infographies. Chaque format adapté aux codes de chaque plateforme.</p></div><div class="cmf-timeline-item"><div class="cmf-item-header"><span class="cmf-item-icon">💬</span><h3 class="cmf-item-title">Community Management Réactif</h3></div><p class="cmf-item-description">Réponses aux commentaires, modération, gestion de crise, animation des conversations et veille e-réputation.</p></div><div class="cmf-timeline-item"><div class="cmf-item-header"><span class="cmf-item-icon">📊</span><h3 class="cmf-item-title">Reporting &amp; Analytics</h3></div><p class="cmf-item-description">Dashboard mensuel avec KPIs clés : engagement, reach, conversions, insights actionnables pour optimiser en continu.</p></div></div><div class="cmf-stat-box"><div class="cmf-stat-grid"><div class="cmf-stat-item"><span class="cmf-stat-number">8-15h</span> <span class="cmf-stat-label">par semaine</span></div><div class="cmf-stat-item"><span class="cmf-stat-number">10-15</span> <span class="cmf-stat-label">posts/mois</span></div><div class="cmf-stat-item"><span class="cmf-stat-number">&lt; 24h</span> <span class="cmf-stat-label">temps réponse</span></div></div></div><div class="cmf-footer"><p class="cmf-footer-logo">DIGITAGS.WORK</p></div></div></div>
 
 ‍
 

@@ -81,55 +81,7 @@ Cette approche nous permet d'afficher un excellent taux de satisfaction client e
 
 ‍
 
-.dgtags-process-widget { font-family: 'DM Sans', sans-serif; background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%); padding: 40px 20px; display: flex; justify-content: center; align-items: center; box-sizing: border-box; } .dgtags-process-widget \*, .dgtags-process-widget \*::before, .dgtags-process-widget \*::after { box-sizing: border-box; margin: 0; padding: 0; } .dgtags-process-widget .container { max-width: 800px; width: 100%; background: #FFFFFF; border-radius: 24px; padding: 48px; box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08); } .dgtags-process-widget .header { text-align: center; margin-bottom: 56px; } .dgtags-process-widget .header h1 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 36px; font-weight: 800; color: #0F172A; margin-bottom: 12px; line-height: 1.2; } .dgtags-process-widget .header p { color: #64748B; font-size: 18px; line-height: 1.6; } .dgtags-process-widget .timeline { position: relative; padding-left: 0; } .dgtags-process-widget .step { position: relative; padding: 0 0 48px 72px; opacity: 0; transform: translateX(-20px); animation: dgtags-slideIn 0.6s ease forwards; } .dgtags-process-widget .step:nth-child(1) { animation-delay: 0.1s; } .dgtags-process-widget .step:nth-child(2) { animation-delay: 0.2s; } .dgtags-process-widget .step:nth-child(3) { animation-delay: 0.3s; } .dgtags-process-widget .step:nth-child(4) { animation-delay: 0.4s; } .dgtags-process-widget .step:nth-child(5) { animation-delay: 0.5s; } @keyframes dgtags-slideIn { to { opacity: 1; transform: translateX(0); } } .dgtags-process-widget .step:last-child { padding-bottom: 0; } .dgtags-process-widget .step::before { content: ''; position: absolute; left: 23px; top: 56px; width: 2px; height: calc(100% - 56px); background: linear-gradient(to bottom, #FF6B35, transparent); } .dgtags-process-widget .step:last-child::before { display: none; } .dgtags-process-widget .step-number { position: absolute; left: 0; top: 0; width: 48px; height: 48px; background: linear-gradient(135deg, #FF6B35, #FF8C61); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px; font-weight: 800; color: #FFFFFF; box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease; } .dgtags-process-widget .step:hover .step-number { transform: scale(1.1) rotate(5deg); box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4); } .dgtags-process-widget .step-content h3 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700; color: #0F172A; margin-bottom: 8px; transition: color 0.3s ease; } .dgtags-process-widget .step:hover .step-content h3 { color: #FF6B35; } .dgtags-process-widget .step-content p { color: #64748B; font-size: 16px; line-height: 1.7; } .dgtags-process-widget .duration { display: inline-block; margin-top: 12px; padding: 6px 14px; background: #F8FAFC; border-radius: 20px; font-size: 14px; color: #0F172A; font-weight: 500; } .dgtags-process-widget .footer { margin-top: 48px; padding-top: 32px; border-top: 2px solid #F8FAFC; text-align: center; } .dgtags-process-widget .cta-text { font-size: 18px; color: #64748B; margin-bottom: 20px; } .dgtags-process-widget .cta-button { display: inline-block; padding: 16px 32px; background: linear-gradient(135deg, #FF6B35, #FF8C61); color: #FFFFFF; font-family: 'Bricolage Grotesque', sans-serif; font-size: 16px; font-weight: 700; border-radius: 12px; text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3); } .dgtags-process-widget .cta-button:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255, 107, 53, 0.4); } @media (max-width: 640px) { .dgtags-process-widget .container { padding: 32px 24px; } .dgtags-process-widget .header h1 { font-size: 28px; } .dgtags-process-widget .header p { font-size: 16px; } .dgtags-process-widget .step { padding-left: 56px; } .dgtags-process-widget .step::before { left: 19px; } .dgtags-process-widget .step-number { width: 40px; height: 40px; font-size: 18px; } .dgtags-process-widget .step-content h3 { font-size: 19px; } .dgtags-process-widget .step-content p { font-size: 15px; } }
-
-# Notre processus de matching en 5 étapes
-
-De votre premier contact à la mise en route de votre projet
-
-1
-
-### Comprendre votre besoin
-
-Un échange approfondi pour clarifier votre projet, vos contraintes et vos objectifs business. On décode vos attentes pour éviter 90% des erreurs de casting.
-
-⏱ 30-45 min
-
-2
-
-### Sourcing ciblé
-
-On plonge dans notre vivier de 1500+ freelances pré-qualifiés. On croise compétences techniques, soft skills, disponibilité et budget pour identifier les meilleurs matchs.
-
-⏱ 24-48h
-
-3
-
-### Présélection terrain
-
-On contacte chaque profil pour valider sa disponibilité réelle, son intérêt et son adéquation avec vos contraintes. Vous ne recevez que 2 à 4 profils ultra-qualifiés.
-
-⏱ 1-2 jours
-
-4
-
-### Mise en relation
-
-On organise les premiers échanges et on reste dans la boucle pour faciliter la communication, clarifier les zones d'ombre et aligner les attentes mutuelles.
-
-⏱ 2-3 jours
-
-5
-
-### Démarrage & suivi
-
-Accompagnement sur le cadrage, la contractualisation et le briefing initial. On reste disponible pendant toute la mission en cas d'imprévu ou de besoin d'ajustement.
-
-⏱ En continu
-
-**Trouvez votre expert en 3 à 7 jours**
-
-[Déposer mon besoin →](https://www.digitags.work/)
+<div class="dgtags-process-widget"><style>.dgtags-process-widget { font-family: 'DM Sans', sans-serif; background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%); padding: 40px 20px; display: flex; justify-content: center; align-items: center; box-sizing: border-box; } .dgtags-process-widget *, .dgtags-process-widget *::before, .dgtags-process-widget *::after { box-sizing: border-box; margin: 0; padding: 0; } .dgtags-process-widget .container { max-width: 800px; width: 100%; background: #FFFFFF; border-radius: 24px; padding: 48px; box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08); } .dgtags-process-widget .header { text-align: center; margin-bottom: 56px; } .dgtags-process-widget .header h1 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 36px; font-weight: 800; color: #0F172A; margin-bottom: 12px; line-height: 1.2; } .dgtags-process-widget .header p { color: #64748B; font-size: 18px; line-height: 1.6; } .dgtags-process-widget .timeline { position: relative; padding-left: 0; } .dgtags-process-widget .step { position: relative; padding: 0 0 48px 72px; opacity: 0; transform: translateX(-20px); animation: dgtags-slideIn 0.6s ease forwards; } .dgtags-process-widget .step:nth-child(1) { animation-delay: 0.1s; } .dgtags-process-widget .step:nth-child(2) { animation-delay: 0.2s; } .dgtags-process-widget .step:nth-child(3) { animation-delay: 0.3s; } .dgtags-process-widget .step:nth-child(4) { animation-delay: 0.4s; } .dgtags-process-widget .step:nth-child(5) { animation-delay: 0.5s; } @keyframes dgtags-slideIn { to { opacity: 1; transform: translateX(0); } } .dgtags-process-widget .step:last-child { padding-bottom: 0; } .dgtags-process-widget .step::before { content: ''; position: absolute; left: 23px; top: 56px; width: 2px; height: calc(100% - 56px); background: linear-gradient(to bottom, #FF6B35, transparent); } .dgtags-process-widget .step:last-child::before { display: none; } .dgtags-process-widget .step-number { position: absolute; left: 0; top: 0; width: 48px; height: 48px; background: linear-gradient(135deg, #FF6B35, #FF8C61); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px; font-weight: 800; color: #FFFFFF; box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease; } .dgtags-process-widget .step:hover .step-number { transform: scale(1.1) rotate(5deg); box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4); } .dgtags-process-widget .step-content h3 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700; color: #0F172A; margin-bottom: 8px; transition: color 0.3s ease; } .dgtags-process-widget .step:hover .step-content h3 { color: #FF6B35; } .dgtags-process-widget .step-content p { color: #64748B; font-size: 16px; line-height: 1.7; } .dgtags-process-widget .duration { display: inline-block; margin-top: 12px; padding: 6px 14px; background: #F8FAFC; border-radius: 20px; font-size: 14px; color: #0F172A; font-weight: 500; } .dgtags-process-widget .footer { margin-top: 48px; padding-top: 32px; border-top: 2px solid #F8FAFC; text-align: center; } .dgtags-process-widget .cta-text { font-size: 18px; color: #64748B; margin-bottom: 20px; } .dgtags-process-widget .cta-button { display: inline-block; padding: 16px 32px; background: linear-gradient(135deg, #FF6B35, #FF8C61); color: #FFFFFF; font-family: 'Bricolage Grotesque', sans-serif; font-size: 16px; font-weight: 700; border-radius: 12px; text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3); } .dgtags-process-widget .cta-button:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255, 107, 53, 0.4); } @media (max-width: 640px) { .dgtags-process-widget .container { padding: 32px 24px; } .dgtags-process-widget .header h1 { font-size: 28px; } .dgtags-process-widget .header p { font-size: 16px; } .dgtags-process-widget .step { padding-left: 56px; } .dgtags-process-widget .step::before { left: 19px; } .dgtags-process-widget .step-number { width: 40px; height: 40px; font-size: 18px; } .dgtags-process-widget .step-content h3 { font-size: 19px; } .dgtags-process-widget .step-content p { font-size: 15px; } }</style><div class="container"><div class="header"><h1>Notre processus de matching en 5 étapes</h1><p>De votre premier contact à la mise en route de votre projet</p></div><div class="timeline"><div class="step"><div class="step-number">1</div><div class="step-content"><h3>Comprendre votre besoin</h3><p>Un échange approfondi pour clarifier votre projet, vos contraintes et vos objectifs business. On décode vos attentes pour éviter 90% des erreurs de casting.</p><span class="duration">⏱ 30-45 min</span></div></div><div class="step"><div class="step-number">2</div><div class="step-content"><h3>Sourcing ciblé</h3><p>On plonge dans notre vivier de 1500+ freelances pré-qualifiés. On croise compétences techniques, soft skills, disponibilité et budget pour identifier les meilleurs matchs.</p><span class="duration">⏱ 24-48h</span></div></div><div class="step"><div class="step-number">3</div><div class="step-content"><h3>Présélection terrain</h3><p>On contacte chaque profil pour valider sa disponibilité réelle, son intérêt et son adéquation avec vos contraintes. Vous ne recevez que 2 à 4 profils ultra-qualifiés.</p><span class="duration">⏱ 1-2 jours</span></div></div><div class="step"><div class="step-number">4</div><div class="step-content"><h3>Mise en relation</h3><p>On organise les premiers échanges et on reste dans la boucle pour faciliter la communication, clarifier les zones d'ombre et aligner les attentes mutuelles.</p><span class="duration">⏱ 2-3 jours</span></div></div><div class="step"><div class="step-number">5</div><div class="step-content"><h3>Démarrage &amp; suivi</h3><p>Accompagnement sur le cadrage, la contractualisation et le briefing initial. On reste disponible pendant toute la mission en cas d'imprévu ou de besoin d'ajustement.</p><span class="duration">⏱ En continu</span></div></div></div><div class="footer"><p class="cta-text"><strong>Trouvez votre expert en 3 à 7 jours</strong></p><a href="https://www.digitags.work/" class="cta-button">Déposer mon besoin →</a></div></div></div>
 
 ‍
 
@@ -165,85 +117,7 @@ Enfin, vous bénéficiez d'une flexibilité totale. Besoin d'augmenter la voilur
 
 ‍
 
-.dgtags-comparison-widget { font-family: 'DM Sans', sans-serif; background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%); padding: 40px 20px; display: flex; justify-content: center; align-items: center; box-sizing: border-box; } .dgtags-comparison-widget \*, .dgtags-comparison-widget \*::before, .dgtags-comparison-widget \*::after { box-sizing: border-box; margin: 0; padding: 0; } .dgtags-comparison-widget .container { max-width: 800px; width: 100%; background: #FFFFFF; border-radius: 24px; padding: 48px; box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08); } .dgtags-comparison-widget .header { text-align: center; margin-bottom: 48px; } .dgtags-comparison-widget .header h1 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 36px; font-weight: 800; color: #0F172A; margin-bottom: 12px; line-height: 1.2; } .dgtags-comparison-widget .header p { color: #64748B; font-size: 18px; line-height: 1.6; } .dgtags-comparison-widget .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 40px; } .dgtags-comparison-widget .column { border-radius: 16px; padding: 32px 24px; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; } .dgtags-comparison-widget .column::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; } .dgtags-comparison-widget .column-before { background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%); border: 2px solid #FECACA; } .dgtags-comparison-widget .column-before::before { background: #EF4444; } .dgtags-comparison-widget .column-after { background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%); border: 2px solid #FF6B35; } .dgtags-comparison-widget .column-after::before { background: #FF6B35; } .dgtags-comparison-widget .column-after:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(255, 107, 53, 0.2); } .dgtags-comparison-widget .column-header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; } .dgtags-comparison-widget .icon { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; } .dgtags-comparison-widget .icon-before { background: rgba(239, 68, 68, 0.1); } .dgtags-comparison-widget .icon-after { background: rgba(255, 107, 53, 0.1); } .dgtags-comparison-widget .column-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700; color: #0F172A; } .dgtags-comparison-widget .metric-item { margin-bottom: 20px; padding: 16px; background: #FFFFFF; border-radius: 12px; opacity: 0; transform: translateY(10px); animation: dgtags-fadeInUp 0.5s ease forwards; } .dgtags-comparison-widget .column-before .metric-item:nth-child(2) { animation-delay: 0.1s; } .dgtags-comparison-widget .column-before .metric-item:nth-child(3) { animation-delay: 0.2s; } .dgtags-comparison-widget .column-before .metric-item:nth-child(4) { animation-delay: 0.3s; } .dgtags-comparison-widget .column-before .metric-item:nth-child(5) { animation-delay: 0.4s; } .dgtags-comparison-widget .column-before .metric-item:nth-child(6) { animation-delay: 0.5s; } .dgtags-comparison-widget .column-after .metric-item:nth-child(2) { animation-delay: 0.15s; } .dgtags-comparison-widget .column-after .metric-item:nth-child(3) { animation-delay: 0.25s; } .dgtags-comparison-widget .column-after .metric-item:nth-child(4) { animation-delay: 0.35s; } .dgtags-comparison-widget .column-after .metric-item:nth-child(5) { animation-delay: 0.45s; } .dgtags-comparison-widget .column-after .metric-item:nth-child(6) { animation-delay: 0.55s; } @keyframes dgtags-fadeInUp { to { opacity: 1; transform: translateY(0); } } .dgtags-comparison-widget .metric-item:last-child { margin-bottom: 0; } .dgtags-comparison-widget .metric-label { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #64748B; margin-bottom: 6px; } .dgtags-comparison-widget .metric-value { font-family: 'Bricolage Grotesque', sans-serif; font-size: 24px; font-weight: 700; } .dgtags-comparison-widget .column-before .metric-value { color: #EF4444; } .dgtags-comparison-widget .column-after .metric-value { color: #FF6B35; } .dgtags-comparison-widget .metric-desc { font-size: 14px; color: #64748B; margin-top: 4px; line-height: 1.5; } .dgtags-comparison-widget .highlight-box { margin-top: 32px; padding: 24px; background: linear-gradient(135deg, #FF6B35, #FF8C61); border-radius: 16px; text-align: center; color: #FFFFFF; box-shadow: 0 8px 24px rgba(255, 107, 53, 0.3); } .dgtags-comparison-widget .highlight-box h3 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 24px; font-weight: 800; margin-bottom: 12px; } .dgtags-comparison-widget .highlight-box p { font-size: 16px; line-height: 1.6; opacity: 0.95; } .dgtags-comparison-widget .cta-button { display: inline-block; margin-top: 20px; padding: 14px 28px; background: #FFFFFF; color: #FF6B35; font-family: 'Bricolage Grotesque', sans-serif; font-size: 16px; font-weight: 700; border-radius: 10px; text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease; } .dgtags-comparison-widget .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(15, 23, 42, 0.2); } @media (max-width: 768px) { .dgtags-comparison-widget .container { padding: 32px 24px; } .dgtags-comparison-widget .header h1 { font-size: 28px; } .dgtags-comparison-widget .header p { font-size: 16px; } .dgtags-comparison-widget .comparison-grid { grid-template-columns: 1fr; gap: 20px; } .dgtags-comparison-widget .column { padding: 24px 20px; } .dgtags-comparison-widget .column-title { font-size: 20px; } .dgtags-comparison-widget .metric-value { font-size: 22px; } .dgtags-comparison-widget .highlight-box h3 { font-size: 22px; } }
-
-# Recrutement freelance : avant vs après
-
-Comparez le processus classique avec notre méthode de matching
-
-😫
-
-## Méthode classique
-
-Délai moyen
-
-3-6 semaines
-
-Entre le brief et le démarrage effectif
-
-Candidatures reçues
-
-50+
-
-Dont 90% hors sujet ou peu qualifiées
-
-Temps de tri
-
-12-20h
-
-Pour lire CV, portfolios et échanger
-
-Risque de mauvais match
-
-40%
-
-Compétences survalorisées, disponibilité floue
-
-Accompagnement
-
-0
-
-Vous gérez tout seul de A à Z
-
-🚀
-
-## Avec Digitags
-
-Délai moyen
-
-3-7 jours
-
-Premiers profils qualifiés sous une semaine
-
-Profils présentés
-
-2-4
-
-100% pré-qualifiés et validés terrain
-
-Temps de tri
-
-0h
-
-On s'occupe de tout pour vous
-
-Taux de satisfaction
-
-90%+
-
-Grâce à notre processus de vérification
-
-Accompagnement
-
-Full
-
-Matching, mise en relation, suivi mission
-
-### Gagnez 80% de temps sur vos recrutements
-
-Notre processus de matching transforme une mission chronophage de 3-6 semaines en une opération fluide de quelques jours, avec des résultats mesurables et un taux de réussite de 90%.
-
-[Tester gratuitement →](https://www.digitags.work/)
+<div class="dgtags-comparison-widget"><style>.dgtags-comparison-widget { font-family: 'DM Sans', sans-serif; background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%); padding: 40px 20px; display: flex; justify-content: center; align-items: center; box-sizing: border-box; } .dgtags-comparison-widget *, .dgtags-comparison-widget *::before, .dgtags-comparison-widget *::after { box-sizing: border-box; margin: 0; padding: 0; } .dgtags-comparison-widget .container { max-width: 800px; width: 100%; background: #FFFFFF; border-radius: 24px; padding: 48px; box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08); } .dgtags-comparison-widget .header { text-align: center; margin-bottom: 48px; } .dgtags-comparison-widget .header h1 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 36px; font-weight: 800; color: #0F172A; margin-bottom: 12px; line-height: 1.2; } .dgtags-comparison-widget .header p { color: #64748B; font-size: 18px; line-height: 1.6; } .dgtags-comparison-widget .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 40px; } .dgtags-comparison-widget .column { border-radius: 16px; padding: 32px 24px; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; } .dgtags-comparison-widget .column::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; } .dgtags-comparison-widget .column-before { background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%); border: 2px solid #FECACA; } .dgtags-comparison-widget .column-before::before { background: #EF4444; } .dgtags-comparison-widget .column-after { background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%); border: 2px solid #FF6B35; } .dgtags-comparison-widget .column-after::before { background: #FF6B35; } .dgtags-comparison-widget .column-after:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(255, 107, 53, 0.2); } .dgtags-comparison-widget .column-header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; } .dgtags-comparison-widget .icon { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; } .dgtags-comparison-widget .icon-before { background: rgba(239, 68, 68, 0.1); } .dgtags-comparison-widget .icon-after { background: rgba(255, 107, 53, 0.1); } .dgtags-comparison-widget .column-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700; color: #0F172A; } .dgtags-comparison-widget .metric-item { margin-bottom: 20px; padding: 16px; background: #FFFFFF; border-radius: 12px; opacity: 0; transform: translateY(10px); animation: dgtags-fadeInUp 0.5s ease forwards; } .dgtags-comparison-widget .column-before .metric-item:nth-child(2) { animation-delay: 0.1s; } .dgtags-comparison-widget .column-before .metric-item:nth-child(3) { animation-delay: 0.2s; } .dgtags-comparison-widget .column-before .metric-item:nth-child(4) { animation-delay: 0.3s; } .dgtags-comparison-widget .column-before .metric-item:nth-child(5) { animation-delay: 0.4s; } .dgtags-comparison-widget .column-before .metric-item:nth-child(6) { animation-delay: 0.5s; } .dgtags-comparison-widget .column-after .metric-item:nth-child(2) { animation-delay: 0.15s; } .dgtags-comparison-widget .column-after .metric-item:nth-child(3) { animation-delay: 0.25s; } .dgtags-comparison-widget .column-after .metric-item:nth-child(4) { animation-delay: 0.35s; } .dgtags-comparison-widget .column-after .metric-item:nth-child(5) { animation-delay: 0.45s; } .dgtags-comparison-widget .column-after .metric-item:nth-child(6) { animation-delay: 0.55s; } @keyframes dgtags-fadeInUp { to { opacity: 1; transform: translateY(0); } } .dgtags-comparison-widget .metric-item:last-child { margin-bottom: 0; } .dgtags-comparison-widget .metric-label { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #64748B; margin-bottom: 6px; } .dgtags-comparison-widget .metric-value { font-family: 'Bricolage Grotesque', sans-serif; font-size: 24px; font-weight: 700; } .dgtags-comparison-widget .column-before .metric-value { color: #EF4444; } .dgtags-comparison-widget .column-after .metric-value { color: #FF6B35; } .dgtags-comparison-widget .metric-desc { font-size: 14px; color: #64748B; margin-top: 4px; line-height: 1.5; } .dgtags-comparison-widget .highlight-box { margin-top: 32px; padding: 24px; background: linear-gradient(135deg, #FF6B35, #FF8C61); border-radius: 16px; text-align: center; color: #FFFFFF; box-shadow: 0 8px 24px rgba(255, 107, 53, 0.3); } .dgtags-comparison-widget .highlight-box h3 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 24px; font-weight: 800; margin-bottom: 12px; } .dgtags-comparison-widget .highlight-box p { font-size: 16px; line-height: 1.6; opacity: 0.95; } .dgtags-comparison-widget .cta-button { display: inline-block; margin-top: 20px; padding: 14px 28px; background: #FFFFFF; color: #FF6B35; font-family: 'Bricolage Grotesque', sans-serif; font-size: 16px; font-weight: 700; border-radius: 10px; text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease; } .dgtags-comparison-widget .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(15, 23, 42, 0.2); } @media (max-width: 768px) { .dgtags-comparison-widget .container { padding: 32px 24px; } .dgtags-comparison-widget .header h1 { font-size: 28px; } .dgtags-comparison-widget .header p { font-size: 16px; } .dgtags-comparison-widget .comparison-grid { grid-template-columns: 1fr; gap: 20px; } .dgtags-comparison-widget .column { padding: 24px 20px; } .dgtags-comparison-widget .column-title { font-size: 20px; } .dgtags-comparison-widget .metric-value { font-size: 22px; } .dgtags-comparison-widget .highlight-box h3 { font-size: 22px; } }</style><div class="container"><div class="header"><h1>Recrutement freelance : avant vs après</h1><p>Comparez le processus classique avec notre méthode de matching</p></div><div class="comparison-grid"><div class="column column-before"><div class="column-header"><div class="icon icon-before">😫</div><h2 class="column-title">Méthode classique</h2></div><div class="metric-item"><div class="metric-label">Délai moyen</div><div class="metric-value">3-6 semaines</div><div class="metric-desc">Entre le brief et le démarrage effectif</div></div><div class="metric-item"><div class="metric-label">Candidatures reçues</div><div class="metric-value">50+</div><div class="metric-desc">Dont 90% hors sujet ou peu qualifiées</div></div><div class="metric-item"><div class="metric-label">Temps de tri</div><div class="metric-value">12-20h</div><div class="metric-desc">Pour lire CV, portfolios et échanger</div></div><div class="metric-item"><div class="metric-label">Risque de mauvais match</div><div class="metric-value">40%</div><div class="metric-desc">Compétences survalorisées, disponibilité floue</div></div><div class="metric-item"><div class="metric-label">Accompagnement</div><div class="metric-value">0</div><div class="metric-desc">Vous gérez tout seul de A à Z</div></div></div><div class="column column-after"><div class="column-header"><div class="icon icon-after">🚀</div><h2 class="column-title">Avec Digitags</h2></div><div class="metric-item"><div class="metric-label">Délai moyen</div><div class="metric-value">3-7 jours</div><div class="metric-desc">Premiers profils qualifiés sous une semaine</div></div><div class="metric-item"><div class="metric-label">Profils présentés</div><div class="metric-value">2-4</div><div class="metric-desc">100% pré-qualifiés et validés terrain</div></div><div class="metric-item"><div class="metric-label">Temps de tri</div><div class="metric-value">0h</div><div class="metric-desc">On s'occupe de tout pour vous</div></div><div class="metric-item"><div class="metric-label">Taux de satisfaction</div><div class="metric-value">90%+</div><div class="metric-desc">Grâce à notre processus de vérification</div></div><div class="metric-item"><div class="metric-label">Accompagnement</div><div class="metric-value">Full</div><div class="metric-desc">Matching, mise en relation, suivi mission</div></div></div></div><div class="highlight-box"><h3>Gagnez 80% de temps sur vos recrutements</h3><p>Notre processus de matching transforme une mission chronophage de 3-6 semaines en une opération fluide de quelques jours, avec des résultats mesurables et un taux de réussite de 90%.</p><a href="https://www.digitags.work/" class="cta-button">Tester gratuitement →</a></div></div></div>
 
 ‍
 

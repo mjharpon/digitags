@@ -39,47 +39,11 @@ Avec un freelance, vous court-circuitez tout ça. Sur une plateforme freelance c
 
 ‍
 
-  Recruter Freelance - Avantages /\* Tous les styles sont scopés à .recruter-freelance-widget \*/ .recruter-freelance-widget { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; box-sizing: border-box; } .recruter-freelance-widget \*, .recruter-freelance-widget \*::before, .recruter-freelance-widget \*::after { box-sizing: border-box; margin: 0; padding: 0; } .recruter-freelance-widget .rf-container { width: 100%; max-width: 800px; background: white; border-radius: 24px; padding: 48px 40px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); } .recruter-freelance-widget h1 { font-size: clamp(24px, 5vw, 36px); color: #1a202c; margin-bottom: 12px; font-weight: 800; text-align: center; } .recruter-freelance-widget .rf-subtitle { font-size: clamp(14px, 3vw, 18px); color: #718096; text-align: center; margin-bottom: 40px; } .recruter-freelance-widget .rf-stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-bottom: 40px; } .recruter-freelance-widget .rf-stat-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; padding: 32px 24px; text-align: center; transition: transform 0.3s ease; position: relative; overflow: hidden; } .recruter-freelance-widget .rf-stat-card::before { content: ''; position: absolute; top: -50%; right: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); animation: rf-pulse 3s ease-in-out infinite; } @keyframes rf-pulse { 0%, 100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.1); opacity: 0.8; } } .recruter-freelance-widget .rf-stat-card:hover { transform: translateY(-8px); } .recruter-freelance-widget .rf-stat-number { font-size: clamp(32px, 6vw, 48px); font-weight: 800; color: white; margin-bottom: 8px; position: relative; z-index: 1; } .recruter-freelance-widget .rf-stat-label { font-size: clamp(12px, 2.5vw, 14px); color: rgba(255, 255, 255, 0.9); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; position: relative; z-index: 1; } .recruter-freelance-widget .rf-benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; } .recruter-freelance-widget .rf-benefit-item { display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: #f7fafc; border-radius: 12px; transition: all 0.3s ease; } .recruter-freelance-widget .rf-benefit-item:hover { background: #edf2f7; transform: translateX(4px); } .recruter-freelance-widget .rf-icon { width: 40px; height: 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 20px; } .recruter-freelance-widget .rf-benefit-text { flex: 1; } .recruter-freelance-widget .rf-benefit-title { font-size: clamp(13px, 2.5vw, 15px); font-weight: 700; color: #2d3748; margin-bottom: 4px; } .recruter-freelance-widget .rf-benefit-desc { font-size: clamp(11px, 2vw, 13px); color: #718096; line-height: 1.5; } @media (max-width: 600px) { .recruter-freelance-widget .rf-container { padding: 32px 24px; } .recruter-freelance-widget .rf-stats-grid { gap: 16px; } .recruter-freelance-widget .rf-stat-card { padding: 24px 16px; } }
+  Recruter Freelance - Avantages 
 
-# Pourquoi recruter freelance en 2026 ?
+<style>/* Tous les styles sont scopés à .recruter-freelance-widget */ .recruter-freelance-widget { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; box-sizing: border-box; } .recruter-freelance-widget *, .recruter-freelance-widget *::before, .recruter-freelance-widget *::after { box-sizing: border-box; margin: 0; padding: 0; } .recruter-freelance-widget .rf-container { width: 100%; max-width: 800px; background: white; border-radius: 24px; padding: 48px 40px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); } .recruter-freelance-widget h1 { font-size: clamp(24px, 5vw, 36px); color: #1a202c; margin-bottom: 12px; font-weight: 800; text-align: center; } .recruter-freelance-widget .rf-subtitle { font-size: clamp(14px, 3vw, 18px); color: #718096; text-align: center; margin-bottom: 40px; } .recruter-freelance-widget .rf-stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-bottom: 40px; } .recruter-freelance-widget .rf-stat-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; padding: 32px 24px; text-align: center; transition: transform 0.3s ease; position: relative; overflow: hidden; } .recruter-freelance-widget .rf-stat-card::before { content: ''; position: absolute; top: -50%; right: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); animation: rf-pulse 3s ease-in-out infinite; } @keyframes rf-pulse { 0%, 100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.1); opacity: 0.8; } } .recruter-freelance-widget .rf-stat-card:hover { transform: translateY(-8px); } .recruter-freelance-widget .rf-stat-number { font-size: clamp(32px, 6vw, 48px); font-weight: 800; color: white; margin-bottom: 8px; position: relative; z-index: 1; } .recruter-freelance-widget .rf-stat-label { font-size: clamp(12px, 2.5vw, 14px); color: rgba(255, 255, 255, 0.9); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; position: relative; z-index: 1; } .recruter-freelance-widget .rf-benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; } .recruter-freelance-widget .rf-benefit-item { display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: #f7fafc; border-radius: 12px; transition: all 0.3s ease; } .recruter-freelance-widget .rf-benefit-item:hover { background: #edf2f7; transform: translateX(4px); } .recruter-freelance-widget .rf-icon { width: 40px; height: 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 20px; } .recruter-freelance-widget .rf-benefit-text { flex: 1; } .recruter-freelance-widget .rf-benefit-title { font-size: clamp(13px, 2.5vw, 15px); font-weight: 700; color: #2d3748; margin-bottom: 4px; } .recruter-freelance-widget .rf-benefit-desc { font-size: clamp(11px, 2vw, 13px); color: #718096; line-height: 1.5; } @media (max-width: 600px) { .recruter-freelance-widget .rf-container { padding: 32px 24px; } .recruter-freelance-widget .rf-stats-grid { gap: 16px; } .recruter-freelance-widget .rf-stat-card { padding: 24px 16px; } }</style>
 
-Les chiffres clés du recrutement indépendant
-
-1,5M+
-
-Freelances actifs
-
-48h
-
-Délai de recrutement
-
-\-40%
-
-Économie budgétaire
-
-⚡
-
-Flexibilité
-
-Ajustez vos ressources en temps réel
-
-🎯
-
-Expertise ciblée
-
-Compétences pointues immédiatement
-
-💰
-
-Budget maîtrisé
-
-Payez uniquement la mission
-
-🚀
-
-Innovation
-
-Regard neuf et solutions éprouvées
+<div class="recruter-freelance-widget"><div class="rf-container"><h1>Pourquoi recruter freelance en 2026 ?</h1><p class="rf-subtitle">Les chiffres clés du recrutement indépendant</p><div class="rf-stats-grid"><div class="rf-stat-card"><div class="rf-stat-number">1,5M+</div><div class="rf-stat-label">Freelances actifs</div></div><div class="rf-stat-card"><div class="rf-stat-number">48h</div><div class="rf-stat-label">Délai de recrutement</div></div><div class="rf-stat-card"><div class="rf-stat-number">-40%</div><div class="rf-stat-label">Économie budgétaire</div></div></div><div class="rf-benefits"><div class="rf-benefit-item"><div class="rf-icon">⚡</div><div class="rf-benefit-text"><div class="rf-benefit-title">Flexibilité</div><div class="rf-benefit-desc">Ajustez vos ressources en temps réel</div></div></div><div class="rf-benefit-item"><div class="rf-icon">🎯</div><div class="rf-benefit-text"><div class="rf-benefit-title">Expertise ciblée</div><div class="rf-benefit-desc">Compétences pointues immédiatement</div></div></div><div class="rf-benefit-item"><div class="rf-icon">💰</div><div class="rf-benefit-text"><div class="rf-benefit-title">Budget maîtrisé</div><div class="rf-benefit-desc">Payez uniquement la mission</div></div></div><div class="rf-benefit-item"><div class="rf-icon">🚀</div><div class="rf-benefit-text"><div class="rf-benefit-title">Innovation</div><div class="rf-benefit-desc">Regard neuf et solutions éprouvées</div></div></div></div></div></div>
 
 ‍
 
@@ -154,57 +118,11 @@ Nous rédigeons un contrat clair : périmètre, livrables, deadlines, tarif, mod
 
 ‍
 
-  Recruter Freelance - Process .rf-process-widget { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; box-sizing: border-box; } .rf-process-widget \*, .rf-process-widget \*::before, .rf-process-widget \*::after { box-sizing: border-box; margin: 0; padding: 0; } .rf-process-widget .rfp-container { width: 100%; max-width: 800px; background: white; border-radius: 24px; padding: 48px 40px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); } .rf-process-widget h1 { font-size: clamp(24px, 5vw, 36px); color: #1a202c; margin-bottom: 12px; font-weight: 800; text-align: center; } .rf-process-widget .rfp-subtitle { font-size: clamp(14px, 3vw, 18px); color: #718096; text-align: center; margin-bottom: 48px; } .rf-process-widget .rfp-timeline { position: relative; padding-left: 40px; } .rf-process-widget .rfp-timeline::before { content: ''; position: absolute; left: 19px; top: 24px; bottom: 24px; width: 3px; background: linear-gradient(180deg, #f093fb 0%, #f5576c 100%); } .rf-process-widget .rfp-step { position: relative; margin-bottom: 36px; padding-left: 20px; } .rf-process-widget .rfp-step:last-child { margin-bottom: 0; } .rf-process-widget .rfp-step-marker { position: absolute; left: -28px; top: 4px; width: 40px; height: 40px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-size: 16px; box-shadow: 0 4px 12px rgba(245, 87, 108, 0.4); z-index: 2; } .rf-process-widget .rfp-step-content { background: #f7fafc; border-radius: 16px; padding: 24px; transition: all 0.3s ease; border: 2px solid transparent; } .rf-process-widget .rfp-step-content:hover { background: white; border-color: #f5576c; transform: translateX(8px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); } .rf-process-widget .rfp-step-title { font-size: clamp(16px, 3vw, 20px); font-weight: 700; color: #2d3748; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; } .rf-process-widget .rfp-step-icon { font-size: clamp(20px, 4vw, 24px); } .rf-process-widget .rfp-step-description { font-size: clamp(13px, 2.5vw, 15px); color: #4a5568; line-height: 1.6; margin-bottom: 12px; } .rf-process-widget .rfp-step-time { display: inline-block; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 6px 14px; border-radius: 20px; font-size: clamp(11px, 2vw, 12px); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; } .rf-process-widget .rfp-cta-box { margin-top: 40px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 16px; padding: 32px; text-align: center; color: white; } .rf-process-widget .rfp-cta-title { font-size: clamp(18px, 4vw, 24px); font-weight: 800; margin-bottom: 12px; } .rf-process-widget .rfp-cta-text { font-size: clamp(13px, 2.5vw, 15px); opacity: 0.95; margin-bottom: 20px; } .rf-process-widget .rfp-cta-button { display: inline-block; background: white; color: #f5576c; padding: 14px 32px; border-radius: 30px; font-weight: 700; font-size: clamp(13px, 2.5vw, 15px); text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); } .rf-process-widget .rfp-cta-button:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); } @media (max-width: 600px) { .rf-process-widget .rfp-container { padding: 32px 24px; } .rf-process-widget .rfp-timeline { padding-left: 32px; } .rf-process-widget .rfp-timeline::before { left: 15px; } .rf-process-widget .rfp-step-marker { left: -24px; width: 32px; height: 32px; font-size: 14px; } .rf-process-widget .rfp-step-content { padding: 20px; } .rf-process-widget .rfp-cta-box { padding: 24px; } }
+  Recruter Freelance - Process 
 
-# Comment recruter un freelance ?
+<style>.rf-process-widget { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; box-sizing: border-box; } .rf-process-widget *, .rf-process-widget *::before, .rf-process-widget *::after { box-sizing: border-box; margin: 0; padding: 0; } .rf-process-widget .rfp-container { width: 100%; max-width: 800px; background: white; border-radius: 24px; padding: 48px 40px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); } .rf-process-widget h1 { font-size: clamp(24px, 5vw, 36px); color: #1a202c; margin-bottom: 12px; font-weight: 800; text-align: center; } .rf-process-widget .rfp-subtitle { font-size: clamp(14px, 3vw, 18px); color: #718096; text-align: center; margin-bottom: 48px; } .rf-process-widget .rfp-timeline { position: relative; padding-left: 40px; } .rf-process-widget .rfp-timeline::before { content: ''; position: absolute; left: 19px; top: 24px; bottom: 24px; width: 3px; background: linear-gradient(180deg, #f093fb 0%, #f5576c 100%); } .rf-process-widget .rfp-step { position: relative; margin-bottom: 36px; padding-left: 20px; } .rf-process-widget .rfp-step:last-child { margin-bottom: 0; } .rf-process-widget .rfp-step-marker { position: absolute; left: -28px; top: 4px; width: 40px; height: 40px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-size: 16px; box-shadow: 0 4px 12px rgba(245, 87, 108, 0.4); z-index: 2; } .rf-process-widget .rfp-step-content { background: #f7fafc; border-radius: 16px; padding: 24px; transition: all 0.3s ease; border: 2px solid transparent; } .rf-process-widget .rfp-step-content:hover { background: white; border-color: #f5576c; transform: translateX(8px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); } .rf-process-widget .rfp-step-title { font-size: clamp(16px, 3vw, 20px); font-weight: 700; color: #2d3748; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; } .rf-process-widget .rfp-step-icon { font-size: clamp(20px, 4vw, 24px); } .rf-process-widget .rfp-step-description { font-size: clamp(13px, 2.5vw, 15px); color: #4a5568; line-height: 1.6; margin-bottom: 12px; } .rf-process-widget .rfp-step-time { display: inline-block; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 6px 14px; border-radius: 20px; font-size: clamp(11px, 2vw, 12px); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; } .rf-process-widget .rfp-cta-box { margin-top: 40px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 16px; padding: 32px; text-align: center; color: white; } .rf-process-widget .rfp-cta-title { font-size: clamp(18px, 4vw, 24px); font-weight: 800; margin-bottom: 12px; } .rf-process-widget .rfp-cta-text { font-size: clamp(13px, 2.5vw, 15px); opacity: 0.95; margin-bottom: 20px; } .rf-process-widget .rfp-cta-button { display: inline-block; background: white; color: #f5576c; padding: 14px 32px; border-radius: 30px; font-weight: 700; font-size: clamp(13px, 2.5vw, 15px); text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); } .rf-process-widget .rfp-cta-button:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); } @media (max-width: 600px) { .rf-process-widget .rfp-container { padding: 32px 24px; } .rf-process-widget .rfp-timeline { padding-left: 32px; } .rf-process-widget .rfp-timeline::before { left: 15px; } .rf-process-widget .rfp-step-marker { left: -24px; width: 32px; height: 32px; font-size: 14px; } .rf-process-widget .rfp-step-content { padding: 20px; } .rf-process-widget .rfp-cta-box { padding: 24px; } }</style>
 
-Le process en 5 étapes simples et efficaces
-
-1
-
-🎯 Définissez le besoin
-
-Quel problème résoudre ? Quel livrable attendu ? Budget et délai précis. Plus vous êtes clair, meilleur sera le match.
-
-30 minutes
-
-2
-
-🔍 Trouvez le bon profil
-
-Utilisez une plateforme spécialisée ou votre réseau. Les meilleurs freelances sont souvent recommandés ou repérés sur LinkedIn.
-
-48 heures
-
-3
-
-✅ Évaluez et validez
-
-Vérifiez le portfolio, les références clients et organisez un échange. Un bon freelance challenge votre brief et propose des solutions.
-
-1 semaine
-
-4
-
-📝 Contractualisez
-
-Rédigez un contrat clair : périmètre, livrables, deadlines, tarif, confidentialité. Prévoyez des points d'étape réguliers.
-
-2-3 jours
-
-5
-
-🚀 Pilotez la mission
-
-Fixez des objectifs, donnez les moyens, puis laissez faire. Points hebdo pour suivre l'avancement, pas pour micro-manager.
-
-Durée mission
-
-Prêt à recruter votre prochain freelance ?
-
-Digitags.work vous accompagne pour trouver les meilleurs talents
-
-[Démarrer maintenant →](https://www.digitags.work/)
+<div class="rf-process-widget"><div class="rfp-container"><h1>Comment recruter un freelance ?</h1><p class="rfp-subtitle">Le process en 5 étapes simples et efficaces</p><div class="rfp-timeline"><div class="rfp-step"><div class="rfp-step-marker">1</div><div class="rfp-step-content"><div class="rfp-step-title"><span class="rfp-step-icon">🎯</span> Définissez le besoin</div><div class="rfp-step-description">Quel problème résoudre ? Quel livrable attendu ? Budget et délai précis. Plus vous êtes clair, meilleur sera le match.</div><span class="rfp-step-time">30 minutes</span></div></div><div class="rfp-step"><div class="rfp-step-marker">2</div><div class="rfp-step-content"><div class="rfp-step-title"><span class="rfp-step-icon">🔍</span> Trouvez le bon profil</div><div class="rfp-step-description">Utilisez une plateforme spécialisée ou votre réseau. Les meilleurs freelances sont souvent recommandés ou repérés sur LinkedIn.</div><span class="rfp-step-time">48 heures</span></div></div><div class="rfp-step"><div class="rfp-step-marker">3</div><div class="rfp-step-content"><div class="rfp-step-title"><span class="rfp-step-icon">✅</span> Évaluez et validez</div><div class="rfp-step-description">Vérifiez le portfolio, les références clients et organisez un échange. Un bon freelance challenge votre brief et propose des solutions.</div><span class="rfp-step-time">1 semaine</span></div></div><div class="rfp-step"><div class="rfp-step-marker">4</div><div class="rfp-step-content"><div class="rfp-step-title"><span class="rfp-step-icon">📝</span> Contractualisez</div><div class="rfp-step-description">Rédigez un contrat clair : périmètre, livrables, deadlines, tarif, confidentialité. Prévoyez des points d'étape réguliers.</div><span class="rfp-step-time">2-3 jours</span></div></div><div class="rfp-step"><div class="rfp-step-marker">5</div><div class="rfp-step-content"><div class="rfp-step-title"><span class="rfp-step-icon">🚀</span> Pilotez la mission</div><div class="rfp-step-description">Fixez des objectifs, donnez les moyens, puis laissez faire. Points hebdo pour suivre l'avancement, pas pour micro-manager.</div><span class="rfp-step-time">Durée mission</span></div></div></div><div class="rfp-cta-box"><div class="rfp-cta-title">Prêt à recruter votre prochain freelance ?</div><div class="rfp-cta-text">Digitags.work vous accompagne pour trouver les meilleurs talents</div><a href="https://www.digitags.work/" class="rfp-cta-button">Démarrer maintenant →</a></div></div></div>
 
 ‍
 

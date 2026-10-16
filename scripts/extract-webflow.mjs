@@ -36,6 +36,20 @@ async function wf(pathname) {
 
 const td = new TurndownService({ headingStyle: 'atx', codeBlockStyle: 'fenced', bulletListMarker: '-' });
 td.keep(['iframe', 'video']);
+// Webflow rich text can contain raw HTML embeds (custom widgets with their own CSS/JS).
+// Keep them verbatim: <style>/<script>, and container elements carrying custom classes
+// (Webflow's own rich-text classes start with "w-"). Blank lines are squeezed so the
+// block stays a single raw-HTML block for the Markdown parser.
+const keepRaw = (node) => {
+  if (node.nodeName === 'STYLE' || node.nodeName === 'SCRIPT') return true;
+  if (!['DIV', 'SECTION', 'TABLE'].includes(node.nodeName)) return false;
+  const cls = (node.getAttribute?.('class') ?? '').trim();
+  return cls !== '' && !cls.split(/\s+/).every((c) => c.startsWith('w-'));
+};
+td.addRule('keepEmbeds', {
+  filter: keepRaw,
+  replacement: (_content, node) => `\n\n${node.outerHTML.replace(/\n{2,}/g, '\n')}\n\n`,
+});
 
 const sanitize = (s) => String(s ?? '').replace(/"/g, '\\"').trim();
 

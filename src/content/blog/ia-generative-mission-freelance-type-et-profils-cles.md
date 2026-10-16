@@ -115,77 +115,11 @@ Il fait le pont entre les équipes data science, dev et infra. Il est souvent so
 
 ‍
 
-  Profils Freelance IA    .digitags-ia-container { max-width: 800px; margin: 0 auto; font-family: 'DM Sans', sans-serif; padding: 0; box-sizing: border-box; } .digitags-ia-container \* { box-sizing: border-box; } .digitags-ia-card { background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 16px; padding: 40px; box-shadow: 0 4px 20px rgba(0, 102, 204, 0.08); } .digitags-ia-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 28px; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0; text-align: center; } .digitags-ia-subtitle { font-size: 15px; color: #6c757d; text-align: center; margin: 0 0 32px 0; } .digitags-profiles-grid { display: grid; gap: 20px; margin-bottom: 24px; } .digitags-profile-card { background: white; border-radius: 12px; padding: 24px; border: 2px solid #e9ecef; transition: all 0.3s ease; position: relative; overflow: hidden; } .digitags-profile-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; transition: transform 0.3s ease; transform: scaleX(0); } .digitags-profile-card:nth-child(1)::before { background: linear-gradient(90deg, #0066CC 0%, #0052a3 100%); } .digitags-profile-card:nth-child(2)::before { background: linear-gradient(90deg, #FF8C00 0%, #e67e00 100%); } .digitags-profile-card:nth-child(3)::before { background: linear-gradient(90deg, #0066CC 0%, #FF8C00 100%); } .digitags-profile-card:nth-child(4)::before { background: linear-gradient(90deg, #FF8C00 0%, #0066CC 100%); } .digitags-profile-card:hover::before { transform: scaleX(1); } .digitags-profile-card:hover { border-color: #0066CC; box-shadow: 0 8px 24px rgba(0, 102, 204, 0.15); transform: translateY(-4px); } .digitags-profile-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; gap: 16px; } .digitags-profile-info { display: flex; align-items: center; gap: 12px; flex-grow: 1; } .digitags-profile-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; } .digitags-icon-blue { background: linear-gradient(135deg, #0066CC20 0%, #0066CC10 100%); } .digitags-icon-orange { background: linear-gradient(135deg, #FF8C0020 0%, #FF8C0010 100%); } .digitags-icon-gradient { background: linear-gradient(135deg, #0066CC15 0%, #FF8C0015 100%); } .digitags-profile-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 18px; font-weight: 700; color: #1a1a1a; margin: 0; } .digitags-profile-tjm { font-size: 14px; font-weight: 700; color: white; background: linear-gradient(135deg, #0066CC 0%, #0052a3 100%); padding: 6px 14px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; } .digitags-profile-description { font-size: 14px; color: #495057; line-height: 1.6; margin: 0 0 16px 0; } .digitags-skills-section { margin-bottom: 16px; } .digitags-skills-label { font-size: 12px; font-weight: 600; color: #6c757d; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; } .digitags-skills-tags { display: flex; flex-wrap: wrap; gap: 8px; } .digitags-skill-tag { font-size: 12px; color: #0066CC; background: #0066CC10; padding: 4px 10px; border-radius: 6px; font-weight: 500; } .digitags-use-cases { display: flex; flex-direction: column; gap: 8px; } .digitags-use-case-item { display: flex; align-items: start; gap: 8px; font-size: 13px; color: #495057; line-height: 1.5; } .digitags-check-icon { color: #0066CC; font-weight: 700; flex-shrink: 0; margin-top: 2px; } .digitags-ia-footer { background: linear-gradient(135deg, #0066CC08 0%, #FF8C0008 100%); border-left: 4px solid #FF8C00; padding: 20px 24px; border-radius: 8px; font-size: 14px; color: #495057; line-height: 1.6; } .digitags-ia-footer strong { color: #FF8C00; font-weight: 600; } @media (max-width: 640px) { .digitags-ia-card { padding: 24px 20px; } .digitags-ia-title { font-size: 22px; } .digitags-profile-header { flex-direction: column; align-items: flex-start; } .digitags-profile-tjm { align-self: flex-start; } }
+  Profils Freelance IA    
 
-### 4 profils freelance IA à connaître
+<style>.digitags-ia-container { max-width: 800px; margin: 0 auto; font-family: 'DM Sans', sans-serif; padding: 0; box-sizing: border-box; } .digitags-ia-container * { box-sizing: border-box; } .digitags-ia-card { background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 16px; padding: 40px; box-shadow: 0 4px 20px rgba(0, 102, 204, 0.08); } .digitags-ia-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 28px; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0; text-align: center; } .digitags-ia-subtitle { font-size: 15px; color: #6c757d; text-align: center; margin: 0 0 32px 0; } .digitags-profiles-grid { display: grid; gap: 20px; margin-bottom: 24px; } .digitags-profile-card { background: white; border-radius: 12px; padding: 24px; border: 2px solid #e9ecef; transition: all 0.3s ease; position: relative; overflow: hidden; } .digitags-profile-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; transition: transform 0.3s ease; transform: scaleX(0); } .digitags-profile-card:nth-child(1)::before { background: linear-gradient(90deg, #0066CC 0%, #0052a3 100%); } .digitags-profile-card:nth-child(2)::before { background: linear-gradient(90deg, #FF8C00 0%, #e67e00 100%); } .digitags-profile-card:nth-child(3)::before { background: linear-gradient(90deg, #0066CC 0%, #FF8C00 100%); } .digitags-profile-card:nth-child(4)::before { background: linear-gradient(90deg, #FF8C00 0%, #0066CC 100%); } .digitags-profile-card:hover::before { transform: scaleX(1); } .digitags-profile-card:hover { border-color: #0066CC; box-shadow: 0 8px 24px rgba(0, 102, 204, 0.15); transform: translateY(-4px); } .digitags-profile-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; gap: 16px; } .digitags-profile-info { display: flex; align-items: center; gap: 12px; flex-grow: 1; } .digitags-profile-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; } .digitags-icon-blue { background: linear-gradient(135deg, #0066CC20 0%, #0066CC10 100%); } .digitags-icon-orange { background: linear-gradient(135deg, #FF8C0020 0%, #FF8C0010 100%); } .digitags-icon-gradient { background: linear-gradient(135deg, #0066CC15 0%, #FF8C0015 100%); } .digitags-profile-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 18px; font-weight: 700; color: #1a1a1a; margin: 0; } .digitags-profile-tjm { font-size: 14px; font-weight: 700; color: white; background: linear-gradient(135deg, #0066CC 0%, #0052a3 100%); padding: 6px 14px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; } .digitags-profile-description { font-size: 14px; color: #495057; line-height: 1.6; margin: 0 0 16px 0; } .digitags-skills-section { margin-bottom: 16px; } .digitags-skills-label { font-size: 12px; font-weight: 600; color: #6c757d; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; } .digitags-skills-tags { display: flex; flex-wrap: wrap; gap: 8px; } .digitags-skill-tag { font-size: 12px; color: #0066CC; background: #0066CC10; padding: 4px 10px; border-radius: 6px; font-weight: 500; } .digitags-use-cases { display: flex; flex-direction: column; gap: 8px; } .digitags-use-case-item { display: flex; align-items: start; gap: 8px; font-size: 13px; color: #495057; line-height: 1.5; } .digitags-check-icon { color: #0066CC; font-weight: 700; flex-shrink: 0; margin-top: 2px; } .digitags-ia-footer { background: linear-gradient(135deg, #0066CC08 0%, #FF8C0008 100%); border-left: 4px solid #FF8C00; padding: 20px 24px; border-radius: 8px; font-size: 14px; color: #495057; line-height: 1.6; } .digitags-ia-footer strong { color: #FF8C00; font-weight: 600; } @media (max-width: 640px) { .digitags-ia-card { padding: 24px 20px; } .digitags-ia-title { font-size: 22px; } .digitags-profile-header { flex-direction: column; align-items: flex-start; } .digitags-profile-tjm { align-self: flex-start; } }</style>
 
-Compétences clés, TJM moyen et cas d'usage pour chaque expertise
-
-🎯
-
-#### Consultant Stratégie IA
-
-800-1200€/j
-
-Expert senior qui cadre votre vision IA, identifie les cas d'usage à fort ROI et construit la roadmap de transformation. Vision business avant technique.
-
-Compétences clés
-
-Audit IA Priorisation Roadmap Change management
-
-✓ Phase exploratoire et diagnostic stratégique
-
-✓ Accompagnement direction dans la transformation IA
-
-✨
-
-#### Prompt Engineer / AI Designer
-
-600-900€/j
-
-Spécialiste de l'optimisation des prompts et de la conception d'expériences IA fluides. Fait le pont entre produit, UX et technologie.
-
-Compétences clés
-
-Prompt engineering UX IA Few-shot learning Chain-of-thought
-
-✓ Chatbots conversationnels et assistants virtuels
-
-✓ Outils de génération de contenu personnalisé
-
-💻
-
-#### Développeur IA / ML Engineer
-
-600-800€/j
-
-Profil technique qui développe les POC, prototypes et solutions production-ready. Maîtrise les frameworks IA et l'intégration applicative.
-
-Compétences clés
-
-Python LangChain OpenAI API FastAPI RAG
-
-✓ Développement de POC et MVP IA
-
-✓ Intégration IA dans applications existantes
-
-🧠
-
-#### Data Scientist NLP
-
-700-1000€/j
-
-Expert machine learning et traitement du langage. Indispensable pour le fine-tuning de modèles et les projets IA complexes sur-mesure.
-
-Compétences clés
-
-Fine-tuning Hugging Face PyTorch Évaluation modèles
-
-✓ Optimisation de modèles sur données propriétaires
-
-✓ R&D IA et innovation produit avancée
-
-**💡 Quel profil pour votre projet ?** Phase exploratoire = consultant stratégie. POC rapide = développeur IA ou prompt engineer. Solution complexe sur-mesure = data scientist NLP. Souvent, une mission combine plusieurs profils en séquence.
+<div class="digitags-ia-container"><div class="digitags-ia-card"><h3 class="digitags-ia-title">4 profils freelance IA à connaître</h3><p class="digitags-ia-subtitle">Compétences clés, TJM moyen et cas d'usage pour chaque expertise</p><div class="digitags-profiles-grid"><div class="digitags-profile-card"><div class="digitags-profile-header"><div class="digitags-profile-info"><div class="digitags-profile-icon digitags-icon-blue">🎯</div><h4 class="digitags-profile-title">Consultant Stratégie IA</h4></div><span class="digitags-profile-tjm">800-1200€/j</span></div><p class="digitags-profile-description">Expert senior qui cadre votre vision IA, identifie les cas d'usage à fort ROI et construit la roadmap de transformation. Vision business avant technique.</p><div class="digitags-skills-section"><div class="digitags-skills-label">Compétences clés</div><div class="digitags-skills-tags"><span class="digitags-skill-tag">Audit IA</span> <span class="digitags-skill-tag">Priorisation</span> <span class="digitags-skill-tag">Roadmap</span> <span class="digitags-skill-tag">Change management</span></div></div><div class="digitags-use-cases"><div class="digitags-use-case-item"><span class="digitags-check-icon">✓</span> <span>Phase exploratoire et diagnostic stratégique</span></div><div class="digitags-use-case-item"><span class="digitags-check-icon">✓</span> <span>Accompagnement direction dans la transformation IA</span></div></div></div><div class="digitags-profile-card"><div class="digitags-profile-header"><div class="digitags-profile-info"><div class="digitags-profile-icon digitags-icon-orange">✨</div><h4 class="digitags-profile-title">Prompt Engineer / AI Designer</h4></div><span class="digitags-profile-tjm">600-900€/j</span></div><p class="digitags-profile-description">Spécialiste de l'optimisation des prompts et de la conception d'expériences IA fluides. Fait le pont entre produit, UX et technologie.</p><div class="digitags-skills-section"><div class="digitags-skills-label">Compétences clés</div><div class="digitags-skills-tags"><span class="digitags-skill-tag">Prompt engineering</span> <span class="digitags-skill-tag">UX IA</span> <span class="digitags-skill-tag">Few-shot learning</span> <span class="digitags-skill-tag">Chain-of-thought</span></div></div><div class="digitags-use-cases"><div class="digitags-use-case-item"><span class="digitags-check-icon">✓</span> <span>Chatbots conversationnels et assistants virtuels</span></div><div class="digitags-use-case-item"><span class="digitags-check-icon">✓</span> <span>Outils de génération de contenu personnalisé</span></div></div></div><div class="digitags-profile-card"><div class="digitags-profile-header"><div class="digitags-profile-info"><div class="digitags-profile-icon digitags-icon-gradient">💻</div><h4 class="digitags-profile-title">Développeur IA / ML Engineer</h4></div><span class="digitags-profile-tjm">600-800€/j</span></div><p class="digitags-profile-description">Profil technique qui développe les POC, prototypes et solutions production-ready. Maîtrise les frameworks IA et l'intégration applicative.</p><div class="digitags-skills-section"><div class="digitags-skills-label">Compétences clés</div><div class="digitags-skills-tags"><span class="digitags-skill-tag">Python</span> <span class="digitags-skill-tag">LangChain</span> <span class="digitags-skill-tag">OpenAI API</span> <span class="digitags-skill-tag">FastAPI</span> <span class="digitags-skill-tag">RAG</span></div></div><div class="digitags-use-cases"><div class="digitags-use-case-item"><span class="digitags-check-icon">✓</span> <span>Développement de POC et MVP IA</span></div><div class="digitags-use-case-item"><span class="digitags-check-icon">✓</span> <span>Intégration IA dans applications existantes</span></div></div></div><div class="digitags-profile-card"><div class="digitags-profile-header"><div class="digitags-profile-info"><div class="digitags-profile-icon digitags-icon-gradient">🧠</div><h4 class="digitags-profile-title">Data Scientist NLP</h4></div><span class="digitags-profile-tjm">700-1000€/j</span></div><p class="digitags-profile-description">Expert machine learning et traitement du langage. Indispensable pour le fine-tuning de modèles et les projets IA complexes sur-mesure.</p><div class="digitags-skills-section"><div class="digitags-skills-label">Compétences clés</div><div class="digitags-skills-tags"><span class="digitags-skill-tag">Fine-tuning</span> <span class="digitags-skill-tag">Hugging Face</span> <span class="digitags-skill-tag">PyTorch</span> <span class="digitags-skill-tag">Évaluation modèles</span></div></div><div class="digitags-use-cases"><div class="digitags-use-case-item"><span class="digitags-check-icon">✓</span> <span>Optimisation de modèles sur données propriétaires</span></div><div class="digitags-use-case-item"><span class="digitags-check-icon">✓</span> <span>R&amp;D IA et innovation produit avancée</span></div></div></div></div><div class="digitags-ia-footer"><strong>💡 Quel profil pour votre projet ?</strong> Phase exploratoire = consultant stratégie. POC rapide = développeur IA ou prompt engineer. Solution complexe sur-mesure = data scientist NLP. Souvent, une mission combine plusieurs profils en séquence.</div></div></div>
 
 ‍
 
@@ -258,111 +192,11 @@ Vous gagnez du temps, sécurisez le process et bénéficiez d'un accompagnement 
 
 ‍
 
-  Roadmap Mission IA    .digitags-roadmap-container { max-width: 800px; margin: 0 auto; font-family: 'DM Sans', sans-serif; padding: 0; box-sizing: border-box; } .digitags-roadmap-container \* { box-sizing: border-box; } .digitags-roadmap-card { background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); border-radius: 16px; padding: 40px; box-shadow: 0 4px 20px rgba(0, 102, 204, 0.08); } .digitags-roadmap-header { text-align: center; margin-bottom: 40px; } .digitags-roadmap-main-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 28px; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0; } .digitags-roadmap-subtitle { font-size: 15px; color: #6c757d; margin: 0; } .digitags-phases-container { display: grid; gap: 24px; margin-bottom: 24px; } .digitags-phase-wrapper { position: relative; } .digitags-phase-card { background: white; border-radius: 12px; padding: 24px; border: 2px solid #e9ecef; transition: all 0.3s ease; position: relative; overflow: hidden; } .digitags-phase-card::after { content: ''; position: absolute; bottom: -24px; left: 50%; transform: translateX(-50%); width: 2px; height: 24px; background: linear-gradient(180deg, #0066CC 0%, #FF8C00 100%); opacity: 0.3; } .digitags-phase-wrapper:last-child .digitags-phase-card::after { display: none; } .digitags-phase-card:hover { border-color: #0066CC; box-shadow: 0 8px 24px rgba(0, 102, 204, 0.12); transform: translateY(-4px); } .digitags-phase-header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; } .digitags-phase-number { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px; font-weight: 700; color: white; flex-shrink: 0; } .digitags-phase-1 { background: linear-gradient(135deg, #0066CC 0%, #0052a3 100%); } .digitags-phase-2 { background: linear-gradient(135deg, #0066CC 0%, #FF8C00 100%); } .digitags-phase-3 { background: linear-gradient(135deg, #FF8C00 0%, #e67e00 100%); } .digitags-phase-4 { background: linear-gradient(135deg, #e67e00 0%, #0066CC 100%); } .digitags-phase-title-group { flex-grow: 1; } .digitags-phase-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 18px; font-weight: 700; color: #1a1a1a; margin: 0 0 4px 0; } .digitags-phase-duration { font-size: 13px; color: #6c757d; font-weight: 500; margin: 0; } .digitags-phase-description { font-size: 14px; color: #495057; line-height: 1.6; margin: 0 0 16px 0; } .digitags-phase-content { display: grid; gap: 16px; } .digitags-deliverables-section, .digitags-activities-section { background: #f8f9fa; border-radius: 8px; padding: 16px; } .digitags-section-label { font-size: 12px; font-weight: 700; color: #0066CC; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 12px 0; display: flex; align-items: center; gap: 8px; } .digitags-items-list { display: flex; flex-direction: column; gap: 8px; } .digitags-item { display: flex; align-items: start; gap: 8px; font-size: 13px; color: #495057; line-height: 1.5; } .digitags-item-icon { flex-shrink: 0; width: 18px; height: 18px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 11px; margin-top: 2px; } .digitags-deliverable-icon { background: #0066CC15; color: #0066CC; } .digitags-activity-icon { background: #FF8C0015; color: #FF8C00; } .digitags-roadmap-footer { background: linear-gradient(135deg, #FF8C0008 0%, #0066CC08 100%); border-left: 4px solid #0066CC; padding: 20px 24px; border-radius: 8px; } .digitags-footer-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 16px; font-weight: 700; color: #1a1a1a; margin: 0 0 8px 0; display: flex; align-items: center; gap: 8px; } .digitags-footer-text { font-size: 14px; color: #495057; line-height: 1.6; margin: 0; } @media (max-width: 640px) { .digitags-roadmap-card { padding: 24px 20px; } .digitags-roadmap-main-title { font-size: 22px; } .digitags-phase-header { flex-direction: column; align-items: flex-start; } }
+  Roadmap Mission IA    
 
-### Roadmap d'une mission IA générative
+<style>.digitags-roadmap-container { max-width: 800px; margin: 0 auto; font-family: 'DM Sans', sans-serif; padding: 0; box-sizing: border-box; } .digitags-roadmap-container * { box-sizing: border-box; } .digitags-roadmap-card { background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); border-radius: 16px; padding: 40px; box-shadow: 0 4px 20px rgba(0, 102, 204, 0.08); } .digitags-roadmap-header { text-align: center; margin-bottom: 40px; } .digitags-roadmap-main-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 28px; font-weight: 700; color: #1a1a1a; margin: 0 0 12px 0; } .digitags-roadmap-subtitle { font-size: 15px; color: #6c757d; margin: 0; } .digitags-phases-container { display: grid; gap: 24px; margin-bottom: 24px; } .digitags-phase-wrapper { position: relative; } .digitags-phase-card { background: white; border-radius: 12px; padding: 24px; border: 2px solid #e9ecef; transition: all 0.3s ease; position: relative; overflow: hidden; } .digitags-phase-card::after { content: ''; position: absolute; bottom: -24px; left: 50%; transform: translateX(-50%); width: 2px; height: 24px; background: linear-gradient(180deg, #0066CC 0%, #FF8C00 100%); opacity: 0.3; } .digitags-phase-wrapper:last-child .digitags-phase-card::after { display: none; } .digitags-phase-card:hover { border-color: #0066CC; box-shadow: 0 8px 24px rgba(0, 102, 204, 0.12); transform: translateY(-4px); } .digitags-phase-header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; } .digitags-phase-number { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px; font-weight: 700; color: white; flex-shrink: 0; } .digitags-phase-1 { background: linear-gradient(135deg, #0066CC 0%, #0052a3 100%); } .digitags-phase-2 { background: linear-gradient(135deg, #0066CC 0%, #FF8C00 100%); } .digitags-phase-3 { background: linear-gradient(135deg, #FF8C00 0%, #e67e00 100%); } .digitags-phase-4 { background: linear-gradient(135deg, #e67e00 0%, #0066CC 100%); } .digitags-phase-title-group { flex-grow: 1; } .digitags-phase-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 18px; font-weight: 700; color: #1a1a1a; margin: 0 0 4px 0; } .digitags-phase-duration { font-size: 13px; color: #6c757d; font-weight: 500; margin: 0; } .digitags-phase-description { font-size: 14px; color: #495057; line-height: 1.6; margin: 0 0 16px 0; } .digitags-phase-content { display: grid; gap: 16px; } .digitags-deliverables-section, .digitags-activities-section { background: #f8f9fa; border-radius: 8px; padding: 16px; } .digitags-section-label { font-size: 12px; font-weight: 700; color: #0066CC; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 12px 0; display: flex; align-items: center; gap: 8px; } .digitags-items-list { display: flex; flex-direction: column; gap: 8px; } .digitags-item { display: flex; align-items: start; gap: 8px; font-size: 13px; color: #495057; line-height: 1.5; } .digitags-item-icon { flex-shrink: 0; width: 18px; height: 18px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 11px; margin-top: 2px; } .digitags-deliverable-icon { background: #0066CC15; color: #0066CC; } .digitags-activity-icon { background: #FF8C0015; color: #FF8C00; } .digitags-roadmap-footer { background: linear-gradient(135deg, #FF8C0008 0%, #0066CC08 100%); border-left: 4px solid #0066CC; padding: 20px 24px; border-radius: 8px; } .digitags-footer-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 16px; font-weight: 700; color: #1a1a1a; margin: 0 0 8px 0; display: flex; align-items: center; gap: 8px; } .digitags-footer-text { font-size: 14px; color: #495057; line-height: 1.6; margin: 0; } @media (max-width: 640px) { .digitags-roadmap-card { padding: 24px 20px; } .digitags-roadmap-main-title { font-size: 22px; } .digitags-phase-header { flex-direction: column; align-items: flex-start; } }</style>
 
-De l'audit stratégique au déploiement en production : 4 phases clés
-
-1
-
-#### Audit & Stratégie IA
-
-⏱️ 2-4 semaines
-
-Diagnostic complet de votre maturité IA, cartographie des cas d'usage à fort ROI et construction de la roadmap stratégique alignée avec vos objectifs business.
-
-📦 Livrables
-
-✓ Rapport d'audit et diagnostic IA
-
-✓ Matrice de priorisation cas d'usage (impact/faisabilité)
-
-✓ Roadmap stratégique IA 12 mois avec budget prévisionnel
-
-⚡ Activités clés
-
-→ Ateliers de cadrage avec stakeholders métier
-
-→ Analyse des processus et identification des quick wins
-
-→ Benchmark concurrentiel et veille technologique
-
-2
-
-#### POC & Prototypage
-
-⏱️ 4-8 semaines
-
-Développement de prototypes fonctionnels pour valider la faisabilité technique et mesurer la valeur business avant d'investir dans l'industrialisation.
-
-📦 Livrables
-
-✓ Prototype fonctionnel déployé (2-3 cas d'usage prioritaires)
-
-✓ Rapport de performance et métriques KPI
-
-✓ Documentation technique et recommandations d'optimisation
-
-⚡ Activités clés
-
-→ Sélection et test de différents modèles (GPT-4, Claude, Llama...)
-
-→ Optimisation des prompts et fine-tuning si nécessaire
-
-→ Tests utilisateurs et itérations rapides
-
-3
-
-#### Industrialisation & Déploiement
-
-⏱️ 8-16 semaines
-
-Passage à l'échelle avec architecture production-ready, optimisation des coûts, monitoring des performances et déploiement progressif aux utilisateurs finaux.
-
-📦 Livrables
-
-✓ Solution IA en production avec architecture scalable
-
-✓ Dashboards de monitoring et alerting
-
-✓ Documentation technique complète et runbooks
-
-⚡ Activités clés
-
-→ Optimisation infrastructure et gestion des coûts API
-
-→ Mise en place guardrails et sécurité (RGPD, hallucinations)
-
-→ Déploiement progressif et suivi des métriques business
-
-4
-
-#### Formation & Transfert de compétences
-
-⏱️ 2-4 semaines
-
-Montée en compétences de vos équipes pour garantir l'autonomie post-mission. Formation technique, bonnes pratiques et gouvernance IA.
-
-📦 Livrables
-
-✓ Programmes de formation technique et métier personnalisés
-
-✓ Guidelines IA et charte d'utilisation éthique
-
-✓ Rapport final et recommandations d'amélioration continue
-
-⚡ Activités clés
-
-→ Ateliers pratiques prompt engineering et best practices
-
-→ Shadowing et accompagnement équipes tech/produit
-
-→ Mise en place gouvernance IA et processus d'amélioration
-
-##### 🎯 Mission modulable selon vos besoins
-
-Cette roadmap est indicative. Certaines entreprises concentrent l'effort sur les phases 1-2 (audit + POC) pour valider le concept avant d'investir massivement. D'autres sautent directement en phase 3 si elles ont déjà une vision claire. L'important est d'adapter le process à votre maturité et vos contraintes.
+<div class="digitags-roadmap-container"><div class="digitags-roadmap-card"><div class="digitags-roadmap-header"><h3 class="digitags-roadmap-main-title">Roadmap d'une mission IA générative</h3><p class="digitags-roadmap-subtitle">De l'audit stratégique au déploiement en production : 4 phases clés</p></div><div class="digitags-phases-container"><div class="digitags-phase-wrapper"><div class="digitags-phase-card"><div class="digitags-phase-header"><div class="digitags-phase-number digitags-phase-1">1</div><div class="digitags-phase-title-group"><h4 class="digitags-phase-title">Audit &amp; Stratégie IA</h4><p class="digitags-phase-duration">⏱️ 2-4 semaines</p></div></div><p class="digitags-phase-description">Diagnostic complet de votre maturité IA, cartographie des cas d'usage à fort ROI et construction de la roadmap stratégique alignée avec vos objectifs business.</p><div class="digitags-phase-content"><div class="digitags-deliverables-section"><div class="digitags-section-label"><span>📦</span> <span>Livrables</span></div><div class="digitags-items-list"><div class="digitags-item"><span class="digitags-item-icon digitags-deliverable-icon">✓</span> <span>Rapport d'audit et diagnostic IA</span></div><div class="digitags-item"><span class="digitags-item-icon digitags-deliverable-icon">✓</span> <span>Matrice de priorisation cas d'usage (impact/faisabilité)</span></div><div class="digitags-item"><span class="digitags-item-icon digitags-deliverable-icon">✓</span> <span>Roadmap stratégique IA 12 mois avec budget prévisionnel</span></div></div></div><div class="digitags-activities-section"><div class="digitags-section-label"><span>⚡</span> <span>Activités clés</span></div><div class="digitags-items-list"><div class="digitags-item"><span class="digitags-item-icon digitags-activity-icon">→</span> <span>Ateliers de cadrage avec stakeholders métier</span></div><div class="digitags-item"><span class="digitags-item-icon digitags-activity-icon">→</span> <span>Analyse des processus et identification des quick wins</span></div><div class="digitags-item"><span class="digitags-item-icon digitags-activity-icon">→</span> <span>Benchmark concurrentiel et veille technologique</span></div></div></div></div></div></div><div class="digitags-phase-wrapper"><div class="digitags-phase-card"><div class="digitags-phase-header"><div class="digitags-phase-number digitags-phase-2">2</div><div class="digitags-phase-title-group"><h4 class="digitags-phase-title">POC &amp; Prototypage</h4><p class="digitags-phase-duration">⏱️ 4-8 semaines</p></div></div><p class="digitags-phase-description">Développement de prototypes fonctionnels pour valider la faisabilité technique et mesurer la valeur business avant d'investir dans l'industrialisation.</p><div class="digitags-phase-content"><div class="digitags-deliverables-section"><div class="digitags-section-label"><span>📦</span> <span>Livrables</span></div><div class="digitags-items-list"><div class="digitags-item"><span class="digitags-item-icon digitags-deliverable-icon">✓</span> <span>Prototype fonctionnel déployé (2-3 cas d'usage prioritaires)</span></div><div class="digitags-item"><span class="digitags-item-icon digitags-deliverable-icon">✓</span> <span>Rapport de performance et métriques KPI</span></div><div class="digitags-item"><span class="digitags-item-icon digitags-deliverable-icon">✓</span> <span>Documentation technique et recommandations d'optimisation</span></div></div></div><div class="digitags-activities-section"><div class="digitags-section-label"><span>⚡</span> <span>Activités clés</span></div><div class="digitags-items-list"><div class="digitags-item"><span class="digitags-item-icon digitags-activity-icon">→</span> <span>Sélection et test de différents modèles (GPT-4, Claude, Llama...)</span></div><div class="digitags-item"><span class="digitags-item-icon digitags-activity-icon">→</span> <span>Optimisation des prompts et fine-tuning si nécessaire</span></div><div class="digitags-item"><span class="digitags-item-icon digitags-activity-icon">→</span> <span>Tests utilisateurs et itérations rapides</span></div></div></div></div></div></div><div class="digitags-phase-wrapper"><div class="digitags-phase-card"><div class="digitags-phase-header"><div class="digitags-phase-number digitags-phase-3">3</div><div class="digitags-phase-title-group"><h4 class="digitags-phase-title">Industrialisation &amp; Déploiement</h4><p class="digitags-phase-duration">⏱️ 8-16 semaines</p></div></div><p class="digitags-phase-description">Passage à l'échelle avec architecture production-ready, optimisation des coûts, monitoring des performances et déploiement progressif aux utilisateurs finaux.</p><div class="digitags-phase-content"><div class="digitags-deliverables-section"><div class="digitags-section-label"><span>📦</span> <span>Livrables</span></div><div class="digitags-items-list"><div class="digitags-item"><span class="digitags-item-icon digitags-deliverable-icon">✓</span> <span>Solution IA en production avec architecture scalable</span></div><div class="digitags-item"><span class="digitags-item-icon digitags-deliverable-icon">✓</span> <span>Dashboards de monitoring et alerting</span></div><div class="digitags-item"><span class="digitags-item-icon digitags-deliverable-icon">✓</span> <span>Documentation technique complète et runbooks</span></div></div></div><div class="digitags-activities-section"><div class="digitags-section-label"><span>⚡</span> <span>Activités clés</span></div><div class="digitags-items-list"><div class="digitags-item"><span class="digitags-item-icon digitags-activity-icon">→</span> <span>Optimisation infrastructure et gestion des coûts API</span></div><div class="digitags-item"><span class="digitags-item-icon digitags-activity-icon">→</span> <span>Mise en place guardrails et sécurité (RGPD, hallucinations)</span></div><div class="digitags-item"><span class="digitags-item-icon digitags-activity-icon">→</span> <span>Déploiement progressif et suivi des métriques business</span></div></div></div></div></div></div><div class="digitags-phase-wrapper"><div class="digitags-phase-card"><div class="digitags-phase-header"><div class="digitags-phase-number digitags-phase-4">4</div><div class="digitags-phase-title-group"><h4 class="digitags-phase-title">Formation &amp; Transfert de compétences</h4><p class="digitags-phase-duration">⏱️ 2-4 semaines</p></div></div><p class="digitags-phase-description">Montée en compétences de vos équipes pour garantir l'autonomie post-mission. Formation technique, bonnes pratiques et gouvernance IA.</p><div class="digitags-phase-content"><div class="digitags-deliverables-section"><div class="digitags-section-label"><span>📦</span> <span>Livrables</span></div><div class="digitags-items-list"><div class="digitags-item"><span class="digitags-item-icon digitags-deliverable-icon">✓</span> <span>Programmes de formation technique et métier personnalisés</span></div><div class="digitags-item"><span class="digitags-item-icon digitags-deliverable-icon">✓</span> <span>Guidelines IA et charte d'utilisation éthique</span></div><div class="digitags-item"><span class="digitags-item-icon digitags-deliverable-icon">✓</span> <span>Rapport final et recommandations d'amélioration continue</span></div></div></div><div class="digitags-activities-section"><div class="digitags-section-label"><span>⚡</span> <span>Activités clés</span></div><div class="digitags-items-list"><div class="digitags-item"><span class="digitags-item-icon digitags-activity-icon">→</span> <span>Ateliers pratiques prompt engineering et best practices</span></div><div class="digitags-item"><span class="digitags-item-icon digitags-activity-icon">→</span> <span>Shadowing et accompagnement équipes tech/produit</span></div><div class="digitags-item"><span class="digitags-item-icon digitags-activity-icon">→</span> <span>Mise en place gouvernance IA et processus d'amélioration</span></div></div></div></div></div></div></div><div class="digitags-roadmap-footer"><h5 class="digitags-footer-title"><span>🎯</span> <span>Mission modulable selon vos besoins</span></h5><p class="digitags-footer-text">Cette roadmap est indicative. Certaines entreprises concentrent l'effort sur les phases 1-2 (audit + POC) pour valider le concept avant d'investir massivement. D'autres sautent directement en phase 3 si elles ont déjà une vision claire. L'important est d'adapter le process à votre maturité et vos contraintes.</p></div></div></div>
 
 ‍
 

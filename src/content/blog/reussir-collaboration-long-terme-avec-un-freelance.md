@@ -51,53 +51,7 @@ Et n'hésitez pas à partager le contexte business. Un freelance qui comprend vo
 
 ‍
 
-.dgtags-widget { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; } .dgtags-widget \*, .dgtags-widget \*::before, .dgtags-widget \*::after { box-sizing: border-box; margin: 0; padding: 0; } .dgtags-widget .container { max-width: 800px; width: 100%; background: white; border-radius: 24px; padding: clamp(30px, 5vw, 60px); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); } .dgtags-widget .header { text-align: center; margin-bottom: clamp(30px, 5vw, 50px); } .dgtags-widget .header h1 { font-size: clamp(24px, 4vw, 36px); color: #1a1a2e; margin-bottom: 12px; font-weight: 800; line-height: 1.2; } .dgtags-widget .header p { font-size: clamp(14px, 2vw, 18px); color: #667eea; font-weight: 600; } .dgtags-widget .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: clamp(20px, 3vw, 30px); margin-top: 30px; } .dgtags-widget .pillar-card { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); border-radius: 16px; padding: clamp(20px, 3vw, 30px); position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 2px solid transparent; } .dgtags-widget .pillar-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3); border-color: #667eea; } .dgtags-widget .pillar-number { position: absolute; top: -10px; right: -10px; width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 900; color: white; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); } .dgtags-widget .pillar-icon { font-size: clamp(32px, 5vw, 48px); margin-bottom: 15px; } .dgtags-widget .pillar-title { font-size: clamp(16px, 2.5vw, 20px); font-weight: 700; color: #1a1a2e; margin-bottom: 10px; line-height: 1.3; } .dgtags-widget .pillar-desc { font-size: clamp(13px, 2vw, 15px); color: #4a5568; line-height: 1.6; } .dgtags-widget .footer { margin-top: clamp(30px, 5vw, 50px); padding-top: 30px; border-top: 2px solid #e2e8f0; text-align: center; } .dgtags-widget .footer-logo { font-size: clamp(18px, 3vw, 24px); font-weight: 800; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; } @media (max-width: 600px) { .dgtags-widget .pillars-grid { grid-template-columns: 1fr; } }
-
-# Les 5 piliers d'une collaboration freelance réussie
-
-Le guide pour bâtir un partenariat durable
-
-1
-
-🎯
-
-Attentes claires
-
-Brief détaillé, objectifs mesurables et périmètre défini dès le départ
-
-2
-
-🤝
-
-Confiance mutuelle
-
-Communication transparente et respect des engagements de chaque côté
-
-3
-
-⚙️
-
-Process fluides
-
-Outils partagés, rituels réguliers et documentation accessible
-
-4
-
-💰
-
-Rémunération juste
-
-Paiements à temps et tarifs revalorisés selon la montée en compétence
-
-5
-
-📈
-
-Évolution continue
-
-Bilans réguliers et ajustements du périmètre selon les besoins
-
-DIGITAGS.WORK
+<div class="dgtags-widget"><style>.dgtags-widget { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; } .dgtags-widget *, .dgtags-widget *::before, .dgtags-widget *::after { box-sizing: border-box; margin: 0; padding: 0; } .dgtags-widget .container { max-width: 800px; width: 100%; background: white; border-radius: 24px; padding: clamp(30px, 5vw, 60px); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); } .dgtags-widget .header { text-align: center; margin-bottom: clamp(30px, 5vw, 50px); } .dgtags-widget .header h1 { font-size: clamp(24px, 4vw, 36px); color: #1a1a2e; margin-bottom: 12px; font-weight: 800; line-height: 1.2; } .dgtags-widget .header p { font-size: clamp(14px, 2vw, 18px); color: #667eea; font-weight: 600; } .dgtags-widget .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: clamp(20px, 3vw, 30px); margin-top: 30px; } .dgtags-widget .pillar-card { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); border-radius: 16px; padding: clamp(20px, 3vw, 30px); position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 2px solid transparent; } .dgtags-widget .pillar-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3); border-color: #667eea; } .dgtags-widget .pillar-number { position: absolute; top: -10px; right: -10px; width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 900; color: white; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); } .dgtags-widget .pillar-icon { font-size: clamp(32px, 5vw, 48px); margin-bottom: 15px; } .dgtags-widget .pillar-title { font-size: clamp(16px, 2.5vw, 20px); font-weight: 700; color: #1a1a2e; margin-bottom: 10px; line-height: 1.3; } .dgtags-widget .pillar-desc { font-size: clamp(13px, 2vw, 15px); color: #4a5568; line-height: 1.6; } .dgtags-widget .footer { margin-top: clamp(30px, 5vw, 50px); padding-top: 30px; border-top: 2px solid #e2e8f0; text-align: center; } .dgtags-widget .footer-logo { font-size: clamp(18px, 3vw, 24px); font-weight: 800; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; } @media (max-width: 600px) { .dgtags-widget .pillars-grid { grid-template-columns: 1fr; } }</style><div class="container"><div class="header"><h1>Les 5 piliers d'une collaboration freelance réussie</h1><p>Le guide pour bâtir un partenariat durable</p></div><div class="pillars-grid"><div class="pillar-card"><div class="pillar-number">1</div><div class="pillar-icon">🎯</div><div class="pillar-title">Attentes claires</div><div class="pillar-desc">Brief détaillé, objectifs mesurables et périmètre défini dès le départ</div></div><div class="pillar-card"><div class="pillar-number">2</div><div class="pillar-icon">🤝</div><div class="pillar-title">Confiance mutuelle</div><div class="pillar-desc">Communication transparente et respect des engagements de chaque côté</div></div><div class="pillar-card"><div class="pillar-number">3</div><div class="pillar-icon">⚙️</div><div class="pillar-title">Process fluides</div><div class="pillar-desc">Outils partagés, rituels réguliers et documentation accessible</div></div><div class="pillar-card"><div class="pillar-number">4</div><div class="pillar-icon">💰</div><div class="pillar-title">Rémunération juste</div><div class="pillar-desc">Paiements à temps et tarifs revalorisés selon la montée en compétence</div></div><div class="pillar-card"><div class="pillar-number">5</div><div class="pillar-icon">📈</div><div class="pillar-title">Évolution continue</div><div class="pillar-desc">Bilans réguliers et ajustements du périmètre selon les besoins</div></div></div><div class="footer"><div class="footer-logo">DIGITAGS.WORK</div></div></div></div>
 
 ‍
 
@@ -177,53 +131,7 @@ C'est aussi le moment de parler rémunération. Un freelance qui monte en compé
 
 ‍
 
-.dgtags-timeline-widget { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); display: flex; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; } .dgtags-timeline-widget \*, .dgtags-timeline-widget \*::before, .dgtags-timeline-widget \*::after { box-sizing: border-box; margin: 0; padding: 0; } .dgtags-timeline-widget .container { max-width: 800px; width: 100%; background: white; border-radius: 24px; padding: clamp(30px, 5vw, 60px); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); } .dgtags-timeline-widget .header { text-align: center; margin-bottom: clamp(30px, 5vw, 50px); } .dgtags-timeline-widget .header h1 { font-size: clamp(24px, 4vw, 36px); color: #1a1a2e; margin-bottom: 12px; font-weight: 800; line-height: 1.2; } .dgtags-timeline-widget .header p { font-size: clamp(14px, 2vw, 18px); color: #4facfe; font-weight: 600; } .dgtags-timeline-widget .timeline { position: relative; padding: 20px 0; } .dgtags-timeline-widget .timeline::before { content: ''; position: absolute; left: clamp(20px, 3vw, 30px); top: 0; bottom: 0; width: 4px; background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%); border-radius: 2px; } .dgtags-timeline-widget .timeline-item { position: relative; padding-left: clamp(60px, 8vw, 80px); margin-bottom: clamp(30px, 4vw, 40px); } .dgtags-timeline-widget .timeline-item:last-child { margin-bottom: 0; } .dgtags-timeline-widget .timeline-dot { position: absolute; left: clamp(12px, 2vw, 22px); top: 0; width: clamp(20px, 3vw, 24px); height: clamp(20px, 3vw, 24px); background: white; border: 4px solid #4facfe; border-radius: 50%; box-shadow: 0 0 0 4px rgba(79, 172, 254, 0.2); z-index: 2; } .dgtags-timeline-widget .timeline-dot.active { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-color: #00f2fe; animation: dgtags-pulse 2s infinite; } @keyframes dgtags-pulse { 0%, 100% { box-shadow: 0 0 0 4px rgba(79, 172, 254, 0.2); } 50% { box-shadow: 0 0 0 8px rgba(79, 172, 254, 0.4); } } .dgtags-timeline-widget .timeline-content { background: linear-gradient(135deg, #f8fbff 0%, #e8f4fd 100%); border-radius: 12px; padding: clamp(18px, 3vw, 24px); border-left: 4px solid #4facfe; transition: transform 0.3s ease, box-shadow 0.3s ease; } .dgtags-timeline-widget .timeline-content:hover { transform: translateX(5px); box-shadow: 0 8px 20px rgba(79, 172, 254, 0.2); } .dgtags-timeline-widget .timeline-period { display: inline-block; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; font-size: clamp(11px, 1.8vw, 13px); font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; } .dgtags-timeline-widget .timeline-title { font-size: clamp(18px, 3vw, 22px); font-weight: 700; color: #1a1a2e; margin-bottom: 8px; line-height: 1.3; } .dgtags-timeline-widget .timeline-desc { font-size: clamp(13px, 2vw, 15px); color: #4a5568; line-height: 1.6; margin-bottom: 12px; } .dgtags-timeline-widget .timeline-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; } .dgtags-timeline-widget .tag { background: white; color: #4facfe; font-size: clamp(11px, 1.8vw, 13px); font-weight: 600; padding: 4px 10px; border-radius: 6px; border: 1px solid #4facfe; } .dgtags-timeline-widget .footer { margin-top: clamp(30px, 5vw, 50px); padding-top: 30px; border-top: 2px solid #e2e8f0; text-align: center; } .dgtags-timeline-widget .footer-logo { font-size: clamp(18px, 3vw, 24px); font-weight: 800; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; } @media (max-width: 600px) { .dgtags-timeline-widget .timeline::before { left: 15px; } .dgtags-timeline-widget .timeline-dot { left: 7px; } .dgtags-timeline-widget .timeline-item { padding-left: 50px; } }
-
-# Timeline d'une collaboration freelance réussie
-
-De la mission test au partenariat stratégique
-
-Semaines 1-3
-
-Mission test
-
-Valider la compatibilité, tester la réactivité et voir si le courant passe sans engagement long terme.
-
-Brief détaillé Premier livrable
-
-Mois 1-3
-
-Phase de démarrage
-
-Montée en compétence sur vos outils, votre culture et vos process. Instauration des rituels de communication.
-
-Points hebdo Documentation Onboarding
-
-Mois 3-6
-
-Consolidation
-
-Le freelance est autonome, propose des solutions adaptées et livre sans avoir besoin de tout réexpliquer.
-
-Premier bilan Ajustements
-
-Mois 6-12
-
-Partenariat établi
-
-Véritable membre de l'équipe étendue qui anticipe vos besoins et challenge vos décisions stratégiques.
-
-Bilan semestriel Revalorisation TJM
-
-12+ mois
-
-Partenariat stratégique
-
-Le freelance connaît votre entreprise sur le bout des doigts et devient un atout stratégique incontournable.
-
-Force de proposition Relation long terme
-
-DIGITAGS.WORK
+<div class="dgtags-timeline-widget"><style>.dgtags-timeline-widget { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); display: flex; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; } .dgtags-timeline-widget *, .dgtags-timeline-widget *::before, .dgtags-timeline-widget *::after { box-sizing: border-box; margin: 0; padding: 0; } .dgtags-timeline-widget .container { max-width: 800px; width: 100%; background: white; border-radius: 24px; padding: clamp(30px, 5vw, 60px); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); } .dgtags-timeline-widget .header { text-align: center; margin-bottom: clamp(30px, 5vw, 50px); } .dgtags-timeline-widget .header h1 { font-size: clamp(24px, 4vw, 36px); color: #1a1a2e; margin-bottom: 12px; font-weight: 800; line-height: 1.2; } .dgtags-timeline-widget .header p { font-size: clamp(14px, 2vw, 18px); color: #4facfe; font-weight: 600; } .dgtags-timeline-widget .timeline { position: relative; padding: 20px 0; } .dgtags-timeline-widget .timeline::before { content: ''; position: absolute; left: clamp(20px, 3vw, 30px); top: 0; bottom: 0; width: 4px; background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%); border-radius: 2px; } .dgtags-timeline-widget .timeline-item { position: relative; padding-left: clamp(60px, 8vw, 80px); margin-bottom: clamp(30px, 4vw, 40px); } .dgtags-timeline-widget .timeline-item:last-child { margin-bottom: 0; } .dgtags-timeline-widget .timeline-dot { position: absolute; left: clamp(12px, 2vw, 22px); top: 0; width: clamp(20px, 3vw, 24px); height: clamp(20px, 3vw, 24px); background: white; border: 4px solid #4facfe; border-radius: 50%; box-shadow: 0 0 0 4px rgba(79, 172, 254, 0.2); z-index: 2; } .dgtags-timeline-widget .timeline-dot.active { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-color: #00f2fe; animation: dgtags-pulse 2s infinite; } @keyframes dgtags-pulse { 0%, 100% { box-shadow: 0 0 0 4px rgba(79, 172, 254, 0.2); } 50% { box-shadow: 0 0 0 8px rgba(79, 172, 254, 0.4); } } .dgtags-timeline-widget .timeline-content { background: linear-gradient(135deg, #f8fbff 0%, #e8f4fd 100%); border-radius: 12px; padding: clamp(18px, 3vw, 24px); border-left: 4px solid #4facfe; transition: transform 0.3s ease, box-shadow 0.3s ease; } .dgtags-timeline-widget .timeline-content:hover { transform: translateX(5px); box-shadow: 0 8px 20px rgba(79, 172, 254, 0.2); } .dgtags-timeline-widget .timeline-period { display: inline-block; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; font-size: clamp(11px, 1.8vw, 13px); font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; } .dgtags-timeline-widget .timeline-title { font-size: clamp(18px, 3vw, 22px); font-weight: 700; color: #1a1a2e; margin-bottom: 8px; line-height: 1.3; } .dgtags-timeline-widget .timeline-desc { font-size: clamp(13px, 2vw, 15px); color: #4a5568; line-height: 1.6; margin-bottom: 12px; } .dgtags-timeline-widget .timeline-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; } .dgtags-timeline-widget .tag { background: white; color: #4facfe; font-size: clamp(11px, 1.8vw, 13px); font-weight: 600; padding: 4px 10px; border-radius: 6px; border: 1px solid #4facfe; } .dgtags-timeline-widget .footer { margin-top: clamp(30px, 5vw, 50px); padding-top: 30px; border-top: 2px solid #e2e8f0; text-align: center; } .dgtags-timeline-widget .footer-logo { font-size: clamp(18px, 3vw, 24px); font-weight: 800; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; } @media (max-width: 600px) { .dgtags-timeline-widget .timeline::before { left: 15px; } .dgtags-timeline-widget .timeline-dot { left: 7px; } .dgtags-timeline-widget .timeline-item { padding-left: 50px; } }</style><div class="container"><div class="header"><h1>Timeline d'une collaboration freelance réussie</h1><p>De la mission test au partenariat stratégique</p></div><div class="timeline"><div class="timeline-item"><div class="timeline-dot active"></div><div class="timeline-content"><span class="timeline-period">Semaines 1-3</span><div class="timeline-title">Mission test</div><div class="timeline-desc">Valider la compatibilité, tester la réactivité et voir si le courant passe sans engagement long terme.</div><div class="timeline-tags"><span class="tag">Brief détaillé</span> <span class="tag">Premier livrable</span></div></div></div><div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><span class="timeline-period">Mois 1-3</span><div class="timeline-title">Phase de démarrage</div><div class="timeline-desc">Montée en compétence sur vos outils, votre culture et vos process. Instauration des rituels de communication.</div><div class="timeline-tags"><span class="tag">Points hebdo</span> <span class="tag">Documentation</span> <span class="tag">Onboarding</span></div></div></div><div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><span class="timeline-period">Mois 3-6</span><div class="timeline-title">Consolidation</div><div class="timeline-desc">Le freelance est autonome, propose des solutions adaptées et livre sans avoir besoin de tout réexpliquer.</div><div class="timeline-tags"><span class="tag">Premier bilan</span> <span class="tag">Ajustements</span></div></div></div><div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><span class="timeline-period">Mois 6-12</span><div class="timeline-title">Partenariat établi</div><div class="timeline-desc">Véritable membre de l'équipe étendue qui anticipe vos besoins et challenge vos décisions stratégiques.</div><div class="timeline-tags"><span class="tag">Bilan semestriel</span> <span class="tag">Revalorisation TJM</span></div></div></div><div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><span class="timeline-period">12+ mois</span><div class="timeline-title">Partenariat stratégique</div><div class="timeline-desc">Le freelance connaît votre entreprise sur le bout des doigts et devient un atout stratégique incontournable.</div><div class="timeline-tags"><span class="tag">Force de proposition</span> <span class="tag">Relation long terme</span></div></div></div></div><div class="footer"><div class="footer-logo">DIGITAGS.WORK</div></div></div></div>
 
 ‍
 

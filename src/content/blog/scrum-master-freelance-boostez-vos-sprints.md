@@ -23,27 +23,11 @@ Enfin, le regard extérieur compte énormément. Quand on est immergé dans une 
 
 ‍
 
-  Scrum Master vs Chef de Projet body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8f9fa; padding: 40px 20px; margin: 0; } .container { max-width: 1200px; margin: 0 auto; } .visual-block { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); } h2 { color: #1a1a1a; font-size: 24px; margin-bottom: 30px; font-weight: 600; } .comparison-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 20px; } .role-card { background: #f8f9fa; border-radius: 8px; padding: 30px; border-left: 4px solid #2c3e50; } .role-card h3 { color: #2c3e50; font-size: 18px; margin-bottom: 20px; font-weight: 600; } .role-card ul { list-style: none; padding: 0; margin: 0; } .role-card li { color: #495057; padding: 10px 0; border-bottom: 1px solid #e9ecef; font-size: 14px; } .role-card li:last-child { border-bottom: none; } .role-card li::before { content: "→ "; color: #2c3e50; font-weight: bold; margin-right: 8px; } @media (max-width: 768px) { .comparison-grid { grid-template-columns: 1fr; } }
+  Scrum Master vs Chef de Projet 
 
-## 📊 Scrum Master vs Chef de Projet Classique
+<style>body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8f9fa; padding: 40px 20px; margin: 0; } .container { max-width: 1200px; margin: 0 auto; } .visual-block { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); } h2 { color: #1a1a1a; font-size: 24px; margin-bottom: 30px; font-weight: 600; } .comparison-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 20px; } .role-card { background: #f8f9fa; border-radius: 8px; padding: 30px; border-left: 4px solid #2c3e50; } .role-card h3 { color: #2c3e50; font-size: 18px; margin-bottom: 20px; font-weight: 600; } .role-card ul { list-style: none; padding: 0; margin: 0; } .role-card li { color: #495057; padding: 10px 0; border-bottom: 1px solid #e9ecef; font-size: 14px; } .role-card li:last-child { border-bottom: none; } .role-card li::before { content: "→ "; color: #2c3e50; font-weight: bold; margin-right: 8px; } @media (max-width: 768px) { .comparison-grid { grid-template-columns: 1fr; } }</style>
 
-### Chef de Projet
-
--   Planifie et contrôle les tâches
--   Responsable des délais et budget
--   Prend les décisions stratégiques
--   Reporte aux parties prenantes
--   Gère les ressources et affectations
--   Approche directive et hiérarchique
-
-### Scrum Master
-
--   Facilite et accompagne l'équipe
--   Optimise le processus de travail
--   Coach l'auto-organisation
--   Lève les obstacles et blocages
--   Protège l'équipe des perturbations
--   Posture de servant-leader
+<div class="container"><div class="visual-block"><h2>📊 Scrum Master vs Chef de Projet Classique</h2><div class="comparison-grid"><div class="role-card"><h3>Chef de Projet</h3><ul><li>Planifie et contrôle les tâches</li><li>Responsable des délais et budget</li><li>Prend les décisions stratégiques</li><li>Reporte aux parties prenantes</li><li>Gère les ressources et affectations</li><li>Approche directive et hiérarchique</li></ul></div><div class="role-card"><h3>Scrum Master</h3><ul><li>Facilite et accompagne l'équipe</li><li>Optimise le processus de travail</li><li>Coach l'auto-organisation</li><li>Lève les obstacles et blocages</li><li>Protège l'équipe des perturbations</li><li>Posture de servant-leader</li></ul></div></div></div></div>
 
 ‍
 
@@ -61,41 +45,11 @@ En **méthodologie agile**, chaque réunion a un sens précis. Le scrum master s
 
 ‍
 
-  Rituels Scrum Essentiels body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8f9fa; padding: 40px 20px; margin: 0; } .container { max-width: 1200px; margin: 0 auto; } .visual-block { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); } h2 { color: #1a1a1a; font-size: 24px; margin-bottom: 30px; font-weight: 600; } .rituals-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 20px; } .ritual-box { background: #f8f9fa; border-radius: 8px; padding: 25px; border-left: 6px solid #2c3e50; position: relative; } .ritual-icon { position: absolute; top: 20px; right: 20px; font-size: 36px; } .ritual-box h4 { color: #2c3e50; font-size: 16px; margin: 0 0 12px 0; font-weight: 600; } .ritual-duration { background: #2c3e50; color: white; padding: 4px 10px; border-radius: 4px; font-size: 12px; display: inline-block; margin-bottom: 12px; } .ritual-box p { color: #495057; margin: 0; font-size: 14px; line-height: 1.6; } @media (max-width: 768px) { .rituals-container { grid-template-columns: 1fr; } }
+  Rituels Scrum Essentiels 
 
-## 🔄 Les Rituels Scrum Essentiels
+<style>body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8f9fa; padding: 40px 20px; margin: 0; } .container { max-width: 1200px; margin: 0 auto; } .visual-block { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); } h2 { color: #1a1a1a; font-size: 24px; margin-bottom: 30px; font-weight: 600; } .rituals-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 20px; } .ritual-box { background: #f8f9fa; border-radius: 8px; padding: 25px; border-left: 6px solid #2c3e50; position: relative; } .ritual-icon { position: absolute; top: 20px; right: 20px; font-size: 36px; } .ritual-box h4 { color: #2c3e50; font-size: 16px; margin: 0 0 12px 0; font-weight: 600; } .ritual-duration { background: #2c3e50; color: white; padding: 4px 10px; border-radius: 4px; font-size: 12px; display: inline-block; margin-bottom: 12px; } .ritual-box p { color: #495057; margin: 0; font-size: 14px; line-height: 1.6; } @media (max-width: 768px) { .rituals-container { grid-template-columns: 1fr; } }</style>
 
-📅
-
-#### Sprint Planning
-
-2-4 heures
-
-L'équipe définit l'objectif du sprint et sélectionne les user stories à réaliser dans le backlog produit.
-
-☀️
-
-#### Daily Scrum
-
-15 minutes
-
-Point quotidien pour synchroniser l'équipe : qu'ai-je fait hier, que vais-je faire aujourd'hui, quels blocages ?
-
-👁️
-
-#### Sprint Review
-
-1-2 heures
-
-Démo des fonctionnalités développées aux stakeholders et collecte de feedback pour ajuster le backlog.
-
-🔍
-
-#### Rétrospective
-
-1-2 heures
-
-L'équipe identifie ce qui a bien fonctionné, ce qui doit être amélioré, et décide des actions concrètes.
+<div class="container"><div class="visual-block"><h2>🔄 Les Rituels Scrum Essentiels</h2><div class="rituals-container"><div class="ritual-box"><div class="ritual-icon">📅</div><h4>Sprint Planning</h4><div class="ritual-duration">2-4 heures</div><p>L'équipe définit l'objectif du sprint et sélectionne les user stories à réaliser dans le backlog produit.</p></div><div class="ritual-box"><div class="ritual-icon">☀️</div><h4>Daily Scrum</h4><div class="ritual-duration">15 minutes</div><p>Point quotidien pour synchroniser l'équipe : qu'ai-je fait hier, que vais-je faire aujourd'hui, quels blocages ?</p></div><div class="ritual-box"><div class="ritual-icon">👁️</div><h4>Sprint Review</h4><div class="ritual-duration">1-2 heures</div><p>Démo des fonctionnalités développées aux stakeholders et collecte de feedback pour ajuster le backlog.</p></div><div class="ritual-box"><div class="ritual-icon">🔍</div><h4>Rétrospective</h4><div class="ritual-duration">1-2 heures</div><p>L'équipe identifie ce qui a bien fonctionné, ce qui doit être amélioré, et décide des actions concrètes.</p></div></div></div></div>
 
 ‍
 
