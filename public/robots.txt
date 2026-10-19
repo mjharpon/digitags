@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /talents
+Disallow: /p/
+Disallow: /cms/
+Disallow: /api/
+Disallow: /merci
+
+Sitemap: https://digitags.work/sitemap-index.xml
