@@ -294,9 +294,21 @@ import Base from '../layouts/Base.astro';
     });
 
     // ---------- Fiche profil ----------
+    // Les documents privés (bucket docs-internes) sont stockés en chemin nu
+    // « bucket/clé » : on génère une URL signée valable 1 h à l'ouverture.
+    async function docUrl(value) {
+      if (!value) return null;
+      if (/^https?:/.test(value)) return value;
+      const [bucket, ...rest] = value.split('/');
+      const { data } = await sb.storage.from(bucket).createSignedUrl(rest.join('/'), 3600);
+      return data?.signedUrl ?? null;
+    }
+
     async function openProfile(id) {
       const { data: p, error } = await sb.from('profiles').select('*').eq('id', id).single();
       if (error) return toast('Erreur : ' + error.message);
+      p.cv_url = await docUrl(p.cv_url);
+      p.portfolio_pdf_url = await docUrl(p.portfolio_pdf_url);
       const d = $('drawer');
       d.innerHTML = `
         <button class="close" id="drawer-close">×</button>
