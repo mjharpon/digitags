@@ -20,6 +20,9 @@ const {
   <meta name="description" content={description} />
   <meta name="google-site-verification" content="xfCvpsYNHG3uy0Al2dGBGrBo4Vw4YKO--_TcwCszQ7U" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <!-- Plausible Analytics (sans cookie) — l'outil interne /talents est exclu des stats -->
+  <script defer data-domain="digitags.work" data-exclude="/talents" src="https://plausible.io/js/script.outbound-links.file-downloads.exclusions.js"></script>
+  <script is:inline>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
   <link rel="preload" href="/assets/fonts/pjs-400.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/assets/fonts/pjs-800.woff2" as="font" type="font/woff2" crossorigin />
 </head>
