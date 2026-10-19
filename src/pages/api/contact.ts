@@ -1,6 +1,7 @@
 // Réception du formulaire de contact : enregistre la soumission dans
 // contact_submissions, téléverse l'éventuel brief joint (bucket privé) et
-// notifie hugo@digitags.work par email (Resend, si la clé est configurée).
+// notifie hugo@digitags.work par email via le Worker digitags-notify
+// (Cloudflare Email Workers — aucun service tiers).
 export const prerender = false;
 
 import type { APIRoute } from 'astro';
@@ -15,7 +16,7 @@ const BRIEF_TYPES = [
   'image/jpeg',
   'image/png',
 ];
-const NOTIFY_TO = 'hugo@digitags.work';
+const NOTIFY_URL = 'https://digitags-notify.mjharpon-pro.workers.dev';
 
 const esc = (s: string) =>
   s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c] as string));
@@ -24,7 +25,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
   const env = (locals as any)?.runtime?.env ?? {};
   const url = env.SUPABASE_URL ?? import.meta.env.SUPABASE_URL;
   const key = env.SUPABASE_SERVICE_KEY ?? import.meta.env.SUPABASE_SERVICE_KEY;
-  const resendKey = env.RESEND_API_KEY ?? import.meta.env.RESEND_API_KEY;
+  const notifySecret = env.NOTIFY_SECRET ?? import.meta.env.NOTIFY_SECRET;
   const H = { apikey: key, Authorization: `Bearer ${key}` };
   const json = (status: number, body: object) =>
     new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json' } });
@@ -95,15 +96,13 @@ export const POST: APIRoute = async ({ request, locals }) => {
   if (!ins.ok) return json(500, { ok: false, error: "L'envoi a échoué — réessayez, ou écrivez-nous à hello@digitags.work." });
 
   // Notification email (best effort : la soumission est déjà en base).
-  if (resendKey) {
+  if (notifySecret) {
     try {
-      await fetch('https://api.resend.com/emails', {
+      await fetch(NOTIFY_URL, {
         method: 'POST',
-        headers: { Authorization: `Bearer ${resendKey}`, 'Content-Type': 'application/json' },
+        headers: { Authorization: `Bearer ${notifySecret}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          from: 'digitags.work <contact@digitags.work>',
-          to: [NOTIFY_TO],
-          reply_to: email,
+          replyTo: email,
           subject: `Nouveau brief — ${nom}${societe ? ` (${societe})` : ''}`,
           html: `
             <h2 style="font-family:sans-serif;">Nouvelle demande via digitags.work</h2>

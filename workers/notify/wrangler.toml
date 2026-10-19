@@ -1,0 +1,12 @@
+# Worker de notification email interne (Cloudflare Email Workers).
+# Déploiement : npx wrangler deploy (depuis ce dossier).
+name = "digitags-notify"
+main = "src/index.js"
+compatibility_date = "2026-01-01"
+
+# Envoi d'emails sortants depuis la zone digitags.work.
+# Le destinataire doit être une adresse de destination vérifiée dans
+# Email Routing de la zone (hugo@digitags.work).
+[[send_email]]
+name = "NOTIFY"
+destination_address = "hugo@digitags.work"
