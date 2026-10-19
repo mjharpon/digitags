@@ -9,6 +9,8 @@ import Base from '../layouts/Base.astro';
     <p class="eyebrow">Outil interne</p>
     <h1 style="font-size: 26px; font-weight: 800; margin-bottom: 18px;">Talents du Hub</h1>
     <div class="form-card">
+      <button class="btn btn-dark" id="login-google" style="width: 100%; margin-bottom: 18px;">Se connecter avec Google</button>
+      <p style="text-align:center; font-size: 12px; color: var(--ink-faint); margin-bottom: 16px;">— ou par email —</p>
       <div id="login-step1">
         <div class="field">
           <label for="login-email">Email professionnel</label>
@@ -137,6 +139,15 @@ import Base from '../layouts/Base.astro';
       if (session) return start();
       $('login').hidden = false;
     }
+
+    $('login-google').addEventListener('click', async () => {
+      $('login-msg').textContent = 'Redirection vers Google…';
+      const { error } = await sb.auth.signInWithOAuth({
+        provider: 'google',
+        options: { redirectTo: location.origin + '/talents' },
+      });
+      if (error) $('login-msg').textContent = 'Erreur : ' + error.message;
+    });
 
     $('login-send').addEventListener('click', async () => {
       const email = $('login-email').value.trim();
