@@ -65,18 +65,19 @@ const dateFmt = proposal
   ? new Date(proposal.created_at).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
   : '';
 
-const defaultWeeks = proposal?.duration_weeks ?? 4;
 const defaultStart = proposal?.start_date ?? new Date(Date.now() + 14 * 864e5).toISOString().slice(0, 10);
 const euro = (n: number) => n.toLocaleString('fr-FR');
 
 // Données du configurateur (aucun nom : « Consultant N »).
+// days = nombre TOTAL de jours du consultant sur la mission.
 const cfgItems = items.map((it, i) => ({
   n: i + 1,
   role: it.role_label ?? it.profiles.job ?? 'Consultant',
   tjm: Number(it.tjm) || 0,
-  days: Number(it.days_week) || 5,
+  days: Number(it.days_week) || 10,
 }));
-const weeklyBudget = cfgItems.reduce((s, c) => s + c.tjm * c.days, 0);
+const totalBudget = cfgItems.reduce((s, c) => s + c.tjm * c.days, 0);
+const totalDays = cfgItems.reduce((s, c) => s + c.days, 0);
 ---
 <!DOCTYPE html>
 <html lang="fr">
@@ -140,21 +141,16 @@ const weeklyBudget = cfgItems.reduce((s, c) => s + c.tjm * c.days, 0);
                 <span class="p3-ico">📅</span>
                 <div>
                   <h2>1. Votre mission, à votre mesure</h2>
-                  <p>Ajustez le démarrage et la durée : le budget se recalcule instantanément.</p>
+                  <p>Ajustez le démarrage et la charge de chaque consultant : le budget se recalcule instantanément.</p>
                 </div>
               </div>
               <div class="prop3-config-fields">
                 <label>Démarrage souhaité
                   <input type="date" id="cfg-start" value={defaultStart} />
                 </label>
-                <label>Durée de la mission
-                  <span class="cfg-weeks-wrap"><input type="number" id="cfg-weeks" value={defaultWeeks} min="1" max="52" /> semaines</span>
+                <label>Charge totale proposée
+                  <span class="cfg-weeks-wrap"><strong id="cfg-days-total" style="font-size:18px;">{totalDays}</strong> jours</span>
                 </label>
-                <div class="cfg-week-chips" role="group" aria-label="Durées proposées">
-                  {[2, 4, 8, 12].map((w) => (
-                    <button type="button" class={`wk-chip ${w === defaultWeeks ? 'on' : ''}`} data-wk={w}>{w} sem</button>
-                  ))}
-                </div>
               </div>
             </section>
 
@@ -163,7 +159,7 @@ const weeklyBudget = cfgItems.reduce((s, c) => s + c.tjm * c.days, 0);
                 <span class="p3-ico">👥</span>
                 <div>
                   <h2>2. Talents sélectionnés</h2>
-                  <p>{items.length} profil{items.length > 1 ? 's' : ''} pour ce projet{allTjm ? ' · Vous pouvez ajuster la charge (jours/sem) ou écarter un profil.' : ''}</p>
+                  <p>{items.length} profil{items.length > 1 ? 's' : ''} pour ce projet{allTjm ? ' · Vous pouvez ajuster le nombre de jours ou écarter un profil.' : ''}</p>
                 </div>
               </div>
               <div class="prop3-rows">
@@ -203,10 +199,10 @@ const weeklyBudget = cfgItems.reduce((s, c) => s + c.tjm * c.days, 0);
                             <span class="p3-tjm">{euro(Number(it.tjm))} €</span>
                           </div>
                           <div class="p3-cell">
-                            <label for={`days-${i}`}>Jours / sem</label>
-                            <input type="number" id={`days-${i}`} class="p3-days" value={Number(it.days_week) || 5} min="0.5" max="5" step="0.5" />
+                            <label for={`days-${i}`}>Jours</label>
+                            <input type="number" id={`days-${i}`} class="p3-days" value={Number(it.days_week) || 10} min="0.5" max="365" step="0.5" />
                           </div>
-                          <strong class="p3-line" data-line={i}>{euro((Number(it.tjm) || 0) * (Number(it.days_week) || 5))} €/sem</strong>
+                          <strong class="p3-line" data-line={i}>{euro((Number(it.tjm) || 0) * (Number(it.days_week) || 10))} €</strong>
                           <button type="button" class="p3-x" data-x={i} title="Écarter ce profil de l'estimation">×</button>
                         </>
                       )}
@@ -272,14 +268,14 @@ const weeklyBudget = cfgItems.reduce((s, c) => s + c.tjm * c.days, 0);
           </div>
 
           <aside class="prop3-side">
-            {allTjm && weeklyBudget > 0 && (
+            {allTjm && totalBudget > 0 && (
               <div class="prop3-budget">
                 <div class="p3b-head"><span class="p3b-ico">🧮</span><div><strong>Budget estimé</strong><small>Mise à jour en temps réel</small></div></div>
-                <strong class="p3b-total" id="cfg-total">{euro(weeklyBudget * defaultWeeks)} € HT</strong>
-                <span class="p3b-sub" id="cfg-total-sub">pour {defaultWeeks} semaines</span>
+                <strong class="p3b-total" id="cfg-total">{euro(totalBudget)} € HT</strong>
+                <span class="p3b-sub" id="cfg-total-sub">pour {totalDays} jours de mission</span>
                 <ul class="p3b-lines" id="cfg-lines">
                   {cfgItems.map((c, i) => (
-                    <li data-bline={i}><span>Consultant {c.n} · {c.role}</span><strong>{euro(c.tjm * c.days * defaultWeeks)} €</strong></li>
+                    <li data-bline={i}><span>Consultant {c.n} · {c.role}</span><strong>{euro(c.tjm * c.days)} €</strong></li>
                   ))}
                 </ul>
                 <p class="p3b-note">ⓘ Estimation indicative, basée sur les rythmes proposés. Le périmètre exact est affiné ensemble avant démarrage.</p>
@@ -305,46 +301,45 @@ const weeklyBudget = cfgItems.reduce((s, c) => s + c.tjm * c.days, 0);
       </section>
 
       <script define:vars={{ cfgItems, title: proposal.title }}>
-        const weeks = document.getElementById('cfg-weeks');
         const start = document.getElementById('cfg-start');
-        if (weeks && start && document.getElementById('cfg-total')) {
+        if (start && document.getElementById('cfg-total')) {
           const euro = (n) => n.toLocaleString('fr-FR');
           const state = cfgItems.map((c) => ({ ...c, on: true }));
 
           const update = () => {
-            const w = Math.max(1, Math.min(52, Number(weeks.value) || 1));
-            let weekly = 0;
+            let total = 0;
+            let days = 0;
             state.forEach((c, i) => {
               const line = c.on ? c.tjm * c.days : 0;
-              weekly += line;
+              total += line;
+              days += c.on ? c.days : 0;
               const lineEl = document.querySelector(`[data-line="${i}"]`);
-              if (lineEl) lineEl.textContent = euro(c.tjm * c.days) + ' €/sem';
+              if (lineEl) lineEl.textContent = euro(c.tjm * c.days) + ' €';
               const bline = document.querySelector(`[data-bline="${i}"]`);
               if (bline) {
                 bline.classList.toggle('off', !c.on);
-                bline.querySelector('strong').textContent = c.on ? euro(line * w) + ' €' : 'écarté';
+                bline.querySelector('strong').textContent = c.on ? euro(line) + ' €' : 'écarté';
               }
               const row = document.querySelector(`[data-row="${i}"]`);
               if (row) row.classList.toggle('off', !c.on);
             });
-            document.getElementById('cfg-total').textContent = euro(weekly * w) + ' € HT';
-            document.getElementById('cfg-total-sub').textContent = 'pour ' + w + ' semaine' + (w > 1 ? 's' : '');
-            document.querySelectorAll('.wk-chip').forEach((ch) => ch.classList.toggle('on', Number(ch.dataset.wk) === w));
+            document.getElementById('cfg-total').textContent = euro(total) + ' € HT';
+            document.getElementById('cfg-total-sub').textContent = 'pour ' + days + ' jour' + (days > 1 ? 's' : '') + ' de mission';
+            const daysTotal = document.getElementById('cfg-days-total');
+            if (daysTotal) daysTotal.textContent = days;
 
             const d = start.value
               ? new Date(start.value).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
               : 'à définir';
             const picked = state.filter((c) => c.on);
-            const lines = picked.map((c) => '• Consultant ' + c.n + ' (' + c.role + ') : ' + c.days + ' j/sem').join('%0D%0A');
-            const body = 'Bonjour,%0D%0A%0D%0ANous souhaitons avancer sur votre proposition « ' + encodeURIComponent(title) + ' » avec les options suivantes :%0D%0A%0D%0A• Démarrage souhaité : ' + encodeURIComponent(d) + '%0D%0A• Durée : ' + w + ' semaine' + (w > 1 ? 's' : '') + '%0D%0A' + lines + '%0D%0A• Budget estimé : ' + encodeURIComponent(euro(weekly * w)) + ' € HT%0D%0A%0D%0A';
+            const lines = picked.map((c) => '• Consultant ' + c.n + ' (' + c.role + ') : ' + c.days + ' jour' + (c.days > 1 ? 's' : '') + ' × ' + euro(c.tjm) + ' €').join('%0D%0A');
+            const body = 'Bonjour,%0D%0A%0D%0ANous souhaitons avancer sur votre proposition « ' + encodeURIComponent(title) + ' » avec les options suivantes :%0D%0A%0D%0A• Démarrage souhaité : ' + encodeURIComponent(d) + '%0D%0A' + lines + '%0D%0A• Charge totale : ' + days + ' jours%0D%0A• Budget estimé : ' + encodeURIComponent(euro(total)) + ' € HT%0D%0A%0D%0A';
             document.getElementById('cfg-cta').href = 'mailto:hello@digitags.work?subject=' + encodeURIComponent('Proposition « ' + title + ' » — nos options') + '&body=' + body;
           };
 
-          weeks.addEventListener('input', update);
           start.addEventListener('input', update);
-          document.querySelectorAll('.wk-chip').forEach((ch) => ch.addEventListener('click', () => { weeks.value = ch.dataset.wk; update(); }));
           document.querySelectorAll('.p3-days').forEach((inp, i) => inp.addEventListener('input', () => {
-            state[i].days = Math.max(0.5, Math.min(5, Number(inp.value) || 0));
+            state[i].days = Math.max(0.5, Math.min(365, Number(inp.value) || 0));
             update();
           }));
           document.querySelectorAll('[data-x]').forEach((btn) => btn.addEventListener('click', () => {

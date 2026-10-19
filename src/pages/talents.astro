@@ -512,19 +512,15 @@ import Base from '../layouts/Base.astro';
             <label>Démarrage prévu</label>
             <input id="np-start" type="date" value="${new Date(Date.now() + 14 * 864e5).toISOString().slice(0, 10)}" />
           </div>
-          <div class="field" style="max-width: 150px;">
-            <label>Durée (semaines)</label>
-            <input id="np-weeks" type="number" value="4" min="1" max="52" />
-          </div>
         </div>
         <h4 style="margin: 10px 0;">Profils &amp; rôles — TJM client = TJM freelance + marge</h4>
         ${[...state.selection.values()].map((s) => `
           <div class="field" data-np-item="${s.id}" data-np-base="${tjmMap.get(s.id) ?? ''}">
-            <label>${esc(s.name)}${tjmMap.get(s.id) ? ` <span style="color:var(--ink-faint); font-weight:600;">(TJM freelance : ${tjmMap.get(s.id)} €)</span>` : ''} — rôle, TJM client &amp; jours/semaine</label>
+            <label>${esc(s.name)}${tjmMap.get(s.id) ? ` <span style="color:var(--ink-faint); font-weight:600;">(TJM freelance : ${tjmMap.get(s.id)} €)</span>` : ''} — rôle, TJM client &amp; nombre de jours</label>
             <div style="display:flex; gap:8px;">
               <input class="np-role" placeholder="${esc(s.job || 'Rôle')}" style="flex:1;" />
               <input class="np-tjm" type="number" placeholder="TJM €" style="width:100px;" />
-              <input class="np-days" type="number" value="5" min="0.5" max="7" step="0.5" title="Jours par semaine" style="width:80px;" />
+              <input class="np-days" type="number" value="10" min="0.5" max="365" step="0.5" title="Nombre de jours sur la mission" style="width:80px;" />
             </div>
           </div>`).join('')}
         <button class="btn btn-dark" id="np-save">Créer la propale</button>
@@ -557,7 +553,6 @@ import Base from '../layouts/Base.astro';
           intro: $('np-intro').value.trim() || null,
           created_by: user?.email,
           start_date: $('np-start').value || null,
-          duration_weeks: Number($('np-weeks').value) || 4,
         })
         .select().single();
       if (error) { $('np-msg').textContent = 'Erreur : ' + error.message; return; }
@@ -566,7 +561,8 @@ import Base from '../layouts/Base.astro';
         profile_id: el.dataset.npItem,
         role_label: el.querySelector('.np-role').value.trim() || el.querySelector('.np-role').placeholder,
         tjm: Number(el.querySelector('.np-tjm').value) || null,
-        days_week: Number(el.querySelector('.np-days').value) || 5,
+        // days_week stocke désormais le nombre TOTAL de jours du consultant sur la mission.
+        days_week: Number(el.querySelector('.np-days').value) || 10,
         sort: i,
       }));
       const { error: e2 } = await sb.from('proposal_items').insert(items);
