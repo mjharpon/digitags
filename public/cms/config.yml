@@ -2,11 +2,11 @@ backend:
   name: github
   repo: mjharpon/digitags
   branch: main
-  base_url: https://api.netlify.com
+  base_url: https://sveltia-cms-auth.mjharpon-pro.workers.dev
 
-site_url: https://digitags.netlify.app
-display_url: https://digitags.netlify.app
-logo_url: https://digitags.netlify.app/assets/logo-mark.svg
+site_url: https://digitags.pages.dev
+display_url: https://digitags.pages.dev
+logo_url: https://digitags.pages.dev/assets/logo-mark.svg
 
 media_folder: public/uploads
 public_folder: /uploads

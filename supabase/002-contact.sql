@@ -1,3 +1,4 @@
+
 -- Soumissions du formulaire de contact (remplace Netlify Forms).
 -- À exécuter dans Supabase : SQL Editor → coller → Run.
 
