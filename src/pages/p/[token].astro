@@ -24,10 +24,10 @@ let proposal: any = null;
 let items: any[] = [];
 
 if (url && key && token && /^[a-f0-9]{16,64}$/.test(token)) {
-  const props = await rest(`proposals?select=id,title,client_name,intro,created_at&token=eq.${token}&archived=eq.false&limit=1`);
+  const props = await rest(`proposals?select=id,title,client_name,intro,created_at,start_date,duration_weeks&token=eq.${token}&archived=eq.false&limit=1`);
   proposal = props[0] ?? null;
   if (proposal) {
-    items = await rest(`proposal_items?select=role_label,tjm,note,sort,profiles(name,job,photo_url,experience,stars,fluent_english,reference_html,cv_anonyme_url)&proposal_id=eq.${proposal.id}&order=sort`);
+    items = await rest(`proposal_items?select=role_label,tjm,note,sort,days_week,profiles(name,job,photo_url,experience,stars,fluent_english,reference_html,cv_anonyme_url)&proposal_id=eq.${proposal.id}&order=sort`);
   }
 }
 
@@ -60,6 +60,12 @@ const allTjm = items.length > 0 && items.every((it) => Number(it.tjm) > 0);
 const dateFmt = proposal
   ? new Date(proposal.created_at).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
   : '';
+
+// Configurateur de mission : budget hebdomadaire = Σ (TJM × jours/semaine).
+const weeklyBudget = items.reduce((s, it) => s + (Number(it.tjm) || 0) * (Number(it.days_week) || 5), 0);
+const defaultWeeks = proposal?.duration_weeks ?? 4;
+const defaultStart = proposal?.start_date ?? new Date(Date.now() + 14 * 864e5).toISOString().slice(0, 10);
+const euro = (n: number) => n.toLocaleString('fr-FR');
 ---
 <!DOCTYPE html>
 <html lang="fr">
@@ -102,6 +108,43 @@ const dateFmt = proposal
           {allTjm && <div class="stat"><span class="hex-icon hex-icon-yellow"></span><span>Budget équipe : {totalTjm.toLocaleString('fr-FR')} €/jour</span></div>}
           <div class="stat"><span class="hex-icon hex-icon-red"></span><span>Vérifiés et recommandés par leurs pairs</span></div>
         </div>
+
+        {allTjm && weeklyBudget > 0 && (
+          <div class="prop2-config">
+            <div class="prop2-config-head">
+              <h3>Votre mission, à votre mesure</h3>
+              <p>Ajustez le démarrage et la durée : le budget se recalcule instantanément.</p>
+            </div>
+            <div class="prop2-config-fields">
+              <label>Démarrage souhaité
+                <input type="date" id="cfg-start" value={defaultStart} />
+              </label>
+              <label>Durée de la mission
+                <span class="cfg-weeks-wrap"><input type="number" id="cfg-weeks" value={defaultWeeks} min="1" max="52" /> semaines</span>
+              </label>
+            </div>
+            <table class="prop2-config-table">
+              <tbody>
+                {items.map((it) => (
+                  <tr>
+                    <td>{it.role_label ?? it.profiles.job}</td>
+                    <td>{euro(Number(it.tjm))} €/j × {Number(it.days_week) || 5} j/sem</td>
+                    <td class="r">{euro((Number(it.tjm) || 0) * (Number(it.days_week) || 5))} €/sem</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <div class="prop2-config-total" data-weekly={weeklyBudget}>
+              <div>
+                <span class="lbl">Budget total estimé</span>
+                <strong id="cfg-total">{euro(weeklyBudget * defaultWeeks)} € HT</strong>
+                <span class="sub" id="cfg-total-sub">pour {defaultWeeks} semaines</span>
+              </div>
+              <a class="btn btn-dark" id="cfg-cta" href="#">Valider ces options <span aria-hidden="true">→</span></a>
+            </div>
+            <p class="prop2-config-note">Estimation indicative sur la base des rythmes proposés — le périmètre exact est affiné ensemble avant démarrage.</p>
+          </div>
+        )}
 
         <div class="prop2-list">
           {items.map((it, i) => {
@@ -153,6 +196,30 @@ const dateFmt = proposal
         </div>
         <a href="mailto:hello@digitags.work" class="btn">Nous répondre <span aria-hidden="true">→</span></a>
       </section>
+
+      <script define:vars={{ weeklyBudget, title: proposal.title }}>
+        const weeks = document.getElementById('cfg-weeks');
+        const start = document.getElementById('cfg-start');
+        if (weeks && start) {
+          const total = document.getElementById('cfg-total');
+          const sub = document.getElementById('cfg-total-sub');
+          const cta = document.getElementById('cfg-cta');
+          const euro = (n) => n.toLocaleString('fr-FR');
+          const update = () => {
+            const w = Math.max(1, Math.min(52, Number(weeks.value) || 1));
+            total.textContent = euro(weeklyBudget * w) + ' € HT';
+            sub.textContent = 'pour ' + w + ' semaine' + (w > 1 ? 's' : '');
+            const d = start.value
+              ? new Date(start.value).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
+              : 'à définir';
+            const body = 'Bonjour,%0D%0A%0D%0ANous souhaitons avancer sur votre proposition « ' + encodeURIComponent(title) + ' » avec les options suivantes :%0D%0A%0D%0A• Démarrage souhaité : ' + encodeURIComponent(d) + '%0D%0A• Durée : ' + w + ' semaine' + (w > 1 ? 's' : '') + '%0D%0A• Budget estimé : ' + encodeURIComponent(euro(weeklyBudget * w)) + ' € HT%0D%0A%0D%0A';
+            cta.href = 'mailto:hello@digitags.work?subject=' + encodeURIComponent('Proposition « ' + title + ' » — nos options') + '&body=' + body;
+          };
+          weeks.addEventListener('input', update);
+          start.addEventListener('input', update);
+          update();
+        }
+      </script>
 
       <footer class="prop2-footer">
         <span class="logo">

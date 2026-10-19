@@ -349,17 +349,28 @@ import Base from '../layouts/Base.astro';
         <div class="field"><label>Titre du projet *</label><input id="np-title" placeholder="Refonte e-commerce — Acme" /></div>
         <div class="field"><label>Client</label><input id="np-client" placeholder="Acme SAS" /></div>
         <div class="field"><label>Introduction (visible par le prospect)</label><textarea id="np-intro" placeholder="Suite à nos échanges, voici l'équipe que nous vous proposons…"></textarea></div>
-        <div class="field" style="max-width: 220px;">
-          <label>Marge digitags (%)</label>
-          <input id="np-marge" type="number" value="20" min="0" step="5" />
+        <div style="display:flex; gap:14px; flex-wrap:wrap;">
+          <div class="field" style="max-width: 160px;">
+            <label>Marge digitags (%)</label>
+            <input id="np-marge" type="number" value="20" min="0" step="5" />
+          </div>
+          <div class="field" style="max-width: 180px;">
+            <label>Démarrage prévu</label>
+            <input id="np-start" type="date" value="${new Date(Date.now() + 14 * 864e5).toISOString().slice(0, 10)}" />
+          </div>
+          <div class="field" style="max-width: 150px;">
+            <label>Durée (semaines)</label>
+            <input id="np-weeks" type="number" value="4" min="1" max="52" />
+          </div>
         </div>
         <h4 style="margin: 10px 0;">Profils &amp; rôles — TJM client = TJM freelance + marge</h4>
         ${[...state.selection.values()].map((s) => `
           <div class="field" data-np-item="${s.id}" data-np-base="${tjmMap.get(s.id) ?? ''}">
-            <label>${esc(s.name)}${tjmMap.get(s.id) ? ` <span style="color:var(--ink-faint); font-weight:600;">(TJM freelance : ${tjmMap.get(s.id)} €)</span>` : ''} — rôle affiché &amp; TJM client</label>
+            <label>${esc(s.name)}${tjmMap.get(s.id) ? ` <span style="color:var(--ink-faint); font-weight:600;">(TJM freelance : ${tjmMap.get(s.id)} €)</span>` : ''} — rôle, TJM client &amp; jours/semaine</label>
             <div style="display:flex; gap:8px;">
               <input class="np-role" placeholder="${esc(s.job || 'Rôle')}" style="flex:1;" />
-              <input class="np-tjm" type="number" placeholder="TJM €" style="width:110px;" />
+              <input class="np-tjm" type="number" placeholder="TJM €" style="width:100px;" />
+              <input class="np-days" type="number" value="5" min="0.5" max="7" step="0.5" title="Jours par semaine" style="width:80px;" />
             </div>
           </div>`).join('')}
         <button class="btn btn-dark" id="np-save">Créer la propale</button>
@@ -386,7 +397,14 @@ import Base from '../layouts/Base.astro';
       if (!title) { $('np-msg').textContent = 'Le titre est requis.'; return; }
       const { data: { user } } = await sb.auth.getUser();
       const { data: prop, error } = await sb.from('proposals')
-        .insert({ title, client_name: $('np-client').value.trim() || null, intro: $('np-intro').value.trim() || null, created_by: user?.email })
+        .insert({
+          title,
+          client_name: $('np-client').value.trim() || null,
+          intro: $('np-intro').value.trim() || null,
+          created_by: user?.email,
+          start_date: $('np-start').value || null,
+          duration_weeks: Number($('np-weeks').value) || 4,
+        })
         .select().single();
       if (error) { $('np-msg').textContent = 'Erreur : ' + error.message; return; }
       const items = [...document.querySelectorAll('[data-np-item]')].map((el, i) => ({
@@ -394,6 +412,7 @@ import Base from '../layouts/Base.astro';
         profile_id: el.dataset.npItem,
         role_label: el.querySelector('.np-role').value.trim() || el.querySelector('.np-role').placeholder,
         tjm: Number(el.querySelector('.np-tjm').value) || null,
+        days_week: Number(el.querySelector('.np-days').value) || 5,
         sort: i,
       }));
       const { error: e2 } = await sb.from('proposal_items').insert(items);
