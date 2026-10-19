@@ -2302,6 +2302,39 @@ a.chip-more:hover { color: var(--yellow); }
   .ia-illu { min-height: 0; }
 }
 
+/* Toast « pas de bannière cookies » */
+.privacy-toast {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  z-index: 90;
+  max-width: 380px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: var(--navy);
+  color: #fff;
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: 0 16px 40px rgba(17, 28, 63, .28);
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .35s ease, transform .35s ease;
+}
+.privacy-toast.show { opacity: 1; transform: translateY(0); }
+.pt-cookie { font-size: 20px; line-height: 1; margin-top: 2px; }
+.privacy-toast p { font-size: 13px; line-height: 1.55; color: #c9cfe4; margin: 0; }
+.privacy-toast strong { color: #fff; }
+.privacy-toast a { color: var(--yellow); font-weight: 700; }
+.privacy-toast button {
+  background: none; border: 0; cursor: pointer;
+  color: #8fa0e8; font-size: 14px; line-height: 1;
+  padding: 2px; flex-shrink: 0;
+}
+.privacy-toast button:hover { color: #fff; }
+@media (max-width: 520px) { .privacy-toast { left: 12px; right: 12px; max-width: none; } }
+@media (prefers-reduced-motion: reduce) { .privacy-toast { transition: none; transform: none; } }
+
 /* Porte mot de passe des propales */
 .pw-gate { max-width: 440px; text-align: center; padding: 90px 24px; }
 .pw-gate .logo { display: flex; justify-content: center; margin-bottom: 22px; }

@@ -121,5 +121,33 @@ const {
       }
     });
   </script>
+
+  <!-- Anti-bannière cookies : clin d'œil privacy, affiché une seule fois (localStorage). -->
+  <div id="privacy-toast" class="privacy-toast" hidden role="status">
+    <span class="pt-cookie" aria-hidden="true">🍪</span>
+    <p><strong>Pas de bannière cookies ici.</strong> On ne vous traque pas et on ne vend rien à Google &amp; co — juste une mesure d'audience anonyme, sans cookie. <a href="/politique-de-protection-des-donnees">Promis, c'est écrit.</a></p>
+    <button type="button" id="privacy-toast-close" aria-label="Fermer">✕</button>
+  </div>
+  <script is:inline>
+    (function () {
+      try {
+        if (localStorage.getItem('dgt-privacy-toast')) return;
+        var t = document.getElementById('privacy-toast');
+        if (!t) return;
+        var hide = function () {
+          t.classList.remove('show');
+          setTimeout(function () { t.hidden = true; }, 400);
+        };
+        setTimeout(function () {
+          // « Vu » dès l'affichage : pas de réapparition en changeant de page.
+          try { localStorage.setItem('dgt-privacy-toast', '1'); } catch (e) {}
+          t.hidden = false;
+          requestAnimationFrame(function () { t.classList.add('show'); });
+        }, 1800);
+        setTimeout(hide, 14000);
+        document.getElementById('privacy-toast-close').addEventListener('click', hide);
+      } catch (e) { /* stockage indisponible : on n'affiche rien plutôt que harceler */ }
+    })();
+  </script>
 </body>
 </html>
