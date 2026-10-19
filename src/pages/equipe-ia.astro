@@ -8,67 +8,123 @@ const stats = [
   { color: "hex-icon-red", big: "N°2", title: "l'IA, deuxième compétence freelance la plus demandée", desc: "22 % des demandes de missions — même non techniques — exigent désormais une expertise IA.", src: "Malt Tech Trends 2026" },
 ];
 
-const roles = [
-  { tag: "Pilotage", title: "Product Owner IA", points: ["Cadre le cas d'usage et le ROI attendu", "Pilote le backlog produit et les métriques IA (qualité, coût d'inférence, valeur métier)", "Prototype lui-même : un profil « product builder », pas un gestionnaire de tickets"] },
-  { tag: "Build", title: "Ingénieur IA", points: ["Conçoit l'architecture : LLM, RAG, agents, intégrations", "Développe, évalue et industrialise les modèles et les pipelines", "Garantit robustesse, sécurité et coûts maîtrisés en production"] },
-  { tag: "Data", title: "Data Engineer", points: ["Prépare et fiabilise les données qui nourrissent le produit", "Met en place les pipelines et le monitoring", "Assure la qualité continue : un produit IA vaut ce que valent ses données"] },
-  { tag: "Adoption", title: "Designer & change", points: ["Conçoit des interfaces IA utiles, pas des gadgets", "Forme vos équipes et organise la montée en compétence", "Ancre le produit dans les usages réels du métier"] },
+const processus = [
+  "Traitement et contrôle de documents",
+  "Back-office administratif",
+  "Coordination de prestataires et fournisseurs",
+  "Support client de premier niveau",
+  "Saisie, qualification et enrichissement de données",
+  "Reporting opérationnel récurrent",
 ];
 
-const useCases = [
-  "Agent IA interne (support, RH, finance)",
-  "Copilote métier intégré à vos outils",
-  "RAG sur votre base de connaissances",
-  "Automatisation de process documentaires",
-  "POC IA à industrialiser",
-  "Audit & gouvernance IA (RGPD, AI Act)",
+const roles = [
+  { tag: "Pilotage", title: "Product Owner IA", points: ["Cadre le cas d'usage et le résultat attendu", "Pilote le backlog et les métriques IA (qualité, coût, valeur métier)", "Un profil « product builder », pas un gestionnaire de tickets"] },
+  { tag: "Build", title: "Ingénieur IA", points: ["Conçoit l'architecture : LLM, RAG, agents, intégrations", "Développe, évalue et industrialise les modèles", "Garantit robustesse, sécurité et coûts maîtrisés"] },
+  { tag: "Data", title: "Data Engineer", points: ["Prépare et fiabilise les données", "Met en place les pipelines et le monitoring", "Un système IA vaut ce que valent ses données"] },
+  { tag: "Adoption", title: "Designer & change", points: ["Conçoit des interfaces IA utiles", "Forme vos équipes, organise la montée en compétence", "Ancre l'outil dans les usages réels du métier"] },
 ];
 
 const steps = [
-  { title: "Cadrage & ROI — 2 semaines", desc: "Ateliers de détection et de priorisation des cas d'usage. On ne part pas d'une technologie, mais d'un besoin métier mesurable. Livrable : un brief clair et un business case." },
-  { title: "POC mesuré — 4 à 6 semaines", desc: "L'équipe construit un prototype fonctionnel sur vos données, avec des métriques définies dès le départ : qualité des réponses, coût, valeur générée. Go / no-go factuel." },
-  { title: "Industrialisation & transfert", desc: "Mise en production, monitoring, conformité RGPD / AI Act, et montée en compétence de vos équipes — pour que la valeur de l'IA reste chez vous." },
+  { title: "Cadrage — 2 semaines", desc: "Nous définissons ensemble le processus ou le produit, un périmètre strict et standardisable, et des critères de succès chiffrés : coût par opération, taux d'erreur, délais, satisfaction." },
+  { title: "Pilote en conditions réelles — 2 à 4 mois", desc: "Nous opérons ou construisons sur votre terrain, avec vos données. Chaque indicateur est mesuré et partagé : vous voyez ce que l'automatisation produit, semaine après semaine." },
+  { title: "Décision factuelle, puis industrialisation", desc: "Les résultats convergent : nous industrialisons et montons en charge, avec transfert de compétence à vos équipes. Sinon, le périmètre est ajusté — vous n'investissez jamais sur une promesse." },
 ];
+
+const faq = [
+  { q: "Quels processus métier se prêtent à l'automatisation par l'IA ?", a: "Les processus fréquents, répétitifs et documentés : traitement de documents, back-office, support de premier niveau, coordination de prestataires, qualification de données. Un bon candidat a du volume, des règles exprimables et des exceptions identifiables. Le cadrage sert précisément à vérifier ce potentiel avant d'investir." },
+  { q: "L'IA travaille-t-elle seule ?", a: "Non. Chaque dispositif combine agents IA et supervision humaine : l'IA exécute dans un périmètre de décision restreint, nos experts contrôlent les cas ambigus, et chaque action est tracée dans un journal d'audit. C'est ce qui rend l'automatisation fiable — et conforme." },
+  { q: "Que devient mon équipe interne ?", a: "Elle monte en compétence. L'objectif n'est pas de remplacer vos collaborateurs mais de leur retirer le répétitif : nous les formons, documentons le dispositif et organisons le transfert pour que la valeur reste chez vous." },
+  { q: "Pourquoi passer par un pilote plutôt qu'un déploiement direct ?", a: "Parce qu'un dispositif IA se juge sur des mesures, pas sur une démonstration. Le pilote en conditions réelles établit le coût par opération, le taux d'erreur et les délais sur vos données — et la décision d'industrialiser se prend sur ces chiffres." },
+  { q: "Comment la conformité RGPD et AI Act est-elle assurée ?", a: "Dès le cadrage : cartographie des données, périmètre de décision de l'IA documenté, supervision humaine, journal d'audit et hébergement maîtrisé. Vos données restent chez vous et nous privilégions des outils agnostiques, sans dépendance à un écosystème fermé." },
+];
+
+const faqJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+});
 ---
 <Base
-  title="Équipe Produit IA : du POC au produit en production | digitags.work"
-  description="Une équipe senior dédiée — Product Owner IA, ingénieur IA, data engineer — pour passer vos cas d'usage d'intelligence artificielle du POC à la production, avec gouvernance RGPD / AI Act."
+  title="Automatisation IA des processus métier & équipe produit IA | digitags.work"
+  description="Automatisation de vos processus métier par agents IA avec supervision humaine, et équipes produit IA seniors pour construire vos produits d'intelligence artificielle. Pilote mesuré, conformité RGPD & AI Act."
 >
   <section class="page-hero">
     <div class="container">
-      <p class="eyebrow">Nouvelle offre — Équipe Produit IA</p>
-      <h1>L'IA est partout. Les produits IA, presque nulle part.</h1>
-      <p class="lead">Deux tiers des entreprises expérimentent l'IA générative ; très peu en tirent un produit en production qui crée de la valeur mesurable. Il ne manque pas d'outils : il manque une équipe. Le Hub vous la compose — senior, complémentaire, opérationnelle en 48h.</p>
+      <p class="eyebrow">Offre IA — Opérations &amp; Produit</p>
+      <h1>Automatisation par l'IA : des opérations prises en charge, des produits livrés.</h1>
+      <p class="lead">L'intelligence artificielle ne crée de la valeur qu'en production. Nous prenons en charge vos processus métier répétitifs avec des agents IA supervisés par des experts, et nous construisons vos produits IA avec des équipes seniors — sur des résultats mesurés, pas sur des promesses.</p>
       <div class="hero-cta">
-        <a href="/contact" class="btn btn-dark">Cadrer mon cas d'usage</a>
-        <a href="#equipe-ia-roles" class="btn btn-outline">Découvrir l'équipe type</a>
+        <a href="/contact" class="btn btn-dark">Cadrer mon projet IA</a>
+        <a href="#offres" class="btn btn-outline">Découvrir les deux offres</a>
       </div>
     </div>
   </section>
 
-  <section class="section" style="padding-top: 30px;">
+  <section class="section" id="offres" style="padding-top: 30px;">
     <div class="container">
-      <h2 class="section-title">Le marché a basculé.</h2>
-      <div class="benefits-grid">
-        {stats.map((s) => (
-          <article class="benefit-card">
-            <span class={`hex-icon ${s.color}`}></span>
-            <span class="stat-big">{s.big}</span>
-            <h3>{s.title}</h3>
-            <p>{s.desc}</p>
-            <span class="stat-src">{s.src}</span>
-          </article>
-        ))}
+      <p class="eyebrow" style="text-align:center;">Nos offres</p>
+      <h2 class="section-title">Deux façons de mettre l'IA au travail.</h2>
+      <div class="reussites-grid cols-2">
+        <article class="reussite-card">
+          <p class="case-label label-blue">Offre 1 — Opérations</p>
+          <h3>Automatisation de processus métier</h3>
+          <p style="font-size: 14px; color: var(--ink-soft); margin-bottom: 14px;">Nous opérons pour vous une fonction répétitive de bout en bout : des agents IA exécutent, nos experts supervisent, et vous suivez les résultats sur un tableau de bord.</p>
+          <ul>
+            <li>Un périmètre précis et standardisable — un processus à la fois</li>
+            <li>Des engagements chiffrés : délais, taux d'erreur, satisfaction</li>
+            <li>Supervision humaine et journal d'audit systématiques</li>
+          </ul>
+        </article>
+        <article class="reussite-card">
+          <p class="case-label label-red">Offre 2 — Produit</p>
+          <h3>Équipe produit IA dédiée</h3>
+          <p style="font-size: 14px; color: var(--ink-soft); margin-bottom: 14px;">Votre produit d'intelligence artificielle — copilote métier, RAG, agent intégré — construit par une équipe senior du réseau, du cadrage à la mise en production.</p>
+          <ul>
+            <li>Product Owner IA, ingénieur IA, data engineer, designer</li>
+            <li>Du cas d'usage au produit en production</li>
+            <li>Transfert de compétence à vos équipes</li>
+          </ul>
+        </article>
       </div>
-      <p class="section-lead" style="margin: 36px auto 0;">La demande se déplace vers le haut de la chaîne : cadrer les cas d'usage, reprendre les POC enlisés, industrialiser. C'est exactement là que l'équipe intervient.</p>
+    </div>
+  </section>
+
+  <section class="skills-band">
+    <div class="container">
+      <h2>Les processus que nous automatisons</h2>
+      <ul class="chips">
+        {processus.map((p) => <li><span class="chip">{p}</span></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">Notre méthode</p>
+      <h2 class="section-title">Un pilote mesuré avant toute industrialisation.</h2>
+      <p class="section-lead">Un dispositif d'IA se juge sur des indicateurs, pas sur une démonstration. Chaque projet commence petit, se mesure en conditions réelles, et ne grandit que sur des résultats.</p>
+      <ol class="process-list">
+        {steps.map((s) => (
+          <li class="process-item">
+            <div>
+              <h3>{s.title}</h3>
+              <p>{s.desc}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
     </div>
   </section>
 
   <section class="approche" id="equipe-ia-roles">
     <div class="container" style="padding-bottom: 60px;">
       <div class="approche-copy" style="max-width: 640px; margin-bottom: 44px;">
-        <h2>Pas un freelance isolé.<br />Une équipe produit IA complète.</h2>
-        <p style="color: #b9c0d8; font-size: 15px;">Un produit IA est un système vivant : il dépend de ses données, de son modèle et de sa gouvernance autant que de son code. Un seul profil ne suffit pas — nous composons une équipe courte et senior, issue du réseau, taillée pour votre cas d'usage.</p>
+        <h2>Des experts du réseau,<br />pas une boîte noire.</h2>
+        <p style="color: #b9c0d8; font-size: 15px;">Derrière chaque dispositif, une équipe courte et senior issue du Hub : les agents IA exécutent, les humains cadrent, supervisent et répondent de la qualité.</p>
       </div>
       <div class="reussites-grid cols-4">
         {roles.map((r) => (
@@ -84,29 +140,20 @@ const steps = [
     </div>
   </section>
 
-  <section class="skills-band" style="padding-top: 64px;">
-    <div class="container">
-      <h2>Les cas d'usage que nous traitons</h2>
-      <ul class="chips">
-        {useCases.map((u) => <li><span class="chip">{u}</span></li>)}
-      </ul>
-    </div>
-  </section>
-
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Du besoin métier à la production, en 3 phases.</h2>
-      <p class="section-lead">Pas de magie, pas de « transformation IA » hors-sol : une méthode produit, des métriques, et un transfert de compétence à la fin.</p>
-      <ol class="process-list">
-        {steps.map((s) => (
-          <li class="process-item">
-            <div>
-              <h3>{s.title}</h3>
-              <p>{s.desc}</p>
-            </div>
-          </li>
+      <h2 class="section-title">Le marché a basculé.</h2>
+      <div class="benefits-grid">
+        {stats.map((s) => (
+          <article class="benefit-card">
+            <span class={`hex-icon ${s.color}`}></span>
+            <span class="stat-big">{s.big}</span>
+            <h3>{s.title}</h3>
+            <p>{s.desc}</p>
+            <span class="stat-src">{s.src}</span>
+          </article>
         ))}
-      </ol>
+      </div>
     </div>
   </section>
 
@@ -114,17 +161,34 @@ const steps = [
     <div class="container">
       <div class="trust-card">
         <div class="trust-stats" style="padding-top: 22px;">
-          <div class="stat"><span class="hex-icon hex-icon-blue"></span><span>Conformité RGPD &amp; AI Act dès le cadrage</span></div>
-          <div class="stat"><span class="hex-icon hex-icon-yellow"></span><span>Souveraineté : vos données restent chez vous</span></div>
-          <div class="stat"><span class="hex-icon hex-icon-red"></span><span>Outils agnostiques, pas d'écosystème fermé</span></div>
+          <div class="stat"><span class="hex-icon hex-icon-blue"></span><span>Supervision humaine &amp; journal d'audit</span></div>
+          <div class="stat"><span class="hex-icon hex-icon-yellow"></span><span>Conformité RGPD &amp; AI Act dès le cadrage</span></div>
+          <div class="stat"><span class="hex-icon hex-icon-red"></span><span>Vos données restent chez vous</span></div>
         </div>
       </div>
     </div>
   </section>
 
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">Questions fréquentes</p>
+      <h2 class="section-title">Tout savoir sur l'IA en production.</h2>
+      <div class="faq">
+        {faq.map((f) => (
+          <details class="faq-item">
+            <summary>{f.q}</summary>
+            <div class="faq-body">{f.a}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <CtaBanner
-    title="Un cas d'usage IA<br />à transformer en produit&nbsp;?"
-    text="Décrivez-le nous : nous composons l'équipe<br />et revenons vers vous sous 48h."
-    label="Cadrer mon cas d'usage"
+    title="Un processus à automatiser,<br />un produit IA à construire&nbsp;?"
+    text="Décrivez-nous votre besoin : nous cadrons<br />le périmètre et les critères de succès ensemble."
+    label="Cadrer mon projet IA"
   />
+
+  <script type="application/ld+json" set:html={faqJsonLd} />
 </Base>
