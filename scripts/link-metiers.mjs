@@ -9,7 +9,8 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { readdirSync } from 'node:fs';
 
-const DIR = 'src/content/blog';
+// Dossiers traités : blog + fiches métiers (une fiche ne se lie jamais elle-même).
+const DIRS = ['src/content/blog', 'src/content/metiers'];
 
 // Expressions par fiche, de la plus spécifique à la plus générique.
 const TARGETS = [
@@ -35,8 +36,9 @@ const TARGETS = [
 let filesTouched = 0;
 let linksAdded = 0;
 
-for (const file of readdirSync(DIR).filter((f) => f.endsWith('.md'))) {
-  const path = `${DIR}/${file}`;
+for (const { dir, file } of DIRS.flatMap((dir) => readdirSync(dir).filter((f) => f.endsWith('.md')).map((file) => ({ dir, file })))) {
+  const path = `${dir}/${file}`;
+  const selfSlug = file.replace(/\.md$/, '');
   const src = readFileSync(path, 'utf8');
   const fmEnd = src.indexOf('---', 3);
   if (fmEnd === -1) continue;
@@ -47,6 +49,7 @@ for (const file of readdirSync(DIR).filter((f) => f.endsWith('.md'))) {
 
   for (const [href, patterns] of TARGETS) {
     if (added >= 3) break;
+    if (href.endsWith(`/${selfSlug}`)) continue; // jamais d'auto-lien
     if (body.includes(`](${href})`) || body.includes(`](https://digitags.work${href})`)) continue;
 
     for (const pattern of patterns) {

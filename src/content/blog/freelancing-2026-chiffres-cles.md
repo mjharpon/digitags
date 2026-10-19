@@ -49,7 +49,7 @@ Pour un CTO, cette réalité impose une révision complète de la stratégie de 
 
 ### Marketing et communication
 
-Les CMO le constatent quotidiennement : trouver un content manager, un [expert SEA](/metiers/expert-sea-freelance) ou un community manager en CDI relève du parcours du combattant. Parallèlement, l'offre freelance dans ces domaines explose. La raison ? Ces métiers se prêtent parfaitement au travail en mode projet, avec des missions bien définies et des résultats mesurables.
+Les CMO le constatent quotidiennement : trouver un content manager, un [expert SEA](/metiers/expert-sea-freelance) ou un [community manager](/metiers/community-manager-freelance) en CDI relève du parcours du combattant. Parallèlement, l'offre freelance dans ces domaines explose. La raison ? Ces métiers se prêtent parfaitement au travail en mode projet, avec des missions bien définies et des résultats mesurables.
 
 Le secteur du conseil suit la même trajectoire. Consultants en stratégie, experts en transformation digitale, coachs en management… Autant de profils seniors qui optent pour l'indépendance après avoir acquis leur expérience en cabinet ou en entreprise.
 

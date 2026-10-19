@@ -38,7 +38,7 @@ L'un des principaux avantages de faire appel à un développeur web freelance es
 
 ## **Compétences d’un développeur web freelance**
 
-Avant toute chose, il est important de noter qu’il existe différents types de développeurs web, les principaux étant : les développeurs front-end, back-end, mobile ou encore full-stack. En fonction du type de développeur, les compétences peuvent varier, j’ai donc tenté de rassembler les principales ici.
+Avant toute chose, il est important de noter qu’il existe différents types de développeurs web, les principaux étant : les [développeurs front-end](/metiers/developpeur-front-end-freelance), back-end, mobile ou encore [full-stack](/metiers/full-stack-developpeur-freelance). En fonction du type de développeur, les compétences peuvent varier, j’ai donc tenté de rassembler les principales ici.
 
 ### **Maîtrise des langages**
 

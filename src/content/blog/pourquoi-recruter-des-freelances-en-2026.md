@@ -132,7 +132,7 @@ Certains métiers sont particulièrement adaptés au freelancing en 2026 :
 
 **Tech & Digital** : développeurs, devops, data scientists, experts cybersécurité, [product owners](/metiers/product-owner-freelance).
 
-**Marketing & Communication** : [traffic managers](/metiers/traffic-manager-freelance), content managers, community managers, [consultants SEO](/metiers/freelance-seo), brand strategists. Des missions souvent ponctuelles (campagne, refonte site, lancement produit) qui se prêtent parfaitement au freelance.
+**Marketing & Communication** : [traffic managers](/metiers/traffic-manager-freelance), content managers, [community managers](/metiers/community-manager-freelance), [consultants SEO](/metiers/freelance-seo), brand strategists. Des missions souvent ponctuelles (campagne, refonte site, lancement produit) qui se prêtent parfaitement au freelance.
 
 **Conseil & Stratégie** : consultants en transformation digitale, coachs, formateurs, experts M&A, spécialistes réglementaires.
 

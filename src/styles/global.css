@@ -2119,6 +2119,7 @@ a.stat:hover span:last-child { text-decoration: underline; text-underline-offset
 .rel-card-metier { background: #eef1fb; border-color: #dfe5fb; }
 
 .metier-chips { display: flex; gap: 9px; flex-wrap: wrap; }
+.num-round.check { font-size: 14px; background: #e3f4ec; color: #1e9e6a; border-color: #e3f4ec; }
 .chip-link { text-decoration: none; transition: border-color .15s ease, color .15s ease; }
 a.chip-link:hover { border-color: var(--blue); color: var(--blue); }
 .chip-more { background: var(--navy); color: #fff; border-color: var(--navy); }

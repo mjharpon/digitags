@@ -191,7 +191,7 @@ Demandez-lui son portfolio avec des exemples concrets de roadmaps construites, d
 
 ### **Un PM freelance peut-il manager une équipe produit interne ?**
 
-Oui, tout à fait. Beaucoup de PM freelances ont l'habitude de manager des product owners, des UX designers ou des [chefs de projet](/metiers/chef-de-projet-freelance) junior. Ils peuvent à la fois structurer la stratégie produit et coacher vos équipes internes pour monter en compétence. C'est même souvent un format gagnant-gagnant : vous bénéficiez de l'expertise senior tout en formant vos talents en interne.
+Oui, tout à fait. Beaucoup de PM freelances ont l'habitude de manager des product owners, des [UX designers](/metiers/ux-designer-freelance) ou des [chefs de projet](/metiers/chef-de-projet-freelance) junior. Ils peuvent à la fois structurer la stratégie produit et coacher vos équipes internes pour monter en compétence. C'est même souvent un format gagnant-gagnant : vous bénéficiez de l'expertise senior tout en formant vos talents en interne.
 
 ‍
 
