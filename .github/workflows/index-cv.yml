@@ -1,0 +1,30 @@
+name: Indexation des CV (recherche plein-texte)
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # toutes les 6 heures
+  workflow_dispatch:
+
+concurrency:
+  group: index-cv
+  cancel-in-progress: false
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Installer les dépendances
+        run: npm ci
+
+      - name: Extraire le texte des nouveaux CV
+        run: node scripts/extract-cv-text.mjs
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
