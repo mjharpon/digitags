@@ -1413,8 +1413,9 @@ a.chip:hover { border-color: var(--blue); }
 .fiche-body img { border-radius: var(--radius); margin: 18px 0; }
 
 .fiche-text { max-width: 820px; margin: 0 auto; padding: 46px 0 6px; }
-/* Fiches métiers : sections texte alignées à gauche (cohérence avec le hero). */
-.fiche-text-left { margin: 0; max-width: 760px; }
+/* Fiches métiers : conteneur standard centré, texte borné et aligné à gauche. */
+.fiche-text-left { max-width: none; width: min(1120px, 100% - 48px); margin-inline: auto; }
+.fiche-text-left h2, .fiche-text-left .fiche-body { max-width: 780px; }
 
 .num-round {
   display: inline-flex;
