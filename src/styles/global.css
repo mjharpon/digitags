@@ -2602,8 +2602,3 @@ html { scroll-padding-top: 92px; scroll-behavior: smooth; }
   .testi-card { padding: 20px; }
   .feature-panel { padding: 24px 20px; gap: 20px; }
 }
-
-/* reCAPTCHA dans les formulaires */
-.captcha-field { margin: 4px 0 18px; }
-.captcha-field .g-recaptcha { transform-origin: left top; }
-@media (max-width: 400px) { .captcha-field .g-recaptcha { transform: scale(.85); } }

@@ -30,19 +30,6 @@ export const POST: APIRoute = async ({ request, locals }) => {
   // Piège anti-robots : champ caché qui doit rester vide.
   if (form.get('website')) return json(200, { ok: true });
 
-  // Vérification reCAPTCHA v2 (si le secret est configuré).
-  const captchaSecret = env.RECAPTCHA_SECRET ?? import.meta.env.RECAPTCHA_SECRET;
-  if (captchaSecret) {
-    const captcha = String(form.get('g-recaptcha-response') ?? '').trim();
-    if (!captcha) return json(400, { ok: false, error: 'Merci de cocher « Je ne suis pas un robot ».' });
-    const verif = await fetch('https://www.google.com/recaptcha/api/siteverify', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: `secret=${encodeURIComponent(captchaSecret)}&response=${encodeURIComponent(captcha)}`,
-    }).then((r) => r.json()).catch(() => ({ success: false }));
-    if (!verif.success) return json(400, { ok: false, error: 'Vérification anti-robot échouée — rechargez la page et réessayez.' });
-  }
-
   const get = (k: string) => String(form.get(k) ?? '').trim();
   const prenom = get('prenom');
   const nom = get('nom');
