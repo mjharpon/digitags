@@ -327,18 +327,25 @@ import Base from '../layouts/Base.astro';
       if (t.dataset.tab === 'propales') loadProposals();
     }));
 
-    $('sel-create').addEventListener('click', () => {
+    $('sel-create').addEventListener('click', async () => {
       const f = $('prop-form');
+      const ids = [...state.selection.keys()];
+      const { data: tjms } = await sb.from('profiles').select('id, tjm_free, tarif_jour').in('id', ids);
+      const tjmMap = new Map((tjms ?? []).map((p) => [p.id, p.tjm_free ?? p.tarif_jour ?? null]));
       f.innerHTML = `
         <button class="close" id="prop-close">×</button>
         <h2 style="margin-bottom:16px;">Nouvelle propale</h2>
         <div class="field"><label>Titre du projet *</label><input id="np-title" placeholder="Refonte e-commerce — Acme" /></div>
         <div class="field"><label>Client</label><input id="np-client" placeholder="Acme SAS" /></div>
         <div class="field"><label>Introduction (visible par le prospect)</label><textarea id="np-intro" placeholder="Suite à nos échanges, voici l'équipe que nous vous proposons…"></textarea></div>
-        <h4 style="margin: 10px 0;">Profils &amp; rôles</h4>
+        <div class="field" style="max-width: 220px;">
+          <label>Marge digitags (%)</label>
+          <input id="np-marge" type="number" value="20" min="0" step="5" />
+        </div>
+        <h4 style="margin: 10px 0;">Profils &amp; rôles — TJM client = TJM freelance + marge</h4>
         ${[...state.selection.values()].map((s) => `
-          <div class="field" data-np-item="${s.id}">
-            <label>${esc(s.name)} — rôle affiché &amp; TJM</label>
+          <div class="field" data-np-item="${s.id}" data-np-base="${tjmMap.get(s.id) ?? ''}">
+            <label>${esc(s.name)}${tjmMap.get(s.id) ? ` <span style="color:var(--ink-faint); font-weight:600;">(TJM freelance : ${tjmMap.get(s.id)} €)</span>` : ''} — rôle affiché &amp; TJM client</label>
             <div style="display:flex; gap:8px;">
               <input class="np-role" placeholder="${esc(s.job || 'Rôle')}" style="flex:1;" />
               <input class="np-tjm" type="number" placeholder="TJM €" style="width:110px;" />
@@ -349,6 +356,18 @@ import Base from '../layouts/Base.astro';
       f.hidden = false;
       $('prop-close').addEventListener('click', () => (f.hidden = true));
       $('np-save').addEventListener('click', createProposal);
+      // TJM client auto-calculé depuis la marge ; la saisie manuelle fige le champ.
+      const applyMarge = () => {
+        const m = Number($('np-marge').value) || 0;
+        document.querySelectorAll('[data-np-item]').forEach((el) => {
+          const base = Number(el.dataset.npBase);
+          const input = el.querySelector('.np-tjm');
+          if (base && !input.dataset.dirty) input.value = Math.round(base * (1 + m / 100) / 5) * 5;
+        });
+      };
+      $('np-marge').addEventListener('input', applyMarge);
+      document.querySelectorAll('.np-tjm').forEach((i) => i.addEventListener('input', () => { i.dataset.dirty = '1'; }));
+      applyMarge();
     });
 
     async function createProposal() {
