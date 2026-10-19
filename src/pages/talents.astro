@@ -42,13 +42,18 @@ import Base from '../layouts/Base.astro';
 
     <div id="tab-recherche">
       <div class="filters">
-        <input type="search" id="f-q" placeholder="Rechercher un nom, un métier…" />
+        <input type="search" id="f-q" placeholder="Rechercher un nom, un métier, une compétence…" />
+        <label class="chk" title="Recherche plein-texte dans le contenu des CV"><input type="checkbox" id="f-incv" /> dans les CV</label>
         <div class="ms" id="ms-group"></div>
         <div class="ms" id="ms-exp"></div>
         <div class="ms" id="ms-tjm"></div>
         <label class="chk"><input type="checkbox" id="f-dispo" /> Disponibles</label>
         <label class="chk"><input type="checkbox" id="f-en" /> Anglais courant</label>
         <label class="chk"><input type="checkbox" id="f-stars" /> ★ 4+</label>
+        <label class="chk"><input type="checkbox" id="f-cdi" /> Ouvert CDI</label>
+        <label class="chk"><input type="checkbox" id="f-dg" /> Déjà avec digitags</label>
+        <label class="chk"><input type="checkbox" id="f-sf" /> Salesforce</label>
+        <label class="chk"><input type="checkbox" id="f-site" /> Visible sur le site</label>
       </div>
       <div class="tool-layout">
         <div>
@@ -205,13 +210,20 @@ import Base from '../layouts/Base.astro';
 
     function buildQuery() {
       let q = sb.from('profiles').select('id, name, job, photo_url, disponible, dispo_from, fluent_english, experience, stars, tarif_jour, tjm_free, job_group_id', { count: 'exact' });
-      const text = $('f-q').value.trim();
-      if (text) q = q.or(`name.ilike.%${text}%,job.ilike.%${text}%`);
+      const text = $('f-q').value.trim().replace(/[(),%]/g, ' ').trim();
+      if (text) {
+        if ($('f-incv').checked) q = q.or(`name.ilike.%${text}%,job.ilike.%${text}%,cv_fts.wfts(french).${text}`);
+        else q = q.or(`name.ilike.%${text}%,job.ilike.%${text}%`);
+      }
       if (state.fGroups.size) q = q.in('job_group_id', [...state.fGroups]);
       if (state.fExps.size) q = q.in('experience', [...state.fExps]);
       if ($('f-dispo').checked) q = q.eq('disponible', true);
       if ($('f-en').checked) q = q.eq('fluent_english', true);
       if ($('f-stars').checked) q = q.gte('stars', 4).lte('stars', 5);
+      if ($('f-cdi').checked) q = q.eq('cdi', true);
+      if ($('f-dg').checked) q = q.eq('dgitags_experience', 'Oui');
+      if ($('f-sf').checked) q = q.eq('salesforce', true);
+      if ($('f-site').checked) q = q.eq('show_on_website', true);
       if (state.fTjms.size) {
         q = q.or([...state.fTjms].map((r) => {
           const [lo, hi] = r.split('-');
@@ -252,7 +264,7 @@ import Base from '../layouts/Base.astro';
       </article>`;
     }
 
-    ['f-dispo', 'f-en', 'f-stars'].forEach((id) => $(id).addEventListener('change', () => search(true)));
+    ['f-dispo', 'f-en', 'f-stars', 'f-cdi', 'f-dg', 'f-sf', 'f-site', 'f-incv'].forEach((id) => $(id).addEventListener('change', () => search(true)));
     let deb; $('f-q').addEventListener('input', () => { clearTimeout(deb); deb = setTimeout(() => search(true), 300); });
     $('more').addEventListener('click', () => { state.page++; search(false); });
 
@@ -324,6 +336,8 @@ import Base from '../layouts/Base.astro';
           <div><span>Note</span>${p.stars > 0 && p.stars <= 5 ? '★ ' + p.stars : '—'}</div>
           <div><span>Anglais courant</span>${p.fluent_english ? 'Oui' : 'Non'}</div>
           <div><span>Expérience digitags</span>${esc(p.dgitags_experience ?? '—')}</div>
+          <div><span>Ouvert à un CDI</span>${p.cdi ? 'Oui' : 'Non'}</div>
+          <div><span>Salesforce</span>${p.salesforce ? 'Oui' : 'Non'}</div>
           <div><span>Email</span>${esc(p.email ?? '—')}</div>
         </div></section>
         ${p.reference_html ? `<section><h4>Références</h4><div class="rich">${p.reference_html}</div></section>` : ''}

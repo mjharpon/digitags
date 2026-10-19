@@ -12,6 +12,7 @@
     "@astrojs/cloudflare": "^12.6.13",
     "@supabase/supabase-js": "^2.109.0",
     "astro": "^5.0.0",
+    "pdf-parse": "^1.1.1",
     "turndown": "^7.2.4"
   }
 }

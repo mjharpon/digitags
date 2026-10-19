@@ -86,9 +86,9 @@ const faqJsonLd = JSON.stringify({
           <article class="numbered-card">
             <div>
               <span class="num-badge">{String(i + 1).padStart(2, '0')}</span>
-              <h3>{l.title}</h3>
+              <h3><a href={l.slug} class="stretch-link">{l.title}</a></h3>
               <p class="num-desc">{l.desc}</p>
-              <a href={l.slug} class="arrow-link">En savoir plus <span aria-hidden="true">→</span></a>
+              <span class="arrow-link">En savoir plus <span aria-hidden="true">→</span></span>
             </div>
             <img src={l.image} alt="" loading="lazy" />
           </article>

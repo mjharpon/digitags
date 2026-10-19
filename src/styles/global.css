@@ -1899,3 +1899,32 @@ a.stat:hover span:last-child { text-decoration: underline; text-underline-offset
   .accomp { padding: 26px; margin-top: 36px; }
   .prose { font-size: 15px; }
 }
+.ms-panel[hidden] { display: none !important; }
+
+/* ============ Repasse mobile 2 + blocs cliquables ============ */
+/* Ancres : compenser le header sticky pour le maillage interne (#expertises, #approche…) */
+html { scroll-padding-top: 92px; scroll-behavior: smooth; }
+
+/* Lien étendu : toute la carte est cliquable via une vraie ancre (SEO-friendly) */
+.numbered-card, .case-side-card, .benefit-card, .reussite-card { position: relative; }
+.stretch-link::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+
+@media (max-width: 720px) {
+  /* Chips « Également dans le réseau » : en colonne pleine largeur */
+  .cat-extra { flex-direction: column; align-items: stretch; gap: 10px; margin-top: 14px; }
+  .cat-extra > p { flex: none; }
+  .chips-left { width: 100%; }
+  .chip { padding: 8px 13px; font-size: 12.5px; gap: 7px; }
+  .chips { gap: 8px; }
+  /* Divers resserrements */
+  .cat-heading { font-size: 18px; }
+  .num-badge { width: 26px; height: 26px; font-size: 11px; margin-bottom: 10px; }
+  .numbered-card h3 { font-size: 16px; }
+  .faq-item summary { font-size: 14px; padding: 15px 16px; }
+  .faq-item .faq-body { padding: 0 16px 16px; }
+  .prop2-config { padding: 20px; }
+  .prop2-config-total strong { font-size: 22px; }
+  .benefits-grid { gap: 12px; }
+  .testi-card { padding: 20px; }
+  .feature-panel { padding: 24px 20px; gap: 20px; }
+}

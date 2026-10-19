@@ -91,9 +91,9 @@ const faqJsonLd = JSON.stringify({
           <article class="numbered-card">
             <div>
               <span class="num-badge">{String(i + 1).padStart(2, '0')}</span>
-              <h3>{p.data.title}</h3>
+              <h3><a href={`/projets/${p.id}`} class="stretch-link">{p.data.title}</a></h3>
               {p.data.description && <p class="num-desc">{p.data.description}</p>}
-              <a href={`/projets/${p.id}`} class="arrow-link">En savoir plus <span aria-hidden="true">→</span></a>
+              <span class="arrow-link">En savoir plus <span aria-hidden="true">→</span></span>
             </div>
             {p.data.image && <img src={p.data.image} alt="" loading="lazy" />}
           </article>
