@@ -163,7 +163,7 @@ import Base from '../layouts/Base.astro';
       if ($('f-exp').value) q = q.eq('experience', $('f-exp').value);
       if ($('f-dispo').checked) q = q.eq('disponible', true);
       if ($('f-en').checked) q = q.eq('fluent_english', true);
-      if ($('f-stars').checked) q = q.gte('stars', 4);
+      if ($('f-stars').checked) q = q.gte('stars', 4).lte('stars', 5);
       const tjm = $('f-tjm').value;
       if (tjm) {
         const [lo, hi] = tjm.split('-').map(Number);
@@ -193,7 +193,7 @@ import Base from '../layouts/Base.astro';
           <p class="job">${esc(p.job ?? '')}</p>
           <div class="badges">
             ${p.disponible ? '<span class="badge ok">Dispo</span>' : p.dispo_from ? `<span class="badge warn">Dispo ${esc(p.dispo_from)}</span>` : ''}
-            ${p.stars ? `<span class="badge star">★ ${p.stars}</span>` : ''}
+            ${p.stars > 0 && p.stars <= 5 ? `<span class="badge star">★ ${p.stars}</span>` : ''}
             ${tjmOf(p) ? `<span class="badge">${tjmOf(p)} €/j</span>` : ''}
             ${p.fluent_english ? '<span class="badge">EN</span>' : ''}
             ${p.experience ? `<span class="badge">${esc(p.experience)}</span>` : ''}
@@ -260,7 +260,7 @@ import Base from '../layouts/Base.astro';
           <div><span>Tarif jour (vente)</span>${p.tarif_jour ? p.tarif_jour + ' €/j' : '—'}</div>
           <div><span>Disponibilité</span>${p.disponible ? 'Disponible' : (p.dispo_from ?? '—')}</div>
           <div><span>Expérience</span>${esc(p.experience ?? '—')}</div>
-          <div><span>Note</span>${p.stars ? '★ ' + p.stars : '—'}</div>
+          <div><span>Note</span>${p.stars > 0 && p.stars <= 5 ? '★ ' + p.stars : '—'}</div>
           <div><span>Anglais courant</span>${p.fluent_english ? 'Oui' : 'Non'}</div>
           <div><span>Expérience digitags</span>${esc(p.dgitags_experience ?? '—')}</div>
           <div><span>Email</span>${esc(p.email ?? '—')}</div>

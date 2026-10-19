@@ -6,7 +6,9 @@ export default defineConfig({
   trailingSlash: 'never',
   // Site statique par défaut ; les pages marquées `prerender = false`
   // (propales /p/<token>) sont rendues à la demande via l'adaptateur Netlify.
-  adapter: netlify(),
+  // L'adaptateur n'est actif qu'au build : en dev, Astro rend ces pages lui-même
+  // (l'émulation Netlify du mode dev exige Deno, absent ici).
+  adapter: process.argv.includes('dev') ? undefined : netlify(),
   build: {
     format: 'file'
   }

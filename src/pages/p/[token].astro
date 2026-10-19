@@ -5,32 +5,28 @@
 // pas de CV complet — uniquement le CV anonymisé.
 export const prerender = false;
 
-import { createClient } from '@supabase/supabase-js';
 import Base from '../../layouts/Base.astro';
 
 const { token } = Astro.params;
 const url = import.meta.env.SUPABASE_URL;
 const key = import.meta.env.SUPABASE_SERVICE_KEY;
 
+// Appels REST directs (PostgREST) : pas de supabase-js côté serveur.
+async function rest(path) {
+  const res = await fetch(`${url}/rest/v1/${path}`, {
+    headers: { apikey: key, Authorization: `Bearer ${key}` },
+  });
+  return res.ok ? res.json() : [];
+}
+
 let proposal = null;
 let items = [];
 
 if (url && key && token && /^[a-f0-9]{16,64}$/.test(token)) {
-  const sb = createClient(url, key, { auth: { persistSession: false } });
-  const { data } = await sb
-    .from('proposals')
-    .select('id, title, client_name, intro, created_at, archived')
-    .eq('token', token)
-    .eq('archived', false)
-    .maybeSingle();
-  proposal = data;
+  const props = await rest(`proposals?select=id,title,client_name,intro,created_at&token=eq.${token}&archived=eq.false&limit=1`);
+  proposal = props[0] ?? null;
   if (proposal) {
-    const { data: rows } = await sb
-      .from('proposal_items')
-      .select('role_label, tjm, note, sort, profiles(name, job, photo_url, experience, stars, fluent_english, reference_html, formation_html, cv_anonyme_url, portfolio_url)')
-      .eq('proposal_id', proposal.id)
-      .order('sort');
-    items = rows ?? [];
+    items = await rest(`proposal_items?select=role_label,tjm,note,sort,profiles(name,job,photo_url,experience,stars,fluent_english,reference_html,formation_html,cv_anonyme_url,portfolio_url)&proposal_id=eq.${proposal.id}&order=sort`);
   }
 }
 
@@ -69,7 +65,7 @@ Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow');
                 <p class="role">{it.role_label ?? p.job}</p>
                 <div class="badges" style="margin-bottom: 10px;">
                   {p.experience && <span class="badge">{p.experience}</span>}
-                  {p.stars && <span class="badge star">★ {p.stars}</span>}
+                  {p.stars > 0 && p.stars <= 5 && <span class="badge star">★ {p.stars}</span>}
                   {p.fluent_english && <span class="badge">Anglais courant</span>}
                   {it.tjm && <span class="badge ok">{it.tjm} €/jour</span>}
                 </div>

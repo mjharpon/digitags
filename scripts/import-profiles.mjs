@@ -5,8 +5,6 @@
 // pour l'instant leurs URLs CDN Webflow — à migrer vers Supabase Storage
 // avant toute résiliation de Webflow (script séparé à prévoir).
 
-import { createClient } from '@supabase/supabase-js';
-
 const { WEBFLOW_TOKEN, SUPABASE_URL, SUPABASE_SERVICE_KEY } = process.env;
 if (!WEBFLOW_TOKEN || !SUPABASE_URL || !SUPABASE_SERVICE_KEY) {
   console.error('Variables manquantes dans .env (WEBFLOW_TOKEN, SUPABASE_URL, SUPABASE_SERVICE_KEY).');
@@ -14,7 +12,25 @@ if (!WEBFLOW_TOKEN || !SUPABASE_URL || !SUPABASE_SERVICE_KEY) {
 }
 
 const API = 'https://api.webflow.com/v2';
-const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY, { auth: { persistSession: false } });
+
+// Client REST minimal (PostgREST) — évite supabase-js, incompatible Node 20 côté script.
+async function sbRest(method, path, body, headers = {}) {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/${path}`, {
+    method,
+    headers: {
+      apikey: SUPABASE_SERVICE_KEY,
+      Authorization: `Bearer ${SUPABASE_SERVICE_KEY}`,
+      'Content-Type': 'application/json',
+      ...headers,
+    },
+    body: body ? JSON.stringify(body) : undefined,
+  });
+  const text = await res.text();
+  if (!res.ok) throw new Error(`${res.status} ${method} ${path}: ${text}`);
+  return text ? JSON.parse(text) : null;
+}
+const upsert = (table, rows) =>
+  sbRest('POST', `${table}?on_conflict=webflow_id`, rows, { Prefer: 'resolution=merge-duplicates,return=minimal' });
 
 async function wf(pathname) {
   const res = await fetch(`${API}${pathname}`, {
@@ -58,9 +74,8 @@ async function main() {
     slug: j.fieldData.slug,
     sort: j.fieldData.order ?? 0,
   }));
-  const { error: jgErr } = await supabase.from('job_groups').upsert(jobRows, { onConflict: 'webflow_id' });
-  if (jgErr) throw jgErr;
-  const { data: jgRows } = await supabase.from('job_groups').select('id, webflow_id');
+  await upsert('job_groups', jobRows);
+  const jgRows = await sbRest('GET', 'job_groups?select=id,webflow_id');
   const jgMap = new Map(jgRows.map((r) => [r.webflow_id, r.id]));
   console.log(`✓ ${jobRows.length} familles de métiers`);
 
@@ -110,9 +125,7 @@ async function main() {
   });
 
   for (let i = 0; i < rows.length; i += 200) {
-    const batch = rows.slice(i, i + 200);
-    const { error } = await supabase.from('profiles').upsert(batch, { onConflict: 'webflow_id' });
-    if (error) throw error;
+    await upsert('profiles', rows.slice(i, i + 200));
     console.log(`  … ${Math.min(i + 200, rows.length)}/${rows.length}`);
   }
   console.log(`✓ ${rows.length} profils importés dans Supabase.`);
