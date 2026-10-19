@@ -82,7 +82,12 @@ async function migrateOne(p) {
 }
 
 async function main() {
-  const rows = await (await fetch(`${SUPABASE_URL}/rest/v1/profiles?select=id,photo_url,cv_url,cv_anonyme_url,portfolio_pdf_url&order=id`, { headers: H })).json();
+  const rows = [];
+  for (let off = 0; ; off += 1000) {
+    const page = await (await fetch(`${SUPABASE_URL}/rest/v1/profiles?select=id,photo_url,cv_url,cv_anonyme_url,portfolio_pdf_url&order=id`, { headers: { ...H, Range: `${off}-${off + 999}` } })).json();
+    rows.push(...page);
+    if (page.length < 1000) break;
+  }
   const todo = rows.filter((p) =>
     ['photo_url', 'cv_url', 'cv_anonyme_url', 'portfolio_pdf_url'].some((k) => p[k] && /webflow\.com|website-files\.com/.test(p[k])));
   console.log(`${todo.length} profils avec fichiers à migrer (sur ${rows.length}).`);

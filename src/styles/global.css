@@ -1,3 +1,45 @@
+/* Police self-hostée (Plus Jakarta Sans, subset latin) */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/pjs-400.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/assets/fonts/pjs-500.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/assets/fonts/pjs-600.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/assets/fonts/pjs-700.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/assets/fonts/pjs-800.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* ============ Design tokens ============ */
 :root {
   --navy: #111c3f;
@@ -1788,3 +1830,72 @@ a.stat:hover span:last-child { text-decoration: underline; text-underline-offset
 .prop2-config-total .sub { font-size: 13px; color: #b9c0d8; }
 .prop2-config-total .btn { background: #fff; color: var(--navy); }
 .prop2-config-note { font-size: 12px; color: var(--ink-faint); margin-top: 12px; }
+
+/* ============ Passe mobile (UI/UX ≤ 720px) ============ */
+@media (max-width: 720px) {
+  /* Header plus compact */
+  .header-inner { padding-block: 12px; }
+
+  /* Sections moins hautes */
+  .section, .expertises { padding: 44px 0 24px; }
+  .section-title { margin-bottom: 28px; }
+  .cases { padding: 48px 0 24px; }
+  .skills-band { padding: 30px 0 44px; }
+
+  /* Barre de confiance : logos en grille compacte */
+  .trust-card { padding: 6px 20px 20px; }
+  .trust-row { flex-direction: column; gap: 14px; padding: 18px 0 14px; }
+  .trust-count { text-align: center; }
+  .trust-logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px 10px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .trust-logos li { margin: 0 auto; }
+  .tl-qonto { font-size: 16px; }
+  .tl-alan { font-size: 14px; }
+  .tl-lacoste { font-size: 12px; letter-spacing: .12em; }
+  .tl-ledger { font-size: 13px; }
+  .tl-manomano, .tl-backmarket { font-size: 12px; }
+
+  /* Section sombre : étapes resserrées, hexagone aligné avec le numéro */
+  .approche { padding-top: 44px; }
+  .approche-grid { gap: 26px; padding-bottom: 40px; }
+  .steps { gap: 20px; margin-bottom: 28px; }
+  .step { padding-right: 0; }
+  .step .hex-icon { margin-bottom: 0; vertical-align: -6px; margin-right: 10px; }
+  .step-num { display: inline-block; margin-bottom: 6px; }
+
+  /* Carte équipe : 3 photos côte à côte, compactes */
+  .team-card { padding: 18px; gap: 18px; }
+  .team-people { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%; }
+  .team-people figure { width: 100%; }
+  .team-people img { width: 100%; height: auto; aspect-ratio: 3 / 4; }
+  .team-people figcaption { font-size: 10.5px; gap: 5px; }
+
+  /* Cartes numérotées : plus de chevauchement texte/image */
+  .numbered-card img { height: auto; min-height: 0; }
+  .numbered-card { padding: 18px; gap: 14px; }
+
+  /* CTA bandeaux plus compacts */
+  .cta-inner { padding-block: 36px; gap: 16px; }
+  .cta-shapes { height: 86px; width: 130px; }
+  .shape-white-hex { width: 56px; height: 66px; left: 36px; }
+  .shape-blue-sm { width: 42px; height: 48px; top: 32px; }
+  .shape-yellow-sm { width: 34px; height: 34px; left: 76px; top: 46px; }
+  .cta-navy { padding: 28px 24px; }
+
+  /* Hero : collage un peu moins haut */
+  .hero { padding-top: 36px; }
+  .hero-collage { height: 340px; }
+
+  /* Pieds de page et fiches */
+  .site-footer { padding: 40px 0 24px; }
+  .fiche-hero { padding: 36px 0 10px; }
+  .fiche-split, .atoz, .split-section { padding: 36px 0 8px; }
+  .accomp { padding: 26px; margin-top: 36px; }
+  .prose { font-size: 15px; }
+}
