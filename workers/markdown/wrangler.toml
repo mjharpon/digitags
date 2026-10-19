@@ -1,0 +1,13 @@
+# Négociation de contenu « Markdown pour agents » (équivalent maison de la
+# fonctionnalité Cloudflare réservée aux plans payants).
+# Route : digitags.work/* — GET avec « Accept: text/markdown » → version .md
+# générée au build ; tout le reste passe à l'origine sans modification.
+# Déploiement : npx wrangler deploy (depuis ce dossier).
+name = "digitags-markdown"
+main = "src/index.js"
+compatibility_date = "2026-01-01"
+
+# routes (attachées via le dashboard, le token API n a pas la permission zone) : # routes = [
+#   { pattern = "digitags.work/*", zone_name = "digitags.work" },
+#   { pattern = "www.digitags.work/*", zone_name = "digitags.work" },
+# ]

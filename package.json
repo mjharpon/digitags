@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/sort-sitemap.mjs",
+    "build": "astro build && node scripts/sort-sitemap.mjs && node scripts/build-markdown.mjs",
     "preview": "astro preview"
   },
   "dependencies": {
