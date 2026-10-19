@@ -2302,6 +2302,22 @@ a.chip-more:hover { color: var(--yellow); }
   .ia-illu { min-height: 0; }
 }
 
+/* Porte mot de passe des propales */
+.pw-gate { max-width: 440px; text-align: center; padding: 90px 24px; }
+.pw-gate .logo { display: flex; justify-content: center; margin-bottom: 22px; }
+.pw-gate h1 { font-size: 26px; font-weight: 800; letter-spacing: -.01em; margin: 8px 0 10px; }
+.pw-sub { font-size: 14px; color: var(--ink-soft); margin-bottom: 22px; }
+.pw-form { display: flex; gap: 10px; }
+.pw-form input {
+  flex: 1; min-width: 0;
+  font-family: inherit; font-size: 15px;
+  padding: 12px 14px;
+  border: 1.5px solid var(--line); border-radius: 10px;
+  background: var(--white); outline: none;
+}
+.pw-form input:focus { border-color: var(--blue); }
+.pw-error { color: var(--red); font-size: 13.5px; font-weight: 600; margin-top: 14px; }
+
 /* ============ Propale v3 (configurateur d'équipe) ============ */
 .prop2-ava { display: inline-flex; flex-shrink: 0; }
 .prop3-hero {

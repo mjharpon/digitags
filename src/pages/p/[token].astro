@@ -25,11 +25,43 @@ let proposal: any = null;
 let items: any[] = [];
 
 if (url && key && token && /^[a-f0-9]{16,64}$/.test(token)) {
-  const props = await rest(`proposals?select=id,title,client_name,intro,created_at,start_date,duration_weeks&token=eq.${token}&archived=eq.false&limit=1`);
+  const props = await rest(`proposals?select=id,title,client_name,intro,created_at,start_date,duration_weeks,password&token=eq.${token}&archived=eq.false&limit=1`);
   proposal = props[0] ?? null;
-  if (proposal) {
-    items = await rest(`proposal_items?select=role_label,tjm,note,sort,days_week,profiles(job,experience,stars,fluent_english,reference_html,cv_anonyme_url)&proposal_id=eq.${proposal.id}&order=sort`);
+}
+
+// Protection par mot de passe (configuré à la création de la propale).
+// Un cookie signé (sha256 token:mdp) évite de redemander pendant 7 jours.
+const sha256hex = async (s: string) => {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
+  return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, '0')).join('');
+};
+
+let authorized = !!proposal && !proposal.password;
+let wrongPassword = false;
+if (proposal?.password) {
+  const expected = await sha256hex(`${token}:${proposal.password}`);
+  if (Astro.cookies.get(`pw_${proposal.id.slice(0, 8)}`)?.value === expected) authorized = true;
+  if (!authorized && Astro.request.method === 'POST') {
+    const fd = await Astro.request.formData().catch(() => null);
+    const attempt = String(fd?.get('pw') ?? '').trim();
+    if (attempt && attempt === proposal.password) {
+      Astro.cookies.set(`pw_${proposal.id.slice(0, 8)}`, expected, {
+        path: Astro.url.pathname,
+        httpOnly: true,
+        secure: true,
+        sameSite: 'lax',
+        maxAge: 7 * 24 * 3600,
+      });
+      authorized = true;
+    } else {
+      wrongPassword = true;
+    }
   }
+}
+
+// Le contenu (profils, tarifs) n'est chargé qu'une fois l'accès autorisé.
+if (proposal && authorized) {
+  items = await rest(`proposal_items?select=role_label,tjm,note,sort,days_week,profiles(job,experience,stars,fluent_english,reference_html,cv_anonyme_url)&proposal_id=eq.${proposal.id}&order=sort`);
 }
 
 if (!proposal) {
@@ -91,7 +123,21 @@ const totalDays = cfgItems.reduce((s, c) => s + c.days, 0);
   <link rel="preload" href="/assets/fonts/pjs-800.woff2" as="font" type="font/woff2" crossorigin />
 </head>
 <body>
-  {proposal ? (
+  {proposal && !authorized ? (
+    <div class="container pw-gate">
+      <span class="logo">
+        <img src="/assets/logo-mark.svg" alt="" class="logo-mark" />
+      </span>
+      <p class="eyebrow">Proposition confidentielle</p>
+      <h1>Cette proposition est protégée.</h1>
+      <p class="pw-sub">Saisissez le mot de passe communiqué par votre interlocuteur digitags.work.</p>
+      <form method="POST" class="pw-form">
+        <input type="password" name="pw" placeholder="Mot de passe" autocomplete="off" autofocus required />
+        <button type="submit" class="btn btn-dark">Accéder</button>
+      </form>
+      {wrongPassword && <p class="pw-error">Mot de passe incorrect — réessayez.</p>}
+    </div>
+  ) : proposal ? (
     <>
       <header class="prop3-hero">
         <div class="container">

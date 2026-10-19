@@ -512,6 +512,10 @@ import Base from '../layouts/Base.astro';
             <label>Démarrage prévu</label>
             <input id="np-start" type="date" value="${new Date(Date.now() + 14 * 864e5).toISOString().slice(0, 10)}" />
           </div>
+          <div class="field" style="max-width: 190px;">
+            <label>Mot de passe client</label>
+            <input id="np-password" type="text" value="${Math.random().toString(36).replace(/[^a-z0-9]/g, '').slice(0, 6)}" autocomplete="off" title="Demandé au client pour ouvrir la propale — vider pour un accès libre" />
+          </div>
         </div>
         <h4 style="margin: 10px 0;">Profils &amp; rôles — TJM client = TJM freelance + marge</h4>
         ${[...state.selection.values()].map((s) => `
@@ -553,6 +557,7 @@ import Base from '../layouts/Base.astro';
           intro: $('np-intro').value.trim() || null,
           created_by: user?.email,
           start_date: $('np-start').value || null,
+          password: $('np-password').value.trim() || null,
         })
         .select().single();
       if (error) { $('np-msg').textContent = 'Erreur : ' + error.message; return; }
@@ -570,8 +575,9 @@ import Base from '../layouts/Base.astro';
       $('prop-form').hidden = true;
       state.selection.clear();
       renderSelection();
-      const url = `${location.origin}/p/${prop.token}`;
-      try { await navigator.clipboard.writeText(url); toast('Propale créée — lien copié ✓'); }
+      const pw = $('np-password').value.trim();
+      const share = `${location.origin}/p/${prop.token}${pw ? ` — mot de passe : ${pw}` : ''}`;
+      try { await navigator.clipboard.writeText(share); toast(pw ? 'Propale créée — lien + mot de passe copiés ✓' : 'Propale créée — lien copié ✓'); }
       catch { toast('Propale créée'); }
       loadProposals();
       document.querySelector('[data-tab="propales"]').click();
@@ -579,16 +585,16 @@ import Base from '../layouts/Base.astro';
 
     async function loadProposals() {
       const { data, error } = await sb.from('proposals')
-        .select('id, token, title, client_name, created_at, created_by, archived, proposal_items(id)')
+        .select('id, token, title, client_name, created_at, created_by, archived, password, proposal_items(id)')
         .eq('archived', false)
         .order('created_at', { ascending: false });
       if (error) return;
       $('props-list').innerHTML = (data ?? []).map((p) => `
         <div class="prop-row">
           <h3>${esc(p.title)}${p.client_name ? ` <span style="color:var(--ink-faint); font-weight:600;">· ${esc(p.client_name)}</span>` : ''}</h3>
-          <span class="meta">${p.proposal_items.length} profil${p.proposal_items.length > 1 ? 's' : ''} · ${new Date(p.created_at).toLocaleDateString('fr-FR')} · ${esc(p.created_by ?? '')}</span>
+          <span class="meta">${p.proposal_items.length} profil${p.proposal_items.length > 1 ? 's' : ''} · ${new Date(p.created_at).toLocaleDateString('fr-FR')} · ${esc(p.created_by ?? '')} · ${p.password ? `🔒 ${esc(p.password)}` : 'accès libre'}</span>
           <a class="btn btn-outline btn-sm" href="/p/${p.token}" target="_blank" rel="noopener">Voir</a>
-          <button class="btn btn-dark btn-sm" data-copy="${p.token}">Copier le lien</button>
+          <button class="btn btn-dark btn-sm" data-copy="${p.token}" data-pw="${esc(p.password ?? '')}">Copier le lien</button>
           <button class="btn btn-outline btn-sm" data-arch="${p.id}">Archiver</button>
         </div>`).join('') || '<p style="color:var(--ink-faint);">Aucune propale pour l\'instant — composez une sélection depuis l\'onglet Recherche.</p>';
     }
@@ -596,7 +602,8 @@ import Base from '../layouts/Base.astro';
     $('props-list').addEventListener('click', async (e) => {
       const cp = e.target.closest('[data-copy]');
       if (cp) {
-        try { await navigator.clipboard.writeText(`${location.origin}/p/${cp.dataset.copy}`); toast('Lien copié ✓'); } catch {}
+        const share = `${location.origin}/p/${cp.dataset.copy}${cp.dataset.pw ? ` — mot de passe : ${cp.dataset.pw}` : ''}`;
+        try { await navigator.clipboard.writeText(share); toast('Lien copié ✓'); } catch {}
         return;
       }
       const ar = e.target.closest('[data-arch]');
