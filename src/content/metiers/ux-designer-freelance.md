@@ -71,7 +71,7 @@ L’UX design est un domaine en constante évolution, et il est important pour l
 
 ‍
 
-## Le recrutement en freelance d’UX Designer avec digitags.work
+## Trouver un UX Designer freelance avec digitags.work
 
 Si vous faites face à l’un des défis suivants, faire appel à un UX Designer en freelance est une solution :
 

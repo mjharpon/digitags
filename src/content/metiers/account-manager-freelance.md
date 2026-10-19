@@ -78,7 +78,7 @@ Des plateformes comme [**Digitags**](/), Malt, Upwork, ou Freelancer sont des ou
 
 ‍
 
-## Le recrutement de freelance Account Manager avec digitags.work
+## Trouver un Account Manager freelance avec digitags.work
 
 ![Le recrutement de freelance Account Manager avec digitags.work](/uploads/metiers/account-manager-freelance-0.webp)
 

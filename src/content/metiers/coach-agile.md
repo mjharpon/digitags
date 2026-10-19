@@ -60,7 +60,7 @@ Si vous faites face à l’un des défis suivants, faire appel à un coach agile
 
 ‍
 
-## **Le recrutement en freelance de coach agile avec** [**digitags.work**](/)
+## **Trouver un coach agile freelance avec** [**digitags.work**](/)
 
 Si vous faites face à l’un des défis suivants, faire appel à un coach agile en Freelance est une solution :
 

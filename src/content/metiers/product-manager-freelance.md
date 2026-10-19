@@ -42,7 +42,7 @@ Non seulement il supervise le développement du produit depuis sa conception jus
 
 ‍
 
-## Le recrutement en freelance de Product Manager avec digitags.work
+## Trouver un Product Manager freelance avec digitags.work
 
 Si vous faites face à l’un des défis suivants, faire appel à un Product Manager en freelance est une solution :
 

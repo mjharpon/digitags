@@ -1405,12 +1405,16 @@ a.chip:hover { border-color: var(--blue); }
 .fiche-body { font-size: 15px; line-height: 1.7; color: #2c3450; }
 .fiche-body p { margin: 0 0 14px; }
 .fiche-body a { color: var(--blue); font-weight: 600; }
-.fiche-body ul, .fiche-body ol { margin: 0 0 14px; padding-left: 20px; }
-.fiche-body ul { list-style: disc; }
-.fiche-body li { margin-bottom: 6px; }
+.fiche-body ul, .fiche-body ol { margin: 0 0 14px; padding-left: 22px; }
+.fiche-body ul { list-style: disc outside; }
+.fiche-body ul li { list-style: disc outside; }
+.fiche-body li { margin-bottom: 7px; }
+.fiche-body li::marker { color: var(--blue); }
 .fiche-body img { border-radius: var(--radius); margin: 18px 0; }
 
 .fiche-text { max-width: 820px; margin: 0 auto; padding: 46px 0 6px; }
+/* Fiches métiers : sections texte alignées à gauche (cohérence avec le hero). */
+.fiche-text-left { margin: 0; max-width: 760px; }
 
 .num-round {
   display: inline-flex;
@@ -1431,10 +1435,12 @@ a.chip:hover { border-color: var(--blue); }
 .method-cols {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
+  gap: 40px 0;
 }
 .method-col { padding: 0 28px; border-left: 1px solid var(--line); }
-.method-col:first-child { border-left: 0; padding-left: 0; }
+.method-cols:not(.method-cols--2) .method-col:nth-child(3n + 1) { border-left: 0; padding-left: 0; }
+.method-cols--2 { grid-template-columns: repeat(2, 1fr); }
+.method-cols--2 .method-col:nth-child(odd) { border-left: 0; padding-left: 0; }
 .method-col h3 { font-size: 16.5px; font-weight: 800; margin-bottom: 10px; }
 .method-col p { font-size: 13.5px; color: var(--ink-soft); line-height: 1.6; }
 
@@ -1473,6 +1479,9 @@ a.chip:hover { border-color: var(--blue); }
   margin-top: 56px;
 }
 .accomp h2 { font-size: clamp(22px, 2.4vw, 28px); font-weight: 800; letter-spacing: -.02em; margin-bottom: 14px; line-height: 1.22; }
+.accomp-blue { background: #eef1fb; }
+.accomp-blue .eyebrow { color: var(--blue); }
+.accomp-deco { width: 200px; max-width: 60%; justify-self: center; }
 .accomp img {
   width: 100%;
   aspect-ratio: 16 / 11;

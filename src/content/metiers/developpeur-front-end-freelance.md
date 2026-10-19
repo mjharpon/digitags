@@ -64,7 +64,7 @@ Besoin d’un développeur front-end freelance ? [**Discutons de votre projet**]
 
 ‍
 
-## Le recrutement en freelance de développeurs front-end avec digitags.work
+## Trouver un développeur front-end freelance avec digitags.work
 
 ![Le recrutement en freelance de développeurs front-end avec digitags.work](/uploads/metiers/developpeur-front-end-freelance-0.webp)
 

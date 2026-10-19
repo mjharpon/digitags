@@ -55,7 +55,7 @@ Un autre défi est la gestion du temps et des ressources. Avec la multitude de t
 
 Et d’un autre côté, le rôle de community manager est de plus en plus reconnu comme essentiel dans la stratégie de communication des entreprises. La demande pour ces professionnels est en hausse.
 
-## Le recrutement en freelance de community managers avec digitags.work
+## Trouver un community manager freelance avec digitags.work
 
 ![Le recrutement en freelance de community managers avec digitags.work](/uploads/metiers/community-manager-freelance-0.jpg)
 

@@ -70,7 +70,7 @@ Trouvez le freelance UX Writer parfait pour votre projet au sein de notre hub de
 
 ‍
 
-## Le recrutement d'UX Writer freelance avec digitags.work
+## Trouver un UX Writer freelance avec digitags.work
 
 ![Le recrutement d'UX Writer freelance avec digitags.work](/uploads/metiers/ux-writer-freelance-0.webp)
 

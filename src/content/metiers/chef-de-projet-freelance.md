@@ -38,7 +38,7 @@ Il existe de nombreux outils et logiciels qui pour aider les chefs de projet à 
 
 ‍
 
-## Le recrutement en freelance de Chef de Projet avec digitags.work
+## Trouver un Chef de Projet freelance avec digitags.work
 
 Si vous faites face à l’un des défis suivants, faire appel à un Chef de Projet en freelance est une solution :
 

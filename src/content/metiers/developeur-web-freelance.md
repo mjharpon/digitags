@@ -61,7 +61,7 @@ Les développeurs ne sont certes pas des [**chefs de projet**](/metiers/chef-de-
 
 ‍
 
-## Le recrutement en freelance de Développeur Web avec digitags.work
+## Trouver un Développeur Web freelance avec digitags.work
 
 Si vous faites face à l’un des défis suivants, faire appel à un Développeur Web en freelance est une solution :
 

@@ -44,7 +44,7 @@ Un traffic manager freelance est responsable de nombreuses tâches clés, en voi
 
 ‍
 
-## **Les avantages de recruter un traffic manager freelance**
+## **Les avantages de travailler avec un traffic manager freelance**
 
 Investir dans un talent en traffic management a des impacts variés sur une entreprise, notamment :
 
@@ -96,7 +96,7 @@ Ce rôle présente de nombreux défis, mais également des opportunités excepti
 
 ‍
 
-## Le recrutement de Traffic Manager freelance avec digitags.work
+## Trouver un Traffic Manager freelance avec digitags.work
 
 ![Le recrutement de Traffic Manager freelance avec digitags.work](/uploads/metiers/traffic-manager-freelance-0.webp)
 

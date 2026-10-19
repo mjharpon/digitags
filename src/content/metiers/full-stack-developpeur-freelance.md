@@ -52,7 +52,7 @@ En plus des frameworks, les développeurs full-stack utilisent divers outils. Le
 
 ‍
 
-## Le recrutement en freelance de développeurs full-stack avec digitags.work
+## Trouver un développeur full-stack freelance avec digitags.work
 
 ![Le recrutement en freelance de développeurs full-stack avec digitags.work](/uploads/metiers/full-stack-developpeur-freelance-0.webp)
 

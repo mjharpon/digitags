@@ -76,7 +76,7 @@ L'avenir du développement back-end est également influencé par l'émergence d
 
 Vous souhaitez recruter un développeur back-end freelance ? [**Discutons de votre projet**](/#deposez-votre-besoin).
 
-## Le recrutement en freelance de développeurs back-end avec digitags.work
+## Trouver un développeur back-end freelance avec digitags.work
 
 ![Le recrutement en freelance de développeurs back-end avec digitags.work](/uploads/metiers/developpeur-back-end-freelance-0.webp)
 

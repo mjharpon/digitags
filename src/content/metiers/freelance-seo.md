@@ -43,7 +43,7 @@ En plus de ces outils, il est également important de rester à jour avec les de
 
 ‍
 
-## Le recrutement en freelance de SEO avec digitags.work
+## Trouver un SEO freelance avec digitags.work
 
 Si vous faites face à l’un des défis suivants, faire appel à un expert SEO en freelance est une solution :
 
@@ -56,7 +56,7 @@ Digitags.work vous aide à relever vos défis via le recrutement freelance de sp
 
 ‍
 
-## Recrutez le bon freelance SEO
+## Trouvez le bon freelance SEO
 
 ![Recrutez le bon freelance SEO](/uploads/metiers/freelance-seo-0.webp)
 

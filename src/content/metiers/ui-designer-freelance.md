@@ -62,7 +62,7 @@ En tant qu'UI designer, il est important de disposer des outils et des logiciels
 
 ‍
 
-## Le recrutement en freelance de UI Designer avec digitags.work
+## Trouver un UI Designer freelance avec digitags.work
 
 Si vous faites face à l’un des défis suivants, faire appel à un UI Designer en freelance est une solution :
 

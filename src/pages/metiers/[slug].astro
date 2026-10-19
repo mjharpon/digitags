@@ -41,6 +41,7 @@ const listToItems = (listHtml: string): Item[] =>
   });
 
 const sections: Sec[] = [];
+const heroImage = fiche.data.image;
 let pendingImage: string | undefined;
 let splitDone = false;
 
@@ -48,14 +49,18 @@ for (let i = 1; i < parts.length; i += 2) {
   const title = strip(parts[i]);
   const body = parts[i + 1] ?? '';
   const text = strip(body);
-  const img = firstImg(body);
+  // L'image du hero ne doit jamais réapparaître dans le corps (doublon visuel).
+  const rawImg = firstImg(body);
+  const img = rawImg === heroImage ? undefined : rawImg;
 
-  if (img && text.length < 60) { pendingImage = img; continue; }
+  if (rawImg && text.length < 60) { pendingImage = img; continue; }
 
   const h3s = body.split(/<h3[^>]*>([\s\S]*?)<\/h3>/);
   const listMatch = body.match(/<(ol|ul)>([\s\S]*?)<\/\1>/);
+  const isLast = i >= parts.length - 2;
 
-  if (/digitags|confiez|faites appel|recruter (?:un|les bons)|pourquoi (?:travailler|choisir)|trouver (?:un|votre)/i.test(title) && i >= parts.length - 4) {
+  // Un seul bloc « accompagnement » par fiche : la dernière section digitags.
+  if (isLast && /digitags|confiez|faites appel|recruter (?:un|les bons)|pourquoi (?:travailler|choisir)|trouver (?:un|votre)/i.test(title)) {
     sections.push({ kind: 'accomp', title, html: dropImgs(body), image: img ?? pendingImage });
     pendingImage = undefined;
   } else if (h3s.length >= 7) {
@@ -73,8 +78,8 @@ for (let i = 1; i < parts.length; i += 2) {
     } else {
       sections.push({ kind: 'text', title, html: dropImgsKeepFirst(body) });
     }
-  } else if (!splitDone) {
-    sections.push({ kind: 'split', title, html: dropImgs(body), image: img ?? pendingImage ?? fiche.data.image });
+  } else if (!splitDone && (img || pendingImage)) {
+    sections.push({ kind: 'split', title, html: dropImgs(body), image: img ?? pendingImage });
     pendingImage = undefined;
     splitDone = true;
   } else {
@@ -138,7 +143,7 @@ const relatedPosts = (await getCollection('blog', ({ data }) => !data.draft))
         <section class="method-section"><div class="container">
           <h2>{s.title}</h2>
           {s.intro && <p class="method-intro">{s.intro}</p>}
-          <div class="method-cols">
+          <div class={`method-cols ${s.items.length === 4 || s.items.length === 2 ? 'method-cols--2' : ''}`}>
             {s.items.map((it, i) => (
               <div class="method-col">
                 {s.numbered
@@ -166,17 +171,26 @@ const relatedPosts = (await getCollection('blog', ({ data }) => !data.draft))
         </div></section>
       );
       if (s.kind === 'accomp') return (
-        <section><div class="container"><div class="accomp">
+        <section><div class="container"><div class="accomp accomp-blue">
           <div>
-            <p class="eyebrow">Avec le Hub</p>
+            <p class="eyebrow">Passez à l'action</p>
             <h2>{s.title}</h2>
             <div class="fiche-body" set:html={s.html} />
+            <a href="/contact" class="btn btn-dark" style="margin-top: 8px;">Parler de mon besoin <span aria-hidden="true">→</span></a>
           </div>
-          {s.image && <img src={s.image} alt="" loading="lazy" />}
+          {s.image ? (
+            <img src={s.image} alt="" loading="lazy" />
+          ) : (
+            <svg class="accomp-deco" viewBox="0 0 220 200" fill="none" aria-hidden="true">
+              <polygon points="110,10 190,55 190,145 110,190 30,145 30,55" fill="#2b46f0" opacity="0.14"/>
+              <polygon points="110,40 164,70 164,130 110,160 56,130 56,70" fill="#f5b731" opacity="0.8"/>
+              <polygon points="178,110 214,130 214,170 178,190 142,170 142,130" fill="#f2543d" opacity="0.85"/>
+            </svg>
+          )}
         </div></div></section>
       );
       return (
-        <section><div class="container fiche-text">
+        <section><div class="container fiche-text fiche-text-left">
           <h2>{s.title}</h2>
           <div class="fiche-body" set:html={s.html} />
         </div></section>
