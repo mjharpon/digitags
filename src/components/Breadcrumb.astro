@@ -1,0 +1,31 @@
+---
+// Fil d'Ariane visible + balisage Schema.org BreadcrumbList.
+// items : du premier niveau à la page courante (le dernier n'est pas cliquable).
+interface Crumb { label: string; href?: string }
+interface Props { items: Crumb[] }
+const { items } = Astro.props;
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Accueil", item: "https://digitags.work/" },
+    ...items.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 2,
+      name: c.label,
+      ...(c.href ? { item: `https://digitags.work${c.href}` } : {}),
+    })),
+  ],
+});
+---
+<nav class="crumbs" aria-label="Fil d'Ariane">
+  <a href="/">Accueil</a>
+  {items.map((c) => (
+    <>
+      <span class="crumb-sep" aria-hidden="true">›</span>
+      {c.href ? <a href={c.href}>{c.label}</a> : <span class="crumb-here" aria-current="page">{c.label}</span>}
+    </>
+  ))}
+</nav>
+<script type="application/ld+json" set:html={jsonLd} />

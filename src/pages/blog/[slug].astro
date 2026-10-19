@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import CtaBanner from '../../components/CtaBanner.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -11,11 +12,27 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 const dateFmt = post.data.date?.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+
+// Maillage interne automatique — priorité aux fiches métiers.
+// Les tags du blog et le blogCategory des fiches partagent la même taxonomie.
+const metiers = await getCollection('metiers', ({ data }) => !data.draft);
+const relatedMetiers = metiers
+  .filter((m) => m.data.blogCategory && post.data.tags.includes(m.data.blogCategory))
+  .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99))
+  .slice(0, 3);
+
+// Articles liés : même tag principal, les plus récents, sinon derniers articles.
+const allPosts = (await getCollection('blog', ({ data }) => !data.draft))
+  .filter((p) => p.id !== post.id)
+  .sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0));
+const sameTag = allPosts.filter((p) => p.data.tags.some((t) => post.data.tags.includes(t)));
+const relatedPosts = [...sameTag, ...allPosts.filter((p) => !sameTag.includes(p))].slice(0, 3);
 ---
 <Base title={`${post.data.title} | digitags.work`} description={post.data.description}>
   <article>
     <section class="page-hero" style="padding-bottom: 36px;">
       <div class="container">
+        <Breadcrumb items={[{ label: 'Blog', href: '/blog' }, { label: post.data.title }]} />
         <p class="eyebrow">Le blog du Hub</p>
         <h1>{post.data.title}</h1>
         <p class="post-meta">
@@ -28,6 +45,41 @@ const dateFmt = post.data.date?.toLocaleDateString('fr-FR', { day: 'numeric', mo
       <Content />
     </div>
   </article>
+
+  {relatedMetiers.length > 0 && (
+    <section class="rel-section">
+      <div class="container">
+        <p class="eyebrow">Passer à l'action</p>
+        <h2 class="rel-title">Les experts freelances sur ce sujet</h2>
+        <div class="rel-grid">
+          {relatedMetiers.map((m) => (
+            <article class="rel-card rel-card-metier">
+              <h3><a href={`/metiers/${m.id}`} class="stretch-link">{m.data.title}</a></h3>
+              {m.data.description && <p>{m.data.description.slice(0, 130)}…</p>}
+              <span class="arrow-link">Découvrir le métier <span aria-hidden="true">→</span></span>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {relatedPosts.length > 0 && (
+    <section class="rel-section">
+      <div class="container">
+        <h2 class="rel-title">À lire ensuite</h2>
+        <div class="rel-grid">
+          {relatedPosts.map((p) => (
+            <article class="rel-card">
+              <h3><a href={`/blog/${p.id}`} class="stretch-link">{p.data.title}</a></h3>
+              {p.data.description && <p>{p.data.description.slice(0, 130)}…</p>}
+              <span class="arrow-link">Lire l'article <span aria-hidden="true">→</span></span>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   <CtaBanner />
 </Base>

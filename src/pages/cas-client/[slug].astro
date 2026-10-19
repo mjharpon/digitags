@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 import CtaBanner from '../../components/CtaBanner.astro';
 
 export async function getStaticPaths() {
@@ -15,6 +16,7 @@ const { Content } = await render(fiche);
   <article>
     <section class="page-hero" style="padding-bottom: 36px;">
       <div class="container">
+        <Breadcrumb items={[{ label: 'Cas clients', href: '/cas-clients' }, { label: fiche.data.title }]} />
         <p class="eyebrow"><a href="/cas-clients">Cas clients</a></p>
         <h1>{fiche.data.metaTitle ?? fiche.data.title}</h1>
       </div>

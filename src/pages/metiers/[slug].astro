@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import CtaBanner from '../../components/CtaBanner.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 
 export async function getStaticPaths() {
   const fiches = await getCollection('metiers', ({ data }) => !data.draft);
@@ -10,26 +11,78 @@ export async function getStaticPaths() {
 
 const { fiche } = Astro.props;
 const { Content } = await render(fiche);
+
+// Page service parente selon la famille éditoriale de la fiche.
+const SERVICE_BY_CATEGORY: Record<string, { href: string; label: string }> = {
+  design: { href: '/design', label: 'Design & UX' },
+  webmarketing: { href: '/sea-social-ads-seo', label: 'Marketing & Acquisition' },
+  product: { href: '/product-et-project', label: 'Product & Projet' },
+  'tech-et-data': { href: '/tech-data', label: 'Tech & Data' },
+  freelancer: { href: '/recrutement-freelance', label: 'Collaboration freelance' },
+  recrutement: { href: '/recrutement-freelance', label: 'Collaboration freelance' },
+};
+const parent = fiche.data.blogCategory ? SERVICE_BY_CATEGORY[fiche.data.blogCategory] : undefined;
+
+// Métiers proches : même famille, sinon autres fiches.
+const allMetiers = (await getCollection('metiers', ({ data }) => !data.draft)).filter((m) => m.id !== fiche.id);
+const sameFamily = allMetiers.filter((m) => m.data.blogCategory === fiche.data.blogCategory);
+const relatedMetiers = [...sameFamily, ...allMetiers.filter((m) => !sameFamily.includes(m))].slice(0, 4);
+
+// Articles du blog sur le même sujet.
+const relatedPosts = (await getCollection('blog', ({ data }) => !data.draft))
+  .filter((p) => fiche.data.blogCategory && p.data.tags.includes(fiche.data.blogCategory))
+  .sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0))
+  .slice(0, 3);
 ---
 <Base title={`${fiche.data.metaTitle ?? fiche.data.title} | digitags.work`} description={fiche.data.description}>
   <article>
     <section class="page-hero" style="padding-bottom: 36px;">
       <div class="container">
+        <Breadcrumb items={[{ label: 'Métiers', href: '/metiers' }, { label: fiche.data.title }]} />
         <p class="eyebrow"><a href="/metiers">Les métiers du Hub</a></p>
         <h1>{fiche.data.title}</h1>
         <div class="hero-cta">
           <a href="/contact" class="btn btn-dark">Trouver un freelance</a>
+          {parent && <a href={parent.href} class="btn btn-outline">Voir le pôle {parent.label}</a>}
         </div>
       </div>
     </section>
     <div class="container prose">
       {fiche.data.image && <img src={fiche.data.image} alt="" loading="eager" />}
       <Content />
-      {fiche.data.blogCategory && (
-        <p><a href={`/tag/${fiche.data.blogCategory}`} class="arrow-link">Lire nos articles #{fiche.data.blogCategory} <span aria-hidden="true">→</span></a></p>
-      )}
     </div>
   </article>
+
+  {relatedMetiers.length > 0 && (
+    <section class="rel-section">
+      <div class="container">
+        <h2 class="rel-title">Métiers proches</h2>
+        <ul class="metier-chips">
+          {relatedMetiers.map((m) => (
+            <li><a class="chip chip-link" href={`/metiers/${m.id}`}>{m.data.title}</a></li>
+          ))}
+          <li><a class="chip chip-link chip-more" href="/metiers">Tous les métiers →</a></li>
+        </ul>
+      </div>
+    </section>
+  )}
+
+  {relatedPosts.length > 0 && (
+    <section class="rel-section">
+      <div class="container">
+        <h2 class="rel-title">Pour aller plus loin</h2>
+        <div class="rel-grid">
+          {relatedPosts.map((p) => (
+            <article class="rel-card">
+              <h3><a href={`/blog/${p.id}`} class="stretch-link">{p.data.title}</a></h3>
+              {p.data.description && <p>{p.data.description.slice(0, 130)}…</p>}
+              <span class="arrow-link">Lire l'article <span aria-hidden="true">→</span></span>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   <CtaBanner title="Besoin de ce profil&nbsp;?" text="Décrivez votre besoin,<br />nous vous proposons les bons freelances." />
 </Base>

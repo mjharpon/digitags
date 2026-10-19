@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 
 export async function getStaticPaths() {
   const fiches = await getCollection('projets', ({ data }) => !data.draft);
@@ -84,7 +85,7 @@ const parsed = sections.length > 0;
     <section class="fiche-hero">
       <div class="container">
         <div>
-          <p class="breadcrumb"><a href="/projets">Projets</a> / {fiche.data.title}</p>
+          <Breadcrumb items={[{ label: 'Projets', href: '/projets' }, { label: fiche.data.title }]} />
           <h1>{fiche.data.title}</h1>
           {lead && <p class="lead">{lead}</p>}
           <a href="/contact" class="btn btn-dark">Lancer mon projet <span aria-hidden="true">→</span></a>

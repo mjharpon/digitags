@@ -17,9 +17,10 @@ interface Props {
   skillsTitle: string;
   skills: string[];
   reussites: Reussite[];
+  metiers?: { label: string; href: string }[];
 }
 
-const { eyebrow, title, lead, ctaLabel = "Décrire mon besoin", skillsTitle, skills, reussites } = Astro.props;
+const { eyebrow, title, lead, ctaLabel = "Décrire mon besoin", skillsTitle, skills, reussites, metiers } = Astro.props;
 ---
 <section class="page-hero">
   <div class="container">
@@ -39,6 +40,14 @@ const { eyebrow, title, lead, ctaLabel = "Décrire mon besoin", skillsTitle, ski
     <ul class="chips">
       {skills.map((s) => <li><span class="chip">{s}</span></li>)}
     </ul>
+    {metiers && metiers.length > 0 && (
+      <>
+        <h2 style="margin-top: 34px;">Nos fiches métiers</h2>
+        <ul class="chips">
+          {metiers.map((m) => <li><a class="chip chip-link" href={m.href}>{m.label}</a></li>)}
+        </ul>
+      </>
+    )}
   </div>
 </section>
 
