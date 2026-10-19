@@ -1,0 +1,117 @@
+---
+import Base from '../layouts/Base.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Testimonials from '../components/Testimonials.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+
+const features = [
+  { color: "hex-icon-blue", text: "Des équipes soudées qui ont déjà livré ensemble" },
+  { color: "hex-icon-yellow", text: "Un périmètre et un budget contractualisés" },
+  { color: "hex-icon-red", text: "Une vélocité immédiate, sans phase de constitution d'équipe" },
+  { color: "hex-icon-blue", text: "L'accompagnement du Hub de bout en bout" },
+];
+
+const formats = [
+  { title: "Un freelance expert", desc: "Pour un besoin précis et ponctuel : une compétence pointue qui s'intègre à votre équipe existante.", href: "/metiers", link: "Explorer les métiers" },
+  { title: "Une équipe sur mesure", desc: "Pour un projet transverse : nous composons une équipe complémentaire de freelances du réseau, pilotée et cohérente.", href: "/equipe-ia", link: "Voir l'exemple Équipe IA" },
+  { title: "Un studio constitué", desc: "Pour développer un produit complet : un collectif qui a ses méthodes, ses outils et l'habitude de livrer ensemble.", href: "/contact", link: "Faire appel à un studio" },
+];
+
+const useCases = [
+  "Site web vitrine ou corporate",
+  "Site e-commerce",
+  "Produit SaaS / plateforme web",
+  "Application mobile",
+  "MVP à lancer rapidement",
+  "Refonte technique d'un existant",
+];
+
+const reussites = [
+  { tag: "E-commerce", title: "Lancement e-commerce TOD'S", points: ["Coordination au sein des équipes digitales", "Lancement du nouveau site e-commerce", "Interface entre métiers, design et tech"] },
+  { tag: "Produit", title: "Simulateur de devis d'assurance", points: ["Équipe produit sur huit mois", "Cadrage, priorisation, delivery", "Développement efficace du simulateur"] },
+  { tag: "Site web", title: "Nouveau site de Lichens", points: ["Conception et réalisation complètes", "Site esthétique, fonctionnel et intuitif", "Aligné avec les objectifs stratégiques"] },
+];
+---
+<Base
+  title="Studios & collectifs de développeurs indépendants | digitags.work"
+  description="Un freelance ne suffit pas ? Accédez à 10 studios et collectifs de développeurs indépendants pour réaliser votre site web, votre e-commerce ou votre produit digital, avec l'accompagnement du Hub."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Studios &amp; Collectifs</p>
+      <h1>Un freelance ne suffit pas&nbsp;? Passez en équipe.</h1>
+      <p class="lead">Le Hub fédère 10 studios et collectifs de développeurs indépendants. Nous identifions celui qui est adapté à vos exigences et à votre budget pour développer votre site ou votre produit — et son savoir-faire vous accompagne à chaque étape.</p>
+      <div class="hero-cta">
+        <a href="/contact" class="btn btn-dark">Faire appel à un studio</a>
+        <a href="/contact" class="btn btn-outline">Réserver un appel de découverte</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container split-section">
+      <div class="split-text">
+        <h2>Une équipe constituée,<br />prête à démarrer</h2>
+        <p>Développer un produit complet demande plus qu'une compétence : design, développement, gestion de projet et qualité doivent avancer ensemble. Un studio apporte cette équipe déjà rodée — avec un seul interlocuteur.</p>
+        <p>Comme pour nos freelances, chaque studio du réseau est sélectionné pour ses réalisations, son savoir-faire et son état d'esprit, et le Hub reste à vos côtés du cadrage à la livraison.</p>
+      </div>
+      <div class="feature-panel">
+        {features.map((f) => (
+          <div class="feature-item">
+            <span class={`hex-icon ${f.color}`}></span>
+            <p>{f.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">Freelance, équipe ou studio&nbsp;?</p>
+      <h2 class="section-title">Trois formats selon votre projet.</h2>
+      <div class="benefits-grid">
+        {formats.map((f, i) => (
+          <article class="benefit-card">
+            <span class="num-round">{String(i + 1).padStart(2, '0')}</span>
+            <h3>{f.title}</h3>
+            <p>{f.desc}</p>
+            <p style="margin-top: 14px;"><a href={f.href} class="arrow-link">{f.link} <span aria-hidden="true">→</span></a></p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="skills-band">
+    <div class="container">
+      <h2>Les projets que les studios réalisent</h2>
+      <ul class="chips">
+        {useCases.map((u) => <li><span class="chip">{u}</span></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <HowItWorks />
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Les derniers projets réalisés.</h2>
+      <div class="reussites-grid">
+        {reussites.map((r) => (
+          <article class="reussite-card">
+            <p class="case-label label-blue">{r.tag}</p>
+            <h3>{r.title}</h3>
+            <ul>
+              {r.points.map((p) => <li>{p}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Testimonials />
+
+  <CtaBanner title="Besoin d'une équipe<br />pour votre projet&nbsp;?" text="Décrivez-nous votre besoin,<br />nous identifions le studio adapté." label="Faire appel à un studio" />
+</Base>
