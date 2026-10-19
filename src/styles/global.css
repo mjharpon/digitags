@@ -2109,6 +2109,19 @@ a.stat:hover span:last-child { text-decoration: underline; text-underline-offset
 .p3-id strong { font-size: 15px; font-weight: 800; display: block; }
 .p3-role { font-size: 12.5px; color: var(--blue); font-weight: 700; display: block; margin: 2px 0 6px; }
 .p3-badges { display: flex; gap: 5px; flex-wrap: wrap; }
+.p3-refs { display: flex; gap: 5px; flex-wrap: wrap; align-items: center; margin-top: 8px; }
+.p3-refs em {
+  font-style: normal; font-size: 10.5px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .06em; color: var(--ink-faint);
+  margin-right: 3px;
+}
+.p3-ref {
+  font-size: 11.5px; font-weight: 700;
+  background: var(--white); color: var(--ink-soft);
+  border: 1px solid var(--line); border-radius: 999px;
+  padding: 3px 10px;
+}
+.p3-ref-more { background: #eef1fb; color: var(--blue); border-color: #eef1fb; }
 .p3-cell { display: grid; gap: 4px; text-align: center; }
 .p3-cell label { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-faint); }
 .p3-tjm { font-size: 14.5px; font-weight: 800; }

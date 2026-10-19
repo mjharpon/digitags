@@ -169,6 +169,8 @@ const weeklyBudget = cfgItems.reduce((s, c) => s + c.tjm * c.days, 0);
               <div class="prop3-rows">
                 {items.map((it, i) => {
                   const p = it.profiles;
+                  const refs = refLines(p.reference_html);
+                  const refChips = refs && 'chips' in refs ? refs.chips : [];
                   return (
                     <div class="prop3-row" data-row={i}>
                       <span class="p3-ava" aria-hidden="true">
@@ -183,8 +185,16 @@ const weeklyBudget = cfgItems.reduce((s, c) => s + c.tjm * c.days, 0);
                         <span class="p3-role">{it.role_label ?? p.job}</span>
                         <span class="p3-badges">
                           {p.experience && <span class="badge">{p.experience}</span>}
+                          {p.stars > 0 && p.stars <= 5 && <span class="badge star">★ {p.stars}</span>}
                           {p.fluent_english && <span class="badge en">Anglais courant</span>}
                         </span>
+                        {refChips.length > 0 && (
+                          <span class="p3-refs">
+                            <em>A travaillé avec</em>
+                            {refChips.slice(0, 4).map((r: string) => <span class="p3-ref">{r}</span>)}
+                            {refChips.length > 4 && <span class="p3-ref p3-ref-more">+{refChips.length - 4}</span>}
+                          </span>
+                        )}
                       </div>
                       {allTjm && (
                         <>
