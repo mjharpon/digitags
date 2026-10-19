@@ -14,11 +14,11 @@ import Base from '../layouts/Base.astro';
           <label for="login-email">Email professionnel</label>
           <input type="email" id="login-email" placeholder="prenom@donutz.fr" autocomplete="email" />
         </div>
-        <button class="btn btn-dark" id="login-send">Recevoir mon code</button>
+        <button class="btn btn-dark" id="login-send">Recevoir mon lien de connexion</button>
       </div>
       <div id="login-step2" hidden>
         <div class="field">
-          <label for="login-code">Code reçu par email</label>
+          <label for="login-code">Code (si présent dans l'email)</label>
           <input type="text" id="login-code" inputmode="numeric" placeholder="123456" />
         </div>
         <button class="btn btn-dark" id="login-verify">Se connecter</button>
@@ -104,6 +104,13 @@ import Base from '../layouts/Base.astro';
     const toast = (msg) => { const t = $('toast'); t.textContent = msg; t.hidden = false; setTimeout(() => (t.hidden = true), 2600); };
 
     // ---------- Auth ----------
+    let started = false;
+    sb.auth.onAuthStateChange((event) => {
+      if (event === 'SIGNED_IN' && !started) {
+        $('login').hidden = true;
+        start();
+      }
+    });
     async function init() {
       const { data: { session } } = await sb.auth.getSession();
       if (session) return start();
@@ -114,11 +121,11 @@ import Base from '../layouts/Base.astro';
       const email = $('login-email').value.trim();
       if (!email) return;
       $('login-msg').textContent = 'Envoi du code…';
-      const { error } = await sb.auth.signInWithOtp({ email, options: { shouldCreateUser: true } });
+      const { error } = await sb.auth.signInWithOtp({ email, options: { shouldCreateUser: true, emailRedirectTo: location.origin + '/talents' } });
       if (error) { $('login-msg').textContent = 'Erreur : ' + error.message; return; }
       $('login-step1').hidden = true;
       $('login-step2').hidden = false;
-      $('login-msg').textContent = 'Code envoyé à ' + email + ' — vérifiez votre boîte (et les spams).';
+      $('login-msg').textContent = 'Email envoyé à ' + email + ' — cliquez le lien de connexion qu\'il contient (depuis cet appareil). Si l\'email affiche un code, vous pouvez aussi le saisir ci-dessus.';
     });
 
     $('login-verify').addEventListener('click', async () => {
@@ -134,6 +141,9 @@ import Base from '../layouts/Base.astro';
 
     // ---------- App ----------
     async function start() {
+      if (started) return;
+      started = true;
+      history.replaceState(null, '', location.pathname);
       $('app').hidden = false;
       const { data: groups, error } = await sb.from('job_groups').select('id, name').order('sort');
       if (error || !groups?.length) {
