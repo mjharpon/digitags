@@ -115,6 +115,8 @@ const specialites = [
           <textarea id="notes" name="notes" placeholder="Types de missions recherchées, secteurs, remote/sur site, jours par semaine…"></textarea>
         </div>
 
+        <div class="field captcha-field"><div class="g-recaptcha" data-sitekey="6LdDZR8kAAAAAGcQpmNKolpaUKPabQUOvEE6YVJw"></div></div>
+
         <button type="submit" class="btn btn-dark" id="freelance-submit">Rejoindre le Hub</button>
         <p id="freelance-error" style="color: var(--red); font-size: 13.5px; margin-top: 12px;" hidden></p>
 
@@ -138,6 +140,7 @@ const specialites = [
     </div>
   </section>
 
+  <script is:inline src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script>
     const form = document.getElementById('freelance-form') as HTMLFormElement;
     const errBox = document.getElementById('freelance-error') as HTMLParagraphElement;
@@ -179,6 +182,7 @@ const specialites = [
         errBox.hidden = false;
         btn.disabled = false;
         btn.textContent = 'Rejoindre le Hub';
+        try { (window as any).grecaptcha?.reset(); } catch {}
       }
     });
   </script>
