@@ -1,0 +1,374 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Talents — outil interne | digitags.work" description="Outil interne de recherche dans la base de talents du Hub.">
+  <noscript><p class="container" style="padding: 40px 0;">Cet outil nécessite JavaScript.</p></noscript>
+
+  <!-- Écran de connexion -->
+  <div id="login" class="tool-login" hidden>
+    <p class="eyebrow">Outil interne</p>
+    <h1 style="font-size: 26px; font-weight: 800; margin-bottom: 18px;">Talents du Hub</h1>
+    <div class="form-card">
+      <div id="login-step1">
+        <div class="field">
+          <label for="login-email">Email professionnel</label>
+          <input type="email" id="login-email" placeholder="prenom@donutz.fr" autocomplete="email" />
+        </div>
+        <button class="btn btn-dark" id="login-send">Recevoir mon code</button>
+      </div>
+      <div id="login-step2" hidden>
+        <div class="field">
+          <label for="login-code">Code reçu par email</label>
+          <input type="text" id="login-code" inputmode="numeric" placeholder="123456" />
+        </div>
+        <button class="btn btn-dark" id="login-verify">Se connecter</button>
+      </div>
+      <p id="login-msg" style="font-size: 13px; color: var(--ink-faint); margin-top: 12px;"></p>
+    </div>
+  </div>
+
+  <!-- App -->
+  <div id="app" class="tool" hidden>
+    <div class="tool-bar">
+      <h1>Talents du Hub</h1>
+      <div class="tool-tabs">
+        <button class="tool-tab active" data-tab="recherche">Recherche</button>
+        <button class="tool-tab" data-tab="propales">Propales</button>
+      </div>
+      <button class="btn btn-outline btn-sm" id="logout">Déconnexion</button>
+    </div>
+
+    <div id="tab-recherche">
+      <div class="filters">
+        <input type="search" id="f-q" placeholder="Rechercher un nom, un métier…" />
+        <select id="f-group"><option value="">Toutes les familles</option></select>
+        <select id="f-exp">
+          <option value="">Expérience (toutes)</option>
+        </select>
+        <select id="f-tjm">
+          <option value="">TJM (tous)</option>
+          <option value="0-400">&lt; 400 €</option>
+          <option value="400-600">400 – 600 €</option>
+          <option value="600-800">600 – 800 €</option>
+          <option value="800-9999">&gt; 800 €</option>
+        </select>
+        <label class="chk"><input type="checkbox" id="f-dispo" /> Disponibles</label>
+        <label class="chk"><input type="checkbox" id="f-en" /> Anglais courant</label>
+        <label class="chk"><input type="checkbox" id="f-stars" /> ★ 4+</label>
+      </div>
+      <div class="tool-layout">
+        <div>
+          <p class="results-meta" id="results-meta"></p>
+          <div class="profiles-grid" id="results"></div>
+          <p style="margin-top: 14px;"><button class="btn btn-outline btn-sm" id="more" hidden>Charger plus</button></p>
+        </div>
+        <aside class="sel-panel">
+          <h2>Sélection <span id="sel-count"></span></h2>
+          <p class="empty" id="sel-empty">Ajoutez des profils avec le bouton «&nbsp;+&nbsp;» pour composer une propale.</p>
+          <ul id="sel-list"></ul>
+          <button class="btn btn-ghost btn-sm" id="sel-create" hidden>Créer la propale →</button>
+        </aside>
+      </div>
+    </div>
+
+    <div id="tab-propales" hidden>
+      <div class="props-list" id="props-list"></div>
+    </div>
+  </div>
+
+  <!-- Fiche profil -->
+  <div id="drawer" class="drawer" hidden></div>
+
+  <!-- Formulaire propale -->
+  <div id="prop-form" class="drawer" hidden></div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script>
+    import { createClient } from '@supabase/supabase-js';
+
+    const URL_ = import.meta.env.PUBLIC_SUPABASE_URL;
+    const KEY = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
+    const $ = (id) => document.getElementById(id);
+    const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+    if (!URL_ || !KEY) {
+      document.body.insertAdjacentHTML('afterbegin', '<p class="container" style="padding:40px 24px;font-weight:700;">Configuration Supabase manquante (PUBLIC_SUPABASE_URL / PUBLIC_SUPABASE_ANON_KEY).</p>');
+      throw new Error('missing supabase config');
+    }
+    const sb = createClient(URL_, KEY);
+
+    const PAGE = 30;
+    let state = { page: 0, selection: new Map(), groups: [], lastCount: 0 };
+
+    const toast = (msg) => { const t = $('toast'); t.textContent = msg; t.hidden = false; setTimeout(() => (t.hidden = true), 2600); };
+
+    // ---------- Auth ----------
+    async function init() {
+      const { data: { session } } = await sb.auth.getSession();
+      if (session) return start();
+      $('login').hidden = false;
+    }
+
+    $('login-send').addEventListener('click', async () => {
+      const email = $('login-email').value.trim();
+      if (!email) return;
+      $('login-msg').textContent = 'Envoi du code…';
+      const { error } = await sb.auth.signInWithOtp({ email, options: { shouldCreateUser: true } });
+      if (error) { $('login-msg').textContent = 'Erreur : ' + error.message; return; }
+      $('login-step1').hidden = true;
+      $('login-step2').hidden = false;
+      $('login-msg').textContent = 'Code envoyé à ' + email + ' — vérifiez votre boîte (et les spams).';
+    });
+
+    $('login-verify').addEventListener('click', async () => {
+      const email = $('login-email').value.trim();
+      const token = $('login-code').value.trim();
+      const { error } = await sb.auth.verifyOtp({ email, token, type: 'email' });
+      if (error) { $('login-msg').textContent = 'Code invalide : ' + error.message; return; }
+      $('login').hidden = true;
+      start();
+    });
+
+    $('logout').addEventListener('click', async () => { await sb.auth.signOut(); location.reload(); });
+
+    // ---------- App ----------
+    async function start() {
+      $('app').hidden = false;
+      const { data: groups, error } = await sb.from('job_groups').select('id, name').order('sort');
+      if (error || !groups?.length) {
+        // RLS : utilisateur connecté mais pas membre de l'équipe → aucune donnée.
+        if (error || groups.length === 0) {
+          const { count } = await sb.from('profiles').select('id', { count: 'exact', head: true });
+          if (!count) {
+            $('app').innerHTML = '<p style="padding:40px;font-weight:700;">Accès non autorisé : votre email n\'est pas dans la liste de l\'équipe (table team_members), ou la base est vide.</p>';
+            return;
+          }
+        }
+      }
+      state.groups = groups ?? [];
+      $('f-group').insertAdjacentHTML('beforeend', state.groups.map((g) => `<option value="${g.id}">${esc(g.name)}</option>`).join(''));
+      const { data: exps } = await sb.from('profiles').select('experience').not('experience', 'is', null).limit(1000);
+      [...new Set((exps ?? []).map((e) => e.experience))].sort().forEach((e) =>
+        $('f-exp').insertAdjacentHTML('beforeend', `<option>${esc(e)}</option>`));
+      search(true);
+      loadProposals();
+    }
+
+    function buildQuery() {
+      let q = sb.from('profiles').select('id, name, job, photo_url, disponible, dispo_from, fluent_english, experience, stars, tarif_jour, tjm_free, job_group_id', { count: 'exact' });
+      const text = $('f-q').value.trim();
+      if (text) q = q.or(`name.ilike.%${text}%,job.ilike.%${text}%`);
+      if ($('f-group').value) q = q.eq('job_group_id', $('f-group').value);
+      if ($('f-exp').value) q = q.eq('experience', $('f-exp').value);
+      if ($('f-dispo').checked) q = q.eq('disponible', true);
+      if ($('f-en').checked) q = q.eq('fluent_english', true);
+      if ($('f-stars').checked) q = q.gte('stars', 4);
+      const tjm = $('f-tjm').value;
+      if (tjm) {
+        const [lo, hi] = tjm.split('-').map(Number);
+        q = q.gte('tjm_free', lo).lte('tjm_free', hi);
+      }
+      return q.order('stars', { ascending: false, nullsFirst: false }).order('name');
+    }
+
+    async function search(reset) {
+      if (reset) { state.page = 0; $('results').innerHTML = ''; }
+      const from = state.page * PAGE;
+      const { data, count, error } = await buildQuery().range(from, from + PAGE - 1);
+      if (error) { toast('Erreur : ' + error.message); return; }
+      $('results-meta').textContent = `${count} profil${count > 1 ? 's' : ''}`;
+      $('results').insertAdjacentHTML('beforeend', (data ?? []).map(card).join(''));
+      state.lastCount = count ?? 0;
+      $('more').hidden = from + PAGE >= (count ?? 0);
+    }
+
+    const tjmOf = (p) => p.tjm_free ?? p.tarif_jour;
+    function card(p) {
+      const sel = state.selection.has(p.id);
+      return `<article class="profile-card" data-id="${p.id}">
+        ${p.photo_url ? `<img src="${esc(p.photo_url)}" alt="" loading="lazy" />` : `<span class="avatar-fallback">${esc((p.name ?? '?')[0])}</span>`}
+        <div>
+          <h3>${esc(p.name)}</h3>
+          <p class="job">${esc(p.job ?? '')}</p>
+          <div class="badges">
+            ${p.disponible ? '<span class="badge ok">Dispo</span>' : p.dispo_from ? `<span class="badge warn">Dispo ${esc(p.dispo_from)}</span>` : ''}
+            ${p.stars ? `<span class="badge star">★ ${p.stars}</span>` : ''}
+            ${tjmOf(p) ? `<span class="badge">${tjmOf(p)} €/j</span>` : ''}
+            ${p.fluent_english ? '<span class="badge">EN</span>' : ''}
+            ${p.experience ? `<span class="badge">${esc(p.experience)}</span>` : ''}
+          </div>
+        </div>
+        <button class="sel-btn ${sel ? 'in' : ''}" data-sel="${p.id}" title="Ajouter à la sélection">${sel ? '✓' : '+'}</button>
+      </article>`;
+    }
+
+    ['f-group', 'f-exp', 'f-tjm', 'f-dispo', 'f-en', 'f-stars'].forEach((id) => $(id).addEventListener('change', () => search(true)));
+    let deb; $('f-q').addEventListener('input', () => { clearTimeout(deb); deb = setTimeout(() => search(true), 300); });
+    $('more').addEventListener('click', () => { state.page++; search(false); });
+
+    // ---------- Sélection ----------
+    $('results').addEventListener('click', async (e) => {
+      const selBtn = e.target.closest('[data-sel]');
+      if (selBtn) {
+        const id = selBtn.dataset.sel;
+        if (state.selection.has(id)) state.selection.delete(id);
+        else {
+          const name = selBtn.closest('.profile-card').querySelector('h3').textContent;
+          const job = selBtn.closest('.profile-card').querySelector('.job').textContent;
+          state.selection.set(id, { id, name, job });
+        }
+        selBtn.classList.toggle('in');
+        selBtn.textContent = selBtn.classList.contains('in') ? '✓' : '+';
+        renderSelection();
+        return;
+      }
+      const cardEl = e.target.closest('.profile-card');
+      if (cardEl) openProfile(cardEl.dataset.id);
+    });
+
+    function renderSelection() {
+      const n = state.selection.size;
+      $('sel-count').textContent = n ? `(${n})` : '';
+      $('sel-empty').hidden = n > 0;
+      $('sel-create').hidden = n === 0;
+      $('sel-list').innerHTML = [...state.selection.values()]
+        .map((s) => `<li><span>${esc(s.name)}</span><button data-rm="${s.id}" title="Retirer">×</button></li>`).join('');
+    }
+    $('sel-list').addEventListener('click', (e) => {
+      const rm = e.target.closest('[data-rm]');
+      if (!rm) return;
+      state.selection.delete(rm.dataset.rm);
+      renderSelection();
+      const btn = document.querySelector(`[data-sel="${rm.dataset.rm}"]`);
+      if (btn) { btn.classList.remove('in'); btn.textContent = '+'; }
+    });
+
+    // ---------- Fiche profil ----------
+    async function openProfile(id) {
+      const { data: p, error } = await sb.from('profiles').select('*').eq('id', id).single();
+      if (error) return toast('Erreur : ' + error.message);
+      const d = $('drawer');
+      d.innerHTML = `
+        <button class="close" id="drawer-close">×</button>
+        <div style="display:flex; gap:14px; align-items:center; margin-bottom:14px;">
+          ${p.photo_url ? `<img src="${esc(p.photo_url)}" style="width:64px;height:64px;border-radius:12px;object-fit:cover;" alt="" />` : ''}
+          <div><h2>${esc(p.name)}</h2><p class="job">${esc(p.job ?? '')}</p></div>
+        </div>
+        <section><div class="kv">
+          <div><span>TJM freelance</span>${p.tjm_free ? p.tjm_free + ' €/j' : '—'}</div>
+          <div><span>Tarif jour (vente)</span>${p.tarif_jour ? p.tarif_jour + ' €/j' : '—'}</div>
+          <div><span>Disponibilité</span>${p.disponible ? 'Disponible' : (p.dispo_from ?? '—')}</div>
+          <div><span>Expérience</span>${esc(p.experience ?? '—')}</div>
+          <div><span>Note</span>${p.stars ? '★ ' + p.stars : '—'}</div>
+          <div><span>Anglais courant</span>${p.fluent_english ? 'Oui' : 'Non'}</div>
+          <div><span>Expérience digitags</span>${esc(p.dgitags_experience ?? '—')}</div>
+          <div><span>Email</span>${esc(p.email ?? '—')}</div>
+        </div></section>
+        ${p.reference_html ? `<section><h4>Références</h4><div class="rich">${p.reference_html}</div></section>` : ''}
+        ${p.preferences_html ? `<section><h4>Préférences</h4><div class="rich">${p.preferences_html}</div></section>` : ''}
+        ${p.formation_html ? `<section><h4>Formation</h4><div class="rich">${p.formation_html}</div></section>` : ''}
+        ${p.notes_html ? `<section><h4>Notes internes</h4><div class="rich">${p.notes_html}</div></section>` : ''}
+        ${p.notes_tags_html ? `<section><h4>Tags</h4><div class="rich">${p.notes_tags_html}</div></section>` : ''}
+        <section><h4>Documents</h4><div class="doc-links">
+          ${p.cv_url ? `<a href="${esc(p.cv_url)}" target="_blank" rel="noopener">CV complet</a>` : ''}
+          ${p.cv_anonyme_url ? `<a href="${esc(p.cv_anonyme_url)}" target="_blank" rel="noopener">CV anonymisé</a>` : ''}
+          ${p.portfolio_url ? `<a href="${esc(p.portfolio_url)}" target="_blank" rel="noopener">Portfolio</a>` : ''}
+          ${p.portfolio_pdf_url ? `<a href="${esc(p.portfolio_pdf_url)}" target="_blank" rel="noopener">Portfolio PDF</a>` : ''}
+        </div></section>`;
+      d.hidden = false;
+      $('drawer-close').addEventListener('click', () => (d.hidden = true));
+    }
+
+    // ---------- Propales ----------
+    document.querySelectorAll('.tool-tab').forEach((t) => t.addEventListener('click', () => {
+      document.querySelectorAll('.tool-tab').forEach((x) => x.classList.remove('active'));
+      t.classList.add('active');
+      $('tab-recherche').hidden = t.dataset.tab !== 'recherche';
+      $('tab-propales').hidden = t.dataset.tab !== 'propales';
+      if (t.dataset.tab === 'propales') loadProposals();
+    }));
+
+    $('sel-create').addEventListener('click', () => {
+      const f = $('prop-form');
+      f.innerHTML = `
+        <button class="close" id="prop-close">×</button>
+        <h2 style="margin-bottom:16px;">Nouvelle propale</h2>
+        <div class="field"><label>Titre du projet *</label><input id="np-title" placeholder="Refonte e-commerce — Acme" /></div>
+        <div class="field"><label>Client</label><input id="np-client" placeholder="Acme SAS" /></div>
+        <div class="field"><label>Introduction (visible par le prospect)</label><textarea id="np-intro" placeholder="Suite à nos échanges, voici l'équipe que nous vous proposons…"></textarea></div>
+        <h4 style="margin: 10px 0;">Profils &amp; rôles</h4>
+        ${[...state.selection.values()].map((s) => `
+          <div class="field" data-np-item="${s.id}">
+            <label>${esc(s.name)} — rôle affiché &amp; TJM</label>
+            <div style="display:flex; gap:8px;">
+              <input class="np-role" placeholder="${esc(s.job || 'Rôle')}" style="flex:1;" />
+              <input class="np-tjm" type="number" placeholder="TJM €" style="width:110px;" />
+            </div>
+          </div>`).join('')}
+        <button class="btn btn-dark" id="np-save">Créer la propale</button>
+        <p id="np-msg" style="font-size:13px; color:var(--ink-faint); margin-top:10px;"></p>`;
+      f.hidden = false;
+      $('prop-close').addEventListener('click', () => (f.hidden = true));
+      $('np-save').addEventListener('click', createProposal);
+    });
+
+    async function createProposal() {
+      const title = $('np-title').value.trim();
+      if (!title) { $('np-msg').textContent = 'Le titre est requis.'; return; }
+      const { data: { user } } = await sb.auth.getUser();
+      const { data: prop, error } = await sb.from('proposals')
+        .insert({ title, client_name: $('np-client').value.trim() || null, intro: $('np-intro').value.trim() || null, created_by: user?.email })
+        .select().single();
+      if (error) { $('np-msg').textContent = 'Erreur : ' + error.message; return; }
+      const items = [...document.querySelectorAll('[data-np-item]')].map((el, i) => ({
+        proposal_id: prop.id,
+        profile_id: el.dataset.npItem,
+        role_label: el.querySelector('.np-role').value.trim() || el.querySelector('.np-role').placeholder,
+        tjm: Number(el.querySelector('.np-tjm').value) || null,
+        sort: i,
+      }));
+      const { error: e2 } = await sb.from('proposal_items').insert(items);
+      if (e2) { $('np-msg').textContent = 'Erreur : ' + e2.message; return; }
+      $('prop-form').hidden = true;
+      state.selection.clear();
+      renderSelection();
+      const url = `${location.origin}/p/${prop.token}`;
+      try { await navigator.clipboard.writeText(url); toast('Propale créée — lien copié ✓'); }
+      catch { toast('Propale créée'); }
+      loadProposals();
+      document.querySelector('[data-tab="propales"]').click();
+    }
+
+    async function loadProposals() {
+      const { data, error } = await sb.from('proposals')
+        .select('id, token, title, client_name, created_at, created_by, archived, proposal_items(id)')
+        .eq('archived', false)
+        .order('created_at', { ascending: false });
+      if (error) return;
+      $('props-list').innerHTML = (data ?? []).map((p) => `
+        <div class="prop-row">
+          <h3>${esc(p.title)}${p.client_name ? ` <span style="color:var(--ink-faint); font-weight:600;">· ${esc(p.client_name)}</span>` : ''}</h3>
+          <span class="meta">${p.proposal_items.length} profil${p.proposal_items.length > 1 ? 's' : ''} · ${new Date(p.created_at).toLocaleDateString('fr-FR')} · ${esc(p.created_by ?? '')}</span>
+          <a class="btn btn-outline btn-sm" href="/p/${p.token}" target="_blank" rel="noopener">Voir</a>
+          <button class="btn btn-dark btn-sm" data-copy="${p.token}">Copier le lien</button>
+          <button class="btn btn-outline btn-sm" data-arch="${p.id}">Archiver</button>
+        </div>`).join('') || '<p style="color:var(--ink-faint);">Aucune propale pour l\'instant — composez une sélection depuis l\'onglet Recherche.</p>';
+    }
+
+    $('props-list').addEventListener('click', async (e) => {
+      const cp = e.target.closest('[data-copy]');
+      if (cp) {
+        try { await navigator.clipboard.writeText(`${location.origin}/p/${cp.dataset.copy}`); toast('Lien copié ✓'); } catch {}
+        return;
+      }
+      const ar = e.target.closest('[data-arch]');
+      if (ar) {
+        await sb.from('proposals').update({ archived: true }).eq('id', ar.dataset.arch);
+        loadProposals();
+      }
+    });
+
+    init();
+  </script>
+</Base>
