@@ -8,8 +8,10 @@ export const prerender = false;
 import Base from '../../layouts/Base.astro';
 
 const { token } = Astro.params;
-const url = import.meta.env.SUPABASE_URL;
-const key = import.meta.env.SUPABASE_SERVICE_KEY;
+// Cloudflare : les secrets sont dans l'env du runtime ; en dev, dans .env.
+const runtimeEnv = (Astro.locals as any)?.runtime?.env ?? {};
+const url = runtimeEnv.SUPABASE_URL ?? import.meta.env.SUPABASE_URL;
+const key = runtimeEnv.SUPABASE_SERVICE_KEY ?? import.meta.env.SUPABASE_SERVICE_KEY;
 
 // Appels REST directs (PostgREST) : pas de supabase-js côté serveur.
 async function rest(path) {

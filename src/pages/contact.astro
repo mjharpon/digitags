@@ -16,10 +16,9 @@ import Base from '../layouts/Base.astro';
   <section class="section" style="padding-top: 20px;">
     <div class="container contact-wrap">
 
-      <form class="form-card" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/merci">
-        <input type="hidden" name="form-name" value="contact" />
-        <p class="hidden" style="display:none;">
-          <label>Ne pas remplir : <input name="bot-field" /></label>
+      <form class="form-card" id="contact-form">
+        <p class="hidden" style="display:none;" aria-hidden="true">
+          <label>Ne pas remplir : <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
         </p>
 
         <div class="field">
@@ -65,7 +64,8 @@ import Base from '../layouts/Base.astro';
           <textarea id="message" name="message" required placeholder="Contexte, objectifs, délais, budget si vous l'avez…"></textarea>
         </div>
 
-        <button type="submit" class="btn btn-dark">Envoyer mon brief</button>
+        <button type="submit" class="btn btn-dark" id="contact-submit">Envoyer mon brief</button>
+        <p id="contact-error" style="color: var(--red); font-size: 13.5px; margin-top: 12px;" hidden>L'envoi a échoué — réessayez, ou écrivez-nous directement à hello@digitags.work.</p>
       </form>
 
       <aside class="contact-aside">
@@ -92,5 +92,40 @@ import Base from '../layouts/Base.astro';
       const radio = document.querySelector('input[name="profil"][value="freelance"]');
       if (radio instanceof HTMLInputElement) radio.checked = true;
     }
+
+    // Envoi du brief vers Supabase (table contact_submissions, insertion anonyme via RLS).
+    const form = document.getElementById('contact-form');
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const fd = new FormData(form as HTMLFormElement);
+      if (fd.get('bot-field')) { location.href = '/merci'; return; } // honeypot
+      const btn = document.getElementById('contact-submit') as HTMLButtonElement;
+      btn.disabled = true;
+      btn.textContent = 'Envoi…';
+      try {
+        const res = await fetch(`${import.meta.env.PUBLIC_SUPABASE_URL}/rest/v1/contact_submissions`, {
+          method: 'POST',
+          headers: {
+            apikey: import.meta.env.PUBLIC_SUPABASE_ANON_KEY,
+            Authorization: `Bearer ${import.meta.env.PUBLIC_SUPABASE_ANON_KEY}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            profil: fd.get('profil'),
+            nom: fd.get('nom'),
+            email: fd.get('email'),
+            societe: fd.get('societe') || null,
+            expertise: fd.get('expertise') || null,
+            message: fd.get('message'),
+          }),
+        });
+        if (!res.ok) throw new Error(String(res.status));
+        location.href = '/merci';
+      } catch {
+        document.getElementById('contact-error')!.hidden = false;
+        btn.disabled = false;
+        btn.textContent = 'Envoyer mon brief';
+      }
+    });
   </script>
 </Base>

@@ -1,0 +1,4 @@
+# Redirections Cloudflare Pages
+/admin /cms/ 301
+/admin/* /cms/:splat 301
+/freesbiz / 301

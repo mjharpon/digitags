@@ -1,14 +1,13 @@
 import { defineConfig } from 'astro/config';
-import netlify from '@astrojs/netlify';
+import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
-  site: 'https://digitags.netlify.app',
+  site: 'https://digitags.work',
   trailingSlash: 'never',
   // Site statique par défaut ; les pages marquées `prerender = false`
-  // (propales /p/<token>) sont rendues à la demande via l'adaptateur Netlify.
-  // L'adaptateur n'est actif qu'au build : en dev, Astro rend ces pages lui-même
-  // (l'émulation Netlify du mode dev exige Deno, absent ici).
-  adapter: process.argv.includes('dev') ? undefined : netlify(),
+  // (propales /p/<token>) sont rendues à la demande par un Pages Function
+  // via l'adaptateur Cloudflare. En dev, Astro rend ces pages lui-même.
+  adapter: process.argv.includes('dev') ? undefined : cloudflare(),
   build: {
     format: 'file'
   }
