@@ -1,0 +1,185 @@
+---
+import Base from '../layouts/Base.astro';
+
+const specialites = [
+  "Content (CM, Vidéo, Rédac, UX Writing)",
+  "Data Science",
+  "Design",
+  "Développement",
+  "Product, PO & Project",
+  "SEA, Social Ads, Prog & SEO",
+];
+---
+<Base
+  title="Devenir freelance du Hub — référencez-vous en 30 secondes | digitags.work"
+  description="Rejoignez le réseau digitags.work : référencez votre profil freelance en 30 secondes et recevez des propositions de missions qui correspondent à votre métier et votre TJM."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Je suis freelance</p>
+      <h1>Référencez-vous en 30 secondes.</h1>
+      <p class="lead">Rejoignez le Hub et recevez des propositions de missions qui correspondent à votre métier, votre séniorité et votre TJM. Vos données restent privées&nbsp;: seule l'équipe digitags y accède, et vous pouvez demander leur suppression à tout moment à <a href="mailto:contactme@dgitags.com">contactme@dgitags.com</a>.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 20px;">
+    <div class="container contact-wrap">
+
+      <form class="form-card" id="freelance-form" novalidate>
+        <p style="display:none;" aria-hidden="true">
+          <label>Ne pas remplir : <input name="website" tabindex="-1" autocomplete="off" /></label>
+        </p>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="prenom">Prénom *</label>
+            <input type="text" id="prenom" name="prenom" required autocomplete="given-name" />
+          </div>
+          <div class="field">
+            <label for="nom">Nom *</label>
+            <input type="text" id="nom" name="nom" required autocomplete="family-name" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="tjm">Votre TJM en € *</label>
+            <input type="number" id="tjm" name="tjm" required min="50" max="5000" step="5" placeholder="600" />
+            <p class="field-hint">Pensez à inclure la commission digitags de 15&nbsp;%.</p>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="dispo">Disponible à partir du *</label>
+            <input type="date" id="dispo" name="dispo" required />
+          </div>
+          <div class="field">
+            <label for="specialite">Spécialité *</label>
+            <select id="specialite" name="specialite" required>
+              <option value="">— Choisir —</option>
+              {specialites.map((s) => <option>{s}</option>)}
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="job">Votre job *</label>
+          <input type="text" id="job" name="job" required placeholder="UX Designer senior, Développeur React, Consultant SEO…" />
+        </div>
+
+        <div class="field">
+          <label for="references">Vos plus belles références clients *</label>
+          <input type="text" id="references" name="references" required placeholder="L'Oréal, Tesla, Decathlon… (séparées par des virgules)" />
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="cv">Votre CV *</label>
+            <input type="file" id="cv" name="cv" required accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" />
+            <p class="field-hint">PDF, JPG ou PNG — 10&nbsp;Mo max. Le PDF permet la recherche par compétences.</p>
+          </div>
+          <div class="field">
+            <label for="photo">Votre photo</label>
+            <input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png,image/jpeg,image/png" />
+            <p class="field-hint">JPG ou PNG — optionnel, pour votre aperçu profil.</p>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="portfolio">Votre portfolio (lien)</label>
+            <input type="url" id="portfolio" name="portfolio" placeholder="https://…" />
+          </div>
+          <div class="field">
+            <label for="portfolio_pdf">Portfolio bis (fichier)</label>
+            <input type="file" id="portfolio_pdf" name="portfolio_pdf" accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" />
+            <p class="field-hint">PDF, JPG ou PNG — 10&nbsp;Mo max.</p>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="check-pills">
+            <label><input type="checkbox" name="anglais" /> Je parle anglais couramment</label>
+            <label><input type="checkbox" name="cdi" /> Je suis ouvert·e à un CDI</label>
+            <label><input type="checkbox" name="pas_visible" /> Je ne souhaite <strong>pas</strong> que l'aperçu anonymisé de mon profil apparaisse sur le site ou la newsletter</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="notes">Vos préférences</label>
+          <textarea id="notes" name="notes" placeholder="Types de missions recherchées, secteurs, remote/sur site, jours par semaine…"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-dark" id="freelance-submit">Rejoindre le Hub</button>
+        <p id="freelance-error" style="color: var(--red); font-size: 13.5px; margin-top: 12px;" hidden></p>
+
+        <div id="freelance-success" class="form-success" hidden>
+          <h2>Bienvenue dans le Hub&nbsp;🎉</h2>
+          <p>Votre profil est enregistré. Nous revenons vers vous dès qu'une mission correspond à votre métier et vos préférences. Pour toute question ou pour supprimer vos données&nbsp;: <a href="mailto:contactme@dgitags.com">contactme@dgitags.com</a>.</p>
+        </div>
+      </form>
+
+      <aside class="contact-aside">
+        <h2>Pourquoi rejoindre le Hub&nbsp;?</h2>
+        <ul class="aside-list">
+          <li><span class="hex-icon hex-icon-blue"></span> Des missions qualifiées, pas des appels d'offres</li>
+          <li><span class="hex-icon hex-icon-yellow"></span> Un réseau de 1&nbsp;600 pairs, depuis 8 ans</li>
+          <li><span class="hex-icon hex-icon-red"></span> Vous restez maître de votre TJM et de vos choix</li>
+        </ul>
+        <p>Vos données ne sont jamais publiées en clair&nbsp;: les clients ne voient qu'un profil anonymisé, et seulement si vous l'acceptez. Détails dans notre <a href="/politique-de-protection-des-donnees">politique de protection des données</a>.</p>
+        <p style="margin-top:22px;">Une question&nbsp;?<br /><a href="mailto:contactme@dgitags.com">contactme@dgitags.com</a></p>
+      </aside>
+
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('freelance-form') as HTMLFormElement;
+    const errBox = document.getElementById('freelance-error') as HTMLParagraphElement;
+    const MAX = 10 * 1024 * 1024;
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errBox.hidden = true;
+      if (!form.reportValidity()) return;
+
+      // Contrôle de taille côté client avant l'envoi.
+      for (const name of ['cv', 'photo', 'portfolio_pdf']) {
+        const input = form.elements.namedItem(name) as HTMLInputElement;
+        const file = input?.files?.[0];
+        if (file && file.size > MAX) {
+          errBox.textContent = `Le fichier « ${file.name} » dépasse 10 Mo.`;
+          errBox.hidden = false;
+          input.focus();
+          return;
+        }
+      }
+
+      const btn = document.getElementById('freelance-submit') as HTMLButtonElement;
+      btn.disabled = true;
+      btn.textContent = 'Envoi en cours…';
+      try {
+        const res = await fetch('/api/candidature', { method: 'POST', body: new FormData(form) });
+        const data = await res.json().catch(() => ({ ok: false }));
+        if (!res.ok || !data.ok) throw new Error(data.error || 'Erreur serveur');
+        for (const el of Array.from(form.children)) {
+          if ((el as HTMLElement).id !== 'freelance-success') (el as HTMLElement).style.display = 'none';
+        }
+        (document.getElementById('freelance-success') as HTMLElement).hidden = false;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (err) {
+        errBox.textContent = err instanceof Error && err.message !== 'Erreur serveur'
+          ? err.message
+          : "L'envoi a échoué — réessayez, ou envoyez votre CV à contactme@dgitags.com.";
+        errBox.hidden = false;
+        btn.disabled = false;
+        btn.textContent = 'Rejoindre le Hub';
+      }
+    });
+  </script>
+</Base>

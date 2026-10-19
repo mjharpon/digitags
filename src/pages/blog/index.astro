@@ -10,13 +10,13 @@ const tags = [...new Set(posts.flatMap((p) => p.data.tags))].sort();
 ---
 <Base
   title="Le blog du Hub | digitags.work"
-  description="Recrutement freelance, design, product, tech & data : les conseils et retours d'expérience du réseau digitags.work."
+  description="Collaboration freelance, design, product, tech & data : les conseils et retours d'expérience du réseau digitags.work."
 >
   <section class="page-hero">
     <div class="container">
       <p class="eyebrow">Le blog du Hub</p>
       <h1>Conseils et retours d'expérience du réseau.</h1>
-      <p class="lead">Recrutement freelance, design, product, tech &amp; data : ce que les experts du Hub apprennent sur le terrain.</p>
+      <p class="lead">Collaboration freelance, design, product, tech &amp; data : ce que les experts du Hub apprennent sur le terrain.</p>
       {tags.length > 0 && (
         <ul class="chips" style="margin-top: 8px;">
           {tags.map((t) => <li><a class="chip" href={`/tag/${t}`}>#{t}</a></li>)}

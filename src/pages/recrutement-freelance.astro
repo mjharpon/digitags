@@ -5,38 +5,38 @@ import Testimonials from '../components/Testimonials.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 
 const benefits = [
-  { color: "hex-icon-blue", title: "Des talents hautement qualifiés", desc: "Accédez à des compétences pointues, immédiatement opérationnelles, pour des besoins spécifiques — sans processus de recrutement long." },
-  { color: "hex-icon-yellow", title: "La flexibilité en plus", desc: "Engagez un expert pour une mission courte ou un accompagnement long, et ajustez l'équipe au rythme réel de votre projet." },
+  { color: "hex-icon-blue", title: "Des talents hautement qualifiés", desc: "Accédez à des compétences pointues, immédiatement opérationnelles, pour des besoins spécifiques — une prestation de services, pas une embauche." },
+  { color: "hex-icon-yellow", title: "La flexibilité en plus", desc: "Faites appel à un expert pour une mission courte ou un accompagnement long, et ajustez le dispositif au rythme réel de votre projet." },
   { color: "hex-icon-red", title: "Un budget maîtrisé", desc: "Vous contractualisez une prestation précise, sur une période donnée : pas de charges cachées, pas de frais de formation." },
 ];
 
 const process = [
   { title: "Définissez vos besoins", desc: "Clarifiez le périmètre du projet et les compétences requises : c'est ce qui permet de cibler — et de convaincre — les bons freelances." },
-  { title: "Cadrez votre budget", desc: "Durée, TJM, modalités : une prestation définie sur une période limitée, pour un travail précis. Vous gardez la main." },
-  { title: "Recherchez les talents", desc: "Plutôt que d'écumer les plateformes, appuyez-vous sur le Hub : nous proposons votre projet aux profils du réseau réellement intéressés." },
+  { title: "Cadrez votre budget", desc: "Durée, TJM, modalités : une prestation définie sur une période limitée, pour un livrable précis. Vous gardez la main." },
+  { title: "Identifiez les talents", desc: "Plutôt que d'écumer les plateformes, appuyez-vous sur le Hub : nous proposons votre projet aux profils du réseau réellement intéressés." },
   { title: "Évaluez les compétences", desc: "Vous rencontrez les talents présélectionnés, examinez leurs réalisations, et prenez la décision finale. Le freelancing est du win-win : votre projet doit aussi les motiver." },
-  { title: "Contractualisez la collaboration", desc: "Mettez-vous d'accord sur les tarifs et conditions qui conviennent aux deux parties, noir sur blanc." },
-  { title: "Collaborez, dans la durée", desc: "Communication claire, suivi régulier, feedback dans les deux sens : un freelance n'est pas votre employé, c'est un partenaire qui reste maître de son organisation." },
+  { title: "Contractualisez la collaboration", desc: "Mettez-vous d'accord sur les tarifs et conditions qui conviennent aux deux parties, noir sur blanc : un contrat de prestation clair protège les deux côtés." },
+  { title: "Collaborez, dans la durée", desc: "Communication claire, suivi régulier, feedback dans les deux sens : un freelance n'est pas votre employé, c'est un partenaire indépendant qui reste maître de son organisation et de ses méthodes." },
 ];
 ---
 <Base
-  title="Recrutement freelance : trouver les meilleurs experts du digital | digitags.work"
-  description="Pourquoi recruter un freelance, comment convaincre les meilleurs et réussir la collaboration : la méthode digitags.work, avec un réseau de 1 600 experts vérifiés."
+  title="Collaborer avec un freelance : trouver les meilleurs experts du digital | digitags.work"
+  description="Pourquoi faire appel à un freelance, comment convaincre les meilleurs et réussir la collaboration : la méthode digitags.work, avec un réseau de 1 600 experts vérifiés."
 >
   <section class="page-hero">
     <div class="container">
-      <p class="eyebrow">Recrutement freelance</p>
+      <p class="eyebrow">Collaboration freelance</p>
       <h1>Trouver le bon freelance, et le convaincre.</h1>
       <p class="lead">UX designer, développeur, rédacteur SEO ou data scientist : faire appel à un freelance est une excellente réponse à un besoin précis et ponctuel. Encore faut-il trouver le bon profil — et lui donner envie de travailler avec vous. Voici notre méthode.</p>
       <div class="hero-cta">
-        <a href="/contact" class="btn btn-dark">Recruter un freelance</a>
+        <a href="/contact" class="btn btn-dark">Trouver un freelance</a>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Pourquoi recruter un freelance&nbsp;?</h2>
+      <h2 class="section-title">Pourquoi collaborer avec un freelance&nbsp;?</h2>
       <div class="benefits-grid">
         {benefits.map((b) => (
           <article class="benefit-card">
@@ -51,8 +51,8 @@ const process = [
 
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Les 6 étapes d'un recrutement réussi.</h2>
-      <p class="section-lead">De la définition du besoin au démarrage de la collaboration, chaque étape compte — et le Hub vous accompagne sur chacune.</p>
+      <h2 class="section-title">Les 6 étapes d'une collaboration réussie.</h2>
+      <p class="section-lead">De la définition du besoin au démarrage de la mission, chaque étape compte — et le Hub vous accompagne sur chacune.</p>
       <ol class="process-list">
         {process.map((p) => (
           <li class="process-item">
