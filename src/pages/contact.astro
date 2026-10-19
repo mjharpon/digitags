@@ -21,13 +21,7 @@ import Base from '../layouts/Base.astro';
           <label>Ne pas remplir : <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
         </p>
 
-        <div class="field">
-          <label>Vous êtes</label>
-          <div class="radio-pills" id="profil-pills">
-            <label><input type="radio" name="profil" value="entreprise" checked /> Je cherche un talent</label>
-            <label><input type="radio" name="profil" value="freelance" /> Je suis freelance</label>
-          </div>
-        </div>
+        <p class="form-note">Vous êtes freelance&nbsp;? <a href="/devenir-freelance">Référencez-vous en 30 secondes →</a></p>
 
         <div class="form-row">
           <div class="field">
@@ -86,13 +80,6 @@ import Base from '../layouts/Base.astro';
   </section>
 
   <script>
-    // Pre-select "Je suis freelance" when arriving via /contact?profil=freelance
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('profil') === 'freelance') {
-      const radio = document.querySelector('input[name="profil"][value="freelance"]');
-      if (radio instanceof HTMLInputElement) radio.checked = true;
-    }
-
     // Envoi du brief vers Supabase (table contact_submissions, insertion anonyme via RLS).
     const form = document.getElementById('contact-form');
     form?.addEventListener('submit', async (e) => {
@@ -111,7 +98,7 @@ import Base from '../layouts/Base.astro';
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            profil: fd.get('profil'),
+            profil: 'entreprise',
             nom: fd.get('nom'),
             email: fd.get('email'),
             societe: fd.get('societe') || null,
