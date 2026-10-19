@@ -1,0 +1,9 @@
+# En-têtes servis par Cloudflare Pages.
+
+# Catalogue d'API (RFC 9727) : type MIME linkset obligatoire.
+/.well-known/api-catalog
+  Content-Type: application/linkset+json
+
+/openapi.json
+  Content-Type: application/openapi+json
+  Access-Control-Allow-Origin: *

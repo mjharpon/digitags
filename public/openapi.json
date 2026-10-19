@@ -1,0 +1,104 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "digitags.work — API des formulaires",
+    "version": "1.0.0",
+    "description": "Endpoints publics de digitags.work, le hub des talents digitaux : déposer un brief de projet (entreprises) ou rejoindre le réseau (freelances). Les soumissions sont traitées par l'équipe digitags sous 24 h ouvrées.",
+    "contact": { "email": "hello@digitags.work", "url": "https://digitags.work/contact" }
+  },
+  "servers": [{ "url": "https://digitags.work" }],
+  "paths": {
+    "/api/contact": {
+      "post": {
+        "operationId": "submitProjectBrief",
+        "summary": "Déposer un brief de projet (entreprise)",
+        "description": "Envoie une demande de mise en relation avec des freelances du réseau. Un membre de l'équipe digitags recontacte l'adresse fournie.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": ["nom", "email", "message"],
+                "properties": {
+                  "nom": { "type": "string", "description": "Nom du contact" },
+                  "email": { "type": "string", "format": "email" },
+                  "societe": { "type": "string", "description": "Société (optionnel)" },
+                  "expertise": {
+                    "type": "string",
+                    "description": "Expertise concernée (optionnel)",
+                    "enum": ["Design & UX", "Marketing & Acquisition", "Product & Projet", "Tech & Data", "Équipe IA", "Plusieurs expertises / une équipe", "Autre"]
+                  },
+                  "message": { "type": "string", "description": "Le brief : contexte, objectifs, délais, budget" },
+                  "brief": { "type": "string", "format": "binary", "description": "Pièce jointe optionnelle (PDF, Word, PowerPoint, JPG, PNG — 10 Mo max)" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Brief enregistré", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Ok" } } } },
+          "400": { "description": "Champs manquants ou invalides", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Err" } } } }
+        }
+      }
+    },
+    "/api/candidature": {
+      "post": {
+        "operationId": "submitFreelanceApplication",
+        "summary": "Rejoindre le réseau (freelance)",
+        "description": "Référence un profil freelance dans le hub digitags.work. Le CV est obligatoire ; les données restent privées (équipe digitags uniquement).",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "required": ["prenom", "nom", "email", "tjm", "dispo", "specialite", "job", "cv"],
+                "properties": {
+                  "prenom": { "type": "string" },
+                  "nom": { "type": "string" },
+                  "email": { "type": "string", "format": "email" },
+                  "tjm": { "type": "number", "description": "Taux journalier en euros, commission digitags de 15 % incluse", "minimum": 50, "maximum": 5000 },
+                  "dispo": { "type": "string", "format": "date", "description": "Disponible à partir du (AAAA-MM-JJ)" },
+                  "specialite": {
+                    "type": "string",
+                    "enum": ["Content (CM, Vidéo, Rédac, UX Writing)", "Data Science", "Design", "Développement", "Product, PO & Project", "SEA, Social Ads, Prog & SEO"]
+                  },
+                  "job": { "type": "string", "description": "Intitulé du métier, ex. « UX Designer senior »" },
+                  "references": { "type": "string", "description": "Références clients, séparées par des virgules" },
+                  "portfolio": { "type": "string", "format": "uri", "description": "Lien portfolio (optionnel)" },
+                  "portfolio_pdf": { "type": "string", "format": "binary", "description": "Portfolio en fichier (optionnel, 10 Mo max)" },
+                  "cv": { "type": "string", "format": "binary", "description": "CV (PDF, JPG ou PNG — 10 Mo max)" },
+                  "photo": { "type": "string", "format": "binary", "description": "Photo de profil (optionnel)" },
+                  "anglais": { "type": "string", "enum": ["on"], "description": "Présent si anglais courant" },
+                  "cdi": { "type": "string", "enum": ["on"], "description": "Présent si ouvert à un CDI" },
+                  "pas_visible": { "type": "string", "enum": ["on"], "description": "Présent pour refuser l'aperçu anonymisé public du profil" },
+                  "notes": { "type": "string", "description": "Préférences de missions (optionnel)" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Profil enregistré", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Ok" } } } },
+          "400": { "description": "Champs manquants ou fichier invalide", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Err" } } } }
+        }
+      }
+    },
+    "/api/health": {
+      "get": {
+        "operationId": "health",
+        "summary": "État du service",
+        "responses": {
+          "200": { "description": "Service opérationnel", "content": { "application/json": { "schema": { "type": "object", "properties": { "status": { "type": "string", "const": "ok" } } } } } }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Ok": { "type": "object", "properties": { "ok": { "type": "boolean", "const": true } } },
+      "Err": { "type": "object", "properties": { "ok": { "type": "boolean", "const": false }, "error": { "type": "string" } } }
+    }
+  }
+}
