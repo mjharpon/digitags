@@ -23,3 +23,9 @@
   from = "/admin/*"
   to = "/cms/:splat"
   status = 301
+
+# Page freesbiz abandonnée : redirection vers l'accueil
+[[redirects]]
+  from = "/freesbiz"
+  to = "/"
+  status = 301
