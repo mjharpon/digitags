@@ -137,7 +137,7 @@ Si votre freelance accède à des données personnelles (clients, collaborateurs
 
 Chez [Digitags.work](https://www.digitags.work/), on sait que le **recrutement freelance** ne se résume pas à trouver le bon profil. C'est aussi s'assurer que la collaboration démarre sur des bases saines, transparentes et conformes. Nous mettons en relation entreprises et freelances tech/digital triés sur le volet, tout en intégrant une dimension juridique dans le processus.
 
-Chaque mission peut être accompagnée d'un modèle de contrat adapté, co-construit avec toutes les parties. Vous gagnez du temps, vous réduisez les risques, vous vous concentrez sur l'essentiel : faire avancer vos projets. Que vous cherchiez un développeur React, un consultant SEO ou un chef de projet digital, Digitags.work vous offre un cadre sécurisé pour recruter sereinement.
+Chaque mission peut être accompagnée d'un modèle de contrat adapté, co-construit avec toutes les parties. Vous gagnez du temps, vous réduisez les risques, vous vous concentrez sur l'essentiel : faire avancer vos projets. Que vous cherchiez un développeur React, un [consultant SEO](/metiers/freelance-seo) ou un [chef de projet](/metiers/chef-de-projet-freelance) digital, Digitags.work vous offre un cadre sécurisé pour recruter sereinement.
 
 ‍
 

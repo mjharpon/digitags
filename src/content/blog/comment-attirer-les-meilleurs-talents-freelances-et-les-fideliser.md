@@ -124,7 +124,7 @@ Lors de notre interview, il m’a confié qu’il apprenait 10 000 fois plus dep
 
 « Chez digitags et donutz, on sort de notre **zone de confort**. Au quotidien, les clients demandent des choses très diverses, qui sortent du cadre. Depuis 2 ans, j’apprends de nouvelles choses tous les jours et j’ai de nouvelles responsabilités ».
 
-Il ajoute « De plus, être freelance est un bon moyen de **monter rapidement en compétence** car on est plus souvent livré à nous-mêmes. On acquiert donc de nouvelles compétences et on apprend à s’adapter sur le savoir-faire comme sur le savoir être. Avant je savais faire que du Google ads. A l’heure actuelle, je pourrais me lancer et créer un e-commerce en maîtrisant toute la chaîne de valeur ».
+Il ajoute « De plus, être freelance est un bon moyen de **monter rapidement en compétence** car on est plus souvent livré à nous-mêmes. On acquiert donc de nouvelles compétences et on apprend à s’adapter sur le savoir-faire comme sur le savoir être. Avant je savais faire que du [Google ads](/metiers/expert-sea-freelance). A l’heure actuelle, je pourrais me lancer et créer un e-commerce en maîtrisant toute la chaîne de valeur ».
 
 ## **La fidélisation chez Digitags et donutz digital**
 

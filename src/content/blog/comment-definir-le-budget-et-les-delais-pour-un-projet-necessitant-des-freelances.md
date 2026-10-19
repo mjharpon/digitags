@@ -28,7 +28,7 @@ Il est essentiel de bien définir les objectifs et les attentes du projet avant 
 
 ### **Définir les rôles et responsabilités de chaque membre de l'équipe**
 
-Vous devrez déterminer qui sera le coordinateur principal du projet, le chef de projet et quels autres membres formeront l'équipe. Les rôles spécifiques doivent être clairement définis afin que chacun sache exactement ce qui est attendu de lui.
+Vous devrez déterminer qui sera le coordinateur principal du projet, le [chef de projet](/metiers/chef-de-projet-freelance) et quels autres membres formeront l'équipe. Les rôles spécifiques doivent être clairement définis afin que chacun sache exactement ce qui est attendu de lui.
 
 ### **Identifier les ressources nécessaires pour le projet**
 

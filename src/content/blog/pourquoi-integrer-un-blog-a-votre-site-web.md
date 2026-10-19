@@ -76,7 +76,7 @@ Astuce : recyclez vos contenus. Un article = un post LinkedIn, une infographie I
 
 ## Le SEO sans migraine : devenez copain avec Google
 
-Pas besoin d’un consultant SEO en cape pour réussir. Voici le B.A.-BA :
+Pas besoin d’un [consultant SEO](/metiers/freelance-seo) en cape pour réussir. Voici le B.A.-BA :
 
 -   Utilisez des mots-clés **pertinents** (pas "stratégie transformationnelle blockchain immersive")
 -   Écrivez des titres **clairs et engageants**

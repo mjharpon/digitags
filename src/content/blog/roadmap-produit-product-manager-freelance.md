@@ -7,7 +7,7 @@ image: "/uploads/blog/roadmap-produit-product-manager-freelance-cover.png"
 
 Vous pilotez une startup en croissance, une scale-up qui accélère ou une TPE qui digitalise ses services ? Vous savez que la roadmap produit est l'épine dorsale de votre stratégie digitale. Mais entre les priorités business qui changent toutes les semaines, les sprints qui s'enchaînent et les arbitrages techniques à faire en urgence, structurer cette vision produit relève parfois du casse-tête.
 
-C'est là qu'intervient le **recrutement freelance** d'un product manager (PM) externe. Pas un CDI qui va mettre trois mois à se mettre en selle, mais un expert agile qui débarque, comprend vite, cadre la vision produit et construit avec vous une roadmap claire, priorisée et alignée avec vos objectifs business. Dans cet article, on vous explique pourquoi faire appel à un **product manager freelance** peut transformer votre façon de concevoir et déployer vos produits digitaux.
+C'est là qu'intervient le **recrutement freelance** d'un [product manager](/metiers/product-manager-freelance) (PM) externe. Pas un CDI qui va mettre trois mois à se mettre en selle, mais un expert agile qui débarque, comprend vite, cadre la vision produit et construit avec vous une roadmap claire, priorisée et alignée avec vos objectifs business. Dans cet article, on vous explique pourquoi faire appel à un **product manager freelance** peut transformer votre façon de concevoir et déployer vos produits digitaux.
 
 ## **Pourquoi externaliser la construction de votre roadmap produit ?**
 
@@ -95,7 +95,7 @@ Avant de chercher un PM, posez-vous les bonnes questions :
 
 -   Qu'attendez-vous concrètement de cette mission ? (refonte de la roadmap, lancement d'un nouveau produit, structuration de la démarche produit…)
 -   Quels sont vos indicateurs de succès ? (time-to-market, satisfaction utilisateur, chiffre d'affaires généré…)
--   Quelle autonomie souhaitez-vous donner au PM ? (full ownership ou accompagnement d'un product owner junior ?)
+-   Quelle autonomie souhaitez-vous donner au PM ? (full ownership ou accompagnement d'un [product owner](/metiers/product-owner-freelance) junior ?)
 
 Plus votre brief sera précis, plus vous attirerez les bons profils et plus la collaboration sera efficace.
 
@@ -191,7 +191,7 @@ Demandez-lui son portfolio avec des exemples concrets de roadmaps construites, d
 
 ### **Un PM freelance peut-il manager une équipe produit interne ?**
 
-Oui, tout à fait. Beaucoup de PM freelances ont l'habitude de manager des product owners, des UX designers ou des chefs de projet junior. Ils peuvent à la fois structurer la stratégie produit et coacher vos équipes internes pour monter en compétence. C'est même souvent un format gagnant-gagnant : vous bénéficiez de l'expertise senior tout en formant vos talents en interne.
+Oui, tout à fait. Beaucoup de PM freelances ont l'habitude de manager des product owners, des UX designers ou des [chefs de projet](/metiers/chef-de-projet-freelance) junior. Ils peuvent à la fois structurer la stratégie produit et coacher vos équipes internes pour monter en compétence. C'est même souvent un format gagnant-gagnant : vous bénéficiez de l'expertise senior tout en formant vos talents en interne.
 
 ‍
 

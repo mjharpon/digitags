@@ -6,7 +6,7 @@ tags: [design, freelancer]
 image: "/uploads/blog/linterview-de-melanie-michou-ux-writer-freelance-cover.webp"
 ---
 
-Connaissez vous l'UX Writing ? Mélanie, UX Writer d'expérience au sein de la communauté Tags vous parle de cette discipline peu connue encore en France.
+Connaissez vous l'[UX Writing](/metiers/ux-writer-freelance) ? Mélanie, UX Writer d'expérience au sein de la communauté Tags vous parle de cette discipline peu connue encore en France.
 
 ### \> Qui es-tu et que fais-tu au quotidien?
 
@@ -70,7 +70,7 @@ Heureusement, chaque choix est justifié, vu que l’on s’appuie sur de la dat
 
 J’ai été recrutée par Digitags pour une mission freelance de deux mois. **J’ai été la première UX Writer à rejoindre la manufacture digitale du Crédit Agricole**, pour créer une nouvelle app et un nouveau service innovant !
 
-Très rapidement, et après un accompagnement sur mesure par dgitags.io, j’ai été intégrée à une équipe, composée d’un PO, une UX Designer, une UI et un développeur. En 3 semaines, nous avons mené nos premières recherches et les contours de l’app prenaient forme ! 
+Très rapidement, et après un accompagnement sur mesure par dgitags.io, j’ai été intégrée à une équipe, composée d’un PO, une [UX Designer](/metiers/ux-designer-freelance), une UI et un développeur. En 3 semaines, nous avons mené nos premières recherches et les contours de l’app prenaient forme ! 
 
 ### \> Des ressources pour aller plus loin  ?
 

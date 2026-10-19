@@ -44,7 +44,7 @@ Comme je le disais dans l'intro, il existe plusieurs branches dans le métier de
 -   **Graphiste** : il est celui qui créera l’image de marque de votre entreprise. Il élabore des designs qui se déclinent sur différents supports. Son objectif est d’améliorer le branding de votre marque.
 -   **Le web-designer** ou **concepteur web**, travaille plutôt sur l’esthétique et l’aspect visuel de votre site et de vos supports numériques. Son objectif est de rendre votre site attrayant et ergonomique pour faciliter son utilisation et le rendre agréable aux yeux des utilisateurs. Un bon web-designer renforcera l’attractivité de votre entreprise.
 
-Le métier de web-designer se décline en deux spécialisations, l’UX designer et l’UI designer :
+Le métier de web-designer se décline en deux spécialisations, l’[UX designer](/metiers/ux-designer-freelance) et l’[UI designer](/metiers/ui-designer-freelance) :
 
 -   **Un UI designer** ou concepteur d’interface utilisateur est en charge du design graphique de l’interface des produits digitaux.
 -   **Un UX Designer** a pour mission d’imaginer et de concevoir des parcours utilisateurs en s'appuyant sur le comportement des utilisateurs.

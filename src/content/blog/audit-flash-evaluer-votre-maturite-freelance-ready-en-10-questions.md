@@ -149,7 +149,7 @@ Notre approche repose sur trois piliers complémentaires.
 
 **Enfin, la simplicité opérationnelle.** Contrats, paiements, suivi de mission et facturation sont centralisés. Les aspects juridiques (NDA, propriété intellectuelle, conformité RGPD) sont cadrés de manière standard et sécurisée. La charge mentale administrative est gérée de notre côté, vous pouvez vous concentrer sur l'essentiel : la réussite de vos projets.
 
-Concrètement, vous pouvez chercher un développeur front/back, un expert marketing digital (SEO, paid, CRO, data), un product manager ou un designer UI/UX : **Digitags.work** vous permet de recruter des freelances qualifiés rapidement, sans sacrifier la qualité. En deux à trois jours, vous rencontrez des profils pertinents, en une à deux semaines, vous avez un sprint qui tourne et des premiers livrables.
+Concrètement, vous pouvez chercher un développeur front/back, un expert marketing digital (SEO, paid, CRO, data), un [product manager](/metiers/product-manager-freelance) ou un designer UI/UX : **Digitags.work** vous permet de recruter des freelances qualifiés rapidement, sans sacrifier la qualité. En deux à trois jours, vous rencontrez des profils pertinents, en une à deux semaines, vous avez un sprint qui tourne et des premiers livrables.
 
 ‍
 

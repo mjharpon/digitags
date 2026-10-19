@@ -6,7 +6,7 @@ tags: [product]
 image: "/uploads/blog/product-owner-vs-chef-de-projet-cover.png"
 ---
 
-Product Owner et chef de projet ? c'est la même chose non ? Pas tout à fait !
+[Product Owner](/metiers/product-owner-freelance) et [chef de projet](/metiers/chef-de-projet-freelance) ? c'est la même chose non ? Pas tout à fait !
 
 ![chef de projet dgitags product owner](/uploads/blog/product-owner-vs-chef-de-projet-0.png)
 

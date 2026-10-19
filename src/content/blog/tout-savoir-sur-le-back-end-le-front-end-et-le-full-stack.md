@@ -14,7 +14,7 @@ Le back-end est la partie invisible d'un site web ou d'une application. C'est l�
 
 Le back-end gère les requêtes des utilisateurs, interagit avec la base de données, effectue des calculs complexes et gère la sécurité. Sans un back-end solide, le site ou l'application ne pourrait pas fonctionner correctement.
 
-Les **développeurs back-end** utilisent des langages de programmation, des bases de données, des serveurs et des frameworks. Ils résolvent des problèmes de manière efficace et gèrent des volumes importants de données.
+Les **[développeurs back-end](/metiers/developpeur-back-end-freelance)** utilisent des langages de programmation, des bases de données, des serveurs et des frameworks. Ils résolvent des problèmes de manière efficace et gèrent des volumes importants de données.
 
 ‍
 
@@ -79,7 +79,7 @@ Voici 5 compétences à rechercher en priorité chez un [**développeur front-en
 
 Le full-stack peut s’attaquer à la fois au back-end et au front-end d'un projet. **Un** [**développeur full-stack**](https://www.digitags.work/metiers/full-stack-developpeur-freelance) est capable de travailler sur toutes les parties d'un projet, ce qui lui donne une vision plus complète et une plus grande flexibilité.
 
-Un développeur full-stack peut travailler sur la logique de fonctionnement du site web ou de l'application, ainsi que sur l'interface utilisateur et l'expérience utilisateur.
+Un [développeur full-stack](/metiers/full-stack-developpeur-freelance) peut travailler sur la logique de fonctionnement du site web ou de l'application, ainsi que sur l'interface utilisateur et l'expérience utilisateur.
 
 Il doit avoir une bonne compréhension des langages de programmation, des bases de données, des serveurs, des frameworks front-end et back-end, ainsi que des compétences en résolution de problèmes et en gestion de projet.
 

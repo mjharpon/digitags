@@ -83,7 +83,7 @@ Une PME qui facilite l'onboarding technique de ses freelances gagne en productiv
 
 ### Anticiper les besoins récurrents
 
-Contrairement aux startups qui naviguent à vue, les PME peuvent commencer à anticiper leurs besoins en compétences freelances. Vous savez que chaque trimestre, vous aurez besoin d'un développeur back-end pour maintenir votre plateforme ? Identifiez ce profil en amont et contractualisez une collaboration régulière.
+Contrairement aux startups qui naviguent à vue, les PME peuvent commencer à anticiper leurs besoins en compétences freelances. Vous savez que chaque trimestre, vous aurez besoin d'un [développeur back-end](/metiers/developpeur-back-end-freelance) pour maintenir votre plateforme ? Identifiez ce profil en amont et contractualisez une collaboration régulière.
 
 Cette anticipation transforme le recrutement freelance en véritable stratégie RH, alignée sur vos objectifs business.
 

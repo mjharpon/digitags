@@ -42,7 +42,7 @@ Pour envoyer votre brief, saisissez le via [**le formulaire dédié**](https://w
 
 Votre brief est diffusé dans l'heure à nos agents de talents qui vont solliciter la communauté et sélectionner les meilleurs talents pour votre projet.
 
-Dès que notre account manager reçoit votre brief, il réalise une sélection dans les 24H top chrono des meilleurs profils pour votre projet.
+Dès que notre [account manager](/metiers/account-manager-freelance) reçoit votre brief, il réalise une sélection dans les 24H top chrono des meilleurs profils pour votre projet.
 
 Notre account manager pourra aussi vous proposer un [**Studio**](https://www.dgitags.io/studios) ou [**l'agence Donutz**](https://www.donutzdigital.com/) si cela nous semble la réponse la plus adéquate pour garantir le succès de votre projet.
 

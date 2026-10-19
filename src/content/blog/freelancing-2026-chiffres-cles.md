@@ -41,7 +41,7 @@ Si le freelancing touche désormais tous les secteurs d'activité, certains doma
 
 ### Tech et digital : l'avant-garde du mouvement
 
-Sans surprise, les métiers du numérique sont en tête. Développeurs web, data scientists, experts en cybersécurité, designers UX/UI… Ces profils hautement qualifiés privilégient massivement le statut freelance. Selon le dernier baromètre Malt, 68% des développeurs de moins de 35 ans envisagent sérieusement de passer indépendants dans les deux prochaines années.
+Sans surprise, les métiers du numérique sont en tête. [Développeurs web](/metiers/developeur-web-freelance), data scientists, experts en cybersécurité, [designers UX](/metiers/ux-designer-freelance)/UI… Ces profils hautement qualifiés privilégient massivement le statut freelance. Selon le dernier baromètre Malt, 68% des développeurs de moins de 35 ans envisagent sérieusement de passer indépendants dans les deux prochaines années.
 
 Pour un CTO, cette réalité impose une révision complète de la stratégie de recrutement. Fini le temps où l'on pouvait compter uniquement sur des CDI pour constituer ses équipes tech. Les meilleurs talents circulent désormais en mode projet, et les organisations qui l'ont compris prennent une longueur d'avance.
 
@@ -49,7 +49,7 @@ Pour un CTO, cette réalité impose une révision complète de la stratégie de 
 
 ### Marketing et communication
 
-Les CMO le constatent quotidiennement : trouver un content manager, un expert SEA ou un community manager en CDI relève du parcours du combattant. Parallèlement, l'offre freelance dans ces domaines explose. La raison ? Ces métiers se prêtent parfaitement au travail en mode projet, avec des missions bien définies et des résultats mesurables.
+Les CMO le constatent quotidiennement : trouver un content manager, un [expert SEA](/metiers/expert-sea-freelance) ou un community manager en CDI relève du parcours du combattant. Parallèlement, l'offre freelance dans ces domaines explose. La raison ? Ces métiers se prêtent parfaitement au travail en mode projet, avec des missions bien définies et des résultats mesurables.
 
 Le secteur du conseil suit la même trajectoire. Consultants en stratégie, experts en transformation digitale, coachs en management… Autant de profils seniors qui optent pour l'indépendance après avoir acquis leur expérience en cabinet ou en entreprise.
 

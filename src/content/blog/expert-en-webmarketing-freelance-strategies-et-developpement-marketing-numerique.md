@@ -16,7 +16,7 @@ Avez-vous déjà songé à embaucher un expert webmarketing freelance pour optim
 
 ## Qu'est-ce qu'un expert webmarketing freelance ?
 
-Un expert webmarketing freelance est un consultant spécialisé dans le marketing digital et les techniques de vente en ligne, qui aide les entreprises à améliorer leur visibilité sur internet. Il fournit des conseils pour la stratégie globale du projet et peut également offrir des services tels que le référencement naturel et payant (SEO/SEA), la publicité en ligne et le développement de contenus.
+Un expert webmarketing freelance est un consultant spécialisé dans le marketing digital et les techniques de vente en ligne, qui aide les entreprises à améliorer leur visibilité sur internet. Il fournit des conseils pour la stratégie globale du projet et peut également offrir des services tels que le [référencement naturel](/metiers/freelance-seo) et payant (SEO/SEA), la publicité en ligne et le développement de contenus.
 
 Les compétences requises pour être un expert en webmarketing sont variées : bonnes capacités d’analyse, maîtrise avancée des langages informatiques, connaissance approfondie des outils et techniques numériques, habitude du travail en ligne et aptitude à communiquer avec différents interlocuteurs. La maîtrise de ces compétences est essentielle pour garantir le succès du projet.
 

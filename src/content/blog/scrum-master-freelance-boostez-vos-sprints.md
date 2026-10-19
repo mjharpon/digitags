@@ -23,7 +23,7 @@ Enfin, le regard extérieur compte énormément. Quand on est immergé dans une 
 
 ‍
 
-  Scrum Master vs Chef de Projet 
+  Scrum Master vs [Chef de Projet](/metiers/chef-de-projet-freelance) 
 
 <style>body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8f9fa; padding: 40px 20px; margin: 0; } .container { max-width: 1200px; margin: 0 auto; } .visual-block { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); } h2 { color: #1a1a1a; font-size: 24px; margin-bottom: 30px; font-weight: 600; } .comparison-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 20px; } .role-card { background: #f8f9fa; border-radius: 8px; padding: 30px; border-left: 4px solid #2c3e50; } .role-card h3 { color: #2c3e50; font-size: 18px; margin-bottom: 20px; font-weight: 600; } .role-card ul { list-style: none; padding: 0; margin: 0; } .role-card li { color: #495057; padding: 10px 0; border-bottom: 1px solid #e9ecef; font-size: 14px; } .role-card li:last-child { border-bottom: none; } .role-card li::before { content: "→ "; color: #2c3e50; font-weight: bold; margin-right: 8px; } @media (max-width: 768px) { .comparison-grid { grid-template-columns: 1fr; } }</style>
 
@@ -55,7 +55,7 @@ En **méthodologie agile**, chaque réunion a un sens précis. Le scrum master s
 
 ### Lever les obstacles
 
-Les développeurs bloqués par un process admin kafkaïen ? Un conflit latent entre le Product Owner et l'équipe technique ? Le scrum master identifie ces freins et les élimine. Il joue le rôle de bouclier pour que l'équipe reste focalisée sur la création de valeur.
+Les développeurs bloqués par un process admin kafkaïen ? Un conflit latent entre le [Product Owner](/metiers/product-owner-freelance) et l'équipe technique ? Le scrum master identifie ces freins et les élimine. Il joue le rôle de bouclier pour que l'équipe reste focalisée sur la création de valeur.
 
 C'est un intermédiaire stratégique entre la direction, le métier et la tech. Il traduit les enjeux business en objectifs de sprint, et remonte les contraintes techniques de façon intelligible pour les décideurs. Cette double casquette fait toute la différence.
 
@@ -65,7 +65,7 @@ C'est un intermédiaire stratégique entre la direction, le métier et la tech. 
 
 Un bon scrum master ne se contente pas de faire tourner la machine. Il forme, accompagne et fait monter en compétence. Il aide les développeurs à mieux s'auto-organiser, le Product Owner à prioriser efficacement, et les parties prenantes à comprendre la logique agile.
 
-L'idée, à terme, c'est de rendre l'équipe autonome. Le **coach agile** n'est pas là pour s'incruster éternellement, mais pour installer les bons réflexes et la bonne culture. Quand il part, l'équipe doit pouvoir continuer à sprinter seule.
+L'idée, à terme, c'est de rendre l'équipe autonome. Le **[coach agile](/metiers/coach-agile)** n'est pas là pour s'incruster éternellement, mais pour installer les bons réflexes et la bonne culture. Quand il part, l'équipe doit pouvoir continuer à sprinter seule.
 
 ‍
 

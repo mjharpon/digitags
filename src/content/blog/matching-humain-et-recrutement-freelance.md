@@ -19,7 +19,7 @@ Dans cet article, on vous explique pourquoi le matching humain dans le recruteme
 
 ## Le CV ne dit pas tout : au-delà des compétences techniques
 
-On ne va pas se mentir : les hard skills, c'est la base. Personne ne recrute un développeur freelance qui ne maîtrise pas son stack. Mais voilà, le problème avec les compétences techniques, c'est qu'elles sont partout. En 2026, trouver un dev React ou un expert SEO n'est plus un défi insurmontable. Ce qui fait vraiment la différence, c'est la manière dont cette personne va s'intégrer dans votre dynamique, comprendre vos enjeux et travailler avec vos équipes.
+On ne va pas se mentir : les hard skills, c'est la base. Personne ne recrute un développeur freelance qui ne maîtrise pas son stack. Mais voilà, le problème avec les compétences techniques, c'est qu'elles sont partout. En 2026, trouver un dev React ou un [expert SEO](/metiers/freelance-seo) n'est plus un défi insurmontable. Ce qui fait vraiment la différence, c'est la manière dont cette personne va s'intégrer dans votre dynamique, comprendre vos enjeux et travailler avec vos équipes.
 
 Prenons un exemple concret. Vous recrutez un freelance pour refondre votre site e-commerce. Candidat A : CV impeccable, références prestigieuses, mais il communique une fois par semaine, prend les feedbacks comme des attaques personnelles et ne comprend pas pourquoi vous avez besoin de points réguliers. Candidat B : compétences solides sans être extraordinaires, mais il pose les bonnes questions, s'adapte à votre rythme et anticipe vos besoins. Qui choisissez-vous ?
 

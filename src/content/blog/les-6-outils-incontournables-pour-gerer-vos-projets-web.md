@@ -60,7 +60,7 @@ Ces outils de suivi du temps sont là pour répondre à LA question qui fâche :
 
 Ils permettent de tracker précisément qui fait quoi, combien de temps ça prend, et d’en tirer des conclusions utiles pour mieux planifier à l’avenir (ou pour facturer avec le sourire).
 
-Certains vont même jusqu’à proposer des rapports ultra détaillés – parfait pour les chefs de projet qui aiment les beaux graphiques et les tableaux Excel.
+Certains vont même jusqu’à proposer des rapports ultra détaillés – parfait pour les [chefs de projet](/metiers/chef-de-projet-freelance) qui aiment les beaux graphiques et les tableaux Excel.
 
 ‍
 

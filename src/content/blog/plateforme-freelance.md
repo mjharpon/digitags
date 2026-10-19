@@ -21,7 +21,7 @@ Contrats, suivi, factures, paiements sécurisés : tout est centralisé, vous st
 
 ### 3\. Une flexibilité absolue
 
-Besoin d’un expert Google Ads pour deux mois ? D’un illustrateur pour trois visuels social media ? On-demand is the new CDI.
+Besoin d’un expert [Google Ads](/metiers/expert-sea-freelance) pour deux mois ? D’un illustrateur pour trois visuels social media ? On-demand is the new CDI.
 
 ### 4\. La maîtrise du budget
 
@@ -50,7 +50,7 @@ Digitags.work n’est pas seulement une **plateforme freelance**, c’est un éc
 
 ## Malt : volume XXL
 
-Avec plus de 600 000 freelances, Malt est l’hypermarché de la **plateforme freelance**. On y trouve de tout : du dev full-stack au motion designer 3D, avec rayon goûter et caisses automatiques.
+Avec plus de 600 000 freelances, Malt est l’hypermarché de la **plateforme freelance**. On y trouve de tout : du dev [full-stack](/metiers/full-stack-developpeur-freelance) au motion designer 3D, avec rayon goûter et caisses automatiques.
 
 ### Avantages
 
@@ -61,7 +61,7 @@ Avec plus de 600 000 freelances, Malt est l’hypermarché de la **plateforme fr
 ### Inconvénients
 
 -   Sélection moins drastique : à vous le tri de CV.
--   Support réactif mais générique : pas de chef de projet dédié.
+-   Support réactif mais générique : pas de [chef de projet](/metiers/chef-de-projet-freelance) dédié.
 
 ‍
 

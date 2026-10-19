@@ -18,7 +18,7 @@ Un digital nomade est une personne travaillant à distance, en télétravail, pl
 
 Ils vivent la plupart du temps dans des hôtels, des guest house, des airbnb, des résidences en coliving ou bien encore dans des auberges de jeunesse. Ils peuvent travailler un peu partout tant que la connexion wifi est suffisante : espaces de co-working, cafés, hôtels, etc.
 
-Comme le nom l’indique, les digital nomades ont souvent un métier en lien avec le digital. Par exemple, ils peuvent être graphistes, UX/UI designers, community managers, développeurs web, responsables e-commerce, photographes, blogueurs/influenceurs, consultants, etc.
+Comme le nom l’indique, les digital nomades ont souvent un métier en lien avec le digital. Par exemple, ils peuvent être graphistes, UX/UI designers, [community managers](/metiers/community-manager-freelance), [développeurs web](/metiers/developeur-web-freelance), responsables e-commerce, photographes, blogueurs/influenceurs, consultants, etc.
 
 _Si vous souhaitez en savoir plus sur la vie des digital nomades,_ [_cliquez ici_](https://www.dgitags.io/blog/la-vie-de-digital-nomade)_._
 

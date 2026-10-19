@@ -38,7 +38,7 @@ D’après Jeremy, un digital nomad est « une personne qui sait **gérer son t
 
 ![digital nomad dgitags](/uploads/blog/la-vie-de-digital-nomade-1.png)
 
-Jeremy Gerault a fait un master en marketing en école de commerce à l’**ESG**. Il a eu l’opportunité de faire son master en alternance dans une agence de communication en tant que **community manager**. De ce fait, il a commencé à s’intéresser à la partie technique des réseaux sociaux.
+Jeremy Gerault a fait un master en marketing en école de commerce à l’**ESG**. Il a eu l’opportunité de faire son master en alternance dans une agence de communication en tant que **[community manager](/metiers/community-manager-freelance)**. De ce fait, il a commencé à s’intéresser à la partie technique des réseaux sociaux.
 
 Une fois son alternance et ses études terminées, Jeremy a décidé de partir 1 an en Amérique Latine afin de voyager. En revenant de son road trip, il a été embauché au sein du pôle Social Media Ads d’une autre agence de Webmarketing.
 
@@ -80,7 +80,7 @@ Il consacrait 2 jours par semaine à son travail pour notre agence.
 
  « J’ai été en quelque sorte un **crash test** pour Donutz. Marie Joseph a pour ambition de monter une structure totalement en remote. Après discussion, nous nous sommes dit que c’était un bon test, que nous verrons si ce modèle fonctionnerait. Nous en avions parlé aux clients, et cela ne les dérangeait pas plus que ça, tant que le travail était fait. Il suffit d’être **organisé**. Selon le pays ou j’étais, je cherchais des heures en commun avec la France afin de contacter les clients si besoin. Quand j’étais au Costa Rica par exemple, je me levais assez tôt, donc c’était faisable. »
 
-Jeremy a trouvé des avantages à ne pas avoir les mêmes horaires de travail que ses collègues de chez Donutz : « chez Donutz, on travaille souvent en binôme. Je travaille avec l’équipe social Ads. Je forme Sonia sur la partie Facebook Ads. Donc parfois si Sonia avait un problème avec un client en fin de journée, au moment où elle avait fini de travailler, elle me le disait et je pouvais **prendre le relais** rapidement après puisque je me levais quelques heures plus tard ».
+Jeremy a trouvé des avantages à ne pas avoir les mêmes horaires de travail que ses collègues de chez Donutz : « chez Donutz, on travaille souvent en binôme. Je travaille avec l’équipe [social Ads](/metiers/expert-social-ads-freelance). Je forme Sonia sur la partie Facebook Ads. Donc parfois si Sonia avait un problème avec un client en fin de journée, au moment où elle avait fini de travailler, elle me le disait et je pouvais **prendre le relais** rapidement après puisque je me levais quelques heures plus tard ».
 
 ‍
 

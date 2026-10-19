@@ -19,7 +19,7 @@ Graphistes, développeurs, consultants, spécialistes acquisition, créateurs de
 
 Et ça commence souvent par un mot qui revient partout : la _mission_.
 
-Une mission, c’est le cœur de la collaboration. C’est votre projet : refaire une page web, lancer une campagne social ads, créer une identité visuelle, structurer une stratégie SEO. Le freelance s’y engage, en fonction d’un niveau d’expertise et d’un temps estimé.
+Une mission, c’est le cœur de la collaboration. C’est votre projet : refaire une page web, lancer une campagne [social ads](/metiers/expert-social-ads-freelance), créer une identité visuelle, structurer une stratégie SEO. Le freelance s’y engage, en fonction d’un niveau d’expertise et d’un temps estimé.
 
 À des moments, vous croiserez peut-être le fameux “TJM”, le Taux Journalier Moyen. Pas un code secret : juste le tarif par jour de travail. Il reflète l'expérience, la rapidité d’exécution et la capacité à gérer un projet de façon autonome.
 

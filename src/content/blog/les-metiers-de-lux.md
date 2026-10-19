@@ -6,13 +6,13 @@ tags: [product, design]
 image: "/uploads/blog/les-metiers-de-lux-cover.webp"
 ---
 
-Tous les jours, nous utilisons des objets qui sont devenus vite indispensables : smartphones, ordinateurs, télévisions, cette grande toile qu’on appelle Internet, l’intérieur d’une voiture, les allées d’un supermarché, etc. Si vous ne le saviez pas encore, derrière chacun de ces produits se cache une stratégie UX. Si vous lisez aussi facilement cet article à travers vos écrans (bonjour mobile et ordinateur !), c’est qu’un talentueux UX designer vous a déblayé le chemin. C’est une pratique qui a façonné les produits et services que nous utilisons au quotidien et qui peut faire ou défaire le succès d’une entreprise ou d’une marque.
+Tous les jours, nous utilisons des objets qui sont devenus vite indispensables : smartphones, ordinateurs, télévisions, cette grande toile qu’on appelle Internet, l’intérieur d’une voiture, les allées d’un supermarché, etc. Si vous ne le saviez pas encore, derrière chacun de ces produits se cache une stratégie UX. Si vous lisez aussi facilement cet article à travers vos écrans (bonjour mobile et ordinateur !), c’est qu’un talentueux [UX designer](/metiers/ux-designer-freelance) vous a déblayé le chemin. C’est une pratique qui a façonné les produits et services que nous utilisons au quotidien et qui peut faire ou défaire le succès d’une entreprise ou d’une marque.
 
 Le UX est un univers toujours en mouvement, dans lequel beaucoup choisissent d’y faire carrière, tant l’évolution est fascinante et stimulante. Si vous voulez percer dans ce domaine, il y a de quoi apprendre et cela nécessite un ensemble de compétences très diversifiées.
 
 Non seulement c’est une position professionnelle continuellement en évolution, mais c’est aussi un rôle qui n’est jamais le même d’une entreprise à l’autre. Dans le but de gérer la totalité du processus de conception d’un produit/service, une petite structure peut embaucher un unique UX designer, tandis qu’une grande entreprise peut nécessiter une équipe entière.
 
-En sachant cela, comment vous y retrouvez ? Avez-vous besoin d’une équipe complète ou d’un seul UX designer ? Pour y répondre, nous vous avons décomposé l’UX en cinq rôles principaux : UX researcher, UX writer, UX designer, UI designer, UX architect.
+En sachant cela, comment vous y retrouvez ? Avez-vous besoin d’une équipe complète ou d’un seul UX designer ? Pour y répondre, nous vous avons décomposé l’UX en cinq rôles principaux : UX researcher, [UX writer](/metiers/ux-writer-freelance), UX designer, [UI designer](/metiers/ui-designer-freelance), UX architect.
 
 Il en existe également un sixième – aux allures plutôt mythiques – que nous vous réservons pour la fin de cet article.
 

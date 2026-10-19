@@ -128,7 +128,7 @@ Si vous récoltez des informations privées sur les utilisateurs, veillez à ce 
 
 o   **Facilitez l'annulation**
 
-Certains UX designers peu scrupuleux rendent la création de comptes très faciles en concevant l'interface utilisateur la plus simple possible. Cependant si vous souhaitez supprimer votre compte, c’est une toute autre histoire. Si vous demandez à l'utilisateur de créer un compte, de s'inscrire à une newsletter ou d'effectuer une action, incluez toujours une option d'annulation.
+Certains [UX designers](/metiers/ux-designer-freelance) peu scrupuleux rendent la création de comptes très faciles en concevant l'interface utilisateur la plus simple possible. Cependant si vous souhaitez supprimer votre compte, c’est une toute autre histoire. Si vous demandez à l'utilisateur de créer un compte, de s'inscrire à une newsletter ou d'effectuer une action, incluez toujours une option d'annulation.
 
 ‍
 

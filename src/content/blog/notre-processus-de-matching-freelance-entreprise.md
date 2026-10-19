@@ -25,7 +25,7 @@ Chez Digitags.work, on a fait le choix radical de privilégier la pertinence plu
 
 Cette approche repose sur une conviction simple : votre temps est précieux. Vous n'avez ni l'envie ni les ressources pour devenir recruteur à temps plein. Vous voulez un expert disponible, compétent et fiable qui démarre rapidement et livre des résultats. Point.
 
-Notre rôle ? Jouer les traducteurs entre vos besoins business et les compétences techniques des freelances. Parce qu'un dirigeant de TPE ne parle pas forcément le même langage qu'un développeur full-stack ou qu'un growth hacker. On décode, on clarifie, on affine jusqu'à ce que le brief soit parfaitement compris des deux côtés.
+Notre rôle ? Jouer les traducteurs entre vos besoins business et les compétences techniques des freelances. Parce qu'un dirigeant de TPE ne parle pas forcément le même langage qu'un [développeur full-stack](/metiers/full-stack-developpeur-freelance) ou qu'un growth hacker. On décode, on clarifie, on affine jusqu'à ce que le brief soit parfaitement compris des deux côtés.
 
 ‍
 

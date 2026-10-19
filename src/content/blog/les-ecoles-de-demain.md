@@ -70,7 +70,7 @@ L'éducation numérique est une tendance croissante dans le monde du travail. Le
 
 -   Formations : Mastère, Bachelor, Formation sur-mesure, Prépa Digital
 -   La particularité : trois entreprises du digital HelloWork, MV Group et Klaxoon se sont associés pour créer une école dans l’entreprise.
--   Métiers enseignés : webdesigner, expert webmarketing, chef de projet digital, web analyst, référenceur SEO, community manager, data analyst
+-   Métiers enseignés : webdesigner, expert webmarketing, [chef de projet](/metiers/chef-de-projet-freelance) digital, web analyst, référenceur SEO, [community manager](/metiers/community-manager-freelance), data analyst
 
 ‍
 

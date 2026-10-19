@@ -95,7 +95,7 @@ Dans la méthode Scrum, le produit est développé par **itération de temps** (
 
 Il y a trois acteurs clés :
 
--   **Le Product Owner** : il a une vision complète du produit,
+-   **Le [Product Owner](/metiers/product-owner-freelance)** : il a une vision complète du produit,
 -   **Le Scrum master** : il assure le bon déroulement du projet et rappelle la     méthode,
 -   **L’équipe Scrum** : elle développe le produit.
 

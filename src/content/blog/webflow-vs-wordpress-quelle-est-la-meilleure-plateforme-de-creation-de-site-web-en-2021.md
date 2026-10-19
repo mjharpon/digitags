@@ -260,7 +260,7 @@ Il est relativement facile de créer son site web avec WordPress.Vous pouvez uti
 
 Une fois votre thème installé, vous pouvez en personnaliser certains éléments tels que les couleurs, les polices, les tailles et les images. Vous pouvez également **utiliser des plugins** pour ajouter des fonctionnalités supplémentaires qui ne sont pas déjà incluses dans votre thème.
 
-Malheureusement, **si vous souhaitez un site Web entièrement personnalisé, vous devrez faire appel à un développeur Web**. Ces derniers ont un accès complet au manuel du développeur de thèmes WordPress, qui vous fournira tout ce que vous devez savoir sur le développement de thèmesWordPress.   
+Malheureusement, **si vous souhaitez un site Web entièrement personnalisé, vous devrez faire appel à un [développeur Web](/metiers/developeur-web-freelance)**. Ces derniers ont un accès complet au manuel du développeur de thèmes WordPress, qui vous fournira tout ce que vous devez savoir sur le développement de thèmesWordPress.   
 
 ### **Wordpress : un outil de gestion du contenu**
 

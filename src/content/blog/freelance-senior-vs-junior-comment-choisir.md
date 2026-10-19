@@ -102,7 +102,7 @@ Résultat : les coûts sont maîtrisés, la qualité est constante, et la monté
 
 ## Exemples concrets de missions
 
--   **Campagne social media** → Junior dynamique, supervisé par un chef de projet.
+-   **Campagne social media** → Junior dynamique, supervisé par un [chef de projet](/metiers/chef-de-projet-freelance).
 -   **Audit SEO complet avant refonte de site** → Senior expérimenté.
 -   **Création de visuels ou templates Canva** → Junior créatif.
 -   **Pilotage de stratégie de marque ou UX** → Senior en branding.

@@ -25,11 +25,11 @@ Selon le baromètre Malt, un consultant marketing freelance facture en moyenne *
 
 Consultant marketing : **594€**.
 
-Community Manager : **406€.**
+[Community Manager](/metiers/community-manager-freelance) : **406€.**
 
 Consultant Analytics : **577€**.
 
-Consultant SEO : **499€**.
+[Consultant SEO](/metiers/freelance-seo) : **499€**.
 
 **Variables clés** : spécialité (SEA coûte plus cher que community management), data-driven skills (GA4, Looker Studio) et secteur (B2B tech > retail local).
 

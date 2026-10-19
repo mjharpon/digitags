@@ -39,8 +39,8 @@ Une fois la présentation terminée, le recruteur pourra vous poser des question
 -   Votre **taux horaire journalier**,
 -   Sur vos **expériences professionnelles passées** afin d’avoir plus de détails et des exemples concrets à l’appui :
 
-1.  Pour les métiers créatifs (ex : UI designer), le recruteur pourra jeter un œil à votre patte graphique en regardant votre portfolio par exemple,
-2.  Pour les métiers plus techniques (ex : développeur web), l’entreprise pourra vous demander le nombre de projets développés sur WordPress afin de déterminer votre niveau d’expertise,
+1.  Pour les métiers créatifs (ex : [UI designer](/metiers/ui-designer-freelance)), le recruteur pourra jeter un œil à votre patte graphique en regardant votre portfolio par exemple,
+2.  Pour les métiers plus techniques (ex : [développeur web](/metiers/developeur-web-freelance)), l’entreprise pourra vous demander le nombre de projets développés sur WordPress afin de déterminer votre niveau d’expertise,
 3.  Pour les métiers autour du management, ce sont vos expériences similaires dans le secteur d’activité qui intéresseront le recruteur.**‍**
 
 -   ‍**Le timing** : quand pouvez-vous commencer ? Quel est le temps que vous pourrez accorder à la mission ? etc**‍**
@@ -48,7 +48,7 @@ Une fois la présentation terminée, le recruteur pourra vous poser des question
 
 L’entreprise risque de prendre également un temps pour vous reparler de la mission en détail et vous réexpliquer ce qu’il attend du freelance. Profitez de ce temps pour vous assurer que vous avez bien saisi les problématiques de la mission et les objectifs visés.
 
-De plus, selon les process de recrutement, vous aurez peut-être une étude de cas à faire. Par exemple si vous postulez pour un poste de développeur en freelance, le recruteur pourra vous demander de réaliser un audit rapide de son site puis de lui donner quelques recommandations pour l’améliorer. Autre exemple, si vous êtes trafic manager, on pourra vous demander de regarder une ancienne campagne Google Ads de l’entreprise et de donner votre avis.
+De plus, selon les process de recrutement, vous aurez peut-être une étude de cas à faire. Par exemple si vous postulez pour un poste de développeur en freelance, le recruteur pourra vous demander de réaliser un audit rapide de son site puis de lui donner quelques recommandations pour l’améliorer. Autre exemple, si vous êtes trafic manager, on pourra vous demander de regarder une ancienne campagne [Google Ads](/metiers/expert-sea-freelance) de l’entreprise et de donner votre avis.
 
 ## **Quels sont nos tips pour réussir un entretien freelance ?**
 

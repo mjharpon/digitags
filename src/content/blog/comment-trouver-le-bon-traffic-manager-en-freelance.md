@@ -6,7 +6,7 @@ tags: [freelancer, webmarketing]
 image: "/uploads/blog/comment-trouver-le-bon-traffic-manager-en-freelance-cover.avif"
 ---
 
-Trouver le bon traffic manager peut s’avérer délicat car ce métier nécessite de nombreuses compétences, que nous allons vous présenter dans cet article.
+Trouver le bon [traffic manager](/metiers/traffic-manager-freelance) peut s’avérer délicat car ce métier nécessite de nombreuses compétences, que nous allons vous présenter dans cet article.
 
 Intéressés ? Lisez la suite !
 
@@ -48,7 +48,7 @@ Qu’il soit salarié ou freelance, un bon traffic manager doit donc maîtriser 
 
 Par exemple, ils doivent posséder des compétences purement techniques :
 
-1.  Savoir maîtriser les régies publicitaires de base telles que : Google Ads. Le traffic manager doit être en veille constante sur les nouvelles tendances dans le digital afin d’être innovant dans la mise en place de ses campagnes publicitaires. En effet, Google Ads évolue très régulièrement donc il faut prendre en compte ces changements. Il est également intéressant qu’il maîtrise les plateformes de social network advertising telles que Facebook Ads, Tik Tok ads ou bien Instagram ads.
+1.  Savoir maîtriser les régies publicitaires de base telles que : [Google Ads](/metiers/expert-sea-freelance). Le traffic manager doit être en veille constante sur les nouvelles tendances dans le digital afin d’être innovant dans la mise en place de ses campagnes publicitaires. En effet, Google Ads évolue très régulièrement donc il faut prendre en compte ces changements. Il est également intéressant qu’il maîtrise les plateformes de social network advertising telles que Facebook Ads, Tik Tok ads ou bien Instagram ads.
 2.  Avoir une aisance avec les différents outils de tracking (ex : Google Analytics), retargetting (Nextperformance, etc) et de publicité back-office. Pour Yannick, un bon traffic manager doit « être expert d’analytics et être capable d’analyser en profondeur ces datas. Il a la capacité d’interpréter ce trafic et faire prendre aux clients les bonnes décisions ». Cela implique de comprendre les métriques clés telles que le taux de rebond, le temps passé sur le site, le taux de conversion, etc., et de prendre des mesures pour améliorer ces indicateurs.
 3.  Avoir une bonne culture marketing et des outils associés (référencement payant, campagnes d’e-mailing, liens sponsorisés, référencement social, affiliation, publicité en ligne, display...)
 4.  Avoir une bonne maîtrise de l’univers de la publicité (Data, RTB, etc) et des outils permettant le suivi de campagnes publicitaires et de liens sponsorisés (AdServer. etc)
