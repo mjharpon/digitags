@@ -32,7 +32,6 @@ import Base from '../layouts/Base.astro';
   <!-- App -->
   <div id="app" class="tool" hidden>
     <div class="tool-bar">
-      <h1>Talents du Hub</h1>
       <div class="tool-tabs">
         <button class="tool-tab active" data-tab="recherche">Recherche</button>
         <button class="tool-tab" data-tab="propales">Propales</button>
@@ -40,32 +39,91 @@ import Base from '../layouts/Base.astro';
       <button class="btn btn-outline btn-sm" id="logout">Déconnexion</button>
     </div>
 
-    <div id="tab-recherche">
-      <div class="filters">
-        <input type="search" id="f-q" placeholder="Rechercher un nom, un métier, une compétence…" />
-        <label class="chk" title="Recherche plein-texte dans le contenu des CV"><input type="checkbox" id="f-incv" /> dans les CV</label>
-        <div class="ms" id="ms-group"></div>
-        <div class="ms" id="ms-exp"></div>
-        <div class="ms" id="ms-tjm"></div>
-        <label class="chk"><input type="checkbox" id="f-dispo" /> Disponibles</label>
-        <label class="chk"><input type="checkbox" id="f-en" /> Anglais courant</label>
-        <label class="chk"><input type="checkbox" id="f-stars" /> ★ 4+</label>
-        <label class="chk"><input type="checkbox" id="f-cdi" /> Ouvert CDI</label>
-        <label class="chk"><input type="checkbox" id="f-dg" /> Déjà avec digitags</label>
-        <label class="chk"><input type="checkbox" id="f-sf" /> Salesforce</label>
-        <label class="chk"><input type="checkbox" id="f-site" /> Visible sur le site</label>
+    <div class="tool-hero">
+      <div>
+        <h1>Talents <span>du Hub</span></h1>
+        <p class="th-lead">Trouvez les meilleurs freelances pour vos projets digitaux.</p>
+        <ul class="th-badges">
+          <li><span class="th-dot th-dot-green">✓</span> Profils vérifiés</li>
+          <li><span class="th-dot th-dot-yellow">◷</span> Disponibilités à jour</li>
+          <li><span class="th-dot th-dot-red">⌕</span> Recherche dans les CV</li>
+        </ul>
       </div>
+      <div class="th-illu" aria-hidden="true">
+        <div class="th-card th-c1"><span class="th-ava a1"></span><em>UX/UI</em></div>
+        <div class="th-card th-c2"><span class="th-ava a2"></span><em>Data</em></div>
+        <div class="th-card th-c3"><span class="th-ava a3"></span><em>Marketing</em></div>
+      </div>
+    </div>
+
+    <div id="tab-recherche">
+      <div class="search-panel">
+        <div class="search-row">
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input type="search" id="f-q" placeholder="Rechercher un nom, une compétence, un outil…" />
+          </div>
+          <button class="btn btn-blue" id="btn-search">Recherche</button>
+          <button class="btn btn-outline" id="btn-propales">Propales</button>
+          <button class="btn btn-outline" id="btn-filters">Filtres</button>
+        </div>
+        <div class="filters" id="filters-block">
+          <label class="chk" title="Recherche plein-texte dans le contenu des CV"><input type="checkbox" id="f-incv" /> Dans les CV</label>
+          <div class="ms" id="ms-group"></div>
+          <div class="ms" id="ms-exp"></div>
+          <div class="ms" id="ms-tjm"></div>
+          <label class="chk"><input type="checkbox" id="f-dispo" /> <span class="avail-dot"></span> Disponibles</label>
+          <label class="chk"><input type="checkbox" id="f-en" /> Anglais courant</label>
+          <label class="chk"><input type="checkbox" id="f-stars" /> ★ 4+</label>
+          <label class="chk"><input type="checkbox" id="f-cdi" /> Ouvert CDI</label>
+          <label class="chk"><input type="checkbox" id="f-dg" /> Déjà avec digitags</label>
+          <label class="chk"><input type="checkbox" id="f-sf" /> Salesforce</label>
+          <label class="chk"><input type="checkbox" id="f-site" /> Visible sur le site</label>
+          <button class="f-reset" id="f-reset" type="button">↺ Réinitialiser</button>
+        </div>
+      </div>
+
       <div class="tool-layout">
         <div>
-          <p class="results-meta" id="results-meta"></p>
+          <div class="results-head">
+            <p class="results-meta" id="results-meta"></p>
+            <div class="results-tools">
+              <label for="f-sort">Trier par</label>
+              <select id="f-sort">
+                <option value="pertinence">Pertinence</option>
+                <option value="tjm-asc">TJM croissant</option>
+                <option value="tjm-desc">TJM décroissant</option>
+                <option value="dispo">Disponibilité</option>
+                <option value="nom">Nom A–Z</option>
+              </select>
+              <div class="view-toggle" role="group" aria-label="Affichage">
+                <button id="view-grid" class="active" title="Vue grille" aria-label="Vue grille">▦</button>
+                <button id="view-list" title="Vue liste" aria-label="Vue liste">☰</button>
+              </div>
+            </div>
+          </div>
           <div class="profiles-grid" id="results"></div>
           <p style="margin-top: 14px;"><button class="btn btn-outline btn-sm" id="more" hidden>Charger plus</button></p>
         </div>
-        <aside class="sel-panel">
-          <h2>Sélection <span id="sel-count"></span></h2>
-          <p class="empty" id="sel-empty">Ajoutez des profils avec le bouton «&nbsp;+&nbsp;» pour composer une propale.</p>
-          <ul id="sel-list"></ul>
-          <button class="btn btn-ghost btn-sm" id="sel-create" hidden>Créer la propale →</button>
+
+        <aside class="tool-side">
+          <div class="side-card side-navy" id="sel-panel">
+            <span class="side-spark">✦</span>
+            <h2>Besoin d'un profil spécifique&nbsp;?</h2>
+            <p class="empty" id="sel-empty">Ajoutez des profils avec le bouton «&nbsp;+&nbsp;» des cartes pour composer une propale.</p>
+            <ul id="sel-list"></ul>
+            <button class="btn btn-yellow btn-sm" id="sel-create" hidden>Créer une propale →</button>
+          </div>
+          <div class="side-card">
+            <h3><span class="side-bolt">⚡</span> Filtres rapides</h3>
+            <div class="quick-chips" id="quick-groups"></div>
+            <a class="side-link" href="/metiers" target="_blank" rel="noopener">Voir tous les métiers →</a>
+          </div>
+          <div class="side-card">
+            <h3>Vous êtes freelance&nbsp;?</h3>
+            <p class="side-text">Rejoignez le Hub et accédez à des missions de qualité.</p>
+            <a href="/devenir-freelance" class="btn btn-dark btn-sm">Rejoindre digitags</a>
+          </div>
         </aside>
       </div>
     </div>
@@ -98,11 +156,12 @@ import Base from '../layouts/Base.astro';
     const sb = createClient(URL_, KEY);
 
     const PAGE = 30;
-    let state = { page: 0, selection: new Map(), groups: [], lastCount: 0, fGroups: new Set(), fExps: new Set(), fTjms: new Set() };
+    let state = { page: 0, selection: new Map(), groups: [], lastCount: 0, fGroups: new Set(), fExps: new Set(), fTjms: new Set(), sort: 'pertinence' };
 
     const toast = (msg) => { const t = $('toast'); t.textContent = msg; t.hidden = false; setTimeout(() => (t.hidden = true), 2600); };
 
-    // Menu déroulant à sélection multiple.
+    // Menu déroulant à sélection multiple. Retourne { update } pour rafraîchir
+    // le libellé (et l'état des cases) quand le Set est modifié ailleurs.
     function makeMulti(root, label, items, set) {
       root.innerHTML = '';
       const btn = document.createElement('button');
@@ -111,19 +170,25 @@ import Base from '../layouts/Base.astro';
       const panel = document.createElement('div');
       panel.className = 'ms-panel';
       panel.hidden = true;
-      const update = () => { btn.textContent = set.size ? label + ' (' + set.size + ')' : label + ' — tous'; };
+      const boxes = [];
+      const update = () => {
+        btn.textContent = set.size ? label + ' (' + set.size + ')' : label + ' — tous';
+        boxes.forEach(({ cb, v }) => { cb.checked = set.has(v); });
+      };
       items.forEach(({ v, t }) => {
         const l = document.createElement('label');
         const cb = document.createElement('input');
         cb.type = 'checkbox';
         cb.checked = set.has(v);
-        cb.addEventListener('change', () => { cb.checked ? set.add(v) : set.delete(v); update(); search(true); });
+        cb.addEventListener('change', () => { cb.checked ? set.add(v) : set.delete(v); update(); onFilterChange(); });
+        boxes.push({ cb, v });
         l.append(cb, document.createTextNode(' ' + t));
         panel.append(l);
       });
       btn.addEventListener('click', () => { panel.hidden = !panel.hidden; });
       root.append(btn, panel);
       update();
+      return { update };
     }
     document.addEventListener('click', (e) => {
       document.querySelectorAll('.ms-panel').forEach((p) => {
@@ -177,6 +242,9 @@ import Base from '../layouts/Base.astro';
     $('logout').addEventListener('click', async () => { await sb.auth.signOut(); location.reload(); });
 
     // ---------- App ----------
+    let msGroup, msExp, msTjm;
+    function onFilterChange() { renderQuickChips(); search(true); }
+
     async function start() {
       if (started) return;
       started = true;
@@ -194,22 +262,40 @@ import Base from '../layouts/Base.astro';
         }
       }
       state.groups = groups ?? [];
-      makeMulti($('ms-group'), 'Familles', state.groups.map((g) => ({ v: g.id, t: g.name })), state.fGroups);
+      msGroup = makeMulti($('ms-group'), 'Familles', state.groups.map((g) => ({ v: g.id, t: g.name })), state.fGroups);
       const { data: exps } = await sb.from('profiles').select('experience').not('experience', 'is', null).limit(1000);
       const expList = [...new Set((exps ?? []).map((e) => e.experience))].sort();
-      makeMulti($('ms-exp'), 'Expérience', expList.map((e) => ({ v: e, t: e })), state.fExps);
-      makeMulti($('ms-tjm'), 'TJM', [
+      msExp = makeMulti($('ms-exp'), 'Expérience', expList.map((e) => ({ v: e, t: e })), state.fExps);
+      msTjm = makeMulti($('ms-tjm'), 'TJM', [
         { v: '0-400', t: '< 400 €' },
         { v: '400-600', t: '400 – 600 €' },
         { v: '600-800', t: '600 – 800 €' },
         { v: '800-99999', t: '> 800 €' },
       ], state.fTjms);
+      renderQuickChips();
       search(true);
       loadProposals();
     }
 
+    // Raccourcis familles dans la colonne de droite, synchronisés avec le filtre.
+    function renderQuickChips() {
+      const host = $('quick-groups');
+      if (!host) return;
+      host.innerHTML = state.groups.map((g) =>
+        `<button type="button" class="qchip ${state.fGroups.has(g.id) ? 'on' : ''}" data-qg="${g.id}">${esc(g.name.split(' (')[0])}</button>`
+      ).join('');
+    }
+    $('quick-groups').addEventListener('click', (e) => {
+      const b = e.target.closest('[data-qg]');
+      if (!b) return;
+      const id = b.dataset.qg;
+      state.fGroups.has(id) ? state.fGroups.delete(id) : state.fGroups.add(id);
+      msGroup?.update();
+      onFilterChange();
+    });
+
     function buildQuery() {
-      let q = sb.from('profiles').select('id, name, job, photo_url, disponible, dispo_from, fluent_english, experience, stars, tarif_jour, tjm_free, job_group_id', { count: 'exact' });
+      let q = sb.from('profiles').select('id, name, job, photo_url, disponible, dispo_from, fluent_english, experience, stars, tarif_jour, tjm_free, job_group_id, cdi, salesforce, dgitags_experience', { count: 'exact' });
       const text = $('f-q').value.trim().replace(/[(),%]/g, ' ').trim();
       if (text) {
         if ($('f-incv').checked) q = q.or(`name.ilike.%${text}%,job.ilike.%${text}%,cv_fts.wfts(french).${text}`);
@@ -230,7 +316,13 @@ import Base from '../layouts/Base.astro';
           return `and(tjm_free.gte.${lo},tjm_free.lte.${hi})`;
         }).join(','));
       }
-      return q.order('stars', { ascending: false, nullsFirst: false }).order('name');
+      switch (state.sort) {
+        case 'tjm-asc': return q.order('tjm_free', { ascending: true, nullsFirst: false }).order('name');
+        case 'tjm-desc': return q.order('tjm_free', { ascending: false, nullsFirst: false }).order('name');
+        case 'dispo': return q.order('disponible', { ascending: false }).order('dispo_from', { ascending: true, nullsFirst: false }).order('name');
+        case 'nom': return q.order('name');
+        default: return q.order('stars', { ascending: false, nullsFirst: false }).order('name');
+      }
     }
 
     async function search(reset) {
@@ -245,28 +337,64 @@ import Base from '../layouts/Base.astro';
     }
 
     const tjmOf = (p) => p.tjm_free ?? p.tarif_jour;
+    const frDate = (d) => new Date(d).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
+    function dispoPill(p) {
+      if (p.disponible) return '<span class="pc-dispo ok">Disponible</span>';
+      if (p.dispo_from) {
+        const past = new Date(p.dispo_from) <= new Date();
+        return `<span class="pc-dispo ${past ? 'ok' : 'warn'}">Disponible dès le ${frDate(p.dispo_from)}</span>`;
+      }
+      return '<span class="pc-dispo off">Disponibilité à confirmer</span>';
+    }
     function card(p) {
       const sel = state.selection.has(p.id);
       return `<article class="profile-card" data-id="${p.id}">
-        ${p.photo_url ? `<img src="${esc(p.photo_url)}" alt="" loading="lazy" />` : `<span class="avatar-fallback">${esc((p.name ?? '?')[0])}</span>`}
-        <div>
-          <h3>${esc(p.name)}</h3>
-          <p class="job">${esc(p.job ?? '')}</p>
-          <div class="badges">
-            ${p.disponible ? '<span class="badge ok">Dispo</span>' : p.dispo_from ? `<span class="badge warn">Dispo ${esc(p.dispo_from)}</span>` : ''}
-            ${p.stars > 0 && p.stars <= 5 ? `<span class="badge star">★ ${p.stars}</span>` : ''}
-            ${tjmOf(p) ? `<span class="badge">${tjmOf(p)} €/j</span>` : ''}
-            ${p.fluent_english ? '<span class="badge">EN</span>' : ''}
-            ${p.experience ? `<span class="badge">${esc(p.experience)}</span>` : ''}
+        <button class="sel-btn ${sel ? 'in' : ''}" data-sel="${p.id}" title="Ajouter à la sélection">${sel ? '✓' : '+'}</button>
+        <div class="pc-head">
+          ${p.photo_url ? `<img src="${esc(p.photo_url)}" alt="" loading="lazy" />` : `<span class="avatar-fallback">${esc((p.name ?? '?')[0])}</span>`}
+          <div>
+            <h3>${esc(p.name)}</h3>
+            <p class="job">${esc(p.job ?? '')}</p>
           </div>
         </div>
-        <button class="sel-btn ${sel ? 'in' : ''}" data-sel="${p.id}" title="Ajouter à la sélection">${sel ? '✓' : '+'}</button>
+        ${dispoPill(p)}
+        <div class="pc-stats">
+          ${tjmOf(p) ? `<span class="pc-tjm">${tjmOf(p)} €/j</span>` : ''}
+          ${p.stars > 0 && p.stars <= 5 ? `<span class="pc-stars">★ ${p.stars}</span>` : ''}
+          ${p.fluent_english ? '<span class="badge en">EN</span>' : ''}
+        </div>
+        <div class="pc-tags">
+          ${p.experience ? `<span class="badge">${esc(p.experience)}</span>` : ''}
+          ${p.dgitags_experience === 'Oui' ? '<span class="badge dg">digitags ✓</span>' : ''}
+          ${p.salesforce ? '<span class="badge">Salesforce</span>' : ''}
+          ${p.cdi ? '<span class="badge">Ouvert CDI</span>' : ''}
+        </div>
       </article>`;
     }
 
     ['f-dispo', 'f-en', 'f-stars', 'f-cdi', 'f-dg', 'f-sf', 'f-site', 'f-incv'].forEach((id) => $(id).addEventListener('change', () => search(true)));
     let deb; $('f-q').addEventListener('input', () => { clearTimeout(deb); deb = setTimeout(() => search(true), 300); });
+    $('btn-search').addEventListener('click', () => search(true));
+    $('f-q').addEventListener('keydown', (e) => { if (e.key === 'Enter') search(true); });
     $('more').addEventListener('click', () => { state.page++; search(false); });
+    $('f-sort').addEventListener('change', () => { state.sort = $('f-sort').value; search(true); });
+    $('btn-filters').addEventListener('click', () => $('filters-block').classList.toggle('open'));
+    $('btn-propales').addEventListener('click', () => document.querySelector('[data-tab="propales"]').click());
+    $('view-grid').addEventListener('click', () => setView('grid'));
+    $('view-list').addEventListener('click', () => setView('list'));
+    function setView(v) {
+      $('results').classList.toggle('list', v === 'list');
+      $('view-grid').classList.toggle('active', v === 'grid');
+      $('view-list').classList.toggle('active', v === 'list');
+    }
+    $('f-reset').addEventListener('click', () => {
+      $('f-q').value = '';
+      ['f-dispo', 'f-en', 'f-stars', 'f-cdi', 'f-dg', 'f-sf', 'f-site', 'f-incv'].forEach((id) => { $(id).checked = false; });
+      state.fGroups.clear(); state.fExps.clear(); state.fTjms.clear();
+      msGroup?.update(); msExp?.update(); msTjm?.update();
+      state.sort = 'pertinence'; $('f-sort').value = 'pertinence';
+      onFilterChange();
+    });
 
     // ---------- Sélection ----------
     $('results').addEventListener('click', async (e) => {
@@ -290,9 +418,9 @@ import Base from '../layouts/Base.astro';
 
     function renderSelection() {
       const n = state.selection.size;
-      $('sel-count').textContent = n ? `(${n})` : '';
       $('sel-empty').hidden = n > 0;
       $('sel-create').hidden = n === 0;
+      $('sel-create').textContent = n ? `Créer une propale (${n}) →` : 'Créer une propale →';
       $('sel-list').innerHTML = [...state.selection.values()]
         .map((s) => `<li><span>${esc(s.name)}</span><button data-rm="${s.id}" title="Retirer">×</button></li>`).join('');
     }
