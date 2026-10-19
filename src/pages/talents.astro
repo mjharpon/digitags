@@ -41,17 +41,9 @@ import Base from '../layouts/Base.astro';
     <div id="tab-recherche">
       <div class="filters">
         <input type="search" id="f-q" placeholder="Rechercher un nom, un métier…" />
-        <select id="f-group"><option value="">Toutes les familles</option></select>
-        <select id="f-exp">
-          <option value="">Expérience (toutes)</option>
-        </select>
-        <select id="f-tjm">
-          <option value="">TJM (tous)</option>
-          <option value="0-400">&lt; 400 €</option>
-          <option value="400-600">400 – 600 €</option>
-          <option value="600-800">600 – 800 €</option>
-          <option value="800-9999">&gt; 800 €</option>
-        </select>
+        <div class="ms" id="ms-group"></div>
+        <div class="ms" id="ms-exp"></div>
+        <div class="ms" id="ms-tjm"></div>
         <label class="chk"><input type="checkbox" id="f-dispo" /> Disponibles</label>
         <label class="chk"><input type="checkbox" id="f-en" /> Anglais courant</label>
         <label class="chk"><input type="checkbox" id="f-stars" /> ★ 4+</label>
@@ -99,9 +91,38 @@ import Base from '../layouts/Base.astro';
     const sb = createClient(URL_, KEY);
 
     const PAGE = 30;
-    let state = { page: 0, selection: new Map(), groups: [], lastCount: 0 };
+    let state = { page: 0, selection: new Map(), groups: [], lastCount: 0, fGroups: new Set(), fExps: new Set(), fTjms: new Set() };
 
     const toast = (msg) => { const t = $('toast'); t.textContent = msg; t.hidden = false; setTimeout(() => (t.hidden = true), 2600); };
+
+    // Menu déroulant à sélection multiple.
+    function makeMulti(root, label, items, set) {
+      root.innerHTML = '';
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'ms-btn';
+      const panel = document.createElement('div');
+      panel.className = 'ms-panel';
+      panel.hidden = true;
+      const update = () => { btn.textContent = set.size ? label + ' (' + set.size + ')' : label + ' — tous'; };
+      items.forEach(({ v, t }) => {
+        const l = document.createElement('label');
+        const cb = document.createElement('input');
+        cb.type = 'checkbox';
+        cb.checked = set.has(v);
+        cb.addEventListener('change', () => { cb.checked ? set.add(v) : set.delete(v); update(); search(true); });
+        l.append(cb, document.createTextNode(' ' + t));
+        panel.append(l);
+      });
+      btn.addEventListener('click', () => { panel.hidden = !panel.hidden; });
+      root.append(btn, panel);
+      update();
+    }
+    document.addEventListener('click', (e) => {
+      document.querySelectorAll('.ms-panel').forEach((p) => {
+        if (!p.parentElement.contains(e.target)) p.hidden = true;
+      });
+    });
 
     // ---------- Auth ----------
     let started = false;
@@ -157,10 +178,16 @@ import Base from '../layouts/Base.astro';
         }
       }
       state.groups = groups ?? [];
-      $('f-group').insertAdjacentHTML('beforeend', state.groups.map((g) => `<option value="${g.id}">${esc(g.name)}</option>`).join(''));
+      makeMulti($('ms-group'), 'Familles', state.groups.map((g) => ({ v: g.id, t: g.name })), state.fGroups);
       const { data: exps } = await sb.from('profiles').select('experience').not('experience', 'is', null).limit(1000);
-      [...new Set((exps ?? []).map((e) => e.experience))].sort().forEach((e) =>
-        $('f-exp').insertAdjacentHTML('beforeend', `<option>${esc(e)}</option>`));
+      const expList = [...new Set((exps ?? []).map((e) => e.experience))].sort();
+      makeMulti($('ms-exp'), 'Expérience', expList.map((e) => ({ v: e, t: e })), state.fExps);
+      makeMulti($('ms-tjm'), 'TJM', [
+        { v: '0-400', t: '< 400 €' },
+        { v: '400-600', t: '400 – 600 €' },
+        { v: '600-800', t: '600 – 800 €' },
+        { v: '800-99999', t: '> 800 €' },
+      ], state.fTjms);
       search(true);
       loadProposals();
     }
@@ -169,15 +196,16 @@ import Base from '../layouts/Base.astro';
       let q = sb.from('profiles').select('id, name, job, photo_url, disponible, dispo_from, fluent_english, experience, stars, tarif_jour, tjm_free, job_group_id', { count: 'exact' });
       const text = $('f-q').value.trim();
       if (text) q = q.or(`name.ilike.%${text}%,job.ilike.%${text}%`);
-      if ($('f-group').value) q = q.eq('job_group_id', $('f-group').value);
-      if ($('f-exp').value) q = q.eq('experience', $('f-exp').value);
+      if (state.fGroups.size) q = q.in('job_group_id', [...state.fGroups]);
+      if (state.fExps.size) q = q.in('experience', [...state.fExps]);
       if ($('f-dispo').checked) q = q.eq('disponible', true);
       if ($('f-en').checked) q = q.eq('fluent_english', true);
       if ($('f-stars').checked) q = q.gte('stars', 4).lte('stars', 5);
-      const tjm = $('f-tjm').value;
-      if (tjm) {
-        const [lo, hi] = tjm.split('-').map(Number);
-        q = q.gte('tjm_free', lo).lte('tjm_free', hi);
+      if (state.fTjms.size) {
+        q = q.or([...state.fTjms].map((r) => {
+          const [lo, hi] = r.split('-');
+          return `and(tjm_free.gte.${lo},tjm_free.lte.${hi})`;
+        }).join(','));
       }
       return q.order('stars', { ascending: false, nullsFirst: false }).order('name');
     }
@@ -213,7 +241,7 @@ import Base from '../layouts/Base.astro';
       </article>`;
     }
 
-    ['f-group', 'f-exp', 'f-tjm', 'f-dispo', 'f-en', 'f-stars'].forEach((id) => $(id).addEventListener('change', () => search(true)));
+    ['f-dispo', 'f-en', 'f-stars'].forEach((id) => $(id).addEventListener('change', () => search(true)));
     let deb; $('f-q').addEventListener('input', () => { clearTimeout(deb); deb = setTimeout(() => search(true), 300); });
     $('more').addEventListener('click', () => { state.page++; search(false); });
 
