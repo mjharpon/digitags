@@ -1,105 +1,173 @@
 ---
 // Page propale privée, accessible uniquement via son lien à jeton.
 // Rendue à la demande côté serveur (clé service_role, jamais exposée).
-// N'expose AUCUNE donnée sensible : pas d'email, pas de notes internes,
-// pas de CV complet — uniquement le CV anonymisé.
+// Document commercial autonome (sans la navigation du site).
+// Anonymisation anti-contournement : prénom + initiale, CV anonymisé
+// uniquement, pas de lien portfolio, pas d'email ni de notes internes.
 export const prerender = false;
 
-import Base from '../../layouts/Base.astro';
+import '../../styles/global.css';
 
 const { token } = Astro.params;
-// Cloudflare : les secrets sont dans l'env du runtime ; en dev, dans .env.
 const runtimeEnv = (Astro.locals as any)?.runtime?.env ?? {};
 const url = runtimeEnv.SUPABASE_URL ?? import.meta.env.SUPABASE_URL;
 const key = runtimeEnv.SUPABASE_SERVICE_KEY ?? import.meta.env.SUPABASE_SERVICE_KEY;
 
-// Appels REST directs (PostgREST) : pas de supabase-js côté serveur.
-async function rest(path) {
+async function rest(path: string) {
   const res = await fetch(`${url}/rest/v1/${path}`, {
     headers: { apikey: key, Authorization: `Bearer ${key}` },
   });
   return res.ok ? res.json() : [];
 }
 
-let proposal = null;
-let items = [];
+let proposal: any = null;
+let items: any[] = [];
 
 if (url && key && token && /^[a-f0-9]{16,64}$/.test(token)) {
   const props = await rest(`proposals?select=id,title,client_name,intro,created_at&token=eq.${token}&archived=eq.false&limit=1`);
   proposal = props[0] ?? null;
   if (proposal) {
-    items = await rest(`proposal_items?select=role_label,tjm,note,sort,profiles(name,job,photo_url,experience,stars,fluent_english,reference_html,formation_html,cv_anonyme_url,portfolio_url)&proposal_id=eq.${proposal.id}&order=sort`);
+    items = await rest(`proposal_items?select=role_label,tjm,note,sort,profiles(name,job,photo_url,experience,stars,fluent_english,reference_html,cv_anonyme_url)&proposal_id=eq.${proposal.id}&order=sort`);
   }
 }
 
 if (!proposal) {
   Astro.response.status = 404;
 }
-
-const dateFmt = proposal ? new Date(proposal.created_at).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
 Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow');
+
+// Prénom + initiale du nom : « Ameni Ghorbel » → « Ameni G. »
+const anonymize = (name: string) => {
+  const parts = (name ?? '').trim().split(/\s+/);
+  if (parts.length < 2) return parts[0] ?? 'Talent';
+  return `${parts[0]} ${parts[parts.length - 1][0].toUpperCase()}.`;
+};
+
+// Références rich-text → liste de clients (chips) si les lignes sont courtes.
+const strip = (h: string) => h.replace(/<[^>]+>/g, '').trim();
+const refLines = (html?: string) => {
+  if (!html) return null;
+  const lines = html
+    .split(/<\/p>|<\/li>|<br\s*\/?>/i)
+    .map((l) => strip(l))
+    .filter(Boolean);
+  if (lines.length === 0) return null;
+  return lines.every((l) => l.length <= 45) ? { chips: lines } : { html };
+};
+
+const totalTjm = items.reduce((s, it) => s + (Number(it.tjm) || 0), 0);
+const allTjm = items.length > 0 && items.every((it) => Number(it.tjm) > 0);
+const dateFmt = proposal
+  ? new Date(proposal.created_at).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
+  : '';
 ---
-<Base
-  title={proposal ? `Proposition — ${proposal.title} | digitags.work` : 'Proposition introuvable | digitags.work'}
-  description="Proposition d'équipe préparée par digitags.work."
->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{proposal ? `Proposition — ${proposal.title}` : 'Proposition introuvable'} | digitags.work</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
   {proposal ? (
     <>
-      <section class="prop-hero">
+      <header class="prop2-hero">
         <div class="container">
-          <p class="eyebrow">Proposition digitags.work{proposal.client_name && ` — pour ${proposal.client_name}`}</p>
+          <div class="prop2-topbar">
+            <span class="logo logo-light">
+              <img src="/assets/logo-mark.svg" alt="" class="logo-mark" />
+              <span class="logo-text" style="color:#fff;">digitags<span class="logo-tld">.work</span></span>
+            </span>
+            <span class="tag">Confidentiel</span>
+          </div>
+          <p class="eyebrow">Proposition d'équipe{proposal.client_name && ` — pour ${proposal.client_name}`}</p>
           <h1>{proposal.title}</h1>
-          {proposal.intro && <p>{proposal.intro}</p>}
-          <p style="font-size: 12.5px; color: #8f97b3; margin-top: 14px;">Préparée le {dateFmt} · Document confidentiel, réservé à son destinataire.</p>
+          {proposal.intro && <p class="intro">{proposal.intro}</p>}
+          <p class="meta">Préparée le {dateFmt} · Réservée à son destinataire — merci de ne pas la diffuser.</p>
+          <svg class="deco" width="150" height="170" viewBox="0 0 150 170" fill="none" aria-hidden="true">
+            <polygon points="75,0 150,42 150,128 75,170 0,128 0,42" fill="#2b46f0" opacity="0.5"/>
+            <polygon points="75,30 124,58 124,112 75,140 26,112 26,58" fill="#f5b731" opacity="0.85"/>
+          </svg>
         </div>
-      </section>
+      </header>
 
-      <div class="container prop-profiles">
-        {items.map((it) => {
-          const p = it.profiles;
-          return (
-            <article class="prop-card">
-              {p.photo_url
-                ? <img src={p.photo_url} alt="" loading="lazy" />
-                : <span class="avatar-fallback">{(p.name ?? '?')[0]}</span>}
-              <div>
-                <h2>{p.name}</h2>
-                <p class="role">{it.role_label ?? p.job}</p>
-                <div class="badges" style="margin-bottom: 10px;">
-                  {p.experience && <span class="badge">{p.experience}</span>}
-                  {p.stars > 0 && p.stars <= 5 && <span class="badge star">★ {p.stars}</span>}
-                  {p.fluent_english && <span class="badge">Anglais courant</span>}
-                  {it.tjm && <span class="badge ok">{it.tjm} €/jour</span>}
+      <div class="container">
+        <div class="prop2-stats">
+          <div class="stat"><span class="hex-icon hex-icon-blue"></span><span>{items.length} talent{items.length > 1 ? 's' : ''} sélectionné{items.length > 1 ? 's' : ''} pour vous</span></div>
+          {allTjm && <div class="stat"><span class="hex-icon hex-icon-yellow"></span><span>Budget équipe : {totalTjm.toLocaleString('fr-FR')} €/jour</span></div>}
+          <div class="stat"><span class="hex-icon hex-icon-red"></span><span>Vérifiés et recommandés par leurs pairs</span></div>
+        </div>
+
+        <div class="prop2-list">
+          {items.map((it, i) => {
+            const p = it.profiles;
+            const refs = refLines(p.reference_html);
+            return (
+              <article class="prop2-card">
+                <div class="prop2-head">
+                  <span class="num-badge">{String(i + 1).padStart(2, '0')}</span>
+                  {p.photo_url
+                    ? <img src={p.photo_url} alt="" loading="lazy" />
+                    : <span class="avatar-fallback">{(p.name ?? '?')[0]}</span>}
+                  <div>
+                    <h2>{anonymize(p.name)}</h2>
+                    <p class="role">{it.role_label ?? p.job}</p>
+                    <div class="badges">
+                      {p.experience && <span class="badge">{p.experience}</span>}
+                      {p.stars > 0 && p.stars <= 5 && <span class="badge star">★ {p.stars} — note du Hub</span>}
+                      {p.fluent_english && <span class="badge">Anglais courant</span>}
+                    </div>
+                  </div>
+                  {it.tjm && <div class="prop2-tjm"><strong>{Number(it.tjm).toLocaleString('fr-FR')} €</strong><span>par jour</span></div>}
                 </div>
-                {it.note && <p class="rich">{it.note}</p>}
-                {p.reference_html && <div class="rich" set:html={p.reference_html} />}
-                <div class="doc-links" style="margin-top: 10px;">
-                  {p.cv_anonyme_url && <a href={p.cv_anonyme_url} target="_blank" rel="noopener">Voir le CV</a>}
-                  {p.portfolio_url && <a href={p.portfolio_url} target="_blank" rel="noopener">Portfolio</a>}
-                </div>
-              </div>
-            </article>
-          );
-        })}
+                {it.note && <p class="prop2-note">{it.note}</p>}
+                {refs && (
+                  <>
+                    <p class="prop2-section-label">Ils ont travaillé avec</p>
+                    {'chips' in refs
+                      ? <ul class="chips">{refs.chips.map((r: string) => <li><span class="chip">{r}</span></li>)}</ul>
+                      : <div class="prop2-refs-text" set:html={refs.html} />}
+                  </>
+                )}
+                {p.cv_anonyme_url && (
+                  <div class="doc-links">
+                    <a href={p.cv_anonyme_url} target="_blank" rel="noopener">Consulter le CV détaillé</a>
+                  </div>
+                )}
+              </article>
+            );
+          })}
+        </div>
       </div>
 
-      <section class="cta-navy" style="margin-bottom: 50px;">
+      <section class="cta-navy" style="margin-bottom: 10px;">
         <div class="cta-copy">
           <p class="eyebrow">La suite&nbsp;?</p>
           <h2>Échangeons sur cette proposition</h2>
-          <p>Nous organisons les entretiens avec les profils qui retiennent votre attention.</p>
+          <p>Nous organisons les entretiens avec les profils qui retiennent votre attention — le démarrage peut être rapide.</p>
         </div>
         <a href="mailto:hello@digitags.work" class="btn">Nous répondre <span aria-hidden="true">→</span></a>
       </section>
+
+      <footer class="prop2-footer">
+        <span class="logo">
+          <img src="/assets/logo-mark.svg" alt="" class="logo-mark" />
+        </span>
+        <p>Proposition préparée par digitags.work — le hub de plus de 1 600 talents digitaux vérifiés.<br />
+        Les coordonnées complètes des talents sont communiquées lors de l'entretien organisé par digitags.work.</p>
+      </footer>
     </>
   ) : (
-    <section class="page-hero" style="padding-bottom: 120px;">
-      <div class="container">
-        <p class="eyebrow">Proposition</p>
-        <h1>Ce lien n'est plus valide.</h1>
-        <p class="lead">Cette proposition n'existe pas ou a été archivée. Contactez votre interlocuteur digitags.work pour recevoir un nouveau lien.</p>
-        <div class="hero-cta"><a href="/" class="btn btn-dark">Retour à l'accueil</a></div>
-      </div>
-    </section>
+    <div class="container" style="padding: 90px 24px; text-align: center; max-width: 560px;">
+      <p class="eyebrow">Proposition</p>
+      <h1 style="font-size: 28px; font-weight: 800; margin: 10px 0 14px;">Ce lien n'est plus valide.</h1>
+      <p style="color: var(--ink-soft);">Cette proposition n'existe pas ou a été archivée. Contactez votre interlocuteur digitags.work pour recevoir un nouveau lien.</p>
+    </div>
   )}
-</Base>
+</body>
+</html>

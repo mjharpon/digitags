@@ -1632,3 +1632,113 @@ a.stat:hover span:last-child { text-decoration: underline; text-underline-offset
   white-space: nowrap;
 }
 .ms-panel input { accent-color: var(--blue); }
+
+/* ============ Propale v2 (document commercial autonome) ============ */
+.prop2-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+.prop2-topbar .tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #8fa0e8;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+.prop2-hero {
+  background: var(--navy);
+  color: #fff;
+  padding-bottom: 46px;
+  position: relative;
+  overflow: hidden;
+}
+.prop2-hero .eyebrow { color: #8fa0e8; }
+.prop2-hero h1 { font-size: clamp(28px, 3.4vw, 40px); font-weight: 800; letter-spacing: -.02em; margin: 6px 0 12px; max-width: 24ch; }
+.prop2-hero .intro { color: #b9c0d8; max-width: 58ch; font-size: 15.5px; }
+.prop2-hero .meta { font-size: 12.5px; color: #8f97b3; margin-top: 18px; }
+.prop2-hero .deco { position: absolute; right: -10px; top: 40px; opacity: .9; }
+.prop2-stats {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  margin-top: -34px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 22px 34px;
+  flex-wrap: wrap;
+  box-shadow: 0 18px 44px rgba(17,28,63,.1);
+}
+.prop2-stats .stat { flex: 1; justify-content: center; }
+.prop2-list { display: grid; gap: 22px; padding: 46px 0 10px; }
+.prop2-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  box-shadow: 0 10px 26px rgba(17,28,63,.05);
+}
+.prop2-head {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.prop2-head .num-badge { margin: 0; }
+.prop2-head img, .prop2-head .avatar-fallback {
+  width: 92px;
+  height: 92px;
+  border-radius: 18px;
+  object-fit: cover;
+  font-size: 26px;
+}
+.prop2-head h2 { font-size: 21px; font-weight: 800; letter-spacing: -.01em; }
+.prop2-head .role { color: var(--blue); font-weight: 700; font-size: 14px; margin: 3px 0 8px; }
+.prop2-tjm { text-align: right; }
+.prop2-tjm strong { font-size: 24px; font-weight: 800; color: var(--navy); display: block; letter-spacing: -.02em; }
+.prop2-tjm span { font-size: 11.5px; color: var(--ink-faint); font-weight: 600; }
+.prop2-note {
+  background: #fbf8f4;
+  border-left: 3px solid var(--yellow);
+  border-radius: 0 10px 10px 0;
+  padding: 14px 18px;
+  font-size: 14px;
+  color: #4a4435;
+  margin-bottom: 18px;
+}
+.prop2-note::before { content: "L'avis du Hub — "; font-weight: 700; }
+.prop2-section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 10px;
+}
+.prop2-card .chips { justify-content: flex-start; max-width: none; margin-bottom: 16px; }
+.prop2-card .chip { padding: 7px 14px; font-size: 13px; }
+.prop2-refs-text { font-size: 13.5px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 16px; }
+.prop2-refs-text p { margin: 0 0 6px; }
+.prop2-footer {
+  text-align: center;
+  padding: 36px 0 40px;
+  color: var(--ink-faint);
+  font-size: 12.5px;
+}
+.prop2-footer .logo { justify-content: center; display: flex; margin-bottom: 10px; }
+@media (max-width: 720px) {
+  .prop2-head { grid-template-columns: auto 1fr; }
+  .prop2-head .num-badge { display: none; }
+  .prop2-tjm { grid-column: 1 / -1; text-align: left; }
+}
+@media print {
+  .cta-navy, .prop2-topbar .tag { display: none; }
+  .prop2-card { box-shadow: none; break-inside: avoid; }
+}
