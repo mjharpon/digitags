@@ -11,3 +11,5 @@ compatibility_date = "2026-01-01"
 #   { pattern = "digitags.work/*", zone_name = "digitags.work" },
 #   { pattern = "www.digitags.work/*", zone_name = "digitags.work" },
 # ]
+
+workers_dev = true
