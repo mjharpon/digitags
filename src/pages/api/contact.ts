@@ -38,7 +38,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
   }
 
   // Piège anti-robots : champ caché qui doit rester vide.
-  if (form.get('bot-field')) return json(200, { ok: true });
+  if (form.get('site_web')) return json(200, { ok: true });
 
   const get = (k: string) => String(form.get(k) ?? '').trim();
   const nom = get('nom');
