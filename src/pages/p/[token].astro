@@ -2,8 +2,9 @@
 // Page propale privée, accessible uniquement via son lien à jeton.
 // Rendue à la demande côté serveur (clé service_role, jamais exposée).
 // Document commercial autonome (sans la navigation du site).
-// Anonymisation anti-contournement : prénom + initiale, CV anonymisé
-// uniquement, pas de lien portfolio, pas d'email ni de notes internes.
+// Anonymisation anti-contournement : « Consultant N » (le nom n'est même
+// pas requêté), avatar générique, CV anonymisé uniquement, pas de lien
+// portfolio, pas d'email ni de notes internes.
 export const prerender = false;
 
 import '../../styles/global.css';
@@ -27,7 +28,7 @@ if (url && key && token && /^[a-f0-9]{16,64}$/.test(token)) {
   const props = await rest(`proposals?select=id,title,client_name,intro,created_at,start_date,duration_weeks&token=eq.${token}&archived=eq.false&limit=1`);
   proposal = props[0] ?? null;
   if (proposal) {
-    items = await rest(`proposal_items?select=role_label,tjm,note,sort,days_week,profiles(name,job,photo_url,experience,stars,fluent_english,reference_html,cv_anonyme_url)&proposal_id=eq.${proposal.id}&order=sort`);
+    items = await rest(`proposal_items?select=role_label,tjm,note,sort,days_week,profiles(job,experience,stars,fluent_english,reference_html,cv_anonyme_url)&proposal_id=eq.${proposal.id}&order=sort`);
   }
 }
 
@@ -36,15 +37,19 @@ if (!proposal) {
 }
 Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow');
 
-// Prénom + initiale du nom : « Ameni Ghorbel » → « Ameni G. »
-const anonymize = (name: string) => {
-  const parts = (name ?? '').trim().split(/\s+/);
-  if (parts.length < 2) return parts[0] ?? 'Talent';
-  return `${parts[0]} ${parts[parts.length - 1][0].toUpperCase()}.`;
-};
+// Avatars génériques : silhouette blanche sur hexagone, couleurs de la
+// marque en rotation pour différencier les consultants d'un coup d'œil.
+const AVA_COLORS = ['#2b46f0', '#f5b731', '#f2543d', '#111c3f'];
 
 // Références rich-text → liste de clients (chips) si les lignes sont courtes.
-const strip = (h: string) => h.replace(/<[^>]+>/g, '').trim();
+const strip = (h: string) => h
+  .replace(/<[^>]+>/g, '')
+  .replace(/&nbsp;/g, ' ')
+  .replace(/&amp;/g, '&')
+  .replace(/&#39;|&apos;/g, "'")
+  .replace(/&quot;/g, '"')
+  .replace(/\s+/g, ' ')
+  .trim();
 const refLines = (html?: string) => {
   if (!html) return null;
   const lines = html
@@ -55,17 +60,23 @@ const refLines = (html?: string) => {
   return lines.every((l) => l.length <= 45) ? { chips: lines } : { html };
 };
 
-const totalTjm = items.reduce((s, it) => s + (Number(it.tjm) || 0), 0);
 const allTjm = items.length > 0 && items.every((it) => Number(it.tjm) > 0);
 const dateFmt = proposal
   ? new Date(proposal.created_at).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
   : '';
 
-// Configurateur de mission : budget hebdomadaire = Σ (TJM × jours/semaine).
-const weeklyBudget = items.reduce((s, it) => s + (Number(it.tjm) || 0) * (Number(it.days_week) || 5), 0);
 const defaultWeeks = proposal?.duration_weeks ?? 4;
 const defaultStart = proposal?.start_date ?? new Date(Date.now() + 14 * 864e5).toISOString().slice(0, 10);
 const euro = (n: number) => n.toLocaleString('fr-FR');
+
+// Données du configurateur (aucun nom : « Consultant N »).
+const cfgItems = items.map((it, i) => ({
+  n: i + 1,
+  role: it.role_label ?? it.profiles.job ?? 'Consultant',
+  tjm: Number(it.tjm) || 0,
+  days: Number(it.days_week) || 5,
+}));
+const weeklyBudget = cfgItems.reduce((s, c) => s + c.tjm * c.days, 0);
 ---
 <!DOCTYPE html>
 <html lang="fr">
@@ -81,7 +92,7 @@ const euro = (n: number) => n.toLocaleString('fr-FR');
 <body>
   {proposal ? (
     <>
-      <header class="prop2-hero">
+      <header class="prop3-hero">
         <div class="container">
           <div class="prop2-topbar">
             <span class="logo logo-light">
@@ -90,100 +101,187 @@ const euro = (n: number) => n.toLocaleString('fr-FR');
             </span>
             <span class="tag">Confidentiel</span>
           </div>
-          <p class="eyebrow">Proposition d'équipe{proposal.client_name && ` — pour ${proposal.client_name}`}</p>
-          <h1>{proposal.title}</h1>
-          {proposal.intro && <p class="intro">{proposal.intro}</p>}
-          <p class="meta">Préparée le {dateFmt} · Réservée à son destinataire — merci de ne pas la diffuser.</p>
-          <svg class="deco" width="150" height="170" viewBox="0 0 150 170" fill="none" aria-hidden="true">
-            <polygon points="75,0 150,42 150,128 75,170 0,128 0,42" fill="#2b46f0" opacity="0.5"/>
-            <polygon points="75,30 124,58 124,112 75,140 26,112 26,58" fill="#f5b731" opacity="0.85"/>
-          </svg>
+          <div class="prop3-hero-grid">
+            <div>
+              <p class="eyebrow">Proposition d'équipe{proposal.client_name && ` — pour ${proposal.client_name}`}</p>
+              <h1>Constituez votre équipe sur-mesure</h1>
+              <p class="intro">{proposal.intro ?? 'Sélectionnez les bons talents, ajustez les dates et la durée. Le budget se met à jour en temps réel.'}</p>
+              <p class="meta">« {proposal.title} » · Préparée le {dateFmt} · Réservée à son destinataire — merci de ne pas la diffuser.</p>
+            </div>
+            <div class="prop3-illu" aria-hidden="true">
+              {['Product', 'UX/UI', 'Data'].map((lbl, i) => (
+                <div class={`p3i-card c${i}`}>
+                  <svg viewBox="0 0 86 86" width="46" height="46">
+                    <polygon points="43,4 78,23.5 78,62.5 43,82 8,62.5 8,23.5" fill={AVA_COLORS[i % AVA_COLORS.length]} />
+                    <circle cx="43" cy="36" r="11" fill="#fff" opacity="0.92" />
+                    <path d="M24 66c2.5-12 9.5-18 19-18s16.5 6 19 18v2H24z" fill="#fff" opacity="0.92" />
+                  </svg>
+                  <em>{lbl}</em>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </header>
 
       <div class="container">
-        <div class="prop2-stats">
-          <div class="stat"><span class="hex-icon hex-icon-blue"></span><span>{items.length} talent{items.length > 1 ? 's' : ''} sélectionné{items.length > 1 ? 's' : ''} pour vous</span></div>
-          {allTjm && <div class="stat"><span class="hex-icon hex-icon-yellow"></span><span>Budget équipe : {totalTjm.toLocaleString('fr-FR')} €/jour</span></div>}
-          <div class="stat"><span class="hex-icon hex-icon-red"></span><span>Vérifiés et recommandés par leurs pairs</span></div>
-        </div>
+        <ol class="prop3-steps">
+          <li class="on"><span class="ps-num">1</span><div><strong>Mission</strong><small>Dates et durée</small></div></li>
+          <li><span class="ps-num">2</span><div><strong>Talents</strong><small>Votre équipe proposée</small></div></li>
+          <li><span class="ps-num">3</span><div><strong>Validation</strong><small>Détails et options</small></div></li>
+          <li><span class="ps-num">4</span><div><strong>Envoi</strong><small>On démarre ensemble</small></div></li>
+        </ol>
 
-        {allTjm && weeklyBudget > 0 && (
-          <div class="prop2-config">
-            <div class="prop2-config-head">
-              <h3>Votre mission, à votre mesure</h3>
-              <p>Ajustez le démarrage et la durée : le budget se recalcule instantanément.</p>
-            </div>
-            <div class="prop2-config-fields">
-              <label>Démarrage souhaité
-                <input type="date" id="cfg-start" value={defaultStart} />
-              </label>
-              <label>Durée de la mission
-                <span class="cfg-weeks-wrap"><input type="number" id="cfg-weeks" value={defaultWeeks} min="1" max="52" /> semaines</span>
-              </label>
-            </div>
-            <table class="prop2-config-table">
-              <tbody>
-                {items.map((it) => (
-                  <tr>
-                    <td>{it.role_label ?? it.profiles.job}</td>
-                    <td>{euro(Number(it.tjm))} €/j × {Number(it.days_week) || 5} j/sem</td>
-                    <td class="r">{euro((Number(it.tjm) || 0) * (Number(it.days_week) || 5))} €/sem</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <div class="prop2-config-total" data-weekly={weeklyBudget}>
-              <div>
-                <span class="lbl">Budget total estimé</span>
-                <strong id="cfg-total">{euro(weeklyBudget * defaultWeeks)} € HT</strong>
-                <span class="sub" id="cfg-total-sub">pour {defaultWeeks} semaines</span>
-              </div>
-              <a class="btn btn-dark" id="cfg-cta" href="#">Valider ces options <span aria-hidden="true">→</span></a>
-            </div>
-            <p class="prop2-config-note">Estimation indicative sur la base des rythmes proposés — le périmètre exact est affiné ensemble avant démarrage.</p>
-          </div>
-        )}
+        <div class="prop3-layout">
+          <div class="prop3-main">
 
-        <div class="prop2-list">
-          {items.map((it, i) => {
-            const p = it.profiles;
-            const refs = refLines(p.reference_html);
-            return (
-              <article class="prop2-card">
-                <div class="prop2-head">
-                  <span class="num-badge">{String(i + 1).padStart(2, '0')}</span>
-                  {p.photo_url
-                    ? <img src={p.photo_url} alt="" loading="lazy" />
-                    : <span class="avatar-fallback">{(p.name ?? '?')[0]}</span>}
-                  <div>
-                    <h2>{anonymize(p.name)}</h2>
-                    <p class="role">{it.role_label ?? p.job}</p>
-                    <div class="badges">
-                      {p.experience && <span class="badge">{p.experience}</span>}
-                      {p.stars > 0 && p.stars <= 5 && <span class="badge star">★ {p.stars} — note du Hub</span>}
-                      {p.fluent_english && <span class="badge">Anglais courant</span>}
-                    </div>
-                  </div>
-                  {it.tjm && <div class="prop2-tjm"><strong>{Number(it.tjm).toLocaleString('fr-FR')} €</strong><span>par jour</span></div>}
+            <section class="prop3-card">
+              <div class="prop3-card-head">
+                <span class="p3-ico">📅</span>
+                <div>
+                  <h2>1. Votre mission, à votre mesure</h2>
+                  <p>Ajustez le démarrage et la durée : le budget se recalcule instantanément.</p>
                 </div>
-                {it.note && <p class="prop2-note">{it.note}</p>}
-                {refs && (
-                  <>
-                    <p class="prop2-section-label">Ils ont travaillé avec</p>
-                    {'chips' in refs
-                      ? <ul class="chips">{refs.chips.map((r: string) => <li><span class="chip">{r}</span></li>)}</ul>
-                      : <div class="prop2-refs-text" set:html={refs.html} />}
-                  </>
-                )}
-                {p.cv_anonyme_url && (
-                  <div class="doc-links">
-                    <a href={p.cv_anonyme_url} target="_blank" rel="noopener">Consulter le CV détaillé</a>
-                  </div>
-                )}
-              </article>
-            );
-          })}
+              </div>
+              <div class="prop3-config-fields">
+                <label>Démarrage souhaité
+                  <input type="date" id="cfg-start" value={defaultStart} />
+                </label>
+                <label>Durée de la mission
+                  <span class="cfg-weeks-wrap"><input type="number" id="cfg-weeks" value={defaultWeeks} min="1" max="52" /> semaines</span>
+                </label>
+                <div class="cfg-week-chips" role="group" aria-label="Durées proposées">
+                  {[2, 4, 8, 12].map((w) => (
+                    <button type="button" class={`wk-chip ${w === defaultWeeks ? 'on' : ''}`} data-wk={w}>{w} sem</button>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            <section class="prop3-card">
+              <div class="prop3-card-head">
+                <span class="p3-ico">👥</span>
+                <div>
+                  <h2>2. Talents sélectionnés</h2>
+                  <p>{items.length} profil{items.length > 1 ? 's' : ''} pour ce projet{allTjm ? ' · Vous pouvez ajuster la charge (jours/sem) ou écarter un profil.' : ''}</p>
+                </div>
+              </div>
+              <div class="prop3-rows">
+                {items.map((it, i) => {
+                  const p = it.profiles;
+                  return (
+                    <div class="prop3-row" data-row={i}>
+                      <span class="p3-ava" aria-hidden="true">
+                        <svg viewBox="0 0 86 86" width="48" height="48">
+                          <polygon points="43,4 78,23.5 78,62.5 43,82 8,62.5 8,23.5" fill={AVA_COLORS[i % AVA_COLORS.length]} />
+                          <circle cx="43" cy="36" r="11" fill="#fff" opacity="0.92" />
+                          <path d="M24 66c2.5-12 9.5-18 19-18s16.5 6 19 18v2H24z" fill="#fff" opacity="0.92" />
+                        </svg>
+                      </span>
+                      <div class="p3-id">
+                        <strong>Consultant {i + 1}</strong>
+                        <span class="p3-role">{it.role_label ?? p.job}</span>
+                        <span class="p3-badges">
+                          {p.experience && <span class="badge">{p.experience}</span>}
+                          {p.fluent_english && <span class="badge en">Anglais courant</span>}
+                        </span>
+                      </div>
+                      {allTjm && (
+                        <>
+                          <div class="p3-cell">
+                            <label>TJM</label>
+                            <span class="p3-tjm">{euro(Number(it.tjm))} €</span>
+                          </div>
+                          <div class="p3-cell">
+                            <label for={`days-${i}`}>Jours / sem</label>
+                            <input type="number" id={`days-${i}`} class="p3-days" value={Number(it.days_week) || 5} min="0.5" max="5" step="0.5" />
+                          </div>
+                          <strong class="p3-line" data-line={i}>{euro((Number(it.tjm) || 0) * (Number(it.days_week) || 5))} €/sem</strong>
+                          <button type="button" class="p3-x" data-x={i} title="Écarter ce profil de l'estimation">×</button>
+                        </>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+
+            <section class="prop3-card">
+              <div class="prop3-card-head">
+                <span class="p3-ico">🔎</span>
+                <div>
+                  <h2>3. Les profils en détail</h2>
+                  <p>Références et CV anonymisés — les coordonnées complètes sont communiquées lors de l'entretien.</p>
+                </div>
+              </div>
+              <div class="prop2-list">
+                {items.map((it, i) => {
+                  const p = it.profiles;
+                  const refs = refLines(p.reference_html);
+                  return (
+                    <article class="prop2-card">
+                      <div class="prop2-head">
+                        <span class="num-badge">{String(i + 1).padStart(2, '0')}</span>
+                        <span class="prop2-ava" aria-hidden="true">
+                          <svg viewBox="0 0 86 86" width="72" height="72">
+                            <polygon points="43,4 78,23.5 78,62.5 43,82 8,62.5 8,23.5" fill={AVA_COLORS[i % AVA_COLORS.length]} />
+                            <circle cx="43" cy="36" r="11" fill="#fff" opacity="0.92" />
+                            <path d="M24 66c2.5-12 9.5-18 19-18s16.5 6 19 18v2H24z" fill="#fff" opacity="0.92" />
+                          </svg>
+                        </span>
+                        <div>
+                          <h2>Consultant {i + 1}</h2>
+                          <p class="role">{it.role_label ?? p.job}</p>
+                          <div class="badges">
+                            {p.experience && <span class="badge">{p.experience}</span>}
+                            {p.stars > 0 && p.stars <= 5 && <span class="badge star">★ {p.stars} — note du Hub</span>}
+                            {p.fluent_english && <span class="badge">Anglais courant</span>}
+                          </div>
+                        </div>
+                        {it.tjm && <div class="prop2-tjm"><strong>{Number(it.tjm).toLocaleString('fr-FR')} €</strong><span>par jour</span></div>}
+                      </div>
+                      {it.note && <p class="prop2-note">{it.note}</p>}
+                      {refs && (
+                        <>
+                          <p class="prop2-section-label">Ils ont travaillé avec</p>
+                          {'chips' in refs
+                            ? <ul class="chips">{refs.chips.map((r: string) => <li><span class="chip">{r}</span></li>)}</ul>
+                            : <div class="prop2-refs-text" set:html={refs.html} />}
+                        </>
+                      )}
+                      {p.cv_anonyme_url && (
+                        <div class="doc-links">
+                          <a href={p.cv_anonyme_url} target="_blank" rel="noopener">Consulter le CV détaillé</a>
+                        </div>
+                      )}
+                    </article>
+                  );
+                })}
+              </div>
+            </section>
+          </div>
+
+          <aside class="prop3-side">
+            {allTjm && weeklyBudget > 0 && (
+              <div class="prop3-budget">
+                <div class="p3b-head"><span class="p3b-ico">🧮</span><div><strong>Budget estimé</strong><small>Mise à jour en temps réel</small></div></div>
+                <strong class="p3b-total" id="cfg-total">{euro(weeklyBudget * defaultWeeks)} € HT</strong>
+                <span class="p3b-sub" id="cfg-total-sub">pour {defaultWeeks} semaines</span>
+                <ul class="p3b-lines" id="cfg-lines">
+                  {cfgItems.map((c, i) => (
+                    <li data-bline={i}><span>Consultant {c.n} · {c.role}</span><strong>{euro(c.tjm * c.days * defaultWeeks)} €</strong></li>
+                  ))}
+                </ul>
+                <p class="p3b-note">ⓘ Estimation indicative, basée sur les rythmes proposés. Le périmètre exact est affiné ensemble avant démarrage.</p>
+                <a class="btn p3b-cta" id="cfg-cta" href="#">Valider ces options <span aria-hidden="true">→</span></a>
+              </div>
+            )}
+            <div class="prop3-help">
+              <strong>Besoin d'aide&nbsp;?</strong>
+              <p>Notre équipe vous accompagne pour affiner cette proposition — remplacer un profil, ajuster le périmètre ou le rythme.</p>
+              <a href={`mailto:hello@digitags.work?subject=${encodeURIComponent('Proposition « ' + proposal.title + ' » — échangeons')}`}>Échanger avec nous →</a>
+            </div>
+          </aside>
         </div>
       </div>
 
@@ -196,26 +294,56 @@ const euro = (n: number) => n.toLocaleString('fr-FR');
         <a href="mailto:hello@digitags.work" class="btn">Nous répondre <span aria-hidden="true">→</span></a>
       </section>
 
-      <script define:vars={{ weeklyBudget, title: proposal.title }}>
+      <script define:vars={{ cfgItems, title: proposal.title }}>
         const weeks = document.getElementById('cfg-weeks');
         const start = document.getElementById('cfg-start');
-        if (weeks && start) {
-          const total = document.getElementById('cfg-total');
-          const sub = document.getElementById('cfg-total-sub');
-          const cta = document.getElementById('cfg-cta');
+        if (weeks && start && document.getElementById('cfg-total')) {
           const euro = (n) => n.toLocaleString('fr-FR');
+          const state = cfgItems.map((c) => ({ ...c, on: true }));
+
           const update = () => {
             const w = Math.max(1, Math.min(52, Number(weeks.value) || 1));
-            total.textContent = euro(weeklyBudget * w) + ' € HT';
-            sub.textContent = 'pour ' + w + ' semaine' + (w > 1 ? 's' : '');
+            let weekly = 0;
+            state.forEach((c, i) => {
+              const line = c.on ? c.tjm * c.days : 0;
+              weekly += line;
+              const lineEl = document.querySelector(`[data-line="${i}"]`);
+              if (lineEl) lineEl.textContent = euro(c.tjm * c.days) + ' €/sem';
+              const bline = document.querySelector(`[data-bline="${i}"]`);
+              if (bline) {
+                bline.classList.toggle('off', !c.on);
+                bline.querySelector('strong').textContent = c.on ? euro(line * w) + ' €' : 'écarté';
+              }
+              const row = document.querySelector(`[data-row="${i}"]`);
+              if (row) row.classList.toggle('off', !c.on);
+            });
+            document.getElementById('cfg-total').textContent = euro(weekly * w) + ' € HT';
+            document.getElementById('cfg-total-sub').textContent = 'pour ' + w + ' semaine' + (w > 1 ? 's' : '');
+            document.querySelectorAll('.wk-chip').forEach((ch) => ch.classList.toggle('on', Number(ch.dataset.wk) === w));
+
             const d = start.value
               ? new Date(start.value).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
               : 'à définir';
-            const body = 'Bonjour,%0D%0A%0D%0ANous souhaitons avancer sur votre proposition « ' + encodeURIComponent(title) + ' » avec les options suivantes :%0D%0A%0D%0A• Démarrage souhaité : ' + encodeURIComponent(d) + '%0D%0A• Durée : ' + w + ' semaine' + (w > 1 ? 's' : '') + '%0D%0A• Budget estimé : ' + encodeURIComponent(euro(weeklyBudget * w)) + ' € HT%0D%0A%0D%0A';
-            cta.href = 'mailto:hello@digitags.work?subject=' + encodeURIComponent('Proposition « ' + title + ' » — nos options') + '&body=' + body;
+            const picked = state.filter((c) => c.on);
+            const lines = picked.map((c) => '• Consultant ' + c.n + ' (' + c.role + ') : ' + c.days + ' j/sem').join('%0D%0A');
+            const body = 'Bonjour,%0D%0A%0D%0ANous souhaitons avancer sur votre proposition « ' + encodeURIComponent(title) + ' » avec les options suivantes :%0D%0A%0D%0A• Démarrage souhaité : ' + encodeURIComponent(d) + '%0D%0A• Durée : ' + w + ' semaine' + (w > 1 ? 's' : '') + '%0D%0A' + lines + '%0D%0A• Budget estimé : ' + encodeURIComponent(euro(weekly * w)) + ' € HT%0D%0A%0D%0A';
+            document.getElementById('cfg-cta').href = 'mailto:hello@digitags.work?subject=' + encodeURIComponent('Proposition « ' + title + ' » — nos options') + '&body=' + body;
           };
+
           weeks.addEventListener('input', update);
           start.addEventListener('input', update);
+          document.querySelectorAll('.wk-chip').forEach((ch) => ch.addEventListener('click', () => { weeks.value = ch.dataset.wk; update(); }));
+          document.querySelectorAll('.p3-days').forEach((inp, i) => inp.addEventListener('input', () => {
+            state[i].days = Math.max(0.5, Math.min(5, Number(inp.value) || 0));
+            update();
+          }));
+          document.querySelectorAll('[data-x]').forEach((btn) => btn.addEventListener('click', () => {
+            const i = Number(btn.dataset.x);
+            state[i].on = !state[i].on;
+            btn.textContent = state[i].on ? '×' : '+';
+            btn.title = state[i].on ? 'Écarter ce profil de l\'estimation' : 'Réintégrer ce profil';
+            update();
+          }));
           update();
         }
       </script>
