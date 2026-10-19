@@ -1372,3 +1372,6 @@ a.chip:hover { border-color: var(--blue); }
 .cat-extra { margin-top: 16px; display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
 .cat-extra > p { font-size: 13px; font-weight: 700; color: var(--ink-faint); flex: none; }
 .chips-left { justify-content: flex-start; margin: 0; max-width: none; flex: 1; }
+.link-light { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.link-light:hover { color: var(--yellow); }
+a.stat:hover span:last-child { text-decoration: underline; text-underline-offset: 3px; }
