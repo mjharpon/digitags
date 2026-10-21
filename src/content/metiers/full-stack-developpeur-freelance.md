@@ -1,7 +1,7 @@
 ---
 title: "Full-stack développeur freelance"
 metaTitle: "Full-stack développeur freelance"
-description: "Découvrez le rôle essentiel du développeur full-stack freelance, maîtrisant à la fois le front-end et le back-end. De la création d'interfaces utilisateur aux bases de données, explorez les compétences techniques, les langages de programmation et les frameworks nécessaires pour exceller dans ce métier polyvalent."
+description: "Développeur full-stack freelance : front-end, back-end et bases de données. Compétences, langages et frameworks d'un profil polyvalent."
 image: "/uploads/metiers/full-stack-developpeur-freelance-cover.webp"
 blogCategory: "tech-et-data"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Guide complet pour la création d'un site e-commerce"
-description: "Découvrez comment créer un site e-commerce performant étape par étape. De la sélection de la plateforme à l’optimisation SEO, en passant par le marketing digital, suivez nos conseils pour maximiser vos ventes."
+description: "Création d'un site e-commerce : le guide étape par étape, du choix de la plateforme au SEO et au marketing digital, pour maximiser vos ventes."
 date: 2025-02-04
 tags: [tech-et-data]
 image: "/uploads/blog/guide-complet-pour-la-creation-dun-site-e-commerce-cover.webp"

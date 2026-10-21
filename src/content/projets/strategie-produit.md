@@ -1,7 +1,7 @@
 ---
 title: "Réaliser une stratégie produit"
 metaTitle: "Réaliser une stratégie produit"
-description: "Découvrez comment élaborer une stratégie produit efficace pour votre entreprise. De l'analyse du marché à la mise en œuvre d'une stratégie de pricing, cet article vous guide à travers les étapes clés pour développer des produits qui répondent aux besoins de vos clients et se démarquent de la concurrence."
+description: "Stratégie produit : de l'analyse du marché à la stratégie de pricing, les étapes clés pour développer des produits qui répondent aux besoins clients."
 image: "/uploads/projets/strategie-produit-cover.webp"
 blogCategory: "product"
 ---

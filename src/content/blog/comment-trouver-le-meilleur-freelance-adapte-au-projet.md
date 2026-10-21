@@ -1,6 +1,6 @@
 ---
 title: "Comment trouver le meilleur freelance adapté au projet ?"
-description: "Vous cherchez un freelance pour votre projet mais ne savez pas par où commencer ? Découvrez nos conseils pour trouver le freelance idéal. Nous vous guidons sur où chercher, comment évaluer les compétences, fixer le budget, et négocier les tarifs."
+description: "Comment trouver le meilleur freelance pour votre projet ? Où chercher, évaluer les compétences, fixer le budget et négocier les tarifs : nos conseils."
 date: 2023-08-31
 tags: [freelancer, recrutement, design, tech-et-data, webmarketing, product]
 image: "/uploads/blog/comment-trouver-le-meilleur-freelance-adapte-au-projet-cover.avif"

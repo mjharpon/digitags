@@ -1,7 +1,7 @@
 ---
 title: "Mener une phase d'UX research"
 metaTitle: "Mener une phase d'UX research"
-description: "Optimisez l'expérience utilisateur de votre produit grâce à l'UX research. Ce processus essentiel permet de comprendre les besoins et les motivations de vos utilisateurs pour orienter vos décisions stratégiques. Découvrez les méthodes et étapes clés de l'UX research, et faites-vous accompagner par les experts freelances de Digitags pour mener à bien votre projet."
+description: "UX research : méthodes et étapes clés pour comprendre les besoins de vos utilisateurs et orienter vos décisions, avec les experts freelances de digitags."
 image: "/uploads/projets/mener-une-phase-dux-research-cover.webp"
 blogCategory: "design"
 ---

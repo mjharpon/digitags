@@ -1,6 +1,6 @@
 ---
 title: "Product Owner VS Chef de projet"
-description: "Product Owner ? Chef de Projet ? Quelle est la différence ? Nombreux sont ceux qui pensent que les deux veulent en réalité dire la même chose mais ce n’est pas le cas."
+description: "Product owner ou chef de projet : quelle différence ? Deux rôles souvent confondus, pourtant distincts. On vous explique ce qui les sépare."
 date: 2021-08-31
 tags: [product]
 image: "/uploads/blog/product-owner-vs-chef-de-projet-cover.webp"

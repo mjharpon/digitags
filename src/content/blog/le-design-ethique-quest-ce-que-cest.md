@@ -1,6 +1,6 @@
 ---
 title: "Le design éthique : qu’est-ce que c’est ?"
-description: "Le design éthique est une réflexion sur la responsabilité du designer envers l’humain et la société moderne. Il devient un concept de plus en plus important dans le monde des designers."
+description: "Le design éthique, qu'est-ce que c'est ? Une réflexion sur la responsabilité du designer envers l'humain et la société, de plus en plus essentielle."
 date: 2021-09-01
 tags: [design]
 image: "/uploads/blog/le-design-ethique-quest-ce-que-cest-cover.webp"

@@ -1,6 +1,6 @@
 ---
 title: "Connaissez vous Bubble ? Petite revue sur l'outil Bubble, le nouveau venu du No Code"
-description: "Bubble est un outil de développement d’applications mobiles et web sans codage, sans programmation HTML ou CSS fastidieuse. Si vous êtes intéressé, cliquez pour voir l'article."
+description: "Bubble, l'outil no-code pour créer des applications web et mobiles sans programmer : notre revue pour savoir s'il vous convient."
 date: 2021-08-20
 tags: [design]
 image: "/uploads/blog/revue-sur-bubble-cover.webp"

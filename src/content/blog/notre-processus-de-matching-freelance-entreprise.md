@@ -1,6 +1,6 @@
 ---
 title: "Notre processus de matching freelance / entreprise expliqué"
-description: "Découvrez comment notre processus de matching connecte votre entreprise avec les meilleurs freelances en 3-7 jours. Méthode éprouvée, sourcing qualifié, accompagnement humain."
+description: "Notre processus de matching freelance / entreprise : sourcing qualifié et accompagnement humain pour trouver le bon freelance en 3 à 7 jours."
 date: 2026-04-07
 image: "/uploads/blog/notre-processus-de-matching-freelance-entreprise-cover.webp"
 ---

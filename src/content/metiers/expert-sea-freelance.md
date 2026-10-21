@@ -1,7 +1,7 @@
 ---
 title: "Expert SEA freelance"
 metaTitle: "Expert SEA freelance : Google Ads piloté au ROI avec digitags.work"
-description: "Recrutez un expert SEA freelance pour piloter vos campagnes Google Ads, Shopping et YouTube au ROI : structure de compte, enchères, tracking des conversions et reporting transparent. Trouvez le profil vérifié qu'il vous faut dans le réseau digitags.work."
+description: "Expert SEA freelance : Google Ads, Shopping et YouTube pilotés au ROI, avec tracking des conversions et reporting transparent. Profils vérifiés."
 image: "/uploads/metiers/traffic-manager-freelance-0.webp"
 blogCategory: "webmarketing"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Comment trouver le bon designer en freelance ?"
-description: "Découvrez nos conseils pour recruter le designer freelance idéal pour vos projets digitaux. Définissez vos besoins, trouvez le bon profil, et évaluez les compétences essentielles telles que la technique, la créativité et la communication."
+description: "Comment trouver le bon designer freelance ? Définissez vos besoins, identifiez le bon profil et évaluez technique, créativité et communication."
 date: 2022-08-29
 tags: [design, freelancer]
 image: "/uploads/blog/comment-trouver-le-bon-designer-en-freelance-cover.webp"

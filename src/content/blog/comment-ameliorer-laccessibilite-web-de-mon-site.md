@@ -1,6 +1,6 @@
 ---
 title: "Comment améliorer l’accessibilité web de mon site ?"
-description: "Découvrez comment rendre votre site web accessible à tous grâce à nos conseils sur l'accessibilité web. Apprenez les principes clés, l'importance d'un design inclusif et les outils essentiels pour offrir une expérience utilisateur optimale."
+description: "Améliorer l'accessibilité web de votre site : principes clés, design inclusif et outils essentiels pour offrir une expérience utilisateur optimale."
 date: 2025-01-06
 tags: [tech-et-data]
 image: "/uploads/blog/comment-ameliorer-laccessibilite-web-de-mon-site-cover.webp"

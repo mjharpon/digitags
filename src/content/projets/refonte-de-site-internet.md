@@ -1,7 +1,7 @@
 ---
 title: "Refonte de site internet"
 metaTitle: "Réalisez la Refonte de site internet avec les freelances de digitags.work"
-description: "Réalisez la refonte de votre site web avec des conseils pratiques sur l'UX design, le SEO, l'audit de site et plus encore. Optimisez l'expérience utilisateur et boostez vos performances en ligne."
+description: "Refonte de site internet : conseils pratiques sur l'UX design, le SEO et l'audit pour optimiser l'expérience utilisateur et vos performances en ligne."
 image: "/uploads/projets/refonte-de-site-internet-cover.webp"
 blogCategory: "product"
 ---

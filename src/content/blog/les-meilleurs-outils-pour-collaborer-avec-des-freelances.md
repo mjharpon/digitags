@@ -1,6 +1,6 @@
 ---
 title: "Les meilleurs outils pour collaborer avec des freelances"
-description: "Optimisez votre collaboration avec des freelances grâce à nos meilleures ressources et outils. Maximisez les avantages de la collaboration freelance et développez des relations de travail solides avec nos astuces et recommandations."
+description: "Les meilleurs outils pour collaborer avec des freelances : ressources, astuces et recommandations pour une collaboration efficace et des relations solides."
 date: 2023-08-29
 tags: [freelancer, recrutement]
 image: "/uploads/blog/les-meilleurs-outils-pour-collaborer-avec-des-freelances-cover.webp"

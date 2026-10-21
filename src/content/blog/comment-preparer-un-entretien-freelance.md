@@ -1,6 +1,6 @@
 ---
 title: "Comment préparer un entretien freelance ?"
-description: "Vous êtes freelance dans un métier du digital depuis peu et vous vous apprêtez à passer un entretien pour une mission très précise, mais vous ne savez pas ce qui vous attend ? Si tel est le cas, lisez la suite !"
+description: "Préparer un entretien freelance : conseils pour les freelances du digital qui débutent et se préparent à un entretien pour une mission précise."
 date: 2022-11-01
 tags: [freelancer, recrutement]
 image: "/uploads/blog/comment-preparer-un-entretien-freelance-cover.avif"

@@ -1,6 +1,6 @@
 ---
 title: "Les erreurs à éviter lors d’une collaboration avec des freelances"
-description: "Certaines erreurs peuvent nuire à votre collaboration avec un freelance. Découvrez dans cet article les pièges courants et comment les éviter pour une collaboration fructueuse."
+description: "Collaboration avec un freelance : les erreurs à éviter. Découvrez les pièges courants et comment les contourner pour une collaboration réussie."
 date: 2023-04-19
 tags: [recrutement, freelancer]
 image: "/uploads/blog/les-erreurs-a-eviter-lors-dune-collaboration-avec-des-freelances-cover.webp"

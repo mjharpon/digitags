@@ -1,7 +1,7 @@
 ---
 title: "Réaliser un audit UX"
 metaTitle: "Réaliser un audit UX"
-description: "Améliorez l'expérience utilisateur de votre site web grâce à un audit UX approfondi. Cet audit permet d'identifier les problèmes de navigation, d'accessibilité et de performance pour offrir une expérience fluide et engageante à vos utilisateurs."
+description: "Audit UX : identifiez les problèmes de navigation, d'accessibilité et de performance pour offrir à vos utilisateurs une expérience fluide."
 image: "/uploads/projets/audit-ux-cover.webp"
 blogCategory: "design"
 ---

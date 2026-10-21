@@ -1,7 +1,7 @@
 ---
 title: "Identité visuelle : création ou refonte"
 metaTitle: "Identité visuelle : création ou refonte"
-description: "Découvrez comment créer une identité visuelle forte et cohérente pour votre entreprise avec Digitags : étapes clés, conseils pratiques et accompagnement personnalisé pour vous démarquer de la concurrence et gagner la confiance de votre public cible."
+description: "Identité visuelle : créez ou refondez une identité forte et cohérente. Étapes clés, conseils pratiques et accompagnement par les freelances de digitags."
 image: "/uploads/projets/identite-visuelle-creation-ou-refonte-cover.webp"
 blogCategory: "design"
 ---

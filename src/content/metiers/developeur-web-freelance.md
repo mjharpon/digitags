@@ -1,7 +1,7 @@
 ---
 title: "Dévelopeur web freelance"
 metaTitle: "Dévelopeur web freelance avec digitags.work"
-description: "Engagez un développeur web freelance pour bénéficier de flexibilité, d'expertise technique et de coûts réduits. Chez digitags, accédez à plus de 1500 talents freelances pour vos projets de développement web, sur mesure et adaptés à vos besoins."
+description: "Développeur web freelance : flexibilité, expertise technique et coûts maîtrisés. Accédez à plus de 1 500 talents pour vos projets web sur mesure."
 image: "/uploads/metiers/developeur-web-freelance-cover.webp"
 blogCategory: "tech-et-data"
 ---

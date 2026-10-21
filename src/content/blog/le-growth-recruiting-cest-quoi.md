@@ -1,6 +1,6 @@
 ---
 title: "Le growth recruiting, c’est quoi ?"
-description: "Dans le monde du recrutement, certaines évolutions toujours croissantes pénalisent les recruteurs et les ressources humaines. Chez Dgitags, nous maitrisons une méthode le « inbound Recruiting » qui permet de palier à ces problématiques !"
+description: "Growth recruiting : c'est quoi ? Découvrez la méthode d'inbound recruiting de digitags pour répondre aux défis des recruteurs et des RH."
 date: 2022-10-29
 tags: [recrutement, freelancer, webmarketing]
 image: "/uploads/blog/le-growth-recruiting-cest-quoi-cover.avif"

@@ -1,7 +1,7 @@
 ---
 title: "Traffic manager freelance"
 metaTitle: "Traffic manager freelance"
-description: "Découvrez le rôle clé du Traffic Manager freelance dans la gestion et l'optimisation de vos campagnes digitales. Attirez un trafic qualifié, améliorez votre visibilité et maximisez votre ROI publicitaire grâce à une expertise flexible et performante."
+description: "Traffic manager freelance : pilotez et optimisez vos campagnes digitales, attirez un trafic qualifié et maximisez votre ROI publicitaire."
 image: "/uploads/metiers/traffic-manager-freelance-cover.webp"
 blogCategory: "freelancer"
 ---

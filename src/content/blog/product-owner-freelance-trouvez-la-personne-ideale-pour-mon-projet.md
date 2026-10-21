@@ -1,6 +1,6 @@
 ---
 title: "Product Owner Freelance | Trouvez la personne idéale pour mon projet"
-description: "Trouvez le Product Owner freelance idéal pour transformer votre projet en succès. Bénéficiez de l'expertise d'un leader compétent en gestion de projet agile pour développer des produits digitaux efficaces."
+description: "Product owner freelance : trouvez la personne idéale pour votre projet. Expertise en gestion de projet agile pour développer des produits efficaces."
 date: 2023-03-01
 tags: [product, freelancer]
 image: "/uploads/blog/product-owner-freelance-trouvez-la-personne-ideale-pour-mon-projet-cover.webp"

@@ -1,6 +1,6 @@
 ---
 title: "Recruter les meilleurs talents Européens pour vos projets digitaux"
-description: "Recruter les meilleurs talents en Europe avec Digitags.work et décuplez votre visibilité et vos performances marketing avec Donutz Digital. Nos agences vous accompagnent dans vos projets digitaux sur tous les marché européens."
+description: "Trouvez les meilleurs talents européens du digital avec digitags.work : un réseau de freelances vérifiés pour vos projets digitaux en Europe."
 date: 2025-03-10
 tags: [freelancer]
 image: "/uploads/blog/recruter-les-meilleurs-talents-europeens-pour-vos-projets-digitaux-cover.webp"

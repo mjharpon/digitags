@@ -1,6 +1,6 @@
 ---
 title: "La vie de Digital Nomad"
-description: "Un digital nomad est une personne qui peut travailler d'où il veut quand il veut. Ce concept a commencé à se propager depuis quelques années, d'autant plus depuis l'arrivée du Covid-19. Qu'est ce qu'un digital nomad ?"
+description: "Digital nomad : qu'est-ce que c'est ? Découvrez la vie de ceux qui travaillent d'où ils veulent, un concept en plein essor depuis quelques années."
 date: 2021-09-03
 tags: [freelancer]
 image: "/uploads/blog/la-vie-de-digital-nomade-cover.webp"

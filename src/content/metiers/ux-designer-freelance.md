@@ -1,7 +1,7 @@
 ---
 title: "UX Designer freelance"
 metaTitle: "UX Designer freelance avec digitags.work"
-description: "Optimisez votre site web avec un UX designer freelance. Bénéficiez d'interfaces intuitives, d'une expérience utilisateur fluide, et de l'accompagnement complet pour vos projets de création ou refonte de site internet. Trouvez le talent idéal pour répondre à vos besoins."
+description: "UX designer freelance : interfaces intuitives et expérience utilisateur fluide pour la création ou la refonte de votre site. Trouvez le talent idéal."
 image: "/uploads/metiers/ux-designer-freelance-cover.webp"
 blogCategory: "design"
 ---

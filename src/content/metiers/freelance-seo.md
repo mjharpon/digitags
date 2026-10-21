@@ -1,7 +1,7 @@
 ---
 title: "Freelance SEO"
 metaTitle: "Freelance SEO avec digitags"
-description: "L'expert freelance SEO peut améliorer la visibilité en ligne de votre entreprise grâce à des stratégies personnalisées, des audits SEO, et une optimisation technique. Boostez votre trafic organique avec l'expertise des freelances SEO de Digitags."
+description: "Freelance SEO : améliorez votre visibilité avec audits, stratégie personnalisée et optimisation technique. Boostez votre trafic organique avec digitags."
 image: "/uploads/metiers/freelance-seo-cover.webp"
 blogCategory: "webmarketing"
 ---

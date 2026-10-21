@@ -1,7 +1,7 @@
 ---
 title: "Product manager freelance"
 metaTitle: "Product manager freelance"
-description: "Engagez un product manager freelance avec Digitags pour optimiser votre produit. Nos experts définissent la stratégie, gèrent les projets, analysent les données, collaborent efficacement et améliorent les performances pour un succès garanti."
+description: "Product manager freelance : stratégie produit, pilotage de projets, analyse de données et amélioration continue. Faites appel à un expert digitags."
 image: "/uploads/metiers/product-manager-freelance-cover.webp"
 blogCategory: "product"
 ---

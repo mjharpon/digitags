@@ -1,6 +1,6 @@
 ---
 title: "Time-to-market : accélérer grâce au recrutement freelance"
-description: "Boostez votre time-to-market grâce au recrutement freelance. Découvrez comment Digitags.work vous connecte aux meilleurs talents indépendants en un temps record."
+description: "Accélérez votre time-to-market avec des freelances : digitags.work vous connecte aux meilleurs talents indépendants en un temps record."
 date: 2025-09-08
 image: "/uploads/blog/time-to-market-accelerer-grace-au-recrutement-freelance-cover.webp"
 ---

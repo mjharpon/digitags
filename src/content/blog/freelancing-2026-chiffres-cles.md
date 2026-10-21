@@ -1,6 +1,6 @@
 ---
 title: "Freelancing 2026 : chiffres clés et tendances du travail indépendant"
-description: "Découvrez les chiffres et tendances du freelancing en 2026. Analyse stratégique pour dirigeants, DRH et CMO sur l'avenir du travail indépendant et ses opportunités."
+description: "Freelancing 2026 : chiffres clés et tendances du travail indépendant. Une analyse stratégique pour dirigeants, DRH et CMO."
 date: 2026-03-02
 image: "/uploads/blog/freelancing-2026-chiffres-cles-cover.webp"
 ---

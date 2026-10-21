@@ -1,7 +1,7 @@
 ---
 title: "Community Manager Freelance"
 metaTitle: "Community Manager Freelance"
-description: "Le recrutement en freelance de community managers avec digitags.work. Découvrez pourquoi faire appel à un community manager freelance est une solution efficace pour animer, développer et engager vos communautés en ligne."
+description: "Community manager freelance : animez, développez et engagez vos communautés en ligne avec un expert flexible du réseau digitags.work."
 image: "/uploads/metiers/community-manager-freelance-cover.jpg"
 blogCategory: "recrutement"
 ---

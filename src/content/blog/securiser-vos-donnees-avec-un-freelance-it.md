@@ -1,6 +1,6 @@
 ---
 title: "Sécuriser vos données avec un freelance IT"
-description: "Comment protéger vos données sensibles en travaillant avec un freelance IT ? Clauses contractuelles, NDA, gestion des accès : le guide complet pour les dirigeants."
+description: "Sécuriser vos données avec un freelance IT : clauses contractuelles, NDA, gestion des accès. Le guide complet pour les dirigeants."
 date: 2026-02-14
 image: "/uploads/blog/securiser-vos-donnees-avec-un-freelance-it-cover.webp"
 ---
