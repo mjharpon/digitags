@@ -374,7 +374,7 @@ A bientôt !
 
 Source :
 
--   [The digital Merchant](<http://Source: https://thedigitalmerchant.com/website/webflow-vs-wordpress/>)
+-   [The digital Merchant](https://thedigitalmerchant.com/website/webflow-vs-wordpress/)
 -   [Wordpress](https://wordpress.com/fr/?&utm_source=google&utm_campaign=google_wpcom_search_brand_desktop_ie_en&utm_medium=paid_search&keyword=wordpress&creative=528139203537&campaignid=648381530&adgroupid=58186185771&matchtype=e&device=c&network=g&targetid=kwd-313411415&gclsrc=aw.ds&gclid=Cj0KCQjwvO2IBhCzARIsALw3ASopt5T6E-XQ3BlJJqB0ZYf5txgAVajfiiEvoG4N_lddg0U2X2r8l08aAg0xEALw_wcB)
 -   [Webflow](https://webflow.com/?utm_source=google&utm_medium=search&utm_campaign=general-paid-branded&utm_term=keyword-targeting&utm_content=branded-ads&gclid=Cj0KCQjwvO2IBhCzARIsALw3ASo7fs6vs5Hh81mPnX8oSmaQEYYea4-YzRYzaihFl1kzxA6yhUbEkWcaApeaEALw_wcB)
 

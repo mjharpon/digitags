@@ -95,6 +95,6 @@ Avec ce **lexique freelance**, vous avez désormais tout en main pour comprendre
 
 Et si vous voulez avancer encore plus vite, les talents de **Digitags.work** sont prêts à booster vos projets.
 
-👉 Découvrez les meilleurs freelances du digital : [https://www.digitags.work/](https://www.digitags.work/**)
+👉 Découvrez les meilleurs freelances du digital : [https://www.digitags.work/](https://www.digitags.work/)
 
 ‍
