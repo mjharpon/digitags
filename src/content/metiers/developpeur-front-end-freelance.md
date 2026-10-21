@@ -1,7 +1,7 @@
 ---
 title: "Développeur front-end freelance"
 metaTitle: "Développeur front-end freelance"
-description: "Découvrez le rôle crucial du développeur front-end dans la création d'interfaces web. Expert en HTML, CSS et JavaScript, il transforme les maquettes en expériences utilisateur fonctionnelles et esthétiques, tout en assurant la compatibilité sur tous les appareils."
+description: "Développeur front-end freelance : expert HTML, CSS et JavaScript, il transforme vos maquettes en interfaces fonctionnelles, compatibles tous appareils."
 image: "/uploads/metiers/developpeur-front-end-freelance-cover.webp"
 blogCategory: "tech-et-data"
 ---

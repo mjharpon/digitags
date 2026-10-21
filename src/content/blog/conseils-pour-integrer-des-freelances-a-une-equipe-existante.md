@@ -1,6 +1,6 @@
 ---
 title: "Conseils pour intégrer des freelances à une équipe existante"
-description: "Intégrer des freelances dans votre équipe existante peut être un défi. Découvrez nos astuces pour une intégration réussie, de la définition des besoins jusqu'à la sélection des meilleurs freelances et l'établissement d'une communication efficace."
+description: "Intégrer des freelances à une équipe existante : définir les besoins, sélectionner les bons profils et instaurer une communication efficace."
 date: 2023-08-10
 tags: [freelancer, recrutement]
 image: "/uploads/blog/conseils-pour-integrer-des-freelances-a-une-equipe-existante-cover.webp"

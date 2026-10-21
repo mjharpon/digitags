@@ -1,6 +1,6 @@
 ---
 title: "Comment trouver le bon traffic manager en freelance ?"
-description: "Découvrez les critères clés pour recruter un traffic manager freelance et augmenter le trafic qualifié de votre site. Ce guide vous aide à identifier les compétences essentielles."
+description: "Comment trouver le bon traffic manager freelance ? Les critères clés et compétences essentielles pour augmenter le trafic qualifié de votre site."
 date: 2022-08-29
 tags: [freelancer, webmarketing]
 image: "/uploads/blog/comment-trouver-le-bon-traffic-manager-en-freelance-cover.avif"

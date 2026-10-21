@@ -1,7 +1,7 @@
 ---
 title: "Coach agile Freelance"
 metaTitle: "Coach agile freelance"
-description: "Découvrez comment le coaching agile peut transformer votre entreprise en favorisant l'innovation, l'adaptabilité et la collaboration. Que vous soyez une start-up ou une entreprise établie, apprenez à surmonter les obstacles courants et à adopter des méthodologies agiles comme Scrum, Kanban ou Lean pour réussir votre transformation numérique."
+description: "Coach agile freelance : Scrum, Kanban, Lean… découvrez comment le coaching agile favorise l'innovation et la collaboration dans votre entreprise."
 image: "/uploads/metiers/coach-agile-cover.webp"
 blogCategory: "product"
 ---

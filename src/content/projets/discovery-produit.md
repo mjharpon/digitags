@@ -1,7 +1,7 @@
 ---
 title: "Réaliser un discovery produit"
 metaTitle: "Réaliser un discovery produit"
-description: "Maximisez vos chances de succès sur le marché avec un discovery produit bien exécuté. Cette étape essentielle de votre stratégie produit vous permet de comprendre les besoins des clients, d'explorer les opportunités du marché et de développer un produit performant et unique."
+description: "Discovery produit : comprenez les besoins clients, explorez les opportunités du marché et développez un produit performant et unique."
 image: "/uploads/projets/discovery-produit-cover.webp"
 blogCategory: "product"
 ---

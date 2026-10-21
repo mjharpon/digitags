@@ -1,6 +1,6 @@
 ---
 title: "Combien coûte un site web ?"
-description: "Découvrez tout ce qu'il faut savoir sur le coût de conception d'un site web. De la définition de vos besoins aux options freelance ou agence, en passant par les astuces pour optimiser votre budget sans sacrifier la qualité."
+description: "Combien coûte un site web ? Définition des besoins, freelance ou agence, astuces pour optimiser votre budget sans sacrifier la qualité."
 date: 2025-01-12
 tags: [tech-et-data]
 image: "/uploads/blog/combien-coute-un-site-web-cover.webp"

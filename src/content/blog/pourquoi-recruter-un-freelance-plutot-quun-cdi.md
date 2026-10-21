@@ -1,6 +1,6 @@
 ---
 title: "Pourquoi recruter un freelance plutôt qu’un CDI ?"
-description: "Découvrez les avantages de recruter un freelance plutôt qu’un salarié en CDI. Flexibilité, expertise spécialisée et réduction des coûts, cet article vous guide dans le choix entre ces deux options pour répondre aux besoins de votre entreprise."
+description: "Freelance ou CDI ? Flexibilité, expertise spécialisée et réduction des coûts : les avantages de faire appel à un freelance plutôt qu'à un salarié."
 date: 2023-01-09
 tags: [freelancer, recrutement]
 image: "/uploads/blog/pourquoi-recruter-un-freelance-plutot-quun-cdi-cover.webp"

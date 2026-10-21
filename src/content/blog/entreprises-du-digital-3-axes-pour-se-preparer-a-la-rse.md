@@ -1,6 +1,6 @@
 ---
 title: "Entreprises du digital : 3 axes pour se préparer à la RSE"
-description: "Comment assurer sa transition durable pour une entreprise du digital : formation RSE, flexibilité du travail, gestion de la pollution numérique, challenges écolos."
+description: "RSE dans le digital : 3 axes pour réussir sa transition durable. Formation, flexibilité du travail, pollution numérique et défis écologiques."
 date: 2023-11-22
 tags: [freelancer]
 image: "/uploads/blog/entreprises-du-digital-3-axes-pour-se-preparer-a-la-rse-cover.avif"

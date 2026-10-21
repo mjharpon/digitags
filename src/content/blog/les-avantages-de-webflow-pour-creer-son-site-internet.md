@@ -1,6 +1,6 @@
 ---
 title: "Les avantages de Webflow pour créer son site internet"
-description: "Découvrez Webflow, un CMS puissant et flexible pour créer des sites web sans coder ! Apprenez à utiliser son interface intuitive, explorez ses avantages et personnalisez votre site facilement grâce aux templates et intégrations disponibles."
+description: "Webflow : un CMS puissant et flexible pour créer un site sans coder. Interface intuitive, templates, intégrations : découvrez ses avantages."
 date: 2025-03-17
 image: "/uploads/blog/les-avantages-de-webflow-pour-creer-son-site-internet-cover.webp"
 ---

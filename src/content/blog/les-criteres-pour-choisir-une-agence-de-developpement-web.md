@@ -1,6 +1,6 @@
 ---
 title: "Les critères pour choisir une agence de développement web"
-description: "Trouver l'agence de développement web idéale peut sembler complexe. Découvrez les critères essentiels pour choisir votre futur partenaire : expertise technique, expérience, communication, respect des délais et comment éviter les mauvaises surprises."
+description: "Choisir une agence de développement web : expertise technique, expérience, communication, délais… les critères pour éviter les mauvaises surprises."
 date: 2025-04-17
 image: "/uploads/blog/les-criteres-pour-choisir-une-agence-de-developpement-web-cover.webp"
 ---

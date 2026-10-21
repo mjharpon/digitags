@@ -1,7 +1,7 @@
 ---
 title: "Product owner freelance"
 metaTitle: "Product owner freelance avec digitags.work"
-description: "Recrutez le Product Owner (PO) freelance, l’expert qui gère le cycle de vie d'un produit, de la conception à la livraison. Explorez ses compétences clés, comment le recruter, et les différences avec un Chef de Projet."
+description: "Product owner freelance : cycle de vie du produit, compétences clés, comment faire appel à lui et différences avec un chef de projet."
 image: "/uploads/metiers/product-owner-freelance-cover.webp"
 blogCategory: "product"
 ---

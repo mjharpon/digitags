@@ -1,6 +1,6 @@
 ---
 title: "Les avantages d'un collectif de freelances pour votre projet"
-description: "Découvrez pourquoi collaborer avec un collectif de freelances peut être la solution idéale pour votre projet. Flexibilité, expertise variée et coût réduit : explorez tous les avantages et trouvez l’équipe sur-mesure qui répond à vos besoins !"
+description: "Pourquoi faire appel à un collectif de freelances ? Flexibilité, expertises variées et coûts maîtrisés : découvrez les avantages d'une équipe sur-mesure."
 date: 2025-03-24
 image: "/uploads/blog/les-avantages-dun-collectif-de-freelances-pour-votre-projet-cover.webp"
 ---

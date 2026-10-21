@@ -1,6 +1,6 @@
 ---
 title: "Les métiers de l'UX"
-description: "Le UX est un univers toujours en mouvement, dans lequel beaucoup choisissent d’y faire carrière, tant l’évolution est fascinante et stimulante. Dgitags vous en dit plus !"
+description: "Les métiers de l'UX : un univers en mouvement qui attire de plus en plus de professionnels. Découvrez les carrières possibles avec digitags."
 date: 2022-10-29
 tags: [product, design]
 image: "/uploads/blog/les-metiers-de-lux-cover.webp"

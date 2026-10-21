@@ -1,6 +1,6 @@
 ---
 title: "Les Écoles de demain : quelles sont elles ? que proposent elles ?"
-description: "Les technologies numériques transforment l'éducation. Au cours de la prochaine décennie, elles créeront de nouveaux emplois et en supprimeront d'autres. Les emplois de demain exigent des compétences numériques que beaucoup de gens n'ont pas."
+description: "Les écoles de demain : comment le numérique transforme l'éducation, crée de nouveaux emplois et exige de nouvelles compétences digitales."
 date: 2023-03-01
 tags: [recrutement]
 image: "/uploads/blog/les-ecoles-de-demain-cover.webp"

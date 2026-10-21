@@ -1,6 +1,6 @@
 ---
 title: "Méthode Scrum vs Cycle en V : quelle méthode adopter ?"
-description: "La méthode Scrum et le cycle en V sont deux méthodologies de projet qui ont vu le jour dans les années 1980-1990’s. Elles ont chacune leur particularités. Venez découvrir pourquoi !"
+description: "Scrum vs cycle en V : deux méthodes de gestion de projet nées dans les années 1980-1990. Découvrez leurs différences et laquelle adopter."
 date: 2021-08-31
 tags: [product, tech-et-data]
 image: "/uploads/blog/methode-scrum-vs-cycle-en-v-quelle-methode-adopter-cover.jpeg"

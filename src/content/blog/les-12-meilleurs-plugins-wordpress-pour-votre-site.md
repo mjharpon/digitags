@@ -1,6 +1,6 @@
 ---
 title: "Les 12 meilleurs plugins WordPress pour votre site"
-description: "Améliorez votre site WordPress avec les meilleurs plugins ! Sécurité, SEO, performance, sauvegarde… Découvrez les extensions indispensables pour optimiser votre site facilement."
+description: "Les 12 meilleurs plugins WordPress : sécurité, SEO, performance, sauvegarde… les extensions indispensables pour optimiser votre site facilement."
 date: 2025-02-17
 tags: [tech-et-data]
 image: "/uploads/blog/les-12-meilleurs-plugins-wordpress-pour-votre-site-cover.webp"

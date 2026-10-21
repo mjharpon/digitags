@@ -1,6 +1,6 @@
 ---
 title: "Découvrez le métier d'UX Writer avec Mélanie !"
-description: "Découvrez le profil de Mélanie une de nos talentueuses UX writers. En quête d'une pépite freelance ? Le métier d'UX writer vous intéresse ? Alors cet interview est faite pour vous !!"
+description: "UX writer freelance : découvrez le métier à travers l'interview de Mélanie, l'une de nos talents. Une lecture utile pour trouver votre pépite."
 date: 2022-05-23
 tags: [design, freelancer]
 image: "/uploads/blog/linterview-de-melanie-michou-ux-writer-freelance-cover.webp"

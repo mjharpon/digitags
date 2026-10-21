@@ -1,7 +1,7 @@
 ---
 title: "Concevoir un produit digital"
 metaTitle: "Concevoir un produit digital"
-description: "Découvrez comment concevoir un produit digital performant en suivant des étapes clés : analyse des besoins utilisateurs, définition des objectifs, conception UX/UI, développement agile, tests et amélioration continue. Apprenez à créer une interface intuitive, à collaborer efficacement avec des experts, et à lancer un produit répondant aux attentes du marché. Faites-vous accompagner par notre réseau de 1500 freelances en digital pour réussir votre projet."
+description: "Concevoir un produit digital : analyse des besoins, UX/UI, développement agile et tests. Faites-vous accompagner par 1 500 freelances du digital."
 image: "/uploads/projets/concevoir-un-produit-digital-cover.webp"
 blogCategory: "product"
 ---

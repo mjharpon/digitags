@@ -1,6 +1,6 @@
 ---
 title: "digitags.work trouve en 24H votre designer freelance !"
-description: "Découvrez digitags.work, la plateforme idéale pour trouver un designer freelance talentueux pour vos projets créatifs. Avec une sélection personnalisée en 24 heures par nos agents experts, simplifiez votre recherche."
+description: "Trouvez un designer freelance en 24 h avec digitags.work : une sélection personnalisée par nos experts pour simplifier votre recherche."
 date: 2022-08-29
 tags: [design, freelancer]
 image: "/uploads/blog/dgitags-io-trouve-en-24h-votre-designer-freelance-cover.avif"

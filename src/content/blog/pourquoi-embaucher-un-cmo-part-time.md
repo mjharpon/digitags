@@ -1,6 +1,6 @@
 ---
 title: "Pourquoi embaucher un CMO part-time ?"
-description: "Découvrez pourquoi faire appel à un CMO part-time peut transformer votre stratégie marketing : expertise flexible, coût optimisé et collaboration efficace. Profitez d’une solution selon vos besoins pour booster votre croissance et vos performances."
+description: "CMO part-time : expertise flexible, coût optimisé et collaboration efficace. Découvrez pourquoi il peut transformer votre stratégie marketing."
 date: 2024-12-02
 tags: [freelancer]
 image: "/uploads/blog/pourquoi-embaucher-un-cmo-part-time-cover.webp"

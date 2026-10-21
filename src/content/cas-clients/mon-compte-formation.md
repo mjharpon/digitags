@@ -1,7 +1,7 @@
 ---
 title: "Mon Compte Formation"
 metaTitle: "Lancement SEO de MonCompteFormation"
-description: "Découvrez notre étude de cas pour le client MonCompteFormation et son lancement SEO avec l'optimisation de plus de 600 contenus et une stratégie de mots clés ciblés."
+description: "Lancement SEO de MonCompteFormation : étude de cas avec l'optimisation de plus de 600 contenus et une stratégie de mots-clés ciblée."
 image: "/uploads/cas-clients/mon-compte-formation-cover.avif"
 order: 100
 ---

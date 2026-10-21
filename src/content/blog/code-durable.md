@@ -1,6 +1,6 @@
 ---
 title: "Code durable : mesurer l’empreinte du code"
-description: "Comment adopter un code durable ? Méthodes, outils & bonnes pratiques pour mesurer l’empreinte carbone du développement web. Recrutez vos freelances green sur Digitags.work !"
+description: "Code durable : méthodes, outils et bonnes pratiques pour mesurer l'empreinte carbone du développement web. Trouvez vos freelances green sur digitags.work."
 date: 2025-09-03
 image: "/uploads/blog/code-durable-cover.webp"
 ---

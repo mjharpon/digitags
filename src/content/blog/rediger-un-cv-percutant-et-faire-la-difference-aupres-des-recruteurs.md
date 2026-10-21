@@ -1,6 +1,6 @@
 ---
 title: "Rédiger un CV percutant et faire la différence auprès des recruteurs"
-description: "Dans cet article, nous vous guiderons à travers les étapes clés pour créer un CV numérique qui attire l'attention des employeurs et met en valeur vos compétences."
+description: "Rédiger un CV percutant : les étapes clés pour créer un CV numérique qui attire l'attention des recruteurs et met en valeur vos compétences."
 date: 2023-09-15
 tags: [recrutement, freelancer]
 image: "/uploads/blog/rediger-un-cv-percutant-et-faire-la-difference-aupres-des-recruteurs-cover.avif"

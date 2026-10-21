@@ -1,6 +1,6 @@
 ---
 title: "Optimiser sa comptabilité en tant qu’auto-entrepreneur"
-description: "Optimisez la gestion de votre comptabilité auto-entrepreneur avec nos astuces et conseils pratiques. Découvrez comment gérer vos seuils de TVA, réduire vos impôts, et tirer parti du versement libératoire."
+description: "Comptabilité auto-entrepreneur : gérez vos seuils de TVA, réduisez vos impôts et profitez du versement libératoire avec nos conseils pratiques."
 date: 2024-10-10
 tags: [freelancer]
 image: "/uploads/blog/optimiser-sa-comptabilite-en-tant-quauto-entrepreneur-cover.webp"

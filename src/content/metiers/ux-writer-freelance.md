@@ -1,7 +1,7 @@
 ---
 title: "Ux writer freelance"
 metaTitle: "Ux writer freelance"
-description: "Découvrez le métier d'UX Writer freelance et son rôle clé dans la création d'expériences utilisateur engageantes. Ce guide complet explore les compétences, responsabilités, et l'impact de l'UX writing sur les interfaces digitales, de la rédaction de microcopies à la création de tonalités de voix uniques. Apprenez comment un UX Writer freelance peut améliorer vos projets grâce à une expertise flexible et adaptée à vos besoins."
+description: "UX writer freelance : compétences, responsabilités et impact de l'UX writing, de la microcopie au ton de voix. Une expertise flexible pour vos interfaces."
 image: "/uploads/metiers/ux-writer-freelance-cover.webp"
 blogCategory: "product"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Les avantages de WordPress pour la création de sites web"
-description: "Découvrez pourquoi WordPress est l'un des CMS les plus populaires pour la création de sites web. Facilité d'utilisation, personnalisation, SEO… Voyons ensemble si WordPress est fait pour vous !"
+description: "Les avantages de WordPress pour créer un site web : facilité d'utilisation, personnalisation, SEO… Voyons si ce CMS est fait pour vous."
 date: 2025-02-24
 image: "/uploads/blog/les-avantages-de-wordpress-pour-la-creation-de-sites-web-cover.webp"
 ---

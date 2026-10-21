@@ -1,7 +1,7 @@
 ---
 title: "Développeur back-end freelance"
 metaTitle: "Développeur back-end freelance"
-description: "Découvrez le rôle essentiel du développeur back-end, expert de la face cachée du développement web. De la gestion des bases de données à la sécurité des applications, explorez les langages, frameworks et outils indispensables pour créer des applications web performantes et sécurisées."
+description: "Développeur back-end freelance : bases de données, sécurité, langages et frameworks. Découvrez son rôle pour créer des applications web performantes."
 image: "/uploads/metiers/developpeur-back-end-freelance-cover.webp"
 blogCategory: "tech-et-data"
 ---

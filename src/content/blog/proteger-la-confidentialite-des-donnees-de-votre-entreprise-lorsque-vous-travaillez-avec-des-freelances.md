@@ -1,6 +1,6 @@
 ---
 title: "Protéger la confidentialité des données de votre entreprise lorsque vous travaillez avec des freelances"
-description: "Dans cet article, nous vous expliquerons comment mettre en place un contrat de freelance avec une clause non-concurrence afin de garantir la protection des informations cruciales et sensibles auxquelles les freelances doivent avoir accès."
+description: "Protégez la confidentialité de vos données avec des freelances : contrat et clause de non-concurrence pour sécuriser vos informations sensibles."
 date: 2023-04-21
 tags: [recrutement, freelancer]
 image: "/uploads/blog/proteger-la-confidentialite-des-donnees-de-votre-entreprise-lorsque-vous-travaillez-avec-des-freelances-cover.webp"

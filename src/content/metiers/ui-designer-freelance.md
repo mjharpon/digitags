@@ -1,7 +1,7 @@
 ---
 title: "UI Designer freelance"
 metaTitle: "UI designer freelance avec digitags.work"
-description: "Recrutez l'UI designer freelance, expert en création d'interfaces intuitives pour des plateformes digitales. Recrutez parmi 1500 talents freelances pour mener à bien vos projets avec Digitags."
+description: "UI designer freelance : expert de la création d'interfaces intuitives pour vos plateformes digitales. Faites appel à l'un des 1 500 talents du réseau."
 image: "/uploads/metiers/ui-designer-freelance-cover.webp"
 blogCategory: "design"
 ---

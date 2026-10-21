@@ -1,7 +1,7 @@
 ---
 title: "Account Manager freelance"
 metaTitle: "Account Manager freelance"
-description: "Découvrez le métier d'Account Manager freelance : un expert en gestion de la relation client et en développement commercial. Flexible, opérationnel rapidement, il apporte des solutions adaptées à vos besoins et peut former vos équipes internes. Recrutez un account manager freelance avec digitags.work pour booster vos relations clients et optimiser vos projets commerciaux."
+description: "Account manager freelance : expert de la relation client et du développement commercial, rapidement opérationnel. Trouvez le bon profil sur digitags.work."
 image: "/uploads/metiers/account-manager-freelance-cover.webp"
 blogCategory: "design"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Expert Social Ads freelance"
 metaTitle: "Expert Social Ads freelance : Meta, LinkedIn, TikTok Ads avec digitags.work"
-description: "Recrutez un expert Social Ads freelance pour vos campagnes Meta, LinkedIn, TikTok ou Pinterest : stratégie d'audiences, créas qui convertissent, retargeting et reporting au ROI. Trouvez le profil vérifié qu'il vous faut dans le réseau digitags.work."
+description: "Expert Social Ads freelance : campagnes Meta, LinkedIn, TikTok ou Pinterest, audiences, créas qui convertissent et reporting au ROI. Profils vérifiés."
 image: "/uploads/metiers/community-manager-freelance-0.jpg"
 blogCategory: "webmarketing"
 ---

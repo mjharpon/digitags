@@ -1,6 +1,6 @@
 ---
 title: "Comment attirer les meilleurs talents freelances et les fidéliser ?"
-description: "Découvrez comment attirer et fidéliser les meilleurs talents freelances en soignant votre marque employeur, offrant des conditions de travail flexibles, et en établissant une communication transparente."
+description: "Comment attirer et fidéliser les meilleurs freelances ? Marque employeur, conditions de travail flexibles et communication transparente : nos conseils."
 date: 2022-09-28
 tags: [freelancer, recrutement]
 image: "/uploads/blog/comment-attirer-les-meilleurs-talents-freelances-et-les-fideliser-cover.webp"

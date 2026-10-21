@@ -1,6 +1,6 @@
 ---
 title: "Tout savoir sur le back-end, le front-end et le full-stack"
-description: "Découvrez les différences entre le back-end, le front-end et le full-stack : leurs rôles essentiels dans le développement web, les langages et frameworks utilisés, ainsi que les compétences requises pour chaque spécialisation."
+description: "Back-end, front-end ou full-stack : différences, rôles, langages, frameworks et compétences requises pour chaque spécialisation du développement web."
 date: 2024-12-30
 tags: [tech-et-data]
 image: "/uploads/blog/tout-savoir-sur-le-back-end-le-front-end-et-le-full-stack-cover.webp"

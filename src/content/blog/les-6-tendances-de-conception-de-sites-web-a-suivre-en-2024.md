@@ -1,6 +1,6 @@
 ---
 title: "Les 6 tendances de conception de sites web à suivre en 2024"
-description: "Découvrez les 6 tendances incontournables de conception de site web en 2024, du design minimaliste aux micro-interactions en passant par la réalité augmentée. Cet article résume ma veille des six premiers mois de l'année."
+description: "Les 6 tendances de conception de sites web en 2024 : design minimaliste, micro-interactions, réalité augmentée… Notre veille du premier semestre."
 date: 2024-09-30
 tags: [design]
 image: "/uploads/blog/les-6-tendances-de-conception-de-sites-web-a-suivre-en-2024-cover.webp"

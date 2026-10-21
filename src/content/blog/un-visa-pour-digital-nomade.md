@@ -1,6 +1,6 @@
 ---
 title: "Un visa pour digital nomade ?"
-description: "Le visa pour digital nomade est une autorisation de voyage qui permet de régulariser le statut des travailleurs en mouvement. Si vous comptez partir plusieurs mois travailler à Bali, cet article est fait pour vous !"
+description: "Visa digital nomade : qu'est-ce que c'est ? Cette autorisation régularise le statut des travailleurs en mouvement, utile avant de partir travailler à Bali."
 date: 2022-10-14
 tags: [freelancer, recrutement]
 image: "/uploads/blog/un-visa-pour-digital-nomade-cover.avif"

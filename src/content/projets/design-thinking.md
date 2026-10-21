@@ -1,7 +1,7 @@
 ---
 title: "Mener un Design Thinking"
 metaTitle: "Mener un Design Thinking"
-description: "Transformez votre processus créatif avec le Design Thinking, une méthode centrée sur l'humain pour résoudre des problèmes et stimuler l'innovation. Cet article explore les étapes clés de cette approche itérative, de l'empathie à l'itération, et vous montre comment elle peut s'appliquer à divers domaines."
+description: "Design Thinking : méthode centrée sur l'humain pour résoudre des problèmes et stimuler l'innovation. Étapes clés, de l'empathie à l'itération."
 image: "/uploads/projets/design-thinking-cover.webp"
 blogCategory: "design"
 ---

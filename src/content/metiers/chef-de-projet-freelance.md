@@ -1,7 +1,7 @@
 ---
 title: "Chef de projet freelance"
 metaTitle: "Chef de projet freelance avec digitags.work"
-description: "Recrutez un chef de projet freelance avec notre guide complet : découvrez les compétences clés, les étapes du travail, les outils essentiels, et comment trouver le professionnel idéal pour vos projets digitaux."
+description: "Chef de projet freelance : compétences clés, étapes du travail et outils essentiels. Le guide pour trouver le bon profil pour vos projets digitaux."
 image: "/uploads/metiers/chef-de-projet-freelance-cover.webp"
 blogCategory: "freelancer"
 ---
