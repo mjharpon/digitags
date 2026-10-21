@@ -39,7 +39,7 @@ Avant de choisir votre agence, il est essentiel de définir clairement vos objec
 
 1.  Quel est l'objectif principal de votre site web ? Voulez-vous vendre des produits en ligne, promouvoir vos services ou simplement fournir des informations à vos visiteurs ?
 2.  Quelles fonctionnalités spécifiques souhaitez-vous inclure sur votre site web ? Par exemple, avez-vous besoin d'un système de réservation en ligne, d'un formulaire de contact, d’un blog ou d'une boutique en ligne ?
-3.  Quelle est votre cible ? Quels sont les besoins et les préférences de votre public cible en matière de conception de sites web ? Découvrez [**les 6 tendances de conception de site web dans notre dernier article.**](http://www.digitags.work/blog/les-6-tendances-de-conception-de-sites-web-a-suivre-en-2024)
+3.  Quelle est votre cible ? Quels sont les besoins et les préférences de votre public cible en matière de conception de sites web ? Découvrez [**les 6 tendances de conception de site web dans notre dernier article.**](/blog/les-6-tendances-de-conception-de-sites-web-a-suivre-en-2024)
 4.  Avez-vous déjà défini une charte graphique : l'utilisation de couleurs spécifiques, de polices de caractères ou de mises en page ?
 5.  Avez-vous des préférences quant au langage ou au CMS utilisé pour réaliser votre site ? Préférez-vous du no-code ?
 6.  Avez-vous besoin de confier la maintenance du site web sur le long terme ?

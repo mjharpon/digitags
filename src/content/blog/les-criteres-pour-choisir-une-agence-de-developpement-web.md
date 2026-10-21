@@ -59,6 +59,6 @@ En somme, sélectionner la bonne agence de développement web a bien souvent un 
 
 Si possible, mais c’est vraiment cherry on the cake, veillez à la bonne la compatibilité entre votre vision et celle de l'agence, ça peut influencer la qualité de la collaboration. Prenez le temps d'évaluer les différentes options, de poser des questions et de recueillir des informations sur les agences qui vous intéressent.
 
-Chez [**Digitags.work**](http://Digitags.work) on accompagne des clients d’industries très variées dans leur projet de développement web. [**On se rencontre**](https://www.digitags.work/#deposez-votre-besoin) pour parler de votre projet et voir si on est l’agence faite pour vous ?
+Chez [**Digitags.work**](/) on accompagne des clients d’industries très variées dans leur projet de développement web. [**On se rencontre**](https://www.digitags.work/#deposez-votre-besoin) pour parler de votre projet et voir si on est l’agence faite pour vous ?
 
 ‍

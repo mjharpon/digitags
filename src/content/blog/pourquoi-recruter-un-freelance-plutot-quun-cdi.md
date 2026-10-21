@@ -18,7 +18,7 @@ C’est ce que nous allons essayer de comprendre aujourd’hui dans ce nouvel ar
 
 Avant de rentrer dans le vif du sujet, il est important de commencer par **déterminer vos besoins**.
 
-En effet, [**en fonction du type de projets**](http://www.digitags.work/projets), de votre secteur d’activité, du contexte économique de votre entreprise ou bien de votre envie d’externaliser ou non une partie de vos ressources, vos choix de recrutement ne seront pas les mêmes.
+En effet, [**en fonction du type de projets**](/projets), de votre secteur d’activité, du contexte économique de votre entreprise ou bien de votre envie d’externaliser ou non une partie de vos ressources, vos choix de recrutement ne seront pas les mêmes.
 
 Comme vous vous en doutez, embaucher un salarié ou recruter un freelance ne vous apportera pas les mêmes choses. Faire appel à un freelance présente des avantages comme des inconvénients. Vous devez donc peser le pour et le contre pour identifier la nature du besoin de l’entreprise afin de pouvoir y répondre correctement.  Une fois vos besoins définis, vous serez en mesure de faire votre choix entre recruter un CDI ou un freelance.
 
@@ -40,7 +40,7 @@ L'un des principaux avantages de l'embauche d'un freelance est la flexibilité e
 
 Les freelances travaillent souvent de manière autonome, ils sont capables de gérer leur propre emploi du temps et de s'organiser de manière efficace. Cela peut vous permettre d'économiser du temps et des ressources en évitant d'avoir à gérer de nombreux aspects administratifs liés à l'emploi d'un employé permanent.
 
-Par exemple, si votre startup souhaite développer son site internet, vous aurez besoin de différents types de métier : un [**développeur**](http://www.digitags.work/metiers/developeur-web-freelance) pour créer les fondations du site internet et un [**UX Designer**](https://www.digitags.work/metiers/ux-designer-freelance) et un [**UI Designer**](https://www.digitags.work/metiers/ui-designer-freelance) pour améliorer l’interface du site, un [traffic manager](/metiers/traffic-manager-freelance) qui gérera vos campagnes promotionnelles en ligne, etc. Un seul employé a peu de chance de posséder l’ensemble de ces différentes compétences professionnelles. Dans ce cadre-là, il est intéressant d’embaucher différents freelances pour réaliser votre site internet.  
+Par exemple, si votre startup souhaite développer son site internet, vous aurez besoin de différents types de métier : un [**développeur**](/metiers/developeur-web-freelance) pour créer les fondations du site internet et un [**UX Designer**](https://www.digitags.work/metiers/ux-designer-freelance) et un [**UI Designer**](https://www.digitags.work/metiers/ui-designer-freelance) pour améliorer l’interface du site, un [traffic manager](/metiers/traffic-manager-freelance) qui gérera vos campagnes promotionnelles en ligne, etc. Un seul employé a peu de chance de posséder l’ensemble de ces différentes compétences professionnelles. Dans ce cadre-là, il est intéressant d’embaucher différents freelances pour réaliser votre site internet.  
   
 
 **André Tonic,** [**ancien CEO de CACD2**](https://www.digitags.work/cas-clients)**,** filiale du Crédit Agricole témoigne " _il est vrai que le freelancing est très souple puisque la durée de la mission est très modulable, d’un mois à parfois un an. On peut facilement augmenter ou réduire le nombre de personnes en fonction de nos besoins sur la période. "_

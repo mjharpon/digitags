@@ -8,13 +8,13 @@ image: "/uploads/blog/recruter-les-meilleurs-talents-europeens-pour-vos-projets-
 
 Vous opérez sur plusieurs marchés en Europe ou souhaitez tout simplement vous entourer des meilleurs experts disponibles ? Vous faire accompagner par des talents à la vision aussi globale que vous est alors nécessaire. Qu’il s’agisse de freelances, ou bien d’une agence, je vous donne toutes les clés pour recruter les meilleurs talents Européens dans cet article.
 
-Chez [**Digitags.work**](http://digitags.work/) et [**Donutz Digital**](https://donutzdigital.com/fr/), nous avons développé deux offres complémentaires pour répondre à vos besoins dans toute l’Europe, et même au delà.
+Chez [**Digitags.work**](/) et [**Donutz Digital**](https://donutzdigital.com/fr/), nous avons développé deux offres complémentaires pour répondre à vos besoins dans toute l’Europe, et même au delà.
 
 ## **Digitags.work : la plateforme de freelances Européens**
 
 ### **Trouvez un freelance parfait pour votre projet partout en Europe**
 
-Avec [**Digitags.work**](http://digitags.work/), vous accédez à une sélection de freelances européens triés sur le volet et spécialisés dans les domaines clés du digital :
+Avec [**Digitags.work**](/), vous accédez à une sélection de freelances européens triés sur le volet et spécialisés dans les domaines clés du digital :
 
 -   [**Développement web**](https://www.digitags.work/metiers/developeur-web-freelance) & mobile (React, WordPress, e-commerce...)
 -   [**Design UX/UI & branding**](https://www.digitags.work/design)
@@ -77,7 +77,7 @@ En combinant l’expertise de Digitags.work pour le recrutement des meilleurs fr
 -   **Un gain de temps et d’efficacité** : Nos équipes travaillent ensemble pour une exécution fluide et rapide.
 -   **Une approche sur-mesure** : Que ce soit pour une refonte de site, une campagne publicitaire ou une stratégie SEO, nous avons une solution pour vous.
 
-**Besoin d’un freelance ?** Trouvez le bon talent sur [**Digitags.work**](http://digitags.work/)
+**Besoin d’un freelance ?** Trouvez le bon talent sur [**Digitags.work**](/)
 
 **Besoin d’une stratégie digitale efficace ?** Faites appel à [**Donutz Digital**](https://donutzdigital.com/fr/)
 

@@ -26,9 +26,9 @@ On a écrit un article complet si vous souhaitez aller plus loin sur [**les rais
 
 Plusieurs plateformes se distinguent par leur réputation, leur facilité d'utilisation et la qualité des talents qu'elles proposent. Chacune d'elles a ses caractéristiques uniques, adaptées à différents types de projets et de budgets. Que vous soyez une petite entreprise ou une grande organisation, ces plateformes vous offrent des solutions pour trouver les bons freelances.
 
-### [Digitags.work](http://Digitags.work) : le hub de talents du digital
+### [Digitags.work](/) : le hub de talents du digital
 
-Contrairement aux autres plateformes, [**Digitags.work**](http://Digitags.work) est un agent de talents. C’est à dire qu’ils sélectionnent les freelances pour les intégrer à leur portefeuille de talents, ils les connaissent donc sur le bout des doigts et savent quels types de missions sont faites pour eux. Lorsque vous passez par cette plateforme, vous exposer vos besoins à Digitags.work, qui se charge de trouver et vous proposer les talents les plus adaptés, parce qu’ils ont cette connaissance et relation avec leurs freelances. Ils gèrent toute la partie contractuelle et veille au bon déroulé du projet avec le freelance. C’est une nouvelle manière d’approcher le recrutement de freelance, et de staffer vos équipes en garantissant un suivi optimal.
+Contrairement aux autres plateformes, [**Digitags.work**](/) est un agent de talents. C’est à dire qu’ils sélectionnent les freelances pour les intégrer à leur portefeuille de talents, ils les connaissent donc sur le bout des doigts et savent quels types de missions sont faites pour eux. Lorsque vous passez par cette plateforme, vous exposer vos besoins à Digitags.work, qui se charge de trouver et vous proposer les talents les plus adaptés, parce qu’ils ont cette connaissance et relation avec leurs freelances. Ils gèrent toute la partie contractuelle et veille au bon déroulé du projet avec le freelance. C’est une nouvelle manière d’approcher le recrutement de freelance, et de staffer vos équipes en garantissant un suivi optimal.
 
 ### **Malt**
 

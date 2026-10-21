@@ -44,7 +44,7 @@ Voici [**un exemple de site**](https://www.sugar.health/) qui utilise les micros
 
 Les designers se sont tournés vers des polices de caractères plus audacieuses et expressives pour donner du caractère et de l'impact aux sites web. Les polices de caractères personnalisées et uniques sont également populaires, permettant aux marques de se démarquer et de renforcer leur identité visuelle.
 
-La typographie audacieuse peut être utilisée pour mettre en évidence les titres, les sous-titres, les appels à l'action et d'autres éléments importants sur le site web. Elle peut également être utilisée pour créer une hiérarchie visuelle et guider les utilisateurs à travers le contenu. Vous souhaitez modifier ou créer votre [**identité visuelle**](http://www.digitags.work/projets/identite-visuelle-creation-ou-refonte) ? Nous pouvons vous aider.
+La typographie audacieuse peut être utilisée pour mettre en évidence les titres, les sous-titres, les appels à l'action et d'autres éléments importants sur le site web. Elle peut également être utilisée pour créer une hiérarchie visuelle et guider les utilisateurs à travers le contenu. Vous souhaitez modifier ou créer votre [**identité visuelle**](/projets/identite-visuelle-creation-ou-refonte) ? Nous pouvons vous aider.
 
 Il est important de trouver le bon équilibre entre la lisibilité et l'esthétique lors de l'utilisation de polices de caractères originales. Le trop et souvent l’ennemi du bien.
 
