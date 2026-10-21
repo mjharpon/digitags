@@ -1,0 +1,103 @@
+---
+// Espace client : page privée à jeton listant les propositions d'un client.
+// Rendue à la demande côté serveur (clé service_role, jamais exposée).
+// Chaque proposition renvoie vers sa page /p/<token> (qui garde son propre
+// mot de passe) : on n'affiche ici que titre, date et nombre de profils.
+export const prerender = false;
+
+import '../../styles/global.css';
+
+const { token } = Astro.params;
+const runtimeEnv = (Astro.locals as any)?.runtime?.env ?? {};
+const url = runtimeEnv.SUPABASE_URL ?? import.meta.env.SUPABASE_URL;
+const key = runtimeEnv.SUPABASE_SERVICE_KEY ?? import.meta.env.SUPABASE_SERVICE_KEY;
+
+async function rest(path: string) {
+  const res = await fetch(`${url}/rest/v1/${path}`, {
+    headers: { apikey: key, Authorization: `Bearer ${key}` },
+  });
+  return res.ok ? res.json() : [];
+}
+
+let client: any = null;
+let proposals: any[] = [];
+
+if (url && key && token && /^[a-f0-9]{16,64}$/.test(token)) {
+  const rows = await rest(`clients?select=id,name,company&token=eq.${token}&archived=eq.false&limit=1`);
+  client = rows[0] ?? null;
+}
+
+if (client) {
+  proposals = await rest(`proposals?select=token,title,created_at,password,proposal_items(id)&client_id=eq.${client.id}&archived=eq.false&order=created_at.desc`);
+}
+
+if (!client) {
+  Astro.response.status = 404;
+}
+Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow');
+
+const frDate = (d: string) => new Date(d).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{client ? `Vos propositions — ${client.name}` : 'Espace introuvable'} | digitags.work</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="/assets/fonts/pjs-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/pjs-800.woff2" as="font" type="font/woff2" crossorigin />
+</head>
+<body>
+  {client ? (
+    <>
+      <header class="cspace-hero">
+        <div class="container">
+          <div class="prop2-topbar">
+            <span class="logo logo-light">
+              <img src="/assets/logo-mark.svg" alt="" class="logo-mark" />
+              <span class="logo-text" style="color:#fff;">digitags<span class="logo-tld">.work</span></span>
+            </span>
+            <span class="tag">Confidentiel</span>
+          </div>
+          <p class="eyebrow">Votre espace — {client.name}</p>
+          <h1>Vos propositions d'équipe</h1>
+          <p class="intro">Retrouvez ici l'ensemble des propositions que nous avons préparées pour vous. Chacune s'ouvre sur sa page détaillée — gardez ce lien pour vous, il est réservé à votre entreprise.</p>
+        </div>
+      </header>
+
+      <div class="container cspace-list">
+        {proposals.length > 0 ? proposals.map((p) => (
+          <a class="cspace-row" href={`/p/${p.token}`}>
+            <div>
+              <h2>{p.title}</h2>
+              <span class="meta">
+                Préparée le {frDate(p.created_at)} · {p.proposal_items.length} profil{p.proposal_items.length > 1 ? 's' : ''}
+                {p.password && ' · protégée par mot de passe'}
+              </span>
+            </div>
+            <span class="btn btn-dark btn-sm">Consulter →</span>
+          </a>
+        )) : (
+          <p class="cspace-empty">Aucune proposition en ligne pour le moment — votre interlocuteur digitags.work vous préviendra dès qu'une nouvelle proposition sera prête.</p>
+        )}
+      </div>
+
+      <footer class="prop2-footer">
+        <span class="logo">
+          <img src="/assets/logo-mark.svg" alt="" class="logo-mark" />
+        </span>
+        <p>Espace préparé par digitags.work — le hub de plus de 1 600 talents digitaux vérifiés.<br />
+        Une question, un besoin&nbsp;? Écrivez-nous : <a href="mailto:hello@digitags.work">hello@digitags.work</a></p>
+      </footer>
+    </>
+  ) : (
+    <div class="container" style="padding: 90px 24px; text-align: center; max-width: 560px;">
+      <p class="eyebrow">Espace client</p>
+      <h1 style="font-size: 28px; font-weight: 800; margin: 10px 0 14px;">Ce lien n'est plus valide.</h1>
+      <p style="color: var(--ink-soft);">Cet espace n'existe pas ou a été désactivé. Contactez votre interlocuteur digitags.work pour recevoir un nouveau lien.</p>
+    </div>
+  )}
+</body>
+</html>

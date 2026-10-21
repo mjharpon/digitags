@@ -34,6 +34,7 @@ import Base from '../layouts/Base.astro';
     <div class="tool-bar">
       <div class="tool-tabs">
         <button class="tool-tab active" data-tab="recherche">Recherche</button>
+        <button class="tool-tab" data-tab="clients">Clients</button>
         <button class="tool-tab" data-tab="propales">Propales</button>
       </div>
       <button class="btn btn-outline btn-sm" id="logout">Déconnexion</button>
@@ -128,7 +129,21 @@ import Base from '../layouts/Base.astro';
       </div>
     </div>
 
+    <div id="tab-clients" hidden>
+      <div class="clients-head">
+        <p class="results-meta" id="clients-meta"></p>
+        <button class="btn btn-blue btn-sm" id="client-new">+ Nouveau client</button>
+      </div>
+      <div class="props-list" id="clients-list"></div>
+    </div>
+
     <div id="tab-propales" hidden>
+      <div class="props-filter">
+        <label for="props-client">Client</label>
+        <select id="props-client">
+          <option value="">Tous les clients</option>
+        </select>
+      </div>
       <div class="props-list" id="props-list"></div>
     </div>
   </div>
@@ -138,6 +153,9 @@ import Base from '../layouts/Base.astro';
 
   <!-- Formulaire propale -->
   <div id="prop-form" class="drawer" hidden></div>
+
+  <!-- Fiche client (création / édition) -->
+  <div id="client-form" class="drawer" hidden></div>
 
   <div id="toast" class="toast" hidden></div>
 
@@ -156,7 +174,7 @@ import Base from '../layouts/Base.astro';
     const sb = createClient(URL_, KEY);
 
     const PAGE = 30;
-    let state = { page: 0, selection: new Map(), groups: [], lastCount: 0, fGroups: new Set(), fExps: new Set(), fTjms: new Set(), sort: 'pertinence' };
+    let state = { page: 0, selection: new Map(), groups: [], clients: [], propFilter: '', lastCount: 0, fGroups: new Set(), fExps: new Set(), fTjms: new Set(), sort: 'pertinence' };
 
     const toast = (msg) => { const t = $('toast'); t.textContent = msg; t.hidden = false; setTimeout(() => (t.hidden = true), 2600); };
 
@@ -274,7 +292,7 @@ import Base from '../layouts/Base.astro';
       ], state.fTjms);
       renderQuickChips();
       search(true);
-      loadProposals();
+      loadClients().then(loadProposals);
     }
 
     // Raccourcis familles dans la colonne de droite, synchronisés avec le filtre.
@@ -483,14 +501,120 @@ import Base from '../layouts/Base.astro';
       $('drawer-close').addEventListener('click', () => (d.hidden = true));
     }
 
+    // ---------- Clients ----------
+    async function loadClients() {
+      const { data, error } = await sb.from('clients')
+        .select('id, token, name, company, contact_name, contact_email, notes, created_at, proposals(id, archived)')
+        .eq('archived', false)
+        .order('name');
+      if (error) { toast('Erreur clients : ' + error.message); return; }
+      state.clients = data ?? [];
+      renderClients();
+      // Synchronise le filtre de l'onglet Propales avec la liste des clients.
+      const sel = $('props-client');
+      sel.innerHTML = '<option value="">Tous les clients</option>'
+        + state.clients.map((c) => `<option value="${c.id}">${esc(c.name)}</option>`).join('')
+        + '<option value="none">Sans client</option>';
+      sel.value = state.propFilter;
+      if (sel.value !== state.propFilter) { state.propFilter = ''; sel.value = ''; }
+    }
+
+    function renderClients() {
+      const n = state.clients.length;
+      $('clients-meta').textContent = `${n} client${n > 1 ? 's' : ''}`;
+      $('clients-list').innerHTML = state.clients.map((c) => {
+        const nb = (c.proposals ?? []).filter((p) => !p.archived).length;
+        const contact = [c.contact_name, c.contact_email].filter(Boolean).join(' · ');
+        return `<div class="prop-row">
+          <h3>${esc(c.name)}${c.company ? ` <span style="color:var(--ink-faint); font-weight:600;">· ${esc(c.company)}</span>` : ''}</h3>
+          <span class="meta">${nb} propale${nb > 1 ? 's' : ''}${contact ? ` · ${esc(contact)}` : ''}</span>
+          <button class="btn btn-outline btn-sm" data-cprops="${c.id}">Propales</button>
+          ${c.token ? `<button class="btn btn-dark btn-sm" data-clink="${c.token}" title="Lien privé où le client retrouve toutes ses propales">Lien espace client</button>` : ''}
+          <button class="btn btn-outline btn-sm" data-cedit="${c.id}">Modifier</button>
+          <button class="btn btn-outline btn-sm" data-carch="${c.id}">Archiver</button>
+        </div>`;
+      }).join('') || '<p style="color:var(--ink-faint);">Aucun client pour l\'instant — créez votre première fiche avec « + Nouveau client ».</p>';
+    }
+
+    $('client-new').addEventListener('click', () => openClientForm(null));
+    $('clients-list').addEventListener('click', async (e) => {
+      const lk = e.target.closest('[data-clink]');
+      if (lk) {
+        try { await navigator.clipboard.writeText(`${location.origin}/c/${lk.dataset.clink}`); toast('Lien espace client copié ✓'); } catch {}
+        return;
+      }
+      const ed = e.target.closest('[data-cedit]');
+      if (ed) return openClientForm(state.clients.find((c) => c.id === ed.dataset.cedit));
+      const pr = e.target.closest('[data-cprops]');
+      if (pr) {
+        state.propFilter = pr.dataset.cprops;
+        $('props-client').value = state.propFilter;
+        document.querySelector('[data-tab="propales"]').click();
+        return;
+      }
+      const ar = e.target.closest('[data-carch]');
+      if (ar) {
+        const c = state.clients.find((x) => x.id === ar.dataset.carch);
+        if (!confirm(`Archiver la fiche « ${c?.name} » ? Ses propales restent accessibles.`)) return;
+        const { error } = await sb.from('clients').update({ archived: true }).eq('id', ar.dataset.carch);
+        if (error) return toast('Erreur : ' + error.message);
+        toast('Client archivé');
+        loadClients().then(loadProposals);
+      }
+    });
+
+    function openClientForm(client) {
+      const f = $('client-form');
+      f.innerHTML = `
+        <button class="close" id="cf-close">×</button>
+        <h2 style="margin-bottom:16px;">${client ? 'Modifier le client' : 'Nouveau client'}</h2>
+        <div class="field"><label>Nom *</label><input id="cf-name" placeholder="Acme" value="${esc(client?.name ?? '')}" /></div>
+        <div class="field"><label>Société (raison sociale)</label><input id="cf-company" placeholder="Acme SAS" value="${esc(client?.company ?? '')}" /></div>
+        <div class="field"><label>Contact</label><input id="cf-contact" placeholder="Jeanne Martin" value="${esc(client?.contact_name ?? '')}" /></div>
+        <div class="field"><label>Email du contact</label><input id="cf-email" type="email" placeholder="jeanne@acme.fr" value="${esc(client?.contact_email ?? '')}" /></div>
+        <div class="field"><label>Notes internes</label><textarea id="cf-notes" placeholder="Contexte, historique, points d'attention…">${esc(client?.notes ?? '')}</textarea></div>
+        <button class="btn btn-dark" id="cf-save">${client ? 'Enregistrer' : 'Créer le client'}</button>
+        <p id="cf-msg" style="font-size:13px; color:var(--ink-faint); margin-top:10px;"></p>`;
+      f.hidden = false;
+      $('cf-close').addEventListener('click', () => (f.hidden = true));
+      $('cf-save').addEventListener('click', async () => {
+        const name = $('cf-name').value.trim();
+        if (!name) { $('cf-msg').textContent = 'Le nom est requis.'; return; }
+        const row = {
+          name,
+          company: $('cf-company').value.trim() || null,
+          contact_name: $('cf-contact').value.trim() || null,
+          contact_email: $('cf-email').value.trim() || null,
+          notes: $('cf-notes').value.trim() || null,
+        };
+        let error;
+        if (client) ({ error } = await sb.from('clients').update(row).eq('id', client.id));
+        else {
+          const { data: { user } } = await sb.auth.getUser();
+          ({ error } = await sb.from('clients').insert({ ...row, created_by: user?.email }));
+        }
+        if (error) { $('cf-msg').textContent = 'Erreur : ' + error.message; return; }
+        f.hidden = true;
+        toast(client ? 'Client mis à jour ✓' : 'Client créé ✓');
+        loadClients().then(loadProposals);
+      });
+    }
+
     // ---------- Propales ----------
     document.querySelectorAll('.tool-tab').forEach((t) => t.addEventListener('click', () => {
       document.querySelectorAll('.tool-tab').forEach((x) => x.classList.remove('active'));
       t.classList.add('active');
       $('tab-recherche').hidden = t.dataset.tab !== 'recherche';
+      $('tab-clients').hidden = t.dataset.tab !== 'clients';
       $('tab-propales').hidden = t.dataset.tab !== 'propales';
       if (t.dataset.tab === 'propales') loadProposals();
+      if (t.dataset.tab === 'clients') loadClients();
     }));
+
+    $('props-client').addEventListener('change', () => {
+      state.propFilter = $('props-client').value;
+      loadProposals();
+    });
 
     $('sel-create').addEventListener('click', async () => {
       const f = $('prop-form');
@@ -501,7 +625,19 @@ import Base from '../layouts/Base.astro';
         <button class="close" id="prop-close">×</button>
         <h2 style="margin-bottom:16px;">Nouvelle propale</h2>
         <div class="field"><label>Titre du projet *</label><input id="np-title" placeholder="Refonte e-commerce — Acme" /></div>
-        <div class="field"><label>Client</label><input id="np-client" placeholder="Acme SAS" /></div>
+        <div class="field"><label>Client</label>
+          <div style="display:flex; gap:8px;">
+            <select id="np-client" style="flex:1;">
+              <option value="">— Aucun client —</option>
+              ${state.clients.map((c) => `<option value="${c.id}">${esc(c.name)}</option>`).join('')}
+            </select>
+            <button type="button" class="btn btn-outline btn-sm" id="np-client-new">+ Nouveau</button>
+          </div>
+          <div id="np-client-inline" style="display:none; gap:8px; margin-top:8px;">
+            <input id="np-client-name" placeholder="Nom du nouveau client (ex. Acme)" style="flex:1;" />
+            <button type="button" class="btn btn-dark btn-sm" id="np-client-create">Créer</button>
+          </div>
+        </div>
         <div class="field"><label>Introduction (visible par le prospect)</label><textarea id="np-intro" placeholder="Suite à nos échanges, voici l'équipe que nous vous proposons…"></textarea></div>
         <div style="display:flex; gap:14px; flex-wrap:wrap;">
           <div class="field" style="max-width: 160px;">
@@ -532,6 +668,26 @@ import Base from '../layouts/Base.astro';
       f.hidden = false;
       $('prop-close').addEventListener('click', () => (f.hidden = true));
       $('np-save').addEventListener('click', createProposal);
+      // Création rapide d'un client sans quitter le formulaire de propale.
+      $('np-client-new').addEventListener('click', () => {
+        const inline = $('np-client-inline');
+        inline.style.display = inline.style.display === 'none' ? 'flex' : 'none';
+        if (inline.style.display === 'flex') $('np-client-name').focus();
+      });
+      $('np-client-create').addEventListener('click', async () => {
+        const name = $('np-client-name').value.trim();
+        if (!name) return;
+        const { data: { user } } = await sb.auth.getUser();
+        const { data: c, error } = await sb.from('clients').insert({ name, created_by: user?.email }).select().single();
+        if (error) return toast('Erreur : ' + error.message);
+        state.clients.push({ ...c, proposals: [] });
+        state.clients.sort((a, b) => a.name.localeCompare(b.name, 'fr'));
+        $('np-client').insertAdjacentHTML('beforeend', `<option value="${c.id}">${esc(c.name)}</option>`);
+        $('np-client').value = c.id;
+        $('np-client-inline').style.display = 'none';
+        toast('Client créé ✓');
+        loadClients();
+      });
       // TJM client auto-calculé depuis la marge ; la saisie manuelle fige le champ.
       const applyMarge = () => {
         const m = Number($('np-marge').value) || 0;
@@ -553,7 +709,7 @@ import Base from '../layouts/Base.astro';
       const { data: prop, error } = await sb.from('proposals')
         .insert({
           title,
-          client_name: $('np-client').value.trim() || null,
+          client_id: $('np-client').value || null,
           intro: $('np-intro').value.trim() || null,
           created_by: user?.email,
           start_date: $('np-start').value || null,
@@ -583,20 +739,39 @@ import Base from '../layouts/Base.astro';
       document.querySelector('[data-tab="propales"]').click();
     }
 
-    async function loadProposals() {
-      const { data, error } = await sb.from('proposals')
-        .select('id, token, title, client_name, created_at, created_by, archived, password, proposal_items(id)')
-        .eq('archived', false)
-        .order('created_at', { ascending: false });
-      if (error) return;
-      $('props-list').innerHTML = (data ?? []).map((p) => `
+    const propRow = (p) => `
         <div class="prop-row">
-          <h3>${esc(p.title)}${p.client_name ? ` <span style="color:var(--ink-faint); font-weight:600;">· ${esc(p.client_name)}</span>` : ''}</h3>
+          <h3>${esc(p.title)}</h3>
           <span class="meta">${p.proposal_items.length} profil${p.proposal_items.length > 1 ? 's' : ''} · ${new Date(p.created_at).toLocaleDateString('fr-FR')} · ${esc(p.created_by ?? '')} · ${p.password ? `🔒 ${esc(p.password)}` : 'accès libre'}</span>
           <a class="btn btn-outline btn-sm" href="/p/${p.token}" target="_blank" rel="noopener">Voir</a>
           <button class="btn btn-dark btn-sm" data-copy="${p.token}" data-pw="${esc(p.password ?? '')}">Copier le lien</button>
           <button class="btn btn-outline btn-sm" data-arch="${p.id}">Archiver</button>
-        </div>`).join('') || '<p style="color:var(--ink-faint);">Aucune propale pour l\'instant — composez une sélection depuis l\'onglet Recherche.</p>';
+        </div>`;
+
+    async function loadProposals() {
+      let q = sb.from('proposals')
+        .select('id, token, title, client_name, client_id, created_at, created_by, password, proposal_items(id), clients(name)')
+        .eq('archived', false)
+        .order('created_at', { ascending: false });
+      if (state.propFilter === 'none') q = q.is('client_id', null);
+      else if (state.propFilter) q = q.eq('client_id', state.propFilter);
+      const { data, error } = await q;
+      if (error) return;
+      // Propales groupées par client (anciennes propales : client_name texte libre).
+      const groups = new Map();
+      (data ?? []).forEach((p) => {
+        const label = p.clients?.name || p.client_name || 'Sans client';
+        if (!groups.has(label)) groups.set(label, []);
+        groups.get(label).push(p);
+      });
+      const labels = [...groups.keys()].sort((a, b) =>
+        (a === 'Sans client') - (b === 'Sans client') || a.localeCompare(b, 'fr'));
+      $('props-list').innerHTML = labels.map((label) =>
+        `<h2 class="props-group">${esc(label)} <span>· ${groups.get(label).length}</span></h2>`
+        + groups.get(label).map(propRow).join('')
+      ).join('') || (state.propFilter
+        ? '<p style="color:var(--ink-faint);">Aucune propale pour ce client — composez une sélection depuis l\'onglet Recherche.</p>'
+        : '<p style="color:var(--ink-faint);">Aucune propale pour l\'instant — composez une sélection depuis l\'onglet Recherche.</p>');
     }
 
     $('props-list').addEventListener('click', async (e) => {

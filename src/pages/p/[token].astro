@@ -25,9 +25,12 @@ let proposal: any = null;
 let items: any[] = [];
 
 if (url && key && token && /^[a-f0-9]{16,64}$/.test(token)) {
-  const props = await rest(`proposals?select=id,title,client_name,intro,created_at,start_date,duration_weeks,password&token=eq.${token}&archived=eq.false&limit=1`);
+  const props = await rest(`proposals?select=id,title,client_name,intro,created_at,start_date,duration_weeks,password,clients(name)&token=eq.${token}&archived=eq.false&limit=1`);
   proposal = props[0] ?? null;
 }
+
+// Nom du client : fiche client si rattachée, sinon texte libre historique.
+const clientName = proposal?.clients?.name ?? proposal?.client_name ?? null;
 
 // Protection par mot de passe (configuré à la création de la propale).
 // Un cookie signé (sha256 token:mdp) évite de redemander pendant 7 jours.
@@ -150,7 +153,7 @@ const totalDays = cfgItems.reduce((s, c) => s + c.days, 0);
           </div>
           <div class="prop3-hero-grid">
             <div>
-              <p class="eyebrow">Proposition d'équipe{proposal.client_name && ` — pour ${proposal.client_name}`}</p>
+              <p class="eyebrow">Proposition d'équipe{clientName && ` — pour ${clientName}`}</p>
               <h1>Constituez votre équipe sur-mesure</h1>
               <p class="intro">{proposal.intro ?? 'Sélectionnez les bons talents, ajustez les dates et la durée. Le budget se met à jour en temps réel.'}</p>
               <p class="meta">« {proposal.title} » · Préparée le {dateFmt} · Réservée à son destinataire — merci de ne pas la diffuser.</p>
