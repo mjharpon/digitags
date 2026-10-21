@@ -39,7 +39,7 @@ En outre, un bon Product Owner doit être orienté vers les résultats et avoir 
 Voici mes meilleurs conseils pour réussir ce recrutement :
 
 1.  Définir les besoins du projet : Avant de commencer la recherche d'un Product Owner freelance, il est important de définir clairement les besoins spécifiques de votre projet. Quelles sont les compétences et l'expérience requises ? Quel est le budget disponible ? Quelle est la durée estimée du projet ?
-2.  Rechercher des candidats : Vous pouvez utiliser des plateformes en ligne spécialisées dans le recrutement de freelances, comme la nôtre chez [**Digitags.work**](http://Digitags.work).
+2.  Rechercher des candidats : Vous pouvez utiliser des plateformes en ligne spécialisées dans le recrutement de freelances, comme la nôtre chez [**Digitags.work**](/).
 3.  Évaluer les candidats : Lorsque vous avez identifié des candidats potentiels, vous pouvez les évaluer en fonction de critères tels que leur expérience, leurs compétences techniques. Chez Digitags.work, nous réalisons un premier tri pour vous proposer le ou les talents les plus adaptés, vous les rencontrez ensuite et pouvez réaliser vos entretiens habituels.
 4.  Sélectionner le candidat idéal : Une fois que vous avez évalué tous les candidats, vous pouvez sélectionner celui qui correspond le mieux à vos critères. Nous nous occupons de toute la contractualisation et de l’administratif.
 5.  Intégrer le Product Owner freelance : Une fois que vous avez engagé un talent, il est important de lui fournir toutes les informations et les ressources nécessaires pour qu'il puisse commencer à travailler efficacement. Organisez une réunion de démarrage pour présenter l'équipe, expliquer les objectifs du projet et clarifier les attentes.

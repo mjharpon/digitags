@@ -106,7 +106,7 @@ Donnez de la visibilité à votre freelance : un coucou en visio avec le directe
 
 Un **onboarding freelance** rapide ne se limite pas à une to-do list. C’est un investissement stratégique qui sécurise votre **recrutement freelance**, protège votre image de marque et, surtout, génère de la valeur dès le premier jour.
 
-En choisissant [**Digitags.work**](http://Digitags.work), vous accédez à un vivier vérifié de talents prêts à démarrer sous 48 h : dites adieu aux cycles longs de **recrutement freelance** !
+En choisissant [**Digitags.work**](/), vous accédez à un vivier vérifié de talents prêts à démarrer sous 48 h : dites adieu aux cycles longs de **recrutement freelance** !
 
 À lire aussi : [**Recruter les meilleurs talents Européens pour vos projets digitaux**](https://www.digitags.work/blog/recruter-les-meilleurs-talents-europeens-pour-vos-projets-digitaux)
 
