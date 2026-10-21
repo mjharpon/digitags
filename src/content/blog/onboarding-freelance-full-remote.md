@@ -2,7 +2,7 @@
 title: "Onboarding remote : kit de bienvenue  full remote"
 description: "Découvrez comment réussir l’onboarding remote d’un freelance full remote grâce à notre trousse de bienvenue virtuelle et boostez votre recrutement freelance !"
 date: 2025-11-23
-image: "/uploads/blog/onboarding-freelance-full-remote-cover.png"
+image: "/uploads/blog/onboarding-freelance-full-remote-cover.webp"
 ---
 
 Imaginez accueillir votre nouveau freelance full remote sans café d’entreprise, ni badge, ni bureau. Dans un cadre 100% distanciel, l’onboarding remote devient l’étape décisive pour transformer une mission en véritable partenariat. Ce guide vous montre comment créer une trousse de bienvenue virtuelle mémorable, booster votre recrutement freelance et refléter l’esprit convivial (et expert) de Digitags.work.

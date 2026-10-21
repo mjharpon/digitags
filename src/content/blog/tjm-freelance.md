@@ -2,7 +2,7 @@
 title: "Tarif journalier moyen : décryptage par métier et par secteur"
 description: "Découvrez comment calculer votre TJM, les tarifs freelances 2025 par métier (dev, marketing, design) et recrutez les meilleurs experts sur Digitags.work."
 date: 2025-12-19
-image: "/uploads/blog/tjm-freelance-cover.png"
+image: "/uploads/blog/tjm-freelance-cover.webp"
 ---
 
 En 2025, le TJM (taux journalier moyen) reste la métrique de référence, bien le comprendre aide autant les indépendants à fixer le bon prix que les entreprises à recruter correctement. Dans ce guide, on décortique les TJM marketing, dev et designer, pour que vous puissiez recruter (ou être recruté) en toute sérénité.

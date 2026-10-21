@@ -3,7 +3,7 @@ title: "Les erreurs à éviter lors d’une collaboration avec des freelances"
 description: "Certaines erreurs peuvent nuire à votre collaboration avec un freelance. Découvrez dans cet article les pièges courants et comment les éviter pour une collaboration fructueuse."
 date: 2023-04-19
 tags: [recrutement, freelancer]
-image: "/uploads/blog/les-erreurs-a-eviter-lors-dune-collaboration-avec-des-freelances-cover.png"
+image: "/uploads/blog/les-erreurs-a-eviter-lors-dune-collaboration-avec-des-freelances-cover.webp"
 ---
 
 La collaboration avec des freelances peut être un choix judicieux si vous êtes à la recherche de compétences spécifiques sans engager des employés à temps plein. Cependant, il y a quelques erreurs à éviter pour que cette collaboration soit fructueuse. Dans cet article, les pièges courants dans lesquels les entreprises tombent lorsqu'elles travaillent avec des freelances et surtout comment les éviter.
@@ -36,7 +36,7 @@ Il est important de garder un oeil sur le travail et l’avancement du freelance
 
 On met de côté l’erreur fatale de na pas payer du tout. Mais le processus de paiement des freelances peut parfois être source de confusion et d'erreurs. Pour éviter ces problèmes, assurez-vous d'avoir un système de paiement clair et transparent, dès le début de la mission. Utilisez des méthodes de paiement sécurisées et fiables pour garantir que le paiement est effectué de manière sûre et rapide. Comme vous aimez être payé dans les délais par vos clients, les freelances ne font pas exception.
 
-![\_\_wf\_reserved\_inherit](/uploads/blog/les-erreurs-a-eviter-lors-dune-collaboration-avec-des-freelances-0.png)
+![\_\_wf\_reserved\_inherit](/uploads/blog/les-erreurs-a-eviter-lors-dune-collaboration-avec-des-freelances-0.webp)
 
 ### **Ne pas fournir un feedback honnête et objectif**
 

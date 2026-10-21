@@ -3,7 +3,7 @@ title: "Connaissez vous Bubble ? Petite revue sur l'outil Bubble, le nouveau ven
 description: "Bubble est un outil de développement d’applications mobiles et web sans codage, sans programmation HTML ou CSS fastidieuse. Si vous êtes intéressé, cliquez pour voir l'article."
 date: 2021-08-20
 tags: [design]
-image: "/uploads/blog/revue-sur-bubble-cover.png"
+image: "/uploads/blog/revue-sur-bubble-cover.webp"
 ---
 
 Bubble, le petit nouveau
@@ -22,7 +22,7 @@ Nous espérons que l’article vous plaira. C’est parti !
 
 ## **Présentation de l’outil**
 
-![](/uploads/blog/revue-sur-bubble-0.png)
+![](/uploads/blog/revue-sur-bubble-0.webp)
 
 Bubble est un **outil de développement d’applications mobiles et web sans codage**, sans programmation HTML ou CSS fastidieuse. Cette plateforme permet aux utilisateurs de créer et de personnaliser des applications via une interface conviviale en utilisant la technique du glisser-déposer. Elle rend le codage obsolète et démocratise la création d’applications innovantes. Plus de 750 000 utilisateurs créent et lancent leur business sur Bubble.
 
@@ -90,7 +90,7 @@ Les fonctionnalités vous ont intéressées ? Si c’est le cas, restez avec no
 
 ‍
 
-![dgitags bubble](/uploads/blog/revue-sur-bubble-1.png)
+![dgitags bubble](/uploads/blog/revue-sur-bubble-1.webp)
 
 2/ S’inscrire ou se connecter
 
@@ -98,7 +98,7 @@ Si vous devez vous inscrire, l’écran apparaitra de la manière suivante :
 
 ‍
 
-![dgitags bubble inscription](/uploads/blog/revue-sur-bubble-2.png)
+![dgitags bubble inscription](/uploads/blog/revue-sur-bubble-2.webp)
 
 Vous pouvez vous inscrire de deux manières :
 
@@ -108,7 +108,7 @@ Vous pouvez vous inscrire de deux manières :
 
 Si vous devez vous connecter, l’écran apparaitra de la manière suivante :
 
-![dgitags bubble log in](/uploads/blog/revue-sur-bubble-3.png)
+![dgitags bubble log in](/uploads/blog/revue-sur-bubble-3.webp)
 
 C’est parti pour l’utilisation !
 
@@ -116,7 +116,7 @@ C’est parti pour l’utilisation !
 
 ## **L’utilisation** 
 
-![dgitags bubble](/uploads/blog/revue-sur-bubble-4.png)
+![dgitags bubble](/uploads/blog/revue-sur-bubble-4.webp)
 
 Une fois connecté ou inscrit, vous pourrez commencer à utiliser Bubble. Quelques questions apparaitront. Une fois que vous avez répondu, cliquez sur « Next » (vous pouvez skipper cette étape en cliquant sur « Skip » en bas à gauche de l’encadré blanc).
 
@@ -134,7 +134,7 @@ Une fois cette étape terminée, vous arrivez sur l’interface d’utilisation 
 
 ‍
 
-![dgitags bubble](/uploads/blog/revue-sur-bubble-5.png)
+![dgitags bubble](/uploads/blog/revue-sur-bubble-5.webp)
 
 Vous avez 3 barres d'outils à connaitre pour pouvoir utiliser Bubble :
 
@@ -150,7 +150,7 @@ Grâce à la fonctionnalité **API**, les utilisateurs peuvent créer des intég
 
 ‍
 
-![dgitags bubble](/uploads/blog/revue-sur-bubble-6.png)
+![dgitags bubble](/uploads/blog/revue-sur-bubble-6.webp)
 
 Vous pourrez également **utiliser des plugins**: éléments d'interface, services de paiement, forum, etc. La bibliothèque de plugins de Bubble contient des milliers d'ajouts et d'intégrations divers.
 
@@ -168,7 +168,7 @@ A partir du panneau supérieur de la fenêtre de travail, vous pouvez annuler le
 
 Vous pouvez gérer les différentes fenêtres de travail comme s'il s'agissait de pages distinctes du site. Pas de panique ! En cas d’erreurs, vous avez un historique des modifications qui enregistre toutes les actions effectuées et qui permet de revenir en arrière si besoin.
 
-![dgitags bubble design](/uploads/blog/revue-sur-bubble-7.png)
+![dgitags bubble design](/uploads/blog/revue-sur-bubble-7.webp)
 
 Un outil qui risque de bien vous servir est **l'outil de prévisualisation**. Avant de publier votre application, vous pouvez voir à quoi ressemblera votre création. Toutes les modifications peuvent donc être vues et testées avant la publication définitive.
 
@@ -186,7 +186,7 @@ Bubble vous permet de personnaliser tous les éléments de votre interface. De n
 
 ‍
 
-![dgitags bubble styles](/uploads/blog/revue-sur-bubble-8.png)
+![dgitags bubble styles](/uploads/blog/revue-sur-bubble-8.webp)
 
 Les options disponibles :
 
@@ -208,17 +208,17 @@ Les options disponibles :
 
 Pour ajouter un style, cliquez sur « **Add Style** ». Pour ajouter un thème, cliquez sur « **Apply theme** ».
 
-![dgitags bubble style](/uploads/blog/revue-sur-bubble-9.png)
+![dgitags bubble style](/uploads/blog/revue-sur-bubble-9.webp)
 
 ‍
 
-![dgitags bubble style](/uploads/blog/revue-sur-bubble-10.png)
+![dgitags bubble style](/uploads/blog/revue-sur-bubble-10.webp)
 
 ‍
 
 Votre nouveau style apparaitra dans votre espace de travail.
 
-![dgitags bubble style](/uploads/blog/revue-sur-bubble-11.png)
+![dgitags bubble style](/uploads/blog/revue-sur-bubble-11.webp)
 
 ### **Workflow**
 
@@ -232,7 +232,7 @@ L'organisation d'un événement se fait en deux étapes :
 
 ‍
 
-![dgitags bubble workflow](/uploads/blog/revue-sur-bubble-12.png)
+![dgitags bubble workflow](/uploads/blog/revue-sur-bubble-12.webp)
 
 **1/ Première étape : la création d'événements**
 
@@ -252,7 +252,7 @@ Afin de résoudre ce problème, Bubble a ajouté la possibilité de **créer des
 
 ‍
 
-![dgitags bubble workflow](/uploads/blog/revue-sur-bubble-13.png)
+![dgitags bubble workflow](/uploads/blog/revue-sur-bubble-13.webp)
 
 ‍**2/ Deuxième étape : la connexion à l'événement**
 
@@ -286,7 +286,7 @@ Cet éditeur vous permettra de créer de nouveaux champs ou de modifier des cham
 
 ‍
 
-![dgitags bubble data](/uploads/blog/revue-sur-bubble-14.png)
+![dgitags bubble data](/uploads/blog/revue-sur-bubble-14.webp)
 
 **3/ L'éditeur de tableaux :**
 
@@ -294,11 +294,11 @@ Ce dernier éditeur est combiné avec l'éditeur de champs. Il n'a pas réelleme
 
 ‍
 
-![dgitags bubble data](/uploads/blog/revue-sur-bubble-15.png)
+![dgitags bubble data](/uploads/blog/revue-sur-bubble-15.webp)
 
 ‍
 
-![dgitags bubble data](/uploads/blog/revue-sur-bubble-16.png)
+![dgitags bubble data](/uploads/blog/revue-sur-bubble-16.webp)
 
 ‍
 
@@ -306,11 +306,11 @@ Ce dernier éditeur est combiné avec l'éditeur de champs. Il n'a pas réelleme
 
 ‍
 
-![dgitags bubble Plugins](/uploads/blog/revue-sur-bubble-17.png)
+![dgitags bubble Plugins](/uploads/blog/revue-sur-bubble-17.webp)
 
 Vous pouvez ajouter des plugins grâce à l’onglet « **Plugins** » situé à gauche sur le côté.
 
-![dgitags bubble Plugins](/uploads/blog/revue-sur-bubble-18.png)
+![dgitags bubble Plugins](/uploads/blog/revue-sur-bubble-18.webp)
 
 ‍
 
@@ -320,7 +320,7 @@ Les infos présentes dans cet onglet sont accessibles seulement aux versions pay
 
 ‍
 
-![dgitags bubble Logs](/uploads/blog/revue-sur-bubble-19.png)
+![dgitags bubble Logs](/uploads/blog/revue-sur-bubble-19.webp)
 
 ‍
 
@@ -338,13 +338,13 @@ Nous allons maintenant vous montrer comment concevoir et lancer une page d'accue
 
 ‍
 
-![dgitags bubble create new app](/uploads/blog/revue-sur-bubble-20.png)
+![dgitags bubble create new app](/uploads/blog/revue-sur-bubble-20.webp)
 
 Tout d’abord, vous devez créer un nouveau projet. Sur la page d’accueil de Bubble, vous trouverez un onglet « **Create a new app** ». Cliquez sur ce bouton et remplissez le nom, le type, l'objectif et la description sur votre entreprise. Le nom ne peut pas contenir d'espaces ni de caractères spéciaux, car il sera utilisé pour créer une URL de site Web. Le domaine ressemblera à par exemple donutz.bubble.io. Les abonnements payants permettent de personnaliser les domaines.
 
 ‍
 
-![dgitags bubble create new app](/uploads/blog/revue-sur-bubble-21.png)
+![dgitags bubble create new app](/uploads/blog/revue-sur-bubble-21.webp)
 
 ‍
 
@@ -368,7 +368,7 @@ Tout d’abord, vous devez créer un nouveau projet. Sur la page d’accueil de 
 
 ‍
 
-![](/uploads/blog/revue-sur-bubble-22.png)
+![](/uploads/blog/revue-sur-bubble-22.webp)
 
 À l'étape suivante, l'assistant d'application apparaît. Vous avez la possibilité de suivre ses indications pour mieux comprendre comment fonctionne les outils Bubble. Il permet de choisir un modèle de conception en fonction des réponses des utilisateurs. Vous pouvez choisir l’option « **Commencer par une page blanche** » ou utiliser le modèle qui vous est proposé.
 
@@ -388,13 +388,13 @@ Si vous choisissez de commencer avec une page blanche, regardez les prochaines �
 
 ‍
 
-![dgitags bubble create new app](/uploads/blog/revue-sur-bubble-23.png)
+![dgitags bubble create new app](/uploads/blog/revue-sur-bubble-23.webp)
 
 Nous allons commencer par créer un en-tête de page qui sera constitué du nom de notre entreprise. Pour ce faire, cliquez sur « **Button** ». Lorsque votre application sera disponible, vous pourrez définir des éléments cliquables. Vous pouvez changer l’emplacement de l’en-tête en le glissant avec votre curseur. L’encadré noir qui apparait vous permet de gérer certains réglages de l’élément tels que sa taille, son emplacement, sa rotation, etc. Si vous voulez changer le style de l’élément, vous devez aller dans « **Styles** ».
 
 ‍
 
-![dgitags bubble create new app](/uploads/blog/revue-sur-bubble-24.png)
+![dgitags bubble create new app](/uploads/blog/revue-sur-bubble-24.webp)
 
 ‍
 
@@ -404,7 +404,7 @@ Nous allons commencer par créer un en-tête de page qui sera constitué du nom 
 
 ‍
 
-![dgitags bubble create new app](/uploads/blog/revue-sur-bubble-25.png)
+![dgitags bubble create new app](/uploads/blog/revue-sur-bubble-25.webp)
 
 Vous pouvez ajouter une image en cliquant sur« Image » à gauche.
 
@@ -434,19 +434,19 @@ Vous pouvez ajouter une une vidéo, du texte, une map etc.
 
 ‍
 
-![dgitags bubble create new app](/uploads/blog/revue-sur-bubble-26.png)
+![dgitags bubble create new app](/uploads/blog/revue-sur-bubble-26.webp)
 
 Lorsque vous ajoutez de texte et que vous souhaitez le modifier, « **le Rich Text editor** » apparait. Vous pouvez par exemple changer la couleur ou la taille du texte.
 
-![dgitags bubble create new app text](/uploads/blog/revue-sur-bubble-27.png)
+![dgitags bubble create new app text](/uploads/blog/revue-sur-bubble-27.webp)
 
 Ajout d’une icône :
 
-![dgitags bubble create new app icone](/uploads/blog/revue-sur-bubble-28.png)
+![dgitags bubble create new app icone](/uploads/blog/revue-sur-bubble-28.webp)
 
 La page d’accueil finalisée :
 
-![dgitags bubble create new app](/uploads/blog/revue-sur-bubble-29.png)
+![dgitags bubble create new app](/uploads/blog/revue-sur-bubble-29.webp)
 
 Et voilà, notre design est prêt. Honnêtement nous avons créé une page d’accueil très simple juste pour vous montrer les fonctionnalités de base.
 
@@ -454,7 +454,7 @@ Pour la tester ou la déboguer, il est préférable d'utiliser le mode aperçu. 
 
 ### **La marketplace** 
 
-![dgitags bubble marketplace](/uploads/blog/revue-sur-bubble-30.png)
+![dgitags bubble marketplace](/uploads/blog/revue-sur-bubble-30.webp)
 
 Dans la marketplace, vous aurez accès à un large choix de template : application, site vitrine, ecommerce. Sélectionnez le template qui vous convient puis créez votre première page web.
 
@@ -466,7 +466,7 @@ Vous pouvez également y trouver des plugins et des agencies (Bubble dispose d'u
 
 ### **Academy** 
 
-![dgitags bubble academy](/uploads/blog/revue-sur-bubble-31.png)
+![dgitags bubble academy](/uploads/blog/revue-sur-bubble-31.webp)
 
 Pour en apprendre plus sur l’utilisation de Bubble, vous avez de nombreuses ressources disponibles dans l’onglet Academy. Certaines ressources sont gratuites.
 
@@ -496,9 +496,9 @@ Pour en apprendre plus sur l’utilisation de Bubble, vous avez de nombreuses re
 
 ‍
 
-![dgitags bubble prix](/uploads/blog/revue-sur-bubble-32.png)
+![dgitags bubble prix](/uploads/blog/revue-sur-bubble-32.webp)
 
-![dgitags bubble prix](/uploads/blog/revue-sur-bubble-33.png)
+![dgitags bubble prix](/uploads/blog/revue-sur-bubble-33.webp)
 
 ‍
 

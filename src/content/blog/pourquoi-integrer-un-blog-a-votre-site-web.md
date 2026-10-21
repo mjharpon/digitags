@@ -3,7 +3,7 @@ title: "Pourquoi intégrer un blog à votre site web ?"
 description: "Découvrez les avantages d'un blog intégré à votre site web : visibilité boostée, crédibilité renforcée, et communauté engagée."
 date: 2025-06-10
 tags: [tech-et-data]
-image: "/uploads/blog/pourquoi-integrer-un-blog-a-votre-site-web-cover.png"
+image: "/uploads/blog/pourquoi-integrer-un-blog-a-votre-site-web-cover.webp"
 ---
 
 Vous pensez que le blog est mort ? Que personne n’a le temps de lire autre chose qu’un post LinkedIn de trois lignes entre deux scrolls ? Détrompez-vous. Le blog est encore indispensable, sous-estimé, et rarement mis en avant.

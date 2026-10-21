@@ -2,7 +2,7 @@
 title: "Les avantages de Webflow pour créer son site internet"
 description: "Découvrez Webflow, un CMS puissant et flexible pour créer des sites web sans coder ! Apprenez à utiliser son interface intuitive, explorez ses avantages et personnalisez votre site facilement grâce aux templates et intégrations disponibles."
 date: 2025-03-17
-image: "/uploads/blog/les-avantages-de-webflow-pour-creer-son-site-internet-cover.png"
+image: "/uploads/blog/les-avantages-de-webflow-pour-creer-son-site-internet-cover.webp"
 ---
 
 On a précédemment fait un article sur [**les avantages de WordPress**](https://www.digitags.work/blog/les-avantages-de-wordpress-pour-la-creation-de-sites-web), alors il est temps de parler de Webflow. Je vous disais dans ce premier article que chaque cms a des avantages et inconvénients et qu’il en existe forcément un qui vous conviendra. Personnellement, j’utilise Webflow et je préfère ce cms pour créer des sites web mais promis, je vais rester la plus impartiale possible dans cette série d’articles.
@@ -15,7 +15,7 @@ Webflow est une plateforme de conception de sites web qui permet de créer des s
 
 LE truc qui différencie Webflow des autres, c’est qu’il génère automatiquement un code HTML, CSS et JavaScript propre et optimisé en fonction de votre design. En utilisant Webflow, vous pouvez créer des sites web responsives qui s'adaptent à toutes les tailles d'écran, intégrer des animations et des interactions, rendant votre site plus engageant.
 
-![\_\_wf\_reserved\_inherit](/uploads/blog/les-avantages-de-webflow-pour-creer-son-site-internet-0.png)
+![\_\_wf\_reserved\_inherit](/uploads/blog/les-avantages-de-webflow-pour-creer-son-site-internet-0.webp)
 
 ‍
 
@@ -39,7 +39,7 @@ Webflow offre une [**marketplace de templates**](https://webflow.com/marketplace
 
 Choisir un template ne vous enferme pas, vous pouvez toujours modifier les couleurs, les polices, et les mises en page pour les adapter à votre identité de marque. Ça vous permet de conserver une image cohérente. Les templates sont entièrement responsives, même s’ils nécessitent parfois quelques adaptations une fois que vous avez retravaillé le design.
 
-![\_\_wf\_reserved\_inherit](/uploads/blog/les-avantages-de-webflow-pour-creer-son-site-internet-1.png)
+![\_\_wf\_reserved\_inherit](/uploads/blog/les-avantages-de-webflow-pour-creer-son-site-internet-1.webp)
 
 Webflow propose très régulièrement de nouveaux templates. Vous avez donc accès à des designs frais et qui suivent les tendances. Vous trouverez d”office un modèle qui répond parfaitement à vos besoins, tout en gardant la liberté de le personnaliser par après.
 
@@ -51,7 +51,7 @@ Webflow intègre une variété d'outils et de services tiers, qui permettent d�
 
 Webflow permet également l'intégration de systèmes de paiement et de solutions e-commerce pour créer votre boutique en ligne. Vous pouvez ajouter des fonctionnalités de panier d'achat, de gestion des stocks et de traitement des paiements.
 
-![\_\_wf\_reserved\_inherit](/uploads/blog/les-avantages-de-webflow-pour-creer-son-site-internet-2.png)
+![\_\_wf\_reserved\_inherit](/uploads/blog/les-avantages-de-webflow-pour-creer-son-site-internet-2.webp)
 
 Sans oublier les outils d'analyse comme Google Analytics (que vous DEVEZ intégrer absolument). En les connectant, vous pouvez suivre le comportement des visiteurs, analyser les performances des pages et ajuster votre site et vos stratégies en conséquence. Vous avez besoin d’aide pour construire un tracking efficace ou même créer votre site web sur Webflow ? [**Recrutez le meilleur freelance**](https://www.digitags.work/#deposez-votre-besoin) pour votre projet sur [**digitags.work**](https://www.digitags.work/), notre hub de talents du digital sélectionnés avec soin. Nous vous trouvons la bonne personne et assurons la contractualisation et le suivi du projet.
 

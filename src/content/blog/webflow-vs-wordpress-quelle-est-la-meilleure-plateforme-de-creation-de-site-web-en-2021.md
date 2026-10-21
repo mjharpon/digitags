@@ -22,7 +22,7 @@ les deux outils à connaitre
 
 ‍
 
-![wordpress freelance webflow dgitags ](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-0.png)
+![wordpress freelance webflow dgitags ](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-0.webp)
 
 1/ WordPress est limité par des **modèles** ou bien il est **codé à partir de zéro**, alors que Webflow vous donne une **liberté de conception totale**.
 
@@ -40,7 +40,7 @@ Webflow et WordPress sont donc deux concurrents de taille. Cependant certaines d
 
 ‍
 
-![wordpress freelance webflow dgitags design](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-1.png)
+![wordpress freelance webflow dgitags design](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-1.webp)
 
 Webflow est un **constructeur de sites Web basé sur le cloud** qui permet à n’importe qui de créer un site Web sans avoir besoin de compétences ou de connaissances en programmation. Webflow est beaucoup plus **puissant** et **personnalisable** que d’autres plateformes de création de sites Web telles que Squarespace et Wix.
 
@@ -98,7 +98,7 @@ Finalement, vous pouvez donner à vos clients et aux membres de votre équipe un
 
 ‍
 
-![wordpress freelance webflow dgitags design](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-2.png)
+![wordpress freelance webflow dgitags design](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-2.webp)
 
 Comme nous l’avons déjà dit, Webflow facilite la **conception de votre site** Web, la **vente de vos produits** et le **développement de votre activité** en vous donnant un contrôle total sur tout. Chaque page peut être entièrement **personnalisée**. Par exemple, votre page de paiement peut s'harmoniser avec le reste de votre site Web.
 
@@ -152,7 +152,7 @@ Webflow propose deux types de plans :
 
 \-      **Les Site plans** :différents forfaits de prix possibles.
 
-![wordpress freelance webflow dgitags design](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-3.png)
+![wordpress freelance webflow dgitags design](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-3.webp)
 
 o   **Site plans**
 
@@ -168,7 +168,7 @@ o   **Site plans**
 
 ‍
 
-![wordpress freelance webflow dgitags design](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-4.png)
+![wordpress freelance webflow dgitags design](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-4.webp)
 
 o  **Ecommerce plans** 
 
@@ -186,9 +186,9 @@ o  **Ecommerce plans** 
 
 ‍
 
-![wordpress freelance webflow dgitags design](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-5.png)
+![wordpress freelance webflow dgitags design](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-5.webp)
 
-![wordpress freelance webflow dgitags design](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-6.png)
+![wordpress freelance webflow dgitags design](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-6.webp)
 
 o   **Individual Plans**
 
@@ -238,7 +238,7 @@ Si vous voulez en savoir encore plus sur Webflow, vous pouvez aller voir l'artic
 
 ‍
 
-![wordpress freelance webflow dgitags design](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-7.png)
+![wordpress freelance webflow dgitags design](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-7.webp)
 
  WordPress est un **logiciel open source**, entièrement **gratuit** pour tout le monde, vous devez juste **payer votre hébergement**. Vous pouvez utiliser WordPress pour créer des blogs, des sites Web, une boutique en ligne ou pour afficher vos projets de portfolio.
 
@@ -278,7 +278,7 @@ Il est donc très facile et rapide de se lancer avec WordPress.Vous pouvez insta
 
 ‍
 
-![wordpress freelance webflow dgitags design](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-8.png)
+![wordpress freelance webflow dgitags design](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-8.webp)
 
  Pour créer une boutique en ligne avec WordPress, vous devez **installer un plugin gratuit de commerce électronique** (ex : 28% de toutes les boutiques en ligne fonctionnent avec **WooCommerce**. Plugin personnalisable.).
 
@@ -318,7 +318,7 @@ Il est donc très facile et rapide de se lancer avec WordPress.Vous pouvez insta
 
 ‍
 
-![wordpress freelance webflow dgitags design](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-9.png)
+![wordpress freelance webflow dgitags design](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-9.webp)
 
 WordPress est complètement **gratuit** ! Vous devez juste **payer pour l'hébergement**, mais certains fournisseurs proposent l'hébergement pour seulement quelques dollars par mois, donc WordPress est un moyen très abordable de créer un site web (_donc si vous avez bien compris Wordpress est gratuit mais son utilisation ne l’est pas. Vous devrez payer l’hébergement et le nom de domaine_).
 
@@ -340,7 +340,7 @@ Nous en profitons pour vous préciser que Dgitags possède des experts du webmar
 
 ‍
 
-![wordpress freelance webflow dgitags design](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-10.png)
+![wordpress freelance webflow dgitags design](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-10.webp)
 
 On peut donc conclure par le fait que Webflow et WordPress sont deux très bonnes plateformes pour toute personne qui souhaite construire un site Web.
 

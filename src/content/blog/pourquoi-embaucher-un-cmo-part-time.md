@@ -3,7 +3,7 @@ title: "Pourquoi embaucher un CMO part-time ?"
 description: "Découvrez pourquoi faire appel à un CMO part-time peut transformer votre stratégie marketing : expertise flexible, coût optimisé et collaboration efficace. Profitez d’une solution selon vos besoins pour booster votre croissance et vos performances."
 date: 2024-12-02
 tags: [freelancer]
-image: "/uploads/blog/pourquoi-embaucher-un-cmo-part-time-cover.png"
+image: "/uploads/blog/pourquoi-embaucher-un-cmo-part-time-cover.webp"
 ---
 
 De nombreuses entreprises font appel à un Chief Marketing Officer (CMO) freelance, aussi appelé CMO part-time ou encore CMO as a service. Embaucher un CMO à temps plein peut être un investissement financier considérable pour de nombreuses petites et moyennes entreprises.

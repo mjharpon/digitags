@@ -3,7 +3,7 @@ title: "Expert en webmarketing freelance - Stratégies et développement marketi
 description: "Cherchez-vous un expert webmarketing freelance pour votre projet? Découvrez comment trouver le bon consultant et obtenir une visibilité optimale pour votre entreprise sur internet."
 date: 2023-03-01
 tags: [freelancer, webmarketing]
-image: "/uploads/blog/expert-en-webmarketing-freelance-strategies-et-developpement-marketing-numerique-cover.png"
+image: "/uploads/blog/expert-en-webmarketing-freelance-strategies-et-developpement-marketing-numerique-cover.webp"
 ---
 
 Cherchez-vous un expert webmarketing freelance pour votre projet? Découvrez comment trouver le bon consultant et obtenir une visibilité optimale pour votre entreprise sur internet.

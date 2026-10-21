@@ -2,7 +2,7 @@
 title: "senior vs junior : comment choisir"
 description: "Junior ou senior ? Découvrez comment choisir le bon profil selon vos besoins et missions. Digitags.work vous aide à recruter le bon talent."
 date: 2025-11-03
-image: "/uploads/blog/freelance-senior-vs-junior-comment-choisir-cover.png"
+image: "/uploads/blog/freelance-senior-vs-junior-comment-choisir-cover.webp"
 ---
 
 Choisir entre un **freelance junior** et un **freelance senior** : les deux vous emmènent à destination, mais pas de la même façon.

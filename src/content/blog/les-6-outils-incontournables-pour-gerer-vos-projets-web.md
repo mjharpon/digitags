@@ -3,7 +3,7 @@ title: "Les 6 outils incontournables pour gérer vos projets web"
 description: "Découvrez 6 outils indispensables pour gérer vos projets web efficacement : organisation, collaboration, suivi du temps, communication..."
 date: 2025-05-13
 tags: [webmarketing]
-image: "/uploads/blog/les-6-outils-incontournables-pour-gerer-vos-projets-web-cover.png"
+image: "/uploads/blog/les-6-outils-incontournables-pour-gerer-vos-projets-web-cover.webp"
 ---
 
 Vous jonglez entre deadlines serrées, fichiers éparpillés et discussions de groupe qui partent dans tous les sens ? Respirez un bon coup : on a ce qu’il vous faut.
@@ -48,7 +48,7 @@ Idéal pour savoir qui fait quoi (et quand), pour cocher des cases et pour colla
 
 Bonus : vous pouvez commenter, joindre des fichiers, liker les updates – bref, transformer votre gestion de tâches en réseau social productif.
 
-![\_\_wf\_reserved\_inherit](/uploads/blog/les-6-outils-incontournables-pour-gerer-vos-projets-web-0.png)
+![\_\_wf\_reserved\_inherit](/uploads/blog/les-6-outils-incontournables-pour-gerer-vos-projets-web-0.webp)
 
 ‍
 

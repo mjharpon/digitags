@@ -3,7 +3,7 @@ title: "La vie de Digital Nomad"
 description: "Un digital nomad est une personne qui peut travailler d'où il veut quand il veut. Ce concept a commencé à se propager depuis quelques années, d'autant plus depuis l'arrivée du Covid-19. Qu'est ce qu'un digital nomad ?"
 date: 2021-09-03
 tags: [freelancer]
-image: "/uploads/blog/la-vie-de-digital-nomade-cover.png"
+image: "/uploads/blog/la-vie-de-digital-nomade-cover.webp"
 ---
 
 _Une étude montre qu'à la mi-2020, la population de nomades numériques aux États-Unis a explosé de 50 % par rapport à2019, passant de 7,3 millions à 10,9 millions._
@@ -22,7 +22,7 @@ Si vous êtes intéressé, c’est juste en dessous !
 
 ‍
 
-![digital nomad dgitags](/uploads/blog/la-vie-de-digital-nomade-0.png)
+![digital nomad dgitags](/uploads/blog/la-vie-de-digital-nomade-0.webp)
 
  « _Les nomades numériques sont des personnes qui ne dépendent pas de l'endroit où elles se trouvent et qui utilisent la technologie pour accomplir leur travail, menant un style de vie nomade. Les nomades numériques travaillent à distance, en télétravail, plutôt que d'être physiquement présents au siège ou au bureau d'une entreprise. Le style de vie des nomades numériques a été rendu possible par plusieurs innovations, notamment les logiciels de gestion de contenu, l'accès bon marché à l'internet par le biais du WiFi, les smartphones et le protocole de voix surIP (VoIP) pour contacter les clients et les employeurs. En outre, la croissance de la "gig economy" a également joué un rôle_ ».
 
@@ -36,7 +36,7 @@ D’après Jeremy, un digital nomad est « une personne qui sait **gérer son t
 
 ### 1/ Parcours professionnel et premiers jobs
 
-![digital nomad dgitags](/uploads/blog/la-vie-de-digital-nomade-1.png)
+![digital nomad dgitags](/uploads/blog/la-vie-de-digital-nomade-1.webp)
 
 Jeremy Gerault a fait un master en marketing en école de commerce à l’**ESG**. Il a eu l’opportunité de faire son master en alternance dans une agence de communication en tant que **[community manager](/metiers/community-manager-freelance)**. De ce fait, il a commencé à s’intéresser à la partie technique des réseaux sociaux.
 
@@ -52,7 +52,7 @@ Après 2 ans, dans cette agence, il a eu l’envie de repartir à l’aventure.
 
 Le modèle de travail proposé par son agence ne collait plus avec ses envies du moment. Il voulait retourner vivre quelques temps à l’étranger.
 
-![digital nomad dgitags](/uploads/blog/la-vie-de-digital-nomade-2.png)
+![digital nomad dgitags](/uploads/blog/la-vie-de-digital-nomade-2.webp)
 
 Jeremy s’est donc mis à son compte et est devenu **freelance.**
 
@@ -76,7 +76,7 @@ Il consacrait 2 jours par semaine à son travail pour notre agence.
 
 ‍
 
-![digital nomad dgitags](/uploads/blog/la-vie-de-digital-nomade-3.png)
+![digital nomad dgitags](/uploads/blog/la-vie-de-digital-nomade-3.webp)
 
  « J’ai été en quelque sorte un **crash test** pour Donutz. Marie Joseph a pour ambition de monter une structure totalement en remote. Après discussion, nous nous sommes dit que c’était un bon test, que nous verrons si ce modèle fonctionnerait. Nous en avions parlé aux clients, et cela ne les dérangeait pas plus que ça, tant que le travail était fait. Il suffit d’être **organisé**. Selon le pays ou j’étais, je cherchais des heures en commun avec la France afin de contacter les clients si besoin. Quand j’étais au Costa Rica par exemple, je me levais assez tôt, donc c’était faisable. »
 
@@ -102,7 +102,7 @@ Jeremy a trouvé des avantages à ne pas avoir les mêmes horaires de travail qu
 
 ‍
 
-![digital nomad dgitags](/uploads/blog/la-vie-de-digital-nomade-4.png)
+![digital nomad dgitags](/uploads/blog/la-vie-de-digital-nomade-4.webp)
 
 -   **La liberté de se déplacer :** si vous aimez voyager, ce mode de vie peut réellement vous convenir. La liberté géographique est l’avantage principale de la vie de nomade digital. Vous pouvez voyager quand vous les souhaitez, ou vous voulez sans devoir sacrifier votre vie professionnel. Tant que vous avez une **connexion internet** et que cela ne pose pas de problème à vos clients, il n’y a pas réellement de soucis. **‍**
 -   **La liberté horaire :** entant que digital nomad, vous pouvez définir vos horaires de travail et vos disponibilités.  
@@ -113,7 +113,7 @@ Jeremy a trouvé des avantages à ne pas avoir les mêmes horaires de travail qu
 
 ### **Les inconvénients** 
 
-![digital nomad dgitags](/uploads/blog/la-vie-de-digital-nomade-5.png)
+![digital nomad dgitags](/uploads/blog/la-vie-de-digital-nomade-5.webp)
 
 Toutefois, même si vivre la vie d’un nomade digital est synonyme de liberté, ce mode de vie présente quelques inconvénients :
 
@@ -147,7 +147,7 @@ Par exemple, certains travailleurs peuvent prendre leur ordinateur et travailler
 
 D'après les recherches de la boite de consulting McKinsey : « **_60 à 70 %_** _de la main-d'œuvre n'a aucune possibilité_ » de travailler à distance. La plupart des gens sont « _entrain de couper des cheveux, de s'occuper de patients, de travailler dans un environnement de production avec des machines ou dans un laboratoire avec des équipements spécialisés_ ».
 
-![digital nomad dgitags](/uploads/blog/la-vie-de-digital-nomade-6.png)
+![digital nomad dgitags](/uploads/blog/la-vie-de-digital-nomade-6.webp)
 
 En réalité, ce sont surtout des employés de bureau ayant fait **des études supérieures** qui auront l’opportunité de devenir des digital nomad.
 

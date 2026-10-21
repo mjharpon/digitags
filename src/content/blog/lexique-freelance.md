@@ -2,7 +2,7 @@
 title: "Petit lexique du freelancing pour les clients novices"
 description: "Explorez notre lexique freelance, un guide clair pour débuter et réussir votre recrutement freelance. Idéal pour clients novices."
 date: 2025-12-23
-image: "/uploads/blog/lexique-freelance-cover.png"
+image: "/uploads/blog/lexique-freelance-cover.webp"
 ---
 
 Entrer dans l’univers du freelancing, c’est un peu comme débarquer dans un pays dont on comprend quelques mots, mais pas encore vraiment la langue. On reconnaît certains termes, on devine le sens d’autres… et parfois on nodde poliment en espérant que tout s’éclaire plus tard. Ce lexique freelance a été pensé pour éviter ces moments flous.

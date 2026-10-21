@@ -2,7 +2,7 @@
 title: "Facturation électronique : prêt pour septembre 2026 ?"
 description: "Obligation facturation électronique en 2026 : tout savoir sur l'e-invoicing, les plateformes, la conformité et les étapes clés pour réussir votre transition."
 date: 2026-05-30
-image: "/uploads/blog/facturation-electronique-pret-pour-septembre-2026-cover.png"
+image: "/uploads/blog/facturation-electronique-pret-pour-septembre-2026-cover.webp"
 ---
 
 Septembre 2026. Cette date est gravée dans l'agenda de toutes les entreprises françaises, quelle que soit leur taille. Pourquoi ? Parce que d'ici là, la **facturation électronique** deviendra obligatoire pour l'ensemble des acteurs économiques du pays. Un virage numérique incontournable qui bouleverse les habitudes, chamboule les process administratifs et soulève pas mal de questions. Vous êtes dirigeant de TPE, DRH, CMO ou CTO ? Alors cet article est pour vous. On fait le point ensemble, sans jargon inutile, sur ce qui vous attend vraiment.

@@ -16,7 +16,7 @@ On parle de nous dans Forbes !
 
 ‍
 
-![](/uploads/blog/on-parle-de-nous-dans-forbes-us-0.png)
+![](/uploads/blog/on-parle-de-nous-dans-forbes-us-0.webp)
 
 ‍
 

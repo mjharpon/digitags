@@ -3,7 +3,7 @@ title: "Comment définir le budget et les délais pour un projet nécessitant de
 description: "Dans cet article, nous allons aborder trois principaux aspects clés : l'élaboration d'un projet, la gestion budgétaire du projet et la mise en place des délais."
 date: 2023-04-20
 tags: [tech-et-data, freelancer, product]
-image: "/uploads/blog/comment-definir-le-budget-et-les-delais-pour-un-projet-necessitant-des-freelances-cover.png"
+image: "/uploads/blog/comment-definir-le-budget-et-les-delais-pour-un-projet-necessitant-des-freelances-cover.webp"
 ---
 
 Vous avez un projet en tête et vous êtes prêt à monter une équipe de freelances pour le mener à bien ? C’est génial ! Mais comment réussir ce pari ? Comment définir le budget et les délais nécessaires pour mettre en place cette équipe et mener votre projet jusqu’à son terme avec succès ? Dans cet article, nous allons aborder trois principaux aspects clés : l'élaboration d'un projet, la gestion budgétaire du projet et la mise en place des délais. Nous examinerons ensuite les outils disponibles, ainsi que quelques techniques qui peuvent vous aider à obtenir le meilleur résultat possible. Prêt à commencer votre voyage vers le succès ? Alors partons !

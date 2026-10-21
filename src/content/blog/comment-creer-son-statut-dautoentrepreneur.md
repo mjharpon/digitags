@@ -45,7 +45,7 @@ Si vous respectez ces conditions, rendez-vous sur le site : https://www.autoentr
 
 Vous tomberez sur la page d’accueil suivante :
 
-![Urssaf dgitags freelance autoentrepreneur microentrepreneur](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-0.png)
+![Urssaf dgitags freelance autoentrepreneur microentrepreneur](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-0.webp)
 
 Avant de commencer la procédure, vous devez répondre à la question « Êtes-vous déjà immatriculé en tant que travailleur indépendant ? »
 
@@ -57,13 +57,13 @@ On vous redirigera par la suite vers le service vous permettant de basculer du s
 
 Par exemple, si vous répondez « Oui », vous verrez le texte suivant apparaitre :
 
-![Urssaf dgitags freelance autoentrepreneur microentrepreneur](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-1.png)
+![Urssaf dgitags freelance autoentrepreneur microentrepreneur](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-1.webp)
 
-![Urssaf dgitags freelance autoentrepreneur microentrepreneur](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-2.png)
+![Urssaf dgitags freelance autoentrepreneur microentrepreneur](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-2.webp)
 
 Si vous répondez « Non », vous verrez le texte suivant apparaitre :
 
-![Urssaf dgitags freelance autoentrepreneur microentrepreneur](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-3.png)
+![Urssaf dgitags freelance autoentrepreneur microentrepreneur](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-3.webp)
 
 Si vous n’avez pas encore d’autoentreprise, cliquez sur « **Déclarer mon autoentreprise** ».
 
@@ -81,7 +81,7 @@ Pas de panique, vous trouverez toutes les informations concernant l’ACRE sur l
 
 ### **ETAPE  3 : connexion ou création de votre compte Urssaf**
 
-![Urssaf dgitags freelance autoentrepreneur microentrepreneur](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-4.png)
+![Urssaf dgitags freelance autoentrepreneur microentrepreneur](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-4.webp)
 
 Création de votre compte Urssaf
 
@@ -95,13 +95,13 @@ Si vous devez par la suite vous connecter au compte de cette personne, pensez à
 
 Une fois votre compte crée, voici les 5 étapes pour créer votre autoentreprise :
 
-![Urssaf dgitags freelance autoentrepreneur microentrepreneur](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-5.png)
+![Urssaf dgitags freelance autoentrepreneur microentrepreneur](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-5.webp)
 
 Vous avez créé votre compte et avez reçu un **e-mail de confirmation** de la part de l’Urssaf. Cliquez sur « **Valider mon adresse courriel** » afin de finaliser la création de votre compte. Une fois cette étape finalisée, vous pourrez accéder à la phase de création de votre mot de passe.
 
 Exemple de courriel que vous recevrez :
 
-![Urssaf dgitags freelance autoentrepreneur microentrepreneur mail](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-6.png)
+![Urssaf dgitags freelance autoentrepreneur microentrepreneur mail](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-6.webp)
 
 Vous pouvez dès à présent définir votre mot de passe et vous connecter à votre compte pour commencer la procédure.
 
@@ -115,7 +115,7 @@ Le statut est vraiment rapide à créer donc allons-y !
 
 ##### **Phase 1 : Mon projet d’autoentreprise**
 
-![Urssaf dgitags freelance autoentrepreneur microentrepreneur ](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-7.png)
+![Urssaf dgitags freelance autoentrepreneur microentrepreneur ](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-7.webp)
 
 Dans cette première phase, on vous demande de définir l’activité que vous souhaitez exercer parmi une multitude de domaine : conseil, marketing, informatique, etc
 
@@ -123,7 +123,7 @@ Si votre activité́ relève du **Commerce** ou de **l’Artisanat** le site vou
 
 ##### **Phase 2 : Mes informations personnelles**        
 
-![](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-8.png)
+![](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-8.webp)
 
 On vous demande de répondre à des questions classiques telles que votre adresse postale, votre numéro de téléphone, votre adresse mail, etc.
 
@@ -170,7 +170,7 @@ Si tout est bon, il ne vous reste qu’à valider la création de votre microent
 
 Si vous souhaitez la finaliser plus tard, vous pourrez toujours y revenir. Votre dossier sera enregistré.
 
-![dgitags microentrepreneur autoentrepreneur statut déclaration](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-10.png)
+![dgitags microentrepreneur autoentrepreneur statut déclaration](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-10.webp)
 
 ### **ETAPE 5 : Obtenez vos documents**
 
@@ -202,7 +202,7 @@ Pour en savoir plus sur Donutz, cliquez [ici.](#deposez-votre-besoin)
 
 [
 
-![dgitags digital expert ](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-11.png)
+![dgitags digital expert ](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-11.webp)
 
 ](#deposez-votre-besoin)
 

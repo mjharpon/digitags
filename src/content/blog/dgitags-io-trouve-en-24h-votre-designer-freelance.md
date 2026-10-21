@@ -38,7 +38,7 @@ Passons au vif du sujet. Comment digitags.work vous trouve-t-il le freelance id�
 
 Pour envoyer votre brief, saisissez le via [**le formulaire dédié**](https://www.digitags.work/#deposez-votre-besoin) en bas de page.
 
-![\_\_wf\_reserved\_inherit](/uploads/blog/dgitags-io-trouve-en-24h-votre-designer-freelance-0.png)
+![\_\_wf\_reserved\_inherit](/uploads/blog/dgitags-io-trouve-en-24h-votre-designer-freelance-0.webp)
 
 Votre brief est diffusé dans l'heure à nos agents de talents qui vont solliciter la communauté et sélectionner les meilleurs talents pour votre projet.
 

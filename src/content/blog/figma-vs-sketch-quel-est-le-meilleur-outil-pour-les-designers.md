@@ -3,7 +3,7 @@ title: "Figma vs Sketch : quel est le meilleur outil pour les designers ?"
 description: "Figma et Sketch sont deux outils de conception au potentiel incroyable. Cependant, lequel est le meilleur pour les designers ?"
 date: 2021-08-27
 tags: [design]
-image: "/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-cover.png"
+image: "/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-cover.webp"
 ---
 
 Explorons ces 2 outils
@@ -38,7 +38,7 @@ Pour commencer, l'une des principales différences qui existent entre les deux o
 
 ‍
 
-![figma sketch introduction dgitags](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-0.png)
+![figma sketch introduction dgitags](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-0.webp)
 
 Vous pouvez également **télécharger Figma** directement sur votre ordinateur (Mac ou Windows) pour qu’il apparaisse dans votre bureau. Toutefois, il est important de noter que si vous n'êtes pas connecté à Internet, vous ne pourrez pas ouvrir un nouveau fichier. Pour les concepteurs qui ont besoin de travailler **hors ligne**, cela peut s'avérer problématique.
 
@@ -62,7 +62,7 @@ D'après notre expérience il semblerait que oui.
 
 ‍
 
-![dgitags figma sketch tarif](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-1.png)
+![dgitags figma sketch tarif](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-1.webp)
 
 Vous devez payer **99 $ pour une licence qui dure un an**. Tout au long de cette année, vous recevrez toutes les mises à jour de l'application Sketch.
 
@@ -92,7 +92,7 @@ Vous avez également la possibilité de prendre un **abonnement Business**. Vous
 
 ‍
 
-![dgitags figma sketch tarif](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-2.png)
+![dgitags figma sketch tarif](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-2.webp)
 
 L'outil est actuellement **gratuit** pour les particuliers. Un **plan d'équipe professionnelle** coûte **12 $** par éditeur par mois si la facturation est annuelle ou **15 $** par éditeur par mois si la facturation est mensuelle.
 
@@ -124,13 +124,13 @@ En terme d’interface, la seule différence réside dans la **terminologie util
 
 **Symbols**
 
-![dgitags figma sketch symbol](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-3.png)
+![dgitags figma sketch symbol](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-3.webp)
 
 **Components**
 
 ‍
 
-![dgitags figma sketch component](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-4.png)
+![dgitags figma sketch component](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-4.webp)
 
 ‍
 
@@ -172,7 +172,7 @@ Sketch crée une page dans votre fichier intitulée "**Symboles**" dès que vous
 
 ‍
 
-![dgitags figma sketch ](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-5.png)
+![dgitags figma sketch ](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-5.webp)
 
 L’une des meilleures fonctionnalités de Figma est le **travail d’équipe**. En effet, Figma est une très bonne option si vous souhaitez travailler à distance avec votre équipe.
 
@@ -190,7 +190,7 @@ En termes d'outils de conception, Figma a également quelques outils qui pourrai
 
 Figma a également repris **l'outil de dessin traditionnel** de Sketch et l'a amélioré en utilisant des **réseaux vectoriels au lieu de chemins**. Comme l'explique Evan Wallace, cofondateur de Figma : "_Un réseau vectoriel améliore le modèle des chemins en autorisant les lignes et les courbes entre deux points quelconques au lieu d'exiger qu'ils se rejoignent tous pour former une seule chaîne_." Concrètement, cela permet une plus grande flexibilité lors du dessin.
 
-![dgitags figma sketch plugin](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-6.png)
+![dgitags figma sketch plugin](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-6.webp)
 
 Cependant, en terme de variété de **plugins**, Sketch reprend la main. En fait, il n'y a pratiquement rien que vous ne puissiez faire dans Sketch si vous disposez du bon plugin. S'il est vrai que Figma est livré avec des capacités natives de prototypage et de transfert des développeurs, il existe de nombreux plugins qui intègrent Sketch aux outils les plus populaires du secteur, tel que **Zeplin** pour le transfert des développeurs. Pour de nombreux concepteurs, le fait de devoir installer un plugin n'est pas un réel problème, ce qui ne les incite pas à passer de Sketchà Figma.
 
@@ -212,7 +212,7 @@ Si vous voulez en découvrir plus sur Figma, c'est par [ici](https://www.dgitags
 
 ‍
 
-![dgitags figma sketch battle design](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-7.png)
+![dgitags figma sketch battle design](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-7.webp)
 
 Il n’y a pas de réponse immédiate à cette question.
 
@@ -268,7 +268,7 @@ A très vite !
 
 ### **Annexe :**
 
-![figma sketch dgitags comparaison](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-8.png)
+![figma sketch dgitags comparaison](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-8.webp)
 
 Source de l'image : [Imaginary Cloud](https://www.imaginarycloud.com/blog/figma-vs-sketch/)
 
