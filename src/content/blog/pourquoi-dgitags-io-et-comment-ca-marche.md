@@ -66,7 +66,7 @@ Notre succès repose sur le lien humain et la compréhension mutuelle entre les 
 
 > _« Le lien humain  est l'une des plus grosses valeurs chez Digitags. Nous n’avons que peu d’arrêts de missions, plutôt des prolongations. C'est grâce à cette compréhension-là que j'arrive à faire des bons matchs entre entreprises et freelances ». Chrystal, agent de talent._
 
-La communauté Digitags regroupe plus de 1500 talents spécialisés dans le [**design**](https://www.digitags.work/design), le [**product management**](https://www.digitags.work/product-management), la [**tech & data**](https://www.digitags.work/tech-data) ou le [**marketing digital**](https://www.digitags.work/sea-social-ads-seo). Les membres de cette communauté sont soigneusement sélectionnés, assurant ainsi la qualité et l'expertise nécessaires pour réussir les projets digitaux.
+La communauté Digitags regroupe plus de 1500 talents spécialisés dans le [**design**](https://www.digitags.work/design), le [**product management**](https://www.digitags.work/product-et-project), la [**tech & data**](https://www.digitags.work/tech-data) ou le [**marketing digital**](https://www.digitags.work/sea-social-ads-seo). Les membres de cette communauté sont soigneusement sélectionnés, assurant ainsi la qualité et l'expertise nécessaires pour réussir les projets digitaux.
 
 ## **Témoignages de nos clients**
 
