@@ -2,7 +2,7 @@
 title: "Recrutement freelance : Remote, hybride ou on-site en 2026 ?"
 description: "Télétravail, hybride ou présentiel : comment choisir le bon mode de travail pour votre recrutement freelance ? Guide complet pour entreprises exigeantes."
 date: 2026-04-17
-image: "/uploads/blog/recrutement-freelance-remote-hybride-ou-on-site-cover.png"
+image: "/uploads/blog/recrutement-freelance-remote-hybride-ou-on-site-cover.webp"
 ---
 
 Le recrutement freelance a radicalement changé ces dernières années. Exit l'époque où embaucher un indépendant signifiait forcément le faire venir dans vos locaux. Aujourd'hui, les entreprises qui cherchent à recruter des talents tech ou marketing se posent une question cruciale : quel mode de travail proposer pour attirer les meilleurs profils ? Entre le full remote qui séduit les nomades digitaux, l'hybride qui plaît aux équilibristes et l'on-site qui rassure les managers old school, le paysage s'est complexifié. Et ce n'est pas qu'une question de préférence personnelle, c'est devenu un véritable enjeu stratégique pour votre recrutement freelance.

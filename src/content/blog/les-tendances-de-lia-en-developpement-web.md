@@ -3,7 +3,7 @@ title: "Les tendances de l'IA en développement web"
 description: "Plongez dans l'univers de l'IA appliquée au développement web, avec une bonne dose d'humour, de conseils concrets et d'exemples qui vous aideront à comprendre (et dompter) cette révolution digitale."
 date: 2025-06-10
 tags: [tech-et-data]
-image: "/uploads/blog/les-tendances-de-lia-en-developpement-web-cover.png"
+image: "/uploads/blog/les-tendances-de-lia-en-developpement-web-cover.webp"
 ---
 
 L’intelligence artificielle. On entend ce mot à tout bout de champ, elle est aujourd’hui : dans vos téléphones, dans votre frigo... et surtout, dans votre site web ! Si vous avez cligné des yeux pendant plus de 30 secondes cette dernière décennie, il est possible que vous ayez raté le raz-de-marée que représente l’IA dans le développement web.

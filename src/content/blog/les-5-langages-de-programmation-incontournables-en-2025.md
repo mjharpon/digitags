@@ -3,7 +3,7 @@ title: "Les 5 langages de programmation incontournables en 2025"
 description: "Découvrez les 5 langages de programmation incontournables en 2025 : JavaScript, Python, Go, Rust et TypeScript. Explorez leurs avantages, leurs applications et pourquoi ils seront essentiels pour les développeurs."
 date: 2025-02-10
 tags: [tech-et-data]
-image: "/uploads/blog/les-5-langages-de-programmation-incontournables-en-2025-cover.png"
+image: "/uploads/blog/les-5-langages-de-programmation-incontournables-en-2025-cover.webp"
 ---
 
 L'année 2025 promet d'être à nouveau mouvementée pour la tech, notamment en ce qui concerne les langages de programmation. Mais quels sont ces langages incontournables ?

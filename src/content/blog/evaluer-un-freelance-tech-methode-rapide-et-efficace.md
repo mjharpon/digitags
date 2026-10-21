@@ -2,7 +2,7 @@
 title: "Évaluer un freelance tech : méthode rapide et efficace"
 description: "Découvrez comment évaluer rapidement le niveau technique d'un freelance avec tests adaptés, signaux clés et process en 4 étapes pour recruter sans erreur."
 date: 2026-03-16
-image: "/uploads/blog/evaluer-un-freelance-tech-methode-rapide-et-efficace-cover.png"
+image: "/uploads/blog/evaluer-un-freelance-tech-methode-rapide-et-efficace-cover.webp"
 ---
 
 Recruter un freelance pour un projet stratégique, c'est un peu comme choisir un pilote pour un rallye : vous n'avez pas le temps de faire des essais sur trois mois. Il faut savoir très vite si la personne en face maîtrise son sujet ou si elle bluffe avec un CV bien marketé. Le recrutement freelance exige une méthode claire, rapide et fiable pour qualifier les compétences techniques sans perdre de temps ni d'argent.

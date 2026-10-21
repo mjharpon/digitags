@@ -2,7 +2,7 @@
 title: "10 astuces pour améliorer la vitesse de votre site web"
 description: "Votre site est lent à charger ? La vitesse est cruciale pour le SEO et l'expérience utilisateur. Découvrez 10 astuces simples pour booster les performances de votre site web."
 date: 2025-05-20
-image: "/uploads/blog/10-astuces-pour-ameliorer-la-vitesse-de-votre-site-web-cover.png"
+image: "/uploads/blog/10-astuces-pour-ameliorer-la-vitesse-de-votre-site-web-cover.webp"
 ---
 
 Votre site web met autant de temps à charger qu’une photo sur la première version d’internet ? Il est temps de lui donner un coup de turbo ! Une page lente, c'est frustrant. Et devinez quoi ? Google n'aime pas ça non plus.

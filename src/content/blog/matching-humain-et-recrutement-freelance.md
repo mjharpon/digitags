@@ -2,7 +2,7 @@
 title: "Matching humain et recrutement freelance : clé du succès"
 description: "Pourquoi le matching humain dans le recrutement freelance est aussi crucial que les compétences techniques ? Conseils pratiques et erreurs à éviter."
 date: 2026-03-31
-image: "/uploads/blog/matching-humain-et-recrutement-freelance-cover.png"
+image: "/uploads/blog/matching-humain-et-recrutement-freelance-cover.webp"
 ---
 
 Quand on pense recrutement freelance, le réflexe est souvent le même : on sort la check-list technique. React ? Check. Trois ans d'expérience minimum ? Check. Portfolio solide ? Check. Et hop, on signe. Sauf que six semaines plus tard, vous vous rendez compte que le courant ne passe pas. Les échanges sont froids, les retours tardent, et ce qui devait être une collaboration fluide ressemble davantage à un parcours du combattant.

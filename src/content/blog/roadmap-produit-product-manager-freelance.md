@@ -2,7 +2,7 @@
 title: "Roadmap produit : apport d'un Product Manager freelance"
 description: "Découvrez comment un product manager freelance peut transformer votre roadmap produit. Recrutement agile, expertise senior, ROI mesurable."
 date: 2026-05-11
-image: "/uploads/blog/roadmap-produit-product-manager-freelance-cover.png"
+image: "/uploads/blog/roadmap-produit-product-manager-freelance-cover.webp"
 ---
 
 Vous pilotez une startup en croissance, une scale-up qui accélère ou une TPE qui digitalise ses services ? Vous savez que la roadmap produit est l'épine dorsale de votre stratégie digitale. Mais entre les priorités business qui changent toutes les semaines, les sprints qui s'enchaînent et les arbitrages techniques à faire en urgence, structurer cette vision produit relève parfois du casse-tête.

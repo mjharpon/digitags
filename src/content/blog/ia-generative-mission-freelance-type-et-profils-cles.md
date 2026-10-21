@@ -2,7 +2,7 @@
 title: "IA générative : mission freelance type et profils clés"
 description: "Découvrez les missions freelance IA incontournables et les profils experts à recruter pour réussir vos projets d'IA générative."
 date: 2026-06-09
-image: "/uploads/blog/ia-generative-mission-freelance-type-et-profils-cles-cover.png"
+image: "/uploads/blog/ia-generative-mission-freelance-type-et-profils-cles-cover.webp"
 ---
 
 L'IA générative a débarqué dans le quotidien des entreprises comme un tsunami. ChatGPT, Midjourney, Claude, Stable Diffusion… Ces outils bouleversent la création de contenu, le développement logiciel, le service client, le marketing et même la R&D. Mais entre l'enthousiasme des équipes et la réalité du déploiement, il y a souvent un gouffre. Comment intégrer concrètement l'IA générative dans vos processus ? Quels profils recruter ? Sur quelles missions les positionner ?

@@ -26,7 +26,7 @@ L’approche la plus traditionnelle est le **_OutboundRecruiting_** qui impliqu
 
 ‍
 
-![Growth recruting digital recrutement croissance dgitags marketing inbound outbound](/uploads/blog/le-growth-recruiting-cest-quoi-0.png)
+![Growth recruting digital recrutement croissance dgitags marketing inbound outbound](/uploads/blog/le-growth-recruiting-cest-quoi-0.webp)
 
 ‍
 

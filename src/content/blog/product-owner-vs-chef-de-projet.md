@@ -3,12 +3,12 @@ title: "Product Owner VS Chef de projet"
 description: "Product Owner ? Chef de Projet ? Quelle est la différence ? Nombreux sont ceux qui pensent que les deux veulent en réalité dire la même chose mais ce n’est pas le cas."
 date: 2021-08-31
 tags: [product]
-image: "/uploads/blog/product-owner-vs-chef-de-projet-cover.png"
+image: "/uploads/blog/product-owner-vs-chef-de-projet-cover.webp"
 ---
 
 [Product Owner](/metiers/product-owner-freelance) et [chef de projet](/metiers/chef-de-projet-freelance) ? c'est la même chose non ? Pas tout à fait !
 
-![chef de projet dgitags product owner](/uploads/blog/product-owner-vs-chef-de-projet-0.png)
+![chef de projet dgitags product owner](/uploads/blog/product-owner-vs-chef-de-projet-0.webp)
 
 > Product Owner ? Chef de Projet ? C’est la même chose non ? 
 
@@ -26,7 +26,7 @@ Si cela vous intéresse, je vous laisse lire la suite ! Bonne lecture :)
 
 ‍
 
-![chef de projet product owner dgitags](/uploads/blog/product-owner-vs-chef-de-projet-1.png)
+![chef de projet product owner dgitags](/uploads/blog/product-owner-vs-chef-de-projet-1.webp)
 
  Un chef de projet est la personne chargée de veiller au **bon déroulement** d’un projet/ou des projets dont il a la charge. Il est à la fois **leader** et **manager**.
 
@@ -78,7 +78,7 @@ Après-en, passons à la présentation du Product Owner.
 
 ‍
 
-![product owner dgitags chef de projet](/uploads/blog/product-owner-vs-chef-de-projet-2.png)
+![product owner dgitags chef de projet](/uploads/blog/product-owner-vs-chef-de-projet-2.webp)
 
  Le terme Product Owner est souvent utilisé dans le domaine de la **gestion de projet IT agile**.
 
@@ -110,7 +110,7 @@ Le PO est donc un **membre à part entière de l’équipe**.  Il **n’est pa
 
 ‍
 
-![dgitags product backlog product owner](/uploads/blog/product-owner-vs-chef-de-projet-3.png)
+![dgitags product backlog product owner](/uploads/blog/product-owner-vs-chef-de-projet-3.webp)
 
 Il doit d’être disponible pour **communiquer au maximum** avec les membres ainsi qu’avec les parties prenantes. Lorsqu’il échange avec eux, le PO en profite pour cerner leurs besoins et leurs attentes afin d’améliorer la valeur ajoutée du produit.  
 

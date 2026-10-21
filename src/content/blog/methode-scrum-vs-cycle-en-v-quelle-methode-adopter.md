@@ -34,7 +34,7 @@ Le cycle en V est une méthode de gestion qui s’est répandue dans les année
 
 ‍
 
-![dgitags cycle en V](/uploads/blog/methode-scrum-vs-cycle-en-v-quelle-methode-adopter-0.png)
+![dgitags cycle en V](/uploads/blog/methode-scrum-vs-cycle-en-v-quelle-methode-adopter-0.webp)
 
 ‍
 
@@ -81,7 +81,7 @@ Les risques générés par la méthode du cycle en V a favorisé l’émergence 
 
 Le mot Scrum (« mêlée » en anglais) fait référence à la mêlée du rugby. En effet, cette méthode se concentre sur l’esprit d’équipe et la volonté d’avancer ensemble vers la réalisation d’un même objectif.
 
-![dgitags scrum présentation](/uploads/blog/methode-scrum-vs-cycle-en-v-quelle-methode-adopter-1.png)
+![dgitags scrum présentation](/uploads/blog/methode-scrum-vs-cycle-en-v-quelle-methode-adopter-1.webp)
 
 ‍
 
@@ -121,7 +121,7 @@ A la fin de chaque sprint, le client ainsi que le Product Owner évaluent le pro
 
 ‍
 
-![scrum dgitags agile](/uploads/blog/methode-scrum-vs-cycle-en-v-quelle-methode-adopter-2.png)
+![scrum dgitags agile](/uploads/blog/methode-scrum-vs-cycle-en-v-quelle-methode-adopter-2.webp)
 
 **A ne pas confondre !** 
 
@@ -171,7 +171,7 @@ L’agilité n’a pas pour but de livrer le produit au plus vite, l’agilité 
 
 ‍
 
-![dgitags scrum cycle en V ](/uploads/blog/methode-scrum-vs-cycle-en-v-quelle-methode-adopter-3.png)
+![dgitags scrum cycle en V ](/uploads/blog/methode-scrum-vs-cycle-en-v-quelle-methode-adopter-3.webp)
 
 Vouloir livrer au plus vite, en omettant une documentation de qualité c’est-à-dire écrire au fur et à mesure de l’évolution du projet est finalement **anti-agile** puisque les équipes de maintenance qui reprendront par la suite le projet risquent d’être perdus si la documentation n’est pas actualisée.
 
@@ -225,7 +225,7 @@ Premièrement, une entreprise ne peut pas devenir entièrement agile du jour au 
 
 ‍
 
-![dgitags cycle en V agile scrum](/uploads/blog/methode-scrum-vs-cycle-en-v-quelle-methode-adopter-4.png)
+![dgitags cycle en V agile scrum](/uploads/blog/methode-scrum-vs-cycle-en-v-quelle-methode-adopter-4.webp)
 
 En effet, l’application de méthode agiles tel que la méthode Scrum requiert une grande **habilitation des équipes** puisque celles-ci doivent réapprendre une certaine façon de travailler. Dans un environnement traditionnel en cascade ou de cycle en V, les équipes s’alignent sur une fonction particulière, par exemple le développement ou les essais, et ont recours à des processus et des modèles, mais sans avoir une vue d’ensemble. Le problème est que l’approche agile requiert de la souplesse, une collaboration étroite des différentes équipes et de la communication. C’est un **grand changement**.
 
@@ -292,7 +292,7 @@ Intérêts et risques des nouvelles méthodes d’entreprise libérée (telle qu
 
 ‍
 
-![](/uploads/blog/methode-scrum-vs-cycle-en-v-quelle-methode-adopter-5.png)
+![](/uploads/blog/methode-scrum-vs-cycle-en-v-quelle-methode-adopter-5.webp)
 
 Source : cours  « Management des organisations » d'Audencia BS
 

@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build && node scripts/sort-sitemap.mjs && node scripts/build-markdown.mjs",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "optimize-images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.13",
@@ -15,5 +16,8 @@
     "astro": "^5.0.0",
     "pdf-parse": "^1.1.1",
     "turndown": "^7.2.4"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
   }
 }

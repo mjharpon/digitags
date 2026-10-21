@@ -3,7 +3,7 @@ title: "Checklist onboarding freelance en 48 h chrono"
 description: "Checklist express pour un onboarding freelance réussi : méthodo + outils pour intégrer vos talents en 48 h et booster votre recrutement freelance."
 date: 2025-08-04
 tags: [recrutement]
-image: "/uploads/blog/onboarding-freelance-cover.png"
+image: "/uploads/blog/onboarding-freelance-cover.webp"
 ---
 
 Vous avez enfin déniché **la** perle rare et signé votre contrat ? Parfait. Mais sans **onboarding freelance** solide, votre nouveau talent risque de ramer dès le lendemain. Or, quand chaque jour de mission pèse sur vos objectifs e-commerce ou B2B, pas question de laisser place à l’improvisation. Dans cet article, Digitags.work partage sa méthode express pour accueillir un freelance en 48 h chrono et booster sa productivité.

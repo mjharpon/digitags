@@ -18,7 +18,7 @@ Vous êtes une entreprise à la recherche d'un traffic manager pour augmenter vo
 
 Tout d’abord qu’est-ce qu’un traffic manager ? Vous avez peut-être déjà entendu ce terme mais vous ne savez pas réellement comment définir cette profession.
 
-![dgitags traffic manager ](/uploads/blog/comment-trouver-le-bon-traffic-manager-en-freelance-0.gif)
+![dgitags traffic manager ](/uploads/blog/comment-trouver-le-bon-traffic-manager-en-freelance-0.webp)
 
 Un traffic manager freelance est un spécialiste de la publicité web et des statistiques. Ce rôle est essentiel pour les entreprises qui cherchent à attirer un public ciblé et à améliorer leur présence en ligne. Le traffic manager freelance utilise diverses stratégies et outils pour augmenter le nombre de visiteurs sur un site web, ce qui peut se traduire par une augmentation des ventes, des leads et de la notoriété de la marque.
 
@@ -81,7 +81,7 @@ Il faut donc rester vigilant à l’utilisation de certains outils qui peuvent a
 
 Maintenant que vous avez une idée plus précise des compétences requises pour être un bon traffic manager, vous pourrez plus facilement trouver l’expert qui conviendra à vos besoins.
 
-![traffic manager dgitags statistiques web traffic ](/uploads/blog/comment-trouver-le-bon-traffic-manager-en-freelance-2.png)
+![traffic manager dgitags statistiques web traffic ](/uploads/blog/comment-trouver-le-bon-traffic-manager-en-freelance-2.webp)
 
 ## **Comment trouver le meilleur traffic manager freelance pour votre entreprise ?**
 

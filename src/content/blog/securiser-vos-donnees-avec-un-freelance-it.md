@@ -2,7 +2,7 @@
 title: "Sécuriser vos données avec un freelance IT"
 description: "Comment protéger vos données sensibles en travaillant avec un freelance IT ? Clauses contractuelles, NDA, gestion des accès : le guide complet pour les dirigeants."
 date: 2026-02-14
-image: "/uploads/blog/securiser-vos-donnees-avec-un-freelance-it-cover.png"
+image: "/uploads/blog/securiser-vos-donnees-avec-un-freelance-it-cover.webp"
 ---
 
 Faire appel à un freelance IT, c'est souvent la solution idéale pour avancer rapidement sur vos projets tech sans alourdir la masse salariale. Mais voilà : dès qu'un prestataire externe accède à vos systèmes, à votre code source ou à vos bases de données clients, la question de la sécurité des données devient centrale. Parce qu'une fuite, une négligence ou un accès mal géré peut coûter cher, très cher, en réputation comme en conformité RGPD.

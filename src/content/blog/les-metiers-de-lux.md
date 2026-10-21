@@ -20,7 +20,7 @@ Pour mieux vous présenter cet univers fascinant, nous avons appelé à la resco
 
 ‍
 
-![UX designer research user experience interface copywriter architect unicorn digital dgitags](/uploads/blog/les-metiers-de-lux-0.png)
+![UX designer research user experience interface copywriter architect unicorn digital dgitags](/uploads/blog/les-metiers-de-lux-0.webp)
 
 ## **UX designer : _user experience_**
 
@@ -52,7 +52,7 @@ C’est un rôle qui requiert une excellente faculté de communication, mais aus
 
 ‍
 
-![UX research analysis digital dgitags search data](/uploads/blog/les-metiers-de-lux-1.png)
+![UX research analysis digital dgitags search data](/uploads/blog/les-metiers-de-lux-1.webp)
 
 ## **UX writer – copywriter**
 

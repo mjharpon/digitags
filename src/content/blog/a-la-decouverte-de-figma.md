@@ -3,7 +3,7 @@ title: "A la découverte de Figma"
 description: "Figma est un outil de design d’interface web et d’application mobile.. Cet outil est devenu en quelques années un outil incontournable des marketeurs."
 date: 2021-08-26
 tags: [design]
-image: "/uploads/blog/a-la-decouverte-de-figma-cover.png"
+image: "/uploads/blog/a-la-decouverte-de-figma-cover.webp"
 ---
 
 Figma l'outil à connaitre
@@ -20,7 +20,7 @@ Nous espérons que l’article vous plaira. Si vous êtes intéressés, c’est 
 
 ‍
 
-![Figma dgitags ](/uploads/blog/a-la-decouverte-de-figma-0.png)
+![Figma dgitags ](/uploads/blog/a-la-decouverte-de-figma-0.webp)
 
 ‍
 
@@ -112,13 +112,13 @@ Les fonctionnalités vous ont intéressées ? Si c’est le cas, restez avec no
 
 ‍
 
-![Figma dgitags homepage](/uploads/blog/a-la-decouverte-de-figma-1.png)
+![Figma dgitags homepage](/uploads/blog/a-la-decouverte-de-figma-1.webp)
 
 Ou **téléchargez Figma** sur votre ordinateur
 
 ‍
 
-![Figma dgitags download](/uploads/blog/a-la-decouverte-de-figma-2.png)
+![Figma dgitags download](/uploads/blog/a-la-decouverte-de-figma-2.webp)
 
 ‍
 
@@ -130,7 +130,7 @@ Si vous devez vous inscrire, l’écran apparaitra de la manière suivante :
 
 ‍
 
-![Figma dgitags sign in sign up](/uploads/blog/a-la-decouverte-de-figma-3.png)
+![Figma dgitags sign in sign up](/uploads/blog/a-la-decouverte-de-figma-3.webp)
 
 Vous pouvez vous inscrire de deux manières :
 
@@ -140,7 +140,7 @@ Vous pouvez vous inscrire de deux manières :
 
 Si vous devez vous connecter, l’écran apparaitra de la manière suivante :
 
-![Figma dgitags log in](/uploads/blog/a-la-decouverte-de-figma-4.png)
+![Figma dgitags log in](/uploads/blog/a-la-decouverte-de-figma-4.webp)
 
 C’est parti pour l’utilisation !
 
@@ -152,19 +152,19 @@ C’est parti pour l’utilisation !
 
 Une fois connecté ou inscrit, vous pourrez commencer à utiliser Figma. La page suivante apparaitra :
 
-![Figma dgitags create project](/uploads/blog/a-la-decouverte-de-figma-5.png)
+![Figma dgitags create project](/uploads/blog/a-la-decouverte-de-figma-5.webp)
 
  Choisissez un nom pour votre **team projet**.
 
 ‍
 
-![Figma dgitags invite collaborators](/uploads/blog/a-la-decouverte-de-figma-6.png)
+![Figma dgitags invite collaborators](/uploads/blog/a-la-decouverte-de-figma-6.webp)
 
  **Invitez vos collaborateurs** en partageant un lien ou en leur envoyant un mail.
 
 ‍
 
-![Figma dgitags plan team](/uploads/blog/a-la-decouverte-de-figma-7.png)
+![Figma dgitags plan team](/uploads/blog/a-la-decouverte-de-figma-7.webp)
 
  Choisissez la **version** que vous souhaitez. Dans cette revue, nous utiliserons la version gratuite.
 
@@ -172,7 +172,7 @@ Une fois ces étapes remplies, vous arriverez sur la page suivante :
 
 ‍
 
-![Figma dgitags project dashboard](/uploads/blog/a-la-decouverte-de-figma-8.png)
+![Figma dgitags project dashboard](/uploads/blog/a-la-decouverte-de-figma-8.webp)
 
 Certains des dossiers déjà présents, sont ici pour vous aider à utiliser Figma. Vous avez accès à des exemples de prototype. Si je clique sur « **Prototyping in Figma** ».
 
@@ -180,7 +180,7 @@ Certains des dossiers déjà présents, sont ici pour vous aider à utiliser Fig
 
 La page ci-dessous apparaitra avec un exemple de prototype.Vous pouvez très bien utiliser un modèle déjà existant en le copiant dans un autre dossier afin de gagner du temps ou bien vous en inspirer.
 
-![Figma dgitags project](/uploads/blog/a-la-decouverte-de-figma-9.png)
+![Figma dgitags project](/uploads/blog/a-la-decouverte-de-figma-9.webp)
 
 ‍
 
@@ -188,13 +188,13 @@ A droite, vous avez la possibilité de créer deux types de « **files** » di
 
 ‍
 
-![Figma dgitags design file](/uploads/blog/a-la-decouverte-de-figma-10.png)
+![Figma dgitags design file](/uploads/blog/a-la-decouverte-de-figma-10.webp)
 
 \-      **Design file :** file pour designer, prototyper et développer un projet
 
 ‍
 
-![](/uploads/blog/a-la-decouverte-de-figma-11.png)
+![](/uploads/blog/a-la-decouverte-de-figma-11.webp)
 
 ‍
 
@@ -204,7 +204,7 @@ Avant de commencer, vous pouvez cliquer en bas sur « **show me around** » af
 
 ‍
 
-![figma dgitags figjam file](/uploads/blog/a-la-decouverte-de-figma-12.png)
+![figma dgitags figjam file](/uploads/blog/a-la-decouverte-de-figma-12.webp)
 
 Vous avez donc deux grands outils dans Figma : le **Design File** et le **FigJam File**. Commençons par le Design File.
 
@@ -214,7 +214,7 @@ Si vous souhaitez créer votre propre prototype à partir de rien, cette partie 
 
 ‍
 
-![figma dgitags layers assets design](/uploads/blog/a-la-decouverte-de-figma-13.png)
+![figma dgitags layers assets design](/uploads/blog/a-la-decouverte-de-figma-13.webp)
 
 En haut à gauche, dans la barre latérale noire, vous avez l’ensemble des outils.
 
@@ -226,7 +226,7 @@ En haut à droite, vous avez les paramètres liés aux calques ou à la zone de 
 
 ‍
 
-![figma dgitags design](/uploads/blog/a-la-decouverte-de-figma-14.png)
+![figma dgitags design](/uploads/blog/a-la-decouverte-de-figma-14.webp)
 
  Vous pourrez directement travailler sur l’interface que vous voyez ou bien créer un frame c’est-à-dire un écran.
 
@@ -244,13 +244,13 @@ Dans l’exemple ci-dessous, j’ai crée deux frames :
 
 Puis j’ai inséré un rectangle pour en faire une bannière. J’ai également inséré du texte.
 
-![figma dgitags design frame](/uploads/blog/a-la-decouverte-de-figma-15.png)
+![figma dgitags design frame](/uploads/blog/a-la-decouverte-de-figma-15.webp)
 
 Dans **Prototype**, puis **Device**, je peux choisir pour quel type d’appareil je veux créer ce projet.
 
 ‍
 
-![figma dgitags design rules](/uploads/blog/a-la-decouverte-de-figma-16.png)
+![figma dgitags design rules](/uploads/blog/a-la-decouverte-de-figma-16.webp)
 
 ‍
 
@@ -340,7 +340,7 @@ Nous espérons que cette présentation détaillée des deux grands outils de Fig
 
 ## **Prix de l’outil** 
 
-![](/uploads/blog/a-la-decouverte-de-figma-22.png)
+![](/uploads/blog/a-la-decouverte-de-figma-22.webp)
 
 ‍
 

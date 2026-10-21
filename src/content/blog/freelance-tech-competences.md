@@ -2,7 +2,7 @@
 title: "Freelance tech : compétences clés"
 description: "Découvrez les compétences les plus recherchées en 2025 et comment recruter – ou devenir – le talent que toutes les entreprises s’arrachent."
 date: 2025-07-29
-image: "/uploads/blog/freelance-tech-competences-cover.png"
+image: "/uploads/blog/freelance-tech-competences-cover.webp"
 ---
 
 En 2025, l’écosystème **freelance tech** bouillonne : 48 % des CEO prévoient d’augmenter leurs recrutements de freelances dans l’année à venir. Pour rester (ou devenir) le talent indispensable, il faut viser les compétences qui se négocient actuellement ! Voici notre classement, concocté par Digitags.work, pour vous aider à optimiser votre **recrutement freelance** ou votre parcours de [**freelence développeur**](https://www.digitags.work/metiers/developeur-web-freelance).

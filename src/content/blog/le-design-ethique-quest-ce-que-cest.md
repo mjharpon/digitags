@@ -3,7 +3,7 @@ title: "Le design éthique : qu’est-ce que c’est ?"
 description: "Le design éthique est une réflexion sur la responsabilité du designer envers l’humain et la société moderne. Il devient un concept de plus en plus important dans le monde des designers."
 date: 2021-09-01
 tags: [design]
-image: "/uploads/blog/le-design-ethique-quest-ce-que-cest-cover.png"
+image: "/uploads/blog/le-design-ethique-quest-ce-que-cest-cover.webp"
 ---
 
 Le design éthique ? vous connaissez ?
@@ -20,7 +20,7 @@ Apparemment, le capteur n'était pas capable de détecter sa main. Il s'agit d'u
 
 ‍
 
-![design ethique dgitags](/uploads/blog/le-design-ethique-quest-ce-que-cest-0.png)
+![design ethique dgitags](/uploads/blog/le-design-ethique-quest-ce-que-cest-0.webp)
 
 Aujourd’hui, l’usage de certains outils numériques/digitaux soulèvent des problèmes complexes autour de l’éthique : **protection des données personnelles, addiction digitale, captation abusive de l’attention, publicités abusives, conception UX inconsciente raciste ou sexiste**, etc
 
@@ -72,7 +72,7 @@ Estelle Leotard, rédactrice UX chez Studicus déclare: "_Si l'intention d'un pr
 
 ‍
 
-![design ethique dgitags](/uploads/blog/le-design-ethique-quest-ce-que-cest-1.png)
+![design ethique dgitags](/uploads/blog/le-design-ethique-quest-ce-que-cest-1.webp)
 
 ‍
 
@@ -136,7 +136,7 @@ Certains [UX designers](/metiers/ux-designer-freelance) peu scrupuleux rendent l
 
 ## **Conclusion**
 
-![design ethique dgitags conclusion](/uploads/blog/le-design-ethique-quest-ce-que-cest-3.png)
+![design ethique dgitags conclusion](/uploads/blog/le-design-ethique-quest-ce-que-cest-3.webp)
 
 Le concept de design éthique reste encore vague et relève du **questionnement philosophique, politique et social**. En effet, le design éthique invite à s’interroger sur la manière d’appréhender le design en prenant en compte l’impact social, humain, voire environnemental des interfaces numériques et des produits.
 

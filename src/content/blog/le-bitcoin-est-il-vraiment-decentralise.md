@@ -10,9 +10,9 @@ Par définition,, la caractéristique la plus importante du Bitcoin, celle qui e
 
 Premièrement vous n'êtes pas obligé d’utiliser une plateforme d’achat et de vente de Bitcoin de type Kraken ou Coinbase pour acheter ou stocker du Bitcoin. Un utilisateur n’est en aucun cas obligé de passer par ces intermédiaires. Vous pouvez acheter un Bitcoin à un ami ou les stocker sur un portefeuille local sur votre ordinateur ou sur une clef physique que vous détenez chez vous.
 
-![](/uploads/blog/le-bitcoin-est-il-vraiment-decentralise-0.png)
+![](/uploads/blog/le-bitcoin-est-il-vraiment-decentralise-0.webp)
 
-![](/uploads/blog/le-bitcoin-est-il-vraiment-decentralise-1.png)
+![](/uploads/blog/le-bitcoin-est-il-vraiment-decentralise-1.webp)
 
 Carte mère Bang-Marshal B3 de MSI, 8 ports
 
@@ -34,9 +34,9 @@ Prenons la plateforme Kraken par exemple, quelle est la différence entre un com
 
   
 
-![](/uploads/blog/le-bitcoin-est-il-vraiment-decentralise-2.png)
+![](/uploads/blog/le-bitcoin-est-il-vraiment-decentralise-2.webp)
 
-![](/uploads/blog/le-bitcoin-est-il-vraiment-decentralise-3.png)
+![](/uploads/blog/le-bitcoin-est-il-vraiment-decentralise-3.webp)
 
 Processus d’identification lors de la création d’un compte sous Kraken.com
 
@@ -62,7 +62,7 @@ C’est pour cela qu’avec le temps,  les mineurs se sont regroupés en “fer
 
 Si nous regardons la répartition des “pools” nous constatons que les 4 premières représentent près de 50% du marché, ce qui nous montre une concentration forte voire même un début de centralisation. Nous semblons donc nous diriger vers une centralisation des pools de minages. Ce qui est sûr, c’est que les mineurs travaillant de manière autonome n’existent quasiment déjà plus, ce qui est un paradoxe pour les principaux acteurs de ce processus décentralisé.  
 
-![](/uploads/blog/le-bitcoin-est-il-vraiment-decentralise-4.png)
+![](/uploads/blog/le-bitcoin-est-il-vraiment-decentralise-4.webp)
 
 Répartition des pools minières ([https://blockchain.info/pools](https://blockchain.info/pools)
 
@@ -80,7 +80,7 @@ Ces évolutions obligent les états et les institutions financières à se posit
 
 D’ailleurs les positions de ces pays ne se ressemblent pas face à l'essor des crypto monnaies.  
 
-![](/uploads/blog/le-bitcoin-est-il-vraiment-decentralise-5.png)
+![](/uploads/blog/le-bitcoin-est-il-vraiment-decentralise-5.webp)
 
 En effet si la position des états était jusqu’à maintenant très ferme, elle a tendance à s’assouplir face à la pression du marché des “users” et aux formidables promesses que laissent entrevoir ces nouvelles technologies.
 
@@ -126,7 +126,7 @@ Cette évolution possible poserait problème à coup sûr aux communautés autou
 
 Les idéaux libertaires (>libertariens plutot) vont-ils s’incarner dans les monnaies alternatives au Bitcoin pour renouer avec le rêve de centralisation ?  
 
-![](/uploads/blog/le-bitcoin-est-il-vraiment-decentralise-6.png)
+![](/uploads/blog/le-bitcoin-est-il-vraiment-decentralise-6.webp)
 
 Une hypothèse que nous pouvons tracer serait que ces communautés ayant créé le Bitcoin et portant les idées libertariennes associées, si elles n’ont plus la main sur cette monnaie, vont créer de nouvelles crypto monnaies qui reprendront le flambeau du Bitcoin, tel qu’il existait à ses débuts.  
 

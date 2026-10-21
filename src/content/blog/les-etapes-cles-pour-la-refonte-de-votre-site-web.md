@@ -2,7 +2,7 @@
 title: "Les étapes clés pour la refonte de votre site web"
 description: "Découvrez les étapes essentielles pour réussir la refonte de votre site web : audit, objectifs clairs, optimisation du contenu, design moderne et tests approfondis."
 date: 2025-03-03
-image: "/uploads/blog/les-etapes-cles-pour-la-refonte-de-votre-site-web-cover.png"
+image: "/uploads/blog/les-etapes-cles-pour-la-refonte-de-votre-site-web-cover.webp"
 ---
 
 Un site web n’est malheureusement pas éternel, et au fil du temps, il peut devenir obsolète, inefficace ou tout simplement ne plus répondre à vos besoins actuels. Vous pensez donc à refondre votre site, et vous avez bien raison !

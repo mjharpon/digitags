@@ -14,7 +14,7 @@ Une monnaie ? vraiment ?
 
 ‍
 
-![](/uploads/blog/quest-ce-que-le-bitcoin-0.png)
+![](/uploads/blog/quest-ce-que-le-bitcoin-0.webp)
 
 ‍
 
@@ -38,7 +38,7 @@ Une monnaie ? vraiment ?
 
 ‍
 
-![](/uploads/blog/quest-ce-que-le-bitcoin-1.png)
+![](/uploads/blog/quest-ce-que-le-bitcoin-1.webp)
 
 ‍  
 
@@ -61,7 +61,7 @@ Plus récemment, même phénomène avec une dépréciation autour de 30% en 2 jo
 
 ‍
 
-![](/uploads/blog/quest-ce-que-le-bitcoin-2.png)
+![](/uploads/blog/quest-ce-que-le-bitcoin-2.webp)
 
 ‍
 
@@ -84,7 +84,7 @@ Il est possible de consulter le site [www.coinmap.org](http://www.coinmap.org/) 
 
 ‍
 
-![](/uploads/blog/quest-ce-que-le-bitcoin-3.png)
+![](/uploads/blog/quest-ce-que-le-bitcoin-3.webp)
 
 Le Japon développe d’ailleurs son utilisation. Sii à date 4500 magasins autorisent le paiement en Bitcoins, cela concernera bientôt 260 000 enseignes au sein de l’archipel comme nous l’explique Numerama dans son article du 06 Avril, pour plus d’informations sur le sujet, vous pouvez lire leur article ci contre  [_Bitcoin Payment Makes Way To Japanese Retailers, PYMTS.com 30 May17_](http://www.pymnts.com/news/bitcoin-tracker/2017/bitcoin-payment-makes-way-to-japanese-retailers/) _._ Récemment une compagnie aérienne japonaise propose même à ses clients de payer leur billet d’avion en bitcoin,  [_Peach Airline to Accept Bitcoin After Japan Recognizes Cryptocurrency_](http://www.nasdaq.com/article/peach-airline-to-accept-bitcoin-after-japan-recognizes-cryptocurrency-cm796264)  
 
@@ -106,7 +106,7 @@ L’idée serait de regarder ’utilisation actuelle du Bitcoin par les personne
 
 On peut déjà regarder les volumes transaction par jours à l'échelle mondiale et en le comparant à d’autres moyens comme PayPal et les cartes bancaires.
 
-![](/uploads/blog/quest-ce-que-le-bitcoin-4.png)
+![](/uploads/blog/quest-ce-que-le-bitcoin-4.webp)
 
 ‍
 
@@ -114,7 +114,7 @@ Avec 300 000 transactions par jours contre 1,2 milliards pour les cartes bancair
 
 ‍
 
-![](/uploads/blog/quest-ce-que-le-bitcoin-5.png)
+![](/uploads/blog/quest-ce-que-le-bitcoin-5.webp)
 
 ‍
 
@@ -128,7 +128,7 @@ Entre 2011 et 2013, ils constatent que si la part des “investisseurs” dans l
 
 On peut se demander si ce ne serait pas un produit financier de type spéculatif plus qu’un produit d’investissement ? Pour cela on peut regarder  sa volatilité que nous avons calculé à partir des valeurs quotidiennes du cours entre Octobre 2011 et Avril 2017.
 
-![](/uploads/blog/quest-ce-que-le-bitcoin-6.png)
+![](/uploads/blog/quest-ce-que-le-bitcoin-6.webp)
 
   
 
@@ -136,7 +136,7 @@ Nous constatons, que si sa volatilité était extrêmement forte à ses débuts,
 
 ‍
 
-![](/uploads/blog/quest-ce-que-le-bitcoin-7.png)
+![](/uploads/blog/quest-ce-que-le-bitcoin-7.webp)
 
 ‍  
 Cet actif possède donc des caractéristiques forte de spéculation mais pas uniquement, et cela semble évoluer. Ce n’est pas donc suffisant pour la caractériser en tant que produit spéculatif.  
@@ -157,7 +157,7 @@ Cette notion de valeur refuge a été d’autant plus évoqué que le prix du Bi
 
 ‍
 
-![](/uploads/blog/quest-ce-que-le-bitcoin-8.png)
+![](/uploads/blog/quest-ce-que-le-bitcoin-8.webp)
 
   
 
@@ -165,7 +165,7 @@ Un des premières analyse consiste à regarder la corrélation de l’évolution
 
 ‍
 
-![](/uploads/blog/quest-ce-que-le-bitcoin-9.png)
+![](/uploads/blog/quest-ce-que-le-bitcoin-9.webp)
 
 Si c’était une valeur refuge, on aurait dû avoir un comportement proche de l’or et notamment sur des moments critiques sur les marchés boursiers. L’or étant connu pour réagir à l’opposée des marchés lorsque la situation se tend.
 
@@ -175,7 +175,7 @@ Dans cette optique, nous pouvons regarder le début de crise financière chinois
 
 Ce mini krach boursier s’est répercuté sur quelques semaines sur les marchés Européens et Américains.  L’idée était donc de regarder dans un premier temps et sur cet exemple précis, si sur les plateformes occidentales et chinoise, nous constations un comportement refuge immédiat comme l’or.
 
-![](/uploads/blog/quest-ce-que-le-bitcoin-10.png)
+![](/uploads/blog/quest-ce-que-le-bitcoin-10.webp)
 
   
 
@@ -184,7 +184,7 @@ Nous constatons qu’il n’y a pas eus d’envolée particulières du Bitcoin p
   
 L’étude “**_Bitcoin : Currency or asset ?_**” a réalisé ce type d’exercice, de manière plus approfondie, sur une période plus longue en comparant le comportement du Bitcoin avec celui du S&P 500 pour voir si on constate un comportement “refuge” en réaction à une évolution négative des actions cotées américaines, à savoir le S&P 500.
 
-![](/uploads/blog/quest-ce-que-le-bitcoin-11.png)
+![](/uploads/blog/quest-ce-que-le-bitcoin-11.webp)
 
 ‍
 
@@ -205,7 +205,7 @@ Si le Bitcoin, à date, semble plus se rapprocher plus d’un actif financier qu
 
 Certaines caractéristiques (cours légal, moyen de paiement par exemple) ne sont pas figées et pourrait le caractériser à l’avenir selon la position qu’auront à l’avenir les états ou les institutions financières sur ce nouvel actif et le rapprocher d’autres bien identifiés.
 
-![](/uploads/blog/quest-ce-que-le-bitcoin-12.png)
+![](/uploads/blog/quest-ce-que-le-bitcoin-12.webp)
 
   
 

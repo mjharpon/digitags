@@ -3,7 +3,7 @@ title: "Freelance Designer: Trouvez le bon professionnel pour votre projet"
 description: "Vous cherchez un freelance designer? Découvrez les services que nous offrons pour répondre à vos besoins de création et de design."
 date: 2023-03-01
 tags: [design, freelancer]
-image: "/uploads/blog/freelance-designer-trouvez-le-bon-professionnel-pour-votre-projet-cover.png"
+image: "/uploads/blog/freelance-designer-trouvez-le-bon-professionnel-pour-votre-projet-cover.webp"
 ---
 
 Vous cherchez un freelance designer? Découvrez les services que nous offrons pour répondre à vos besoins de création et de design.

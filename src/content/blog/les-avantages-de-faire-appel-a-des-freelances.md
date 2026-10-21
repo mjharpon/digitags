@@ -3,7 +3,7 @@ title: "Les avantages de faire appel à des freelances"
 description: "Découvrez les nombreux avantages d'intégrer des freelances pour des missions temporaires ou long terme. Apprenez à définir les besoins de votre équipe, à trouver les meilleurs talents, et à intégrer efficacement des freelances dans votre équipe exist"
 date: 2023-05-03
 tags: [recrutement, freelancer]
-image: "/uploads/blog/les-avantages-de-faire-appel-a-des-freelances-cover.png"
+image: "/uploads/blog/les-avantages-de-faire-appel-a-des-freelances-cover.webp"
 ---
 
 Les entreprises ont depuis longtemps fait appel à des salariés pour répondre à leurs besoins. Mais aujourd’hui, la tendance est clairement au recours aux freelances. Un mouvement qui offre de nombreux avantages et possibilités aux entreprises cherchant à se développer et propulser leur activité vers de nouveaux sommets. Peu importe votre besoin, il existe un freelance qui a les compétences pour vous aider. Dans cet article, je vous partage les avantages de faire appel à des freelances, pour des missions temporaires ou long terme !

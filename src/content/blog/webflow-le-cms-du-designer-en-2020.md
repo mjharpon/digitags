@@ -39,11 +39,11 @@ Webflow, le petit nouveau qui change tout !
 
 ‍
 
-![](/uploads/blog/webflow-le-cms-du-designer-en-2020-1.png)
+![](/uploads/blog/webflow-le-cms-du-designer-en-2020-1.webp)
 
 ‍
 
-![](/uploads/blog/webflow-le-cms-du-designer-en-2020-2.png)
+![](/uploads/blog/webflow-le-cms-du-designer-en-2020-2.webp)
 
 ‍
 
@@ -57,7 +57,7 @@ Webflow, le petit nouveau qui change tout !
 
 ‍
 
-![](/uploads/blog/webflow-le-cms-du-designer-en-2020-3.png)
+![](/uploads/blog/webflow-le-cms-du-designer-en-2020-3.webp)
 
   
 
@@ -74,7 +74,7 @@ C’est donc un réel gain de temps et d’argent, autant pour mes clients que p
 
 ‍
 
-![](/uploads/blog/webflow-le-cms-du-designer-en-2020-4.png)
+![](/uploads/blog/webflow-le-cms-du-designer-en-2020-4.webp)
 
 ‍
 
@@ -88,11 +88,11 @@ C’est donc un réel gain de temps et d’argent, autant pour mes clients que p
 
 #### **Par ailleurs, comme vous pouvez le voir ci-dessous, Webflow permet également de créer des blogs et des sites e-commerce, et offre donc les mêmes fonctionnalités que Shopify, par exemple.** 
 
-![](/uploads/blog/webflow-le-cms-du-designer-en-2020-5.png)
+![](/uploads/blog/webflow-le-cms-du-designer-en-2020-5.webp)
 
 #### **Pour aller plus loin sur la partie e-commerce, je vous laisse le lien de la page** [**Webflow.**](https://webflow.com/ecommerce) 
 
-![](/uploads/blog/webflow-le-cms-du-designer-en-2020-6.png)
+![](/uploads/blog/webflow-le-cms-du-designer-en-2020-6.webp)
 
 ### **Le Responsive et l’ajout de contenu ultra simplifié** 
 
@@ -100,7 +100,7 @@ C’est donc un réel gain de temps et d’argent, autant pour mes clients que p
 
 ‍
 
-![](/uploads/blog/webflow-le-cms-du-designer-en-2020-7.png)
+![](/uploads/blog/webflow-le-cms-du-designer-en-2020-7.webp)
 
 ‍
 
@@ -108,7 +108,7 @@ C’est donc un réel gain de temps et d’argent, autant pour mes clients que p
 
 #### **Webflow affirme que l'ajout de contenu est aussi simple que de remplir un formulaire, et chaque fois que vous êtes prêt à publier vos modifications, vous pouvez le faire en un seul clic. Grâce à l’aperçu en direct, sur un environnement de pré prod inclu sur la plateforme, vous ne verrez aucune surprise une fois votre contenu publié.**
 
-![](/uploads/blog/webflow-le-cms-du-designer-en-2020-8.png)
+![](/uploads/blog/webflow-le-cms-du-designer-en-2020-8.webp)
 
 #### **Vous pouvez également collaborer avec vos collègues sur tout ce que vous créez, et l'historique détaillé des versions permet de voir et suivre toutes vos modifications.** 
 
@@ -122,7 +122,7 @@ C’est donc un réel gain de temps et d’argent, autant pour mes clients que p
 
 ‍
 
-![](/uploads/blog/webflow-le-cms-du-designer-en-2020-9.png)
+![](/uploads/blog/webflow-le-cms-du-designer-en-2020-9.webp)
 
 ‍
 
@@ -136,7 +136,7 @@ C’est donc un réel gain de temps et d’argent, autant pour mes clients que p
 
 ‍
 
-![SEO Title & Meta Description | Webflow University](/uploads/blog/webflow-le-cms-du-designer-en-2020-10.png)
+![SEO Title & Meta Description | Webflow University](/uploads/blog/webflow-le-cms-du-designer-en-2020-10.webp)
 
 ‍
 
@@ -178,7 +178,7 @@ C’est donc un réel gain de temps et d’argent, autant pour mes clients que p
 
 #### **C’est le plus gros problème que je rencontre avec Webflow. Je trouve que la structure de prix prête à confusion, avec différents plans pour les sites et les comptes.**
 
-![](/uploads/blog/webflow-le-cms-du-designer-en-2020-12.png)
+![](/uploads/blog/webflow-le-cms-du-designer-en-2020-12.webp)
 
 #### **Webflow comporte deux niveaux de tarification : les plans de compte et les plans de site.  
   
@@ -193,7 +193,7 @@ Les plans de site : débloquent des capacités de trafic et de commerce électro
 
   
 
-![](/uploads/blog/webflow-le-cms-du-designer-en-2020-13.png)
+![](/uploads/blog/webflow-le-cms-du-designer-en-2020-13.webp)
 
   
 
@@ -255,7 +255,7 @@ Workflow, c’est aussi l’allié de vos équipes marketing, pour produire et t
 
 ‍
 
-![](/uploads/blog/webflow-le-cms-du-designer-en-2020-15.png)
+![](/uploads/blog/webflow-le-cms-du-designer-en-2020-15.webp)
 
 ‍
 

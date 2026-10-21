@@ -2,7 +2,7 @@
 title: "Comment réussir une collaboration long terme avec un freelance ?"
 description: "Découvrez comment réussir une collaboration long terme avec un freelance : recrutement, gestion, contrat et pièges à éviter. Guide pratique pour dirigeants."
 date: 2026-03-23
-image: "/uploads/blog/reussir-collaboration-long-terme-avec-un-freelance-cover.png"
+image: "/uploads/blog/reussir-collaboration-long-terme-avec-un-freelance-cover.webp"
 ---
 
 Vous avez trouvé LE freelance qui coche toutes les cases : compétent, réactif, aligné avec votre vision. Mais transformer un premier projet réussi en collaboration durable, c'est une autre paire de manches. Entre les attentes qui évoluent, les budgets qui fluctuent et la fameuse question de la disponibilité, réussir une collaboration long terme avec un freelance demande plus qu'un simple contrat bien ficelé.

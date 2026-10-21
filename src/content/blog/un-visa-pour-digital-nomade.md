@@ -86,7 +86,7 @@ D’autres pays comme la République Tchèque, pourrons également vous demander
 
 L’obtention des visas est donc très différente selon les pays. Vous devez donc bien vous renseigner au préalable.
 
-![dgitags digital nomad freelance visa statistics ](/uploads/blog/un-visa-pour-digital-nomade-2.png)
+![dgitags digital nomad freelance visa statistics ](/uploads/blog/un-visa-pour-digital-nomade-2.webp)
 
 Pays accordant des visas aux nomades numériques dans le monde en 2022, par période de validité du visa (en mois).
 
