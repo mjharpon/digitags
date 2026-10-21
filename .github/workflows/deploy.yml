@@ -29,9 +29,20 @@ jobs:
           PUBLIC_SUPABASE_URL: ${{ secrets.PUBLIC_SUPABASE_URL }}
           PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.PUBLIC_SUPABASE_ANON_KEY }}
 
+      # Sitemap actuellement en ligne, pour repérer les nouvelles pages après le déploiement.
+      - name: Récupérer le sitemap en ligne
+        run: curl -sf https://digitags.work/sitemap-0.xml -o "$RUNNER_TEMP/sitemap-prev.xml" || true
+
       - name: Déployer sur Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy dist --project-name=digitags --branch=main
+
+      # Les pages nouvelles sont soumises à IndexNow (Bing, Yandex…). Un échec ne bloque pas le déploiement.
+      - name: Soumettre les nouvelles pages à IndexNow
+        continue-on-error: true
+        run: node scripts/indexnow.mjs --new "$RUNNER_TEMP/sitemap-prev.xml"
+        env:
+          INDEXNOW_KEY: 777e50cefdca4b40826c36da964f9dff
