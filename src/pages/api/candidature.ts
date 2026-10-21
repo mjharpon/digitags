@@ -5,6 +5,7 @@
 export const prerender = false;
 
 import type { APIRoute } from 'astro';
+import { emailBienvenue } from '../../lib/email-bienvenue';
 
 const MAX_SIZE = 10 * 1024 * 1024; // 10 Mo
 const NOTIFY_URL = 'https://digitags-notify.mjharpon-pro.workers.dev';
@@ -19,6 +20,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
   const url = env.SUPABASE_URL ?? import.meta.env.SUPABASE_URL;
   const key = env.SUPABASE_SERVICE_KEY ?? import.meta.env.SUPABASE_SERVICE_KEY;
   const notifySecret = env.NOTIFY_SECRET ?? import.meta.env.NOTIFY_SECRET;
+  const resendKey = env.RESEND_API_KEY ?? import.meta.env.RESEND_API_KEY;
   const H = { apikey: key, Authorization: `Bearer ${key}` };
   const json = (status: number, body: object) =>
     new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json' } });
@@ -178,6 +180,23 @@ export const POST: APIRoute = async ({ request, locals }) => {
         }),
       });
     } catch { /* la notification ne doit jamais faire échouer l'inscription */ }
+  }
+
+  // Email de bienvenue au freelance (best effort, via Resend).
+  if (resendKey) {
+    try {
+      await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${resendKey}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          from: 'digitags.work <talents@digitags.work>',
+          to: [email],
+          reply_to: 'hello@digitags.work',
+          subject: `Bienvenue dans le Hub, ${prenom} 👋`,
+          html: emailBienvenue(prenom, job),
+        }),
+      });
+    } catch { /* l'inscription n'échoue jamais à cause de l'email de bienvenue */ }
   }
 
   return json(200, { ok: true });
