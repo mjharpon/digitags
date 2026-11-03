@@ -31,7 +31,7 @@ jobs:
 
       # Sitemap actuellement en ligne, pour repérer les nouvelles pages après le déploiement.
       - name: Récupérer le sitemap en ligne
-        run: curl -sf https://digitags.work/sitemap-0.xml -o "$RUNNER_TEMP/sitemap-prev.xml" || true
+        run: curl -sf https://www.digitags.work/sitemap-0.xml -o "$RUNNER_TEMP/sitemap-prev.xml" || true
 
       - name: Déployer sur Cloudflare Pages
         uses: cloudflare/wrangler-action@v3

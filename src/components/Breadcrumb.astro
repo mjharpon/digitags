@@ -9,12 +9,12 @@ const jsonLd = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Accueil", item: "https://digitags.work/" },
+    { "@type": "ListItem", position: 1, name: "Accueil", item: "https://www.digitags.work/" },
     ...items.map((c, i) => ({
       "@type": "ListItem",
       position: i + 2,
       name: c.label,
-      ...(c.href ? { item: `https://digitags.work${c.href}` } : {}),
+      ...(c.href ? { item: `https://www.digitags.work${c.href}` } : {}),
     })),
   ],
 });
