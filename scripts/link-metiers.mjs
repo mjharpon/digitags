@@ -50,7 +50,7 @@ for (const { dir, file } of DIRS.flatMap((dir) => readdirSync(dir).filter((f) =>
   for (const [href, patterns] of TARGETS) {
     if (added >= 3) break;
     if (href.endsWith(`/${selfSlug}`)) continue; // jamais d'auto-lien
-    if (body.includes(`](${href})`) || body.includes(`](https://digitags.work${href})`)) continue;
+    if (body.includes(`](${href})`) || body.includes(`](https://www.digitags.work${href})`)) continue;
 
     for (const pattern of patterns) {
       if (added >= 3) break;

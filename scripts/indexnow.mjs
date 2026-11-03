@@ -7,7 +7,7 @@
 // Clé : INDEXNOW_KEY dans .env ; le fichier public/<clé>.txt doit être en ligne.
 import { existsSync, readFileSync } from 'node:fs';
 
-const HOST = 'digitags.work';
+const HOST = 'www.digitags.work';
 const KEY = process.env.INDEXNOW_KEY;
 const ENDPOINT = 'https://api.indexnow.org/indexnow';
 const BATCH = 10000;

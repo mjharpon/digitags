@@ -3,7 +3,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 
-const SITE = 'https://digitags.work';
+const SITE = 'https://www.digitags.work';
 
 const clean = (s?: string) => (s ?? '').replace(/\s+/g, ' ').trim();
 const line = (title: string, url: string, desc?: string) =>

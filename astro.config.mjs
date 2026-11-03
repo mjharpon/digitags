@@ -15,7 +15,8 @@ const PRIORITY_RULES = [
 ];
 
 export default defineConfig({
-  site: 'https://digitags.work',
+  // Hôte canonique : www (celui indexé par Google) ; l'apex est redirigé en 301 vers www.
+  site: 'https://www.digitags.work',
   trailingSlash: 'never',
   // Site statique par défaut ; les pages marquées `prerender = false`
   // (propales /p/<token>) sont rendues à la demande par un Pages Function
