@@ -50,12 +50,15 @@ async function one(r) {
   let clean = '';
   try {
     const { text } = await pdf(buf);
-    clean = text.replace(/\s+/g, ' ').trim().slice(0, 50000);
+    clean = text.replace(/\u0000/g, '').replace(/\s+/g, ' ').trim().slice(0, 50000);
   } catch (e) {
     console.warn(`  ! ${r.id}: PDF illisible (${e.message.slice(0, 40)})`);
   }
   // Texte vide (scan, image) ou PDF illisible → '' pour ne plus jamais retélécharger ce fichier.
-  if (await save(r, clean) && clean) ok++;
+  if (await save(r, clean)) { if (clean) ok++; return; }
+  // Écriture refusée (texte que Postgres n'accepte pas) : on marque quand même le profil traité.
+  console.warn(`  ! ${r.id}: texte refusé par la base, marqué sans texte`);
+  await save(r, '');
 }
 for (let i = 0; i < todo.length; i += CONC) {
   await Promise.all(todo.slice(i, i + CONC).map(one));
