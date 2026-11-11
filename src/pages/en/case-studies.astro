@@ -1,0 +1,42 @@
+---
+// Version anglaise de src/pages/cas-clients.astro. Les cas clients EN vivent
+// dans la collection cas-clients-en (/en/case-studies/<slug>).
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+const cas = (await getCollection('cas-clients-en', ({ data }) => !data.draft))
+  .sort((a, b) => (a.data.order ?? 999) - (b.data.order ?? 999));
+---
+<Base
+  title="Case studies | digitags.work"
+  description="SEO, product, design, tech: see how the freelancers and teams of the digitags.work network support their clients in the field."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Case studies</p>
+      <h1>What the Hub delivers in the field.</h1>
+      <p class="lead">Real missions, led by the freelancers and teams of the network. A few detailed examples.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 30px;">
+    <div class="container">
+      <div class="blog-grid">
+        {cas.map((c) => (
+          <a class="blog-card" href={`/en/case-studies/${c.id}`}>
+            {c.data.image && <img src={c.data.image} alt="" loading="lazy" />}
+            <div class="blog-card-body">
+              <p class="case-label label-blue">Case study</p>
+              <h2>{c.data.title}</h2>
+              {c.data.description && <p class="blog-desc">{c.data.description}</p>}
+              <span class="arrow-link">Read the case study <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner lang="en" title="A similar project?" text="Tell us what you need —<br />we'll put together the right team." />
+</Base>

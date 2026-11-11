@@ -1,0 +1,32 @@
+---
+// Version anglaise de src/pages/cas-client/[slug].astro (/en/case-studies/<slug>).
+import { getCollection, render } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+
+export async function getStaticPaths() {
+  const fiches = await getCollection('cas-clients-en', ({ data }) => !data.draft);
+  return fiches.map((fiche) => ({ params: { slug: fiche.id }, props: { fiche } }));
+}
+
+const { fiche } = Astro.props;
+const { Content } = await render(fiche);
+---
+<Base title={`${fiche.data.metaTitle ?? fiche.data.title} | digitags.work`} description={fiche.data.description}>
+  <article>
+    <section class="page-hero" style="padding-bottom: 36px;">
+      <div class="container">
+        <Breadcrumb lang="en" items={[{ label: 'Case studies', href: '/en/case-studies' }, { label: fiche.data.title }]} />
+        <p class="eyebrow"><a href="/en/case-studies">Case studies</a></p>
+        <h1>{fiche.data.metaTitle ?? fiche.data.title}</h1>
+      </div>
+    </section>
+    <div class="container prose">
+      {fiche.data.image && <img src={fiche.data.image} alt="" loading="eager" />}
+      <Content />
+    </div>
+  </article>
+
+  <CtaBanner lang="en" title="A similar project?" text="Tell us what you need —<br />we'll put together the right team." />
+</Base>

@@ -45,4 +45,10 @@ const casClients = defineCollection({
   schema: ficheSchema,
 });
 
-export const collections = { blog, metiers, 'metiers-en': metiersEn, projets, casClients };
+// Cas clients en anglais (/en/case-studies/<slug>), mapping dans src/lib/i18n.ts.
+const casClientsEn = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/cas-clients-en' }),
+  schema: ficheSchema,
+});
+
+export const collections = { blog, metiers, 'metiers-en': metiersEn, projets, casClients, 'cas-clients-en': casClientsEn };

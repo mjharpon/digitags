@@ -26,6 +26,11 @@ export const METIER_SLUGS: Record<string, string> = {
   'full-stack-developpeur-freelance': 'freelance-full-stack-developer',
 };
 
+/** Cas clients traduits : slug FR (collection casClients) → slug EN (collection cas-clients-en). */
+export const CAS_SLUGS: Record<string, string> = {
+  'mon-compte-formation': 'mon-compte-formation',
+};
+
 /** Pages traduites : chemin FR → chemin EN (sans slash final). */
 export const ROUTES: Record<string, string> = {
   '/': '/en',
@@ -38,6 +43,7 @@ export const ROUTES: Record<string, string> = {
   '/studios-et-collectifs': '/en/studios-and-collectives',
   '/metiers': '/en/roles',
   '/projets': '/en/projects',
+  '/cas-clients': '/en/case-studies',
   '/le-groupe': '/en/the-group',
   '/contact': '/en/contact',
   '/devenir-freelance': '/en/become-a-freelancer',
@@ -48,6 +54,9 @@ export const ROUTES: Record<string, string> = {
 // Les fiches métiers rejoignent le mapping global (hreflang, sitemap, sélecteur).
 for (const [fr, en] of Object.entries(METIER_SLUGS)) {
   ROUTES[`/metiers/${fr}`] = `/en/roles/${en}`;
+}
+for (const [fr, en] of Object.entries(CAS_SLUGS)) {
+  ROUTES[`/cas-client/${fr}`] = `/en/case-studies/${en}`;
 }
 
 /** Chemin EN → chemin FR (mapping inverse). */

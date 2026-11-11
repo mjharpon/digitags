@@ -16,7 +16,8 @@ export const GET: APIRoute = async () => {
     .sort((a, b) => a.data.title.localeCompare(b.data.title, 'en'));
   const projets = (await getCollection('projets', ({ data }) => !data.draft))
     .sort((a, b) => a.data.title.localeCompare(b.data.title, 'fr'));
-  const cas = (await getCollection('cas-clients', ({ data }) => !data.draft));
+  const cas = (await getCollection('casClients', ({ data }) => !data.draft));
+  const casEn = (await getCollection('cas-clients-en', ({ data }) => !data.draft));
   const blog = (await getCollection('blog', ({ data }) => !data.draft))
     .sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0));
 
@@ -54,7 +55,7 @@ ${projets.map((p) => line(p.data.title, `/projets/${p.id}`, p.data.description))
 ${cas.map((c) => line(c.data.title, `/cas-client/${c.id}`, c.data.description)).join('\n')}
 
 ## English pages
-Les pages cœur du site et les fiches métiers existent en anglais sous /en/ (hreflang fr/en, x-default = fr). Le blog et les fiches projets restent en français.
+Les pages cœur du site, les fiches métiers et les cas clients existent en anglais sous /en/ (hreflang fr/en, x-default = fr). Le blog et les fiches projets restent en français.
 ${line('Home — The digital talent hub', '/en', 'English homepage: the network and its expertise.')}
 ${line('Work with a freelancer', '/en/hire-a-freelancer', 'why and how to work with a freelancer: the 6-step method.')}
 ${line('Design & UX', '/en/design', 'freelance UX/UI designers, product designers, art directors.')}
@@ -65,6 +66,7 @@ ${line('AI Team — Operations & Product', '/en/ai-product-team', 'AI automation
 ${line('Studios & Collectives', '/en/studios-and-collectives', 'established teams and independent studios, ready to start.')}
 ${line('Roles', '/en/roles', 'the freelance roles of the network, by expertise.')}
 ${line('Projects', '/en/projects', 'the types of digital missions the network delivers.')}
+${line('Case studies', '/en/case-studies', 'real missions led by the freelancers and teams of the network.')}
 ${line('The Digitags - Donutz group', '/en/the-group', 'the European digital group: hub + pan-European digital marketing agency.')}
 ${line('Become a Hub freelancer', '/en/become-a-freelancer', 'freelancers get listed in 30 seconds to receive missions.')}
 ${line('Contact — Discuss your project', '/en/contact', 'describe a need; quick callback and profile proposals.')}
@@ -72,6 +74,9 @@ ${line('Privacy policy', '/en/privacy-policy')}
 
 ## Role guides (English)
 ${metiersEn.map((m) => line(m.data.title, `/en/roles/${m.id}`, m.data.description)).join('\n')}
+
+## Case studies (English)
+${casEn.map((c) => line(c.data.title, `/en/case-studies/${c.id}`, c.data.description)).join('\n')}
 
 ## Blog (sélection récente)
 ${blog.slice(0, 10).map((b) => line(b.data.title, `/blog/${b.id}`, b.data.description)).join('\n')}
