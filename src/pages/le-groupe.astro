@@ -1,23 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const entites = [
-  {
-    title: "Digitags - Donutz",
-    desc: "La société holding, basée à Paris. Elle réunit le hub de talents et l'agence au sein d'un même groupe digital européen.",
-  },
-  {
-    title: "digitags.work",
-    desc: "Le hub de talents : un réseau fermé de plus de 1 600 freelances en design, marketing, product, tech, data et IA, sélectionnés et recommandés par leurs pairs.",
-  },
-  {
-    title: "Donutz Digital",
-    desc: "L'agence : Google Ads, social ads, programmatique, SEO, création et analytics, pilotés par une équipe senior depuis la France, la Lituanie et l'Irlande.",
-    href: "https://donutzdigital.com/fr/",
-    link: "Découvrir l'agence",
-  },
-];
-
 const etapes = [
   { title: "Le hub compose l'équipe.", desc: "Un expert, une équipe complémentaire ou un studio, selon le projet." },
   { title: "L'agence prend le relais sur l'acquisition.", desc: "Quand un projet a besoin de paid media ou de SEO sur un ou plusieurs marchés européens, Donutz Digital le pilote." },
@@ -39,16 +22,32 @@ const etapes = [
   <section class="section">
     <div class="container">
       <h2 class="section-title">Comment le groupe est organisé.</h2>
-      <div class="benefits-grid">
-        {entites.map((e) => (
-          <article class="benefit-card">
-            <h3>{e.title}</h3>
-            <p>{e.desc}</p>
-            {e.href && (
-              <p style="margin-top: 14px;"><a href={e.href} class="arrow-link stretch-link">{e.link} <span aria-hidden="true">→</span></a></p>
-            )}
-          </article>
-        ))}
+      <div class="org-chart">
+        <article class="org-card org-holding">
+          <span class="hex-icon hex-icon-yellow" aria-hidden="true"></span>
+          <h3>Digitags - Donutz</h3>
+          <p class="org-role">Société holding &middot; Paris</p>
+        </article>
+        <div class="org-stem" aria-hidden="true"></div>
+        <div class="org-row">
+          <div class="org-branch">
+            <article class="org-card">
+              <span class="hex-icon hex-icon-blue" aria-hidden="true"></span>
+              <h3>digitags.work</h3>
+              <p class="org-role">Le hub de 1&nbsp;600+ freelances du digital</p>
+              <p class="org-desc">Un réseau fermé de freelances en design, marketing, product, tech, data et IA, sélectionnés et recommandés par leurs pairs.</p>
+            </article>
+          </div>
+          <div class="org-branch">
+            <article class="org-card">
+              <span class="hex-icon hex-icon-red" aria-hidden="true"></span>
+              <h3>Donutz Digital</h3>
+              <p class="org-role">Agence de marketing digital paneuropéenne</p>
+              <p class="org-desc">Google Ads, social ads, programmatique, SEO, création et analytics, pilotés par une équipe senior depuis la France, la Lituanie et l'Irlande.</p>
+              <p class="org-link"><a href="https://donutzdigital.com/fr/" class="arrow-link">Découvrir l'agence <span aria-hidden="true">→</span></a></p>
+            </article>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -89,3 +88,68 @@ const etapes = [
     </div>
   </section>
 </Base>
+
+<style>
+  /* Organigramme du groupe : connecteurs en CSS, pas de librairie. */
+  .org-chart { max-width: 760px; margin: 0 auto; }
+  .org-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 24px 26px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .org-card .hex-icon { width: 26px; height: 30px; }
+  .org-card h3 { margin: 12px 0 4px; font-size: 18px; }
+  .org-role { color: var(--ink-soft); font-size: 14px; margin: 0; }
+  .org-desc { color: var(--ink-soft); font-size: 14px; line-height: 1.55; margin: 10px 0 0; }
+  .org-link { margin: 12px 0 0; }
+
+  .org-holding {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: var(--white);
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+    height: auto;
+  }
+  .org-holding h3 { color: var(--white); }
+  .org-holding .org-role { color: rgba(255, 255, 255, 0.72); }
+  .org-holding .hex-icon::after { background: var(--navy); }
+
+  /* Connecteurs */
+  .org-stem { width: 2px; height: 28px; margin: 0 auto; background: var(--ink-faint); opacity: 0.5; }
+  .org-row { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding-top: 28px; }
+  .org-row::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    background: var(--ink-faint);
+    opacity: 0.5;
+  }
+  .org-branch { position: relative; }
+  .org-branch::before {
+    content: "";
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    margin-left: -1px;
+    width: 2px;
+    height: 28px;
+    background: var(--ink-faint);
+    opacity: 0.5;
+  }
+
+  /* Mobile : cartes empilées, connecteur vertical entre chaque. */
+  @media (max-width: 720px) {
+    .org-row { grid-template-columns: 1fr; padding-top: 0; }
+    .org-row::before { display: none; }
+    .org-branch { padding-top: 28px; }
+    .org-branch::before { top: 0; }
+  }
+</style>
