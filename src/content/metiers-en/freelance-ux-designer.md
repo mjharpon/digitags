@@ -6,7 +6,7 @@ image: "/uploads/metiers/ux-designer-freelance-cover.webp"
 blogCategory: "design"
 ---
 
-UX design — user experience design — plays an essential role in the creation of digital products and services. The freelance UX designer crafts interfaces that answer users' needs and expectations, while guaranteeing a smooth, enjoyable experience. Planning a [**website redesign**](/projets/refonte-de-site-internet)? It may be the right moment to let us match you with the right freelance UX designer.
+UX design — user experience design — plays an essential role in the creation of digital products and services. The freelance UX designer crafts interfaces that answer users' needs and expectations, while guaranteeing a smooth, enjoyable experience. Planning a [**website redesign**](/en/projects/website-redesign)? It may be the right moment to let us match you with the right freelance UX designer.
 
 ## **Roles and responsibilities of a freelance UX designer**
 
@@ -86,4 +86,4 @@ digitags.work helps you take on these challenges by connecting you with experien
 
 At digitags, we support your UX design needs through our hub of 1,600+ freelance experts. We discuss your project to understand your expectations, then connect you with the UX designer who fits your needs.
 
-We keep an eye on the project throughout its delivery and contract it directly with you, making sure it stays on track and on time. Looking for a freelance UX designer for your [**website build or redesign**](/projets/refonte-de-site-internet)? [**Let's talk**](/en/contact)!
+We keep an eye on the project throughout its delivery and contract it directly with you, making sure it stays on track and on time. Looking for a freelance UX designer for your [**website build or redesign**](/en/projects/website-redesign)? [**Let's talk**](/en/contact)!

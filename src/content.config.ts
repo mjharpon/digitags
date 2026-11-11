@@ -40,6 +40,12 @@ const projets = defineCollection({
   schema: ficheSchema,
 });
 
+// Fiches projets en anglais (/en/projects/<slug>), mapping dans src/lib/i18n.ts.
+const projetsEn = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/projets-en' }),
+  schema: ficheSchema,
+});
+
 const casClients = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/cas-clients' }),
   schema: ficheSchema,
@@ -51,4 +57,4 @@ const casClientsEn = defineCollection({
   schema: ficheSchema,
 });
 
-export const collections = { blog, metiers, 'metiers-en': metiersEn, projets, casClients, 'cas-clients-en': casClientsEn };
+export const collections = { blog, metiers, 'metiers-en': metiersEn, projets, 'projets-en': projetsEn, casClients, 'cas-clients-en': casClientsEn };

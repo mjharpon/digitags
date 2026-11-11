@@ -1,0 +1,15 @@
+---
+// Fiches projets anglaises (/en/projects/<slug>). Le template (parseur de
+// sections, rendu, libellés) est factorisé dans src/components/FicheProjet.astro,
+// partagé avec /projets/ : une fiche FR et sa traduction rendent les mêmes sections.
+import { getCollection } from 'astro:content';
+import FicheProjet from '../../../components/FicheProjet.astro';
+
+export async function getStaticPaths() {
+  const fiches = await getCollection('projets-en', ({ data }) => !data.draft);
+  return fiches.map((fiche) => ({ params: { slug: fiche.id }, props: { fiche } }));
+}
+
+const { fiche } = Astro.props;
+---
+<FicheProjet fiche={fiche} lang="en" />

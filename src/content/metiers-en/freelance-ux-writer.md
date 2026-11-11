@@ -18,7 +18,7 @@ UX writing goes beyond simply drafting text. It's about understanding users' nee
 
 ## **Why UX writing matters in experience design**
 
-UX writing plays an essential role in [**designing a digital product**](/projets/concevoir-un-produit-digital) and a user experience. The words used in a user interface can significantly change how users interact with a digital product or service. Poor writing creates confusion, frustration and a drop in user engagement.
+UX writing plays an essential role in [**designing a digital product**](/en/projects/digital-product-design) and a user experience. The words used in a user interface can significantly change how users interact with a digital product or service. Poor writing creates confusion, frustration and a drop in user engagement.
 
 A good UX writer knows how to convey information clearly, concisely and convincingly. They help users understand features, make decisions and take action, and feel confident while interacting with a product.
 

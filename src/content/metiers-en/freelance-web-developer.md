@@ -20,7 +20,7 @@ At digitags, we've built a hub of 1,600+ freelance digital experts ready to supp
 
 ### **Flexibility and availability of an independent web developer**
 
-One of the key advantages of working with an independent web developer is their flexibility and availability. A freelancer can work closely with you to build or [**redesign a website**](/projets/refonte-de-site-internet) tailored to your specific needs. As independents, they are often more affordable and more flexible on rates and availability — particularly valuable for smaller companies. A freelancer's availability is a major asset too: they can adapt to your schedule and work on urgent projects when needed.
+One of the key advantages of working with an independent web developer is their flexibility and availability. A freelancer can work closely with you to build or [**redesign a website**](/en/projects/website-redesign) tailored to your specific needs. As independents, they are often more affordable and more flexible on rates and availability — particularly valuable for smaller companies. A freelancer's availability is a major asset too: they can adapt to your schedule and work on urgent projects when needed.
 
 With a freelancer, you can easily adjust your project and make changes when necessary, keeping you agile and responsive to change.
 

@@ -1,18 +1,19 @@
 ---
-// Version anglaise de src/pages/projets.astro. Les fiches projets ne sont pas
-// traduites en phase 1 : titres et descriptions EN statiques ci-dessous,
-// liens vers les fiches FR, images reprises de la collection.
+// Version anglaise de src/pages/projets.astro. Les fiches projets EN vivent
+// dans la collection projets-en (/en/projects/<slug>) ; descriptions courtes EN
+// ci-dessous, images reprises de la collection FR (mêmes visuels).
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import CtaBanner from '../../components/CtaBanner.astro';
+import { PROJET_SLUGS } from '../../lib/i18n';
 
 const all = await getCollection('projets', ({ data }) => !data.draft);
 const bySlug = new Map(all.map((p) => [p.id, p]));
 
-// slug FR → libellé et description EN (fiches liées en français), dans l'ordre éditorial.
+// slug FR → libellé et description EN (liens vers les fiches EN via PROJET_SLUGS).
 const PROJETS: { slug: string; title: string; desc: string }[] = [
-  { slug: "concevoir-un-produit-digital", title: "Design a digital product", desc: "From idea to production: scoping, design, build and launch of your product." },
-  { slug: "mener-une-phase-dux-research", title: "Run a UX research phase", desc: "Understand your users before building: interviews, tests, insights." },
+  { slug: "concevoir-un-produit-digital", title: "Digital product design", desc: "From idea to production: scoping, design, build and launch of your product." },
+  { slug: "mener-une-phase-dux-research", title: "UX research", desc: "Understand your users before building: interviews, tests, insights." },
   { slug: "audit-ux", title: "UX audit", desc: "An expert review of your journeys, with prioritised recommendations." },
   { slug: "design-thinking", title: "Design thinking", desc: "Workshops to align your teams and generate solutions worth testing." },
   { slug: "discovery-produit", title: "Product discovery", desc: "Validate the problem and the solution before investing in the build." },
@@ -96,9 +97,9 @@ const faqJsonLd = JSON.stringify({
           <article class="numbered-card">
             <div>
               <span class="num-badge">{String(i + 1).padStart(2, '0')}</span>
-              <h3><a href={`/projets/${p.slug}`} class="stretch-link" hreflang="fr">{p.title}</a></h3>
+              <h3><a href={`/en/projects/${PROJET_SLUGS[p.slug]}`} class="stretch-link">{p.title}</a></h3>
               <p class="num-desc">{p.desc}</p>
-              <span class="arrow-link">Learn more (in French) <span aria-hidden="true">→</span></span>
+              <span class="arrow-link">Learn more <span aria-hidden="true">→</span></span>
             </div>
             {p.image && <img src={p.image} alt="" loading="lazy" />}
           </article>

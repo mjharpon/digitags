@@ -17,6 +17,8 @@ export const GET: APIRoute = async () => {
   const projets = (await getCollection('projets', ({ data }) => !data.draft))
     .sort((a, b) => a.data.title.localeCompare(b.data.title, 'fr'));
   const cas = (await getCollection('casClients', ({ data }) => !data.draft));
+  const projetsEn = (await getCollection('projets-en', ({ data }) => !data.draft))
+    .sort((a, b) => a.data.title.localeCompare(b.data.title, 'en'));
   const casEn = (await getCollection('cas-clients-en', ({ data }) => !data.draft));
   const blog = (await getCollection('blog', ({ data }) => !data.draft))
     .sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0));
@@ -55,7 +57,7 @@ ${projets.map((p) => line(p.data.title, `/projets/${p.id}`, p.data.description))
 ${cas.map((c) => line(c.data.title, `/cas-client/${c.id}`, c.data.description)).join('\n')}
 
 ## English pages
-Les pages cœur du site, les fiches métiers et les cas clients existent en anglais sous /en/ (hreflang fr/en, x-default = fr). Le blog et les fiches projets restent en français.
+Les pages cœur du site, les fiches métiers, les fiches projets et les cas clients existent en anglais sous /en/ (hreflang fr/en, x-default = fr). Le blog reste en français.
 ${line('Home — The digital talent hub', '/en', 'English homepage: the network and its expertise.')}
 ${line('Work with a freelancer', '/en/hire-a-freelancer', 'why and how to work with a freelancer: the 6-step method.')}
 ${line('Design & UX', '/en/design', 'freelance UX/UI designers, product designers, art directors.')}
@@ -74,6 +76,9 @@ ${line('Privacy policy', '/en/privacy-policy')}
 
 ## Role guides (English)
 ${metiersEn.map((m) => line(m.data.title, `/en/roles/${m.id}`, m.data.description)).join('\n')}
+
+## Mission types (English)
+${projetsEn.map((m) => line(m.data.title, `/en/projects/${m.id}`, m.data.description)).join('\n')}
 
 ## Case studies (English)
 ${casEn.map((c) => line(c.data.title, `/en/case-studies/${c.id}`, c.data.description)).join('\n')}

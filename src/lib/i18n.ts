@@ -26,6 +26,18 @@ export const METIER_SLUGS: Record<string, string> = {
   'full-stack-developpeur-freelance': 'freelance-full-stack-developer',
 };
 
+/** Fiches projets traduites : slug FR (collection projets) → slug EN (collection projets-en). */
+export const PROJET_SLUGS: Record<string, string> = {
+  'audit-ux': 'ux-audit',
+  'concevoir-un-produit-digital': 'digital-product-design',
+  'design-thinking': 'design-thinking',
+  'discovery-produit': 'product-discovery',
+  'identite-visuelle-creation-ou-refonte': 'visual-identity',
+  'mener-une-phase-dux-research': 'ux-research',
+  'refonte-de-site-internet': 'website-redesign',
+  'strategie-produit': 'product-strategy',
+};
+
 /** Cas clients traduits : slug FR (collection casClients) → slug EN (collection cas-clients-en). */
 export const CAS_SLUGS: Record<string, string> = {
   'mon-compte-formation': 'mon-compte-formation',
@@ -54,6 +66,9 @@ export const ROUTES: Record<string, string> = {
 // Les fiches métiers rejoignent le mapping global (hreflang, sitemap, sélecteur).
 for (const [fr, en] of Object.entries(METIER_SLUGS)) {
   ROUTES[`/metiers/${fr}`] = `/en/roles/${en}`;
+}
+for (const [fr, en] of Object.entries(PROJET_SLUGS)) {
+  ROUTES[`/projets/${fr}`] = `/en/projects/${en}`;
 }
 for (const [fr, en] of Object.entries(CAS_SLUGS)) {
   ROUTES[`/cas-client/${fr}`] = `/en/case-studies/${en}`;

@@ -14,7 +14,7 @@ A freelance SEO (Search Engine Optimization) consultant is an independent expert
 
 Their services typically include:
 
--   **SEO audit**: they analyse your website to identify what to improve — structure, content, backlinks, loading speed. Bringing in a freelance SEO consultant when building or [**redesigning your website**](/projets/refonte-de-site-internet) is a smart move.
+-   **SEO audit**: they analyse your website to identify what to improve — structure, content, backlinks, loading speed. Bringing in a freelance SEO consultant when building or [**redesigning your website**](/en/projects/website-redesign) is a smart move.
 -   **Keyword research**: they identify the keywords that matter for your industry, to attract the right audience.
 -   **On-page optimisation**: they improve the internal elements of the site (titles, meta tags, content structure, keywords, internal linking) to better meet search engines' criteria.
 -   **Off-page optimisation**: they build backlink and link-building strategies to strengthen your site's authority in the eyes of search engines.
