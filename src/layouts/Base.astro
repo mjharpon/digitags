@@ -14,6 +14,58 @@ const {
 // URL canonique : hôte www, sans slash final (sauf l'accueil), sans ".html" (build.format 'file'), sans paramètres.
 const path = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '');
 const canonical = new URL(path || '/', Astro.site).href;
+
+// JSON-LD Organization : les @id correspondent à ceux publiés sur donutzdigital.com,
+// ce qui permet aux moteurs de relier les deux sites au même groupe Digitags - Donutz.
+const orgJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.digitags.work/#organization",
+  name: "digitags.work",
+  legalName: "DIGITAGS",
+  url: "https://www.digitags.work/",
+  logo: "https://www.digitags.work/assets/logo-mark.svg",
+  description:
+    "digitags.work est un hub de plus de 1 600 freelances du digital sélectionnés (design, marketing, product, tech & data, IA). Membre du groupe digital européen Digitags - Donutz, aux côtés de l'agence de marketing digital paneuropéenne Donutz Digital.",
+  areaServed: "Europe",
+  identifier: { "@type": "PropertyValue", propertyID: "SIREN", value: "820329134" },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "101 rue de Clignancourt",
+    postalCode: "75018",
+    addressLocality: "Paris",
+    addressCountry: "FR",
+  },
+  sameAs: ["https://www.linkedin.com/company/18871359"],
+  parentOrganization: {
+    "@type": "Organization",
+    "@id": "https://donutzdigital.com/#group",
+    name: "Digitags - Donutz",
+    legalName: "DIGITAGS - DONUTZ",
+    description:
+      "Groupe digital européen réunissant Donutz Digital, agence de marketing digital paneuropéenne, et digitags.work, hub de plus de 1 600 freelances du digital.",
+    identifier: { "@type": "PropertyValue", propertyID: "SIREN", value: "921451944" },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "101 rue de Clignancourt",
+      postalCode: "75018",
+      addressLocality: "Paris",
+      addressCountry: "FR",
+    },
+    subOrganization: [
+      { "@id": "https://www.digitags.work/#organization" },
+      {
+        "@type": "Organization",
+        "@id": "https://donutzdigital.com/#organization",
+        name: "Donutz Digital",
+        url: "https://donutzdigital.com/",
+        description:
+          "Agence de marketing digital paneuropéenne : paid media, SEO, création et analytics.",
+        sameAs: ["https://www.linkedin.com/company/donutz-digital/"],
+      },
+    ],
+  },
+});
 ---
 <!DOCTYPE html>
 <html lang="fr">
@@ -30,6 +82,7 @@ const canonical = new URL(path || '/', Astro.site).href;
   <script is:inline>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
   <link rel="preload" href="/assets/fonts/pjs-400.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/assets/fonts/pjs-800.woff2" as="font" type="font/woff2" crossorigin />
+  <script type="application/ld+json" set:html={orgJsonLd} />
 </head>
 <body>
 
@@ -89,7 +142,8 @@ const canonical = new URL(path || '/', Astro.site).href;
           <a href="/projets">Projets</a>
           <a href="/studios-et-collectifs">Studios &amp; Collectifs</a>
           <a href="/cas-clients">Cas clients</a>
-          <a href="https://donutzdigital.com/fr/">Donutz Digital</a>
+          <a href="/le-groupe">Le groupe Digitags - Donutz</a>
+          <a href="https://donutzdigital.com/fr/">Donutz Digital, agence de marketing digital paneuropéenne</a>
         </nav>
         <nav class="footer-col" aria-label="Ressources">
           <h4>Ressources</h4>

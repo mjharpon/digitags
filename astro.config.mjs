@@ -10,6 +10,7 @@ const PRIORITY_RULES = [
   { re: /^\/(metiers|projets|cas-client)\//, priority: 0.7, changefreq: 'monthly' },
   { re: /^\/blog\//, priority: 0.6, changefreq: 'monthly' },
   { re: /^\/contact$/, priority: 0.5, changefreq: 'yearly' },
+  { re: /^\/le-groupe$/, priority: 0.5, changefreq: 'yearly' },
   { re: /^\/tag\//, priority: 0.3, changefreq: 'monthly' },
   { re: /^\/politique-de-protection-des-donnees$/, priority: 0.2, changefreq: 'yearly' },
 ];

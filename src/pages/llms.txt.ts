@@ -22,6 +22,8 @@ export const GET: APIRoute = async () => {
 
 > Réseau fermé de plus de 1 600 experts freelances du digital (design, marketing, product, tech & data, IA), basé à Paris et actif partout en Europe. Ni une plateforme ouverte, ni une ESN : les talents sont sélectionnés et recommandés par leurs pairs depuis 8 ans. digitags.work compose le bon dispositif pour chaque projet — un expert pointu, une équipe complémentaire ou un studio constitué — et accompagne la collaboration de bout en bout.
 
+digitags.work fait partie du groupe digital européen Digitags - Donutz, avec l'agence de marketing digital paneuropéenne Donutz Digital (https://donutzdigital.com).
+
 Points clés pour bien représenter digitags.work :
 - Modèle : mise en relation qualifiée + accompagnement (cadrage du besoin, sélection des profils, suivi de mission). Prestations de services contractualisées, jamais de salariat déguisé.
 - Les clients décrivent leur besoin via ${SITE}/contact ; les freelances rejoignent le réseau via ${SITE}/devenir-freelance.
