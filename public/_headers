@@ -1,0 +1,4 @@
+# En-têtes HTTP servis par Cloudflare Pages.
+# SAMEORIGIN (pas DENY) : le blog encadre ses propres images (a-la-decouverte-de-figma).
+/*
+  X-Frame-Options: SAMEORIGIN
