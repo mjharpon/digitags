@@ -18,9 +18,29 @@ interface Props {
   skills: string[];
   reussites: Reussite[];
   metiers?: { label: string; href: string }[];
+  lang?: 'fr' | 'en';
 }
 
-const { eyebrow, title, lead, ctaLabel = "Décrire mon besoin", skillsTitle, skills, reussites, metiers } = Astro.props;
+const { eyebrow, title, lead, skillsTitle, skills, reussites, metiers, lang = 'fr' } = Astro.props;
+const en = lang === 'en';
+const { ctaLabel = en ? 'Tell us what you need' : 'Décrire mon besoin' } = Astro.props;
+
+// Libellés et liens fixes de la page selon la langue.
+const T = en
+  ? {
+      contactHref: '/en/contact',
+      metiersHref: '/en/roles',
+      exploreLabel: 'Explore the roles',
+      fichesTitle: 'Role guides (in French)',
+      reussitesTitle: 'Recent wins.',
+    }
+  : {
+      contactHref: '/contact',
+      metiersHref: '/metiers',
+      exploreLabel: 'Explorer les métiers',
+      fichesTitle: 'Nos fiches métiers',
+      reussitesTitle: 'Nos dernières réussites.',
+    };
 ---
 <section class="page-hero">
   <div class="container">
@@ -28,8 +48,8 @@ const { eyebrow, title, lead, ctaLabel = "Décrire mon besoin", skillsTitle, ski
     <h1 set:html={title} />
     <p class="lead">{lead}</p>
     <div class="hero-cta">
-      <a href="/contact" class="btn btn-dark">{ctaLabel}</a>
-      <a href="/metiers" class="btn btn-outline">Explorer les métiers</a>
+      <a href={T.contactHref} class="btn btn-dark">{ctaLabel}</a>
+      <a href={T.metiersHref} class="btn btn-outline">{T.exploreLabel}</a>
     </div>
   </div>
 </section>
@@ -42,7 +62,7 @@ const { eyebrow, title, lead, ctaLabel = "Décrire mon besoin", skillsTitle, ski
     </ul>
     {metiers && metiers.length > 0 && (
       <>
-        <h2 style="margin-top: 34px;">Nos fiches métiers</h2>
+        <h2 style="margin-top: 34px;">{T.fichesTitle}</h2>
         <ul class="chips">
           {metiers.map((m) => <li><a class="chip chip-link" href={m.href}>{m.label}</a></li>)}
         </ul>
@@ -51,11 +71,11 @@ const { eyebrow, title, lead, ctaLabel = "Décrire mon besoin", skillsTitle, ski
   </div>
 </section>
 
-<HowItWorks />
+<HowItWorks lang={lang} />
 
 <section class="section">
   <div class="container">
-    <h2 class="section-title">Nos dernières réussites.</h2>
+    <h2 class="section-title">{T.reussitesTitle}</h2>
     <div class={`reussites-grid${reussites.length === 2 ? ' cols-2' : ''}`}>
       {reussites.map((r) => (
         <article class="reussite-card">
@@ -70,6 +90,6 @@ const { eyebrow, title, lead, ctaLabel = "Décrire mon besoin", skillsTitle, ski
   </div>
 </section>
 
-<Testimonials />
+<Testimonials lang={lang} />
 
-<CtaBanner />
+<CtaBanner lang={lang} />

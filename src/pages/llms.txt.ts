@@ -51,6 +51,23 @@ ${projets.map((p) => line(p.data.title, `/projets/${p.id}`, p.data.description))
 ## Cas clients
 ${cas.map((c) => line(c.data.title, `/cas-client/${c.id}`, c.data.description)).join('\n')}
 
+## English pages
+Les pages cœur du site existent en anglais sous /en/ (hreflang fr/en, x-default = fr). Le blog et les fiches métiers/projets restent en français.
+${line('Home — The digital talent hub', '/en', 'English homepage: the network and its expertise.')}
+${line('Work with a freelancer', '/en/hire-a-freelancer', 'why and how to work with a freelancer: the 6-step method.')}
+${line('Design & UX', '/en/design', 'freelance UX/UI designers, product designers, art directors.')}
+${line('Marketing & Acquisition', '/en/digital-marketing', 'SEO, paid search, social ads, analytics — ROI-driven acquisition.')}
+${line('Product & Project', '/en/product-and-project', 'freelance product owners, product managers, project managers.')}
+${line('Tech & Data', '/en/tech-and-data', 'freelance developers, data engineers, data scientists.')}
+${line('AI Team — Operations & Product', '/en/ai-product-team', 'AI automation of business processes by supervised AI agents, and senior AI product teams.')}
+${line('Studios & Collectives', '/en/studios-and-collectives', 'established teams and independent studios, ready to start.')}
+${line('Roles', '/en/roles', 'the freelance roles of the network, by expertise.')}
+${line('Projects', '/en/projects', 'the types of digital missions the network delivers.')}
+${line('The Digitags - Donutz group', '/en/the-group', 'the European digital group: hub + pan-European digital marketing agency.')}
+${line('Become a Hub freelancer', '/en/become-a-freelancer', 'freelancers get listed in 30 seconds to receive missions.')}
+${line('Contact — Discuss your project', '/en/contact', 'describe a need; quick callback and profile proposals.')}
+${line('Privacy policy', '/en/privacy-policy')}
+
 ## Blog (sélection récente)
 ${blog.slice(0, 10).map((b) => line(b.data.title, `/blog/${b.id}`, b.data.description)).join('\n')}
 

@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
 import sitemap from '@astrojs/sitemap';
+import { ROUTES, ROUTES_EN_FR } from './src/lib/i18n.ts';
 
 // Priorité SEO par type de page (sitemap).
 const PRIORITY_RULES = [
@@ -13,6 +14,11 @@ const PRIORITY_RULES = [
   { re: /^\/le-groupe$/, priority: 0.5, changefreq: 'yearly' },
   { re: /^\/tag\//, priority: 0.3, changefreq: 'monthly' },
   { re: /^\/politique-de-protection-des-donnees$/, priority: 0.2, changefreq: 'yearly' },
+  // Pages anglaises (/en/) : miroir des priorités FR, un cran en dessous.
+  { re: /^\/en$/, priority: 0.9, changefreq: 'weekly' },
+  { re: /^\/en\/(contact|the-group)$/, priority: 0.5, changefreq: 'yearly' },
+  { re: /^\/en\/privacy-policy$/, priority: 0.2, changefreq: 'yearly' },
+  { re: /^\/en\//, priority: 0.6, changefreq: 'monthly' },
 ];
 
 export default defineConfig({
@@ -26,10 +32,16 @@ export default defineConfig({
   build: {
     format: 'file'
   },
+  // Version anglaise sous /en/ ; le français reste à la racine, URLs inchangées.
+  i18n: {
+    defaultLocale: 'fr',
+    locales: ['fr', 'en'],
+    routing: { prefixDefaultLocale: false },
+  },
   integrations: [
     sitemap({
-      // Pages hors SEO : outil interne, confirmation, propales privées.
-      filter: (page) => !/\/(talents|merci)$/.test(page) && !page.includes('/p/'),
+      // Pages hors SEO : outil interne, confirmations, propales privées.
+      filter: (page) => !/\/(talents|merci|en\/thank-you)$/.test(page) && !page.includes('/p/'),
       serialize(item) {
         const path = new URL(item.url).pathname.replace(/\/$/, '') || '/';
         const rule = PRIORITY_RULES.find((r) => r.re.test(path));
@@ -39,6 +51,18 @@ export default defineConfig({
         } else {
           item.priority = 0.5;
           item.changefreq = 'monthly';
+        }
+        // hreflang : alternates fr/en (x-default = fr) pour les pages traduites,
+        // depuis le même mapping que les <link rel="alternate"> du head.
+        const en = ROUTES[path];
+        const fr = en ? path : ROUTES_EN_FR[path];
+        if (fr && (en || ROUTES[fr])) {
+          const abs = (p) => new URL(p === '/' ? '/' : p, 'https://www.digitags.work').href;
+          item.links = [
+            { lang: 'fr', url: abs(fr) },
+            { lang: 'en', url: abs(en ?? ROUTES[fr]) },
+            { lang: 'x-default', url: abs(fr) },
+          ];
         }
         return item;
       },

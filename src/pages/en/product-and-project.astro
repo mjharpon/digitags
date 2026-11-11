@@ -1,0 +1,30 @@
+---
+// Version anglaise de src/pages/product-et-project.astro (fiches métiers liées en FR, phase 1).
+import Base from '../../layouts/Base.astro';
+import ExpertisePage from '../../components/ExpertisePage.astro';
+---
+<Base
+  title="Freelance Product Managers & project leads | digitags.work"
+  description="Freelance Product Managers, Product Owners, Scrum Masters and agile coaches recommended by their peers, to carry your digital projects through."
+>
+  <ExpertisePage
+    lang="en"
+    eyebrow="Your product & project hub"
+    title="Products on track, projects delivered."
+    lead="Product Manager, Product Owner, Scrum Master or Agile Coach: the Hub helps you find the senior profile who will structure your delivery and make your project succeed."
+    ctaLabel="Find an expert"
+    skillsTitle="Product & project skills in the network"
+    skills={["Product Manager", "Product Owner", "Product Designer", "Agile / Scrum Coach", "Digital Project Manager", "IT Project Manager", "Business Analysis Lead", "Interim Manager", "CRM Manager"]}
+    metiers={[
+      { label: "Freelance Product Owner", href: "/metiers/product-owner-freelance" },
+      { label: "Freelance Product Manager", href: "/metiers/product-manager-freelance" },
+      { label: "Freelance Project Manager", href: "/metiers/chef-de-projet-freelance" },
+      { label: "Freelance Agile Coach", href: "/metiers/coach-agile" },
+      { label: "Freelance Account Manager", href: "/metiers/account-manager-freelance" },
+    ]}
+    reussites={[
+      { tag: "Project management", title: "TOD'S e-commerce launch", points: ["Coordination across the digital teams", "Launch of the new e-commerce site", "Interface between business, design and tech"] },
+      { tag: "Product Owner", title: "Insurance quote simulator", points: ["Eight-month mission within the team", "Scoping and backlog prioritisation", "Efficient delivery of the simulator"] },
+    ]}
+  />
+</Base>

@@ -1,0 +1,29 @@
+---
+// Version anglaise de src/pages/design.astro (fiches métiers liées en FR, phase 1).
+import Base from '../../layouts/Base.astro';
+import ExpertisePage from '../../components/ExpertisePage.astro';
+---
+<Base
+  title="Senior freelance designers — UX, UI, Product | digitags.work"
+  description="Senior freelance designers (UX, UI, Product, Art Direction) recommended by their peers. Solo or as a studio, find the right profile for your project."
+>
+  <ExpertisePage
+    lang="en"
+    eyebrow="Your design hub"
+    title="Senior designers for products that convert."
+    lead="Product Designer, UX Designer, UI Designer or Art Director: the Hub connects you with the freelance designer who fits your project exactly — selected for their skills and recommended by their peers."
+    ctaLabel="Find a designer"
+    skillsTitle="Design skills in the network"
+    skills={["UX Designer", "UI Designer", "Product Designer", "Web Designer", "Art Director", "Illustrator", "Motion Designer", "3D Artist", "Creative Lead"]}
+    metiers={[
+      { label: "Freelance UX Designer", href: "/metiers/ux-designer-freelance" },
+      { label: "Freelance UI Designer", href: "/metiers/ui-designer-freelance" },
+      { label: "Freelance UX Writer", href: "/metiers/ux-writer-freelance" },
+    ]}
+    reussites={[
+      { tag: "UX / UI", title: "UX redesign of a customer portal", points: ["Full audit of the existing journey", "Wireframes and prototyping", "Support all the way to production"] },
+      { tag: "Graphic design", title: "Autodesk × Techdata campaigns", points: ["Campaign visuals creation", "Multi-format adaptations", "Consistency with the international brand guidelines"] },
+      { tag: "UX Research", title: "End-to-end UX design", points: ["User research", "Audit and recommendations", "Wireframes and production rollout"] },
+    ]}
+  />
+</Base>

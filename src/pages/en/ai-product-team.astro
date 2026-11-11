@@ -1,0 +1,254 @@
+---
+// Version anglaise de src/pages/equipe-ia.astro. FAQ JSON-LD en anglais.
+import Base from '../../layouts/Base.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+const stats = [
+  { color: "hex-icon-blue", big: "2/3", title: "of companies already use generative AI", desc: "But usage remains mostly experimental, with productivity gains still limited.", src: "Banque de France, 2026 survey" },
+  { color: "hex-icon-yellow", big: "+60%", title: "growth in demand for \"AI agents\" skills in one year", desc: "Profiles able to orchestrate AI agents are the most sought-after on the French market.", src: "Malt Tech Trends 2026" },
+  { color: "hex-icon-red", big: "No. 2", title: "AI, the second most requested freelance skill", desc: "22% of mission requests — even non-technical ones — now require AI expertise.", src: "Malt Tech Trends 2026" },
+];
+
+const usecases = [
+  { icon: "icon-data", title: "Document management", desc: "Automatically extract, verify and organise your invoices, contracts and other documents.", metric: "up to −70%", metricLabel: "processing time", tone: "blue" },
+  { icon: "icon-crm", title: "Customer service", desc: "Handle routine requests, prepare responses and escalate complex cases.", metric: "up to −60%", metricLabel: "manual tickets", tone: "yellow" },
+  { icon: "icon-seo", title: "Sales operations", desc: "Qualify inbound requests, enrich the CRM and automate follow-ups.", metric: "up to +40%", metricLabel: "qualified leads", tone: "green" },
+  { icon: "icon-tech", title: "Back office", desc: "Streamline approvals, reporting and administrative coordination.", metric: "up to −50%", metricLabel: "admin time", tone: "red" },
+];
+
+const roles = [
+  { tag: "Steering", title: "AI Product Owner", points: ["Frames the use case and the expected outcome", "Drives the backlog and the AI metrics (quality, cost, business value)", "A product-builder profile, not a ticket manager"] },
+  { tag: "Build", title: "AI Engineer", points: ["Designs the architecture: LLM, RAG, agents, integrations", "Develops, evaluates and industrialises the models", "Guarantees robustness, security and controlled costs"] },
+  { tag: "Data", title: "Data Engineer", points: ["Prepares and consolidates the data", "Sets up the pipelines and monitoring", "An AI system is only as good as its data"] },
+  { tag: "Adoption", title: "Designer & change", points: ["Designs genuinely useful AI interfaces", "Trains your teams and organises the upskilling", "Anchors the tool in the real workflows of the business"] },
+];
+
+const steps = [
+  { title: "We identify the opportunity", desc: "A 2-week scoping phase: we analyse your processes, your goals and the potential gains, with quantified success criteria — cost per operation, error rate, turnaround times." },
+  { title: "We deploy a first solution", desc: "A 2-to-4-month pilot in real conditions, on your data. Every indicator is measured and shared: you see what the automation delivers, week after week." },
+  { title: "We scale it up", desc: "When the results converge, we industrialise, supervise and improve the solution with your teams, with a skills handover. Otherwise, the scope is adjusted — you never invest on a promise." },
+];
+
+const why = [
+  { color: "hex-icon-blue", title: "Business expertise", desc: "Senior profiles from the network, with field experience." },
+  { color: "hex-icon-yellow", title: "State-of-the-art technology", desc: "AI agents, automations, tailor-made integrations — with no lock-in to a closed ecosystem." },
+  { color: "hex-icon-red", title: "Operational support", desc: "From rollout to results tracking, with a skills handover." },
+  { color: "hex-icon-blue", title: "Guardrails from day one", desc: "Human supervision, audit log, GDPR & AI Act compliance. Your data stays with you." },
+];
+
+const faq = [
+  { q: "Which business processes lend themselves to AI automation?", a: "Frequent, repetitive, documented processes: document handling, back office, first-level support, vendor coordination, data qualification. A good candidate has volume, rules you can express, and exceptions you can identify. The scoping phase exists precisely to verify that potential before you invest." },
+  { q: "Does the AI work on its own?", a: "No. Every setup combines AI agents with human supervision: the AI executes within a restricted decision scope, our experts handle the ambiguous cases, and every action is traced in an audit log. That's what makes the automation reliable — and compliant." },
+  { q: "What happens to my in-house team?", a: "It levels up. The goal is not to replace your people but to take the repetitive work off their plate: we train them, document the setup and organise the handover so the value stays with you." },
+  { q: "Why run a pilot rather than deploy directly?", a: "Because an AI setup is judged on measurements, not on a demo. The pilot in real conditions establishes the cost per operation, the error rate and the turnaround times on your data — and the decision to industrialise is made on those numbers." },
+  { q: "How is GDPR and AI Act compliance ensured?", a: "From the scoping phase: data mapping, a documented decision scope for the AI, human supervision, an audit log and controlled hosting. Your data stays with you and we favour agnostic tools, with no lock-in to a closed ecosystem." },
+];
+
+const faqJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+});
+---
+<Base
+  title="AI automation of business processes & AI product teams | digitags.work"
+  description="AI automation of your business processes by supervised AI agents, and senior AI product teams. Measured pilots, GDPR and AI Act compliant."
+>
+  <section class="ia-hero">
+    <div class="container ia-hero-grid">
+      <div>
+        <p class="eyebrow">AI offer — Operations &amp; Product</p>
+        <h1>Put AI to work.<br /><span>Not just your teams.</span></h1>
+        <p class="lead">We turn artificial intelligence into operational solutions: automation of your business processes with human supervision, and AI products built by senior teams. Fewer manual tasks, measured results.</p>
+        <div class="hero-cta">
+          <a href="/en/contact" class="btn btn-dark">Let's talk about your project</a>
+          <a href="#offres" class="btn btn-outline">Explore our solutions</a>
+        </div>
+        <ul class="ia-minibadges">
+          <li><span class="hex-icon hex-icon-blue"></span> Measured results</li>
+          <li><span class="hex-icon hex-icon-yellow"></span> Dedicated experts</li>
+          <li><span class="hex-icon hex-icon-red"></span> From design to operations</li>
+        </ul>
+      </div>
+      <div class="ia-illu" aria-hidden="true">
+        <div class="ia-process-card">
+          <div class="ia-pc-head">
+            <strong>Automated process</strong>
+            <span class="ia-live">● Live</span>
+          </div>
+          <ul>
+            <li><span class="ia-step-ico">📄</span> Document received</li>
+            <li><span class="ia-step-ico">🔎</span> Information extracted</li>
+            <li><span class="ia-step-ico">✓</span> Checked and validated</li>
+            <li><span class="ia-step-ico">💾</span> Saved into your tools</li>
+          </ul>
+        </div>
+        <div class="ia-metric-chip">−80%<span>manual time</span></div>
+        <div class="ia-chart-card">
+          <strong>Processing time</strong>
+          <div class="ia-bars">
+            <div class="ia-bar b1" title="Before"></div>
+            <div class="ia-bar b2"></div>
+            <div class="ia-bar b3 on"></div>
+            <div class="ia-bar b4 on"></div>
+          </div>
+          <div class="ia-legend"><span><i class="l-off"></i> Before</span><span><i class="l-on"></i> With digitags</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="offres" style="padding-top: 40px;">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">Two ways to take action</p>
+      <h2 class="section-title">Two ways to put AI to work.</h2>
+      <div class="ia-offers">
+        <article class="ia-offer ia-offer-blue">
+          <p class="ia-offer-tag">Offer 1 — Operations</p>
+          <h3>Hand your repetitive tasks over to AI.</h3>
+          <p class="ia-offer-desc">We design, deploy and supervise AI agents able to take over your business processes end to end.</p>
+          <ul class="ia-checks">
+            <li>Fewer manual tasks, faster operations</li>
+            <li>Experts who supervise the exceptions</li>
+            <li>A precise scope — one process at a time</li>
+            <li>Clear tracking of costs, quality and results</li>
+          </ul>
+          <a href="/en/contact" class="btn btn-dark">Identify a process to automate <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="ia-offer ia-offer-red">
+          <p class="ia-offer-tag">Offer 2 — Product</p>
+          <h3>From your idea to a product that works.</h3>
+          <p class="ia-offer-desc">We assemble the team of experts needed to design, build and take your AI product to production.</p>
+          <ul class="ia-checks">
+            <li>A senior team matched to your project</li>
+            <li>A product designed around your users</li>
+            <li>Integration with your tools and your data</li>
+            <li>Support through launch and beyond</li>
+          </ul>
+          <a href="/en/contact" class="btn btn-dark">Discuss my AI product <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 10px;">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">Example use cases</p>
+      <h2 class="section-title">Tangible gains, process by process.</h2>
+      <div class="ia-usecases">
+        {usecases.map((u) => (
+          <article class="ia-usecase">
+            <span class={`uc-ico uc-${u.tone}`}></span>
+            <h3>{u.title}</h3>
+            <p>{u.desc}</p>
+            <div class={`uc-metric uc-m-${u.tone}`}><strong>{u.metric}</strong><span>{u.metricLabel}</span></div>
+          </article>
+        ))}
+      </div>
+      <p class="ia-note">Orders of magnitude observed on comparable setups — your quantified targets are set together during scoping, then measured during the pilot.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 10px;">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">A simple, effective process</p>
+      <h2 class="section-title">A measured pilot before any industrialisation.</h2>
+      <div class="ia-steps">
+        {steps.map((s, i) => (
+          <article class="ia-step">
+            <span class={`ia-step-num n${i + 1}`}>{i + 1}</span>
+            <h3>{s.title}</h3>
+            <p>{s.desc}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="approche" id="equipe-ia-roles">
+    <div class="container" style="padding-bottom: 60px;">
+      <div class="approche-copy" style="max-width: 640px; margin-bottom: 44px;">
+        <h2>Experts from the network,<br />not a black box.</h2>
+        <p style="color: #b9c0d8; font-size: 15px;">Behind every setup, a short, senior team from the Hub: the AI agents execute, the humans frame, supervise and answer for the quality.</p>
+      </div>
+      <div class="reussites-grid cols-4">
+        {roles.map((r) => (
+          <article class="reussite-card">
+            <p class="case-label label-blue">{r.tag}</p>
+            <h3>{r.title}</h3>
+            <ul>
+              {r.points.map((p) => <li>{p}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">The market has tipped.</h2>
+      <div class="benefits-grid">
+        {stats.map((s) => (
+          <article class="benefit-card">
+            <span class={`hex-icon ${s.color}`}></span>
+            <span class="stat-big">{s.big}</span>
+            <h3>{s.title}</h3>
+            <p>{s.desc}</p>
+            <span class="stat-src">{s.src}</span>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="ia-why">
+    <div class="container ia-why-grid">
+      <div>
+        <p class="eyebrow" style="color:#8fa0e8;">Why digitags?</p>
+        <h2>The right experts. The right technology. Someone truly accountable for the result.</h2>
+        <p>We bring together business expertise, technology talent and operational support to turn your ideas into solutions people actually use. Not just consulting. The real thing.</p>
+        <a href="/en/contact" class="btn btn-light">Let's discuss your project <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="ia-why-items">
+        {why.map((w) => (
+          <div class="ia-why-item">
+            <span class={`hex-icon ${w.color}`}></span>
+            <div>
+              <strong>{w.title}</strong>
+              <p>{w.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">Frequently asked questions</p>
+      <h2 class="section-title">Everything about AI in production.</h2>
+      <div class="faq">
+        {faq.map((f) => (
+          <details class="faq-item">
+            <summary>{f.q}</summary>
+            <div class="faq-body">{f.a}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner
+    lang="en"
+    title="A process to automate,<br />an AI product to build?"
+    text="Tell us what you need: we'll frame the scope<br />and the success criteria together."
+    label="Scope my AI project"
+  />
+
+  <script type="application/ld+json" set:html={faqJsonLd} />
+</Base>

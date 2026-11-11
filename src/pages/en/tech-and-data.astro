@@ -1,0 +1,29 @@
+---
+// Version anglaise de src/pages/tech-data.astro (fiches métiers liées en FR, phase 1).
+import Base from '../../layouts/Base.astro';
+import ExpertisePage from '../../components/ExpertisePage.astro';
+---
+<Base
+  title="Freelance developers & data experts | digitags.work"
+  description="Freelance developers (front-end, back-end, full-stack) and data experts, vetted and recommended by their peers, to build and measure your products."
+>
+  <ExpertisePage
+    lang="en"
+    eyebrow="Your Tech & Data hub"
+    title="Build robust, decide data-driven."
+    lead="Developers, data scientists, data engineers and web analysts: vetted senior profiles to build your products and turn your data into decisions."
+    ctaLabel="Find an expert"
+    skillsTitle="Tech & data skills in the network"
+    skills={["Front-End Developer", "Back-End Developer", "Full-Stack Developer", "Mobile Developer", "Tech Lead", "DevOps", "Data Scientist", "Data Engineer", "Data Analyst", "Web Analyst", "Business Analyst", "Data Project Manager"]}
+    metiers={[
+      { label: "Freelance web developer", href: "/metiers/developeur-web-freelance" },
+      { label: "Front-end developer", href: "/metiers/developpeur-front-end-freelance" },
+      { label: "Back-end developer", href: "/metiers/developpeur-back-end-freelance" },
+      { label: "Full-stack developer", href: "/metiers/full-stack-developpeur-freelance" },
+    ]}
+    reussites={[
+      { tag: "Analytics", title: "Senior Web Analyst mission", points: ["Consulting and analysis", "Complete tagging plan", "Reporting and dashboards"] },
+      { tag: "Data Science", title: "Data Scientist mission", points: ["Advanced data analyses", "Strategic reporting", "Actionable recommendations"] },
+    ]}
+  />
+</Base>

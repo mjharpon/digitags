@@ -1,0 +1,208 @@
+---
+// Version anglaise de src/pages/metiers.astro. Les fiches métiers ne sont pas
+// traduites en phase 1 : titres et descriptions EN statiques ci-dessous,
+// liens vers les fiches FR, images reprises de la collection.
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+const all = await getCollection('metiers', ({ data }) => !data.draft);
+const bySlug = new Map(all.map((m) => [m.id, m]));
+
+// slug FR → libellé et description EN (fiches liées en français).
+const FICHES: Record<string, { title: string; desc: string }> = {
+  'ux-designer-freelance': { title: 'Freelance UX Designer', desc: 'Research, journeys and wireframes: experiences designed around your users.' },
+  'ui-designer-freelance': { title: 'Freelance UI Designer', desc: 'Interfaces that are consistent, accessible and true to your brand.' },
+  'ux-writer-freelance': { title: 'Freelance UX Writer', desc: 'The words of your product: microcopy that guides and converts.' },
+  'product-manager-freelance': { title: 'Freelance Product Manager', desc: 'Vision, roadmap and prioritisation to build the right product.' },
+  'product-owner-freelance': { title: 'Freelance Product Owner', desc: 'A structured backlog and smooth delivery for your teams.' },
+  'chef-de-projet-freelance': { title: 'Freelance Project Manager', desc: 'Planning, coordination and follow-through until delivery.' },
+  'coach-agile': { title: 'Freelance Agile Coach', desc: 'Rituals, flow and autonomy: teams that deliver better.' },
+  'freelance-seo': { title: 'Freelance SEO Consultant', desc: 'Technical foundations, content and authority for lasting visibility.' },
+  'expert-sea-freelance': { title: 'Freelance Paid Search Expert', desc: 'Google Ads campaigns steered by acquisition cost.' },
+  'expert-social-ads-freelance': { title: 'Freelance Social Ads Expert', desc: 'Meta, LinkedIn, TikTok: audiences and creatives that perform.' },
+  'traffic-manager-freelance': { title: 'Freelance Traffic Manager', desc: 'Every channel orchestrated, budgets shifted to what pays off.' },
+  'community-manager-freelance': { title: 'Freelance Community Manager', desc: 'A living social presence that serves your brand.' },
+  'account-manager-freelance': { title: 'Freelance Account Manager', desc: 'The point of contact who keeps clients and projects on track.' },
+  'developpeur-front-end-freelance': { title: 'Front-End Developer', desc: 'Fast, accessible interfaces, faithful to the design.' },
+  'developpeur-back-end-freelance': { title: 'Back-End Developer', desc: 'Robust APIs and architectures that scale.' },
+  'full-stack-developpeur-freelance': { title: 'Full-Stack Developer', desc: 'One profile across the whole chain, from database to interface.' },
+  'developeur-web-freelance': { title: 'Freelance Web Developer', desc: 'Websites and web apps built to last.' },
+};
+
+const CATEGORIES = [
+  {
+    name: "Design & UX",
+    color: "hex-icon-blue",
+    slugs: ["ux-designer-freelance", "ui-designer-freelance", "ux-writer-freelance"],
+    extra: ["Product Designer", "Web Designer", "Art Director", "Illustrator", "Motion Designer", "3D Artist", "Creative Lead"],
+  },
+  {
+    name: "Product & Project",
+    color: "hex-icon-yellow",
+    slugs: ["product-manager-freelance", "product-owner-freelance", "chef-de-projet-freelance", "coach-agile"],
+    extra: ["IT Project Manager", "Digital Project Manager", "Business Analysis Lead", "Interim Manager", "CRM Manager"],
+  },
+  {
+    name: "Marketing & Acquisition",
+    color: "hex-icon-red",
+    slugs: ["freelance-seo", "expert-sea-freelance", "expert-social-ads-freelance", "traffic-manager-freelance", "community-manager-freelance", "account-manager-freelance"],
+    extra: ["Head of Acquisition", "Growth Marketer", "Social Media Manager", "Brand Manager"],
+  },
+  {
+    name: "Development",
+    color: "hex-icon-blue",
+    slugs: ["developpeur-front-end-freelance", "developpeur-back-end-freelance", "full-stack-developpeur-freelance", "developeur-web-freelance"],
+    extra: ["Mobile Developer", "Tech Lead", "DevOps"],
+  },
+  {
+    name: "Data & Analytics",
+    color: "hex-icon-yellow",
+    slugs: [],
+    extra: ["Data Scientist", "Data Engineer", "Data Analyst", "Web Analyst", "Business Analyst", "Data Project Manager"],
+  },
+];
+
+const categories = CATEGORIES.map((c) => ({
+  ...c,
+  fiches: c.slugs
+    .filter((s) => FICHES[s])
+    .map((s) => ({ slug: s, ...FICHES[s], image: bySlug.get(s)?.data.image })),
+}));
+
+const features = [
+  { color: "hex-icon-blue", text: "Expert profiles, vetted and recommended by their peers" },
+  { color: "hex-icon-yellow", text: "A fast setup — missions can start within 48 hours" },
+  { color: "hex-icon-red", text: "Support from start to finish" },
+  { color: "hex-icon-blue", text: "Tangible, measurable results" },
+];
+
+const faq = [
+  { q: "How do I choose the right freelance role for my project?", a: "No need to decide alone: describe your need through the form and we frame it together. Depending on your goals, we point you to the right role — or the right combination of roles — and propose the network profiles genuinely interested in your project." },
+  { q: "How quickly can a freelancer start?", a: "Once your brief is framed, we reach out to the best profiles in the network and set up the interviews quickly. Depending on the talent's availability, a mission can start within 48 hours." },
+  { q: "How much does a freelancer cost?", a: "Each expert sets their daily rate according to their role, seniority and the nature of the mission. You contract a precise engagement over a defined period: the budget is known and under control from day one." },
+  { q: "How are the Hub's freelancers selected?", a: "The Hub is neither an open platform nor a staffing firm: it's a closed network of 1,600+ experts, selected for their skills, their experience and their mindset, and recommended by their peers. We've known each one's strengths for 8 years." },
+  { q: "A solo freelancer or a full team?", a: "Both. For a one-off need, a solo expert is often enough. For a broader project, we assemble a complementary team — for example our <a href=\"/en/ai-product-team\">AI Product Team</a> — or connect you with one of our <a href=\"/en/studios-and-collectives\">10 independent studios and collectives</a>." },
+];
+
+const faqJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a.replace(/<[^>]+>/g, '') },
+  })),
+});
+---
+<Base
+  title="The Hub's freelance roles | digitags.work"
+  description="UX designer, developer, product manager, SEO… explore the freelance roles of the digitags.work network and find the right profile for your project."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">The Hub's roles</p>
+      <h1>Staff your teams, role by role.</h1>
+      <p class="lead">From technology to marketing, the network covers every digital role. Explore the most sought-after profiles — each guide (in French) details the role, the skills and when to call on it.</p>
+      <div class="hero-cta">
+        <a href="/en/contact" class="btn btn-dark">Find a freelancer</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero-banner">
+    <div class="container">
+      <img src="/uploads/blog/reussir-collaboration-long-terme-avec-un-freelance-cover.webp" alt="A project team gathered around laptops" loading="eager" />
+    </div>
+  </section>
+
+  <section>
+    <div class="container split-section">
+      <div class="split-text">
+        <h2>Profiles matched<br />to your needs</h2>
+        <p>We're here to understand what you need and select the perfect profiles for your project. Their expertise spans a wide range of fields, from technology to marketing.</p>
+        <p>Every mission is built to measure, with the right freelance profiles — solo or as a team — and support from A to Z.</p>
+      </div>
+      <div class="feature-panel">
+        {features.map((f) => (
+          <div class="feature-item">
+            <span class={`hex-icon ${f.color}`}></span>
+            <p>{f.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="liste">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">Our freelance roles</p>
+      <h2 class="section-title">The network's roles, by expertise.</h2>
+      {categories.map((cat) => (
+        <div class="metier-cat">
+          <h3 class="cat-heading"><span class={`hex-icon ${cat.color}`}></span> {cat.name}</h3>
+          {cat.fiches.length > 0 && (
+            <div class="numbered-grid">
+              {cat.fiches.map((m, i) => (
+                <article class="numbered-card">
+                  <div>
+                    <span class="num-badge">{String(i + 1).padStart(2, '0')}</span>
+                    <h3><a href={`/metiers/${m.slug}`} class="stretch-link" hreflang="fr">{m.title}</a></h3>
+                    <p class="num-desc">{m.desc}</p>
+                    <span class="arrow-link">Read the guide (in French) <span aria-hidden="true">→</span></span>
+                  </div>
+                  {m.image && <img src={m.image} alt="" loading="lazy" />}
+                </article>
+              ))}
+            </div>
+          )}
+          {cat.extra.length > 0 && (
+            <div class="cat-extra">
+              <p>Also in the network:</p>
+              <ul class="chips chips-left">
+                {cat.extra.map((e) => <li><span class="chip">{e}</span></li>)}
+              </ul>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section>
+    <div class="container atoz">
+      <img src="/uploads/blog/notre-processus-de-matching-freelance-entreprise-cover.webp" alt="A magnifying glass picking out the right profile among several" loading="lazy" />
+      <div>
+        <p class="eyebrow">Tailor-made missions</p>
+        <h2 class="atoz-title">Support from A to Z</h2>
+        <p class="atoz-lead">We help you define the right profile, meet the best talent in the network and steer the mission until your goals are met.</p>
+        <ul class="check-list">
+          <li>Framing of your need and your brief</li>
+          <li>Selection of genuinely interested profiles, with their terms</li>
+          <li>Interviews with the shortlisted talent — fit comes first</li>
+          <li>Follow-up and adjustments through to the results</li>
+        </ul>
+        <a href="/en/contact" class="btn btn-dark">Discuss your project</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">Frequently asked questions</p>
+      <h2 class="section-title">Everything about freelance collaboration.</h2>
+      <div class="faq">
+        {faq.map((f) => (
+          <details class="faq-item">
+            <summary>{f.q}</summary>
+            <div class="faq-body" set:html={f.a} />
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner lang="en" title="A role missing from the list?" text="The network covers 33+ digital roles.<br />Tell us what you need — we'll find the profile." />
+
+  <script type="application/ld+json" set:html={faqJsonLd} />
+</Base>

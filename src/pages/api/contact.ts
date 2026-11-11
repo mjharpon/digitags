@@ -41,6 +41,9 @@ export const POST: APIRoute = async ({ request, locals }) => {
   if (form.get('site_web')) return json(200, { ok: true });
 
   const get = (k: string) => String(form.get(k) ?? '').trim();
+  // Formulaire anglais (/en/contact) : champ caché lang=en.
+  const en = get('lang') === 'en';
+  const msg = (fr: string, enMsg: string) => (en ? enMsg : fr);
   const nom = get('nom');
   const email = get('email');
   const societe = get('societe');
@@ -48,10 +51,10 @@ export const POST: APIRoute = async ({ request, locals }) => {
   const message = get('message');
 
   if (!nom || !email || !message) {
-    return json(400, { ok: false, error: 'Merci de remplir les champs obligatoires.' });
+    return json(400, { ok: false, error: msg('Merci de remplir les champs obligatoires.', 'Please fill in the required fields.') });
   }
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-    return json(400, { ok: false, error: 'Adresse email invalide.' });
+    return json(400, { ok: false, error: msg('Adresse email invalide.', 'Invalid email address.') });
   }
 
   // Brief joint (optionnel) → bucket privé + lien signé 7 jours.
@@ -59,8 +62,8 @@ export const POST: APIRoute = async ({ request, locals }) => {
   let briefLink: string | null = null;
   const brief = form.get('brief') as File | null;
   if (brief && brief.size > 0) {
-    if (brief.size > MAX_SIZE) return json(400, { ok: false, error: 'Le fichier joint dépasse 10 Mo.' });
-    if (!BRIEF_TYPES.includes(brief.type)) return json(400, { ok: false, error: 'Format de fichier non accepté (PDF, Word, PowerPoint, JPG ou PNG).' });
+    if (brief.size > MAX_SIZE) return json(400, { ok: false, error: msg('Le fichier joint dépasse 10 Mo.', 'The attached file exceeds 10 MB.') });
+    if (!BRIEF_TYPES.includes(brief.type)) return json(400, { ok: false, error: msg('Format de fichier non accepté (PDF, Word, PowerPoint, JPG ou PNG).', 'Unsupported file format (PDF, Word, PowerPoint, JPG or PNG).') });
     const safeName = (brief.name || 'brief').replace(/[^\w.\-]+/g, '_').slice(0, 80);
     const path = `briefs/${crypto.randomUUID()}/${safeName}`;
     const up = await fetch(`${url}/storage/v1/object/docs-internes/${path}`, {
@@ -68,7 +71,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
       headers: { ...H, 'Content-Type': brief.type },
       body: await brief.arrayBuffer(),
     });
-    if (!up.ok) return json(500, { ok: false, error: "L'envoi du fichier a échoué — réessayez sans pièce jointe." });
+    if (!up.ok) return json(500, { ok: false, error: msg("L'envoi du fichier a échoué — réessayez sans pièce jointe.", 'The file upload failed — please try again without the attachment.') });
     const sign = await fetch(`${url}/storage/v1/object/sign/docs-internes/${path}`, {
       method: 'POST',
       headers: { ...H, 'Content-Type': 'application/json' },
@@ -93,7 +96,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
       message: message + briefNote,
     }),
   });
-  if (!ins.ok) return json(500, { ok: false, error: "L'envoi a échoué — réessayez, ou écrivez-nous à hello@digitags.work." });
+  if (!ins.ok) return json(500, { ok: false, error: msg("L'envoi a échoué — réessayez, ou écrivez-nous à hello@digitags.work.", 'Sending failed — please try again, or email us at hello@digitags.work.') });
 
   // Notification email (best effort : la soumission est déjà en base).
   if (notifySecret) {
@@ -103,7 +106,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
         headers: { Authorization: `Bearer ${notifySecret}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({
           replyTo: email,
-          subject: `Nouveau brief — ${nom}${societe ? ` (${societe})` : ''}`,
+          subject: `Nouveau brief — ${nom}${societe ? ` (${societe})` : ''}${en ? ' (formulaire EN)' : ''}`,
           html: `
             <h2 style="font-family:sans-serif;">Nouvelle demande via digitags.work</h2>
             <table style="font-family:sans-serif;font-size:14px;border-collapse:collapse;">

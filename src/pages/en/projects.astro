@@ -1,0 +1,146 @@
+---
+// Version anglaise de src/pages/projets.astro. Les fiches projets ne sont pas
+// traduites en phase 1 : titres et descriptions EN statiques ci-dessous,
+// liens vers les fiches FR, images reprises de la collection.
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+const all = await getCollection('projets', ({ data }) => !data.draft);
+const bySlug = new Map(all.map((p) => [p.id, p]));
+
+// slug FR → libellé et description EN (fiches liées en français), dans l'ordre éditorial.
+const PROJETS: { slug: string; title: string; desc: string }[] = [
+  { slug: "concevoir-un-produit-digital", title: "Design a digital product", desc: "From idea to production: scoping, design, build and launch of your product." },
+  { slug: "mener-une-phase-dux-research", title: "Run a UX research phase", desc: "Understand your users before building: interviews, tests, insights." },
+  { slug: "audit-ux", title: "UX audit", desc: "An expert review of your journeys, with prioritised recommendations." },
+  { slug: "design-thinking", title: "Design thinking", desc: "Workshops to align your teams and generate solutions worth testing." },
+  { slug: "discovery-produit", title: "Product discovery", desc: "Validate the problem and the solution before investing in the build." },
+  { slug: "strategie-produit", title: "Product strategy", desc: "Vision, positioning and roadmap to take your product in the right direction." },
+  { slug: "identite-visuelle-creation-ou-refonte", title: "Visual identity — creation or redesign", desc: "A brand that stands out, with guidelines your teams can actually use." },
+  { slug: "refonte-de-site-internet", title: "Website redesign", desc: "Scope it, design it, ship it: a redesign steered by your goals." },
+];
+
+const projets = PROJETS.map((p) => ({ ...p, image: bySlug.get(p.slug)?.data.image }));
+
+const features = [
+  { color: "hex-icon-blue", text: "Expert, specialised profiles" },
+  { color: "hex-icon-yellow", text: "A fast setup" },
+  { color: "hex-icon-red", text: "Support from start to finish" },
+  { color: "hex-icon-blue", text: "Tangible, measurable results" },
+];
+
+const faq = [
+  { q: "How do I choose the right type of mission?", a: "No need to decide alone: describe your need through the form and we frame it together. Audit, discovery, redesign or full product design — we point you to the format that answers your goals, and the right profile or team to run it." },
+  { q: "How long does a mission last?", a: "From a short expert engagement (a UX audit in a few days) to a long-term project (a product design over several months). The duration is set at scoping, with clear milestones, and can adjust to the real pace of the project." },
+  { q: "How much does a mission cost?", a: "Each expert sets their daily rate according to their role and seniority. You contract a precise engagement over a defined period: the budget is known and under control from day one." },
+  { q: "How are the freelancers selected?", a: "The Hub is neither an open platform nor a staffing firm: it's a closed network of 1,600+ experts, selected for their skills, their experience and their mindset, and recommended by their peers. We've known each one's strengths for 8 years." },
+  { q: "Can several types of mission be combined?", a: "Yes, and it's often the right approach: a discovery that leads into the design phase, a UX audit followed by a redesign… We then assemble a complementary team, or connect you with one of our <a href=\"/en/studios-and-collectives\">10 independent studios and collectives</a>." },
+];
+
+const faqJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a.replace(/<[^>]+>/g, '') },
+  })),
+});
+---
+<Base
+  title="Your digital projects, delivered with the Hub | digitags.work"
+  description="UX audit, website redesign, product discovery, visual identity… the digital projects the freelancers and studios of the digitags.work network deliver for you."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">The Hub's projects</p>
+      <h1>Deliver your digital projects with the Hub.</h1>
+      <p class="lead">We support companies on a wide range of missions, from short expert engagements to long-term projects. Explore the different types of projects we deliver.</p>
+      <div class="hero-cta">
+        <a href="/en/contact" class="btn btn-dark">Discuss your project</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero-banner">
+    <div class="container">
+      <img src="/uploads/projets/design-thinking-cover.webp" alt="A design workshop around sticky notes and laptops" loading="eager" />
+    </div>
+  </section>
+
+  <section>
+    <div class="container split-section">
+      <div class="split-text">
+        <h2>Missions matched<br />to your needs</h2>
+        <p>We work across every stage of a digital project: from strategic thinking to production, through design, development and performance analysis.</p>
+        <p>At the intersection of freelance platforms and agencies, we add an agency's consulting and organisation layer, with the agility and breadth of choice of a network. Every mission is built to measure, with the right freelance profiles and support from A to Z.</p>
+      </div>
+      <div class="feature-panel">
+        {features.map((f) => (
+          <div class="feature-item">
+            <span class={`hex-icon ${f.color}`}></span>
+            <p>{f.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="liste">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">Our mission types</p>
+      <h2 class="section-title">Flexible formats for every project.</h2>
+      <div class="numbered-grid">
+        {projets.map((p, i) => (
+          <article class="numbered-card">
+            <div>
+              <span class="num-badge">{String(i + 1).padStart(2, '0')}</span>
+              <h3><a href={`/projets/${p.slug}`} class="stretch-link" hreflang="fr">{p.title}</a></h3>
+              <p class="num-desc">{p.desc}</p>
+              <span class="arrow-link">Learn more (in French) <span aria-hidden="true">→</span></span>
+            </div>
+            {p.image && <img src={p.image} alt="" loading="lazy" />}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container atoz">
+      <img src="/uploads/projets/strategie-produit-cover.webp" alt="Two people scoping a project on a whiteboard" loading="lazy" />
+      <div>
+        <p class="eyebrow">Tailor-made missions</p>
+        <h2 class="atoz-title">Support from A to Z</h2>
+        <p class="atoz-lead">We help you define the right type of mission, select the best freelance profiles and steer the project until your goals are met.</p>
+        <ul class="check-list">
+          <li>Framing of the need</li>
+          <li>Selection of the profiles</li>
+          <li>Project follow-up</li>
+          <li>Deliverables and results</li>
+        </ul>
+        <a href="/en/contact" class="btn btn-dark">Discuss your project</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">Frequently asked questions</p>
+      <h2 class="section-title">Everything about our mission types.</h2>
+      <div class="faq">
+        {faq.map((f) => (
+          <details class="faq-item">
+            <summary>{f.q}</summary>
+            <div class="faq-body" set:html={f.a} />
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner lang="en" title="Your project doesn't fit<br />in a box?" text="Even better. Tell us about it —<br />we'll assemble the team to match." />
+
+  <script type="application/ld+json" set:html={faqJsonLd} />
+</Base>

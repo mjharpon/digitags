@@ -1,0 +1,118 @@
+---
+// Version anglaise de src/pages/studios-et-collectifs.astro (fiches liées en FR, phase 1).
+import Base from '../../layouts/Base.astro';
+import HowItWorks from '../../components/HowItWorks.astro';
+import Testimonials from '../../components/Testimonials.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+const features = [
+  { color: "hex-icon-blue", text: "Tight-knit teams that have already shipped together" },
+  { color: "hex-icon-yellow", text: "A contracted scope and budget" },
+  { color: "hex-icon-red", text: "Immediate velocity, with no team-building phase" },
+  { color: "hex-icon-blue", text: "The Hub's support from start to finish" },
+];
+
+const formats = [
+  { title: "An expert freelancer", desc: "For a precise, time-bound need: a sharp skill set that slots into your existing team.", href: "/en/roles", link: "Explore the roles" },
+  { title: "A tailor-made team", desc: "For a cross-functional project: we assemble a complementary team of freelancers from the network — coordinated and coherent.", href: "/en/ai-product-team", link: "See the AI Team example" },
+  { title: "An established studio", desc: "To build a complete product: a collective with its own methods, tools and the habit of delivering together.", href: "/en/contact", link: "Call on a studio" },
+];
+
+const useCases = [
+  "Brochure or corporate website",
+  "E-commerce site",
+  "SaaS product / web platform",
+  "Mobile app",
+  "MVP to launch fast",
+  "Technical rebuild of an existing product",
+];
+
+const reussites = [
+  { tag: "E-commerce", title: "TOD'S e-commerce launch", points: ["Coordination across the digital teams", "Launch of the new e-commerce site", "Interface between business, design and tech"] },
+  { tag: "Product", title: "Insurance quote simulator", points: ["Product team over eight months", "Scoping, prioritisation, delivery", "Efficient delivery of the simulator"] },
+  { tag: "Website", title: "Lichens' new website", points: ["End-to-end design and build", "An elegant, functional, intuitive site", "Aligned with the strategic goals"] },
+];
+---
+<Base
+  title="Studios & collectives of independent developers | digitags.work"
+  description="One freelancer isn't enough? Call on 10 studios and collectives of independent developers for your website, e-commerce or digital product."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Studios &amp; Collectives</p>
+      <h1>One freelancer isn't enough? Scale up to a team.</h1>
+      <p class="lead">The Hub brings together 10 studios and collectives of independent developers. We identify the one that matches your requirements and budget to build your site or product — and its know-how supports you at every step.</p>
+      <div class="hero-cta">
+        <a href="/en/contact" class="btn btn-dark">Call on a studio</a>
+        <a href="/en/contact" class="btn btn-outline">Book a discovery call</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container split-section">
+      <div class="split-text">
+        <h2>An established team,<br />ready to start</h2>
+        <p>Building a complete product takes more than one skill: design, development, project management and quality have to move forward together. A studio brings that well-oiled team — with a single point of contact.</p>
+        <p>As with our freelancers, every studio in the network is selected for its track record, its know-how and its mindset, and the Hub stays by your side from scoping to delivery.</p>
+      </div>
+      <div class="feature-panel">
+        {features.map((f) => (
+          <div class="feature-item">
+            <span class={`hex-icon ${f.color}`}></span>
+            <p>{f.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">Freelancer, team or studio?</p>
+      <h2 class="section-title">Three formats, depending on your project.</h2>
+      <div class="benefits-grid">
+        {formats.map((f, i) => (
+          <article class="benefit-card">
+            <span class="num-round">{String(i + 1).padStart(2, '0')}</span>
+            <h3>{f.title}</h3>
+            <p>{f.desc}</p>
+            <p style="margin-top: 14px;"><a href={f.href} class="arrow-link stretch-link">{f.link} <span aria-hidden="true">→</span></a></p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="skills-band">
+    <div class="container">
+      <h2>The projects studios deliver</h2>
+      <ul class="chips">
+        {useCases.map((u) => <li><span class="chip">{u}</span></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <HowItWorks lang="en" />
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Recently delivered projects.</h2>
+      <div class="reussites-grid">
+        {reussites.map((r) => (
+          <article class="reussite-card">
+            <p class="case-label label-blue">{r.tag}</p>
+            <h3>{r.title}</h3>
+            <ul>
+              {r.points.map((p) => <li>{p}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Testimonials lang="en" />
+
+  <CtaBanner lang="en" title="Need a team<br />for your project?" text="Tell us what you need —<br />we'll identify the right studio." label="Call on a studio" />
+</Base>

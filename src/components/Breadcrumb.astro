@@ -1,15 +1,22 @@
 ---
 // Fil d'Ariane visible + balisage Schema.org BreadcrumbList.
 // items : du premier niveau à la page courante (le dernier n'est pas cliquable).
+// Bilingue : lang="en" ancre le fil sur /en (défaut : fr, inchangé).
 interface Crumb { label: string; href?: string }
-interface Props { items: Crumb[] }
-const { items } = Astro.props;
+interface Props { items: Crumb[]; lang?: 'fr' | 'en' }
+const { items, lang = 'fr' } = Astro.props;
+const en = lang === 'en';
+
+const homeLabel = en ? 'Home' : 'Accueil';
+const homeHref = en ? '/en' : '/';
+const homeItem = en ? 'https://www.digitags.work/en' : 'https://www.digitags.work/';
+const ariaLabel = en ? 'Breadcrumb' : "Fil d'Ariane";
 
 const jsonLd = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Accueil", item: "https://www.digitags.work/" },
+    { "@type": "ListItem", position: 1, name: homeLabel, item: homeItem },
     ...items.map((c, i) => ({
       "@type": "ListItem",
       position: i + 2,
@@ -19,8 +26,8 @@ const jsonLd = JSON.stringify({
   ],
 });
 ---
-<nav class="crumbs" aria-label="Fil d'Ariane">
-  <a href="/">Accueil</a>
+<nav class="crumbs" aria-label={ariaLabel}>
+  <a href={homeHref}>{homeLabel}</a>
   {items.map((c) => (
     <>
       <span class="crumb-sep" aria-hidden="true">›</span>

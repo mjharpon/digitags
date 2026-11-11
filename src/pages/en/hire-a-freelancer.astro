@@ -1,0 +1,76 @@
+---
+// Version anglaise de src/pages/recrutement-freelance.astro.
+// Esprit « collaboration / work with » : prestations de services, jamais d'« employment ».
+import Base from '../../layouts/Base.astro';
+import HowItWorks from '../../components/HowItWorks.astro';
+import Testimonials from '../../components/Testimonials.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+const benefits = [
+  { color: "hex-icon-blue", title: "Highly qualified talent", desc: "Get access to sharp, immediately operational skills for specific needs — a service engagement, not a hire onto your payroll." },
+  { color: "hex-icon-yellow", title: "Flexibility built in", desc: "Bring in an expert for a short mission or long-term support, and adjust the setup to the real pace of your project." },
+  { color: "hex-icon-red", title: "A budget under control", desc: "You contract a precise deliverable over a defined period: no hidden costs, no training overhead." },
+];
+
+const process = [
+  { title: "Define your needs", desc: "Clarify the project scope and the skills required: that's what lets you target — and win over — the right freelancers." },
+  { title: "Frame your budget", desc: "Duration, daily rate, terms: a defined engagement over a limited period, for a precise deliverable. You stay in control." },
+  { title: "Identify the talent", desc: "Rather than trawling the platforms, lean on the Hub: we put your project to the network profiles who are genuinely interested." },
+  { title: "Assess the skills", desc: "You meet the shortlisted talent, review their work, and make the final call. Freelancing is win-win: your project has to motivate them too." },
+  { title: "Put the collaboration in writing", desc: "Agree on rates and terms that work for both sides, in black and white: a clear service contract protects everyone." },
+  { title: "Collaborate, for the long run", desc: "Clear communication, regular check-ins, feedback both ways: a freelancer is not your employee but an independent partner who stays in charge of how they organise and work." },
+];
+---
+<Base
+  title="Work with a freelancer: find the best digital experts | digitags.work"
+  description="Why and how to work with a freelancer: find the best digital experts and make the collaboration a success with the digitags.work method."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Freelance collaboration</p>
+      <h1>Find the right freelancer — and win them over.</h1>
+      <p class="lead">UX designer, developer, SEO writer or data scientist: working with a freelancer is an excellent answer to a precise, time-bound need. Provided you find the right profile — and make them want to work with you. Here's our method.</p>
+      <div class="hero-cta">
+        <a href="/en/contact" class="btn btn-dark">Find a freelancer</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Why work with a freelancer?</h2>
+      <div class="benefits-grid">
+        {benefits.map((b) => (
+          <article class="benefit-card">
+            <span class={`hex-icon ${b.color}`}></span>
+            <h3>{b.title}</h3>
+            <p>{b.desc}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">The 6 steps of a successful collaboration.</h2>
+      <p class="section-lead">From defining the need to starting the mission, every step counts — and the Hub supports you through each one.</p>
+      <ol class="process-list">
+        {process.map((p) => (
+          <li class="process-item">
+            <div>
+              <h3>{p.title}</h3>
+              <p>{p.desc}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <HowItWorks lang="en" />
+
+  <Testimonials lang="en" />
+
+  <CtaBanner lang="en" title="Let's talk about your project<br />and find the ideal talent." />
+</Base>

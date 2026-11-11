@@ -1,0 +1,151 @@
+---
+// Version anglaise de src/pages/sea-social-ads-seo.astro (fiches métiers liées en FR, phase 1).
+// FAQ JSON-LD en anglais.
+import Base from '../../layouts/Base.astro';
+import HowItWorks from '../../components/HowItWorks.astro';
+import Testimonials from '../../components/Testimonials.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+
+const features = [
+  { color: "hex-icon-blue", text: "Acquisition steered by ROI, not impressions" },
+  { color: "hex-icon-yellow", text: "Reliable tracking for informed decisions" },
+  { color: "hex-icon-red", text: "Vetted experts, recommended by their peers" },
+  { color: "hex-icon-blue", text: "Transparent reporting: CPA, ROAS, qualified leads" },
+];
+
+const leviers = [
+  { slug: "/metiers/freelance-seo", title: "SEO & Content", desc: "Lasting visibility and organic growth: editorial strategy, technical optimisation, content that ranks — like the 30.4K keywords won in 6 months for Mon Compte Formation.", image: "/uploads/metiers/freelance-seo-cover.webp" },
+  { slug: "/metiers/expert-sea-freelance", title: "Paid Search — Google Ads", desc: "Capture existing demand with well-structured Search, Shopping and YouTube campaigns, optimised bidding and acquisition costs kept under control.", image: "/uploads/metiers/traffic-manager-freelance-0.webp" },
+  { slug: "/metiers/expert-social-ads-freelance", title: "Social Ads — Meta, LinkedIn, TikTok", desc: "Create demand with finely tuned audiences and continuously tested creatives: B2B leads on LinkedIn, B2C sales on Meta and TikTok.", image: "/uploads/metiers/community-manager-freelance-0.jpg" },
+  { slug: "/metiers/traffic-manager-freelance", title: "Traffic Management & Analytics", desc: "Orchestrate every channel, make measurement reliable (GA4, tagging plan) and shift budgets to where they actually pay off.", image: "/uploads/metiers/traffic-manager-freelance-cover.webp" },
+];
+
+const reussites = [
+  { tag: "SEA / Social Ads", title: "Traffic management at the helm", points: ["Campaign management and optimisation", "Continuous strategy adjustments", "Ongoing data analysis"] },
+  { tag: "Social Ads", title: "B2B LinkedIn campaign", points: ["Lead strategy — white paper", "Management and optimisations", "Qualified lead generation"] },
+  { tag: "SEO", title: "Content & editorial strategy", points: ["Content writing", "SEO optimisations", "A lasting editorial strategy"] },
+];
+
+const skills = ["SEO Consultant", "Paid Search Expert", "Social Ads Expert", "Traffic Manager", "Head of Acquisition", "Growth Marketer", "Social Media Manager", "Community Manager", "Brand Manager", "Web Analyst"];
+
+const faq = [
+  { q: "SEO or paid search: where should we start?", a: "They answer different horizons: paid search delivers immediate, steerable results, while SEO builds lasting visibility that reduces your dependence on advertising. The right answer depends on your margins, your market and your timeline — which is exactly what we frame with you before reaching out to the profiles." },
+  { q: "What minimum ad budget do we need to get started?", a: "There is no magic threshold, but one principle: the budget must allow you to learn. Enough volume to test audiences and ads, measure an acquisition cost and iterate. The expert sizes the media budget with you during scoping, based on your goals and average order value." },
+  { q: "How do you measure return on investment?", a: "Before any campaign, the expert sets up reliable tracking (GA4, conversion management, tagging plan). Reporting then focuses on business indicators — cost per lead, ROAS, revenue generated — rather than vanity metrics like impressions." },
+  { q: "Can a single expert handle SEO, paid search and social ads?", a: "Some senior profiles cover several channels, but each one has its specialists. Depending on the scale of your need, we propose a versatile expert or a small complementary team led by a traffic manager — that's the advantage of a network of 1,600 experts." },
+];
+
+const faqJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+});
+---
+<Base
+  title="Freelance digital marketing experts — SEO, PPC, Social Ads | digitags.work"
+  description="Vetted freelance SEO consultants, paid search and social ads experts to grow your qualified traffic and online revenue, with ROI-driven management."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Your digital marketing hub</p>
+      <h1>Acquisition, SEO, social ads: growth you can measure.</h1>
+      <p class="lead">Get access to digital marketing specialists — SEO, paid search, social ads, analytics — to grow your qualified traffic and online revenue, with data-driven management.</p>
+      <div class="hero-cta">
+        <a href="/en/contact" class="btn btn-dark">Find an expert</a>
+        <a href="#leviers" class="btn btn-outline">Explore the channels</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container split-section">
+      <div class="split-text">
+        <h2>Three channels,<br />one steering wheel.</h2>
+        <p>Capture demand with paid search, create it with social ads, consolidate it with SEO: the three channels reinforce one another when they are orchestrated together, on reliable data.</p>
+        <p>We assemble the right setup for your market — a sharp expert or a small complementary team — and you stay in control: contracted budget, transparent reporting, measurable results.</p>
+        <p>For fully managed campaigns across several European markets, our agency <a href="https://donutzdigital.com/">Donutz Digital</a> takes over.</p>
+      </div>
+      <div class="feature-panel">
+        {features.map((f) => (
+          <div class="feature-item">
+            <span class={`hex-icon ${f.color}`}></span>
+            <p>{f.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="leviers">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">Our acquisition channels</p>
+      <h2 class="section-title">An expert for every channel.</h2>
+      <div class="numbered-grid">
+        {leviers.map((l, i) => (
+          <article class="numbered-card">
+            <div>
+              <span class="num-badge">{String(i + 1).padStart(2, '0')}</span>
+              <h3><a href={l.slug} class="stretch-link" hreflang="fr">{l.title}</a></h3>
+              <p class="num-desc">{l.desc}</p>
+              <span class="arrow-link">Learn more (in French) <span aria-hidden="true">→</span></span>
+            </div>
+            <img src={l.image} alt="" loading="lazy" />
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="skills-band">
+    <div class="container">
+      <h2>Marketing skills in the network</h2>
+      <ul class="chips">
+        {skills.map((s) => <li><span class="chip">{s}</span></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <HowItWorks lang="en" />
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Recent wins.</h2>
+      <div class="reussites-grid">
+        {reussites.map((r) => (
+          <article class="reussite-card">
+            <p class="case-label label-blue">{r.tag}</p>
+            <h3>{r.title}</h3>
+            <ul>
+              {r.points.map((p) => <li>{p}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Testimonials lang="en" />
+
+  <section class="section" style="padding-top: 20px;">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">Frequently asked questions</p>
+      <h2 class="section-title">Everything about digital acquisition.</h2>
+      <div class="faq">
+        {faq.map((f) => (
+          <details class="faq-item">
+            <summary>{f.q}</summary>
+            <div class="faq-body">{f.a}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner lang="en" title="A growth target in mind?" text="Tell us what you need —<br />we'll assemble the right setup." label="Find an expert" />
+
+  <script type="application/ld+json" set:html={faqJsonLd} />
+</Base>

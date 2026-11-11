@@ -131,6 +131,20 @@ button { font-family: inherit; }
 .link-freelance { color: var(--blue); font-weight: 600; font-size: 14.5px; }
 .link-freelance:hover { text-decoration: underline; }
 
+/* Sélecteur de langue FR/EN : discret, pointe vers l'alternate de la page. */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  color: var(--ink-soft);
+}
+.lang-switch a { color: inherit; opacity: .5; }
+.lang-switch a:hover { opacity: 1; color: var(--ink); }
+.lang-switch a.active { opacity: 1; color: var(--ink); pointer-events: none; }
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -651,7 +665,8 @@ button { font-family: inherit; }
 
 @media (max-width: 720px) {
   .main-nav, .header-actions { display: none; }
-  .nav-toggle { display: flex; margin-left: auto; }
+  .lang-switch { margin-left: auto; }
+  .nav-toggle { display: flex; margin-left: 0; }
   .main-nav.open {
     display: flex;
     position: absolute;

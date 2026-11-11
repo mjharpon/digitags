@@ -1,19 +1,133 @@
 ---
 import '../styles/global.css';
+import { langOf, alternateOf } from '../lib/i18n';
 
 interface Props {
   title: string;
   description?: string;
 }
 
-const {
-  title,
-  description = "Accédez rapidement à des experts freelances sélectionnés, seuls ou en équipe, pour accélérer vos projets digitaux.",
-} = Astro.props;
-
 // URL canonique : hôte www, sans slash final (sauf l'accueil), sans ".html" (build.format 'file'), sans paramètres.
 const path = Astro.url.pathname.replace(/\.html$/, '').replace(/\/$/, '');
 const canonical = new URL(path || '/', Astro.site).href;
+
+// Langue et alternate déduits du chemin (mapping central dans src/lib/i18n.ts) :
+// le français reste à la racine, l'anglais vit sous /en/.
+const lang = langOf(path || '/');
+const en = lang === 'en';
+const alternate = alternateOf(path || '/');
+const abs = (p: string) => new URL(p, Astro.site).href;
+const frUrl = alternate ? abs(en ? alternate : path || '/') : null;
+const enUrl = alternate ? abs(en ? path || '/' : alternate) : null;
+// Sélecteur de langue : alternate de la page courante, sinon home de l'autre langue.
+const frHref = en ? (alternate ?? '/') : (path || '/');
+const enHref = en ? (path || '/') : (alternate ?? '/en');
+
+const {
+  title,
+  description = en
+    ? "Get fast access to vetted freelance experts — solo or as a team — to accelerate your digital projects."
+    : "Accédez rapidement à des experts freelances sélectionnés, seuls ou en équipe, pour accélérer vos projets digitaux.",
+} = Astro.props;
+
+// Libellés header/footer selon la langue (le blog n'est pas traduit : la nav EN
+// l'omet, le footer EN pointe vers le blog FR en le signalant).
+const nav = en
+  ? [
+      { href: '/en#expertises', label: 'Expertise' },
+      { href: '/en/ai-product-team', label: 'Team', cls: 'nav-new' },
+      { href: '/en/roles', label: 'Roles' },
+      { href: '/en/projects', label: 'Projects' },
+      { href: '/en#approche', label: 'Our approach' },
+    ]
+  : [
+      { href: '/#expertises', label: 'Expertises' },
+      { href: '/equipe-ia', label: 'Équipe', cls: 'nav-new' },
+      { href: '/metiers', label: 'Métiers' },
+      { href: '/projets', label: 'Projets' },
+      { href: '/#approche', label: 'Notre approche' },
+      { href: '/blog', label: 'Blog' },
+    ];
+
+const t = en
+  ? {
+      home: '/en',
+      homeAria: 'digitags.work — home',
+      navAria: 'Main navigation',
+      navToggle: 'Open the menu',
+      freelanceHref: '/en/become-a-freelancer',
+      freelanceLabel: "I'm a freelancer",
+      contactHref: '/en/contact',
+      contactLabel: 'Discuss your project',
+      tagline: 'The digital talent hub.',
+      colExpertises: 'Expertise',
+      colHub: 'The Hub',
+      colResources: 'Resources',
+      colContact: 'Get in touch',
+      contactFooter: 'Tell us what you need',
+      rights: 'All rights reserved',
+      privacyHref: '/en/privacy-policy',
+      privacyLabel: 'Privacy policy',
+      fExpertises: [
+        { href: '/en/design', label: 'Design & UX' },
+        { href: '/en/digital-marketing', label: 'Marketing & Acquisition' },
+        { href: '/en/product-and-project', label: 'Product & Project' },
+        { href: '/en/tech-and-data', label: 'Tech & Data' },
+        { href: '/en/hire-a-freelancer', label: 'Freelance collaboration' },
+        { href: '/en/ai-product-team', label: 'AI Product Team' },
+      ],
+      fHub: [
+        { href: '/en/roles', label: 'Roles' },
+        { href: '/en/projects', label: 'Projects' },
+        { href: '/en/studios-and-collectives', label: 'Studios & Collectives' },
+        { href: '/cas-clients', label: 'Case studies (in French)' },
+        { href: '/en/the-group', label: 'The Digitags - Donutz group' },
+        { href: 'https://donutzdigital.com/', label: 'Donutz Digital, pan-European digital marketing agency' },
+      ],
+      fResources: [
+        { href: '/blog', label: 'The Hub blog (in French)' },
+        { href: '/en/become-a-freelancer', label: 'Become a freelancer' },
+      ],
+    }
+  : {
+      home: '/',
+      homeAria: 'digitags.work — accueil',
+      navAria: 'Navigation principale',
+      navToggle: 'Ouvrir le menu',
+      freelanceHref: '/devenir-freelance',
+      freelanceLabel: 'Je suis freelance',
+      contactHref: '/contact',
+      contactLabel: 'Parler de mon projet',
+      tagline: 'Le hub des talents digitaux.',
+      colExpertises: 'Expertises',
+      colHub: 'Le Hub',
+      colResources: 'Ressources',
+      colContact: 'Nous contacter',
+      contactFooter: 'Décrire mon besoin',
+      rights: 'Tous droits réservés',
+      privacyHref: '/politique-de-protection-des-donnees',
+      privacyLabel: 'Politique de confidentialité',
+      fExpertises: [
+        { href: '/design', label: 'Design & UX' },
+        { href: '/sea-social-ads-seo', label: 'Marketing & Acquisition' },
+        { href: '/product-et-project', label: 'Product & Projet' },
+        { href: '/tech-data', label: 'Tech & Data' },
+        { href: '/recrutement-freelance', label: 'Collaboration freelance' },
+        { href: '/equipe-ia', label: 'Équipe Produit IA' },
+      ],
+      fHub: [
+        { href: '/metiers', label: 'Métiers' },
+        { href: '/projets', label: 'Projets' },
+        { href: '/studios-et-collectifs', label: 'Studios & Collectifs' },
+        { href: '/cas-clients', label: 'Cas clients' },
+        { href: '/le-groupe', label: 'Le groupe Digitags - Donutz' },
+        { href: 'https://donutzdigital.com/fr/', label: 'Donutz Digital, agence de marketing digital paneuropéenne' },
+      ],
+      fResources: [
+        { href: '/blog', label: 'Le blog du Hub' },
+        { href: '/devenir-freelance', label: 'Devenir freelance' },
+      ],
+    };
 
 // JSON-LD Organization : les @id correspondent à ceux publiés sur donutzdigital.com,
 // ce qui permet aux moteurs de relier les deux sites au même groupe Digitags - Donutz.
@@ -68,13 +182,20 @@ const orgJsonLd = JSON.stringify({
 });
 ---
 <!DOCTYPE html>
-<html lang="fr">
+<html lang={lang}>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
+  {frUrl && enUrl && (
+    <>
+      <link rel="alternate" hreflang="fr" href={frUrl} />
+      <link rel="alternate" hreflang="en" href={enUrl} />
+      <link rel="alternate" hreflang="x-default" href={frUrl} />
+    </>
+  )}
   <meta name="google-site-verification" content="xfCvpsYNHG3uy0Al2dGBGrBo4Vw4YKO--_TcwCszQ7U" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <!-- Plausible Analytics (sans cookie) — l'outil interne /talents est exclu des stats -->
@@ -88,23 +209,23 @@ const orgJsonLd = JSON.stringify({
 
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo" aria-label="digitags.work — accueil">
+      <a href={t.home} class="logo" aria-label={t.homeAria}>
         <img src="/assets/logo-mark.svg" alt="" class="logo-mark" />
         <span class="logo-text">digitags<span class="logo-tld">.work</span></span>
       </a>
-      <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
-        <a href="/#expertises">Expertises</a>
-        <a href="/equipe-ia" class="nav-new">Équipe</a>
-        <a href="/metiers">Métiers</a>
-        <a href="/projets">Projets</a>
-        <a href="/#approche">Notre approche</a>
-        <a href="/blog">Blog</a>
+      <nav class="main-nav" id="main-nav" aria-label={t.navAria}>
+        {nav.map((item) => <a href={item.href} class={item.cls}>{item.label}</a>)}
       </nav>
       <div class="header-actions">
-        <a href="/devenir-freelance" class="link-freelance">Je suis freelance</a>
-        <a href="/contact" class="btn btn-dark btn-sm">Parler de mon projet</a>
+        <a href={t.freelanceHref} class="link-freelance">{t.freelanceLabel}</a>
+        <a href={t.contactHref} class="btn btn-dark btn-sm">{t.contactLabel}</a>
       </div>
-      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
+      <nav class="lang-switch" aria-label={en ? 'Language' : 'Langue'}>
+        <a href={frHref} class={en ? undefined : 'active'} aria-current={en ? undefined : 'true'} lang="fr" hreflang="fr">FR</a>
+        <span aria-hidden="true">·</span>
+        <a href={enHref} class={en ? 'active' : undefined} aria-current={en ? 'true' : undefined} lang="en" hreflang="en">EN</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label={t.navToggle}>
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -118,49 +239,38 @@ const orgJsonLd = JSON.stringify({
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/" class="logo logo-light" aria-label="digitags.work — accueil">
+          <a href={t.home} class="logo logo-light" aria-label={t.homeAria}>
             <img src="/assets/logo-mark.svg" alt="" class="logo-mark" />
             <span class="logo-text">digitags<span class="logo-tld">.work</span></span>
           </a>
-          <p>Le hub des talents digitaux.</p>
+          <p>{t.tagline}</p>
           <div class="socials">
             <a href="https://www.linkedin.com/company/18871359" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24V8.31zM8.34 8.31h4.33v2h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.13c0-1.7-.03-3.89-2.37-3.89-2.37 0-2.73 1.85-2.73 3.76V23H8.34V8.31z"/></svg></a>
           </div>
         </div>
-        <nav class="footer-col" aria-label="Expertises">
-          <h4>Expertises</h4>
-          <a href="/design">Design &amp; UX</a>
-          <a href="/sea-social-ads-seo">Marketing &amp; Acquisition</a>
-          <a href="/product-et-project">Product &amp; Projet</a>
-          <a href="/tech-data">Tech &amp; Data</a>
-          <a href="/recrutement-freelance">Collaboration freelance</a>
-          <a href="/equipe-ia">Équipe Produit IA</a>
+        <nav class="footer-col" aria-label={t.colExpertises}>
+          <h4>{t.colExpertises}</h4>
+          {t.fExpertises.map((l) => <a href={l.href}>{l.label}</a>)}
         </nav>
-        <nav class="footer-col" aria-label="Le Hub">
-          <h4>Le Hub</h4>
-          <a href="/metiers">Métiers</a>
-          <a href="/projets">Projets</a>
-          <a href="/studios-et-collectifs">Studios &amp; Collectifs</a>
-          <a href="/cas-clients">Cas clients</a>
-          <a href="/le-groupe">Le groupe Digitags - Donutz</a>
-          <a href="https://donutzdigital.com/fr/">Donutz Digital, agence de marketing digital paneuropéenne</a>
+        <nav class="footer-col" aria-label={t.colHub}>
+          <h4>{t.colHub}</h4>
+          {t.fHub.map((l) => <a href={l.href}>{l.label}</a>)}
         </nav>
-        <nav class="footer-col" aria-label="Ressources">
-          <h4>Ressources</h4>
-          <a href="/blog">Le blog du Hub</a>
-          <a href="/devenir-freelance">Devenir freelance</a>
+        <nav class="footer-col" aria-label={t.colResources}>
+          <h4>{t.colResources}</h4>
+          {t.fResources.map((l) => <a href={l.href}>{l.label}</a>)}
         </nav>
         <div class="footer-col">
-          <h4>Nous contacter</h4>
-          <a href="/contact">Décrire mon besoin</a>
+          <h4>{t.colContact}</h4>
+          <a href={t.contactHref}>{t.contactFooter}</a>
           <a href="mailto:hello@digitags.work">hello@digitags.work</a>
           <p class="footer-cities">Paris &middot; Remote</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} digitags.work &mdash; Tous droits réservés</p>
+        <p>&copy; {new Date().getFullYear()} digitags.work &mdash; {t.rights}</p>
         <div class="footer-legal">
-          <a href="/politique-de-protection-des-donnees">Politique de confidentialité</a>
+          <a href={t.privacyHref}>{t.privacyLabel}</a>
         </div>
       </div>
     </div>
@@ -184,8 +294,12 @@ const orgJsonLd = JSON.stringify({
   <!-- Anti-bannière cookies : clin d'œil privacy, affiché une seule fois (localStorage). -->
   <div id="privacy-toast" class="privacy-toast" hidden role="status">
     <span class="pt-cookie" aria-hidden="true">🍪</span>
-    <p><strong>Pas de bannière cookies ici.</strong> On ne vous traque pas et on ne vend rien à Google &amp; co — juste une mesure d'audience anonyme, sans cookie. <a href="/politique-de-protection-des-donnees">Promis, c'est écrit.</a></p>
-    <button type="button" id="privacy-toast-close" aria-label="Fermer">✕</button>
+    {en ? (
+      <p><strong>No cookie banner here.</strong> We don't track you and we sell nothing to Google &amp; co — just anonymous, cookieless audience stats. <a href="/en/privacy-policy">Promise, it's in writing.</a></p>
+    ) : (
+      <p><strong>Pas de bannière cookies ici.</strong> On ne vous traque pas et on ne vend rien à Google &amp; co — juste une mesure d'audience anonyme, sans cookie. <a href="/politique-de-protection-des-donnees">Promis, c'est écrit.</a></p>
+    )}
+    <button type="button" id="privacy-toast-close" aria-label={en ? 'Close' : 'Fermer'}>✕</button>
   </div>
   <script is:inline>
     (function () {

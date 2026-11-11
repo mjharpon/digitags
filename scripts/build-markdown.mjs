@@ -13,7 +13,7 @@ const walk = (dir) =>
     e.isDirectory() ? walk(join(dir, e.name)) : e.name.endsWith('.html') ? [join(dir, e.name)] : []
   );
 
-const EXCLUDE = /^dist\/(404|talents|merci)\.html$|^dist\/cms\//;
+const EXCLUDE = /^dist\/(404|talents|merci)\.html$|^dist\/en\/thank-you\.html$|^dist\/cms\//;
 
 const td = new TurndownService({ headingStyle: 'atx', codeBlockStyle: 'fenced', bulletListMarker: '-' });
 td.remove(['script', 'style', 'noscript', 'form', 'button', 'svg', 'iframe']);

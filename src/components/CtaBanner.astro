@@ -1,11 +1,23 @@
 ---
-const { title = "Parlons de votre<br />prochain projet.", text = "Décrivez-nous votre besoin,<br />nous revenons vers vous rapidement.", label = "Décrire mon besoin" } = Astro.props;
+// Bandeau CTA de bas de page. Bilingue : lang="en" sert les textes anglais
+// et pointe vers /en/contact (défaut : fr, inchangé). Les props title/text/label
+// permettent toujours de personnaliser page par page.
+const { lang = 'fr' } = Astro.props;
+const en = lang === 'en';
+
+const {
+  title = en ? "Let's talk about your<br />next project." : "Parlons de votre<br />prochain projet.",
+  text = en ? "Tell us what you need —<br />we'll get back to you quickly." : "Décrivez-nous votre besoin,<br />nous revenons vers vous rapidement.",
+  label = en ? "Tell us what you need" : "Décrire mon besoin",
+} = Astro.props;
+
+const contactHref = en ? '/en/contact' : '/contact';
 ---
 <section class="cta">
   <div class="container cta-inner">
     <h2 set:html={title} />
     <p set:html={text} />
-    <a href="/contact" class="btn btn-dark">{label}</a>
+    <a href={contactHref} class="btn btn-dark">{label}</a>
     <div class="cta-shapes" aria-hidden="true">
       <span class="shape shape-white-hex"></span>
       <span class="shape shape-blue-sm"></span>

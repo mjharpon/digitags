@@ -1,0 +1,189 @@
+---
+// Version anglaise de src/pages/devenir-freelance.astro : même endpoint
+// /api/candidature, champ caché lang=en (email de bienvenue EN, erreurs localisées).
+// Les values des spécialités restent celles de Supabase (job_groups.name, en FR).
+import Base from '../../layouts/Base.astro';
+
+const specialites = [
+  { value: "Content (CM, Vidéo, Rédac, UX Writing)", label: "Content (social media, video, copywriting, UX writing)" },
+  { value: "Data Science", label: "Data Science" },
+  { value: "Design", label: "Design" },
+  { value: "Développement", label: "Development" },
+  { value: "Product, PO & Project", label: "Product, PO & Project" },
+  { value: "SEA, Social Ads, Prog & SEO", label: "Paid search, social ads, programmatic & SEO" },
+];
+---
+<Base
+  title="Become a Hub freelancer — get listed in 30 seconds | digitags.work"
+  description="Become a digitags.work Hub freelancer: list your profile in 30 seconds and receive missions matched to your role and your daily rate."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">I'm a freelancer</p>
+      <h1>Get listed in 30 seconds.</h1>
+      <p class="lead">Join the Hub and receive mission proposals matched to your role, your seniority and your daily rate. Your data stays private: only the digitags team can access it, and you can request its deletion at any time at <a href="mailto:hello@digitags.work">hello@digitags.work</a>.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 20px;">
+    <div class="container contact-wrap">
+
+      <form class="form-card" id="freelance-form" novalidate>
+        <input type="hidden" name="lang" value="en" />
+        <p class="hp-field" aria-hidden="true">
+          <label>Your website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+        </p>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="prenom">First name *</label>
+            <input type="text" id="prenom" name="prenom" required autocomplete="given-name" />
+          </div>
+          <div class="field">
+            <label for="nom">Last name *</label>
+            <input type="text" id="nom" name="nom" required autocomplete="family-name" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="tjm">Your daily rate in € *</label>
+            <input type="number" id="tjm" name="tjm" required min="50" max="5000" step="5" placeholder="600" />
+            <p class="field-hint">Remember to include the 15% digitags commission.</p>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="dispo">Available from *</label>
+            <input type="date" id="dispo" name="dispo" required />
+          </div>
+          <div class="field">
+            <label for="specialite">Specialty *</label>
+            <select id="specialite" name="specialite" required>
+              <option value="">— Choose —</option>
+              {specialites.map((s) => <option value={s.value}>{s.label}</option>)}
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="job">Your job *</label>
+          <input type="text" id="job" name="job" required placeholder="Senior UX Designer, React Developer, SEO Consultant…" />
+        </div>
+
+        <div class="field">
+          <label for="references">Your best client references *</label>
+          <input type="text" id="references" name="references" required placeholder="L'Oréal, Tesla, Decathlon… (separated by commas)" />
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="cv">Your CV/resume *</label>
+            <input type="file" id="cv" name="cv" required accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" />
+            <p class="field-hint">PDF, JPG or PNG — 10&nbsp;MB max. A PDF enables search by skills.</p>
+          </div>
+          <div class="field">
+            <label for="photo">Your photo</label>
+            <input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png,image/jpeg,image/png" />
+            <p class="field-hint">JPG or PNG — optional, for your profile preview.</p>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="portfolio">Your portfolio (link)</label>
+            <input type="url" id="portfolio" name="portfolio" placeholder="https://…" />
+          </div>
+          <div class="field">
+            <label for="portfolio_pdf">Portfolio (file)</label>
+            <input type="file" id="portfolio_pdf" name="portfolio_pdf" accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" />
+            <p class="field-hint">PDF, JPG or PNG — 10&nbsp;MB max.</p>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="check-pills">
+            <label><input type="checkbox" name="anglais" checked /><span>I speak fluent English</span></label>
+            <label><input type="checkbox" name="cdi" /><span>I'm open to a permanent position</span></label>
+            <label><input type="checkbox" name="pas_visible" /><span>I do <strong>not</strong> want the anonymised preview of my profile to appear on the site or in the newsletter</span></label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="notes">Your preferences</label>
+          <textarea id="notes" name="notes" placeholder="Types of missions you're after, industries, remote/on-site, days per week…"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-dark" id="freelance-submit">Join the Hub</button>
+        <p id="freelance-error" style="color: var(--red); font-size: 13.5px; margin-top: 12px;" hidden></p>
+
+        <div id="freelance-success" class="form-success" hidden>
+          <h2>Welcome to the Hub&nbsp;🎉</h2>
+          <p>Your profile has been saved. We'll get back to you as soon as a mission matches your role and your preferences. For any question or to delete your data: <a href="mailto:hello@digitags.work">hello@digitags.work</a>.</p>
+        </div>
+      </form>
+
+      <aside class="contact-aside">
+        <h2>Why join the Hub?</h2>
+        <ul class="aside-list">
+          <li><span class="hex-icon hex-icon-blue"></span> Qualified missions, not endless tenders</li>
+          <li><span class="hex-icon hex-icon-yellow"></span> A network of 1,600 peers, going for 8 years</li>
+          <li><span class="hex-icon hex-icon-red"></span> You stay in charge of your rate and your choices</li>
+        </ul>
+        <p>Your data is never published in the clear: clients only see an anonymised profile, and only if you agree. Details in our <a href="/en/privacy-policy">data protection policy</a>.</p>
+        <p style="margin-top:22px;">A question?<br /><a href="mailto:hello@digitags.work">hello@digitags.work</a></p>
+      </aside>
+
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('freelance-form') as HTMLFormElement;
+    const errBox = document.getElementById('freelance-error') as HTMLParagraphElement;
+    const MAX = 10 * 1024 * 1024;
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errBox.hidden = true;
+      if (!form.reportValidity()) return;
+
+      // Contrôle de taille côté client avant l'envoi.
+      for (const name of ['cv', 'photo', 'portfolio_pdf']) {
+        const input = form.elements.namedItem(name) as HTMLInputElement;
+        const file = input?.files?.[0];
+        if (file && file.size > MAX) {
+          errBox.textContent = `The file "${file.name}" exceeds 10 MB.`;
+          errBox.hidden = false;
+          input.focus();
+          return;
+        }
+      }
+
+      const btn = document.getElementById('freelance-submit') as HTMLButtonElement;
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      try {
+        const res = await fetch('/api/candidature', { method: 'POST', body: new FormData(form) });
+        const data = await res.json().catch(() => ({ ok: false }));
+        if (!res.ok || !data.ok) throw new Error(data.error || 'Server error');
+        for (const el of Array.from(form.children)) {
+          if ((el as HTMLElement).id !== 'freelance-success') (el as HTMLElement).style.display = 'none';
+        }
+        (document.getElementById('freelance-success') as HTMLElement).hidden = false;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (err) {
+        errBox.textContent = err instanceof Error && err.message !== 'Server error'
+          ? err.message
+          : 'Sending failed — please try again, or send your CV to hello@digitags.work.';
+        errBox.hidden = false;
+        btn.disabled = false;
+        btn.textContent = 'Join the Hub';
+      }
+    });
+  </script>
+</Base>

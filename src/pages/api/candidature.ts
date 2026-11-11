@@ -6,6 +6,7 @@ export const prerender = false;
 
 import type { APIRoute } from 'astro';
 import { emailBienvenue } from '../../lib/email-bienvenue';
+import { emailWelcomeEn } from '../../lib/email-welcome-en';
 
 const MAX_SIZE = 10 * 1024 * 1024; // 10 Mo
 const NOTIFY_URL = 'https://digitags-notify.mjharpon-pro.workers.dev';
@@ -36,6 +37,9 @@ export const POST: APIRoute = async ({ request, locals }) => {
   if (form.get('website')) return json(200, { ok: true });
 
   const get = (k: string) => String(form.get(k) ?? '').trim();
+  // Formulaire anglais (/en/become-a-freelancer) : champ caché lang=en.
+  const en = get('lang') === 'en';
+  const msg = (fr: string, enMsg: string) => (en ? enMsg : fr);
   const prenom = get('prenom');
   const nom = get('nom');
   const email = get('email');
@@ -45,14 +49,14 @@ export const POST: APIRoute = async ({ request, locals }) => {
   const job = get('job');
 
   if (!prenom || !nom || !email || !tjm || !dispo || !specialite || !job) {
-    return json(400, { ok: false, error: 'Merci de remplir tous les champs obligatoires.' });
+    return json(400, { ok: false, error: msg('Merci de remplir tous les champs obligatoires.', 'Please fill in all the required fields.') });
   }
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-    return json(400, { ok: false, error: 'Adresse email invalide.' });
+    return json(400, { ok: false, error: msg('Adresse email invalide.', 'Invalid email address.') });
   }
 
   const cv = form.get('cv') as File | null;
-  if (!cv || cv.size === 0) return json(400, { ok: false, error: 'Le CV est obligatoire.' });
+  if (!cv || cv.size === 0) return json(400, { ok: false, error: msg('Le CV est obligatoire.', 'The CV/resume is required.') });
 
   const files: { field: string; file: File; types: string[] }[] = [
     { field: 'cv', file: cv, types: DOC_TYPES },
@@ -63,8 +67,8 @@ export const POST: APIRoute = async ({ request, locals }) => {
   if (portfolioPdf && portfolioPdf.size > 0) files.push({ field: 'portfolio_pdf', file: portfolioPdf, types: DOC_TYPES });
 
   for (const f of files) {
-    if (f.file.size > MAX_SIZE) return json(400, { ok: false, error: `Fichier « ${f.field} » trop lourd (10 Mo max).` });
-    if (!f.types.includes(f.file.type)) return json(400, { ok: false, error: `Format non accepté pour « ${f.field} ».` });
+    if (f.file.size > MAX_SIZE) return json(400, { ok: false, error: msg(`Fichier « ${f.field} » trop lourd (10 Mo max).`, `File "${f.field}" is too large (10 MB max).`) });
+    if (!f.types.includes(f.file.type)) return json(400, { ok: false, error: msg(`Format non accepté pour « ${f.field} ».`, `Unsupported format for "${f.field}".`) });
   }
 
   // Résolution de la spécialité → famille de métiers.
@@ -102,7 +106,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
       await upload('docs-internes', `candidatures/${id}/portfolio.${extOf(portfolioPdf, 'pdf')}`, portfolioPdf);
     }
   } catch {
-    return json(500, { ok: false, error: "L'envoi des fichiers a échoué — réessayez ou écrivez-nous." });
+    return json(500, { ok: false, error: msg("L'envoi des fichiers a échoué — réessayez ou écrivez-nous.", 'The file upload failed — please try again or email us.') });
   }
 
   // Références clients → HTML simple.
@@ -129,7 +133,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
     photo_url: photoUrl,
     reference_html: referenceHtml,
     preferences_html: notes ? `<p>${esc(notes)}</p>` : null,
-    notes_html: `<p>Inscription via le site le ${new Date().toLocaleDateString('fr-FR')}</p>`,
+    notes_html: `<p>Inscription via le site le ${new Date().toLocaleDateString('fr-FR')}${en ? ' (formulaire EN)' : ''}</p>`,
   };
 
   const ins = await fetch(`${url}/rest/v1/profiles`, {
@@ -137,7 +141,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
     headers: { ...H, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
     body: JSON.stringify(row),
   });
-  if (!ins.ok) return json(500, { ok: false, error: "L'enregistrement a échoué — réessayez ou écrivez-nous." });
+  if (!ins.ok) return json(500, { ok: false, error: msg("L'enregistrement a échoué — réessayez ou écrivez-nous.", 'Saving your profile failed — please try again or email us.') });
 
   // Notification email à l'équipe (best effort : la fiche est déjà en base).
   if (notifySecret) {
@@ -158,7 +162,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
         headers: { Authorization: `Bearer ${notifySecret}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({
           replyTo: email,
-          subject: `Nouvelle inscription freelance — ${prenom} ${nom} (${job})`,
+          subject: `Nouvelle inscription freelance — ${prenom} ${nom} (${job})${en ? ' (formulaire EN)' : ''}`,
           html: `
             <h2 style="font-family:sans-serif;">Nouveau freelance inscrit via digitags.work</h2>
             <table style="font-family:sans-serif;font-size:14px;border-collapse:collapse;">
@@ -192,8 +196,8 @@ export const POST: APIRoute = async ({ request, locals }) => {
           from: 'digitags.work <talents@digitags.work>',
           to: [email],
           reply_to: 'hello@digitags.work',
-          subject: `Bienvenue dans le Hub, ${prenom} 👋`,
-          html: emailBienvenue(prenom, job),
+          subject: en ? `Welcome to the Hub, ${prenom} 👋` : `Bienvenue dans le Hub, ${prenom} 👋`,
+          html: en ? emailWelcomeEn(prenom, job) : emailBienvenue(prenom, job),
         }),
       });
     } catch { /* l'inscription n'échoue jamais à cause de l'email de bienvenue */ }

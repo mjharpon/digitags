@@ -1,0 +1,183 @@
+---
+// Version anglaise de src/pages/le-groupe.astro (wording groupe validé :
+// « European digital group », « hub of 1,600+ vetted digital freelancers »,
+// « pan-European digital marketing agency »).
+import Base from '../../layouts/Base.astro';
+
+const etapes = [
+  { title: "The hub assembles the team.", desc: "An expert, a complementary team or a studio, depending on the project." },
+  { title: "The agency takes over on acquisition.", desc: "When a project needs paid media or SEO on one or several European markets, Donutz Digital runs it." },
+  { title: "One single point of contact.", desc: "We handle the coordination between the freelancers and the agency." },
+];
+---
+<Base
+  title="The Digitags - Donutz group: a European digital group | digitags.work"
+  description="digitags.work is part of the European digital group Digitags - Donutz, with Donutz Digital, a pan-European digital marketing agency. See how the hub and the agency work together."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">The group</p>
+      <h1>Digitags - Donutz: a European digital group</h1>
+      <p class="lead">Two companies, one group. digitags.work is a hub of 1,600+ vetted digital freelancers. Donutz Digital is a pan-European digital marketing agency. Together, they bring the talent, the strategy and the media.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">How the group is organised.</h2>
+      <div class="org-chart">
+        <article class="org-card org-holding">
+          <span class="hex-icon hex-icon-yellow" aria-hidden="true"></span>
+          <h3>Digitags - Donutz</h3>
+          <p class="org-role">Holding company &middot; Paris</p>
+        </article>
+        <div class="org-stem" aria-hidden="true"></div>
+        <div class="org-row">
+          <article class="org-card">
+            <span class="hex-icon hex-icon-blue" aria-hidden="true"></span>
+            <h3>digitags.work</h3>
+            <p class="org-role">The hub of 1,600+ digital freelancers</p>
+            <p class="org-desc">A closed network of freelancers in design, marketing, product, tech, data and AI, selected and recommended by their peers.</p>
+          </article>
+          <article class="org-card">
+            <span class="hex-icon hex-icon-red" aria-hidden="true"></span>
+            <h3>Donutz Digital</h3>
+            <p class="org-role">Pan-European digital marketing agency</p>
+            <p class="org-desc">Google Ads, social ads, programmatic, SEO, creative and analytics, run by a senior team from France, Lithuania and Ireland.</p>
+            <p class="org-link"><a href="https://donutzdigital.com/" class="arrow-link">Discover the agency <span aria-hidden="true">→</span></a></p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">How the two work together.</h2>
+      <div class="benefits-grid">
+        {etapes.map((e, i) => (
+          <article class="benefit-card">
+            <span class="num-round">{String(i + 1).padStart(2, '0')}</span>
+            <h3>{e.title}</h3>
+            <p>{e.desc}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Who do you need?</h2>
+      <div class="reussites-grid cols-2">
+        <article class="benefit-card benefit-card-cta">
+          <h3>You're looking for talent</h3>
+          <p>An expert, a complementary team or a studio from the network: tell us what you need, we'll assemble the right setup.</p>
+          <p class="bc-cta"><a href="/en/contact" class="btn btn-dark">Tell us what you need</a></p>
+        </article>
+        <article class="benefit-card benefit-card-cta">
+          <h3>You're looking for growth in Europe</h3>
+          <p>Paid media, SEO, creative, analytics: the pan-European digital marketing agency Donutz Digital runs your acquisition.</p>
+          <p class="bc-cta"><a href="https://donutzdigital.com/contact/" class="btn btn-outline">Contact Donutz Digital</a></p>
+        </article>
+      </div>
+      <p style="text-align:center; margin-top: 28px;">
+        <a href="https://donutzdigital.com/le-groupe/" class="arrow-link">See the group page on the agency's site <span aria-hidden="true">→</span></a>
+      </p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* Organigramme du groupe : connecteurs en CSS, pas de librairie (copie de le-groupe.astro). */
+  .org-chart { max-width: 760px; margin: 0 auto; }
+  .org-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 24px 26px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .org-card .hex-icon { width: 26px; height: 30px; }
+  .org-card h3 { margin: 12px 0 4px; font-size: 18px; }
+  .org-role { color: var(--ink-soft); font-size: 14px; margin: 0; }
+  .org-desc { color: var(--ink-soft); font-size: 14px; line-height: 1.55; margin: 10px 0 0; }
+  .org-link { margin: 12px 0 0; }
+
+  .org-holding {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: var(--white);
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+    height: auto;
+  }
+  .org-holding h3 { color: var(--white); }
+  .org-holding .org-role { color: rgba(255, 255, 255, 0.72); }
+  .org-holding .hex-icon::after { background: var(--navy); }
+
+  /* Connecteurs */
+  .org-stem { width: 2px; height: 28px; margin: 0 auto; background: var(--ink-faint); opacity: 0.5; }
+  .org-row { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; padding-top: 28px; }
+  .org-row::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    background: var(--ink-faint);
+    opacity: 0.5;
+  }
+  .org-row .org-card { position: relative; }
+  .org-row .org-card::before {
+    content: "";
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    margin-left: -1px;
+    width: 2px;
+    height: 28px;
+    background: var(--ink-faint);
+    opacity: 0.5;
+  }
+
+  /* Mobile : cartes empilées, connecteur vertical entre chaque. */
+  @media (max-width: 720px) {
+    .org-row { grid-template-columns: 1fr; padding-top: 0; }
+    .org-row::before { display: none; }
+    .org-row .org-card { margin-top: 28px; }
+  }
+
+  /* Alignement des titres et paragraphes entre cartes d'une même rangée :
+     les cartes partagent les pistes de la grille parente (subgrid), donc un
+     titre sur 2 lignes réserve la même hauteur dans les cartes voisines. */
+  @supports (grid-template-rows: subgrid) {
+    @media (min-width: 721px) {
+      .org-row .org-card {
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 5; /* hexagone / titre / rôle / description / lien */
+        align-content: start;
+      }
+      .reussites-grid.cols-2 { row-gap: 0; }
+      .benefit-card-cta {
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 3; /* titre / paragraphe / bouton */
+      }
+    }
+    /* benefits-grid passe à 2 colonnes sous 980px : subgrid seulement en rangée unique. */
+    @media (min-width: 981px) {
+      .benefits-grid { row-gap: 0; }
+      .benefits-grid .benefit-card {
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 3; /* numéro / titre / paragraphe */
+        align-content: start;
+      }
+    }
+  }
+</style>
