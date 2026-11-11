@@ -16,6 +16,7 @@ const PRIORITY_RULES = [
   { re: /^\/politique-de-protection-des-donnees$/, priority: 0.2, changefreq: 'yearly' },
   // Pages anglaises (/en/) : miroir des priorités FR, un cran en dessous.
   { re: /^\/en$/, priority: 0.9, changefreq: 'weekly' },
+  { re: /^\/en\/roles\//, priority: 0.7, changefreq: 'monthly' },
   { re: /^\/en\/(contact|the-group)$/, priority: 0.5, changefreq: 'yearly' },
   { re: /^\/en\/privacy-policy$/, priority: 0.2, changefreq: 'yearly' },
   { re: /^\/en\//, priority: 0.6, changefreq: 'monthly' },

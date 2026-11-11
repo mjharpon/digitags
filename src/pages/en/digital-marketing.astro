@@ -14,10 +14,10 @@ const features = [
 ];
 
 const leviers = [
-  { slug: "/metiers/freelance-seo", title: "SEO & Content", desc: "Lasting visibility and organic growth: editorial strategy, technical optimisation, content that ranks — like the 30.4K keywords won in 6 months for Mon Compte Formation.", image: "/uploads/metiers/freelance-seo-cover.webp" },
-  { slug: "/metiers/expert-sea-freelance", title: "Paid Search — Google Ads", desc: "Capture existing demand with well-structured Search, Shopping and YouTube campaigns, optimised bidding and acquisition costs kept under control.", image: "/uploads/metiers/traffic-manager-freelance-0.webp" },
-  { slug: "/metiers/expert-social-ads-freelance", title: "Social Ads — Meta, LinkedIn, TikTok", desc: "Create demand with finely tuned audiences and continuously tested creatives: B2B leads on LinkedIn, B2C sales on Meta and TikTok.", image: "/uploads/metiers/community-manager-freelance-0.jpg" },
-  { slug: "/metiers/traffic-manager-freelance", title: "Traffic Management & Analytics", desc: "Orchestrate every channel, make measurement reliable (GA4, tagging plan) and shift budgets to where they actually pay off.", image: "/uploads/metiers/traffic-manager-freelance-cover.webp" },
+  { slug: "/en/roles/freelance-seo-consultant", title: "SEO & Content", desc: "Lasting visibility and organic growth: editorial strategy, technical optimisation, content that ranks — like the 30.4K keywords won in 6 months for Mon Compte Formation.", image: "/uploads/metiers/freelance-seo-cover.webp" },
+  { slug: "/en/roles/freelance-google-ads-expert", title: "Paid Search — Google Ads", desc: "Capture existing demand with well-structured Search, Shopping and YouTube campaigns, optimised bidding and acquisition costs kept under control.", image: "/uploads/metiers/traffic-manager-freelance-0.webp" },
+  { slug: "/en/roles/freelance-social-ads-expert", title: "Social Ads — Meta, LinkedIn, TikTok", desc: "Create demand with finely tuned audiences and continuously tested creatives: B2B leads on LinkedIn, B2C sales on Meta and TikTok.", image: "/uploads/metiers/community-manager-freelance-0.jpg" },
+  { slug: "/en/roles/freelance-traffic-manager", title: "Traffic Management & Analytics", desc: "Orchestrate every channel, make measurement reliable (GA4, tagging plan) and shift budgets to where they actually pay off.", image: "/uploads/metiers/traffic-manager-freelance-cover.webp" },
 ];
 
 const reussites = [
@@ -89,9 +89,9 @@ const faqJsonLd = JSON.stringify({
           <article class="numbered-card">
             <div>
               <span class="num-badge">{String(i + 1).padStart(2, '0')}</span>
-              <h3><a href={l.slug} class="stretch-link" hreflang="fr">{l.title}</a></h3>
+              <h3><a href={l.slug} class="stretch-link">{l.title}</a></h3>
               <p class="num-desc">{l.desc}</p>
-              <span class="arrow-link">Learn more (in French) <span aria-hidden="true">→</span></span>
+              <span class="arrow-link">Learn more <span aria-hidden="true">→</span></span>
             </div>
             <img src={l.image} alt="" loading="lazy" />
           </article>

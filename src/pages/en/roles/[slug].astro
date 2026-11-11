@@ -1,0 +1,15 @@
+---
+// Fiches métiers anglaises (/en/roles/<slug>). Le template (parseur de sections,
+// rendu, maillage) est factorisé dans src/components/FicheMetier.astro, partagé
+// avec /metiers/ : une fiche FR et sa traduction rendent les mêmes sections.
+import { getCollection } from 'astro:content';
+import FicheMetier from '../../../components/FicheMetier.astro';
+
+export async function getStaticPaths() {
+  const fiches = await getCollection('metiers-en', ({ data }) => !data.draft);
+  return fiches.map((fiche) => ({ params: { slug: fiche.id }, props: { fiche } }));
+}
+
+const { fiche } = Astro.props;
+---
+<FicheMetier fiche={fiche} lang="en" />

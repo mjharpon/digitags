@@ -1,15 +1,16 @@
 ---
-// Version anglaise de src/pages/metiers.astro. Les fiches métiers ne sont pas
-// traduites en phase 1 : titres et descriptions EN statiques ci-dessous,
-// liens vers les fiches FR, images reprises de la collection.
+// Version anglaise de src/pages/metiers.astro. Les fiches métiers EN vivent
+// dans la collection metiers-en (/en/roles/<slug>) ; descriptions courtes EN
+// ci-dessous, images reprises de la collection FR (mêmes visuels).
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import CtaBanner from '../../components/CtaBanner.astro';
+import { METIER_SLUGS } from '../../lib/i18n';
 
 const all = await getCollection('metiers', ({ data }) => !data.draft);
 const bySlug = new Map(all.map((m) => [m.id, m]));
 
-// slug FR → libellé et description EN (fiches liées en français).
+// slug FR → libellé et description EN (liens vers les fiches EN via METIER_SLUGS).
 const FICHES: Record<string, { title: string; desc: string }> = {
   'ux-designer-freelance': { title: 'Freelance UX Designer', desc: 'Research, journeys and wireframes: experiences designed around your users.' },
   'ui-designer-freelance': { title: 'Freelance UI Designer', desc: 'Interfaces that are consistent, accessible and true to your brand.' },
@@ -19,14 +20,14 @@ const FICHES: Record<string, { title: string; desc: string }> = {
   'chef-de-projet-freelance': { title: 'Freelance Project Manager', desc: 'Planning, coordination and follow-through until delivery.' },
   'coach-agile': { title: 'Freelance Agile Coach', desc: 'Rituals, flow and autonomy: teams that deliver better.' },
   'freelance-seo': { title: 'Freelance SEO Consultant', desc: 'Technical foundations, content and authority for lasting visibility.' },
-  'expert-sea-freelance': { title: 'Freelance Paid Search Expert', desc: 'Google Ads campaigns steered by acquisition cost.' },
+  'expert-sea-freelance': { title: 'Freelance Google Ads Expert', desc: 'Google Ads campaigns steered by acquisition cost.' },
   'expert-social-ads-freelance': { title: 'Freelance Social Ads Expert', desc: 'Meta, LinkedIn, TikTok: audiences and creatives that perform.' },
   'traffic-manager-freelance': { title: 'Freelance Traffic Manager', desc: 'Every channel orchestrated, budgets shifted to what pays off.' },
   'community-manager-freelance': { title: 'Freelance Community Manager', desc: 'A living social presence that serves your brand.' },
   'account-manager-freelance': { title: 'Freelance Account Manager', desc: 'The point of contact who keeps clients and projects on track.' },
-  'developpeur-front-end-freelance': { title: 'Front-End Developer', desc: 'Fast, accessible interfaces, faithful to the design.' },
-  'developpeur-back-end-freelance': { title: 'Back-End Developer', desc: 'Robust APIs and architectures that scale.' },
-  'full-stack-developpeur-freelance': { title: 'Full-Stack Developer', desc: 'One profile across the whole chain, from database to interface.' },
+  'developpeur-front-end-freelance': { title: 'Freelance Front-End Developer', desc: 'Fast, accessible interfaces, faithful to the design.' },
+  'developpeur-back-end-freelance': { title: 'Freelance Back-End Developer', desc: 'Robust APIs and architectures that scale.' },
+  'full-stack-developpeur-freelance': { title: 'Freelance Full-Stack Developer', desc: 'One profile across the whole chain, from database to interface.' },
   'developeur-web-freelance': { title: 'Freelance Web Developer', desc: 'Websites and web apps built to last.' },
 };
 
@@ -103,7 +104,7 @@ const faqJsonLd = JSON.stringify({
     <div class="container">
       <p class="eyebrow">The Hub's roles</p>
       <h1>Staff your teams, role by role.</h1>
-      <p class="lead">From technology to marketing, the network covers every digital role. Explore the most sought-after profiles — each guide (in French) details the role, the skills and when to call on it.</p>
+      <p class="lead">From technology to marketing, the network covers every digital role. Explore the most sought-after profiles — each guide details the role, the skills and when to call on it.</p>
       <div class="hero-cta">
         <a href="/en/contact" class="btn btn-dark">Find a freelancer</a>
       </div>
@@ -147,9 +148,9 @@ const faqJsonLd = JSON.stringify({
                 <article class="numbered-card">
                   <div>
                     <span class="num-badge">{String(i + 1).padStart(2, '0')}</span>
-                    <h3><a href={`/metiers/${m.slug}`} class="stretch-link" hreflang="fr">{m.title}</a></h3>
+                    <h3><a href={`/en/roles/${METIER_SLUGS[m.slug]}`} class="stretch-link">{m.title}</a></h3>
                     <p class="num-desc">{m.desc}</p>
-                    <span class="arrow-link">Read the guide (in French) <span aria-hidden="true">→</span></span>
+                    <span class="arrow-link">Read the guide <span aria-hidden="true">→</span></span>
                   </div>
                   {m.image && <img src={m.image} alt="" loading="lazy" />}
                 </article>

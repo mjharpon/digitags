@@ -1,0 +1,297 @@
+---
+// Template commun des fiches métiers FR (/metiers/<slug>) et EN (/en/roles/<slug>).
+// Factorisation de src/pages/metiers/[slug].astro : le parseur de sections est
+// UNIQUE, donc une fiche FR et sa traduction EN rendent les mêmes types de
+// sections aux mêmes endroits (split / cartes / timeline / accomp / texte).
+// Seuls changent les libellés, le maillage et le bloc blog (FR uniquement).
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Breadcrumb from './Breadcrumb.astro';
+
+interface Props { fiche: any; lang?: 'fr' | 'en' }
+const { fiche, lang = 'fr' } = Astro.props;
+const en = lang === 'en';
+
+// ---- Découpage du HTML rendu en sections structurées (modèle fiches projets) ----
+const strip = (h: string) => h.replace(/<[^>]+>/g, '').replace(/[‍​﻿]/g, '').trim();
+const firstImg = (h: string) => h.match(/<img[^>]*src="([^"]+)"[^>]*>/)?.[1];
+const dropImgs = (h: string) => h.replace(/<figure[\s\S]*?<\/figure>/g, '').replace(/<img[^>]*>/g, '').replace(/<p>\s*<\/p>/g, '');
+
+const rawHtml: string = (fiche as any).rendered?.html ?? '';
+const parts = rawHtml.split(/<h2[^>]*>([\s\S]*?)<\/h2>/);
+const preamble = parts[0] ?? '';
+
+type Item = { title: string; text: string };
+type Sec =
+  | { kind: 'split'; title: string; html: string; image?: string }
+  | { kind: 'cards'; title: string; intro: string; items: Item[]; numbered: boolean }
+  | { kind: 'timeline'; title: string; intro: string; steps: { title: string; html: string }[] }
+  | { kind: 'accomp'; title: string; html: string; image?: string }
+  | { kind: 'text'; title: string; html: string };
+
+// Liste <ol>/<ul> → cartes si les éléments sont courts et homogènes.
+const listToItems = (listHtml: string): Item[] =>
+  [...listHtml.matchAll(/<li>([\s\S]*?)<\/li>/g)].map((m) => {
+    const html = m[1];
+    const bold = html.match(/^\s*(?:<p>)?\s*<strong>([\s\S]{3,70}?)<\/strong>\s*:?\s*([\s\S]*)$/);
+    if (bold) return { title: strip(bold[1]).replace(/\s*:$/, ''), text: strip(bold[2]) };
+    const t = strip(html);
+    const sep = t.match(/^(.{3,60}?)\s*:\s*([\s\S]+)$/);
+    return sep
+      ? { title: sep[1].charAt(0).toUpperCase() + sep[1].slice(1), text: sep[2].charAt(0).toUpperCase() + sep[2].slice(1) }
+      : { title: '', text: t };
+  });
+
+// Dernière section « accompagnement » : mêmes déclencheurs FR + équivalents EN.
+const ACCOMP_RE = /digitags|confiez|faites appel|recruter (?:un|les bons)|pourquoi (?:travailler|choisir)|trouver (?:un|votre)|work with|hire|find (?:the|your)|why (?:work|choose)/i;
+
+const sections: Sec[] = [];
+const heroImage = fiche.data.image;
+let pendingImage: string | undefined;
+let splitDone = false;
+
+for (let i = 1; i < parts.length; i += 2) {
+  const title = strip(parts[i]);
+  const body = parts[i + 1] ?? '';
+  const text = strip(body);
+  // L'image du hero ne doit jamais réapparaître dans le corps (doublon visuel).
+  const rawImg = firstImg(body);
+  const img = rawImg === heroImage ? undefined : rawImg;
+
+  if (rawImg && text.length < 60) { pendingImage = img; continue; }
+
+  const h3s = body.split(/<h3[^>]*>([\s\S]*?)<\/h3>/);
+  const listMatch = body.match(/<(ol|ul)>([\s\S]*?)<\/\1>/);
+  const isLast = i >= parts.length - 2;
+
+  // Un seul bloc « accompagnement » par fiche : la dernière section digitags.
+  if (isLast && ACCOMP_RE.test(title)) {
+    sections.push({ kind: 'accomp', title, html: dropImgs(body), image: img ?? pendingImage });
+    pendingImage = undefined;
+  } else if (h3s.length >= 7) {
+    const steps = [];
+    for (let j = 1; j < h3s.length; j += 2) {
+      const st = strip(h3s[j]).replace(/^(?:étape|step)\s*\d+\s*:\s*/i, '');
+      steps.push({ title: st.charAt(0).toUpperCase() + st.slice(1), html: dropImgs(h3s[j + 1] ?? '') });
+    }
+    sections.push({ kind: 'timeline', title, intro: dropImgs(h3s[0] ?? ''), steps });
+  } else if (listMatch && !body.includes('<h3')) {
+    const items = listToItems(listMatch[2]);
+    const short = items.length >= 2 && items.length <= 6 && items.every((it) => it.text.length < 420);
+    if (short) {
+      sections.push({ kind: 'cards', title, intro: strip(body.split(listMatch[0])[0]), items, numbered: listMatch[1] === 'ol' });
+    } else {
+      sections.push({ kind: 'text', title, html: dropImgsKeepFirst(body) });
+    }
+  } else if (!splitDone && (img || pendingImage)) {
+    sections.push({ kind: 'split', title, html: dropImgs(body), image: img ?? pendingImage });
+    pendingImage = undefined;
+    splitDone = true;
+  } else {
+    sections.push({ kind: 'text', title, html: dropImgsKeepFirst(body) });
+  }
+}
+
+// Les sections texte gardent leur visuel éventuel (affiché en pleine largeur par .fiche-body img).
+function dropImgsKeepFirst(h: string) { return h; }
+
+const lead = [...preamble.matchAll(/<p>([\s\S]*?)<\/p>/g)].map((m) => strip(m[1])).filter(Boolean).slice(0, 2).join(' ');
+
+const { Content } = await render(fiche);
+const parsed = sections.length > 1;
+
+// ---- Libellés et maillage interne selon la langue ----
+const SERVICE_BY_CATEGORY: Record<string, { href: string; label: string }> = en
+  ? {
+      design: { href: '/en/design', label: 'Design & UX' },
+      webmarketing: { href: '/en/digital-marketing', label: 'Marketing & Acquisition' },
+      product: { href: '/en/product-and-project', label: 'Product & Project' },
+      'tech-et-data': { href: '/en/tech-and-data', label: 'Tech & Data' },
+      freelancer: { href: '/en/hire-a-freelancer', label: 'Freelance collaboration' },
+      recrutement: { href: '/en/hire-a-freelancer', label: 'Freelance collaboration' },
+    }
+  : {
+      design: { href: '/design', label: 'Design & UX' },
+      webmarketing: { href: '/sea-social-ads-seo', label: 'Marketing & Acquisition' },
+      product: { href: '/product-et-project', label: 'Product & Projet' },
+      'tech-et-data': { href: '/tech-data', label: 'Tech & Data' },
+      freelancer: { href: '/recrutement-freelance', label: 'Collaboration freelance' },
+      recrutement: { href: '/recrutement-freelance', label: 'Collaboration freelance' },
+    };
+const parent = fiche.data.blogCategory ? SERVICE_BY_CATEGORY[fiche.data.blogCategory] : undefined;
+
+const collectionName = en ? 'metiers-en' : 'metiers';
+const metierHref = (id: string) => (en ? `/en/roles/${id}` : `/metiers/${id}`);
+
+const allMetiers = (await getCollection(collectionName as 'metiers', ({ data }) => !data.draft)).filter((m) => m.id !== fiche.id);
+const sameFamily = allMetiers.filter((m) => m.data.blogCategory === fiche.data.blogCategory);
+const relatedMetiers = [...sameFamily, ...allMetiers.filter((m) => !sameFamily.includes(m))].slice(0, 4);
+
+// Bloc « Pour aller plus loin » : FR uniquement (le blog n'est pas traduit).
+const relatedPosts = en
+  ? []
+  : (await getCollection('blog', ({ data }) => !data.draft))
+      .filter((p) => fiche.data.blogCategory && p.data.tags.includes(fiche.data.blogCategory))
+      .sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0))
+      .slice(0, 3);
+
+const t = en
+  ? {
+      crumbs: [{ label: 'Roles', href: '/en/roles' }, { label: fiche.data.title }],
+      heroCta: 'Find a freelancer',
+      contactHref: '/en/contact',
+      parentLabel: (label: string) => `${label} hub`,
+      accompEyebrow: 'Take action',
+      accompCta: 'Tell us what you need',
+      relTitle: 'Related roles',
+      relAll: 'All roles →',
+      relAllHref: '/en/roles',
+      navyEyebrow: 'Need this profile?',
+      navyTitle: `Let's find your freelance ${fiche.data.title.replace(/^freelance\s+/i, '')}`,
+      navyText: "Tell us what you need: we'll propose the right profiles from the network, vetted and recommended by their peers.",
+      navyCta: 'Tell us what you need',
+    }
+  : {
+      crumbs: [{ label: 'Métiers', href: '/metiers' }, { label: fiche.data.title }],
+      heroCta: 'Trouver un freelance',
+      contactHref: '/contact',
+      parentLabel: (label: string) => `Pôle ${label}`,
+      accompEyebrow: "Passez à l'action",
+      accompCta: 'Parler de mon besoin',
+      relTitle: 'Métiers proches',
+      relAll: 'Tous les métiers →',
+      relAllHref: '/metiers',
+      navyEyebrow: 'Besoin de ce profil ?',
+      navyTitle: `Trouvons votre ${fiche.data.title.replace(/ freelance.*/i, '')} freelance`,
+      navyText: 'Décrivez votre besoin : nous vous proposons les bons profils du réseau, vérifiés et recommandés par leurs pairs.',
+      navyCta: 'Décrire mon besoin',
+    };
+---
+<Base title={`${fiche.data.metaTitle ?? fiche.data.title} | digitags.work`} description={fiche.data.description}>
+  <article>
+    <section class="fiche-hero">
+      <div class="container">
+        <div>
+          <Breadcrumb lang={lang} items={t.crumbs} />
+          <h1>{fiche.data.title}</h1>
+          {lead && <p class="lead">{lead}</p>}
+          <div class="hero-cta">
+            <a href={t.contactHref} class="btn btn-dark">{t.heroCta} <span aria-hidden="true">→</span></a>
+            {parent && <a href={parent.href} class="btn btn-outline">{t.parentLabel(parent.label)}</a>}
+          </div>
+        </div>
+        {fiche.data.image && <img class="hero-img" src={fiche.data.image} alt="" loading="eager" />}
+      </div>
+    </section>
+
+    {parsed ? sections.map((s) => {
+      if (s.kind === 'split') return (
+        <section><div class="container fiche-split">
+          {s.image && <img src={s.image} alt="" loading="lazy" />}
+          <div><h2>{s.title}</h2><div class="fiche-body" set:html={s.html} /></div>
+        </div></section>
+      );
+      if (s.kind === 'cards') return (
+        <section class="method-section"><div class="container">
+          <h2>{s.title}</h2>
+          {s.intro && <p class="method-intro">{s.intro}</p>}
+          <div class={`method-cols ${s.items.length === 4 || s.items.length === 2 ? 'method-cols--2' : ''}`}>
+            {s.items.map((it, i) => (
+              <div class="method-col">
+                {s.numbered
+                  ? <span class="num-round">{String(i + 1).padStart(2, '0')}</span>
+                  : <span class="num-round check">✓</span>}
+                {it.title && <h3>{it.title}</h3>}
+                <p>{it.text}</p>
+              </div>
+            ))}
+          </div>
+        </div></section>
+      );
+      if (s.kind === 'timeline') return (
+        <section class="timeline-section"><div class="container">
+          <h2>{s.title}</h2>
+          {strip(s.intro) && <div class="fiche-body method-intro" set:html={s.intro} />}
+          <div class="timeline">
+            {s.steps.map((st, i) => (
+              <div class="timeline-item">
+                <span class="num-round">{String(i + 1).padStart(2, '0')}</span>
+                <div><h3>{st.title}</h3><div class="fiche-body" set:html={st.html} /></div>
+              </div>
+            ))}
+          </div>
+        </div></section>
+      );
+      if (s.kind === 'accomp') return (
+        <section><div class="container"><div class="accomp accomp-blue">
+          <div>
+            <p class="eyebrow">{t.accompEyebrow}</p>
+            <h2>{s.title}</h2>
+            <div class="fiche-body" set:html={s.html} />
+            <a href={t.contactHref} class="btn btn-dark" style="margin-top: 8px;">{t.accompCta} <span aria-hidden="true">→</span></a>
+          </div>
+          {s.image ? (
+            <img src={s.image} alt="" loading="lazy" />
+          ) : (
+            <svg class="accomp-deco" viewBox="0 0 220 200" fill="none" aria-hidden="true">
+              <polygon points="110,10 190,55 190,145 110,190 30,145 30,55" fill="#2b46f0" opacity="0.14"/>
+              <polygon points="110,40 164,70 164,130 110,160 56,130 56,70" fill="#f5b731" opacity="0.8"/>
+              <polygon points="178,110 214,130 214,170 178,190 142,170 142,130" fill="#f2543d" opacity="0.85"/>
+            </svg>
+          )}
+        </div></div></section>
+      );
+      return (
+        <section><div class="container fiche-text fiche-text-left">
+          <h2>{s.title}</h2>
+          <div class="fiche-body" set:html={s.html} />
+        </div></section>
+      );
+    }) : (
+      <div class="container prose">
+        {fiche.data.image && <img src={fiche.data.image} alt="" loading="eager" />}
+        <Content />
+      </div>
+    )}
+  </article>
+
+  {relatedMetiers.length > 0 && (
+    <section class="rel-section">
+      <div class="container">
+        <h2 class="rel-title">{t.relTitle}</h2>
+        <ul class="metier-chips">
+          {relatedMetiers.map((m) => (
+            <li><a class="chip chip-link" href={metierHref(m.id)}>{m.data.title}</a></li>
+          ))}
+          <li><a class="chip chip-link chip-more" href={t.relAllHref}>{t.relAll}</a></li>
+        </ul>
+      </div>
+    </section>
+  )}
+
+  {relatedPosts.length > 0 && (
+    <section class="rel-section">
+      <div class="container">
+        <h2 class="rel-title">Pour aller plus loin</h2>
+        <div class="rel-grid">
+          {relatedPosts.map((p) => (
+            <article class="rel-card">
+              <h3><a href={`/blog/${p.id}`} class="stretch-link">{p.data.title}</a></h3>
+              {p.data.description && <p>{p.data.description.slice(0, 130)}…</p>}
+              <span class="arrow-link">Lire l'article <span aria-hidden="true">→</span></span>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="cta-navy">
+    <div class="cta-copy">
+      <p class="eyebrow">{t.navyEyebrow}</p>
+      <h2>{t.navyTitle}</h2>
+      <p>{t.navyText}</p>
+    </div>
+    <a href={t.contactHref} class="btn">{t.navyCta} <span aria-hidden="true">→</span></a>
+  </section>
+</Base>

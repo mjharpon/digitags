@@ -28,6 +28,13 @@ const metiers = defineCollection({
   schema: ficheSchema,
 });
 
+// Fiches métiers en anglais (slugs SEO anglais, routées sous /en/roles/).
+// Le mapping slug FR ↔ slug EN vit dans src/lib/i18n.ts (hreflang, sitemap).
+const metiersEn = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/metiers-en' }),
+  schema: ficheSchema,
+});
+
 const projets = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/projets' }),
   schema: ficheSchema,
@@ -38,4 +45,4 @@ const casClients = defineCollection({
   schema: ficheSchema,
 });
 
-export const collections = { blog, metiers, projets, casClients };
+export const collections = { blog, metiers, 'metiers-en': metiersEn, projets, casClients };
