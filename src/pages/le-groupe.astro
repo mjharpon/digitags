@@ -30,23 +30,19 @@ const etapes = [
         </article>
         <div class="org-stem" aria-hidden="true"></div>
         <div class="org-row">
-          <div class="org-branch">
-            <article class="org-card">
-              <span class="hex-icon hex-icon-blue" aria-hidden="true"></span>
-              <h3>digitags.work</h3>
-              <p class="org-role">Le hub de 1&nbsp;600+ freelances du digital</p>
-              <p class="org-desc">Un réseau fermé de freelances en design, marketing, product, tech, data et IA, sélectionnés et recommandés par leurs pairs.</p>
-            </article>
-          </div>
-          <div class="org-branch">
-            <article class="org-card">
-              <span class="hex-icon hex-icon-red" aria-hidden="true"></span>
-              <h3>Donutz Digital</h3>
-              <p class="org-role">Agence de marketing digital paneuropéenne</p>
-              <p class="org-desc">Google Ads, social ads, programmatique, SEO, création et analytics, pilotés par une équipe senior depuis la France, la Lituanie et l'Irlande.</p>
-              <p class="org-link"><a href="https://donutzdigital.com/fr/" class="arrow-link">Découvrir l'agence <span aria-hidden="true">→</span></a></p>
-            </article>
-          </div>
+          <article class="org-card">
+            <span class="hex-icon hex-icon-blue" aria-hidden="true"></span>
+            <h3>digitags.work</h3>
+            <p class="org-role">Le hub de 1&nbsp;600+ freelances du digital</p>
+            <p class="org-desc">Un réseau fermé de freelances en design, marketing, product, tech, data et IA, sélectionnés et recommandés par leurs pairs.</p>
+          </article>
+          <article class="org-card">
+            <span class="hex-icon hex-icon-red" aria-hidden="true"></span>
+            <h3>Donutz Digital</h3>
+            <p class="org-role">Agence de marketing digital paneuropéenne</p>
+            <p class="org-desc">Google Ads, social ads, programmatique, SEO, création et analytics, pilotés par une équipe senior depuis la France, la Lituanie et l'Irlande.</p>
+            <p class="org-link"><a href="https://donutzdigital.com/fr/" class="arrow-link">Découvrir l'agence <span aria-hidden="true">→</span></a></p>
+          </article>
         </div>
       </div>
     </div>
@@ -121,7 +117,7 @@ const etapes = [
 
   /* Connecteurs */
   .org-stem { width: 2px; height: 28px; margin: 0 auto; background: var(--ink-faint); opacity: 0.5; }
-  .org-row { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding-top: 28px; }
+  .org-row { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; padding-top: 28px; }
   .org-row::before {
     content: "";
     position: absolute;
@@ -132,8 +128,8 @@ const etapes = [
     background: var(--ink-faint);
     opacity: 0.5;
   }
-  .org-branch { position: relative; }
-  .org-branch::before {
+  .org-row .org-card { position: relative; }
+  .org-row .org-card::before {
     content: "";
     position: absolute;
     top: -28px;
@@ -149,7 +145,36 @@ const etapes = [
   @media (max-width: 720px) {
     .org-row { grid-template-columns: 1fr; padding-top: 0; }
     .org-row::before { display: none; }
-    .org-branch { padding-top: 28px; }
-    .org-branch::before { top: 0; }
+    .org-row .org-card { margin-top: 28px; }
+  }
+
+  /* Alignement des titres et paragraphes entre cartes d'une même rangée :
+     les cartes partagent les pistes de la grille parente (subgrid), donc un
+     titre sur 2 lignes réserve la même hauteur dans les cartes voisines. */
+  @supports (grid-template-rows: subgrid) {
+    @media (min-width: 721px) {
+      .org-row .org-card {
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 5; /* hexagone / titre / rôle / description / lien */
+        align-content: start;
+      }
+      .reussites-grid.cols-2 { row-gap: 0; }
+      .benefit-card-cta {
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 3; /* titre / paragraphe / bouton */
+      }
+    }
+    /* benefits-grid passe à 2 colonnes sous 980px : subgrid seulement en rangée unique. */
+    @media (min-width: 981px) {
+      .benefits-grid { row-gap: 0; }
+      .benefits-grid .benefit-card {
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 3; /* numéro / titre / paragraphe */
+        align-content: start;
+      }
+    }
   }
 </style>
