@@ -17,6 +17,8 @@ export const GET: APIRoute = async () => {
   const projets = (await getCollection('projets', ({ data }) => !data.draft))
     .sort((a, b) => a.data.title.localeCompare(b.data.title, 'fr'));
   const cas = (await getCollection('casClients', ({ data }) => !data.draft));
+  const blogEn = (await getCollection('blog-en', ({ data }) => !data.draft))
+    .sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0));
   const projetsEn = (await getCollection('projets-en', ({ data }) => !data.draft))
     .sort((a, b) => a.data.title.localeCompare(b.data.title, 'en'));
   const casEn = (await getCollection('cas-clients-en', ({ data }) => !data.draft));
@@ -57,7 +59,7 @@ ${projets.map((p) => line(p.data.title, `/projets/${p.id}`, p.data.description))
 ${cas.map((c) => line(c.data.title, `/cas-client/${c.id}`, c.data.description)).join('\n')}
 
 ## English pages
-Les pages cœur du site, les fiches métiers, les fiches projets et les cas clients existent en anglais sous /en/ (hreflang fr/en, x-default = fr). Le blog reste en français.
+Les pages cœur du site, les fiches métiers, les fiches projets, les cas clients et une sélection d'articles du blog existent en anglais sous /en/ (hreflang fr/en, x-default = fr).
 ${line('Home — The digital talent hub', '/en', 'English homepage: the network and its expertise.')}
 ${line('Work with a freelancer', '/en/hire-a-freelancer', 'why and how to work with a freelancer: the 6-step method.')}
 ${line('Design & UX', '/en/design', 'freelance UX/UI designers, product designers, art directors.')}
@@ -82,6 +84,9 @@ ${projetsEn.map((m) => line(m.data.title, `/en/projects/${m.id}`, m.data.descrip
 
 ## Case studies (English)
 ${casEn.map((c) => line(c.data.title, `/en/case-studies/${c.id}`, c.data.description)).join('\n')}
+
+## Blog (English selection)
+${blogEn.map((b) => line(b.data.title, `/en/blog/${b.id}`, b.data.description)).join('\n')}
 
 ## Blog (sélection récente)
 ${blog.slice(0, 10).map((b) => line(b.data.title, `/blog/${b.id}`, b.data.description)).join('\n')}

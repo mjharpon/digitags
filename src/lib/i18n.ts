@@ -38,6 +38,22 @@ export const PROJET_SLUGS: Record<string, string> = {
   'strategie-produit': 'product-strategy',
 };
 
+/** Articles de blog traduits : slug FR (collection blog) → slug EN (collection blog-en). */
+export const BLOG_SLUGS: Record<string, string> = {
+  'audit-flash-evaluer-votre-maturite-freelance-ready-en-10-questions': 'freelance-ready-flash-audit',
+  'notre-processus-de-matching-freelance-entreprise': 'our-freelance-matching-process',
+  'matching-humain-et-recrutement-freelance': 'human-matching-freelance-hiring',
+  'reussir-collaboration-long-terme-avec-un-freelance': 'long-term-freelance-collaboration',
+  'evaluer-un-freelance-tech-methode-rapide-et-efficace': 'how-to-evaluate-a-tech-freelancer',
+  'pourquoi-recruter-des-freelances-en-2026': 'why-hire-freelancers-in-2026',
+  'freelancing-2026-chiffres-cles': 'freelancing-2026-key-figures',
+  'recrutement-freelance-remote-hybride-ou-on-site': 'freelance-remote-hybrid-or-on-site',
+  'ia-generative-mission-freelance-type-et-profils-cles': 'generative-ai-freelance-missions',
+  'tjm-freelance': 'freelance-day-rates',
+  'les-meilleurs-outils-pour-collaborer-avec-des-freelances': 'best-tools-to-collaborate-with-freelancers',
+  'conseils-pour-integrer-des-freelances-a-une-equipe-existante': 'integrating-freelancers-into-your-team',
+};
+
 /** Cas clients traduits : slug FR (collection casClients) → slug EN (collection cas-clients-en). */
 export const CAS_SLUGS: Record<string, string> = {
   'mon-compte-formation': 'mon-compte-formation',
@@ -55,6 +71,7 @@ export const ROUTES: Record<string, string> = {
   '/studios-et-collectifs': '/en/studios-and-collectives',
   '/metiers': '/en/roles',
   '/projets': '/en/projects',
+  '/blog': '/en/blog',
   '/cas-clients': '/en/case-studies',
   '/le-groupe': '/en/the-group',
   '/contact': '/en/contact',
@@ -72,6 +89,9 @@ for (const [fr, en] of Object.entries(PROJET_SLUGS)) {
 }
 for (const [fr, en] of Object.entries(CAS_SLUGS)) {
   ROUTES[`/cas-client/${fr}`] = `/en/case-studies/${en}`;
+}
+for (const [fr, en] of Object.entries(BLOG_SLUGS)) {
+  ROUTES[`/blog/${fr}`] = `/en/blog/${en}`;
 }
 
 /** Chemin EN → chemin FR (mapping inverse). */

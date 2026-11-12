@@ -13,6 +13,20 @@ const blog = defineCollection({
   }),
 });
 
+// Articles de blog en anglais (/en/blog/<slug>), sélection traduite depuis
+// src/content/blog — mapping des slugs dans src/lib/i18n.ts (BLOG_SLUGS).
+const blogEn = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/blog-en' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    date: z.coerce.date().optional(),
+    tags: z.array(z.string()).default([]),
+    image: z.string().optional(),
+    draft: z.boolean().default(false),
+  }),
+});
+
 const ficheSchema = z.object({
   title: z.string(),
   metaTitle: z.string().optional(),
@@ -57,4 +71,4 @@ const casClientsEn = defineCollection({
   schema: ficheSchema,
 });
 
-export const collections = { blog, metiers, 'metiers-en': metiersEn, projets, 'projets-en': projetsEn, casClients, 'cas-clients-en': casClientsEn };
+export const collections = { blog, 'blog-en': blogEn, metiers, 'metiers-en': metiersEn, projets, 'projets-en': projetsEn, casClients, 'cas-clients-en': casClientsEn };

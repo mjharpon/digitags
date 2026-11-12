@@ -1,0 +1,14 @@
+---
+// Articles de blog anglais (/en/blog/<slug>), sélection traduite (collection
+// blog-en). Template factorisé dans src/components/BlogPost.astro.
+import { getCollection } from 'astro:content';
+import BlogPost from '../../../components/BlogPost.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog-en', ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+---
+<BlogPost post={post} lang="en" />

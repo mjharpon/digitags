@@ -1,0 +1,43 @@
+---
+// Hub du blog anglais (/en/blog) : la sélection d'articles traduits.
+// Pas de pages tags côté EN (phase 1 du blog EN).
+import { getCollection } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+
+const posts = (await getCollection('blog-en', ({ data }) => !data.draft))
+  .sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0));
+---
+<Base
+  title="The Hub blog | digitags.work"
+  description="Freelance collaboration, design, product, tech & data: advice and lessons from the digitags.work network."
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">The Hub blog</p>
+      <h1>Advice and lessons from the network.</h1>
+      <p class="lead">Freelance collaboration, design, product, tech &amp; data: what the Hub's experts learn in the field. A selection of our articles, translated from the <a href="/blog" hreflang="fr">French blog</a>.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 30px;">
+    <div class="container">
+      <div class="blog-grid">
+        {posts.map((p) => (
+          <a class="blog-card" href={`/en/blog/${p.id}`}>
+            {p.data.image && <img src={p.data.image} alt="" loading="lazy" />}
+            <div class="blog-card-body">
+              {p.data.tags[0] && <p class="case-label label-blue">{p.data.tags[0]}</p>}
+              <h2>{p.data.title}</h2>
+              {p.data.description && <p class="blog-desc">{p.data.description}</p>}
+              <span class="arrow-link">Read the article <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        ))}
+      </div>
+      {posts.length === 0 && <p class="section-lead">Articles are on their way.</p>}
+    </div>
+  </section>
+
+  <CtaBanner lang="en" />
+</Base>
