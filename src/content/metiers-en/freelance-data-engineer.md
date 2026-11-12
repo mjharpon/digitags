@@ -2,6 +2,7 @@
 title: "Freelance Data Engineer"
 metaTitle: "Hire a freelance data engineer"
 description: "Freelance data engineer: reliable pipelines, a modern data warehouse and solid data quality with dbt, Airflow, Snowflake or BigQuery. Peer-vetted profiles."
+image: "/uploads/blog/securiser-vos-donnees-avec-un-freelance-it-cover.webp"
 blogCategory: "tech-et-data"
 ---
 

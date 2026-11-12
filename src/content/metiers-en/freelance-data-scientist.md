@@ -2,6 +2,7 @@
 title: "Freelance Data Scientist"
 metaTitle: "Hire a freelance data scientist"
 description: "Freelance data scientist: predictive models, machine learning and generative AI taken to production, from scoping to monitoring. Peer-vetted profiles."
+image: "/uploads/blog/les-tendances-de-lia-en-developpement-web-cover.webp"
 blogCategory: "tech-et-data"
 ---
 

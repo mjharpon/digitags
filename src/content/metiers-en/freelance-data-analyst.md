@@ -2,6 +2,7 @@
 title: "Freelance Data Analyst"
 metaTitle: "Hire a freelance data analyst"
 description: "Freelance data analyst: KPIs, Looker or Power BI dashboards and analyses that sharpen your product, marketing and business decisions. Peer-vetted profiles."
+image: "/uploads/blog/freelance-tech-competences-cover.webp"
 blogCategory: "tech-et-data"
 ---
 

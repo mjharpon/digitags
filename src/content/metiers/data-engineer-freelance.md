@@ -2,6 +2,7 @@
 title: "Data Engineer freelance"
 metaTitle: "Data Engineer freelance avec digitags.work"
 description: "Data engineer freelance : pipelines fiables, entrepôt de données moderne et qualité des données avec dbt, Airflow, Snowflake ou BigQuery. Profils vérifiés."
+image: "/uploads/blog/securiser-vos-donnees-avec-un-freelance-it-cover.webp"
 blogCategory: "tech-et-data"
 ---
 

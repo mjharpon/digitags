@@ -2,6 +2,7 @@
 title: "DevOps freelance"
 metaTitle: "DevOps freelance avec digitags.work"
 description: "DevOps freelance : CI/CD, Docker, Kubernetes, Terraform, cloud AWS, GCP ou Azure, observabilité et FinOps pour livrer plus vite et plus sereinement."
+image: "/uploads/blog/evaluer-un-freelance-tech-methode-rapide-et-efficace-cover.webp"
 blogCategory: "tech-et-data"
 ---
 

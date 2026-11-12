@@ -2,6 +2,7 @@
 title: "Tech Lead freelance"
 metaTitle: "Tech Lead freelance avec digitags.work"
 description: "Tech Lead freelance : architecture, choix techniques, qualité du code et animation de l'équipe de développement pour sécuriser votre produit digital."
+image: "/uploads/blog/tout-savoir-sur-le-back-end-le-front-end-et-le-full-stack-cover.webp"
 blogCategory: "tech-et-data"
 ---
 

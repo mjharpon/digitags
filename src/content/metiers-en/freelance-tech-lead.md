@@ -2,6 +2,7 @@
 title: "Freelance Tech Lead"
 metaTitle: "Hire a freelance tech lead"
 description: "Freelance tech lead for architecture, technical decisions, code quality and guiding your development team. Secure your digital product with vetted talent."
+image: "/uploads/blog/tout-savoir-sur-le-back-end-le-front-end-et-le-full-stack-cover.webp"
 blogCategory: "tech-et-data"
 ---
 

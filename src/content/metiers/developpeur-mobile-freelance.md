@@ -2,6 +2,7 @@
 title: "Développeur mobile freelance"
 metaTitle: "Développeur mobile freelance avec digitags.work"
 description: "Développeur mobile freelance iOS, Android, React Native ou Flutter : conception, développement et publication de vos applications sur les stores."
+image: "/uploads/blog/le-design-ethique-quest-ce-que-cest-cover.webp"
 blogCategory: "tech-et-data"
 ---
 

@@ -2,6 +2,7 @@
 title: "Growth Marketer freelance"
 metaTitle: "Growth Marketer freelance avec digitags.work"
 description: "Growth marketer freelance : expérimentation, A/B tests, funnels, CRM et lifecycle, PLG et analytics pour accélérer durablement la croissance de votre produit."
+image: "/uploads/blog/expert-en-webmarketing-freelance-strategies-et-developpement-marketing-numerique-cover.webp"
 blogCategory: "webmarketing"
 ---
 

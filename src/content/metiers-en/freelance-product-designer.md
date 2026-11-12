@@ -2,6 +2,7 @@
 title: "Freelance Product Designer"
 metaTitle: "Hire a freelance product designer"
 description: "Freelance product designer: discovery, Figma prototypes, design systems and measured iterations to build a digital product that is useful, usable and viable."
+image: "/uploads/blog/roadmap-produit-product-manager-freelance-cover.webp"
 blogCategory: "design"
 ---
 

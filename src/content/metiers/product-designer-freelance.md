@@ -2,6 +2,7 @@
 title: "Product Designer freelance"
 metaTitle: "Product Designer freelance avec digitags.work"
 description: "Product Designer freelance : discovery, prototypes Figma, design system et itérations mesurées pour concevoir un produit digital utile, utilisable et viable."
+image: "/uploads/blog/roadmap-produit-product-manager-freelance-cover.webp"
 blogCategory: "design"
 ---
 

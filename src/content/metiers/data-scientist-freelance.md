@@ -2,6 +2,7 @@
 title: "Data Scientist freelance"
 metaTitle: "Data Scientist freelance avec digitags.work"
 description: "Data scientist freelance : modèles prédictifs, machine learning et IA générative mis en production, du cadrage au monitoring. Des profils vérifiés par leurs pairs."
+image: "/uploads/blog/les-tendances-de-lia-en-developpement-web-cover.webp"
 blogCategory: "tech-et-data"
 ---
 

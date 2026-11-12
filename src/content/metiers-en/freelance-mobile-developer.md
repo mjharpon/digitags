@@ -2,6 +2,7 @@
 title: "Freelance Mobile Developer"
 metaTitle: "Hire a freelance mobile developer"
 description: "Freelance iOS, Android, React Native or Flutter developer to design, build and ship your mobile app to the App Store and Google Play. Vetted European talent."
+image: "/uploads/blog/le-design-ethique-quest-ce-que-cest-cover.webp"
 blogCategory: "tech-et-data"
 ---
 

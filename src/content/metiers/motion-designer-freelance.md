@@ -2,6 +2,7 @@
 title: "Motion Designer freelance"
 metaTitle: "Motion Designer freelance avec digitags.work"
 description: "Motion Designer freelance : animations d'interface, identités animées, vidéos explicatives et contenus social en After Effects, Rive ou Lottie."
+image: "/uploads/blog/les-metiers-de-lux-cover.webp"
 blogCategory: "design"
 ---
 

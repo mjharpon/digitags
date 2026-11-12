@@ -2,6 +2,7 @@
 title: "Data Analyst freelance"
 metaTitle: "Data Analyst freelance avec digitags.work"
 description: "Data analyst freelance : KPI, tableaux de bord Looker ou Power BI et analyses qui éclairent vos décisions produit, marketing et business. Profils vérifiés."
+image: "/uploads/blog/freelance-tech-competences-cover.webp"
 blogCategory: "tech-et-data"
 ---
 

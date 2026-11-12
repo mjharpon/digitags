@@ -2,6 +2,7 @@
 title: "Freelance Motion Designer"
 metaTitle: "Hire a freelance motion designer"
 description: "Freelance motion designer: UI animation, animated brand identities, explainer videos and social content in After Effects, Rive or Lottie for your brand."
+image: "/uploads/blog/les-metiers-de-lux-cover.webp"
 blogCategory: "design"
 ---
 

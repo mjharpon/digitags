@@ -2,6 +2,7 @@
 title: "Directeur artistique freelance"
 metaTitle: "Directeur artistique freelance avec digitags.work"
 description: "Directeur artistique freelance : plateforme de marque, identité visuelle, key visuals de campagne et cohérence créative sur tous vos supports."
+image: "/uploads/blog/product-manager-freelance-roadmap-cover.webp"
 blogCategory: "design"
 ---
 

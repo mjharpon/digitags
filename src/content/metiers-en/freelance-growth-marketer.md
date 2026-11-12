@@ -2,6 +2,7 @@
 title: "Freelance Growth Marketer"
 metaTitle: "Hire a freelance growth marketer"
 description: "Freelance growth marketer for experimentation, A/B testing, funnels, CRM and lifecycle, PLG and analytics. Drive sustainable growth for your product."
+image: "/uploads/blog/expert-en-webmarketing-freelance-strategies-et-developpement-marketing-numerique-cover.webp"
 blogCategory: "webmarketing"
 ---
 

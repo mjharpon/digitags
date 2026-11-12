@@ -2,6 +2,7 @@
 title: "Freelance DevOps Engineer"
 metaTitle: "Hire a freelance DevOps engineer"
 description: "Freelance DevOps engineer for CI/CD, Docker, Kubernetes, Terraform, AWS, GCP or Azure, observability and FinOps. Ship faster and sleep better."
+image: "/uploads/blog/evaluer-un-freelance-tech-methode-rapide-et-efficace-cover.webp"
 blogCategory: "tech-et-data"
 ---
 

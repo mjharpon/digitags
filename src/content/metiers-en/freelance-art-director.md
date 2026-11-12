@@ -2,6 +2,7 @@
 title: "Freelance Art Director"
 metaTitle: "Hire a freelance art director"
 description: "Freelance art director: brand platforms, visual identity, campaign key visuals and creative consistency across every print and digital touchpoint you own."
+image: "/uploads/blog/product-manager-freelance-roadmap-cover.webp"
 blogCategory: "design"
 ---
 
