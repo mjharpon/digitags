@@ -29,14 +29,24 @@ const FICHES: Record<string, { title: string; desc: string }> = {
   'developpeur-back-end-freelance': { title: 'Freelance Back-End Developer', desc: 'Robust APIs and architectures that scale.' },
   'full-stack-developpeur-freelance': { title: 'Freelance Full-Stack Developer', desc: 'One profile across the whole chain, from database to interface.' },
   'developeur-web-freelance': { title: 'Freelance Web Developer', desc: 'Websites and web apps built to last.' },
+  'product-designer-freelance': { title: 'Freelance Product Designer', desc: 'From problem to shipped interface: research, UX and UI in one profile.' },
+  'directeur-artistique-freelance': { title: 'Freelance Art Director', desc: 'A clear creative direction, consistent across every touchpoint.' },
+  'motion-designer-freelance': { title: 'Freelance Motion Designer', desc: 'Animation that explains, engages and brings your brand to life.' },
+  'growth-marketer-freelance': { title: 'Freelance Growth Marketer', desc: 'Experiments across the funnel to find what really drives growth.' },
+  'developpeur-mobile-freelance': { title: 'Freelance Mobile Developer', desc: 'Native or cross-platform iOS and Android apps, store-ready.' },
+  'tech-lead-freelance': { title: 'Freelance Tech Lead', desc: 'Architecture, code quality and a team that ships with confidence.' },
+  'devops-freelance': { title: 'Freelance DevOps Engineer', desc: 'CI/CD, cloud and infrastructure as code for reliable releases.' },
+  'data-scientist-freelance': { title: 'Freelance Data Scientist', desc: 'Models and machine learning that turn your data into decisions.' },
+  'data-engineer-freelance': { title: 'Freelance Data Engineer', desc: 'Reliable pipelines and a modern data stack your teams can trust.' },
+  'data-analyst-freelance': { title: 'Freelance Data Analyst', desc: 'Dashboards and analyses that answer real business questions.' },
 };
 
 const CATEGORIES = [
   {
     name: "Design & UX",
     color: "hex-icon-blue",
-    slugs: ["ux-designer-freelance", "ui-designer-freelance", "ux-writer-freelance"],
-    extra: ["Product Designer", "Web Designer", "Art Director", "Illustrator", "Motion Designer", "3D Artist", "Creative Lead"],
+    slugs: ["ux-designer-freelance", "ui-designer-freelance", "ux-writer-freelance", "product-designer-freelance", "directeur-artistique-freelance", "motion-designer-freelance"],
+    extra: ["Web Designer", "Illustrator", "3D Artist", "Creative Lead"],
   },
   {
     name: "Product & Project",
@@ -47,20 +57,20 @@ const CATEGORIES = [
   {
     name: "Marketing & Acquisition",
     color: "hex-icon-red",
-    slugs: ["freelance-seo", "expert-sea-freelance", "expert-social-ads-freelance", "traffic-manager-freelance", "community-manager-freelance", "account-manager-freelance"],
-    extra: ["Head of Acquisition", "Growth Marketer", "Social Media Manager", "Brand Manager"],
+    slugs: ["freelance-seo", "expert-sea-freelance", "expert-social-ads-freelance", "traffic-manager-freelance", "community-manager-freelance", "account-manager-freelance", "growth-marketer-freelance"],
+    extra: ["Head of Acquisition", "Social Media Manager", "Brand Manager"],
   },
   {
     name: "Development",
     color: "hex-icon-blue",
-    slugs: ["developpeur-front-end-freelance", "developpeur-back-end-freelance", "full-stack-developpeur-freelance", "developeur-web-freelance"],
-    extra: ["Mobile Developer", "Tech Lead", "DevOps"],
+    slugs: ["developpeur-front-end-freelance", "developpeur-back-end-freelance", "full-stack-developpeur-freelance", "developeur-web-freelance", "developpeur-mobile-freelance", "tech-lead-freelance", "devops-freelance"],
+    extra: [],
   },
   {
     name: "Data & Analytics",
     color: "hex-icon-yellow",
-    slugs: [],
-    extra: ["Data Scientist", "Data Engineer", "Data Analyst", "Web Analyst", "Business Analyst", "Data Project Manager"],
+    slugs: ["data-scientist-freelance", "data-engineer-freelance", "data-analyst-freelance"],
+    extra: ["Web Analyst", "Business Analyst", "Data Project Manager"],
   },
 ];
 

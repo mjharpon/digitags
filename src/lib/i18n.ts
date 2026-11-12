@@ -24,6 +24,16 @@ export const METIER_SLUGS: Record<string, string> = {
   'developpeur-front-end-freelance': 'freelance-front-end-developer',
   'developpeur-back-end-freelance': 'freelance-back-end-developer',
   'full-stack-developpeur-freelance': 'freelance-full-stack-developer',
+  'product-designer-freelance': 'freelance-product-designer',
+  'directeur-artistique-freelance': 'freelance-art-director',
+  'motion-designer-freelance': 'freelance-motion-designer',
+  'growth-marketer-freelance': 'freelance-growth-marketer',
+  'developpeur-mobile-freelance': 'freelance-mobile-developer',
+  'tech-lead-freelance': 'freelance-tech-lead',
+  'devops-freelance': 'freelance-devops-engineer',
+  'data-scientist-freelance': 'freelance-data-scientist',
+  'data-engineer-freelance': 'freelance-data-engineer',
+  'data-analyst-freelance': 'freelance-data-analyst',
 };
 
 /** Fiches projets traduites : slug FR (collection projets) → slug EN (collection projets-en). */
