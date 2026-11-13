@@ -124,7 +124,7 @@ Ne deviendrait-il pas alors un actif financier quelconque dans des portefeuilles
 
 Cette évolution possible poserait problème à coup sûr aux communautés autour du Bitcoin et aux idéaux qu’elles portent, car elle va à l’encontre des idées libertariennes/ libertaires qui sont à l’origine de la naissance des monnaies numériques. Cependant les outils peuvent évoluer, disparaître même, mais les idées et les idéaux restent.  
 
-Les idéaux libertaires (>libertariens plutot) vont-ils s’incarner dans les monnaies alternatives au Bitcoin pour renouer avec le rêve de centralisation ?  
+Les idéaux libertariens vont-ils s’incarner dans les monnaies alternatives au Bitcoin pour renouer avec le rêve de décentralisation ?  
 
 ![](/uploads/blog/le-bitcoin-est-il-vraiment-decentralise-6.webp)
 

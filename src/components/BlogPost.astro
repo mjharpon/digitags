@@ -7,6 +7,7 @@ import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import CtaBanner from './CtaBanner.astro';
 import Breadcrumb from './Breadcrumb.astro';
+import { tagLabelEn } from '../lib/i18n';
 
 interface Props { post: any; lang?: 'fr' | 'en' }
 const { post, lang = 'fr' } = Astro.props;
@@ -66,7 +67,7 @@ const t = en
         <p class="post-meta">
           {dateFmt && <span>{dateFmt}</span>}
           {en
-            ? post.data.tags.map((tg: string) => <span class="post-tag">#{tg}</span>)
+            ? post.data.tags.map((tg: string) => <span class="post-tag">#{tagLabelEn(tg)}</span>)
             : post.data.tags.map((tg: string) => <a href={`/tag/${tg}`} class="post-tag">#{tg}</a>)}
         </p>
       </div>

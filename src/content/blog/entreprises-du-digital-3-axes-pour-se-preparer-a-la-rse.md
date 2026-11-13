@@ -10,10 +10,6 @@ Quand on travaille dans le digital, la responsabilité sociétale de l’entrepr
 
 ‍
 
-Quand on travaille dans le digital, la responsabilité sociétale de l’entreprise (RSE), fait déjà un peu partie de l’ADN notamment sur le volet organisation du travail. Cela étant, les attentes envers les enjeux sociaux et environnementaux sont grandissantes et les entreprises du digital se doivent de jouer un rôle pro-actif pour participer à la construction d’un avenir durable. Doper l’esprit d’équipe, favoriser la souplesse et prendre en compte la pollution numérique : trois voies à emprunter pour réussir sa transition RSE.
-
-‍
-
 ## Booster sa culture d'entreprise
 
 ‍  

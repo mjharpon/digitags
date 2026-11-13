@@ -1,9 +1,10 @@
 ---
-// Hub du blog anglais (/en/blog) : la sélection d'articles traduits.
-// Pas de pages tags côté EN (phase 1 du blog EN).
+// Hub du blog anglais (/en/blog) : tous les articles traduits.
+// Pas de pages tags côté EN ; tags affichés avec leur libellé anglais.
 import { getCollection } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
 import CtaBanner from '../../../components/CtaBanner.astro';
+import { tagLabelEn } from '../../../lib/i18n';
 
 const posts = (await getCollection('blog-en', ({ data }) => !data.draft))
   .sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0));
@@ -16,7 +17,7 @@ const posts = (await getCollection('blog-en', ({ data }) => !data.draft))
     <div class="container">
       <p class="eyebrow">The Hub blog</p>
       <h1>Advice and lessons from the network.</h1>
-      <p class="lead">Freelance collaboration, design, product, tech &amp; data: what the Hub's experts learn in the field. A selection of our articles, translated from the <a href="/blog" hreflang="fr">French blog</a>.</p>
+      <p class="lead">Freelance collaboration, design, product, tech &amp; data: what the Hub's experts learn in the field. All our articles, translated from the <a href="/blog" hreflang="fr">French blog</a>.</p>
     </div>
   </section>
 
@@ -27,7 +28,7 @@ const posts = (await getCollection('blog-en', ({ data }) => !data.draft))
           <a class="blog-card" href={`/en/blog/${p.id}`}>
             {p.data.image && <img src={p.data.image} alt="" loading="lazy" />}
             <div class="blog-card-body">
-              {p.data.tags[0] && <p class="case-label label-blue">{p.data.tags[0]}</p>}
+              {p.data.tags[0] && <p class="case-label label-blue">{tagLabelEn(p.data.tags[0])}</p>}
               <h2>{p.data.title}</h2>
               {p.data.description && <p class="blog-desc">{p.data.description}</p>}
               <span class="arrow-link">Read the article <span aria-hidden="true">→</span></span>
