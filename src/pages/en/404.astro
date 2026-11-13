@@ -1,0 +1,21 @@
+---
+// Version anglaise de src/pages/404.astro. Cloudflare Pages sert le 404.html
+// le plus proche dans l'arborescence : dist/en/404.html couvre donc /en/*.
+import Base from '../../layouts/Base.astro';
+---
+<Base title="Page not found | digitags.work" description="This page doesn't exist or has been moved.">
+  <section class="page-hero" style="padding-bottom: 60px;">
+    <div class="container" style="max-width: 640px;">
+      <p class="eyebrow">Error 404</p>
+      <h1>This page has gone freelance.</h1>
+      <p class="lead">It doesn't exist, or it was moved during the site redesign. Don't worry: everything else is still here.</p>
+      <div class="hero-cta">
+        <a href="/en" class="btn btn-dark">Back to the homepage</a>
+        <a href="/en/roles" class="btn btn-outline">Explore the roles</a>
+      </div>
+      <p style="font-size: 13.5px; color: var(--ink-faint); margin-top: 26px;">
+        Looking for something specific? <a href="/en/contact" style="color: var(--blue); font-weight: 700;">Drop us a line</a> and we'll point you in the right direction.
+      </p>
+    </div>
+  </section>
+</Base>

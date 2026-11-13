@@ -44,7 +44,7 @@ export default defineConfig({
   integrations: [
     sitemap({
       // Pages hors SEO : outil interne, confirmations, propales privées.
-      filter: (page) => !/\/(talents|merci|en\/thank-you)$/.test(page) && !page.includes('/p/'),
+      filter: (page) => !/\/(talents|merci|404|en\/thank-you|en\/404)$/.test(page) && !page.includes('/p/'),
       serialize(item) {
         const path = new URL(item.url).pathname.replace(/\/$/, '') || '/';
         const rule = PRIORITY_RULES.find((r) => r.re.test(path));
