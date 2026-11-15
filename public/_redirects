@@ -1,6 +1,10 @@
 # Redirections Cloudflare Pages
+#
+# ORDRE IMPORTANT : dès la première règle à joker (« * » ou « :nom »), Cloudflare
+# range toutes les règles suivantes parmi les règles « dynamiques », limitées à 100 —
+# le reste du fichier est ignoré sans avertissement. Les règles exactes (jusqu'à
+# 2 000) vont donc ici, et les règles à joker tout en bas du fichier.
 /admin /cms/ 301
-/admin/* /cms/:splat 301
 /freesbiz / 301
 
 # Anciennes URLs du site Webflow (dgitags.io redirige vers ce domaine en conservant le chemin)
@@ -10,7 +14,6 @@
 /marketing /sea-social-ads-seo 301
 /produits /product-et-project 301
 /blog-post/pourquoi-vous-devez-creer-unblog /blog/pourquoi-integrer-un-blog-a-votre-site-web 301
-/blog-post/* /blog 301
 
 # Police : un seul fichier variable remplace les 5 copies par graisse
 /assets/fonts/pjs-400.woff2 /assets/fonts/pjs-variable.woff2 301
@@ -230,3 +233,7 @@
 /uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-8.png /uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-8.webp 301
 /uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-9.png /uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-9.webp 301
 /uploads/blog/scrum-master-freelance-boostez-vos-sprints-cover.jpg /uploads/blog/scrum-master-freelance-boostez-vos-sprints-cover.webp 301
+
+# ---- Règles à joker : toujours en fin de fichier (voir l'en-tête) ----
+/admin/* /cms/:splat 301
+/blog-post/* /blog 301

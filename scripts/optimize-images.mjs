@@ -112,7 +112,14 @@ if (renamed.size && !DRY) {
   let redirects = await readFile(REDIRECTS, 'utf8');
   const lines = [...renamed].filter(([from]) => !redirects.includes(from + ' ')).map(([from, to]) => `${from} ${to} 301`);
   if (lines.length) {
-    redirects = redirects.replace(/\n*$/, '\n') + '\n# Images converties en WebP (scripts/optimize-images.mjs)\n' + lines.join('\n') + '\n';
+    // Les règles exactes doivent précéder les règles à joker, regroupées en fin de
+    // fichier : au-delà, Cloudflare les compte comme « dynamiques » (100 au maximum).
+    const block = '# Images converties en WebP (scripts/optimize-images.mjs)\n' + lines.join('\n') + '\n';
+    const marker = redirects.indexOf('# ---- Règles à joker');
+    redirects =
+      marker === -1
+        ? redirects.replace(/\n*$/, '\n') + '\n' + block
+        : redirects.slice(0, marker) + block + '\n' + redirects.slice(marker);
     await writeFile(REDIRECTS, redirects);
     console.log(`${lines.length} redirections ajoutées dans ${REDIRECTS}`);
   }
