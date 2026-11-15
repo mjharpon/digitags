@@ -5,6 +5,7 @@
 export const prerender = false;
 
 import type { APIRoute } from 'astro';
+import { serverEnv, checkFile, MAX, hasAngle, isEmail } from '../../lib/form-guards';
 
 const MAX_SIZE = 10 * 1024 * 1024; // 10 Mo
 const BRIEF_TYPES = [
@@ -22,13 +23,14 @@ const esc = (s: string) =>
   s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c] as string));
 
 export const POST: APIRoute = async ({ request, locals }) => {
-  const env = (locals as any)?.runtime?.env ?? {};
-  const url = env.SUPABASE_URL ?? import.meta.env.SUPABASE_URL;
-  const key = env.SUPABASE_SERVICE_KEY ?? import.meta.env.SUPABASE_SERVICE_KEY;
-  const notifySecret = env.NOTIFY_SECRET ?? import.meta.env.NOTIFY_SECRET;
-  const H = { apikey: key, Authorization: `Bearer ${key}` };
+  const env = serverEnv(locals);
+  const url = env.SUPABASE_URL;
+  const key = env.SUPABASE_SERVICE_KEY;
+  const notifySecret = env.NOTIFY_SECRET;
   const json = (status: number, body: object) =>
     new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json' } });
+  if (!url || !key) return json(500, { ok: false, error: 'Service momentanément indisponible.' });
+  const H = { apikey: key, Authorization: `Bearer ${key}` };
 
   let form: FormData;
   try {
@@ -40,7 +42,9 @@ export const POST: APIRoute = async ({ request, locals }) => {
   // Piège anti-robots : champ caché qui doit rester vide.
   if (form.get('site_web')) return json(200, { ok: true });
 
-  const get = (k: string) => String(form.get(k) ?? '').trim();
+  // Les sauts de ligne arrivent en CRLF : ramenés à LF pour que les longueurs
+  // comptées ici soient celles du `maxlength` du formulaire.
+  const get = (k: string) => String(form.get(k) ?? '').replace(/\r\n?/g, '\n').trim();
   // Formulaire anglais (/en/contact) : champ caché lang=en.
   const en = get('lang') === 'en';
   const msg = (fr: string, enMsg: string) => (en ? enMsg : fr);
@@ -53,8 +57,15 @@ export const POST: APIRoute = async ({ request, locals }) => {
   if (!nom || !email || !message) {
     return json(400, { ok: false, error: msg('Merci de remplir les champs obligatoires.', 'Please fill in the required fields.') });
   }
-  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+  if (!isEmail(email)) {
     return json(400, { ok: false, error: msg('Adresse email invalide.', 'Invalid email address.') });
+  }
+  // Bornes côté serveur : longueurs maximales, pas de chevrons dans le nom.
+  if (hasAngle(nom)) {
+    return json(400, { ok: false, error: msg('Les caractères < et > ne sont pas acceptés dans le nom.', 'The characters < and > are not accepted in the name.') });
+  }
+  if (nom.length > MAX.nom || societe.length > MAX.societe || expertise.length > MAX.choix || message.length > MAX.texte) {
+    return json(400, { ok: false, error: msg('Un des champs est trop long — merci de le raccourcir (message : 5 000 caractères max).', 'One of the fields is too long — please shorten it (message: 5,000 characters max).') });
   }
 
   // Brief joint (optionnel) → bucket privé + lien signé 7 jours.
@@ -62,8 +73,11 @@ export const POST: APIRoute = async ({ request, locals }) => {
   let briefLink: string | null = null;
   const brief = form.get('brief') as File | null;
   if (brief && brief.size > 0) {
-    if (brief.size > MAX_SIZE) return json(400, { ok: false, error: msg('Le fichier joint dépasse 10 Mo.', 'The attached file exceeds 10 MB.') });
-    if (!BRIEF_TYPES.includes(brief.type)) return json(400, { ok: false, error: msg('Format de fichier non accepté (PDF, Word, PowerPoint, JPG ou PNG).', 'Unsupported file format (PDF, Word, PowerPoint, JPG or PNG).') });
+    // Taille, type déclaré ET signature du contenu (octets magiques).
+    const problem = await checkFile(brief, BRIEF_TYPES, MAX_SIZE);
+    if (problem === 'size') return json(400, { ok: false, error: msg('Le fichier joint dépasse 10 Mo.', 'The attached file exceeds 10 MB.') });
+    if (problem === 'empty') return json(400, { ok: false, error: msg('Le fichier joint est vide ou illisible.', 'The attached file is empty or unreadable.') });
+    if (problem === 'type') return json(400, { ok: false, error: msg('Format de fichier non accepté (PDF, Word, PowerPoint, JPG ou PNG).', 'Unsupported file format (PDF, Word, PowerPoint, JPG or PNG).') });
     const safeName = (brief.name || 'brief').replace(/[^\w.\-]+/g, '_').slice(0, 80);
     const path = `briefs/${crypto.randomUUID()}/${safeName}`;
     const up = await fetch(`${url}/storage/v1/object/docs-internes/${path}`, {

@@ -37,18 +37,18 @@ const specialites = [
         <div class="form-row">
           <div class="field">
             <label for="prenom">First name *</label>
-            <input type="text" id="prenom" name="prenom" required autocomplete="given-name" />
+            <input type="text" id="prenom" name="prenom" required autocomplete="given-name" maxlength="80" />
           </div>
           <div class="field">
             <label for="nom">Last name *</label>
-            <input type="text" id="nom" name="nom" required autocomplete="family-name" />
+            <input type="text" id="nom" name="nom" required autocomplete="family-name" maxlength="80" />
           </div>
         </div>
 
         <div class="form-row">
           <div class="field">
             <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required autocomplete="email" />
+            <input type="email" id="email" name="email" required autocomplete="email" maxlength="254" />
           </div>
           <div class="field">
             <label for="tjm">Your daily rate in € *</label>
@@ -73,12 +73,12 @@ const specialites = [
 
         <div class="field">
           <label for="job">Your job *</label>
-          <input type="text" id="job" name="job" required placeholder="Senior UX Designer, React Developer, SEO Consultant…" />
+          <input type="text" id="job" name="job" required placeholder="Senior UX Designer, React Developer, SEO Consultant…" maxlength="120" />
         </div>
 
         <div class="field">
           <label for="references">Your best client references *</label>
-          <input type="text" id="references" name="references" required placeholder="L'Oréal, Tesla, Decathlon… (separated by commas)" />
+          <input type="text" id="references" name="references" required placeholder="L'Oréal, Tesla, Decathlon… (separated by commas)" maxlength="500" />
         </div>
 
         <div class="form-row">
@@ -97,7 +97,7 @@ const specialites = [
         <div class="form-row">
           <div class="field">
             <label for="portfolio">Your portfolio (link)</label>
-            <input type="url" id="portfolio" name="portfolio" placeholder="https://…" />
+            <input type="url" id="portfolio" name="portfolio" placeholder="https://…" maxlength="500" />
           </div>
           <div class="field">
             <label for="portfolio_pdf">Portfolio (file)</label>
@@ -116,7 +116,7 @@ const specialites = [
 
         <div class="field">
           <label for="notes">Your preferences</label>
-          <textarea id="notes" name="notes" placeholder="Types of missions you're after, industries, remote/on-site, days per week…"></textarea>
+          <textarea id="notes" name="notes" placeholder="Types of missions you're after, industries, remote/on-site, days per week…" maxlength="5000"></textarea>
         </div>
 
         <button type="submit" class="btn btn-dark" id="freelance-submit">Join the Hub</button>

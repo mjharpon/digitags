@@ -21,6 +21,9 @@ const b64 = (s) => {
 export default {
   async fetch(request, env) {
     if (request.method !== 'POST') return new Response('Method Not Allowed', { status: 405 });
+    // Secret absent (déploiement incomplet) : on refuse tout, sinon
+    // « Bearer undefined » serait accepté.
+    if (!env.NOTIFY_SECRET) return new Response('Service Unavailable', { status: 503 });
     const auth = request.headers.get('Authorization') ?? '';
     if (auth !== `Bearer ${env.NOTIFY_SECRET}`) return new Response('Unauthorized', { status: 401 });
 

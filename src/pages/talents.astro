@@ -174,6 +174,20 @@ import Base from '../layouts/Base.astro';
     const KEY = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
     const $ = (id) => document.getElementById(id);
     const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    // Mot de passe d'une propale : 10 caractères tirés au hasard (générateur
+    // cryptographique), sans les caractères qui se confondent à la lecture (0 O 1 l I).
+    const PW_ALPHABET = 'abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+    const genPassword = (len = 10) => {
+      const n = PW_ALPHABET.length;
+      const limit = 256 - (256 % n); // rejet des octets hors plage : tirage sans biais
+      let out = '';
+      while (out.length < len) {
+        for (const b of crypto.getRandomValues(new Uint8Array(len * 2))) {
+          if (b < limit && out.length < len) out += PW_ALPHABET[b % n];
+        }
+      }
+      return out;
+    };
 
     if (!URL_ || !KEY) {
       document.body.insertAdjacentHTML('afterbegin', '<p class="container" style="padding:40px 24px;font-weight:700;">Configuration Supabase manquante (PUBLIC_SUPABASE_URL / PUBLIC_SUPABASE_ANON_KEY).</p>');
@@ -674,7 +688,7 @@ import Base from '../layouts/Base.astro';
           <span class="meta">${nb} propale${nb > 1 ? 's' : ''}${contact ? ` · ${esc(contact)}` : ''}${arch ? ' · archivé — espace client désactivé' : ''}</span>
           ${arch ? `<button class="btn btn-dark btn-sm" data-crest="${c.id}">Restaurer</button>` : `
           <button class="btn btn-outline btn-sm" data-cprops="${c.id}">Propales</button>
-          ${c.token ? `<button class="btn btn-dark btn-sm" data-clink="${c.token}" title="Lien privé où le client retrouve toutes ses propales">Lien espace client</button>` : ''}
+          ${c.token ? `<button class="btn btn-dark btn-sm" data-clink="${esc(c.token)}" title="Lien privé où le client retrouve toutes ses propales">Lien espace client</button>` : ''}
           <button class="btn btn-outline btn-sm" data-cedit="${c.id}">Modifier</button>
           <button class="btn btn-outline btn-sm" data-carch="${c.id}">Archiver</button>`}
         </div>`;
@@ -822,7 +836,7 @@ import Base from '../layouts/Base.astro';
           </div>
           <div class="field" style="max-width: 190px;">
             <label>Mot de passe client</label>
-            <input id="np-password" type="text" value="${Math.random().toString(36).replace(/[^a-z0-9]/g, '').slice(0, 6)}" autocomplete="off" title="Demandé au client pour ouvrir la propale — vider pour un accès libre" />
+            <input id="np-password" type="text" value="${genPassword()}" autocomplete="off" title="Demandé au client pour ouvrir la propale — vider pour un accès libre" />
           </div>
         </div>
         <h4 style="margin: 10px 0;">Profils &amp; rôles — TJM client = TJM freelance + marge</h4>
@@ -970,8 +984,8 @@ import Base from '../layouts/Base.astro';
           <h3>${esc(p.title)}</h3>
           <span class="meta">${p.proposal_items.length} profil${p.proposal_items.length > 1 ? 's' : ''} · ${new Date(p.created_at).toLocaleDateString('fr-FR')} · ${esc(p.created_by ?? '')} · ${state.showArchProps ? 'archivée — lien client désactivé' : (p.password ? `🔒 ${esc(p.password)}` : 'accès libre')}</span>
           ${state.showArchProps ? `<button class="btn btn-dark btn-sm" data-rest="${p.id}">Restaurer</button>` : `
-          <a class="btn btn-outline btn-sm" href="/p/${p.token}" target="_blank" rel="noopener">Voir</a>
-          <button class="btn btn-dark btn-sm" data-copy="${p.token}" data-pw="${esc(p.password ?? '')}">Copier le lien</button>
+          <a class="btn btn-outline btn-sm" href="/p/${esc(p.token)}" target="_blank" rel="noopener">Voir</a>
+          <button class="btn btn-dark btn-sm" data-copy="${esc(p.token)}" data-pw="${esc(p.password ?? '')}">Copier le lien</button>
           <button class="btn btn-outline btn-sm" data-arch="${p.id}">Archiver</button>`}
         </div>`;
 

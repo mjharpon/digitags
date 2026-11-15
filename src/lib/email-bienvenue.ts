@@ -4,8 +4,10 @@ const esc = (s: string) =>
   s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c] as string));
 
 export function emailBienvenue(prenom: string, job: string): string {
-  const p = esc(prenom);
-  const j = esc(job);
+  // Valeurs saisies par l'internaute : bornées puis échappées (corps du mail uniquement,
+  // le sujet est fixe).
+  const p = esc(String(prenom ?? '').slice(0, 80));
+  const j = esc(String(job ?? '').slice(0, 120));
   return `<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,7 +16,6 @@ export function emailBienvenue(prenom: string, job: string): string {
 <title>Bienvenue dans le Hub</title>
 </head>
 <body style="margin:0;padding:0;background-color:#f7f3ee;">
-<!-- Aperçu : les variables ${p}, ${j} seront remplies à l'envoi -->
 <div style="display:none;max-height:0;overflow:hidden;">Votre profil est bien enregistré — nous scrutons les opportunités pour vous.</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f7f3ee;padding:32px 16px;">
 <tr><td align="center">
