@@ -1,6 +1,6 @@
 ---
 title: "Comment tourner les tendances du recrutement à son avantage ?"
-description: "Le monde du recrutement évolue sans cesse et se doit de s’adapter à la demande des talents. Dgitags vous en dit plus à ce sujet !"
+description: "Le monde du recrutement évolue sans cesse et se doit de s’adapter à la demande des talents. Digitags vous en dit plus à ce sujet !"
 date: 2022-10-28
 tags: [recrutement, freelancer]
 image: "/uploads/blog/comment-tourner-les-tendances-du-recrutement-a-son-avantage-cover.webp"
@@ -12,7 +12,7 @@ La technologie est sans nul doute le principal moteur de ce changement. Elle a f
 
 À tout cela s’ajoute l'ère post-coronavirus qui nous contraint à rester chez nous. Plus que jamais, nous sommes devenus dépendants de la technologie pour nous divertir, faire nos courses et maintenant travailler. Même si de nombreux professionnels et secteurs voient encore la technologie comme une menace pour leurs fonctions, [54% des recruteurs](https://www.northeastern.edu/graduate/blog/human-resources-statistics/) RH la voient davantage comme une opportunité.
 
-En tenant compte de tout ce contexte, nous avons appelé à la rescousse Chrystal Robet-Tamborini, agent de talent pour [Dgitags](/) et Louis Deslus, influenceur en « Growth Marketing » pour vous éclairer sur la meilleure manière de recruter !
+En tenant compte de tout ce contexte, nous avons appelé à la rescousse Chrystal Robet-Tamborini, agent de talent pour [Digitags](/) et Louis Deslus, influenceur en « Growth Marketing » pour vous éclairer sur la meilleure manière de recruter !
 
 ## **La transparence**
 
@@ -82,7 +82,7 @@ La stratégie de data drive est l'une des dernières tendances en matière de re
 
 #### **_👉 Le conseil de Chrystal_**
 
-« J’utilise notre plateforme [Dgitags](/) en interne car tout est référencé avec des recherches très pertinentes par mots-clefs. »
+« J’utilise notre plateforme [Digitags](/) en interne car tout est référencé avec des recherches très pertinentes par mots-clefs. »
 
 ## **Le recrutement sur les réseaux sociaux**
 

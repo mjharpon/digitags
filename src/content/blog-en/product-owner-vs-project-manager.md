@@ -213,7 +213,7 @@ So there are more surprises to come!
 
 And yes, that's already the end of this article. Don't panic, we'll be back very soon with even more content :)
 
-The [Dgitags team](/en/studios-and-collectives) nevertheless hopes this article has interested you and taught you a few things about the jobs of product owner and project manager.
+The [Digitags team](/en/studios-and-collectives) nevertheless hopes this article has interested you and taught you a few things about the jobs of product owner and project manager.
 
 If you need advice or experts, our teams are here for you — don't hesitate to get in touch.
 

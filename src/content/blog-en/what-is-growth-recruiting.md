@@ -8,13 +8,13 @@ image: "/uploads/blog/le-growth-recruiting-cest-quoi-cover.avif"
 
 In the world of hiring, everything moves so fast: job descriptions, hiring technologies, candidates' motivations… Many companies struggle to keep pace while improving the "candidate experience". Candidates are no longer only interested in a good salary and new offices. New factors now come into their order of priorities: personal and professional growth, flexible working hours, and so on.
 
-All too often, these ever-growing changes penalise hiring teams and human resources. Companies are realising that they need to change their hiring approach, and fast, before they find themselves unable to attract fresh blood. But which form of hiring would be best for your company and your hiring needs? At Dgitags, our agents have particular mastery of "**_inbound Recruiting_**", a method that really bears fruit, and we'll explain why!
+All too often, these ever-growing changes penalise hiring teams and human resources. Companies are realising that they need to change their hiring approach, and fast, before they find themselves unable to attract fresh blood. But which form of hiring would be best for your company and your hiring needs? At Digitags, our agents have particular mastery of "**_inbound Recruiting_**", a method that really bears fruit, and we'll explain why!
 
 ‍
 
 Gone are the days when companies had total control over the hiring process. According to statistics, the majority of job seekers start their search on Google. Anyone can find all the information they need about any company in a few clicks: salary, open positions, working conditions and locations, etc.
 
-As a result, developing a talent brand becomes particularly important. To attract more and more candidates, hiring teams need to think like marketers to revolutionise the candidate experience. To explain it better, we interviewed the founder of a hiring tool we use a lot, Louis Deslus, founder of [Neo Staff](https://neostaff.fr). For Chrystal Robet-Tomborini, talent agent at [Dgitags](/en), it's an essential tool for managing all her talent as well as all her hiring campaigns.
+As a result, developing a talent brand becomes particularly important. To attract more and more candidates, hiring teams need to think like marketers to revolutionise the candidate experience. To explain it better, we interviewed the founder of a hiring tool we use a lot, Louis Deslus, founder of [Neo Staff](https://neostaff.fr). For Chrystal Robet-Tomborini, talent agent at [Digitags](/en), it's an essential tool for managing all her talent as well as all her hiring campaigns.
 
 Louis is an influencer in what we might call "**_Growth Marketing_**" on LinkedIn. You only have to look at his number of followers (around 21,000) to see the interest in this new practice.
 
@@ -74,7 +74,7 @@ Don't hesitate to dig into Google Analytics or similar software to measure your 
 
 As you'll have gathered, _inbound_ hiring strategies really bring out your brand image. It takes a bit of time to build goodwill and enthusiasm around a company, and over time this approach promises to attract plenty of CVs. But if you rely solely on inbound hiring, you'll also have to wait for the right candidates to get in touch.
 
-There you go, now you know everything! In other words, the _outbound_ hiring method is only used when you can't attract high-quality candidates with your _inbound_ hiring strategy. You still need to know how to put it in place, and that's why we're here! Thanks to our talent pool and our hiring strategies, it will be much easier to fill your open positions. Call on [Dgitags](/en)!
+There you go, now you know everything! In other words, the _outbound_ hiring method is only used when you can't attract high-quality candidates with your _inbound_ hiring strategy. You still need to know how to put it in place, and that's why we're here! Thanks to our talent pool and our hiring strategies, it will be much easier to fill your open positions. Call on [Digitags](/en)!
 
 ‍
 

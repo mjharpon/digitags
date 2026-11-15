@@ -16,7 +16,7 @@ Let's explore these 2 tools
 
 In this article, we'll try to answer the following questions: How does Figma compare with Sketch today? Is Figma dethroning Sketch?
 
-So today the [Dgitags team](/en/studios-and-collectives) will try to answer these questions. If you'd like to know more about these two competitors, read on.  
+So today the [Digitags team](/en/studios-and-collectives) will try to answer these questions. If you'd like to know more about these two competitors, read on.  
 
 So, let's go!
 
@@ -160,7 +160,7 @@ So the choice between the two tools depends on **the balance between performance
 
 And that's the end of this article. Yes, already… Don't worry, we'll be back soon with even more content!
 
-The [Dgitags team](/en) nevertheless hopes you found this article interesting and that it taught you a few things about these two essential tools, Figma and Sketch.
+The [Digitags team](/en) nevertheless hopes you found this article interesting and that it taught you a few things about these two essential tools, Figma and Sketch.
 
 See you very soon!
 

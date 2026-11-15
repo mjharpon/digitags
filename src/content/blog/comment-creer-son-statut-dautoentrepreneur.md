@@ -8,7 +8,7 @@ image: "/uploads/blog/comment-creer-son-statut-dautoentrepreneur-cover.avif"
 
 Vous souhaitez créer votre autoentreprise pour devenir un super freelance mais vous ne savez pas réellement comment vous y prendre ?
 
-Dgitags.io vous montre en quelques étapes comment faire ☺
+Digitags.work vous montre en quelques étapes comment faire ☺
 
 ###### ‍**SOMMAIRE**
 
@@ -192,9 +192,9 @@ En tant qu’autoentrepreneur, vous aurez surement besoin de vous créer un comp
 
 Nous espérons que cet article vous aura plus et vous aura guidé dans la création de votre microentreprise.
 
-Si vous êtes intéressés par le secteur du digital et que vous souhaitez vous y lancer en tant que freelance ? Référencez vous sur [**dgitags.io**](/design)
+Si vous êtes intéressés par le secteur du digital et que vous souhaitez vous y lancer en tant que freelance ? Référencez vous sur [**digitags.work**](/design)
 
-Fondé par d'anciens collaborateurs de Google et Bouygues Telecom, dgitags.io est un hub de 1200 talents et studios digitaux en design, webmarketing ou product management.
+Fondé par d'anciens collaborateurs de Google et Bouygues Telecom, digitags.work est un hub de 1200 talents et studios digitaux en design, webmarketing ou product management.
 
 L'agence d’acquisition Donutz.fr complète cette proposition de valeur unique.
 

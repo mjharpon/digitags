@@ -89,9 +89,9 @@ N’hésitez pas à consulter plusieurs profils et à jeter un œil à leur **po
 
 Il peut également être intéressant de voir avec quels types d’entreprises il/elle a travaillé. Cela vous permettra de savoir si votre designer est plutôt un(e) habitué(e) des grands groupes, des start-ups, etc. Cela influencera forcement sa manière de travailler.
 
-Pour trouver votre designer idéal, vous pouvez vous rendre sur [**notre formulaire de contact**](/contact) et faire un **brief** gratuitement avec l’un de nos agents. Ce dernier s’occupera de vous trouver le meilleur freelance, correspondant à vos besoins ! dgitags vous fait **gagner du temps** et vous offre un **service de qualité** en vous pré- sélectionnant les bons, experts dans leur domaine et adapté pour votre projet
+Pour trouver votre designer idéal, vous pouvez vous rendre sur [**notre formulaire de contact**](/contact) et faire un **brief** gratuitement avec l’un de nos agents. Ce dernier s’occupera de vous trouver le meilleur freelance, correspondant à vos besoins ! digitags vous fait **gagner du temps** et vous offre un **service de qualité** en vous pré- sélectionnant les bons, experts dans leur domaine et adapté pour votre projet
 
-Vous recherchez un designer en 24H top chrono ? Lisez notre article « [**dgitags.io trouve en 24h votre graphiste**](/blog/dgitags-io-trouve-en-24h-votre-designer-freelance) ».
+Vous recherchez un designer en 24H top chrono ? Lisez notre article « [**digitags.work trouve en 24h votre graphiste**](/blog/dgitags-io-trouve-en-24h-votre-designer-freelance) ».
 
 ‍
 
@@ -103,7 +103,7 @@ Lors de cet entretien, n’hésitez pas à être direct et à exposer concrètem
 
 Vous pouvez également lui redemander dans quelles entreprises il a travaillé auparavant ainsi que des exemples de réalisations. Cela vous permettra de mieux comprendre ses choix artistiques et de voir s’ils sont compatibles avec ceux que vous souhaiteriez pour votre marque.
 
-> **Déborah Lévy Bencheton**, **UX service designer en freelance chez dgitags.io** considère « qu’au-delà même de la capacité à être designer d’un point de vue technique, il y a des **softs skills** qui sont essentielles, telles que s’adapter rapidement ou bien être capable d’avoir une vision business en se posant les bonnes questions. En entreprise, tu as le temps de t’adapter et d’être formé. En freelance, il faut comprendre directement les enjeux. C’est ce qui fait un bon freelance. Il faut également avoir une bonne capacité d’analyse. Un bon designer freelance est quelqu’un qui sait gérer plusieurs projets en même temps (la partie administrative, la négociation, le rendu, etc) ».
+> **Déborah Lévy Bencheton**, **UX service designer en freelance chez digitags.work** considère « qu’au-delà même de la capacité à être designer d’un point de vue technique, il y a des **softs skills** qui sont essentielles, telles que s’adapter rapidement ou bien être capable d’avoir une vision business en se posant les bonnes questions. En entreprise, tu as le temps de t’adapter et d’être formé. En freelance, il faut comprendre directement les enjeux. C’est ce qui fait un bon freelance. Il faut également avoir une bonne capacité d’analyse. Un bon designer freelance est quelqu’un qui sait gérer plusieurs projets en même temps (la partie administrative, la négociation, le rendu, etc) ».
 
 D’après Déborah le dernier point à ne pas sous-estimer lors du recrutement est «**le** **relationnel**». En effet, « le freelance va rentrer dans une nouvelle équipe déjà en place, donc il doit savoir qui fait quoi et respecter le travail des autres tout en faisant valoir son expertise sans l’imposer. En réalité, être un bon designer freelance c’est être diplomate ».
 
@@ -123,7 +123,7 @@ Vous pouvez également évaluer son attitude face à des **mises en situation**.
 
 ‍
 
-C’est déjà la fin de cet article. Néanmoins, la team dgitags.io espère qu’il vous aura plu et vous aura donné quelques conseils pour recruter les meilleurs designers freelance. Merci à Déborah pour son témoignage.
+C’est déjà la fin de cet article. Néanmoins, la team digitags.work espère qu’il vous aura plu et vous aura donné quelques conseils pour recruter les meilleurs designers freelance. Merci à Déborah pour son témoignage.
 
 Votre site est bien désigné, et désormais vous avez besoin d’un agence SEO, SEA & SMA pour développer votre CA ? Contactez [Donutz Digital](https://www.donutz.fr/) qui vous accompagnera en France mais aussi à l'international !
 

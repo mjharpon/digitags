@@ -90,25 +90,25 @@ To sum up these few tips, don't forget that you're coming in for a specific need
 
 ![freelance digital interview communicating dgitags hiring engagement knowing how to sell yourself](/uploads/blog/comment-preparer-un-entretien-freelance-2.jpeg)
 
-## **Interviews at dgitags? The agent approach** 
+## **Interviews at digitags? The agent approach** 
 
 Our interviews follow the format described above. So there'll be no surprises! 
 
-Prepare for your interview by finding out about [dgitags.io](/en) and think about a short 2/3-minute pitch to introduce yourself. Get to the point by focusing on the information and skills that will be useful for the engagement.
+Prepare for your interview by finding out about [digitags.work](/en) and think about a short 2/3-minute pitch to introduce yourself. Get to the point by focusing on the information and skills that will be useful for the engagement.
 
 During the interview, we'll ask you questions about your professional experience to see whether your expertise matches the engagement's objectives and needs.
 
-At dgitags, what makes our selection process special is our **agent approach**!
+At digitags, what makes our selection process special is our **agent approach**!
 
 We really try to get to know the freelancers we represent in order to build a relationship, which makes our projects more reliably successful. We put our clients in touch with freelancers who share the same values and the same vision. We bring a genuinely human dimension to the selection process. We also look for freelancers who are autonomous, experts in their field and proactive with ideas. The key is to find a freelancer who matches the engagement on offer.
 
-That's already the end of this article. Nevertheless, the dgitags.io team hopes you enjoyed it and that it has given you a few tips for preparing your interview. Feel free to take a look at our [blog](/en/blog).
+That's already the end of this article. Nevertheless, the digitags.work team hopes you enjoyed it and that it has given you a few tips for preparing your interview. Feel free to take a look at our [blog](/en/blog).
 
 _If you're looking for a good freelancer in SEA, SEO or product management_, _contact_ [_Donutz Digital_](https://www.donutzdigital.com/) _who will support you in France and internationally!_
 
 Sources:
 
--   [Dgitags](/en)
+-   [Digitags](/en)
 -   [Port-up](https://blog.port-up.fr/développeur-freelance-entretien-technique)
 -   [Freelance method](https://freelancemethod.com/perspectives/reussir-entretien-dembauche-freelance/)
 -   [Flexjobs](https://www.flexjobs.com/blog/post/6-freelance-job-interview-questions-prepare/)

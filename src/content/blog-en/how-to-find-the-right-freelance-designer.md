@@ -79,9 +79,9 @@ Don't hesitate to look at several profiles and take a look at their **portfolios
 
 It can also be useful to see what types of companies they've worked with. This will tell you whether your designer is more used to large groups, start-ups, and so on. That will inevitably influence the way they work.
 
-To find your ideal designer, you can go to [**our contact form**](/en/contact) and do a free **brief** with one of our agents. They will take care of finding you the best freelancer to match your needs! dgitags saves you **time** and offers you a **quality service** by pre-selecting the right people for you: experts in their field and suited to your project.
+To find your ideal designer, you can go to [**our contact form**](/en/contact) and do a free **brief** with one of our agents. They will take care of finding you the best freelancer to match your needs! digitags saves you **time** and offers you a **quality service** by pre-selecting the right people for you: experts in their field and suited to your project.
 
-Looking for a designer in 24 hours flat? Read our article "[**dgitags.io finds your graphic designer in 24 hours**](/en/blog/find-your-freelance-designer-in-24-hours)".
+Looking for a designer in 24 hours flat? Read our article "[**digitags.work finds your graphic designer in 24 hours**](/en/blog/find-your-freelance-designer-in-24-hours)".
 
 ### Step 3**: getting in touch**
 
@@ -91,7 +91,7 @@ During this interview, don't hesitate to be direct and set out your needs concre
 
 You can also ask them again which companies they've worked for previously, as well as for examples of their work. This will help you better understand their artistic choices and see whether they're compatible with the ones you'd like for your brand.
 
-> **Déborah Lévy Bencheton**, **freelance UX service designer at dgitags.io**, believes that "beyond the ability to be a designer from a technical point of view, there are **soft skills** that are essential, such as adapting quickly or being able to have a business vision by asking yourself the right questions. In a company, you have time to adapt and be trained. As a freelancer, you have to understand the stakes straight away. That's what makes a good freelancer. You also need good analytical skills. A good freelance designer is someone who can manage several projects at once (the admin side, negotiation, delivery, etc.)".
+> **Déborah Lévy Bencheton**, **freelance UX service designer at digitags.work**, believes that "beyond the ability to be a designer from a technical point of view, there are **soft skills** that are essential, such as adapting quickly or being able to have a business vision by asking yourself the right questions. In a company, you have time to adapt and be trained. As a freelancer, you have to understand the stakes straight away. That's what makes a good freelancer. You also need good analytical skills. A good freelance designer is someone who can manage several projects at once (the admin side, negotiation, delivery, etc.)".
 
 According to Déborah, the last point not to underestimate when hiring is "**interpersonal** **skills**". Indeed, "the freelancer is going to join a new team that's already in place, so they need to know who does what and respect other people's work while asserting their expertise without imposing it. In reality, being a good freelance designer means being a diplomat".
 
@@ -107,6 +107,6 @@ It's advisable not to give cases directly linked to your company, so that the fr
 
 You can also assess their attitude in **role-play scenarios**. For example: "If such-and-such an event happens in a project, what do you do? How do you react?"
 
-That brings us to the end of this article. The dgitags.io team hopes you enjoyed it and that it has given you a few tips for hiring the best freelance designers. Thanks to Déborah for her insights.
+That brings us to the end of this article. The digitags.work team hopes you enjoyed it and that it has given you a few tips for hiring the best freelance designers. Thanks to Déborah for her insights.
 
 Your site is well designed, and now you need an SEO, SEA & SMA agency to grow your revenue? Contact [Donutz Digital](https://www.donutz.fr/), who will support you in France and internationally!

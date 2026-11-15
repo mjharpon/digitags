@@ -28,7 +28,7 @@ These excesses lead us to question the **designer's responsibility**.
 
 ‍
 
-Today, the [Dgitags Team](/en/studios-and-collectives) will introduce you to the concept of ethical design, as well as the debates and controversies surrounding this topic.
+Today, the [Digitags Team](/en/studios-and-collectives) will introduce you to the concept of ethical design, as well as the debates and controversies surrounding this topic.
 
 ‍
 
@@ -156,7 +156,7 @@ The last thing to consider is that ethical designers also want to **give meaning
 
 ‍
 
-There you go! That's already the end... The [Dgitags team](/en/studios-and-collectives) hopes you enjoyed this article and that it was a good introduction to the world of ethical design. For more content, feel free to visit our [website.](/en)
+There you go! That's already the end... The [Digitags team](/en/studios-and-collectives) hopes you enjoyed this article and that it was a good introduction to the world of ethical design. For more content, feel free to visit our [website.](/en)
 
 ‍
 

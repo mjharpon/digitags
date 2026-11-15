@@ -42,7 +42,7 @@ L'embauche d'un traffic manager freelance présente de nombreux avantages pour l
 
 ### **Quelles sont les compétences à avoir pout être un bon traffic manager ?**
 
-> D’après **Yannick Podlinski, Team Leader chez Donutz digital et coordinateur des recrutements SEA pour dgitags.io**, « un traffic manager en freelance doit savoir gérer plusieurs projets et donc plusieurs comptes à la fois tout en travaillant proprement et en se mettant à la place du client. Un bon traffic manager c’est celui ou celle qui sera un bon consultant, capable de concurrencer une agence ».
+> D’après **Yannick Podlinski, Team Leader chez Donutz digital et coordinateur des recrutements SEA pour digitags.work**, « un traffic manager en freelance doit savoir gérer plusieurs projets et donc plusieurs comptes à la fois tout en travaillant proprement et en se mettant à la place du client. Un bon traffic manager c’est celui ou celle qui sera un bon consultant, capable de concurrencer une agence ».
 
 Qu’il soit salarié ou freelance, un bon traffic manager doit donc maîtriser plusieurs compétences puisque ses missions sont très diverses.
 

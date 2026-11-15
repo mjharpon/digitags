@@ -38,7 +38,7 @@ Hiring a freelance traffic manager has many benefits for companies. Here are som
 
 ### **What skills do you need to be a good traffic manager?**
 
-> According to **Yannick Podlinski, Team Leader at Donutz digital and SEA talent coordinator for dgitags.io**, "a freelance traffic manager must be able to manage several projects, and therefore several accounts, at once, while working cleanly and putting themselves in the client's shoes. A good traffic manager is someone who will be a good consultant, able to compete with an agency".
+> According to **Yannick Podlinski, Team Leader at Donutz digital and SEA talent coordinator for digitags.work**, "a freelance traffic manager must be able to manage several projects, and therefore several accounts, at once, while working cleanly and putting themselves in the client's shoes. A good traffic manager is someone who will be a good consultant, able to compete with an agency".
 
 Whether salaried or freelance, a good traffic manager must therefore master several skills, since their missions are very varied.
 

@@ -16,7 +16,7 @@ Bubble, the new kid on the block
 
 > Incredible, isn't it?
 
-If Bubble intrigues you, stay with us! Today, the Dgitags team brings you a review of this trendy new tool to help you discover its main features.
+If Bubble intrigues you, stay with us! Today, the Digitags team brings you a review of this trendy new tool to help you discover its main features.
 
 We hope you enjoy the article. Let's go!
 
@@ -374,7 +374,7 @@ It's a **4/5** for Bubble!
 
 That's the end of this review. Yes, already… Don't worry, we'll be back soon with even more content :)
 
-The Dgitags team nevertheless hopes this article has interested you and taught you a few things about Bubble, this trendy new tool.
+The Digitags team nevertheless hopes this article has interested you and taught you a few things about Bubble, this trendy new tool.
 
 See you soon!
 

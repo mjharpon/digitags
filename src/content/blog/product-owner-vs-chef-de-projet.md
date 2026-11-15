@@ -235,7 +235,7 @@ Nous ne sommes donc pas au bout de nos surprises !
 
 Et oui c’est déjà la fin de cet article. Pas de panique, nous revenons très bientôt avec encore plus de contenus :)
 
-La [team Dgitags](/studios-et-collectifs) espère néanmoins que cet article vous aura intéressé et vous aura appris des choses sur le métier de product owner et de chef de projet.
+La [team Digitags](/studios-et-collectifs) espère néanmoins que cet article vous aura intéressé et vous aura appris des choses sur le métier de product owner et de chef de projet.
 
 Si vous avez besoin de conseils ou d’experts, nos équipes sont là pour vous, n’hésitez pas à les solliciter.
 

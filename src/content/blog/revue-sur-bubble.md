@@ -16,7 +16,7 @@ Bubble, le petit nouveau
 
 > Incroyable non ?
 
-Si Bubble vous intrigue, restez avec nous ! Aujourd’hui, la team Dgitags vous propose une revue sur ce nouvel outil en vogue afin de vous en faire découvrir les principales fonctionnalités.
+Si Bubble vous intrigue, restez avec nous ! Aujourd’hui, la team Digitags vous propose une revue sur ce nouvel outil en vogue afin de vous en faire découvrir les principales fonctionnalités.
 
 Nous espérons que l’article vous plaira. C’est parti !
 
@@ -582,7 +582,7 @@ C’est un **4/5** pour Bubble !
 
 Voilà c’est la fin de cette revue. Et oui déjà… Ne vous inquiétez pas, nous revenons bientôt avec encore plus de contenus :)
 
-La team Dgitags espère néanmoins que cet article vous aura intéressé et vous aura appris des choses sur ce nouvel outil en vogue qu’est Bubble.
+La team Digitags espère néanmoins que cet article vous aura intéressé et vous aura appris des choses sur ce nouvel outil en vogue qu’est Bubble.
 
 A bientôt !
 

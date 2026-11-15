@@ -8,7 +8,7 @@ image: "/uploads/blog/comment-creer-son-statut-dautoentrepreneur-cover.avif"
 
 Do you want to set up your *auto-entreprise* (France's simplified micro-business status) to become a super freelancer, but don't really know how to go about it?
 
-Dgitags.io shows you how in a few steps ☺
+Digitags.work shows you how in a few steps ☺
 
 ###### **CONTENTS**
 
@@ -184,9 +184,9 @@ As an auto-entrepreneur, you'll probably need to open a bank account and take ou
 
 We hope you enjoyed this article and that it has guided you through setting up your micro-business.
 
-Are you interested in the digital sector and would you like to launch yourself in it as a freelancer? Sign up on [**dgitags.io**](/en/design)
+Are you interested in the digital sector and would you like to launch yourself in it as a freelancer? Sign up on [**digitags.work**](/en/design)
 
-Founded by former Google and Bouygues Telecom team members, dgitags.io is a hub of 1,200 digital talents and studios in design, web marketing and product management.
+Founded by former Google and Bouygues Telecom team members, digitags.work is a hub of 1,200 digital talents and studios in design, web marketing and product management.
 
 The acquisition agency Donutz.fr completes this unique value proposition.
 

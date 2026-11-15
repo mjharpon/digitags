@@ -66,11 +66,11 @@ Le fait que le métier soit assez nouveau en France se révèle aussi être un v
 
 Heureusement, chaque choix est justifié, vu que l’on s’appuie sur de la data et de la recherche pour écrire ! 
 
-### \> Ton expérience avec dgitags.io ? 
+### \> Ton expérience avec digitags.work ? 
 
 J’ai été recrutée par Digitags pour une mission freelance de deux mois. **J’ai été la première UX Writer à rejoindre la manufacture digitale du Crédit Agricole**, pour créer une nouvelle app et un nouveau service innovant !
 
-Très rapidement, et après un accompagnement sur mesure par dgitags.io, j’ai été intégrée à une équipe, composée d’un PO, une [UX Designer](/metiers/ux-designer-freelance), une UI et un développeur. En 3 semaines, nous avons mené nos premières recherches et les contours de l’app prenaient forme ! 
+Très rapidement, et après un accompagnement sur mesure par digitags.work, j’ai été intégrée à une équipe, composée d’un PO, une [UX Designer](/metiers/ux-designer-freelance), une UI et un développeur. En 3 semaines, nous avons mené nos premières recherches et les contours de l’app prenaient forme ! 
 
 ### \> Des ressources pour aller plus loin  ?
 

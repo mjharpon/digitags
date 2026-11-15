@@ -70,7 +70,7 @@ Une fois que vous avez préparé votre projet et mis en place un plan de gestion
 
 ### **Identifier les freelances qui correspondent aux besoins du projet**
 
-Vous devrez trouver des freelances dont les compétences correspondront exactement aux besoins spécifiques de votre projet. La meilleure façon de procéder est de passer par des plateformes de recrutement comme dgitags.io qui pourront vous apporter une bonne expertise pour définir le candidat idéal et également vous donner une sélection de profils disponibles et qualifiés rapidement ; ou de consulter un grand nombre de candidats puis d'effectuer une courte sélection finale sur la base des qualifications, expériences et spécialités requises.
+Vous devrez trouver des freelances dont les compétences correspondront exactement aux besoins spécifiques de votre projet. La meilleure façon de procéder est de passer par des plateformes de recrutement comme digitags.work qui pourront vous apporter une bonne expertise pour définir le candidat idéal et également vous donner une sélection de profils disponibles et qualifiés rapidement ; ou de consulter un grand nombre de candidats puis d'effectuer une courte sélection finale sur la base des qualifications, expériences et spécialités requises.
 
 ### **Définir les termes et conditions de travail des freelances**
 

@@ -28,7 +28,7 @@ Ces dérives conduisent à se poser des questions sur la **responsabilité du de
 
 ‍
 
-Aujourd’hui la [Team Dgitags](/studios-et-collectifs) va vous présenter le concept de design éthique ainsi que les débats et les polémiques qui tournent autour de cette thématique.
+Aujourd’hui la [Team Digitags](/studios-et-collectifs) va vous présenter le concept de design éthique ainsi que les débats et les polémiques qui tournent autour de cette thématique.
 
 ‍
 
@@ -156,7 +156,7 @@ Le dernier élément à prendre en compte, est que les designers éthiques souha
 
 ‍
 
-Voila ! c’est déjà la fin ... La [team Dgitags](/studios-et-collectifs) espère que cet article vous aura plu et qu’il aura été une bonne introduction au monde du design éthique. Pour plus de contenus, n’hésitez pas à aller voir notre [site internet.](/)
+Voila ! c’est déjà la fin ... La [team Digitags](/studios-et-collectifs) espère que cet article vous aura plu et qu’il aura été une bonne introduction au monde du design éthique. Pour plus de contenus, n’hésitez pas à aller voir notre [site internet.](/)
 
 ‍
 

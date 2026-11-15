@@ -18,7 +18,7 @@ Do you know the difference?
 
 Don't panic!
 
-Today, the [Dgitags team](/en/studios-and-collectives) will try to answer all your questions:
+Today, the [Digitags team](/en/studios-and-collectives) will try to answer all your questions:
 
 What is the V-model? What is the Scrum method? What sets them apart? Is one more effective than the other?
 
@@ -189,7 +189,7 @@ Scrum will probably face the same kind of comparison with future project managem
 
 That's the end of this article. Yes, already… Don't worry, we'll be back soon with even more content :)
 
-The [Dgitags team](/en/design) nonetheless hopes you found this article interesting and that it taught you a few things about these two methodologies.
+The [Digitags team](/en/design) nonetheless hopes you found this article interesting and that it taught you a few things about these two methodologies.
 
 Within the [Tags community](/en/studios-and-collectives), our teams are used to working with agile methods. Don't hesitate to reach out to them if you have any questions or would like to benefit from our services.
 

@@ -1,6 +1,6 @@
 ---
 title: "Bitcoin: Decentralisation vs Recentralisation"
-description: "Is Bitcoin really decentralised? Dgitags, the digital marketing expert agency, answers all your questions on the subject of Bitcoin!"
+description: "Is Bitcoin really decentralised? Digitags, the digital marketing expert agency, answers all your questions on the subject of Bitcoin!"
 date: 2019-01-01
 tags: [tech-et-data]
 image: "/uploads/blog/le-bitcoin-est-il-vraiment-decentralise-cover.webp"

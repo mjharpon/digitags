@@ -70,7 +70,7 @@ Once you've prepared your project and put a plan in place for managing the timel
 
 ### **Identify the freelancers who match the project's needs**
 
-You'll need to find freelancers whose skills exactly match the specific needs of your project. The best way to go about it is to use platforms like dgitags.io, which can bring you real expertise in defining the ideal candidate and also quickly give you a selection of available, qualified profiles; or to review a large number of candidates and then make a short final selection based on the qualifications, experience and specialisms required.
+You'll need to find freelancers whose skills exactly match the specific needs of your project. The best way to go about it is to use platforms like digitags.work, which can bring you real expertise in defining the ideal candidate and also quickly give you a selection of available, qualified profiles; or to review a large number of candidates and then make a short final selection based on the qualifications, experience and specialisms required.
 
 ### **Define the freelancers' terms and conditions of work**
 

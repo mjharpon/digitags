@@ -12,7 +12,7 @@ Webflow, le petit nouveau qui change tout !
 
 ‍
 
-> _Aujourd’hui, Ophélie, jeune designer freelance de la communauté de Talents_ [_dgitags.io_](/) _et formée à l’HETIC nous donne son avis sur Webflow, le CMS de nouvelle génération, qui permet aux utilisateurs de créer et de lancer rapidement des sites Web. Encore peu connu à ce jour en France, cet outil a tous les atouts pour séduire, et peut-être même devenir le CMS favori des designers en 2020 et beaucoup d'entrepreneurs français, freelances ou non. Ophélie accompagne ses clients en freelance en design, en stratégies de webmarketing et en création de site internet.  
+> _Aujourd’hui, Ophélie, jeune designer freelance de la communauté de Talents_ [_digitags.work_](/) _et formée à l’HETIC nous donne son avis sur Webflow, le CMS de nouvelle génération, qui permet aux utilisateurs de créer et de lancer rapidement des sites Web. Encore peu connu à ce jour en France, cet outil a tous les atouts pour séduire, et peut-être même devenir le CMS favori des designers en 2020 et beaucoup d'entrepreneurs français, freelances ou non. Ophélie accompagne ses clients en freelance en design, en stratégies de webmarketing et en création de site internet.  
 >   
 > _
 
@@ -118,7 +118,7 @@ C’est donc un réel gain de temps et d’argent, autant pour mes clients que p
 
 ‍
 
-### Pauline, Designer UX UI, actuellement en mission pour dgitags.io au sein d'un Grand Compte, nous donne son avis :
+### Pauline, Designer UX UI, actuellement en mission pour digitags.work au sein d'un Grand Compte, nous donne son avis :
 
 ‍
 
@@ -207,13 +207,13 @@ Certes, il ne doit pas remplacer tout le reste, mais c’est un vraie valeur ajo
   
 Workflow, c’est aussi l’allié de vos équipes marketing, pour produire et tester rapidement des concepts : c’est le principe du Build & Launch sur lequel repose le CMS.** 
 
-#### **Les équipes de** [**dgitags.io**](/) **utilisent au quotiden cet outil pour leurs projets, en s’appuyant notamment sur des designers qui le maîtrisent davantage, comme Diarmuid, et qui peuvent aller jusqu’à coder et automatiser certaines tâches.** 
+#### **Les équipes de** [**digitags.work**](/) **utilisent au quotiden cet outil pour leurs projets, en s’appuyant notamment sur des designers qui le maîtrisent davantage, comme Diarmuid, et qui peuvent aller jusqu’à coder et automatiser certaines tâches.** 
 
 #### ‍
 
 ‍
 
-### Diarmuid, le responsable du Studio  NoCode de dgitags.io, m’a donné son avis pour cet article  :
+### Diarmuid, le responsable du Studio  NoCode de digitags.work, m’a donné son avis pour cet article  :
 
 ‍
 
@@ -231,7 +231,7 @@ Workflow, c’est aussi l’allié de vos équipes marketing, pour produire et t
 
 > For brands looking to create bespoke online experiences and eCommerce stores - it is revolutionary, a game-changer. Businesses are harnessing the power of Webflow to communicate visually exactly who they are and how they can help their customers - without their website feeling like just another Squarespace, Shopify or Wordpress template.
 
-> With the “no-code” movement gathering momentum, the power and possibilities of Webflow are advancing rapidly. Webflows API means that it can be integrated with tools such as [Zapier](https://zapier.com/apps/webflow) to extend its capabilities almost infinitely by automating workflows between apps - from CRMs like Hubspot, databases in Google Sheets and Customer Support from Intercom. All without writing a single line of code. For example, dgitags.io website and platform behind has been created with webflow & zapier.
+> With the “no-code” movement gathering momentum, the power and possibilities of Webflow are advancing rapidly. Webflows API means that it can be integrated with tools such as [Zapier](https://zapier.com/apps/webflow) to extend its capabilities almost infinitely by automating workflows between apps - from CRMs like Hubspot, databases in Google Sheets and Customer Support from Intercom. All without writing a single line of code. For example, digitags.work website and platform behind has been created with webflow & zapier.
 
 > A recent and exciting newcomer into the no-code world is [Memberstack](https://www.memberstack.io/). Built specifically for Webflow, Memberstack allows businesses to enable memberships and accounts on their websites. With zero coding, websites can create user accounts and member-only content - with an option to accept payments and subscriptions.  
 

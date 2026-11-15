@@ -226,7 +226,7 @@ WordPress is completely **free**! You just need to **pay for hosting**, but some
 
 You also have access to a **Premium**, **Business** or **eCommerce** theme. Obviously these are paid subscriptions.
 
-We'd like to take this opportunity to mention that Dgitags has web marketing experts who know Webflow and WordPress very well. Our freelancers from the [Tags Community](/en/design) can help you! If you're interested, it's [this way](/en/studios-and-collectives).
+We'd like to take this opportunity to mention that Digitags has web marketing experts who know Webflow and WordPress very well. Our freelancers from the [Tags Community](/en/design) can help you! If you're interested, it's [this way](/en/studios-and-collectives).
 
 ## **Conclusion**
 
@@ -244,7 +244,7 @@ Many people consider WordPress hard to use, but in reality it isn't all that har
 
 So, in reality, the two key issues remain the **difference in price and in experience**, since Webflow is more expensive and perhaps less advisable for beginners.
 
-There you go! That's already the end. The Dgitags team hopes you enjoyed this article on Webflow and WordPress.
+There you go! That's already the end. The Digitags team hopes you enjoyed this article on Webflow and WordPress.
 
 For more content, don't hesitate to check out our other articles on [the blog](/en/blog), especially the one on [Webflow](/en/blog/webflow-the-designers-cms).
 

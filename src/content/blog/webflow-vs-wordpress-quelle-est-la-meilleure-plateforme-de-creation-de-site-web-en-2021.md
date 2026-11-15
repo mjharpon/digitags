@@ -330,7 +330,7 @@ Vous avez également accès à un thème **Premium**, **Business** ou bien **eCo
 
 ‍
 
-Nous en profitons pour vous préciser que Dgitags possède des experts du webmarketing qui connaissent très bien Webflow et Wordpress. Nos freelances de la [Tags Community](/design) peuvent vous aider ! Si vous êtes intéressés, c'est par [ici](/studios-et-collectifs).
+Nous en profitons pour vous préciser que Digitags possède des experts du webmarketing qui connaissent très bien Webflow et Wordpress. Nos freelances de la [Tags Community](/design) peuvent vous aider ! Si vous êtes intéressés, c'est par [ici](/studios-et-collectifs).
 
 ‍
 
@@ -358,7 +358,7 @@ Donc, en réalité les deux enjeux restent la **différence de prix et d’expé
 
 ‍
 
-Voila ! c’est déjà la fin. La team Dgitags espère que cet article sur Webflow et Wordpress vous aura plu.
+Voila ! c’est déjà la fin. La team Digitags espère que cet article sur Webflow et Wordpress vous aura plu.
 
 Pour plus de contenus, n’hésitez pas à aller voir nos autres articles sur [le blog](/blog), en particulier celui sur [Webflow](/blog/webflow-le-cms-du-designer-en-2020).
 

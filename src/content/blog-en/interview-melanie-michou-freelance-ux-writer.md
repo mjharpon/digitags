@@ -66,11 +66,11 @@ The fact that the role is fairly new in France also turns out to be a real chall
 
 Fortunately, every choice is justified, since we rely on data and research to write!
 
-### \> Your experience with dgitags.io?
+### \> Your experience with digitags.work?
 
 I was brought in by Digitags for a two-month freelance engagement. **I was the first UX Writer to join Crédit Agricole's digital factory**, to create a new app and a new innovative service!
 
-Very quickly, and after tailored support from dgitags.io, I was integrated into a team made up of a PO, a [UX Designer](/en/roles/freelance-ux-designer), a UI designer and a developer. Within 3 weeks, we had carried out our first research and the outline of the app was taking shape!
+Very quickly, and after tailored support from digitags.work, I was integrated into a team made up of a PO, a [UX Designer](/en/roles/freelance-ux-designer), a UI designer and a developer. Within 3 weeks, we had carried out our first research and the outline of the app was taking shape!
 
 ### \> Resources to go further?
 

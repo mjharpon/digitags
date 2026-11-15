@@ -1,6 +1,6 @@
 ---
 title: "How to turn hiring trends to your advantage"
-description: "The world of hiring is constantly evolving and has to adapt to what talent expects. Dgitags tells you more!"
+description: "The world of hiring is constantly evolving and has to adapt to what talent expects. Digitags tells you more!"
 date: 2022-10-28
 tags: [recrutement, freelancer]
 image: "/uploads/blog/comment-tourner-les-tendances-du-recrutement-a-son-avantage-cover.webp"
@@ -12,7 +12,7 @@ Technology is without doubt the main driver of this change. It has shaped this y
 
 On top of all this comes the post-coronavirus era, which keeps us at home. More than ever, we have become dependent on technology to entertain ourselves, do our shopping and now work. Even though many professionals and sectors still see technology as a threat to their roles, [54% of HR talent specialists](https://www.northeastern.edu/graduate/blog/human-resources-statistics/) see it more as an opportunity.
 
-With all this context in mind, we called on Chrystal Robet-Tamborini, talent agent for [Dgitags](/en), and Louis Deslus, a "Growth Marketing" influencer, to shed light on the best way to hire!
+With all this context in mind, we called on Chrystal Robet-Tamborini, talent agent for [Digitags](/en), and Louis Deslus, a "Growth Marketing" influencer, to shed light on the best way to hire!
 
 ## **Transparency**
 
@@ -78,7 +78,7 @@ A data-driven strategy is one of the latest trends in hiring. It marks the start
 
 #### **_👉 Chrystal's tip_**
 
-"I use our [Dgitags](/en) platform internally, because everything is indexed with very relevant keyword searches."
+"I use our [Digitags](/en) platform internally, because everything is indexed with very relevant keyword searches."
 
 ## **Hiring on social media**
 

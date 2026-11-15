@@ -80,4 +80,4 @@ A mastery of UX is essential to the success of your product and your company. By
 
 ![UX unicorn dgitags digital ](/uploads/blog/les-metiers-de-lux-2.jpeg)
 
-If you feel lost in this field, don't worry: [Dgitags](/en) is here! If you already have an idea of what your customers expect, get in touch with Chrystal Robet-Tamborini, talent agent, who can point you towards the right UX role.
+If you feel lost in this field, don't worry: [Digitags](/en) is here! If you already have an idea of what your customers expect, get in touch with Chrystal Robet-Tamborini, talent agent, who can point you towards the right UX role.

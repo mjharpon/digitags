@@ -20,7 +20,7 @@ Dans cet article nous allons tenter de répondre aux questions suivantes : Comm
 
 ‍
 
-La [team Dgitags](/studios-et-collectifs) va donc tenter aujourd’hui de répondre à ces questions. Si vous souhaitez en savoir plus sur ces deux concurrents, c’est juste en dessous.  
+La [team Digitags](/studios-et-collectifs) va donc tenter aujourd’hui de répondre à ces questions. Si vous souhaitez en savoir plus sur ces deux concurrents, c’est juste en dessous.  
 
 ‍
 
@@ -256,7 +256,7 @@ Le choix entre les deux outils dépend donc de **l'équilibre entre les performa
 
 Voilà c’est la fin de cet article. Et oui déjà… Ne vous inquiétez pas, nous revenons bientôt avec encore plus de contenus !
 
-La [team Dgitags](/) espère néanmoins que cet article vous aura intéressé et vous aura appris des choses sur ces deux outils incontournables que sont Figma et Sketch.
+La [team Digitags](/) espère néanmoins que cet article vous aura intéressé et vous aura appris des choses sur ces deux outils incontournables que sont Figma et Sketch.
 
 A très vite !
 

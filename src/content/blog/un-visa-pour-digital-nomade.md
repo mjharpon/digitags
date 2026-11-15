@@ -106,7 +106,7 @@ Obtenir son visa de digital nomade n’est donc pas toujours aisé puisqu’il r
 
 ‍
 
-Pour conclure sur cet article, la team dgitags souhaitait vous partager quelques évènements worldwide dédiés aux nomades numériques :
+Pour conclure sur cet article, la team digitags souhaitait vous partager quelques évènements worldwide dédiés aux nomades numériques :
 
 -   ‍[Digital nomad cruise](https://www.nomadcruise.com/) : il s’agit d’un des plus gros évènements pour digital nomades, tant en terme de participants que de durée. L’évènement a lieu sur un bateau de croisière pendant 10 jours.
 -   [Freedom Xfestival](https://freedomxfest.com/) : une semaine d’activités diverses dans un lieu qui change tous les ans.
@@ -129,7 +129,7 @@ Nos services :
 -   [SEO et SEA by Donutz](https://www.donutzdigital.com/)
 -   [Réseau de freelances, experts dans leur domaine (design, webmarketing, product)](/)
 
-A bientôt sur dgitags.io !  
+A bientôt sur digitags.work !  
 
 Source :
 

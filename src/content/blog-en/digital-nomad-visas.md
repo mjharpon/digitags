@@ -96,7 +96,7 @@ Here are a few examples of countries that will let you benefit from tax advantag
 
 Getting your digital nomad visa isn't always easy, as it requires a certain number of supporting documents. However, it's becoming more and more widespread, which helps remove some of the barriers linked to the nomadic lifestyle.
 
-To wrap up this article, the dgitags team wanted to share a few worldwide events dedicated to digital nomads:
+To wrap up this article, the digitags team wanted to share a few worldwide events dedicated to digital nomads:
 
 -   ‍[Digital nomad cruise](https://www.nomadcruise.com/): one of the biggest events for digital nomads, both in terms of participants and duration. The event takes place on a cruise ship for 10 days.
 -   [Freedom Xfestival](https://freedomxfest.com/): a week of varied activities in a location that changes every year.
@@ -117,7 +117,7 @@ Our services:
 -   [SEO and SEA by Donutz](https://www.donutzdigital.com/)[‍](/en)
 -   [A network of freelancers, experts in their field (design, web marketing, product)](/en)
 
-See you soon on dgitags.io!  
+See you soon on digitags.work!  
 
 Sources:
 

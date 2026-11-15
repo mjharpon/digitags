@@ -14,7 +14,7 @@ Figma l'outil à connaitre
 
 > Incroyable progression, non ?
 
-Aujourd’hui, la team Dgitags vous propose une revue sur l’outil Figma afin de vous en faire découvrir les principales fonctionnalités.
+Aujourd’hui, la team Digitags vous propose une revue sur l’outil Figma afin de vous en faire découvrir les principales fonctionnalités.
 
 Nous espérons que l’article vous plaira. Si vous êtes intéressés, c’est juste en dessous !
 
@@ -348,7 +348,7 @@ C’est un **4,5/5** pour Figma !
 
 Voilà c’est la fin de cette revue. Et oui déjà… Ne vous inquiétez pas, nous revenons bientôt avec encore plus de contenus !
 
-La team Dgitags espère néanmoins que cet article vous aura intéressé et vous aura appris des choses sur cet outil incontournable qu’est Figma.
+La team Digitags espère néanmoins que cet article vous aura intéressé et vous aura appris des choses sur cet outil incontournable qu’est Figma.
 
 A bientôt !
 
