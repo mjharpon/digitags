@@ -35,7 +35,7 @@ Ce type de coaching nécessite une planification et une exécution bien spécifi
 
 ## **Les rôles et responsabilités du coach agile**
 
-Le coach agile joue un rôle clé, et le choix de ce dernier doit être réalisé dans les meilleures conditions. C’est pourquoi, chez [**Digitags**](/#deposez-votre-besoin), on vous accompagne dans le recrutement du coach agile indépendant le plus adapté à vos besoins. Voici les trois principaux rôles et responsabilités que doit remplir le coach sélectionné :
+Le coach agile joue un rôle clé, et le choix de ce dernier doit être réalisé dans les meilleures conditions. C’est pourquoi, chez [**Digitags**](/contact), on vous accompagne dans le recrutement du coach agile indépendant le plus adapté à vos besoins. Voici les trois principaux rôles et responsabilités que doit remplir le coach sélectionné :
 
 1.  Guider et conseiller : le coach agile est responsable de guider et de conseiller les membres de l'équipe agile formée, tout au long de la mission. Ils doivent fournir des conseils et des orientations sur les meilleures pratiques agiles, ainsi que sur la manière de surmonter les obstacles et les résistances au changement.
 2.  Former et développer des compétences : le coach agile forme les membres de l'équipe aux méthodologies choisies et développe leurs compétences en leadership, en collaboration et en résolution de problèmes. Il crée un environnement propice à l'apprentissage et à l'amélioration continue. Il dispose donc de qualités humaines et de management.
@@ -79,6 +79,6 @@ En adoptant une approche agile, vous pouvez vous adapter rapidement aux changeme
 
 Le coaching agile offre de nombreux avantages durables, tels que l'adaptabilité, l'innovation, la collaboration et l'engagement.
 
-Vous voulez en discuter ? Chez Digitags, nous mettons à disposition nos experts en coaching agile pour répondre à vos besoins. [**Discutons-en**](/#deposez-votre-besoin) et trouvons le meilleur coach pour vous !
+Vous voulez en discuter ? Chez Digitags, nous mettons à disposition nos experts en coaching agile pour répondre à vos besoins. [**Discutons-en**](/contact) et trouvons le meilleur coach pour vous !
 
 ‍

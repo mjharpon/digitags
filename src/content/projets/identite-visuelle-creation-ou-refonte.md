@@ -48,7 +48,7 @@ Il est important que tous vos outils de communication respectent les mêmes code
 
 ![Confiez nous votre identité visuelle !](/uploads/projets/identite-visuelle-creation-ou-refonte-0.webp)
 
-Vous avez un projet de création ou refonte de votre identité visuelle ou charte graphique ? [**Discutons-en**](/#deposez-votre-besoin) !
+Vous avez un projet de création ou refonte de votre identité visuelle ou charte graphique ? [**Discutons-en**](/contact) !
 
 ## L'expertise Digitags
 

@@ -54,6 +54,6 @@ Enfin, des outils d'analyse et de reporting sont essentiels pour suivre la perf 
 
 Créer un site e-commerce est un projet qui demande une bonne préparation et les bons outils. Chez [**Digitags.work**](/), nous mettons à votre disposition les meilleurs talents et experts freelances pour vous accompagner dans la conception, le développement et la mise en place de votre boutique en ligne.
 
-De la définition de votre stratégie digitale à l’optimisation de votre site pour maximiser vos ventes, nous vous aidons à chaque étape pour garantir votre succès. Prêt à vous lancer ? [\*\*Contactez-nous](https://www.digitags.work/#deposez-votre-besoin)\*\* dès aujourd’hui pour concrétiser votre projet e-commerce !
+De la définition de votre stratégie digitale à l’optimisation de votre site pour maximiser vos ventes, nous vous aidons à chaque étape pour garantir votre succès. Prêt à vous lancer ? [\*\*Contactez-nous](/contact)\*\* dès aujourd’hui pour concrétiser votre projet e-commerce !
 
 ‍

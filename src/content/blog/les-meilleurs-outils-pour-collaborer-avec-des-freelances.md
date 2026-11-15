@@ -65,8 +65,7 @@ Travailler avec des freelances peut être extrêmement bénéfique pour les entr
 
 N'oubliez pas de rechercher des freelances possédant les compétences clés nécessaires, de communiquer de manière claire et précise, de fixer des attentes réalistes et de gérer efficacement les projets.
 
-Si vous recherchez des freelances pour vous accompagner sur vos projets digitaux, nous pouvons vous aider ! Chez Digitags, nous gérons plus de 1500 talents freelances mais aussi des collectifs pour vos plus gros projets. Nous avons forcément la personne qui vous convient, [**discutons-en**](https://www.digitags.work/#deposez-votre-besoin) !
+Si vous recherchez des freelances pour vous accompagner sur vos projets digitaux, nous pouvons vous aider ! Chez Digitags, nous gérons plus de 1500 talents freelances mais aussi des collectifs pour vos plus gros projets. Nous avons forcément la personne qui vous convient, [**discutons-en**](/contact) !
 
-# ‍
 
 ‍

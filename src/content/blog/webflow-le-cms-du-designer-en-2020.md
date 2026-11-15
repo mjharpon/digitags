@@ -1,6 +1,6 @@
 ---
 title: "Webflow, le CMS du Designer en 2020  ?"
-description: "Ophélie, designer freelance de la communauté dgitags.io nous donne son avis sur Webflow, le CMS de nouvelle génération optimisé pour le webdesign"
+description: "Ophélie, designer freelance de la communauté digitags.work nous donne son avis sur Webflow, le CMS de nouvelle génération optimisé pour le webdesign"
 date: 2020-05-08
 tags: [design, tech-et-data]
 image: "/uploads/blog/webflow-le-cms-du-designer-en-2020-cover.jpg"
@@ -12,7 +12,7 @@ Webflow, le petit nouveau qui change tout !
 
 ‍
 
-> _Aujourd’hui, Ophélie, jeune designer freelance de la communauté de Talents_ [_dgitags.io_](https://www.dgitags.io/) _et formée à l’HETIC nous donne son avis sur Webflow, le CMS de nouvelle génération, qui permet aux utilisateurs de créer et de lancer rapidement des sites Web. Encore peu connu à ce jour en France, cet outil a tous les atouts pour séduire, et peut-être même devenir le CMS favori des designers en 2020 et beaucoup d'entrepreneurs français, freelances ou non. Ophélie accompagne ses clients en freelance en design, en stratégies de webmarketing et en création de site internet.  
+> _Aujourd’hui, Ophélie, jeune designer freelance de la communauté de Talents_ [_dgitags.io_](/) _et formée à l’HETIC nous donne son avis sur Webflow, le CMS de nouvelle génération, qui permet aux utilisateurs de créer et de lancer rapidement des sites Web. Encore peu connu à ce jour en France, cet outil a tous les atouts pour séduire, et peut-être même devenir le CMS favori des designers en 2020 et beaucoup d'entrepreneurs français, freelances ou non. Ophélie accompagne ses clients en freelance en design, en stratégies de webmarketing et en création de site internet.  
 >   
 > _
 
@@ -207,7 +207,7 @@ Certes, il ne doit pas remplacer tout le reste, mais c’est un vraie valeur ajo
   
 Workflow, c’est aussi l’allié de vos équipes marketing, pour produire et tester rapidement des concepts : c’est le principe du Build & Launch sur lequel repose le CMS.** 
 
-#### **Les équipes de** [**dgitags.io**](http://www.dgitags.io) **utilisent au quotiden cet outil pour leurs projets, en s’appuyant notamment sur des designers qui le maîtrisent davantage, comme Diarmuid, et qui peuvent aller jusqu’à coder et automatiser certaines tâches.** 
+#### **Les équipes de** [**dgitags.io**](/) **utilisent au quotiden cet outil pour leurs projets, en s’appuyant notamment sur des designers qui le maîtrisent davantage, comme Diarmuid, et qui peuvent aller jusqu’à coder et automatiser certaines tâches.** 
 
 #### ‍
 
@@ -239,7 +239,7 @@ Workflow, c’est aussi l’allié de vos équipes marketing, pour produire et t
 
   
 
-#### **En conclusion, son avis reflète bien l'intérêt et la puissance d'un tel outil mais pour l'exploiter pleinement il est nécéssaire d'être très bien formé.  Seul on peut faire beaucoup de choses mais une équipe bien formée comme notre** [**studio spécialisé**](https://www.dgitags.io/talents) **par exemple, peut aller beaucoup plus loin.** 
+#### **En conclusion, son avis reflète bien l'intérêt et la puissance d'un tel outil mais pour l'exploiter pleinement il est nécéssaire d'être très bien formé.  Seul on peut faire beaucoup de choses mais une équipe bien formée comme notre** [**studio spécialisé**](/studios-et-collectifs) **par exemple, peut aller beaucoup plus loin.** 
 
 #### ‍
 
@@ -247,7 +247,7 @@ Workflow, c’est aussi l’allié de vos équipes marketing, pour produire et t
 
 #### **Et vous, connaissez vous cet outil ? En avez vous entendu parler ?**
 
-#### **N'hésitez pas à nous contacter** [](https://www.dgitags.io/#deposez-votre-besoin)**pour en discuter.** 
+#### **N'hésitez pas à nous contacter** **pour en discuter.** 
 
 #### **‍**
 

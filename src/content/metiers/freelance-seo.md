@@ -60,6 +60,6 @@ Digitags.work vous aide à relever vos défis via le recrutement freelance de sp
 
 ![Recrutez le bon freelance SEO](/uploads/metiers/freelance-seo-0.webp)
 
-Chez Digitags, nous plaçons des experts freelances SEO sur des missions de nombreux de nos clients. Si vous souhaitez échanger sur votre projet et trouver le talent qui convient à vos besoins, [**contactez-nous**](/#deposez-votre-besoin) !
+Chez Digitags, nous plaçons des experts freelances SEO sur des missions de nombreux de nos clients. Si vous souhaitez échanger sur votre projet et trouver le talent qui convient à vos besoins, [**contactez-nous**](/contact) !
 
 ‍

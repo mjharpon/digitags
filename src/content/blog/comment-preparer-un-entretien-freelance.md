@@ -100,7 +100,7 @@ Pour conclure sur ces quelques tips, n’oubliez pas que vous venez pour un beso
 
 Nos entretiens se déroulent de la manière présentée ci-dessus. Donc vous n’aurez pas de surprises ! 
 
-Préparez votre entretien en vous renseignant sur [dgitags.io](https://www.dgitags.io/) et réfléchissez à un petit pitch de 2/3 minutes pour vous présenter.Allez à l’essentiel en ciblant les informations et compétences qui vous serviront dans le cadre de la mission.
+Préparez votre entretien en vous renseignant sur [dgitags.io](/) et réfléchissez à un petit pitch de 2/3 minutes pour vous présenter.Allez à l’essentiel en ciblant les informations et compétences qui vous serviront dans le cadre de la mission.
 
 Pendant l’entretien, nous vous poserons des questions relatives à vos expériences professionnelles afin de voir si votre expertise concorde avec les objectifs et les besoins de la mission.
 
@@ -108,13 +108,13 @@ Chez dgitags, la particularité de notre processus de recrutement, c’est notre
 
 Nous cherchons à réellement connaitre les freelances que nous représentons afin de créer du lien, ce qui permet de fiabiliser la réussite de nos projets. En effet, nous mettons nos clients en contact avec des freelances ayant les mêmes valeurs, la même vision. Nous apportons une vraie dimension humaine dans le processus de recrutement. De plus, nous recherchons des freelances autonomes, experts dans leur domaine et qui sont forces de proposition. La clé est de trouver un freelance qui match avec la mission proposée.
 
-C’est déjà la fin de cet article. Néanmoins, la team dgitags.io espère qu’il vous aura plu et vous aura donné quelques conseils pour préparer votre entretien. N’hésitez pas à aller jeter un œil à notre [blog](https://www.dgitags.io/blog).
+C’est déjà la fin de cet article. Néanmoins, la team dgitags.io espère qu’il vous aura plu et vous aura donné quelques conseils pour préparer votre entretien. N’hésitez pas à aller jeter un œil à notre [blog](/blog).
 
 _Si vous recherchez un bon freelance dans le SEA, SEO ou bien encore dans le product management_, _contactez_ [_Donutz Digital_](https://www.donutzdigital.com/) _qui vous accompagnera en France mais aussi à l'international !_
 
 Source :
 
--   ‍[Dgitags](https://www.dgitags.io/)‍
+-   ‍[Dgitags](/)‍
 -   [Port-up](https://blog.port-up.fr/développeur-freelance-entretien-technique)
 -   [Freelance method](https://freelancemethod.com/perspectives/reussir-entretien-dembauche-freelance/)
 -   [Flexjobs](https://www.flexjobs.com/blog/post/6-freelance-job-interview-questions-prepare/)

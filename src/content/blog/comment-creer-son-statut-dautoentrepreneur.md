@@ -1,6 +1,6 @@
 ---
 title: "Comment créer son statut d’autoentrepreneur ?"
-description: "Créez votre statut de microentrepreneur avec dgitags.io !"
+description: "Créez votre statut de microentrepreneur avec digitags.work !"
 date: 2022-08-29
 tags: [freelancer]
 image: "/uploads/blog/comment-creer-son-statut-dautoentrepreneur-cover.avif"
@@ -192,19 +192,19 @@ En tant qu’autoentrepreneur, vous aurez surement besoin de vous créer un comp
 
 Nous espérons que cet article vous aura plus et vous aura guidé dans la création de votre microentreprise.
 
-Si vous êtes intéressés par le secteur du digital et que vous souhaitez vous y lancer en tant que freelance ? Référencez vous sur [**dgitags.io**](https://www.dgitags.io/design)
+Si vous êtes intéressés par le secteur du digital et que vous souhaitez vous y lancer en tant que freelance ? Référencez vous sur [**dgitags.io**](/design)
 
 Fondé par d'anciens collaborateurs de Google et Bouygues Telecom, dgitags.io est un hub de 1200 talents et studios digitaux en design, webmarketing ou product management.
 
 L'agence d’acquisition Donutz.fr complète cette proposition de valeur unique.
 
-Pour en savoir plus sur Donutz, cliquez [ici.](#deposez-votre-besoin)
+Pour en savoir plus sur Donutz, cliquez [ici.](/contact)
 
 [
 
 ![dgitags digital expert ](/uploads/blog/comment-creer-son-statut-dautoentrepreneur-11.webp)
 
-](#deposez-votre-besoin)
+](/contact)
 
 Source :
 

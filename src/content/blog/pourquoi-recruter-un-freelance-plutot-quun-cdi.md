@@ -91,7 +91,7 @@ Une autre option est d'utiliser des plateformes en ligne spécialisées dans le 
 
 En conclusion, l'embauche d'un freelance plutôt qu'un employé permanent présente de nombreux avantages pour les entreprises. Les freelances offrent une flexibilité et une liberté précieuses, permettent de réaliser des économies financières et apportent une expertise spécialisée pour votre besoin.
 
-[**Discutons de votre projet**](https://www.digitags.work/#deposez-votre-besoin) et trouvons le freelance idéal pour vous ! Découvrez [**les métiers de Freelance**](https://www.digitags.work/metiers) au sein de digitags.work ou [**les projets qu'ils réalisent.**](https://www.digitags.work/projets)
+[**Discutons de votre projet**](/contact) et trouvons le freelance idéal pour vous ! Découvrez [**les métiers de Freelance**](https://www.digitags.work/metiers) au sein de digitags.work ou [**les projets qu'ils réalisent.**](https://www.digitags.work/projets)
 
 ‍
 

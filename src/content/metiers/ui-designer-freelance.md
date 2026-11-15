@@ -81,4 +81,4 @@ Digitags.work vous aide à relever vos défis grâce au recrutement freelance de
 
 ![Trouvez l'UI Designer fait pour vous !](/uploads/metiers/ui-designer-freelance-0.webp)
 
-Vous souhaitez recruter un UI designer sur une mission spécifique ou à plus long terme ? [**Faites appel à nous**](/#deposez-votre-besoin) pour vous trouver le profil le plus adapté et suivre votre projet. Avec une approche personnalisée, nous transformons votre besoin de renfort en Freelance en réalité. Contactez-nous dès aujourd'hui pour concrétiser vos projets !
+Vous souhaitez recruter un UI designer sur une mission spécifique ou à plus long terme ? [**Faites appel à nous**](/contact) pour vous trouver le profil le plus adapté et suivre votre projet. Avec une approche personnalisée, nous transformons votre besoin de renfort en Freelance en réalité. Contactez-nous dès aujourd'hui pour concrétiser vos projets !

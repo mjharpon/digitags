@@ -56,4 +56,4 @@ Il est également utile de suivre les dernières tendances en matière de SEO et
 
 Le cas d'étude du lancement SEO de MonCompteFormation démontre clairement les avantages d'une stratégie SEO bien pensée. En optimisant leur site pour les mots clés pertinents, en créant un contenu de qualité et en établissant des liens de qualité, ils ont réussi à atteindre leurs objectifs en termes de visibilité en ligne et de trafic organique.
 
-Vous souhaitez trouver le [**rédacteur SEO freelance**](/metiers/freelance-seo) parfait pour vous accompagner ? [**Discutons de votre projet**](/#deposez-votre-besoin).
+Vous souhaitez trouver le [**rédacteur SEO freelance**](/metiers/freelance-seo) parfait pour vous accompagner ? [**Discutons de votre projet**](/contact).

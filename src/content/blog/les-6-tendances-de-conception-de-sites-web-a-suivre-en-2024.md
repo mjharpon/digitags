@@ -78,6 +78,6 @@ Voici [**un exemple de site**](https://astroshock.com/).
 
 En 2024, le paysage du design web continue à évoluer rapidement, offrant de nouvelles possibilités et technologies pour créer des expériences en ligne captivantes. Cet article résumait mes tendances préférées. La fin d’année nous réserve, j’en suis sûre, de nouvelles tendances. En adaptant votre stratégie pour inclure ces tendances, vous pourrez offrir une expérience utilisateur inoubliable et vous démarquer de la concurrence.
 
-Vous souhaitez créer ou refondre votre site web ? [**Discutons de votre projet**](https://www.digitags.work/#deposez-votre-besoin) !
+Vous souhaitez créer ou refondre votre site web ? [**Discutons de votre projet**](/contact) !
 
 ‍

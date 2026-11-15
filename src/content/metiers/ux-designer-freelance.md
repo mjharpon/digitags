@@ -90,6 +90,6 @@ Digitags.work vous aide à relever vos défis via le recrutement freelance d’U
 
 Chez Digitags, nous vous accompagnons dans vos besoins en UX design grâce à notre hub de 1500 talents freelances. Nous discutons de votre projet afin de cerner vos attentes et vous mettons en relation avec l’UX designer qui convient à vos besoins.
 
-Nous garder un oeil sur le projet durant toute sa réalisation et le contractualisons directement avec vous. Nous nous assurons du suivi et de la bonne tenue des délais. Vous souhaitez trouver un UX designer freelance pour votre projet de [**création ou refonte de site web**](/projets/refonte-de-site-internet) ? [**Discutons-en**](/#deposez-votre-besoin) !
+Nous garder un oeil sur le projet durant toute sa réalisation et le contractualisons directement avec vous. Nous nous assurons du suivi et de la bonne tenue des délais. Vous souhaitez trouver un UX designer freelance pour votre projet de [**création ou refonte de site web**](/projets/refonte-de-site-internet) ? [**Discutons-en**](/contact) !
 
 ‍

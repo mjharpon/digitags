@@ -1,6 +1,6 @@
 ---
 title: "Webflow, the designer's CMS in 2020?"
-description: "Ophélie, a freelance designer from the dgitags.io community, gives us her take on Webflow, the next-generation CMS optimised for web design"
+description: "Ophélie, a freelance designer from the digitags.work community, gives us her take on Webflow, the next-generation CMS optimised for web design"
 date: 2020-05-08
 tags: [design, tech-et-data]
 image: "/uploads/blog/webflow-le-cms-du-designer-en-2020-cover.jpg"

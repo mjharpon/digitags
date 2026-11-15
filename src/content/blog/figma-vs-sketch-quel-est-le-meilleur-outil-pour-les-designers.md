@@ -20,7 +20,7 @@ Dans cet article nous allons tenter de répondre aux questions suivantes : Comm
 
 ‍
 
-La [team Dgitags](https://www.dgitags.io/studios) va donc tenter aujourd’hui de répondre à ces questions. Si vous souhaitez en savoir plus sur ces deux concurrents, c’est juste en dessous.  
+La [team Dgitags](/studios-et-collectifs) va donc tenter aujourd’hui de répondre à ces questions. Si vous souhaitez en savoir plus sur ces deux concurrents, c’est juste en dessous.  
 
 ‍
 
@@ -202,7 +202,7 @@ Sur cet aspect, Figma peut être plus flexible que Sketch, car il prend en charg
 
 ‍
 
-Si vous voulez en découvrir plus sur Figma, c'est par [ici](https://www.dgitags.io/blog/a-la-decouverte-de-figma).
+Si vous voulez en découvrir plus sur Figma, c'est par [ici](/blog/a-la-decouverte-de-figma).
 
 ## **5/ Figma vs Sketch : lequel choisir ?**
 
@@ -240,7 +240,7 @@ Les réelles questions à se poser sont donc les suivantes :
 
 ‍
 
-\-      Le concepteur travaille-t-il en tant que freelance ou au sein d'une entreprise ? _Vous êtes intéressé par les freelances ? Venez jeter un oeil à notre_ [_page dédiée_](https://www.dgitags.io/design).
+\-      Le concepteur travaille-t-il en tant que freelance ou au sein d'une entreprise ? _Vous êtes intéressé par les freelances ? Venez jeter un oeil à notre_ [_page dédiée_](/design).
 
 \-      Quels ordinateurs les designers utilisent-ils pour travailler ?
 
@@ -256,7 +256,7 @@ Le choix entre les deux outils dépend donc de **l'équilibre entre les performa
 
 Voilà c’est la fin de cet article. Et oui déjà… Ne vous inquiétez pas, nous revenons bientôt avec encore plus de contenus !
 
-La [team Dgitags](https://www.dgitags.io/) espère néanmoins que cet article vous aura intéressé et vous aura appris des choses sur ces deux outils incontournables que sont Figma et Sketch.
+La [team Dgitags](/) espère néanmoins que cet article vous aura intéressé et vous aura appris des choses sur ces deux outils incontournables que sont Figma et Sketch.
 
 A très vite !
 

@@ -6,7 +6,7 @@ tags: [design, freelancer]
 image: "/uploads/blog/dgitags-io-trouve-en-24h-votre-designer-freelance-cover.avif"
 ---
 
-Vous êtes à la recherche d'un designer freelance talentueux pour votre prochain projet ? [**Digitags.work**](https://digitags.work/) est la plateforme idéale pour trouver rapidement le designer qui correspond parfaitement à vos besoins.
+Vous êtes à la recherche d'un designer freelance talentueux pour votre prochain projet ? [**Digitags.work**](/) est la plateforme idéale pour trouver rapidement le designer qui correspond parfaitement à vos besoins.
 
 Notre plateforme innovante vous permet de trouver facilement un talent parmi notre pool de designers freelances expérimentés et créatifs. Que vous ayez besoin d'[**une identité visuelle**](https://www.digitags.work/projets/identite-visuelle-creation-ou-refonte), d'une maquette ou d’[**une refonte de site web**](https://www.digitags.work/projets/refonte-de-site-internet) ou encore d'un design original pour vos supports de communication, vous trouverez le talent qu'il vous faut.
 
@@ -26,17 +26,17 @@ Si vous souhaitez lancer vos projets digitaux avec des experts du milieu digital
 
 ## **Les avantages de trouver un designer freelance sur digitags.work**
 
-L'utilisation de [digitags.work](https://digitags.work/) présente de nombreux avantages pour trouver un designer freelance. Tout d'abord, la plateforme vous offre un large éventail de choix parmi des designers talentueux et créatifs. Vous pouvez parcourir facilement les profils des designers, consulter leurs portfolios et trouver celui qui correspond le mieux à vos besoins spécifiques.
+L'utilisation de [digitags.work](/) présente de nombreux avantages pour trouver un designer freelance. Tout d'abord, la plateforme vous offre un large éventail de choix parmi des designers talentueux et créatifs. Vous pouvez parcourir facilement les profils des designers, consulter leurs portfolios et trouver celui qui correspond le mieux à vos besoins spécifiques.
 
-De plus, [digitags.work](https://digitags.work/) vous permet de gagner du temps dans votre recherche de designer freelance. Au lieu de passer des heures à chercher sur différents sites ou à contacter des designers individuellement, vous pouvez trouver tout ce dont vous avez besoin sur une seule plateforme. Cela vous permet de comparer les compétences, les tarifs et les disponibilités des designers en un seul endroit.
+De plus, [digitags.work](/) vous permet de gagner du temps dans votre recherche de designer freelance. Au lieu de passer des heures à chercher sur différents sites ou à contacter des designers individuellement, vous pouvez trouver tout ce dont vous avez besoin sur une seule plateforme. Cela vous permet de comparer les compétences, les tarifs et les disponibilités des designers en un seul endroit.
 
-Enfin, [digitags.work](https://digitags.work/) offre également un processus de collaboration simplifié. Vous pouvez communiquer directement avec le designer choisi, partager vos idées et vos attentes, et collaborer étroitement tout au long du projet. Cela garantit une meilleure compréhension mutuelle et permet d'obtenir des résultats finaux qui correspondent exactement à vos besoins.
+Enfin, [digitags.work](/) offre également un processus de collaboration simplifié. Vous pouvez communiquer directement avec le designer choisi, partager vos idées et vos attentes, et collaborer étroitement tout au long du projet. Cela garantit une meilleure compréhension mutuelle et permet d'obtenir des résultats finaux qui correspondent exactement à vos besoins.
 
 ## **Comment fonctionne digitags.work** **?**
 
 Passons au vif du sujet. Comment digitags.work vous trouve-t-il le freelance idéal en 24h ? Quel est notre secret ?
 
-Pour envoyer votre brief, saisissez le via [**le formulaire dédié**](https://www.digitags.work/#deposez-votre-besoin) en bas de page.
+Pour envoyer votre brief, saisissez le via [**le formulaire dédié**](/contact) en bas de page.
 
 ![\_\_wf\_reserved\_inherit](/uploads/blog/dgitags-io-trouve-en-24h-votre-designer-freelance-0.webp)
 
@@ -44,7 +44,7 @@ Votre brief est diffusé dans l'heure à nos agents de talents qui vont sollicit
 
 Dès que notre [account manager](/metiers/account-manager-freelance) reçoit votre brief, il réalise une sélection dans les 24H top chrono des meilleurs profils pour votre projet.
 
-Notre account manager pourra aussi vous proposer un [**Studio**](https://www.dgitags.io/studios) ou [**l'agence Donutz**](https://www.donutzdigital.com/) si cela nous semble la réponse la plus adéquate pour garantir le succès de votre projet.
+Notre account manager pourra aussi vous proposer un [**Studio**](/studios-et-collectifs) ou [**l'agence Donutz**](https://www.donutzdigital.com/) si cela nous semble la réponse la plus adéquate pour garantir le succès de votre projet.
 
 Par la suite, nous organisons un entretien en visio avec les profils digitaux qui ont retenus votre attention pour discuter de manière plus précise de votre projet.
 
@@ -56,7 +56,7 @@ Alors n’hésitez plus, contactez nous !
 
 ## **Critères à prendre en compte lors du choix d'un designer freelance**
 
-Lorsque vous choisissez un [**designer freelance**](https://www.digitags.work/blog/freelance-designer-trouvez-le-bon-professionnel-pour-votre-projet) sur [**digitags.work**](https://digitags.work/), il est important de prendre en compte certains critères pour vous assurer de faire le meilleur choix possible. Voici quelques éléments à considérer :
+Lorsque vous choisissez un [**designer freelance**](https://www.digitags.work/blog/freelance-designer-trouvez-le-bon-professionnel-pour-votre-projet) sur [**digitags.work**](/), il est important de prendre en compte certains critères pour vous assurer de faire le meilleur choix possible. Voici quelques éléments à considérer :
 
 1.  Expérience et compétences : Vérifiez le portfolio du designer pour vous assurer qu'il a une expérience pertinente dans le domaine du design qui vous intéresse. Regardez également les projets précédents pour évaluer la qualité de son travail.
 2.  Style : Chaque designer a son propre style. Assurez-vous que le style du designer correspond à ce que vous recherchez pour votre projet. Regardez les exemples de son travail pour voir si cela correspond à vos attentes en termes de design.
@@ -64,15 +64,15 @@ Lorsque vous choisissez un [**designer freelance**](https://www.digitags.work/bl
 
 ‍
 
-## **Tarifs des designers freelance sur** [**digitags.work**](https://digitags.work/)
+## **Tarifs des designers freelance sur** [**digitags.work**](/)
 
-Les tarifs des designers freelance sur [digitags.work](https://digitags.work/) varient en fonction de différents facteurs tels que l'expérience du designer, la complexité du projet et la durée du travail. Il n'y a pas de tarifs fixes sur la plateforme, mais vous pouvez trouver des designers avec des tarifs adaptés à différents budgets.
+Les tarifs des designers freelance sur [digitags.work](/) varient en fonction de différents facteurs tels que l'expérience du designer, la complexité du projet et la durée du travail. Il n'y a pas de tarifs fixes sur la plateforme, mais vous pouvez trouver des designers avec des tarifs adaptés à différents budgets.
 
 Certains designers facturent un tarif horaire, tandis que d'autres proposent des forfaits pour des projets spécifiques. Il est important de discuter des tarifs avec le designer lors de la phase de discussion initiale avec l’agent de talent pour qu’il puisse sélectionner les meilleurs profils.
 
 Il est également important de garder à l'esprit que la qualité du travail et l'expérience du designer peuvent influencer les tarifs. Les designers les plus expérimentés et les plus talentueux peuvent facturer des tarifs plus élevés, mais ils offrent souvent une qualité de travail supérieure et une expertise plus poussée.
 
-Sur [digitags.work](https://digitags.work/), vous pouvez trouver des designers avec une gamme de tarifs différents, ce qui vous permet de choisir celui qui correspond le mieux à votre budget et à vos attentes en termes de qualité et de valeur.
+Sur [digitags.work](/), vous pouvez trouver des designers avec une gamme de tarifs différents, ce qui vous permet de choisir celui qui correspond le mieux à votre budget et à vos attentes en termes de qualité et de valeur.
 
 ‍
 
@@ -90,17 +90,17 @@ Comme le précise Thibaut Villamur, Head of Design, La Manufacture Digitale du C
 
 ‍
 
-## **Conclusion : Pourquoi choisir** [**digitags.work**](https://digitags.work/) **pour trouver votre designer freelance?**
+## **Conclusion : Pourquoi choisir** [**digitags.work**](/) **pour trouver votre designer freelance?**
 
-[Digitags.work](https://digitags.work/) est la plateforme idéale pour trouver votre designer freelance pour plusieurs raisons. Tout d'abord, nous offrons une large sélection de designers talentueux et créatifs, ce qui vous permet de trouver celui qui correspond le mieux à vos besoins spécifiques.
+[Digitags.work](/) est la plateforme idéale pour trouver votre designer freelance pour plusieurs raisons. Tout d'abord, nous offrons une large sélection de designers talentueux et créatifs, ce qui vous permet de trouver celui qui correspond le mieux à vos besoins spécifiques.
 
 Vous pouvez gagner du temps et de l'énergie dans votre recherche de designer freelance grâce à la pré-sélection de nos agents de talents. Nous offrons un processus de collaboration simplifié et gérons le suivi du projet et sa contractualisation.
 
-Faites confiance à [digitags.work](https://digitags.work/) pour trouver votre freelance designer et obtenez des designs qui vous satisfont vraiment.
+Faites confiance à [digitags.work](/) pour trouver votre freelance designer et obtenez des designs qui vous satisfont vraiment.
 
 Si vous recherchez un bon freelance dans le SEA, SEO ou bien encore dans le product management, c’est le même processus que celui que nous venons de vous exposer. Remplissez le brief et nous vous trouverons le meilleur freelance, adapté à votre projet.
 
-Si cet article vous a plu, n’hésitez pas à aller jeter un œil à notre [**blog**](https://www.dgitags.io/blog).
+Si cet article vous a plu, n’hésitez pas à aller jeter un œil à notre [**blog**](/blog).
 
 ‍Vous avez besoin d’aller plus loin et donc  d'une agence SEO, SEA & SMA pour développer votre CA ? Contactez [**Donutz Digital**](https://www.donutz.fr/) !
 

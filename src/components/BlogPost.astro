@@ -56,8 +56,29 @@ const t = en
       postHref: (id: string) => `/blog/${id}`,
       readCta: "Lire l'article",
     };
+
+// Données structurées de l'article. L'éditeur (et auteur, les articles n'étant pas
+// signés) renvoie à l'Organization déclarée dans Base.astro par son @id.
+const ORG_ID = 'https://www.digitags.work/#organization';
+const postUrl = new URL(t.postHref(post.id), Astro.site).href;
+const articleJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": `${postUrl}#article`,
+  headline: post.data.title,
+  ...(post.data.description ? { description: post.data.description } : {}),
+  ...(post.data.date ? { datePublished: post.data.date.toISOString() } : {}),
+  image: new URL(post.data.image ?? '/assets/og-default.png', Astro.site).href,
+  inLanguage: lang,
+  url: postUrl,
+  mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
+  ...(post.data.tags.length ? { keywords: post.data.tags.map((tg: string) => (en ? tagLabelEn(tg) : tg)).join(', ') } : {}),
+  author: { "@id": ORG_ID },
+  publisher: { "@id": ORG_ID },
+});
 ---
-<Base title={`${post.data.title} | digitags.work`} description={post.data.description}>
+<Base title={`${post.data.title} | digitags.work`} description={post.data.description} image={post.data.image} ogType="article">
+  <script type="application/ld+json" set:html={articleJsonLd} />
   <article>
     <section class="page-hero" style="padding-bottom: 36px;">
       <div class="container">

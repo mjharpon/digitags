@@ -91,6 +91,6 @@ Maintenant que vous en savez plus sur le back-end, le front-end et le full-stack
 
 Si votre projet dispose déjà d’une équipe structurée, un full-stack peut venir faire le lien entre tous les développeurs et prendre le lead sur la gestion de projet. Si vous avez un budget réduit, et que vous préférez ne recruter qu’un seul développeur freelance, alors il sera également une bonne option. si vous voulez structurer une équipe, commencer avec un back-end et un front-end peut être un bon début !
 
-Vous avez besoin d’aide pour préciser votre projet et vos besoins et trouver le freelance adapté ? [**Discutons-en**](https://www.digitags.work/#deposez-votre-besoin) ! Chez digitags.work, nous disposons d’un hub de 1500 freelances experts du digital prêts à vous accompagner.
+Vous avez besoin d’aide pour préciser votre projet et vos besoins et trouver le freelance adapté ? [**Discutons-en**](/contact) ! Chez digitags.work, nous disposons d’un hub de 1500 freelances experts du digital prêts à vous accompagner.
 
 ‍

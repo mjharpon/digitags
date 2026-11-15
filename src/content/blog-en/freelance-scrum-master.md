@@ -2,7 +2,7 @@
 title: "Scrum Master: boost your sprints"
 description: "Discover how a scrum master can transform your agile projects. Expertise, flexibility and concrete results for your tech teams."
 date: 2026-02-09
-image: "/uploads/blog/scrum-master-freelance-boostez-vos-sprints-cover.jpg"
+image: "/uploads/blog/scrum-master-freelance-boostez-vos-sprints-cover.webp"
 ---
 
 Are your tech teams going round in circles? Deadlines slipping sprint after sprint, and nobody seems able to get things moving again? You're not alone. Many leaders hit the same wall: an agile transformation that's stalling, Scrum rituals that feel like never-ending meetings, and velocity that's flatlining.

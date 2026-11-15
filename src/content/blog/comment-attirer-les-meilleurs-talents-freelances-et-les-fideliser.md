@@ -54,7 +54,7 @@ De plus, il est important de respecter les horaires de travail des freelances et
 
 Comme souvent, le nerf de la guerre restant l’argent, il est important de proposer une bonne rémunération aux freelances.
 
-La vie de digital nomad vous intéresse ? [**Cliquez ici**.](https://www.dgitags.io/blog/la-vie-de-digital-nomade)
+La vie de digital nomad vous intéresse ? [**Cliquez ici**.](/blog/la-vie-de-digital-nomade)
 
 ## **Mettre en place une communication transparente et ouverte**
 

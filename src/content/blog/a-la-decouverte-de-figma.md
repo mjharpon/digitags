@@ -258,38 +258,6 @@ Figma permet de créer des **composants** (icônes, arrières-plans, avatars, po
 
 ‍
 
-#### **Extrait vidéo 1 : Présentation rapide des outils**
-
-‍
-
-<iframe src="/uploads/blog/a-la-decouverte-de-figma-17.jpg" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
-
-‍
-
-#### **Extrait vidéo 2 : Plus de détails sur l’utilisation des outils**
-
-<iframe src="/uploads/blog/a-la-decouverte-de-figma-18.jpg" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
-
-‍
-
-#### **Extrait vidéo 3 : Créer des liens entre vos objets/pages**
-
-‍
-
-<iframe src="/uploads/blog/a-la-decouverte-de-figma-19.jpg" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
-
-‍
-
-#### **Extrait vidéo 4 : Visualisation**
-
-‍
-
-<iframe src="/uploads/blog/a-la-decouverte-de-figma-20.jpg" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
-
-‍
-
-‍
-
 Pour plus de tips et d’analyse des outils **,** vous pouvez aller voir [cette vidéo](https://www.youtube.com/watch?v=e68PKFYWfoQ) sur Youtube que nous avons trouvé intéressante.
 
 ‍
@@ -327,14 +295,6 @@ L’objectif est de permettre à tout le monde de **participer et de partager se
 Figjam a récemment lancé la fonctionnalité audio intégrée qui permet aux équipes de discuter en direct, sans avoir à lancer un appel vidéo.
 
 Figjam est pour le moment **gratuit**. En 2022, une offre payante devrait être lancée. Figjam fait désormais concurrence à des outils comme **Miro, Mural** ou encore **Freehand**.
-
-#### **Extrait vidéo sur FigJam :**
-
-‍
-
-<iframe src="/uploads/blog/a-la-decouverte-de-figma-21.jpg" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
-
-‍
 
 Nous espérons que cette présentation détaillée des deux grands outils de Figma vous aura intéressé. Passons dès après-en aux tarifs proposés par Figma.
 

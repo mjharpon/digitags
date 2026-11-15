@@ -235,16 +235,16 @@ Nous ne sommes donc pas au bout de nos surprises !
 
 Et oui c’est déjà la fin de cet article. Pas de panique, nous revenons très bientôt avec encore plus de contenus :)
 
-La [team Dgitags](https://www.dgitags.io/studios) espère néanmoins que cet article vous aura intéressé et vous aura appris des choses sur le métier de product owner et de chef de projet.
+La [team Dgitags](/studios-et-collectifs) espère néanmoins que cet article vous aura intéressé et vous aura appris des choses sur le métier de product owner et de chef de projet.
 
 Si vous avez besoin de conseils ou d’experts, nos équipes sont là pour vous, n’hésitez pas à les solliciter.
 
 Nos services :
 
--   [Nos studios de développeurs](https://www.dgitags.io/studios)
--   [SEO by Donutz](https://www.dgitags.io/agence-seo)
--   [SEA by Donutz](https://www.dgitags.io/agence-sea)
--   Réseau de freelances, experts dans leur domaine ([design](https://www.dgitags.io/design), [webmarketing](https://www.dgitags.io/marketing), [product](https://www.dgitags.io/produits))
+-   [Nos studios de développeurs](/studios-et-collectifs)
+-   [SEO by Donutz](/sea-social-ads-seo)
+-   [SEA by Donutz](/sea-social-ads-seo)
+-   Réseau de freelances, experts dans leur domaine ([design](/design), [webmarketing](/sea-social-ads-seo), [product](/product-et-project))
 
 ‍
 

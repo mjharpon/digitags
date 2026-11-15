@@ -5,6 +5,10 @@ import { langOf, alternateOf } from '../lib/i18n';
 interface Props {
   title: string;
   description?: string;
+  /** Image de partage (chemin ou URL) ; défaut : /assets/og-default.png. */
+  image?: string;
+  /** Type Open Graph : "article" pour les articles de blog. */
+  ogType?: 'website' | 'article';
 }
 
 // URL canonique : hôte www, sans slash final (sauf l'accueil), sans ".html" (build.format 'file'), sans paramètres.
@@ -28,7 +32,18 @@ const {
   description = en
     ? "Get fast access to vetted freelance experts — solo or as a team — to accelerate your digital projects."
     : "Accédez rapidement à des experts freelances sélectionnés, seuls ou en équipe, pour accélérer vos projets digitaux.",
+  image,
+  ogType = 'website',
 } = Astro.props;
+
+// Partage (Open Graph / Twitter) : image de la page si elle est dans un format
+// accepté par les réseaux sociaux (pas d'AVIF), sinon image par défaut 1200×630
+// générée par scripts/build-og-image.mjs.
+const OG_DEFAULT = '/assets/og-default.png';
+const ogCustom = image && /\.(jpe?g|png|webp|gif)$/i.test(image) ? image : null;
+const ogImage = abs(ogCustom ?? OG_DEFAULT);
+const ogLocale = en ? 'en_GB' : 'fr_FR';
+const ogLocaleAlt = en ? 'fr_FR' : 'en_GB';
 
 // Libellés header/footer selon la langue.
 const nav = en
@@ -196,13 +211,31 @@ const orgJsonLd = JSON.stringify({
       <link rel="alternate" hreflang="x-default" href={frUrl} />
     </>
   )}
+  <meta property="og:site_name" content="digitags.work" />
+  <meta property="og:type" content={ogType} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:locale" content={ogLocale} />
+  {alternate && <meta property="og:locale:alternate" content={ogLocaleAlt} />}
+  <meta property="og:image" content={ogImage} />
+  {!ogCustom && (
+    <>
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="digitags.work" />
+    </>
+  )}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
   <meta name="google-site-verification" content="xfCvpsYNHG3uy0Al2dGBGrBo4Vw4YKO--_TcwCszQ7U" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <!-- Plausible Analytics (sans cookie) — l'outil interne /talents est exclu des stats -->
   <script defer data-domain="digitags.work" data-exclude="/talents" src="https://plausible.io/js/script.outbound-links.file-downloads.exclusions.js"></script>
   <script is:inline>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
-  <link rel="preload" href="/assets/fonts/pjs-400.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="/assets/fonts/pjs-800.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/pjs-variable.woff2" as="font" type="font/woff2" crossorigin />
   <script type="application/ld+json" set:html={orgJsonLd} />
 </head>
 <body>

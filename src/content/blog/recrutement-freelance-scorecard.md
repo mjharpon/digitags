@@ -75,6 +75,6 @@ Oui, et c’est même recommandé. Elle devient le fil conducteur de vos revues 
 
 ## Conclusion : un petit outil, un grand effet
 
-Que vous engagiez un freelance solo ou un **collectif de freelance,** la démarche reste la même : définir, mesurer, décider. Si vous voulez aller droit au but, passez par [**Digitags.work**](https://www.digitags.work/) : nous présélectionnons, nous cadrons, et vous démarrez avec la bonne personne, ou la bonne équipe, en quelques jours. Prêts à tester ? [**Contactez-nous**](https://www.digitags.work/#deposez-votre-besoin) et lancez votre prochaine mission sur de bons rails.
+Que vous engagiez un freelance solo ou un **collectif de freelance,** la démarche reste la même : définir, mesurer, décider. Si vous voulez aller droit au but, passez par [**Digitags.work**](https://www.digitags.work/) : nous présélectionnons, nous cadrons, et vous démarrez avec la bonne personne, ou la bonne équipe, en quelques jours. Prêts à tester ? [**Contactez-nous**](/contact) et lancez votre prochaine mission sur de bons rails.
 
 ‍

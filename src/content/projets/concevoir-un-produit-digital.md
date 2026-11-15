@@ -34,7 +34,7 @@ Une fois que vous avez défini vos objectifs, vous pouvez les utiliser comme gui
 
 La conception de l'expérience utilisateur (UX) est l'une des étapes les plus importantes, et la plus intéressante selon moi, dans la conception d'un produit numérique performant. L'UX se réfère à l'ensemble des interactions entre l'utilisateur et le produit, et vise à créer une expérience fluide, intuitive et agréable pour l'utilisateur.
 
-Pour concevoir une expérience utilisateur efficace, vous devez prendre en compte les besoins, les attentes et les comportements de vos utilisateurs. Cela implique de créer des personas, des parcours utilisateurs et des maquettes pour visualiser et tester différentes interactions possibles. Besoin d’une [**UX Designer freelance**](/metiers/ux-designer-freelance) ? [**Contactez-nous**](/#deposez-votre-besoin) !
+Pour concevoir une expérience utilisateur efficace, vous devez prendre en compte les besoins, les attentes et les comportements de vos utilisateurs. Cela implique de créer des personas, des parcours utilisateurs et des maquettes pour visualiser et tester différentes interactions possibles. Besoin d’une [**UX Designer freelance**](/metiers/ux-designer-freelance) ? [**Contactez-nous**](/contact) !
 
 L'objectif principal de la conception UX est de rendre l'utilisation du produit aussi simple et agréable que possible pour l'utilisateur.
 

@@ -108,6 +108,6 @@ Voici quelques raisons de recruter un traffic manager freelance :
 -   **Flexibilité** : vous avez la possibilité de faire appel à un traffic manager freelance pour une mission ponctuelle ou récurrente, en fonction de vos besoins spécifiques et de la charge de travail.
 -   **Meilleure réactivité** : un freelance peut souvent s'adapter rapidement aux changements de stratégie ou aux ajustements nécessaires dans vos campagnes, offrant une grande agilité dans la gestion de votre acquisition de trafic.
 
-Digitags.work vous met en relation avec des Traffic Managers freelances qualifiés, capables d'améliorer la performance de vos campagnes publicitaires et de maximiser votre retour sur investissement. [**Discutons de vos besoins**](/#deposez-votre-besoin) !
+Digitags.work vous met en relation avec des Traffic Managers freelances qualifiés, capables d'améliorer la performance de vos campagnes publicitaires et de maximiser votre retour sur investissement. [**Discutons de vos besoins**](/contact) !
 
 ‍

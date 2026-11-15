@@ -45,7 +45,7 @@ Les développeurs freelances atteignent en moyenne **576 €** de TJM, mais la t
 
 Tips Digitags.work :
 
-Pour un POC, pensez profil medior + coaching senior, vous économisez 20% de budget et gardez la qualité. Pour des stacks pointues (par contre Rust, Elixir), l’offre est faible, mieux vaut être précis sur vos attentes et votre fourchette. [**Contactez nous**](https://www.digitags.work/#deposez-votre-besoin) pour vos besoins !
+Pour un POC, pensez profil medior + coaching senior, vous économisez 20% de budget et gardez la qualité. Pour des stacks pointues (par contre Rust, Elixir), l’offre est faible, mieux vaut être précis sur vos attentes et votre fourchette. [**Contactez nous**](/contact) pour vos besoins !
 
 ‍
 
@@ -94,6 +94,6 @@ Les apps comme Toggl, Harvest ou [Freebe.io](http://Freebe.io) trackent temps et
 
 Le **TJM** n’est pas qu’un chiffre : c’est le reflet de la valeur, de l’expertise et du temps. Marketing, dev ou design, chaque métier possède ses codes et ses fourchettes. Envie de trouver l’expert idéal, ou de calculer le prix juste pour votre prochaine mission ? Parlez-en à notre équipe : un café virtuel, et on lance votre projet !
 
-**➡ Prenez rendez-vous dès maintenant sur** [**notre site**](https://www.digitags.work/#deposez-votre-besoin)**.**
+**➡ Prenez rendez-vous dès maintenant sur** [**notre site**](/contact)**.**
 
 ‍

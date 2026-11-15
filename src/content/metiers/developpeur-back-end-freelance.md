@@ -74,7 +74,7 @@ En conclusion, le développement back-end est en constante évolution, et la dem
 
 L'avenir du développement back-end est également influencé par l'émergence de nouvelles technologies, telles que l'intelligence artificielle et le cloud computing. Ces tendances créent des opportunités pour les développeurs de travailler sur des architectures modernes et d'intégrer des fonctionnalités avancées dans leurs applications.
 
-Vous souhaitez recruter un développeur back-end freelance ? [**Discutons de votre projet**](/#deposez-votre-besoin).
+Vous souhaitez recruter un développeur back-end freelance ? [**Discutons de votre projet**](/contact).
 
 ## Trouver un développeur back-end freelance avec digitags.work
 

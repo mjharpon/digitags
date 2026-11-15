@@ -88,6 +88,6 @@ Une maîtrise de l’UX est essentielle au succès de votre produit et de votre 
 
 ‍
 
-Si vous vous sentez perdu dans ce domaine, ne vous en faites pas : [Dgitags](https://www.dgitags.io) est là ! Si vous avez déjà une idée des attentes de vos clients, contactez Chrystal Robet-Tamborini, agent de talents, qui pourra vous orienter vers le poste UX adéquat.
+Si vous vous sentez perdu dans ce domaine, ne vous en faites pas : [Dgitags](/) est là ! Si vous avez déjà une idée des attentes de vos clients, contactez Chrystal Robet-Tamborini, agent de talents, qui pourra vous orienter vers le poste UX adéquat.
 
 ‍

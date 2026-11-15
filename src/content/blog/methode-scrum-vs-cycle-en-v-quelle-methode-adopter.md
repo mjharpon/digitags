@@ -18,7 +18,7 @@ Connaissez vous la différence ?
 
 Pas de panique !
 
-La [team Dgitags](https://www.dgitags.io/studios) va tenter aujourd’hui de répondre à toutes vos questions :
+La [team Dgitags](/studios-et-collectifs) va tenter aujourd’hui de répondre à toutes vos questions :
 
 Qu’est-ce que le cycle en V ? Qu’est-ce que la méthode Scrum ?Quels sont les éléments qui les différencient ? Est-ce que l’une est plus efficace que l’autre ?
 
@@ -269,18 +269,18 @@ Le Scrum subira probablement le même type de comparaison avec des méthodes de 
 
 Voilà c’est la fin de cet article. Et oui déjà… Ne vous inquiétez pas, nous revenons bientôt avec encore plus de contenus J
 
-La [team Dgitags](https://www.dgitags.io/design) espère néanmoins que cet article vous aura intéressé et vous aura appris des choses sur ces deux méthodologies.
+La [team Dgitags](/design) espère néanmoins que cet article vous aura intéressé et vous aura appris des choses sur ces deux méthodologies.
 
-Au sein de la [Tags community](https://www.dgitags.io/studios), nos équipes ont l’habitude de travailler avec des méthodes agiles. N’hésitez pas à les solliciter si vous avez des questions ou si vous voulez bénéficier de nos services.
+Au sein de la [Tags community](/studios-et-collectifs), nos équipes ont l’habitude de travailler avec des méthodes agiles. N’hésitez pas à les solliciter si vous avez des questions ou si vous voulez bénéficier de nos services.
 
 ‍
 
 Nos services :
 
--   [Nos studios de développeurs](https://www.dgitags.io/studios)
--   [SEO by Donutz](https://www.dgitags.io/agence-seo)
--   [SEA by Donutz](https://www.dgitags.io/agence-sea)
--   Réseau de freelances, experts dans leur domaine ([design](https://www.dgitags.io/design), [webmarketing](https://www.dgitags.io/marketing), [product](https://www.dgitags.io/produits))
+-   [Nos studios de développeurs](/studios-et-collectifs)
+-   [SEO by Donutz](/sea-social-ads-seo)
+-   [SEA by Donutz](/sea-social-ads-seo)
+-   Réseau de freelances, experts dans leur domaine ([design](/design), [webmarketing](/sea-social-ads-seo), [product](/product-et-project))
 
 A bientôt !
 

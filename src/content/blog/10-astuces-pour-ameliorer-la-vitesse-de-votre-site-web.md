@@ -100,6 +100,6 @@ Chez [**Digitags.work**](https://www.digitags.work/), on ne fait pas que donner 
 
 👉 Que vous ayez besoin d’un audit technique, d’une refonte ou d’un accompagnement long terme, on est là pour vous simplifier la vie digitale.
 
-[**Contactez-nous**](https://www.digitags.work/#deposez-votre-besoin), et transformez votre site en Formule 1 🏎️
+[**Contactez-nous**](/contact), et transformez votre site en Formule 1 🏎️
 
 ‍

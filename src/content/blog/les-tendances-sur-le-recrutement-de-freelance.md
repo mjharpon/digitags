@@ -44,7 +44,7 @@ Le recrutement freelance a évolué ces dernières années et de nouvelles tenda
 
 De plus en plus d'entreprises se tournent également vers les recommandations et les références de freelances existants pour trouver de nouveaux collaborateurs. Les recommandations sont un moyen efficace de trouver des freelances fiables et qualifiés, car elles sont basées sur l'expérience directe d'autres professionnels.
 
-Certaines entreprises, comme nous chez Digitags, adoptent également une approche plus proactive en matière de recrutement freelance en créant des pools de talents pré-approuvés. Ces pools de talents sont constitués de freelances soigneusement sélectionnés et évalués, ce qui permet aux entreprises de gagner du temps lors du processus de recrutement. Chez Digitags, nous vous accompagnons pour trouver le frerelance idéal pour votre projet grâce à notre accompagnement et suivi humain et personnalisé. [**Discutons de votre projet**](https://www.digitags.work/#deposez-votre-besoin) !
+Certaines entreprises, comme nous chez Digitags, adoptent également une approche plus proactive en matière de recrutement freelance en créant des pools de talents pré-approuvés. Ces pools de talents sont constitués de freelances soigneusement sélectionnés et évalués, ce qui permet aux entreprises de gagner du temps lors du processus de recrutement. Chez Digitags, nous vous accompagnons pour trouver le frerelance idéal pour votre projet grâce à notre accompagnement et suivi humain et personnalisé. [**Discutons de votre projet**](/contact) !
 
 ‍
 

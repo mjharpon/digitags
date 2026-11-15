@@ -70,4 +70,4 @@ Une fois que votre produit est sur le marché, il est important de suivre et d'�
 
 ![Faites vous accompagner dans votre stratégie produit](/uploads/projets/strategie-produit-1.webp)
 
-Vous recherchez un expert à même de vous accompagner dans la réflexion stratégique et la mise en place de celle-ci ? Chez Digitags, nous avons créé un hub de 1500 talents freelances, experts dans différents domaines du digital ainsi que sur la partie produit. [**Rencontrons-nous**](/#deposez-votre-besoin) pour cerner votre besoin et vous proposez l’expert idéal pour vous !
+Vous recherchez un expert à même de vous accompagner dans la réflexion stratégique et la mise en place de celle-ci ? Chez Digitags, nous avons créé un hub de 1500 talents freelances, experts dans différents domaines du digital ainsi que sur la partie produit. [**Rencontrons-nous**](/contact) pour cerner votre besoin et vous proposez l’expert idéal pour vous !

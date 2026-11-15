@@ -175,16 +175,16 @@ Il faut être conscient que ce mode de vie procure une **grande liberté** mais 
 
 Nous espérons que cet article sur la vie de digital nomad vous aura plu. Nous tenions à remercierJeremy pour le temps qu’il nous a accordé.
 
-Nous revenons bientôt avec encore plus de contenus :) Vous n'avez pas encore vu notre dernier article ? C'est par [ici.](https://www.dgitags.io/blog/le-design-ethique-quest-ce-que-cest)
+Nous revenons bientôt avec encore plus de contenus :) Vous n'avez pas encore vu notre dernier article ? C'est par [ici.](/blog/le-design-ethique-quest-ce-que-cest)
 
 Si vous avez besoin de conseils ou d’experts, nos équipes sont là pour vous, n’hésitez pas à les solliciter.
 
 Nos services :
 
--   [Nos studios de développeurs](https://www.dgitags.io/studios)
--   [SEO by Donutz](https://www.dgitags.io/agence-seo)
--   [SEA by Donutz](https://www.dgitags.io/agence-sea)
--   Réseau de freelances, experts dans leur domaine ([design](https://www.dgitags.io/design), [webmarketing](https://www.dgitags.io/marketing), [product](https://www.dgitags.io/produits))
+-   [Nos studios de développeurs](/studios-et-collectifs)
+-   [SEO by Donutz](/sea-social-ads-seo)
+-   [SEA by Donutz](/sea-social-ads-seo)
+-   Réseau de freelances, experts dans leur domaine ([design](/design), [webmarketing](/sea-social-ads-seo), [product](/product-et-project))
 
 A bientôt !   
 

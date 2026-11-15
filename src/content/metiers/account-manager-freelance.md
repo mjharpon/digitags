@@ -89,6 +89,6 @@ Si vous rencontrez l’un des défis suivants, faire appel à un Account Manager
 -   **Conseil** : Grâce à son expérience auprès de divers secteurs et entreprises, l’account manager freelance propose des solutions innovantes et sur mesure pour améliorer vos stratégies commerciales. Il peut aussi vous aider à identifier de nouvelles opportunités de croissance tout en renforçant la fidélisation de vos clients.
 -   **Formation** : Un account manager freelance expérimenté peut également former vos équipes internes, en partageant ses connaissances sur les meilleures pratiques de gestion de comptes, la négociation, ou la relation client. Il peut également accompagner des profils juniors dans leur montée en compétence.
 
-Digitags.work vous accompagne dans le recrutement d'Account Manager freelances talentueux et expérimentés, prêts à relever vos défis commerciaux et à optimiser vos relations clients. [**Discutons de vos besoins**](/#deposez-votre-besoin) !
+Digitags.work vous accompagne dans le recrutement d'Account Manager freelances talentueux et expérimentés, prêts à relever vos défis commerciaux et à optimiser vos relations clients. [**Discutons de vos besoins**](/contact) !
 
 ‍

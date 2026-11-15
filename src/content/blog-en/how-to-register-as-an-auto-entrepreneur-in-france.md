@@ -1,6 +1,6 @@
 ---
 title: "How to register as an auto-entrepreneur in France"
-description: "Set up your micro-entrepreneur status with dgitags.io!"
+description: "Set up your micro-entrepreneur status with digitags.work!"
 date: 2022-08-29
 tags: [freelancer]
 image: "/uploads/blog/comment-creer-son-statut-dautoentrepreneur-cover.avif"

@@ -86,4 +86,4 @@ Continuez à surveiller et à évaluer régulièrement les performances de votre
 
 ![Réalisez un audit UX avec Digitags](/uploads/projets/audit-ux-1.webp)
 
-Vous souhaitez réaliser un audit UX pour votre site ? Chez Digitags, nous identifions vos besoins et vous recommandons un ou plusieurs experts freelances de notre hub pour effectuer la mission. [**Discutons-en**](/#deposez-votre-besoin), trouvez le profil idéal et commencez rapidement.
+Vous souhaitez réaliser un audit UX pour votre site ? Chez Digitags, nous identifions vos besoins et vous recommandons un ou plusieurs experts freelances de notre hub pour effectuer la mission. [**Discutons-en**](/contact), trouvez le profil idéal et commencez rapidement.

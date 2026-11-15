@@ -20,7 +20,7 @@ Ils vivent la plupart du temps dans des hôtels, des guest house, des airbnb, de
 
 Comme le nom l’indique, les digital nomades ont souvent un métier en lien avec le digital. Par exemple, ils peuvent être graphistes, UX/UI designers, [community managers](/metiers/community-manager-freelance), [développeurs web](/metiers/developeur-web-freelance), responsables e-commerce, photographes, blogueurs/influenceurs, consultants, etc.
 
-_Si vous souhaitez en savoir plus sur la vie des digital nomades,_ [_cliquez ici_](https://www.dgitags.io/blog/la-vie-de-digital-nomade)_._
+_Si vous souhaitez en savoir plus sur la vie des digital nomades,_ [_cliquez ici_](/blog/la-vie-de-digital-nomade)_._
 
 ![dgitags digital nomad freelance](/uploads/blog/un-visa-pour-digital-nomade-0.jpeg)
 
@@ -125,9 +125,9 @@ Si vous avez besoin de conseils ou d’experts, nos équipes sont là pour vous,
 
 Nos services :
 
--   ‍[Nos studios de développeurs](https://www.dgitags.io/studios)[‍](https://www.donutzdigital.com/)
--   [SEO et SEA by Donutz](https://www.donutzdigital.com/)[‍](https://www.dgitags.io/)
--   [Réseau de freelances, experts dans leur domaine (design, webmarketing, product)](https://www.dgitags.io/)
+-   ‍[Nos studios de développeurs](/studios-et-collectifs)[‍](https://www.donutzdigital.com/)
+-   [SEO et SEA by Donutz](https://www.donutzdigital.com/)
+-   [Réseau de freelances, experts dans leur domaine (design, webmarketing, product)](/)
 
 A bientôt sur dgitags.io !  
 

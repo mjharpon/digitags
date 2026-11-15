@@ -14,7 +14,7 @@ De nombreuses organisations se retrouvent confrontées à des  échecs en raiso
 
 Alors certaines questions se posent : doivent-elles faire appel à une agence ? Une ESN ? Recruter en interne ? Faire appel à un ou une freelance ? Monter une équipe soit même et la coordonner ?  S’agit il d’un véritable talent qui pourra répondre à toutes leurs attentes ? Est ce réellement la compétence dont ils ont besoin pour leur projet ?  Beaucoup de solutions existent sur le marché, à tout prix,  plus ou moins souples, plus ou moins adaptées à chaque entreprise selon leur taille et leur organisation.
 
-Que vous soyez une petite entreprise cherchant à se lancer dans le digital ou une marque déjà bien établie qui souhaite se réinventer, [**digitags.work**](https://digitags.work/) est le hub du digital qu’il vous faut.
+Que vous soyez une petite entreprise cherchant à se lancer dans le digital ou une marque déjà bien établie qui souhaite se réinventer, [**digitags.work**](/) est le hub du digital qu’il vous faut.
 
 ## **Les caractéristiques uniques de Digitags**
 
@@ -70,7 +70,7 @@ La communauté Digitags regroupe plus de 1500 talents spécialisés dans le [**d
 
 ## **Témoignages de nos clients**
 
-Ne prenez pas seulement notre parole pour acquis, écoutez ce que nos utilisateurs ont à dire sur [**digitags.work**](https://digitags.work/) :
+Ne prenez pas seulement notre parole pour acquis, écoutez ce que nos utilisateurs ont à dire sur [**digitags.work**](/) :
 
 > "Sur nos projets, nous avons besoin de Designers expérimentés.  Que ce soit pour de la recherche utilisateurs, de la production Design ou de la formation UX, digitags ous a permis de trouver à chaque fois la bonne personne." Thibaut Villamur, Head of Design à La Manufacture Digitale du Crédit Agricole.
 
@@ -86,13 +86,13 @@ Chez Digitags, le [**recrutement freelance**](https://www.digitags.work/recrutem
 
 ‍
 
-## **Pourquoi** [**digitags.work**](https://digitags.work/) **est le choix idéal pour vos besoins digitaux ?**
+## **Pourquoi** [**digitags.work**](/) **est le choix idéal pour vos besoins digitaux ?**
 
 En conclusion, nous offrons une approche holistique pour vous aider à réussir vos projets digitaux en allégeant votre charge de recrutement et de sourcing de prestataires tout en offrant une couche conseil. Grâce aux piliers clés du hub,  nous proposons des solutions complètes et adaptées aux besoins spécifiques de chaque client.
 
 En établissant un engagement à long terme avec nos clients et en cherchant à assurer la compatibilité avec notre réseau de talents, nous sommes le partenaire de confiance pour vous accompagner dans votre réussite digitale.
 
-[**Contactez-nous**](https://www.digitags.work/#deposez-votre-besoin) dès aujourd'hui pour en savoir plus sur la façon dont nous pouvons vous aider à vous démarquer et à atteindre vos objectifs en ligne.
+[**Contactez-nous**](/contact) dès aujourd'hui pour en savoir plus sur la façon dont nous pouvons vous aider à vous démarquer et à atteindre vos objectifs en ligne.
 
 ‍
 

@@ -14,7 +14,7 @@ Bien souvent, ces évolutions toujours croissantes pénalisent les recruteurs et
 
 Fini le temps où les entreprises avaient un contrôle total sur le processus d'embauche. Selon les statistiques, la majorité des demandeurs d'emploi commencent à chercher sur Google. Chacun peut trouver toutes les informations nécessaires sur n'importe quelle entreprise en quelques clics : salaire, postes disponibles, conditions et lieux de travail, etc.
 
-Ainsi, le développement d’une marque employeur devient tout particulièrement importante. Pour attirer de plus en plus de candidats, les recruteurs doivent penser comme les marketeurs pour révolutionner l’expérience candidat. Pour mieux vous expliquer, nous avons interrogé le fondateur d’un outil de recrutement que nous utilisons particulièrement, Louis Deslus, fondateur de [Neo Staff](https://neostaff.fr). Pour Chrystal Robet-Tomborini, agent de talents chez [Dgitags](https://www.dgitags.io), c’est un outil indispensable pour gérer tous ses talents et aussi toutes ses campagnes de recrutement.
+Ainsi, le développement d’une marque employeur devient tout particulièrement importante. Pour attirer de plus en plus de candidats, les recruteurs doivent penser comme les marketeurs pour révolutionner l’expérience candidat. Pour mieux vous expliquer, nous avons interrogé le fondateur d’un outil de recrutement que nous utilisons particulièrement, Louis Deslus, fondateur de [Neo Staff](https://neostaff.fr). Pour Chrystal Robet-Tomborini, agent de talents chez [Dgitags](/), c’est un outil indispensable pour gérer tous ses talents et aussi toutes ses campagnes de recrutement.
 
 Louis est influenceur dans ce qu'on appellerait le "**_Growth Marketing_**" sur Linkedin. Il suffit de regarder son nombre d’abonnés(environ 21 000) pour se rendre compte de l'intérêt de cette nouvelle pratique.
 
@@ -74,10 +74,10 @@ N’hésitez pas à vous pencher sur Google Analytics ou un logiciel similaire p
 
 Comme vous avez dû le comprendre, les stratégies de recrutement _inbound_ font vraiment ressortir votre image de marque. Il faut un peu de temps pour créer de la sympathie et de l’engouement autour d’une entreprise, et avec le temps, cette démarche promet d’attirer de nombreux CVs. Mais si vous comptez uniquement sur le recrutement inbound, vous devrez aussi attendre que les bons candidats entrent en contact.
 
-Voilà, vous savez tout ! En d'autres termes, la méthode de recrutement _outbound_ n'est utilisée que lorsque vous ne parvenez pas à obtenir des candidats de haute qualité avec votre stratégie de recrutement _inbound_. Encore faut-il savoir la mettre en place, c’est pour cela que nous sommes là ! Grâce à notre vivier de talents et à nos stratégies de recrutement, il sera beaucoup plus facile de pourvoir à vos postes vacants. Faîtes appel à [Dgitags](https://www.dgitags.io) !
+Voilà, vous savez tout ! En d'autres termes, la méthode de recrutement _outbound_ n'est utilisée que lorsque vous ne parvenez pas à obtenir des candidats de haute qualité avec votre stratégie de recrutement _inbound_. Encore faut-il savoir la mettre en place, c’est pour cela que nous sommes là ! Grâce à notre vivier de talents et à nos stratégies de recrutement, il sera beaucoup plus facile de pourvoir à vos postes vacants. Faîtes appel à [Dgitags](/) !
 
 ‍
 
-Pour lire nos autres articles, c'est par [ici](https://www.dgitags.io/blog).
+Pour lire nos autres articles, c'est par [ici](/blog).
 
 ‍

@@ -59,7 +59,7 @@ Digitags.work vous aide à faire face à vos défis grâce au recrutement freela
 
 Le product manager a un rôle central dans l’entreprise, c’est pourquoi il est crucial de le recruter avec la plus grande attention. Chez digitags, nous avons créé un hub de plus de 1500 talents freelances dans le digital dont des product manager experts.
 
-[**Discutons de votre projet**](/#deposez-votre-besoin) pour trouver le ou les freelances qui sauront y répondre le mieux !
+[**Discutons de votre projet**](/contact) pour trouver le ou les freelances qui sauront y répondre le mieux !
 
 ‍
 

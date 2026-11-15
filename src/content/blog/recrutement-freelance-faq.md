@@ -58,7 +58,7 @@ Digitags.work ne se contente pas d’être une plateforme : on agit comme un _Ta
 -   **48 h de délai moyen** entre le brief et la propositions de talents.
 -   **Suivi projet** : de A à Z.
 
-👉 Besoin d’un Growth Marketer ou d’un Product Designer par exemple ? [**Parlez-en à notre équipe**](https://www.digitags.work/#deposez-votre-besoin).
+👉 Besoin d’un Growth Marketer ou d’un Product Designer par exemple ? [**Parlez-en à notre équipe**](/contact).
 
 ![\_\_wf\_reserved\_inherit](/uploads/blog/recrutement-freelance-faq-0.webp)
 
@@ -80,6 +80,6 @@ Définissez des **OKR** dès le kick-off, suivez un tableau de bord partagé (cl
 
 ## Conclusion
 
-Le **recrutement freelance** est l’une des armes secrètes des dirigeants agiles : rapidité, expertise et flexibilité réunies. En maîtrisant les aspects juridiques, le pilotage quotidien et les KPI, vous démultipliez la valeur créée. Et grâce à Digitags.work, vous trouvez en 48 h les talents indépendants qui dopent vos projets. **Prêt à accélérer ?** [**Contactez-nous**](https://www.digitags.work/#deposez-votre-besoin) **et transformez vos ambitions en résultats.**
+Le **recrutement freelance** est l’une des armes secrètes des dirigeants agiles : rapidité, expertise et flexibilité réunies. En maîtrisant les aspects juridiques, le pilotage quotidien et les KPI, vous démultipliez la valeur créée. Et grâce à Digitags.work, vous trouvez en 48 h les talents indépendants qui dopent vos projets. **Prêt à accélérer ?** [**Contactez-nous**](/contact) **et transformez vos ambitions en résultats.**
 
 ‍

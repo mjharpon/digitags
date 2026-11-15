@@ -89,7 +89,7 @@ Une fois que tout est en place, effectuez un dernier contrôle pour vous assurer
 
 Chez [**Digitags.work**](https://www.digitags.work/), nous mettons à votre disposition notre expertise pour accompagner la refonte de votre site web de A à Z. Nous vous aidons à redéfinir votre identité, optimiser l’expérience utilisateur, et intégrer des solutions techniques modernes adaptées à vos besoins spécifiques.
 
-[**Contactez-nous**](https://www.digitags.work/#deposez-votre-besoin) pour trouver les talents freelances faits pour vous et votre projet !
+[**Contactez-nous**](/contact) pour trouver les talents freelances faits pour vous et votre projet !
 
 ‍
 

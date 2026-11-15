@@ -230,7 +230,7 @@ Pour plus d’infos sur les tarifs, n’hésitez pas à contacter Webflow ou à 
 
 Cette présentation de Webflow vous a plu ? Passons maintenant à Wordpress.
 
-Si vous voulez en savoir encore plus sur Webflow, vous pouvez aller voir l'article suivant : [Webflow, le CMS du Designer en 2020 ?](https://www.dgitags.io/blog/webflow-le-cms-du-designer-en-2020)
+Si vous voulez en savoir encore plus sur Webflow, vous pouvez aller voir l'article suivant : [Webflow, le CMS du Designer en 2020 ?](/blog/webflow-le-cms-du-designer-en-2020)
 
 ‍
 
@@ -330,7 +330,7 @@ Vous avez également accès à un thème **Premium**, **Business** ou bien **eCo
 
 ‍
 
-Nous en profitons pour vous préciser que Dgitags possède des experts du webmarketing qui connaissent très bien Webflow et Wordpress. Nos freelances de la [Tags Community](https://www.dgitags.io/design) peuvent vous aider ! Si vous êtes intéressés, c'est par [ici](https://www.dgitags.io/studios).
+Nous en profitons pour vous préciser que Dgitags possède des experts du webmarketing qui connaissent très bien Webflow et Wordpress. Nos freelances de la [Tags Community](/design) peuvent vous aider ! Si vous êtes intéressés, c'est par [ici](/studios-et-collectifs).
 
 ‍
 
@@ -360,11 +360,11 @@ Donc, en réalité les deux enjeux restent la **différence de prix et d’expé
 
 Voila ! c’est déjà la fin. La team Dgitags espère que cet article sur Webflow et Wordpress vous aura plu.
 
-Pour plus de contenus, n’hésitez pas à aller voir nos autres articles sur [le blog](https://www.dgitags.io/blog), en particulier celui sur [Webflow](https://www.dgitags.io/blog/webflow-le-cms-du-designer-en-2020).
+Pour plus de contenus, n’hésitez pas à aller voir nos autres articles sur [le blog](/blog), en particulier celui sur [Webflow](/blog/webflow-le-cms-du-designer-en-2020).
 
 ‍
 
-Ce n'est pas tout ! Nous proposons des services [SEO](https://www.dgitags.io/agence-seo) et [SEA](https://www.dgitags.io/agence-sea).  Allez faire un tour sur notre [site Web](https://www.dgitags.io/).
+Ce n'est pas tout ! Nous proposons des services [SEO](/sea-social-ads-seo) et [SEA](/sea-social-ads-seo).  Allez faire un tour sur notre [site Web](/).
 
 ‍
 

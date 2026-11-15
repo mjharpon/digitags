@@ -50,6 +50,6 @@ Malt intègre un système de notation et d'évaluation. Les freelances sont éva
 
 En 2025, l'embauche de freelances restera une solution stratégique pour les entreprises. Les avantages de cette approche incluent la flexibilité, l'accès à des compétences variées et la réduction des coûts. Les plateformes d'embauche de freelances jouent leur rôle dans cet usage, offrant des solutions pour recruter le meilleur freelance.
 
-[**On discute de vos besoins**](https://www.digitags.work/#deposez-votre-besoin) pour trouver le talent qui vous convient ?
+[**On discute de vos besoins**](/contact) pour trouver le talent qui vous convient ?
 
 ‍

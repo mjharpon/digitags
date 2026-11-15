@@ -93,7 +93,7 @@ En suivant ces conseils, vous pouvez trouver le professionnel idéal pour répon
 4.  Menez des entretiens : Une fois que vous avez identifié quelquestraffic manager freelance potentiels, organisez des entretiens pour discuter de vos besoins et évaluer leur adéquation. Posez-leur des questions sur leurs compétences, leurs méthodes de travail et leurs tarifs. Assurez-vous également de vérifier leurs références pour vous assurer qu'ils ont un historique de réussite.
 5.  Établissez un contrat clair : Une fois que vous avez trouvé le gestionnaire de trafic freelance qui correspond le mieux à vos besoins, assurez-vous d'établir un contrat clair qui définit les détails de votre collaboration. Cela inclut les objectifs, les délais, les tarifs et toutes les autres conditions importantes.
 
-Tout ça, nous pouvons le faire main de la main, puisque chez Digitags.work, nous staffons vos équipes avec nos talents freelances. Nous vous aidons à définir vos besoins, votre recherche, réalisons une pré-sélection et gérons la contractualisation et le suivi du projet. [**Discutons du votre**](https://www.digitags.work/#deposez-votre-besoin) et trouvons le traffic manager fait pour vous.
+Tout ça, nous pouvons le faire main de la main, puisque chez Digitags.work, nous staffons vos équipes avec nos talents freelances. Nous vous aidons à définir vos besoins, votre recherche, réalisons une pré-sélection et gérons la contractualisation et le suivi du projet. [**Discutons du votre**](/contact) et trouvons le traffic manager fait pour vous.
 
 ### ‍
 
@@ -146,6 +146,6 @@ Nous espérons que cet article vous aura donné quelques conseils pour recruter 
 
 A bientôt ☺
 
-Dans la même thématique, référez-vous à l’article suivant « [**Comment trouver le bon designer freelance**](https://www.dgitags.io/blog/comment-trouver-le-bon-designer-en-freelance) »  si vous chercher le designer freelance idéal !
+Dans la même thématique, référez-vous à l’article suivant « [**Comment trouver le bon designer freelance**](/blog/comment-trouver-le-bon-designer-en-freelance) »  si vous chercher le designer freelance idéal !
 
 Vous recherchez un cabinet de conseil en marketing digital axé sur la performance, spécialisé en Pay-Per-Click, Paid Social, SEO, CRM, CRO et Google Analytics ? Venez faire un tour chez [**Donutz Digital**.](https://www.donutzdigital.com/)

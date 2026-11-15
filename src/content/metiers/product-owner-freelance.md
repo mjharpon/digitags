@@ -64,6 +64,6 @@ Digitags.work vous aide à relever vos défis grâce au recrutement freelance de
 
 Vous recherchez un product owner en freelance ? Chez Digitags, nous avons créé un hub de plus de 1500 talents du digital prêts à répondre à vos besoins. Nous échangeons sur votre projet, trouvons les talents les plus adaptés et assurons le suivi et le bon déroulement de la mission.
 
-[**Discutons de votre projet**](/#deposez-votre-besoin) pour trouver le ou les freelances qui sauront y répondre le mieux !
+[**Discutons de votre projet**](/contact) pour trouver le ou les freelances qui sauront y répondre le mieux !
 
 ‍

@@ -93,6 +93,6 @@ Non, c’est souvent l’inverse. En supprimant le superflu (JS inutile, images 
 
 ## Conclusion
 
-Mesurer l’empreinte de votre **code durable** n’a rien d’un exercice cosmétique : c’est un levier de **compétitivité**. En quelques semaines, des pratiques simples : instrumentation, objectifs clairs, CI gardée, refactor ciblé transforment votre produit : plus rapide, plus économique, plus responsable. Et si vous souhaitez aller plus vite, les **freelances** sélectionnés par Digitags.work (développeurs, SRE, architectes, UX, Product) savent intégrer ces rituels sans casser votre roadmap. Prêt à verdir votre stack ? [**Parlons-en**](https://www.digitags.work/#deposez-votre-besoin) 😊
+Mesurer l’empreinte de votre **code durable** n’a rien d’un exercice cosmétique : c’est un levier de **compétitivité**. En quelques semaines, des pratiques simples : instrumentation, objectifs clairs, CI gardée, refactor ciblé transforment votre produit : plus rapide, plus économique, plus responsable. Et si vous souhaitez aller plus vite, les **freelances** sélectionnés par Digitags.work (développeurs, SRE, architectes, UX, Product) savent intégrer ces rituels sans casser votre roadmap. Prêt à verdir votre stack ? [**Parlons-en**](/contact) 😊
 
 ‍

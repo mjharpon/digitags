@@ -60,7 +60,7 @@ La rapidité d'évolution des outils et des langages, sont contrebalancés par l
 
 La passion pour la technologie et le design est au cœur de ce métier. Les développeurs front-end ont la capacité d'influencer directement l'expérience utilisateur et de faire une différence dans la manière dont les gens interagissent avec votre site ou app.
 
-Besoin d’un développeur front-end freelance ? [**Discutons de votre projet**](/#deposez-votre-besoin).
+Besoin d’un développeur front-end freelance ? [**Discutons de votre projet**](/contact).
 
 ‍
 

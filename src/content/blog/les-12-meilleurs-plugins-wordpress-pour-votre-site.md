@@ -80,6 +80,6 @@ Les plugins de formulaire de contact vous permettent également de suivre les so
 
 ## Confiez votre projet WordPress à Digitags.work
 
-Choisir les bons plugins WordPress est essentiel pour optimiser votre site et offrir une expérience fluide à vos visiteurs. Que ce soit pour améliorer la sécurité, booster le SEO, accélérer le chargement des pages ou simplifier la gestion de votre contenu, il existe un plugin adapté à vos besoins. Besoin d’aide pour installer et configurer les meilleurs plugins ? [**Digitags.work**](https://www.digitags.work/) vous accompagne dans la création et l’optimisation de votre site WordPress. [**Contactez-nous**](https://www.digitags.work/#deposez-votre-besoin) et donnons ensemble un coup de boost à votre projet web !
+Choisir les bons plugins WordPress est essentiel pour optimiser votre site et offrir une expérience fluide à vos visiteurs. Que ce soit pour améliorer la sécurité, booster le SEO, accélérer le chargement des pages ou simplifier la gestion de votre contenu, il existe un plugin adapté à vos besoins. Besoin d’aide pour installer et configurer les meilleurs plugins ? [**Digitags.work**](https://www.digitags.work/) vous accompagne dans la création et l’optimisation de votre site WordPress. [**Contactez-nous**](/contact) et donnons ensemble un coup de boost à votre projet web !
 
 ‍

@@ -71,6 +71,6 @@ Et si besoin, les forums tels que Reddit, Stack Overflow ou les groupes Facebook
 
 WordPress se présente comme une solution puissante et polyvalente pour la création de sites web. Sa facilité d'utilisation, combinée à de nombreuses fonctionnalités et ressources, en fait un choix privilégié pour beaucoup d’acteurs. La possibilité de personnaliser chaque aspect du site, des thèmes aux plugins, permet de créer une expérience utilisateur unique et engageante.
 
-Si vous êtes prêt à vous lancer avec WordPress ou si vous hésitez encore sur la meilleure solution pour votre projet, [**Digitags.work**](https://www.digitags.work/) peut vous accompagner dans la création ou la refonte de votre site web. Nous vous aidons à construire un site performant, optimisé pour le SEO et adapté à vos besoins. [**Contactez-nous**](https://www.digitags.work/#deposez-votre-besoin) dès maintenant pour donner vie à votre projet !
+Si vous êtes prêt à vous lancer avec WordPress ou si vous hésitez encore sur la meilleure solution pour votre projet, [**Digitags.work**](https://www.digitags.work/) peut vous accompagner dans la création ou la refonte de votre site web. Nous vous aidons à construire un site performant, optimisé pour le SEO et adapté à vos besoins. [**Contactez-nous**](/contact) dès maintenant pour donner vie à votre projet !
 
 ‍

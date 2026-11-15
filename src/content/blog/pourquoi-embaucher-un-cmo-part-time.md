@@ -60,7 +60,7 @@ Si vous êtes confronté à l’un des enjeux suivants, faire appel à un CMO pa
 -   **Conseil** : Grâce à son expérience variée auprès d'entreprises de différents secteurs, il apporte des idées novatrices et des solutions adaptées pour atteindre vos objectifs marketing et commerciaux.
 -   **Formation** : Le CMO freelance peut aussi accompagner vos équipes marketing internes, partager ses meilleures pratiques ou encadrer un responsable marketing junior pour renforcer les compétences en stratégie, branding et campagnes digitales.
 
-[**Discutons de vos besoins**](https://www.digitags.work/#deposez-votre-besoin) et trouvons votre CMO part-time.
+[**Discutons de vos besoins**](/contact) et trouvons votre CMO part-time.
 
 ‍
 

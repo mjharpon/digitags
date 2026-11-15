@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
 import sitemap from '@astrojs/sitemap';
 import { ROUTES, ROUTES_EN_FR } from './src/lib/i18n.ts';
+import { remarkSingleH1, rehypeLazyImages } from './src/lib/markdown-plugins.mjs';
 
 // Priorité SEO par type de page (sitemap).
 const PRIORITY_RULES = [
@@ -40,6 +41,11 @@ export default defineConfig({
     defaultLocale: 'fr',
     locales: ['fr', 'en'],
     routing: { prefixDefaultLocale: false },
+  },
+  // Articles de blog : un seul H1 par page, images du corps en chargement différé.
+  markdown: {
+    remarkPlugins: [remarkSingleH1],
+    rehypePlugins: [rehypeLazyImages],
   },
   integrations: [
     sitemap({

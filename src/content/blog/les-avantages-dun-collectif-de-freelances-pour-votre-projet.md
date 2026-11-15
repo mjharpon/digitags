@@ -49,7 +49,7 @@ Plutôt que de vous engager à long terme avec des employés permanents sur un p
 
 Si vous recherchez une solution efficace pour collaborer avec un collectif de freelances, chez [**digitags.work**](https://www.digitags.work/) on met en relation des entreprises avec [**nos collectifs qualifiés**](https://www.digitags.work/studios-et-collectifs). Ça vous d'accéder à des talents variés et déjà organisés en équipe, que vous ayez besoin d'une équipe pour un projet digital, marketing ou design, digitags.work simplifie la mise en relation et la gestion des missions.
 
-Nous nous occupons de toute la partie administrative et le suivi de la mission, [**discutons de votre projet**](https://www.digitags.work/#deposez-votre-besoin) !
+Nous nous occupons de toute la partie administrative et le suivi de la mission, [**discutons de votre projet**](/contact) !
 
 ‍
 

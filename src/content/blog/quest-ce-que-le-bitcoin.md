@@ -225,7 +225,7 @@ _Une petite vidéo de Bloomberg au 26 mai 2017._
 
 ‍
 
-Cet article n'est pas un article de marketing digital ou [de stratégie digitale](https://www.dgitags.io/blog-post/pourquoi-vous-devez-creer-unblog) mais fait échos [aux digital humanities,](https://www.dgitags.io/blog-post/pourquoi-vous-devez-creer-unblog) à savoir comprendre comment notre société évolue avec le web et en saisir les principaux enjeux.
+Cet article n'est pas un article de marketing digital ou [de stratégie digitale](/blog/pourquoi-integrer-un-blog-a-votre-site-web) mais fait échos [aux digital humanities,](/blog/pourquoi-integrer-un-blog-a-votre-site-web) à savoir comprendre comment notre société évolue avec le web et en saisir les principaux enjeux.
 
 ‍
 

@@ -95,6 +95,6 @@ Il existe aussi des technologies d'assistance qui peuvent être intégrées pour
 
 Améliorer l'accessibilité web n'est pas seulement une obligation éthique, mais aussi une stratégie commerciale intelligente. En rendant votre site accessible à tous, vous démontrez votre engagement envers l'inclusion et vous élargissez votre audience.
 
-Il est encore plus simple de considérer l'accessibilité dès le début du processus de conception, alors si vous souhaitez concevoir un site accessible, [**contactez-nous**](https://www.digitags.work/#deposez-votre-besoin) ! Chez Digitags.work, nous avons créé un hub de talents freelances prêts à vous accompagner.
+Il est encore plus simple de considérer l'accessibilité dès le début du processus de conception, alors si vous souhaitez concevoir un site accessible, [**contactez-nous**](/contact) ! Chez Digitags.work, nous avons créé un hub de talents freelances prêts à vous accompagner.
 
 ‍

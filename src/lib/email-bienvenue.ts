@@ -87,7 +87,7 @@ export function emailBienvenue(prenom: string, job: string): string {
       <!-- CTA -->
       <table role="presentation" cellpadding="0" cellspacing="0" style="margin:30px auto 6px;">
         <tr><td style="background-color:#111c3f;border-radius:10px;">
-          <a href="https://digitags.work" style="display:inline-block;padding:14px 30px;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:14px;font-weight:700;color:#ffffff;text-decoration:none;">
+          <a href="https://www.digitags.work" style="display:inline-block;padding:14px 30px;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:14px;font-weight:700;color:#ffffff;text-decoration:none;">
             Découvrir le Hub&nbsp;→
           </a>
         </td></tr>
@@ -105,7 +105,7 @@ export function emailBienvenue(prenom: string, job: string): string {
           <td align="right" style="font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:12px;">
             <a href="https://www.linkedin.com/company/18871359" style="color:#2b46f0;font-weight:700;text-decoration:none;">LinkedIn</a>
             &nbsp;·&nbsp;
-            <a href="https://digitags.work/politique-de-protection-des-donnees" style="color:#8b8f9f;text-decoration:none;">Données personnelles</a>
+            <a href="https://www.digitags.work/politique-de-protection-des-donnees" style="color:#8b8f9f;text-decoration:none;">Données personnelles</a>
           </td>
         </tr>
       </table>

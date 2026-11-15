@@ -33,7 +33,7 @@ Vous gardez la main sur la décision finale : nous vous présentons plusieurs pr
 -   **Une grande flexibilité** : Engagez un expert pour une mission ponctuelle ou sur le long terme en fonction de vos besoins.
 -   **Une gestion simplifiée** : Nous vous accompagnons à chaque étape, du choix du freelance à la contractualisation.
 
-[**Recrutez un freelance**](https://www.digitags.work/recrutement-freelance) ou un studio de freelances avec Digitags.work en [**nous envoyant votre besoin.**](https://www.digitags.work/#deposez-votre-besoin)
+[**Recrutez un freelance**](https://www.digitags.work/recrutement-freelance) ou un studio de freelances avec Digitags.work en [**nous envoyant votre besoin.**](/contact)
 
 ‍
 

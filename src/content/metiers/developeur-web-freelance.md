@@ -76,6 +76,6 @@ Digitags.work vous aide à relever vos défis via le recrutement freelance de D�
 
 ![Trouvez le développeur web pour votre projet !](/uploads/metiers/developeur-web-freelance-0.webp)
 
-Nos experts sont à votre écoute pour saisir vos besoins et vous proposer les meilleurs profils pour votre projet. Grâce à leur expertise, allant de la technologie au marketing, ils vous offrent un accompagnement sur mesure. Nous transformons vos besoins en solutions concrètes. [**Parlons ensemble de votre projet**](/#deposez-votre-besoin) et identifions la meilleure solution humaine pour vous !
+Nos experts sont à votre écoute pour saisir vos besoins et vous proposer les meilleurs profils pour votre projet. Grâce à leur expertise, allant de la technologie au marketing, ils vous offrent un accompagnement sur mesure. Nous transformons vos besoins en solutions concrètes. [**Parlons ensemble de votre projet**](/contact) et identifions la meilleure solution humaine pour vous !
 
 ‍

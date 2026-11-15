@@ -16,7 +16,7 @@ On vous explique tout sur le métier, les compétences et le travail en lui-mêm
 
 Un chef de projet freelance est un professionnel qui travaille de manière indépendantes sur des projets spécifiques. Il est responsable de toutes les étapes du projet, de la planification à l'exécution en passant par le suivi et l'analyse des résultats. En tant que chef de projet freelance, il est le chef d'orchestre, veillant à ce que toutes les parties prenantes travaillent ensemble de manière harmonieuse.
 
-Chez Digitags, nous comptons un hub de plus de 1500 talents freelances prêts à rejoindre vos équipes sur tous les métiers du digital. [**Discutons de votre projet**](/#deposez-votre-besoin) pour vous trouver la perle rare.
+Chez Digitags, nous comptons un hub de plus de 1500 talents freelances prêts à rejoindre vos équipes sur tous les métiers du digital. [**Discutons de votre projet**](/contact) pour vous trouver la perle rare.
 
 ‍
 
@@ -55,6 +55,6 @@ Digitags.work vous aide à relever vos défis grâce au recrutement freelance de
 
 La recherche du meilleur chef de projet n’est pas toujours une tâche aisée. Tout d'abord, vous pouvez commencer par votre réseau existant. Parlez à vos contacts professionnels, amis et famille et faites savoir que vous recherchez la perle rare. Vous pouvez également utiliser des plateformes en ligne telles que Digitags pour trouver le freelance le plus adapté à vos besoins et cadrer le suivi du projet avec nos talent manager.
 
-[**Discutons de votre projet**](/#deposez-votre-besoin) pour trouver le talent adapté !
+[**Discutons de votre projet**](/contact) pour trouver le talent adapté !
 
 ‍

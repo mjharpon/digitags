@@ -3,6 +3,22 @@
 /admin/* /cms/:splat 301
 /freesbiz / 301
 
+# Anciennes URLs du site Webflow (dgitags.io redirige vers ce domaine en conservant le chemin)
+/studios /studios-et-collectifs 301
+/agence-seo /sea-social-ads-seo 301
+/agence-sea /sea-social-ads-seo 301
+/marketing /sea-social-ads-seo 301
+/produits /product-et-project 301
+/blog-post/pourquoi-vous-devez-creer-unblog /blog/pourquoi-integrer-un-blog-a-votre-site-web 301
+/blog-post/* /blog 301
+
+# Police : un seul fichier variable remplace les 5 copies par graisse
+/assets/fonts/pjs-400.woff2 /assets/fonts/pjs-variable.woff2 301
+/assets/fonts/pjs-500.woff2 /assets/fonts/pjs-variable.woff2 301
+/assets/fonts/pjs-600.woff2 /assets/fonts/pjs-variable.woff2 301
+/assets/fonts/pjs-700.woff2 /assets/fonts/pjs-variable.woff2 301
+/assets/fonts/pjs-800.woff2 /assets/fonts/pjs-variable.woff2 301
+
 # Images converties en WebP (scripts/optimize-images.mjs)
 /uploads/blog/10-astuces-pour-ameliorer-la-vitesse-de-votre-site-web-cover.png /uploads/blog/10-astuces-pour-ameliorer-la-vitesse-de-votre-site-web-cover.webp 301
 /uploads/blog/a-la-decouverte-de-figma-0.png /uploads/blog/a-la-decouverte-de-figma-0.webp 301
@@ -213,3 +229,4 @@
 /uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-7.png /uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-7.webp 301
 /uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-8.png /uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-8.webp 301
 /uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-9.png /uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-9.webp 301
+/uploads/blog/scrum-master-freelance-boostez-vos-sprints-cover.jpg /uploads/blog/scrum-master-freelance-boostez-vos-sprints-cover.webp 301

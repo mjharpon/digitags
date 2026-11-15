@@ -66,7 +66,7 @@ L'UX writing joue un rôle essentiel dans la création d'expériences utilisateu
 
 Les utilisateurs sont de plus en plus exigeants en matière d'expérience, les entreprises qui investissent dans l'UX writing bénéficient donc d'une meilleure fidélisation des utilisateurs, d'une plus grande satisfaction client et d'un avantage sur les concurrents qui n’optimisent pas le contenu.
 
-Trouvez le freelance UX Writer parfait pour votre projet au sein de notre hub de talents indépendants ! [**Discutons de votre projet**](/#deposez-votre-besoin).
+Trouvez le freelance UX Writer parfait pour votre projet au sein de notre hub de talents indépendants ! [**Discutons de votre projet**](/contact).
 
 ‍
 
@@ -80,6 +80,6 @@ Si vous avez besoin de renforcer votre produit ou service digital, collaborer av
 -   Impact : Uun UX Writer freelance peut comprendre rapidement vos objectifs et proposer des solutions concrètes pour améliorer vos interfaces. Il peut rédiger des micro-contenus qui facilitent la navigation, clarifier vos messages et optimiser les parcours utilisateurs.
 -   Expertise externe : Travaillant souvent avec plusieurs entreprises, un UX Writer freelance apporte des idées nouvelles et un regard objectif sur vos interfaces. Il peut vous aider à identifier des points de friction invisibles en interne et proposer des solutions innovantes pour améliorer l'expérience utilisateur.
 
-Digitags.work vous met en relation avec des UX Writers freelances compétents, capables d’enrichir vos projets digitaux et d’améliorer l’expérience utilisateur. [**Discutons de vos besoins**](/#deposez-votre-besoin) !
+Digitags.work vous met en relation avec des UX Writers freelances compétents, capables d’enrichir vos projets digitaux et d’améliorer l’expérience utilisateur. [**Discutons de vos besoins**](/contact) !
 
 ‍

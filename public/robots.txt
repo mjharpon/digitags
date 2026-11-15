@@ -5,6 +5,7 @@ Disallow: /p/
 Disallow: /cms/
 Disallow: /api/
 Disallow: /merci
+Disallow: /en/thank-you
 Disallow: /cdn-cgi/
 
 Sitemap: https://www.digitags.work/sitemap-index.xml

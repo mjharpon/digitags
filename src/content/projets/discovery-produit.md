@@ -60,4 +60,4 @@ Une fois que vous avez un prototype fonctionnel, vous devez le confronter et le 
 
 ![Confiez-nous votre discovery produit](/uploads/projets/discovery-produit-1.webp)
 
-Chez Digitags, nous avons créé un hub de plus de 1500 talents indépendants, dont de nombreux experts produit qui peuvent vous accompagner dans cette tâche. [**Rencontrons-nous**](/#deposez-votre-besoin) afin d’échanger sur vos besoins et trouver le ou les experts qui pourront y répondre.
+Chez Digitags, nous avons créé un hub de plus de 1500 talents indépendants, dont de nombreux experts produit qui peuvent vous accompagner dans cette tâche. [**Rencontrons-nous**](/contact) afin d’échanger sur vos besoins et trouver le ou les experts qui pourront y répondre.

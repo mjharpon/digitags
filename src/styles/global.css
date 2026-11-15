@@ -1,42 +1,11 @@
-/* Police self-hostée (Plus Jakarta Sans, subset latin) */
+/* Police self-hostée : Plus Jakarta Sans, subset latin. Un seul fichier variable
+   (axe wght 400–800) couvre toutes les graisses — une seule requête. */
 @font-face {
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 400 800;
   font-display: swap;
-  src: url('/assets/fonts/pjs-400.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: 'Plus Jakarta Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/assets/fonts/pjs-500.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: 'Plus Jakarta Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('/assets/fonts/pjs-600.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: 'Plus Jakarta Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/assets/fonts/pjs-700.woff2') format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: 'Plus Jakarta Sans';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url('/assets/fonts/pjs-800.woff2') format('woff2');
+  src: url('/assets/fonts/pjs-variable.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -51,7 +20,10 @@
   --white: #ffffff;
   --ink: #111c3f;
   --ink-soft: #4a5370;
-  --ink-faint: #8a91a8;
+  /* Texte secondaire discret (fil d'Ariane, méta, légendes de 10 à 13 px) : 4,85:1 sur le
+     fond crème, 5,4:1 sur blanc (AA). Sur fond navy, utiliser --ink-faint-on-dark (5,3:1). */
+  --ink-faint: #626a85;
+  --ink-faint-on-dark: #8a91a8;
   --line: #e7e1d8;
   --radius: 14px;
   --radius-lg: 22px;
@@ -751,29 +723,6 @@ button { font-family: inherit; }
 .chips li:nth-child(3n) .chip::before { background: var(--red); }
 
 /* ============ Directory cards (métiers / projets) ============ */
-.dir-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
-.dir-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 18px 20px;
-  font-weight: 700;
-  font-size: 15px;
-  transition: transform .15s ease, box-shadow .15s ease;
-}
-.dir-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 28px rgba(17, 28, 63, .08);
-}
-.dir-card .dir-arrow { color: var(--blue); flex: none; }
 
 /* ============ Réussites ============ */
 .reussites-grid {
@@ -918,6 +867,13 @@ button { font-family: inherit; }
   transition: border-color .15s ease;
 }
 .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--blue); }
+/* Focus visible sur tous les champs dont l'outline natif est retiré (`outline: none`). */
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible,
+.search-box:has(input:focus-visible), .results-tools select:focus-visible, .pw-form input:focus-visible,
+.prop3-config-fields input:focus-visible, .p3-days:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
 /* Les champs ne doivent jamais imposer leur largeur intrinsèque (débordement mobile). */
 .contact-wrap > *, .form-card, .form-row > .field, .field, .input-ico { min-width: 0; }
 .field input:not([type="checkbox"]):not([type="radio"]), .field select, .field textarea {
@@ -926,27 +882,6 @@ button { font-family: inherit; }
   max-width: 100%;
 }
 .field textarea { resize: vertical; min-height: 130px; }
-.radio-pills { display: flex; gap: 10px; flex-wrap: wrap; }
-.radio-pills label {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #fbf9f6;
-  border: 1.5px solid var(--line);
-  border-radius: 999px;
-  padding: 10px 18px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-}
-.radio-pills label:has(input:checked) {
-  border-color: var(--blue);
-  background: rgba(43, 70, 240, .06);
-  color: var(--blue);
-}
-.radio-pills input { accent-color: var(--blue); }
-.form-note { font-size: 13px; color: var(--ink-faint); margin-bottom: 18px; }
-.form-note a { color: var(--blue); font-weight: 700; }
 
 /* Contact v2 (bandeau freelance, champs à icône, colonne droite) */
 .contact-flash {
@@ -1063,11 +998,11 @@ button { font-family: inherit; }
 
 /* ============ Responsive (sub-pages) ============ */
 @media (max-width: 980px) {
-  .dir-grid, .reussites-grid, .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+  .reussites-grid, .benefits-grid { grid-template-columns: repeat(2, 1fr); }
   .testi-grid, .contact-wrap { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
-  .dir-grid, .reussites-grid, .reussites-grid.cols-2, .benefits-grid { grid-template-columns: 1fr; }
+  .reussites-grid, .reussites-grid.cols-2, .benefits-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .page-hero .container { text-align: left; }
   .page-hero .hero-cta { justify-content: flex-start; }
@@ -1179,7 +1114,9 @@ a.chip:hover { border-color: var(--blue); }
   line-height: 1.75;
   color: #2c3450;
 }
-.prose h2 {
+/* .widget-title : titres des widgets HTML embarqués dans certains articles (ex-<h1>
+   rétrogradés en <h2>) ; ils gardent leur propre style. :where() = spécificité inchangée. */
+.prose h2:not(:where(.widget-title)) {
   font-size: 25px;
   font-weight: 800;
   letter-spacing: -.02em;
@@ -1379,16 +1316,6 @@ a.chip:hover { border-color: var(--blue); }
   gap: 46px;
   align-items: center;
 }
-.breadcrumb {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--blue);
-  margin-bottom: 16px;
-}
-.breadcrumb a { color: var(--ink-faint); }
-.breadcrumb a:hover { color: var(--blue); }
 .fiche-hero h1 {
   font-size: clamp(30px, 3.4vw, 42px);
   font-weight: 800;
@@ -1913,27 +1840,6 @@ a.stat:hover span:last-child { text-decoration: underline; text-underline-offset
 }
 
 /* ============ Page propale (/p/token) ============ */
-.prop-hero { background: var(--navy); color: #fff; padding: 56px 0 46px; }
-.prop-hero .eyebrow { color: #8fa0e8; }
-.prop-hero h1 { font-size: clamp(26px, 3vw, 36px); font-weight: 800; letter-spacing: -.02em; margin-bottom: 10px; }
-.prop-hero p { color: #b9c0d8; max-width: 60ch; }
-.prop-profiles { padding: 50px 0; display: grid; gap: 16px; }
-.prop-card {
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  padding: 24px;
-  display: grid;
-  grid-template-columns: 86px 1fr;
-  gap: 20px;
-}
-.prop-card img, .prop-card .avatar-fallback { width: 86px; height: 86px; border-radius: 14px; object-fit: cover; font-size: 22px; }
-.prop-card h2 { font-size: 19px; font-weight: 800; }
-.prop-card .role { color: var(--blue); font-weight: 700; font-size: 13.5px; margin: 2px 0 8px; }
-.prop-card .rich { font-size: 13.5px; color: var(--ink-soft); line-height: 1.6; }
-.prop-card .rich p { margin: 0 0 8px; }
-.prop-tjm { font-size: 14px; font-weight: 800; color: var(--navy); }
-.prop-tjm span { font-size: 11.5px; font-weight: 600; color: var(--ink-faint); }
 
 /* Multi-select des filtres Talents */
 .ms { position: relative; }
@@ -1998,32 +1904,6 @@ a.stat:hover span:last-child { text-decoration: underline; text-underline-offset
   border-radius: 999px;
   padding: 6px 14px;
 }
-.prop2-hero {
-  background: var(--navy);
-  color: #fff;
-  padding-bottom: 46px;
-  position: relative;
-  overflow: hidden;
-}
-.prop2-hero .eyebrow { color: #8fa0e8; }
-.prop2-hero h1 { font-size: clamp(28px, 3.4vw, 40px); font-weight: 800; letter-spacing: -.02em; margin: 6px 0 12px; max-width: 24ch; }
-.prop2-hero .intro { color: #b9c0d8; max-width: 58ch; font-size: 15.5px; }
-.prop2-hero .meta { font-size: 12.5px; color: #8f97b3; margin-top: 18px; }
-.prop2-hero .deco { position: absolute; right: -10px; top: 40px; opacity: .9; }
-.prop2-stats {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  margin-top: -34px;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 22px 34px;
-  flex-wrap: wrap;
-  box-shadow: 0 18px 44px rgba(17,28,63,.1);
-}
-.prop2-stats .stat { flex: 1; justify-content: center; }
 .prop2-list { display: grid; gap: 22px; padding: 46px 0 10px; }
 .prop2-card {
   background: var(--white);
@@ -2092,50 +1972,8 @@ a.stat:hover span:last-child { text-decoration: underline; text-underline-offset
 }
 
 /* Configurateur de mission (propale) */
-.prop2-config {
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  padding: 30px;
-  margin-top: 22px;
-  box-shadow: 0 10px 26px rgba(17,28,63,.05);
-}
-.prop2-config-head h3 { font-size: 19px; font-weight: 800; letter-spacing: -.01em; }
-.prop2-config-head p { font-size: 13.5px; color: var(--ink-faint); margin: 4px 0 18px; }
-.prop2-config-fields { display: flex; gap: 22px; flex-wrap: wrap; margin-bottom: 18px; }
-.prop2-config-fields label { font-size: 13px; font-weight: 700; display: grid; gap: 7px; }
-.prop2-config-fields input {
-  font-family: inherit;
-  font-size: 14.5px;
-  padding: 10px 12px;
-  border: 1.5px solid var(--line);
-  border-radius: 9px;
-  background: #fbf9f6;
-  outline: none;
-}
-.prop2-config-fields input:focus { border-color: var(--blue); }
 .cfg-weeks-wrap { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--ink-soft); }
 .cfg-weeks-wrap input { width: 90px; }
-.prop2-config-table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-bottom: 16px; }
-.prop2-config-table td { padding: 9px 0; border-bottom: 1px solid var(--line); color: var(--ink-soft); }
-.prop2-config-table td:first-child { font-weight: 700; color: var(--ink); }
-.prop2-config-table td.r { text-align: right; font-weight: 700; color: var(--ink); }
-.prop2-config-total {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  flex-wrap: wrap;
-  background: var(--navy);
-  color: #fff;
-  border-radius: var(--radius);
-  padding: 18px 24px;
-}
-.prop2-config-total .lbl { display: block; font-size: 11.5px; text-transform: uppercase; letter-spacing: .08em; color: #8fa0e8; font-weight: 700; }
-.prop2-config-total strong { font-size: 28px; font-weight: 800; letter-spacing: -.02em; margin-right: 10px; }
-.prop2-config-total .sub { font-size: 13px; color: #b9c0d8; }
-.prop2-config-total .btn { background: #fff; color: var(--navy); }
-.prop2-config-note { font-size: 12px; color: var(--ink-faint); margin-top: 12px; }
 
 /* ============ Maillage interne (fil d'Ariane, blocs liés) ============ */
 .crumbs {
@@ -2483,14 +2321,6 @@ a.chip-more:hover { color: var(--yellow); }
   border: 1.5px solid var(--line); border-radius: 9px; background: #fbf9f6; outline: none;
 }
 .prop3-config-fields input:focus { border-color: var(--blue); }
-.cfg-week-chips { display: flex; gap: 8px; flex-wrap: wrap; }
-.wk-chip {
-  font-family: inherit; font-size: 13px; font-weight: 700;
-  background: #fbf9f6; color: var(--ink-soft);
-  border: 1.5px solid var(--line); border-radius: 9px;
-  padding: 10px 16px; cursor: pointer;
-}
-.wk-chip.on { border-color: var(--blue); color: var(--blue); background: rgba(43, 70, 240, .06); }
 
 .prop3-rows { display: grid; gap: 10px; }
 .prop3-row {
@@ -2685,8 +2515,6 @@ html { scroll-padding-top: 92px; scroll-behavior: smooth; }
   .numbered-card h3 { font-size: 16px; }
   .faq-item summary { font-size: 14px; padding: 15px 16px; }
   .faq-item .faq-body { padding: 0 16px 16px; }
-  .prop2-config { padding: 20px; }
-  .prop2-config-total strong { font-size: 22px; }
   .benefits-grid { gap: 12px; }
   .testi-card { padding: 20px; }
   .feature-panel { padding: 24px 20px; gap: 20px; }

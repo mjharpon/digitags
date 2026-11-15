@@ -28,7 +28,7 @@ Ces dérives conduisent à se poser des questions sur la **responsabilité du de
 
 ‍
 
-Aujourd’hui la [Team Dgitags](https://www.dgitags.io/studios) va vous présenter le concept de design éthique ainsi que les débats et les polémiques qui tournent autour de cette thématique.
+Aujourd’hui la [Team Dgitags](/studios-et-collectifs) va vous présenter le concept de design éthique ainsi que les débats et les polémiques qui tournent autour de cette thématique.
 
 ‍
 
@@ -156,7 +156,7 @@ Le dernier élément à prendre en compte, est que les designers éthiques souha
 
 ‍
 
-Voila ! c’est déjà la fin ... La [team Dgitags](https://www.dgitags.io/studios) espère que cet article vous aura plu et qu’il aura été une bonne introduction au monde du design éthique. Pour plus de contenus, n’hésitez pas à aller voir notre [site internet.](https://www.dgitags.io/)
+Voila ! c’est déjà la fin ... La [team Dgitags](/studios-et-collectifs) espère que cet article vous aura plu et qu’il aura été une bonne introduction au monde du design éthique. Pour plus de contenus, n’hésitez pas à aller voir notre [site internet.](/)
 
 ‍
 
@@ -164,10 +164,10 @@ Si vous avez besoin de conseils ou d’experts, nos équipes sont là pour vous,
 
 Nos services :
 
--   [Nos studios de développeurs](https://www.dgitags.io/studios)
--   [SEO by Donutz](https://www.dgitags.io/agence-seo)
--   [SEA by Donutz](https://www.dgitags.io/agence-sea)
--   Réseau de freelances, experts dans leur domaine ([design](https://www.dgitags.io/design), [webmarketing](https://www.dgitags.io/marketing), [product](https://www.dgitags.io/produits))
+-   [Nos studios de développeurs](/studios-et-collectifs)
+-   [SEO by Donutz](/sea-social-ads-seo)
+-   [SEA by Donutz](/sea-social-ads-seo)
+-   Réseau de freelances, experts dans leur domaine ([design](/design), [webmarketing](/sea-social-ads-seo), [product](/product-et-project))
 
 ‍
 

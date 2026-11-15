@@ -53,7 +53,7 @@ Webflow permet également l'intégration de systèmes de paiement et de solution
 
 ![\_\_wf\_reserved\_inherit](/uploads/blog/les-avantages-de-webflow-pour-creer-son-site-internet-2.webp)
 
-Sans oublier les outils d'analyse comme Google Analytics (que vous DEVEZ intégrer absolument). En les connectant, vous pouvez suivre le comportement des visiteurs, analyser les performances des pages et ajuster votre site et vos stratégies en conséquence. Vous avez besoin d’aide pour construire un tracking efficace ou même créer votre site web sur Webflow ? [**Recrutez le meilleur freelance**](https://www.digitags.work/#deposez-votre-besoin) pour votre projet sur [**digitags.work**](https://www.digitags.work/), notre hub de talents du digital sélectionnés avec soin. Nous vous trouvons la bonne personne et assurons la contractualisation et le suivi du projet.
+Sans oublier les outils d'analyse comme Google Analytics (que vous DEVEZ intégrer absolument). En les connectant, vous pouvez suivre le comportement des visiteurs, analyser les performances des pages et ajuster votre site et vos stratégies en conséquence. Vous avez besoin d’aide pour construire un tracking efficace ou même créer votre site web sur Webflow ? [**Recrutez le meilleur freelance**](/contact) pour votre projet sur [**digitags.work**](https://www.digitags.work/), notre hub de talents du digital sélectionnés avec soin. Nous vous trouvons la bonne personne et assurons la contractualisation et le suivi du projet.
 
 ‍
 

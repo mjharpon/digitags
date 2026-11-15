@@ -76,4 +76,4 @@ L'analyse des données consiste à examiner les informations recueillies et à e
 
 ![Réalisez votre UX research avec Digitags](/uploads/projets/mener-une-phase-dux-research-1.webp)
 
-La recherche UX est une étape essentielle dans le processus de conception d'un produit. Si vous aussi vous souhaitez vous prêter à cet exercice mais que vous n’avez pas les ressources nécessaires en interne, nous pouvons vous aider. Chez Digitags, nous proposons un hub de plus de 1500 talents freelance et un accompagnement sur mesure : nous discutons de vos besoins et vous trouvons l’expert le plus à même d’y répondre. [**Discutons de votre projet**](/#deposez-votre-besoin) !
+La recherche UX est une étape essentielle dans le processus de conception d'un produit. Si vous aussi vous souhaitez vous prêter à cet exercice mais que vous n’avez pas les ressources nécessaires en interne, nous pouvons vous aider. Chez Digitags, nous proposons un hub de plus de 1500 talents freelance et un accompagnement sur mesure : nous discutons de vos besoins et vous trouvons l’expert le plus à même d’y répondre. [**Discutons de votre projet**](/contact) !

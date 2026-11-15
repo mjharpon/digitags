@@ -48,6 +48,6 @@ Dans un monde idéal et pour bien cadrer votre projet, surtout s’il est comple
 
 En répondant à ces questions, vous pourrez mieux communiquer vos besoins et vos attentes à l'agence de conception de sites web, ce qui facilitera le processus de sélection et garantira que l'agence choisie est en mesure de répondre à vos besoins spécifiques.
 
-Vous avez un projet de site web ? [**Discutons-en**](https://www.digitags.work/#deposez-votre-besoin) et voyons comment Digitags peut vous accompagner !
+Vous avez un projet de site web ? [**Discutons-en**](/contact) et voyons comment Digitags peut vous accompagner !
 
 ‍

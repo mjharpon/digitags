@@ -64,6 +64,6 @@ Faire appel à un développeur full-stack freelance peut être la solution idéa
 -   Intégration et collaboration fluide : Habitué à collaborer avec des équipes pluridisciplinaires (designers, [chefs de projet](/metiers/chef-de-projet-freelance), DevOps), il s’intègre facilement à vos processus existants pour garantir la continuité et la qualité du développement.
 -   Accompagnement et transfert de compétences : En plus de coder, il peut former vos équipes sur les outils modernes, les bonnes pratiques de développement (CI/CD, tests automatisés, etc.) et les méthodologies Agile pour accélérer la montée en compétence de votre organisation.
 
-Digitags.work facilite la mise en relation avec des développeurs full-stack freelances qualifiés, pour vous aider à concrétiser vos objectifs. [**Discutons de votre projet**](/#deposez-votre-besoin) !
+Digitags.work facilite la mise en relation avec des développeurs full-stack freelances qualifiés, pour vous aider à concrétiser vos objectifs. [**Discutons de votre projet**](/contact) !
 
 ‍

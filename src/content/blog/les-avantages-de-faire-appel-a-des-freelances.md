@@ -61,6 +61,5 @@ En conclusion, travailler avec des freelances vous offre de nombreux avantages. 
 
 Les freelances apportent des compétences spécifiques dans des domaines tels que la conception graphique, la gestion de projet, la rédaction de contenu, le marketing, le développement web et bien d'autres encore. L'engagement de freelances peut permettre aux entreprises de répondre rapidement aux demandes imprévues de travail ou à des projets de courte durée sans avoir à embaucher de nouveaux employés à temps plein.
 
-J’espère vous avoir convaincus, et n’hésitez-pas à [**nous contacter**](https://www.digitags.work/#deposez-votre-besoin) afin qu’on vous accompagne dans la recherche du meilleur freelance pour vous.
+J’espère vous avoir convaincus, et n’hésitez-pas à [**nous contacter**](/contact) afin qu’on vous accompagne dans la recherche du meilleur freelance pour vous.
 
-# ‍

@@ -188,22 +188,6 @@ In **Prototype**, then **Device**, I can choose which type of device I want to c
 
 Figma lets you create reusable **components** (icons, backgrounds, avatars, fonts...) that can be shared between different users or different projects. These components are referenced only once in the **design system**, so any change to one of them is reflected in every project where it's used.
 
-#### **Video clip 1: A quick tour of the tools**
-
-<iframe src="/uploads/blog/a-la-decouverte-de-figma-17.jpg" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
-
-#### **Video clip 2: More detail on using the tools**
-
-<iframe src="/uploads/blog/a-la-decouverte-de-figma-18.jpg" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
-
-#### **Video clip 3: Creating links between your objects/pages**
-
-<iframe src="/uploads/blog/a-la-decouverte-de-figma-19.jpg" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
-
-#### **Video clip 4: Preview**
-
-<iframe src="/uploads/blog/a-la-decouverte-de-figma-20.jpg" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
-
 For more tips and analysis of the tools, you can check out [this video](https://www.youtube.com/watch?v=e68PKFYWfoQ) on YouTube, which we found interesting.
 
 Did you enjoy this first part? Stay with us! It's not over yet.
@@ -231,10 +215,6 @@ The goal is to allow everyone to **take part and share their ideas**.
 FigJam recently launched a built-in audio feature that lets teams talk live without having to start a video call.
 
 FigJam is **free** for the time being. A paid plan is expected to launch in 2022. FigJam now competes with tools such as **Miro, Mural** or **Freehand**.
-
-#### **Video clip on FigJam:**
-
-<iframe src="/uploads/blog/a-la-decouverte-de-figma-21.jpg" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
 
 We hope this detailed introduction to Figma's two main tools has interested you. Let's now move on to Figma's pricing.
 

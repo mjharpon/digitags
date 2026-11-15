@@ -57,7 +57,7 @@ Vous pouvez également avoir des spécialistes en conception d'applications mobi
 
 Il est donc nécessaire que vos besoins soient bien définis pour que le freelance que vous choisirez aient les compétences adaptées à ce que vous recherchez.
 
-Le thème du design vous intéresse et vous souhaitez en découvrir plus ? Je vous propose de lire notre article sur le [**design éthique**](https://www.dgitags.io/blog/le-design-ethique-quest-ce-que-cest).
+Le thème du design vous intéresse et vous souhaitez en découvrir plus ? Je vous propose de lire notre article sur le [**design éthique**](/blog/le-design-ethique-quest-ce-que-cest).
 
 ‍
 
@@ -89,9 +89,9 @@ N’hésitez pas à consulter plusieurs profils et à jeter un œil à leur **po
 
 Il peut également être intéressant de voir avec quels types d’entreprises il/elle a travaillé. Cela vous permettra de savoir si votre designer est plutôt un(e) habitué(e) des grands groupes, des start-ups, etc. Cela influencera forcement sa manière de travailler.
 
-Pour trouver votre designer idéal, vous pouvez vous rendre sur [**notre formulaire de contact**](https://www.digitags.work/#deposez-votre-besoin) et faire un **brief** gratuitement avec l’un de nos agents. Ce dernier s’occupera de vous trouver le meilleur freelance, correspondant à vos besoins ! dgitags vous fait **gagner du temps** et vous offre un **service de qualité** en vous pré- sélectionnant les bons, experts dans leur domaine et adapté pour votre projet
+Pour trouver votre designer idéal, vous pouvez vous rendre sur [**notre formulaire de contact**](/contact) et faire un **brief** gratuitement avec l’un de nos agents. Ce dernier s’occupera de vous trouver le meilleur freelance, correspondant à vos besoins ! dgitags vous fait **gagner du temps** et vous offre un **service de qualité** en vous pré- sélectionnant les bons, experts dans leur domaine et adapté pour votre projet
 
-Vous recherchez un designer en 24H top chrono ? Lisez notre article « [**dgitags.io trouve en 24h votre graphiste**](https://www.dgitags.io/blog/dgitags-io-trouve-en-24h-votre-designer-freelance) ».
+Vous recherchez un designer en 24H top chrono ? Lisez notre article « [**dgitags.io trouve en 24h votre graphiste**](/blog/dgitags-io-trouve-en-24h-votre-designer-freelance) ».
 
 ‍
 
