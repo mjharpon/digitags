@@ -7,6 +7,7 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Breadcrumb from './Breadcrumb.astro';
+import { byOrder, byDateDesc } from '../lib/sort';
 
 interface Props { fiche: any; lang?: 'fr' | 'en' }
 const { fiche, lang = 'fr' } = Astro.props;
@@ -123,7 +124,9 @@ const parent = fiche.data.blogCategory ? SERVICE_BY_CATEGORY[fiche.data.blogCate
 const collectionName = en ? 'metiers-en' : 'metiers';
 const metierHref = (id: string) => (en ? `/en/roles/${id}` : `/metiers/${id}`);
 
-const allMetiers = (await getCollection(collectionName as 'metiers', ({ data }) => !data.draft)).filter((m) => m.id !== fiche.id);
+const allMetiers = (await getCollection(collectionName as 'metiers', ({ data }) => !data.draft))
+  .filter((m) => m.id !== fiche.id)
+  .sort(byOrder);
 const sameFamily = allMetiers.filter((m) => m.data.blogCategory === fiche.data.blogCategory);
 const relatedMetiers = [...sameFamily, ...allMetiers.filter((m) => !sameFamily.includes(m))].slice(0, 4);
 
@@ -132,7 +135,7 @@ const relatedPosts = en
   ? []
   : (await getCollection('blog', ({ data }) => !data.draft))
       .filter((p) => fiche.data.blogCategory && p.data.tags.includes(fiche.data.blogCategory))
-      .sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0))
+      .sort(byDateDesc)
       .slice(0, 3);
 
 const t = en

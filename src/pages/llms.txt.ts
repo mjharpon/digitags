@@ -2,6 +2,7 @@
 // Généré à chaque build depuis les collections : toujours à jour.
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
+import { byDateDesc } from '../lib/sort';
 
 const SITE = 'https://www.digitags.work';
 
@@ -18,12 +19,12 @@ export const GET: APIRoute = async () => {
     .sort((a, b) => a.data.title.localeCompare(b.data.title, 'fr'));
   const cas = (await getCollection('casClients', ({ data }) => !data.draft));
   const blogEn = (await getCollection('blog-en', ({ data }) => !data.draft))
-    .sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0));
+    .sort(byDateDesc);
   const projetsEn = (await getCollection('projets-en', ({ data }) => !data.draft))
     .sort((a, b) => a.data.title.localeCompare(b.data.title, 'en'));
   const casEn = (await getCollection('cas-clients-en', ({ data }) => !data.draft));
   const blog = (await getCollection('blog', ({ data }) => !data.draft))
-    .sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0));
+    .sort(byDateDesc);
 
   const txt = `# digitags.work — Le hub des talents digitaux
 

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/sort-sitemap.mjs && node scripts/build-markdown.mjs",
+    "build": "node scripts/build-og-covers.mjs && astro build && node scripts/sort-sitemap.mjs && node scripts/build-markdown.mjs",
     "preview": "astro preview",
     "optimize-images": "node scripts/optimize-images.mjs",
     "indexnow": "node --env-file=.env scripts/indexnow.mjs"

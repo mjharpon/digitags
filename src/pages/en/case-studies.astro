@@ -4,9 +4,10 @@
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import CtaBanner from '../../components/CtaBanner.astro';
+import { byOrder } from '../../lib/sort';
 
 const cas = (await getCollection('cas-clients-en', ({ data }) => !data.draft))
-  .sort((a, b) => (a.data.order ?? 999) - (b.data.order ?? 999));
+  .sort(byOrder);
 ---
 <Base
   title="Case studies | digitags.work"

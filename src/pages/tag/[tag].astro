@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import CtaBanner from '../../components/CtaBanner.astro';
+import { byDateDesc } from '../../lib/sort';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -14,7 +15,7 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
-const sorted = posts.sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0));
+const sorted = posts.sort(byDateDesc);
 ---
 <Base title={`#${tag} — Le blog du Hub | digitags.work`} description={`Les articles du blog digitags.work sur le thème ${tag}.`}>
   <section class="page-hero">

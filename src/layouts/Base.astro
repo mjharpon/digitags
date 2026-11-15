@@ -38,10 +38,12 @@ const {
 
 // Partage (Open Graph / Twitter) : image de la page si elle est dans un format
 // accepté par les réseaux sociaux (pas d'AVIF), sinon image par défaut 1200×630
-// générée par scripts/build-og-image.mjs.
+// (scripts/build-og-image.mjs). Les articles passent le dérivé JPEG 1200×630 de
+// leur couverture, généré au build dans /og/ (scripts/build-og-covers.mjs).
 const OG_DEFAULT = '/assets/og-default.png';
 const ogCustom = image && /\.(jpe?g|png|webp|gif)$/i.test(image) ? image : null;
 const ogImage = abs(ogCustom ?? OG_DEFAULT);
+const ogSized = !ogCustom || ogCustom.startsWith('/og/'); // dimensions connues : 1200×630
 const ogLocale = en ? 'en_GB' : 'fr_FR';
 const ogLocaleAlt = en ? 'fr_FR' : 'en_GB';
 
@@ -219,13 +221,13 @@ const orgJsonLd = JSON.stringify({
   <meta property="og:locale" content={ogLocale} />
   {alternate && <meta property="og:locale:alternate" content={ogLocaleAlt} />}
   <meta property="og:image" content={ogImage} />
-  {!ogCustom && (
+  {ogSized && (
     <>
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content="digitags.work" />
     </>
   )}
+  {!ogCustom && <meta property="og:image:alt" content="digitags.work" />}
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />

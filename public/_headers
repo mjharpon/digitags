@@ -11,6 +11,9 @@
 # Images des contenus : 30 jours (un visuel remplacé garde parfois le même nom).
 /uploads/*
   Cache-Control: public, max-age=2592000
+# Images de partage des articles, générées au build (scripts/build-og-covers.mjs).
+/og/*
+  Cache-Control: public, max-age=2592000
 
 # Versions Markdown générées au build pour les agents IA (scripts/build-markdown.mjs) :
 # servies via « Accept: text/markdown » sur l'URL de la page, jamais indexées en direct.

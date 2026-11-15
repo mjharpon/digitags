@@ -8,6 +8,8 @@ import Base from '../layouts/Base.astro';
 import CtaBanner from './CtaBanner.astro';
 import Breadcrumb from './Breadcrumb.astro';
 import { tagLabelEn } from '../lib/i18n';
+import { byOrder, byDateDesc } from '../lib/sort';
+import { ogCoverPath } from '../lib/og.mjs';
 
 interface Props { post: any; lang?: 'fr' | 'en' }
 const { post, lang = 'fr' } = Astro.props;
@@ -22,14 +24,14 @@ const metiersCollection = en ? 'metiers-en' : 'metiers';
 const metiers = await getCollection(metiersCollection as 'metiers', ({ data }) => !data.draft);
 const relatedMetiers = metiers
   .filter((m) => m.data.blogCategory && post.data.tags.includes(m.data.blogCategory))
-  .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99))
+  .sort(byOrder)
   .slice(0, 3);
 
 // Articles liés : même tag principal, les plus récents, sinon derniers articles.
 const blogCollection = en ? 'blog-en' : 'blog';
 const allPosts = (await getCollection(blogCollection as 'blog', ({ data }) => !data.draft))
   .filter((p) => p.id !== post.id)
-  .sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0));
+  .sort(byDateDesc);
 const sameTag = allPosts.filter((p) => p.data.tags.some((t) => post.data.tags.includes(t)));
 const relatedPosts = [...sameTag, ...allPosts.filter((p) => !sameTag.includes(p))].slice(0, 3);
 
@@ -77,7 +79,7 @@ const articleJsonLd = JSON.stringify({
   publisher: { "@id": ORG_ID },
 });
 ---
-<Base title={`${post.data.title} | digitags.work`} description={post.data.description} image={post.data.image} ogType="article">
+<Base title={`${post.data.title} | digitags.work`} description={post.data.description} image={post.data.image && ogCoverPath(post.data.image)} ogType="article">
   <script type="application/ld+json" set:html={articleJsonLd} />
   <article>
     <section class="page-hero" style="padding-bottom: 36px;">
