@@ -800,22 +800,57 @@ import Base from '../layouts/Base.astro';
       loadProposals();
     });
 
-    $('sel-create').addEventListener('click', () => busy($('sel-create'), async () => {
+    // ---------- Formulaire de propale : création ET modification ----------
+    // formCtx.prop : la propale en cours de modification (null en création).
+    // formCtx.lines : les profils du formulaire ; formCtx.removed : lignes à supprimer à l'enregistrement.
+    let formCtx = null;
+
+    $('sel-create').addEventListener('click', () => busy($('sel-create'), () => openPropForm(null)));
+
+    async function openPropForm(editId) {
       const f = $('prop-form');
-      const ids = [...state.selection.keys()];
-      if (!ids.length) return;
-      const { data: tjms, error: tjmErr } = await sb.from('profiles').select('id, tjm_free, tarif_jour').in('id', ids);
+      let prop = null;
+      let lines;
+      if (editId) {
+        const { data, error } = await sb.from('proposals')
+          .select('id, token, title, client_id, intro, start_date, password, proposal_items(id, profile_id, role_label, tjm, days_week, sort, profiles(name, job))')
+          .eq('id', editId).single();
+        if (error) return toastErr('Propale non chargée : ' + error.message);
+        prop = data;
+        lines = [...(prop.proposal_items ?? [])].sort((x, y) => (x.sort ?? 0) - (y.sort ?? 0)).map((it) => ({
+          itemId: it.id, profileId: it.profile_id, isNew: false,
+          name: it.profiles?.name ?? 'Profil', job: it.profiles?.job ?? '',
+          role: it.role_label ?? '', tjm: Number(it.tjm) > 0 ? Number(it.tjm) : '', days: clampDays(it.days_week) ?? 10,
+        }));
+        // Les profils de la sélection en cours (absents de la propale) sont proposés en ajout.
+        const known = new Set(lines.map((l) => l.profileId));
+        [...state.selection.values()].filter((sel) => !known.has(sel.id)).forEach((sel) => lines.push({
+          itemId: crypto.randomUUID(), profileId: sel.id, isNew: true, name: sel.name, job: sel.job, role: '', tjm: '', days: 10,
+        }));
+      } else {
+        lines = [...state.selection.values()].map((sel) => ({
+          itemId: null, profileId: sel.id, isNew: true, name: sel.name, job: sel.job, role: '', tjm: '', days: 10,
+        }));
+      }
+      if (!lines.length) return;
+      const { data: tjms, error: tjmErr } = await sb.from('profiles').select('id, tjm_free, tarif_jour').in('id', lines.map((l) => l.profileId));
       if (tjmErr) toastErr('TJM des profils non chargés : ' + tjmErr.message);
       const tjmMap = new Map((tjms ?? []).map((p) => [p.id, tjmOf(p)]));
+      formCtx = { prop, lines, removed: [] };
+      // Une propale rattachée à un client archivé garde son client à l'enregistrement.
+      const archClient = prop?.client_id && !state.clients.some((c) => c.id === prop.client_id)
+        ? state.archivedClients.find((c) => c.id === prop.client_id) : null;
       f.innerHTML = `
         <button class="close" id="prop-close">×</button>
-        <h2 style="margin-bottom:16px;">Nouvelle propale</h2>
-        <div class="field"><label>Titre du projet *</label><input id="np-title" placeholder="Refonte e-commerce — Acme" /></div>
+        <h2 style="margin-bottom:16px;">${prop ? 'Modifier la propale' : 'Nouvelle propale'}</h2>
+        ${prop ? '<p class="np-hint">Le lien envoyé au client ne change pas : il verra la version modifiée dès l\'enregistrement.</p>' : ''}
+        <div class="field"><label>Titre du projet *</label><input id="np-title" placeholder="Refonte e-commerce — Acme" value="${esc(prop?.title ?? '')}" /></div>
         <div class="field"><label>Client</label>
           <div style="display:flex; gap:8px;">
             <select id="np-client" style="flex:1;">
               <option value="">— Aucun client —</option>
-              ${state.clients.map((c) => `<option value="${c.id}">${esc(c.name)}</option>`).join('')}
+              ${state.clients.map((c) => `<option value="${c.id}"${c.id === prop?.client_id ? ' selected' : ''}>${esc(c.name)}</option>`).join('')}
+              ${archClient ? `<option value="${archClient.id}" selected>${esc(archClient.name)} (archivé)</option>` : ''}
             </select>
             <button type="button" class="btn btn-outline btn-sm" id="np-client-new">+ Nouveau</button>
           </div>
@@ -824,38 +859,40 @@ import Base from '../layouts/Base.astro';
             <button type="button" class="btn btn-dark btn-sm" id="np-client-create">Créer</button>
           </div>
         </div>
-        <div class="field"><label>Introduction (visible par le prospect)</label><textarea id="np-intro" placeholder="Suite à nos échanges, voici l'équipe que nous vous proposons…"></textarea></div>
+        <div class="field"><label>Introduction (visible par le prospect)</label><textarea id="np-intro" placeholder="Suite à nos échanges, voici l'équipe que nous vous proposons…">${esc(prop?.intro ?? '')}</textarea></div>
         <div style="display:flex; gap:14px; flex-wrap:wrap;">
           <div class="field" style="max-width: 160px;">
             <label>Marge digitags (%)</label>
-            <input id="np-marge" type="number" value="20" min="0" step="5" />
+            <input id="np-marge" type="number" value="20" min="0" step="5" ${prop ? 'title="Ne recalcule que les TJM laissés vides ou les profils ajoutés"' : ''} />
           </div>
           <div class="field" style="max-width: 180px;">
             <label>Démarrage prévu</label>
-            <input id="np-start" type="date" value="${new Date(Date.now() + 14 * 864e5).toISOString().slice(0, 10)}" />
+            <input id="np-start" type="date" value="${prop ? esc(prop.start_date ?? '') : new Date(Date.now() + 14 * 864e5).toISOString().slice(0, 10)}" />
           </div>
           <div class="field" style="max-width: 190px;">
             <label>Mot de passe client</label>
-            <input id="np-password" type="text" value="${genPassword()}" autocomplete="off" title="Demandé au client pour ouvrir la propale — vider pour un accès libre" />
+            <input id="np-password" type="text" value="${prop ? esc(prop.password ?? '') : genPassword()}" autocomplete="off" title="Demandé au client pour ouvrir la propale — vider pour un accès libre" />
           </div>
         </div>
         <h4 style="margin: 10px 0;">Profils &amp; rôles — TJM client = TJM freelance + marge</h4>
-        ${[...state.selection.values()].map((s, i) => `
-          <div class="field" data-np-item="${esc(s.id)}" data-np-base="${tjmMap.get(s.id) ?? ''}">
-            <label for="np-role-${i}"><button type="button" class="np-open" data-np-open="${esc(s.id)}" title="Ouvrir la fiche du profil">${esc(s.name)}</button>${tjmMap.get(s.id) ? ` <span style="color:var(--ink-faint); font-weight:600;">(TJM freelance : ${tjmMap.get(s.id)} €)</span>` : ''} — rôle, TJM client &amp; nombre de jours</label>
+        ${prop ? '<p class="np-hint">Pour ajouter un profil : fermez ce formulaire, ajoutez-le à la sélection (+) depuis la Recherche, puis rouvrez « Modifier ».</p>' : ''}
+        ${lines.map((l, i) => `
+          <div class="field" data-np-item="${esc(l.profileId)}" data-np-i="${i}" data-np-base="${tjmMap.get(l.profileId) ?? ''}"${prop && !l.isNew ? ' data-np-old="1"' : ''}>
+            <label for="np-role-${i}"><button type="button" class="np-open" data-np-open="${esc(l.profileId)}" title="Ouvrir la fiche du profil">${esc(l.name)}</button>${tjmMap.get(l.profileId) ? ` <span style="color:var(--ink-faint); font-weight:600;">(TJM freelance : ${tjmMap.get(l.profileId)} €)</span>` : ''}${prop && l.isNew ? ' <span class="np-new">ajouté</span>' : ''} — rôle, TJM client &amp; nombre de jours</label>
             <div style="display:flex; gap:8px;">
-              <input class="np-role" id="np-role-${i}" placeholder="${esc(s.job || 'Rôle (facultatif)')}" style="flex:1;" />
-              <input class="np-tjm" type="number" min="0" step="5" placeholder="TJM €" title="TJM facturé au client — vide = « sur devis » côté client" style="width:100px;" />
-              <input class="np-days" type="number" value="10" min="0.5" max="365" step="0.5" title="Nombre de jours sur la mission (0,5 à 365)" style="width:80px;" />
+              <input class="np-role" id="np-role-${i}" value="${esc(l.role)}" placeholder="${esc(l.job || 'Rôle (facultatif)')}" style="flex:1;" />
+              <input class="np-tjm" type="number" min="0" step="5" value="${esc(l.tjm)}"${l.tjm !== '' ? ' data-dirty="1"' : ''} placeholder="TJM €" title="TJM facturé au client — vide = « sur devis » côté client" style="width:100px;" />
+              <input class="np-days" type="number" value="${esc(l.days)}" min="0.5" max="365" step="0.5" title="Nombre de jours sur la mission (0,5 à 365)" style="width:80px;" />
+              ${prop ? `<button type="button" class="np-rm" data-np-rm="${i}" title="Retirer ce profil de la propale">×</button>` : ''}
             </div>
           </div>`).join('')}
         <p id="np-warn" class="np-warn" hidden></p>
-        <button class="btn btn-dark" id="np-save">Créer la propale</button>
+        <button class="btn btn-dark" id="np-save">${prop ? 'Enregistrer les modifications' : 'Créer la propale'}</button>
         <p id="np-msg" style="font-size:13px; color:var(--ink-faint); margin-top:10px;"></p>`;
       openForm(f);
       f.scrollTop = 0;
       $('prop-close').addEventListener('click', () => closeForm(f));
-      $('np-save').addEventListener('click', () => busy($('np-save'), createProposal));
+      $('np-save').addEventListener('click', () => busy($('np-save'), saveProposal));
       // La fiche d'un profil s'ouvre par-dessus le formulaire (sans toucher à la sélection).
       f.querySelectorAll('[data-np-open]').forEach((b) => b.addEventListener('click', () => openProfile(b.dataset.npOpen)));
       // Création rapide d'un client sans quitter le formulaire de propale.
@@ -883,10 +920,10 @@ import Base from '../layouts/Base.astro';
       // passe « sur devis » et sort du budget estimé.
       const warnTjm = () => {
         const names = [];
-        document.querySelectorAll('[data-np-item]').forEach((el) => {
+        f.querySelectorAll('[data-np-item]').forEach((el) => {
           const missing = !(Number(el.querySelector('.np-tjm').value) > 0);
           el.classList.toggle('np-missing', missing);
-          if (missing) names.push(state.selection.get(el.dataset.npItem)?.name ?? '?');
+          if (missing) names.push(lines[Number(el.dataset.npI)]?.name ?? '?');
         });
         const w = $('np-warn');
         w.hidden = names.length === 0;
@@ -895,10 +932,12 @@ import Base from '../layouts/Base.astro';
           : '';
       };
       // TJM client auto-calculé depuis la marge ; la saisie manuelle fige le champ,
-      // le vider le rend à nouveau au calcul automatique.
-      const applyMarge = () => {
+      // le vider le rend à nouveau au calcul automatique. À l'ouverture d'une propale
+      // existante (initial), ses lignes ne sont pas touchées : un TJM laissé vide le reste.
+      const applyMarge = (initial) => {
         const m = Math.max(0, Number($('np-marge').value) || 0);
-        document.querySelectorAll('[data-np-item]').forEach((el) => {
+        f.querySelectorAll('[data-np-item]').forEach((el) => {
+          if (initial === true && el.dataset.npOld) return;
           const base = Number(el.dataset.npBase);
           const input = el.querySelector('.np-tjm');
           if (base > 0 && !input.dataset.dirty) input.value = tjmClient(base, m);
@@ -913,22 +952,36 @@ import Base from '../layouts/Base.astro';
       }));
       // Jours : la valeur affichée est celle qui sera enregistrée (0,5 à 365).
       f.querySelectorAll('.np-days').forEach((i) => i.addEventListener('change', () => { i.value = clampDays(i.value) ?? 10; }));
-      applyMarge();
-    }));
+      // Modification : retirer un profil (effectif à l'enregistrement seulement).
+      f.querySelectorAll('[data-np-rm]').forEach((b) => b.addEventListener('click', () => {
+        if (f.querySelectorAll('[data-np-item]').length <= 1) {
+          $('np-msg').textContent = 'Une propale garde au moins un profil — archivez-la si elle n\'a plus lieu d\'être.';
+          return;
+        }
+        const l = lines[Number(b.dataset.npRm)];
+        if (!l.isNew) formCtx.removed.push(l.itemId);
+        b.closest('[data-np-item]').remove();
+        warnTjm();
+      }));
+      applyMarge(true);
+    }
 
-    async function createProposal() {
+    async function saveProposal() {
       const msg = $('np-msg');
+      const { prop, lines, removed } = formCtx;
       const title = $('np-title').value.trim();
       if (!title) { msg.textContent = 'Le titre est requis.'; return; }
-      const rows = [...document.querySelectorAll('[data-np-item]')].map((el, i) => {
-        const sel = state.selection.get(el.dataset.npItem);
+      const rows = [...document.querySelectorAll('#prop-form [data-np-item]')].map((el, i) => {
+        const l = lines[Number(el.dataset.npI)];
         const tjm = Number(el.querySelector('.np-tjm').value);
         return {
-          name: sel?.name ?? '?',
+          name: l.name,
+          itemId: l.itemId,
+          isNew: l.isNew,
           item: {
-            profile_id: el.dataset.npItem,
+            profile_id: l.profileId,
             // Rôle vide : le métier du profil, sinon rien (jamais le texte indicatif du champ).
-            role_label: el.querySelector('.np-role').value.trim() || sel?.job?.trim() || null,
+            role_label: el.querySelector('.np-role').value.trim() || l.job?.trim() || null,
             tjm: tjm > 0 ? tjm : null,
             // days_week stocke désormais le nombre TOTAL de jours du consultant sur la mission.
             days_week: clampDays(el.querySelector('.np-days').value) ?? 10,
@@ -936,30 +989,32 @@ import Base from '../layouts/Base.astro';
           },
         };
       });
-      if (!rows.length) { msg.textContent = 'Aucun profil dans la sélection.'; return; }
+      if (!rows.length) { msg.textContent = 'Aucun profil dans la propale.'; return; }
       const missing = rows.filter((r) => r.item.tjm === null).map((r) => r.name);
-      if (missing.length && !confirm(`TJM client manquant pour : ${missing.join(', ')}.\n\nCôté client, ${missing.length > 1 ? 'ces profils seront affichés' : 'ce profil sera affiché'} « sur devis » et ne comptera pas dans le budget estimé.\n\nCréer la propale quand même ?`)) {
-        msg.textContent = 'Création annulée — complétez les TJM manquants.';
+      if (missing.length && !confirm(`TJM client manquant pour : ${missing.join(', ')}.\n\nCôté client, ${missing.length > 1 ? 'ces profils seront affichés' : 'ce profil sera affiché'} « sur devis » et ne comptera pas dans le budget estimé.\n\n${prop ? 'Enregistrer' : 'Créer la propale'} quand même ?`)) {
+        msg.textContent = `${prop ? 'Enregistrement annulé' : 'Création annulée'} — complétez les TJM manquants.`;
         return;
       }
+      const pw = $('np-password').value.trim();
+      const fields = {
+        title,
+        client_id: $('np-client').value || null,
+        intro: $('np-intro').value.trim() || null,
+        start_date: $('np-start').value || null,
+        password: pw || null,
+      };
+      if (prop) return updateProposal(prop, fields, rows, removed, msg);
+
       msg.textContent = 'Création en cours…';
       const { data: { user } } = await sb.auth.getUser();
-      const pw = $('np-password').value.trim();
-      const { data: prop, error } = await sb.from('proposals')
-        .insert({
-          title,
-          client_id: $('np-client').value || null,
-          intro: $('np-intro').value.trim() || null,
-          created_by: user?.email,
-          start_date: $('np-start').value || null,
-          password: pw || null,
-        })
+      const { data: created, error } = await sb.from('proposals')
+        .insert({ ...fields, created_by: user?.email })
         .select().single();
       if (error) { msg.textContent = 'Erreur : ' + error.message; return; }
-      const { error: e2 } = await sb.from('proposal_items').insert(rows.map((r) => ({ ...r.item, proposal_id: prop.id })));
+      const { error: e2 } = await sb.from('proposal_items').insert(rows.map((r) => ({ ...r.item, proposal_id: created.id })));
       if (e2) {
         // Pas de transaction côté navigateur : on retire la propale restée sans profils.
-        const { data: del, error: e3 } = await sb.from('proposals').delete().eq('id', prop.id).select('id');
+        const { data: del, error: e3 } = await sb.from('proposals').delete().eq('id', created.id).select('id');
         msg.textContent = 'Erreur à l\'enregistrement des profils : ' + e2.message
           + (e3 || !del?.length
             ? ` — une propale vide « ${title} » est restée en base : archivez-la depuis l'onglet Propales avant de réessayer.`
@@ -972,11 +1027,36 @@ import Base from '../layouts/Base.astro';
       // La nouvelle propale doit être visible : filtres de l'onglet Propales remis à zéro.
       state.propFilter = ''; $('props-client').value = '';
       state.showArchProps = false; $('props-arch').checked = false;
-      const share = `${location.origin}/p/${prop.token}${pw ? ` — mot de passe : ${pw}` : ''}`;
+      const share = `${location.origin}/p/${created.token}${pw ? ` — mot de passe : ${pw}` : ''}`;
       try { await navigator.clipboard.writeText(share); toast(pw ? 'Propale créée — lien + mot de passe copiés ✓' : 'Propale créée — lien copié ✓'); }
       catch { toast('Propale créée'); }
       document.querySelector('[data-tab="propales"]').click(); // recharge la liste
       loadClients(); // compteurs de propales par client
+    }
+
+    // Modification d'une propale existante. Trois requêtes, chacune atomique et rejouable :
+    // 1) toutes les lignes en un seul upsert (les lignes ajoutées ont déjà leur identifiant),
+    // 2) suppression des profils retirés, 3) champs de la propale. En cas d'échec, le
+    // formulaire reste ouvert : recliquer sur « Enregistrer » reprend sans créer de doublon.
+    async function updateProposal(prop, fields, rows, removed, msg) {
+      msg.textContent = 'Enregistrement…';
+      const { error: e1 } = await sb.from('proposal_items')
+        .upsert(rows.map((r) => ({ id: r.itemId, proposal_id: prop.id, ...r.item })));
+      if (e1) { msg.textContent = 'Erreur : rien n\'a été modifié — ' + e1.message; return; }
+      if (removed.length) {
+        const { error: e2 } = await sb.from('proposal_items').delete().in('id', removed).eq('proposal_id', prop.id);
+        if (e2) { msg.textContent = `Profils enregistrés, mais ${removed.length > 1 ? 'les profils retirés sont' : 'le profil retiré est'} toujours dans la propale (${e2.message}). Recliquez sur « Enregistrer ».`; return; }
+      }
+      const { data: up, error: e3 } = await sb.from('proposals').update(fields).eq('id', prop.id).select('id');
+      if (e3 || !up?.length) { msg.textContent = `Profils enregistrés, mais titre, client, dates et mot de passe n'ont pas été modifiés (${e3?.message ?? 'aucune ligne modifiée'}). Recliquez sur « Enregistrer ».`; return; }
+      closeForm($('prop-form'));
+      // Les profils ajoutés venaient de la sélection : elle a servi, on la vide.
+      if (rows.some((r) => r.isNew)) { state.selection.clear(); renderSelection(); }
+      toast((fields.password ?? '') !== (prop.password ?? '')
+        ? 'Propale mise à jour ✓ — même lien, pensez à transmettre le nouveau mot de passe'
+        : 'Propale mise à jour ✓ — le lien client ne change pas', 5000);
+      await loadProposals();
+      loadClients();
     }
 
     const propRow = (p) => `
@@ -986,6 +1066,7 @@ import Base from '../layouts/Base.astro';
           ${state.showArchProps ? `<button class="btn btn-dark btn-sm" data-rest="${p.id}">Restaurer</button>` : `
           <a class="btn btn-outline btn-sm" href="/p/${esc(p.token)}" target="_blank" rel="noopener">Voir</a>
           <button class="btn btn-dark btn-sm" data-copy="${esc(p.token)}" data-pw="${esc(p.password ?? '')}">Copier le lien</button>
+          <button class="btn btn-outline btn-sm" data-edit="${p.id}" title="Modifier titre, TJM, jours, rôles ou profils — le lien client ne change pas">Modifier</button>
           <button class="btn btn-outline btn-sm" data-arch="${p.id}">Archiver</button>`}
         </div>`;
 
@@ -1030,6 +1111,8 @@ import Base from '../layouts/Base.astro';
         try { await navigator.clipboard.writeText(share); toast('Lien copié ✓'); } catch {}
         return;
       }
+      const ed = e.target.closest('[data-edit]');
+      if (ed) { await busy(ed, () => openPropForm(ed.dataset.edit)); return; }
       const ar = e.target.closest('[data-arch]');
       if (ar) {
         const title = ar.closest('.prop-row').querySelector('h3').textContent;
