@@ -199,7 +199,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
               <tr><td style="padding:4px 14px 4px 0;color:#777;">Email</td><td><a href="mailto:${esc(email)}">${esc(email)}</a></td></tr>
               <tr><td style="padding:4px 14px 4px 0;color:#777;">Métier</td><td>${esc(job)}</td></tr>
               <tr><td style="padding:4px 14px 4px 0;color:#777;">Spécialité</td><td>${esc(specialite)}</td></tr>
-              <tr><td style="padding:4px 14px 4px 0;color:#777;">TJM</td><td>${tjm} € (commission incluse)</td></tr>
+              <tr><td style="padding:4px 14px 4px 0;color:#777;">TJM</td><td>${tjm} € (hors commission)</td></tr>
               <tr><td style="padding:4px 14px 4px 0;color:#777;">Disponible</td><td>à partir du ${esc(dispo)}</td></tr>
               <tr><td style="padding:4px 14px 4px 0;color:#777;">Anglais courant</td><td>${form.get('anglais') === 'on' ? 'Oui' : 'Non'}</td></tr>
               <tr><td style="padding:4px 14px 4px 0;color:#777;">Ouvert CDI</td><td>${form.get('cdi') === 'on' ? 'Oui' : 'Non'}</td></tr>
