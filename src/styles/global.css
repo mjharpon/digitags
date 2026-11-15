@@ -1824,6 +1824,13 @@ a.stat:hover span:last-child { text-decoration: underline; text-underline-offset
   overflow-y: auto;
   padding: 26px;
 }
+/* Formulaires (propale, client) bloquants ; la fiche profil passe au-dessus. */
+.drawer-backdrop { position: fixed; inset: 0; background: rgba(17, 28, 63, .45); z-index: 99; }
+.drawer.drawer-top { z-index: 110; }
+.drawer .np-open { background: none; border: 0; padding: 0; font: inherit; color: var(--blue); cursor: pointer; text-decoration: underline; }
+.drawer .np-warn { font-size: 13px; font-weight: 600; color: #8a5a00; background: #fff6dd; border: 1px solid #f5d98a; border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; }
+.drawer .np-missing .np-tjm { border-color: #e0a100; background: #fffaf0; }
+.btn:disabled { opacity: .55; cursor: not-allowed; }
 .drawer .close { position: absolute; top: 14px; right: 16px; background: none; border: 0; font-size: 22px; cursor: pointer; color: var(--ink-faint); }
 .drawer h2 { font-size: 20px; font-weight: 800; margin-bottom: 2px; }
 .drawer .job { color: var(--ink-soft); margin-bottom: 14px; }
@@ -1856,6 +1863,16 @@ a.stat:hover span:last-child { text-decoration: underline; text-underline-offset
 .prop-row h3 { font-size: 15px; font-weight: 800; margin-right: auto; }
 .prop-row .meta { font-size: 12.5px; color: var(--ink-faint); }
 .clients-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 14px; }
+.arch-toggle, .props-filter label.arch-toggle { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 600; cursor: pointer; margin-left: auto; color: var(--ink-soft); }
+.prop-row.is-archived { background: #f6f6f3; }
+.prop-row.is-archived h3 { color: var(--ink-soft); }
+/* Accès refusé / données injoignables : seule la barre du haut (Déconnexion) reste. */
+#app.gated > :not(.tool-bar):not(.tool-gate) { display: none !important; }
+#app.gated .tool-tabs { visibility: hidden; }
+.tool-gate { max-width: 560px; margin: 60px auto; text-align: center; }
+.tool-gate h2 { font-size: 22px; font-weight: 800; margin-bottom: 10px; }
+.tool-gate p { color: var(--ink-soft); margin-bottom: 16px; line-height: 1.6; }
+.tool-gate .gate-detail { color: var(--ink-faint); font-size: 12.5px; }
 .props-filter { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
 .props-filter label { font-size: 13.5px; font-weight: 700; }
 .props-filter select {
@@ -2515,6 +2532,8 @@ a.chip-more:hover { color: var(--yellow); }
 }
 .p3-days:focus { border-color: var(--blue); }
 .p3-line { font-size: 15px; font-weight: 800; white-space: nowrap; }
+.p3-quote { font-size: 13px; font-weight: 600; font-style: italic; color: var(--ink-faint); }
+.prop2-tjm strong.p3-quote { font-size: 15px; font-weight: 700; color: var(--ink-faint); }
 .p3-x {
   width: 30px; height: 30px; border-radius: 8px; cursor: pointer;
   border: 1.5px solid var(--line); background: var(--white);

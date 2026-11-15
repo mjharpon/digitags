@@ -40,6 +40,9 @@ import Base from '../layouts/Base.astro';
       <button class="btn btn-outline btn-sm" id="logout">Déconnexion</button>
     </div>
 
+    <!-- Accès refusé / données injoignables : la barre (et Déconnexion) reste visible -->
+    <div id="app-gate" class="tool-gate" hidden></div>
+
     <div class="tool-hero">
       <div>
         <h1>Talents <span>du Hub</span></h1>
@@ -132,6 +135,7 @@ import Base from '../layouts/Base.astro';
     <div id="tab-clients" hidden>
       <div class="clients-head">
         <p class="results-meta" id="clients-meta"></p>
+        <label class="chk arch-toggle"><input type="checkbox" id="clients-arch" /> Voir les archivés</label>
         <button class="btn btn-blue btn-sm" id="client-new">+ Nouveau client</button>
       </div>
       <div class="props-list" id="clients-list"></div>
@@ -143,19 +147,23 @@ import Base from '../layouts/Base.astro';
         <select id="props-client">
           <option value="">Tous les clients</option>
         </select>
+        <label class="chk arch-toggle"><input type="checkbox" id="props-arch" /> Voir les archivées</label>
       </div>
       <div class="props-list" id="props-list"></div>
     </div>
   </div>
 
-  <!-- Fiche profil -->
-  <div id="drawer" class="drawer" hidden></div>
+  <!-- Fond bloquant des formulaires (propale, client) -->
+  <div id="backdrop" class="drawer-backdrop" hidden></div>
 
   <!-- Formulaire propale -->
   <div id="prop-form" class="drawer" hidden></div>
 
   <!-- Fiche client (création / édition) -->
   <div id="client-form" class="drawer" hidden></div>
+
+  <!-- Fiche profil (toujours au-dessus des formulaires) -->
+  <div id="drawer" class="drawer drawer-top" hidden></div>
 
   <div id="toast" class="toast" hidden></div>
 
@@ -174,9 +182,47 @@ import Base from '../layouts/Base.astro';
     const sb = createClient(URL_, KEY);
 
     const PAGE = 30;
-    let state = { page: 0, selection: new Map(), groups: [], clients: [], propFilter: '', lastCount: 0, fGroups: new Set(), fExps: new Set(), fTjms: new Set(), sort: 'pertinence' };
 
-    const toast = (msg) => { const t = $('toast'); t.textContent = msg; t.hidden = false; setTimeout(() => (t.hidden = true), 2600); };
+    // La sélection survit au rechargement de la page (sessionStorage : onglet courant).
+    const SEL_KEY = 'talents-selection';
+    function loadSelection() {
+      try {
+        const arr = JSON.parse(sessionStorage.getItem(SEL_KEY) || '[]');
+        return new Map(arr
+          .filter((s) => s && /^[0-9a-f-]{36}$/i.test(s.id))
+          .map((s) => [s.id, { id: s.id, name: String(s.name ?? ''), job: String(s.job ?? '') }]));
+      } catch { return new Map(); }
+    }
+    function saveSelection() {
+      try { sessionStorage.setItem(SEL_KEY, JSON.stringify([...state.selection.values()])); } catch {}
+    }
+
+    let state = { page: 0, selection: loadSelection(), groups: [], clients: [], archivedClients: [], propFilter: '', showArchClients: false, showArchProps: false, userEmail: '', lastCount: 0, fGroups: new Set(), fExps: new Set(), fTjms: new Set(), sort: 'pertinence' };
+
+    let toastT;
+    const toast = (msg, ms = 2600) => { const t = $('toast'); t.textContent = msg; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => (t.hidden = true), ms); };
+    const toastErr = (msg) => toast(msg, 6000);
+
+    // Désactive un bouton pendant un envoi : un double-clic ne part qu'une fois.
+    async function busy(btn, fn) {
+      if (btn.disabled) return;
+      btn.disabled = true;
+      try { return await fn(); } finally { btn.disabled = false; }
+    }
+
+    // Nombre de jours : mêmes bornes que la page propale côté client (0,5 à 365).
+    const clampDays = (v) => {
+      const n = Number(String(v ?? '').replace(',', '.'));
+      if (!Number.isFinite(n) || n <= 0) return null;
+      return Math.min(365, Math.max(0.5, Math.round(n * 100) / 100));
+    };
+    // TJM client = TJM de base + marge, arrondi au multiple de 5 SUPÉRIEUR
+    // (jamais sous la marge saisie). L'epsilon absorbe les erreurs de flottants.
+    const tjmClient = (base, marge) => Math.ceil(base * (100 + marge) / 500 - 1e-9) * 5;
+
+    // Formulaires bloquants : un fond empêche de modifier la sélection derrière.
+    function openForm(f) { f.hidden = false; $('backdrop').hidden = false; }
+    function closeForm(f) { f.hidden = true; $('backdrop').hidden = $('prop-form').hidden && $('client-form').hidden; }
 
     // Menu déroulant à sélection multiple. Retourne { update } pour rafraîchir
     // le libellé (et l'état des cases) quand le Set est modifié ailleurs.
@@ -257,7 +303,12 @@ import Base from '../layouts/Base.astro';
       start();
     });
 
-    $('logout').addEventListener('click', async () => { await sb.auth.signOut(); location.reload(); });
+    $('logout').addEventListener('click', async () => {
+      // Hors ligne, la déconnexion serveur échoue : on ferme au moins la session locale.
+      const { error } = await sb.auth.signOut();
+      if (error) await sb.auth.signOut({ scope: 'local' });
+      location.reload();
+    });
 
     // ---------- App ----------
     let msGroup, msExp, msTjm;
@@ -268,16 +319,16 @@ import Base from '../layouts/Base.astro';
       started = true;
       history.replaceState(null, '', location.pathname);
       $('app').hidden = false;
+      const { data: { session } } = await sb.auth.getSession();
+      state.userEmail = session?.user?.email ?? '';
       const { data: groups, error } = await sb.from('job_groups').select('id, name').order('sort');
-      if (error || !groups?.length) {
-        // RLS : utilisateur connecté mais pas membre de l'équipe → aucune donnée.
-        if (error || groups.length === 0) {
-          const { count } = await sb.from('profiles').select('id', { count: 'exact', head: true });
-          if (!count) {
-            $('app').innerHTML = '<p style="padding:40px;font-weight:700;">Accès non autorisé : votre email n\'est pas dans la liste de l\'équipe (table team_members), ou la base est vide.</p>';
-            return;
-          }
-        }
+      // Une erreur (réseau, session expirée) n'est pas un refus d'accès.
+      if (error) return showGate('error', error.message);
+      if (!groups?.length) {
+        // RLS : utilisateur connecté mais pas membre de l'équipe → aucune donnée, sans erreur.
+        const { count, error: e2 } = await sb.from('profiles').select('id', { count: 'exact', head: true });
+        if (e2) return showGate('error', e2.message);
+        if (!count) return showGate('denied');
       }
       state.groups = groups ?? [];
       msGroup = makeMulti($('ms-group'), 'Familles', state.groups.map((g) => ({ v: g.id, t: g.name })), state.fGroups);
@@ -285,14 +336,31 @@ import Base from '../layouts/Base.astro';
       const expList = [...new Set((exps ?? []).map((e) => e.experience))].sort();
       msExp = makeMulti($('ms-exp'), 'Expérience', expList.map((e) => ({ v: e, t: e })), state.fExps);
       msTjm = makeMulti($('ms-tjm'), 'TJM', [
+        // Tranches sans chevauchement : borne basse incluse, borne haute exclue.
         { v: '0-400', t: '< 400 €' },
-        { v: '400-600', t: '400 – 600 €' },
-        { v: '600-800', t: '600 – 800 €' },
-        { v: '800-99999', t: '> 800 €' },
+        { v: '400-600', t: '400 – 599 €' },
+        { v: '600-800', t: '600 – 799 €' },
+        { v: '800-', t: '800 € et plus' },
       ], state.fTjms);
       renderQuickChips();
+      renderSelection();
       search(true);
       loadClients().then(loadProposals);
+    }
+
+    // Écran d'attente : remplace le contenu de l'app mais garde la barre du haut
+    // (donc le bouton Déconnexion, seul moyen de changer de compte).
+    function showGate(kind, detail) {
+      const g = $('app-gate');
+      $('app').classList.add('gated');
+      g.innerHTML = kind === 'denied'
+        ? `<h2>Accès non autorisé</h2>
+           <p>Le compte <strong>${esc(state.userEmail || 'connecté')}</strong> ne fait pas partie de l'équipe (table team_members). Déconnectez-vous pour changer de compte.</p>`
+        : `<h2>Impossible de charger les données</h2>
+           <p>Problème de réseau ou session expirée — vos droits d'accès ne sont pas en cause.${detail ? ` <span class="gate-detail">(${esc(detail)})</span>` : ''}</p>
+           <button class="btn btn-dark btn-sm" id="gate-retry">Réessayer</button>`;
+      g.hidden = false;
+      $('gate-retry')?.addEventListener('click', () => location.reload());
     }
 
     // Raccourcis familles dans la colonne de droite, synchronisés avec le filtre.
@@ -321,40 +389,72 @@ import Base from '../layouts/Base.astro';
       }
       if (state.fGroups.size) q = q.in('job_group_id', [...state.fGroups]);
       if (state.fExps.size) q = q.in('experience', [...state.fExps]);
-      if ($('f-dispo').checked) q = q.eq('disponible', true);
+      // Aligné sur la pastille verte : « disponible » coché OU date de dispo déjà passée.
+      if ($('f-dispo').checked) q = q.or(`disponible.eq.true,dispo_from.lte.${new Date().toISOString().slice(0, 10)}`);
       if ($('f-en').checked) q = q.eq('fluent_english', true);
       if ($('f-stars').checked) q = q.gte('stars', 4).lte('stars', 5);
       if ($('f-cdi').checked) q = q.eq('cdi', true);
       if ($('f-dg').checked) q = q.eq('dgitags_experience', 'Oui');
       if ($('f-sf').checked) q = q.eq('salesforce', true);
       if ($('f-site').checked) q = q.eq('show_on_website', true);
+      // Filtre TJM sur la valeur AFFICHÉE sur la carte : tjm_free, sinon tarif_jour.
       if (state.fTjms.size) {
-        q = q.or([...state.fTjms].map((r) => {
+        q = q.or([...state.fTjms].flatMap((r) => {
           const [lo, hi] = r.split('-');
-          return `and(tjm_free.gte.${lo},tjm_free.lte.${hi})`;
+          const rng = (col) => `${col}.gt.0,${col}.gte.${lo}` + (hi ? `,${col}.lt.${hi}` : '');
+          return [`and(${rng('tjm_free')})`, `and(or(tjm_free.is.null,tjm_free.eq.0),${rng('tarif_jour')})`];
         }).join(','));
       }
+      // Tri par TJM : les profils sans TJM affiché n'ont rien à trier, on les écarte
+      // (le compteur le signale) plutôt que de les laisser en tête du tri croissant.
+      if (sortByTjm()) q = q.or('tjm_free.gt.0,tarif_jour.gt.0');
       switch (state.sort) {
-        case 'tjm-asc': return q.order('tjm_free', { ascending: true, nullsFirst: false }).order('name');
-        case 'tjm-desc': return q.order('tjm_free', { ascending: false, nullsFirst: false }).order('name');
+        case 'tjm-asc': return q.order('tjm_free', { ascending: true, nullsFirst: false }).order('tarif_jour', { ascending: true, nullsFirst: false }).order('name');
+        case 'tjm-desc': return q.order('tjm_free', { ascending: false, nullsFirst: false }).order('tarif_jour', { ascending: false, nullsFirst: false }).order('name');
         case 'dispo': return q.order('disponible', { ascending: false }).order('dispo_from', { ascending: true, nullsFirst: false }).order('name');
         case 'nom': return q.order('name');
         default: return q.order('stars', { ascending: false, nullsFirst: false }).order('name');
       }
     }
 
+    const sortByTjm = () => state.sort === 'tjm-asc' || state.sort === 'tjm-desc';
+
+    // Chaque recherche est numérotée : une réponse arrivée après une requête
+    // plus récente est ignorée (sinon elle écraserait les bons résultats).
+    let searchSeq = 0;
+    let deb = null;
     async function search(reset) {
-      if (reset) { state.page = 0; $('results').innerHTML = ''; }
-      const from = state.page * PAGE;
+      clearTimeout(deb); // une recherche explicite annule la frappe en attente
+      const seq = ++searchSeq;
+      const page = reset ? 0 : state.page + 1;
+      const from = page * PAGE;
+      $('more').disabled = true;
       const { data, count, error } = await buildQuery().range(from, from + PAGE - 1);
-      if (error) { toast('Erreur : ' + error.message); return; }
-      $('results-meta').textContent = `${count} profil${count > 1 ? 's' : ''}`;
+      if (seq !== searchSeq) return;
+      $('more').disabled = false;
+      if (error) {
+        toastErr('Erreur : ' + error.message);
+        // Nouvelle recherche en échec : on n'affiche pas d'anciens résultats sous un
+        // compteur faux. « Charger plus » en échec : la page n'avance pas, on peut recliquer.
+        if (reset) {
+          state.page = 0; state.lastCount = 0;
+          $('results').innerHTML = '';
+          $('results-meta').textContent = 'Recherche impossible — vérifiez la connexion puis relancez.';
+          $('more').hidden = true;
+        }
+        return;
+      }
+      const total = count ?? 0;
+      if (reset) $('results').innerHTML = '';
+      state.page = page;
+      state.lastCount = total;
+      $('results-meta').textContent = `${total} profil${total > 1 ? 's' : ''}${sortByTjm() ? ' · tri par TJM : profils sans TJM masqués' : ''}`;
       $('results').insertAdjacentHTML('beforeend', (data ?? []).map(card).join(''));
-      state.lastCount = count ?? 0;
-      $('more').hidden = from + PAGE >= (count ?? 0);
+      $('more').hidden = from + PAGE >= total;
     }
 
-    const tjmOf = (p) => p.tjm_free ?? p.tarif_jour;
+    // TJM affiché : tjm_free, sinon tarif_jour (0 = non renseigné).
+    const tjmOf = (p) => p.tjm_free || p.tarif_jour || null;
     const frDate = (d) => new Date(d).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
     function dispoPill(p) {
       if (p.disponible) return '<span class="pc-dispo ok">Disponible</span>';
@@ -391,10 +491,10 @@ import Base from '../layouts/Base.astro';
     }
 
     ['f-dispo', 'f-en', 'f-stars', 'f-cdi', 'f-dg', 'f-sf', 'f-site', 'f-incv'].forEach((id) => $(id).addEventListener('change', () => search(true)));
-    let deb; $('f-q').addEventListener('input', () => { clearTimeout(deb); deb = setTimeout(() => search(true), 300); });
+    $('f-q').addEventListener('input', () => { clearTimeout(deb); deb = setTimeout(() => search(true), 300); });
     $('btn-search').addEventListener('click', () => search(true));
     $('f-q').addEventListener('keydown', (e) => { if (e.key === 'Enter') search(true); });
-    $('more').addEventListener('click', () => { state.page++; search(false); });
+    $('more').addEventListener('click', () => search(false));
     $('f-sort').addEventListener('change', () => { state.sort = $('f-sort').value; search(true); });
     $('btn-filters').addEventListener('click', () => $('filters-block').classList.toggle('open'));
     $('btn-propales').addEventListener('click', () => document.querySelector('[data-tab="propales"]').click());
@@ -418,37 +518,57 @@ import Base from '../layouts/Base.astro';
     $('results').addEventListener('click', async (e) => {
       const selBtn = e.target.closest('[data-sel]');
       if (selBtn) {
-        const id = selBtn.dataset.sel;
-        if (state.selection.has(id)) state.selection.delete(id);
-        else {
-          const name = selBtn.closest('.profile-card').querySelector('h3').textContent;
-          const job = selBtn.closest('.profile-card').querySelector('.job').textContent;
-          state.selection.set(id, { id, name, job });
-        }
-        selBtn.classList.toggle('in');
-        selBtn.textContent = selBtn.classList.contains('in') ? '✓' : '+';
-        renderSelection();
+        const cardEl = selBtn.closest('.profile-card');
+        toggleSelection({
+          id: selBtn.dataset.sel,
+          name: cardEl.querySelector('h3').textContent,
+          job: cardEl.querySelector('.job').textContent,
+        });
         return;
       }
       const cardEl = e.target.closest('.profile-card');
       if (cardEl) openProfile(cardEl.dataset.id);
     });
 
+    function toggleSelection(p) {
+      if (!$('prop-form').hidden) return; // sélection figée pendant la saisie d'une propale
+      if (state.selection.has(p.id)) state.selection.delete(p.id);
+      else state.selection.set(p.id, p);
+      renderSelection();
+    }
+
+    // Les boutons (cartes et fiche ouverte) reflètent toujours l'état de la sélection,
+    // au lieu d'être basculés à l'aveugle au clic.
+    function syncSelButtons() {
+      document.querySelectorAll('#results [data-sel]').forEach((b) => {
+        const on = state.selection.has(b.dataset.sel);
+        b.classList.toggle('in', on);
+        b.textContent = on ? '✓' : '+';
+      });
+      const d = $('drawer-sel');
+      if (d && drawerProfile) {
+        const on = state.selection.has(drawerProfile.id);
+        d.textContent = on ? '✓ Dans la sélection — retirer' : '+ Ajouter à la sélection';
+        d.classList.toggle('btn-blue', !on);
+        d.classList.toggle('btn-outline', on);
+      }
+    }
+
     function renderSelection() {
+      saveSelection();
+      syncSelButtons();
       const n = state.selection.size;
       $('sel-empty').hidden = n > 0;
       $('sel-create').hidden = n === 0;
       $('sel-create').textContent = n ? `Créer une propale (${n}) →` : 'Créer une propale →';
       $('sel-list').innerHTML = [...state.selection.values()]
-        .map((s) => `<li><span>${esc(s.name)}</span><button data-rm="${s.id}" title="Retirer">×</button></li>`).join('');
+        .map((s) => `<li><span>${esc(s.name)}</span><button data-rm="${esc(s.id)}" title="Retirer">×</button></li>`).join('');
     }
     $('sel-list').addEventListener('click', (e) => {
       const rm = e.target.closest('[data-rm]');
       if (!rm) return;
       state.selection.delete(rm.dataset.rm);
       renderSelection();
-      const btn = document.querySelector(`[data-sel="${rm.dataset.rm}"]`);
-      if (btn) { btn.classList.remove('in'); btn.textContent = '+'; }
     });
 
     // ---------- Fiche profil ----------
@@ -462,18 +582,27 @@ import Base from '../layouts/Base.astro';
       return data?.signedUrl ?? null;
     }
 
+    // Colonnes explicites : select('*') ramenait aussi cv_text (jusqu'à 50 000 caractères).
+    const PROFILE_COLS = 'id, name, job, photo_url, tjm_free, tarif_jour, disponible, dispo_from, experience, stars, fluent_english, dgitags_experience, cdi, salesforce, email, reference_html, preferences_html, formation_html, notes_html, notes_tags_html, cv_url, cv_anonyme_url, portfolio_url, portfolio_pdf_url';
+    let profileSeq = 0;
+    let drawerProfile = null;
+
     async function openProfile(id) {
-      const { data: p, error } = await sb.from('profiles').select('*').eq('id', id).single();
-      if (error) return toast('Erreur : ' + error.message);
-      p.cv_url = await docUrl(p.cv_url);
-      p.portfolio_pdf_url = await docUrl(p.portfolio_pdf_url);
+      const seq = ++profileSeq; // deux clics rapprochés : seule la dernière fiche s'affiche
+      const { data: p, error } = await sb.from('profiles').select(PROFILE_COLS).eq('id', id).single();
+      if (seq !== profileSeq) return;
+      if (error) return toastErr('Erreur : ' + error.message);
+      [p.cv_url, p.portfolio_pdf_url] = await Promise.all([docUrl(p.cv_url), docUrl(p.portfolio_pdf_url)]);
+      if (seq !== profileSeq) return;
+      drawerProfile = { id: p.id, name: p.name ?? '', job: p.job ?? '' };
       const d = $('drawer');
       d.innerHTML = `
-        <button class="close" id="drawer-close">×</button>
+        <button class="close" id="drawer-close" title="Fermer (Échap)">×</button>
         <div style="display:flex; gap:14px; align-items:center; margin-bottom:14px;">
           ${p.photo_url ? `<img src="${esc(p.photo_url)}" style="width:64px;height:64px;border-radius:12px;object-fit:cover;" alt="" />` : ''}
           <div><h2>${esc(p.name)}</h2><p class="job">${esc(p.job ?? '')}</p></div>
         </div>
+        ${$('prop-form').hidden ? '<p style="margin-bottom:16px;"><button class="btn btn-blue btn-sm" id="drawer-sel"></button></p>' : ''}
         <section><div class="kv">
           <div><span>TJM freelance</span>${p.tjm_free ? p.tjm_free + ' €/j' : '—'}</div>
           <div><span>Tarif jour (vente)</span>${p.tarif_jour ? p.tarif_jour + ' €/j' : '—'}</div>
@@ -498,17 +627,30 @@ import Base from '../layouts/Base.astro';
           ${p.portfolio_pdf_url ? `<a href="${esc(p.portfolio_pdf_url)}" target="_blank" rel="noopener">Portfolio PDF</a>` : ''}
         </div></section>`;
       d.hidden = false;
-      $('drawer-close').addEventListener('click', () => (d.hidden = true));
+      d.scrollTop = 0;
+      syncSelButtons();
     }
+    function closeProfile() {
+      profileSeq++; // annule une fiche encore en cours de chargement
+      drawerProfile = null;
+      $('drawer').hidden = true;
+    }
+    $('drawer').addEventListener('click', (e) => {
+      if (e.target.closest('#drawer-close')) closeProfile();
+      else if (e.target.closest('#drawer-sel') && drawerProfile) toggleSelection(drawerProfile);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !$('drawer').hidden) closeProfile();
+    });
 
     // ---------- Clients ----------
     async function loadClients() {
       const { data, error } = await sb.from('clients')
-        .select('id, token, name, company, contact_name, contact_email, notes, created_at, proposals(id, archived)')
-        .eq('archived', false)
+        .select('id, token, name, company, contact_name, contact_email, notes, created_at, archived, proposals(id, archived)')
         .order('name');
-      if (error) { toast('Erreur clients : ' + error.message); return; }
-      state.clients = data ?? [];
+      if (error) { toastErr('Erreur clients : ' + error.message); return; }
+      state.clients = (data ?? []).filter((c) => !c.archived);
+      state.archivedClients = (data ?? []).filter((c) => c.archived);
       renderClients();
       // Synchronise le filtre de l'onglet Propales avec la liste des clients.
       const sel = $('props-client');
@@ -520,21 +662,30 @@ import Base from '../layouts/Base.astro';
     }
 
     function renderClients() {
-      const n = state.clients.length;
-      $('clients-meta').textContent = `${n} client${n > 1 ? 's' : ''}`;
-      $('clients-list').innerHTML = state.clients.map((c) => {
+      const arch = state.showArchClients;
+      const list = arch ? state.archivedClients : state.clients;
+      const n = list.length;
+      $('clients-meta').textContent = `${n} client${n > 1 ? 's' : ''}${arch ? ` archivé${n > 1 ? 's' : ''}` : ''}`;
+      $('clients-list').innerHTML = list.map((c) => {
         const nb = (c.proposals ?? []).filter((p) => !p.archived).length;
         const contact = [c.contact_name, c.contact_email].filter(Boolean).join(' · ');
-        return `<div class="prop-row">
+        return `<div class="prop-row${arch ? ' is-archived' : ''}">
           <h3>${esc(c.name)}${c.company ? ` <span style="color:var(--ink-faint); font-weight:600;">· ${esc(c.company)}</span>` : ''}</h3>
-          <span class="meta">${nb} propale${nb > 1 ? 's' : ''}${contact ? ` · ${esc(contact)}` : ''}</span>
+          <span class="meta">${nb} propale${nb > 1 ? 's' : ''}${contact ? ` · ${esc(contact)}` : ''}${arch ? ' · archivé — espace client désactivé' : ''}</span>
+          ${arch ? `<button class="btn btn-dark btn-sm" data-crest="${c.id}">Restaurer</button>` : `
           <button class="btn btn-outline btn-sm" data-cprops="${c.id}">Propales</button>
           ${c.token ? `<button class="btn btn-dark btn-sm" data-clink="${c.token}" title="Lien privé où le client retrouve toutes ses propales">Lien espace client</button>` : ''}
           <button class="btn btn-outline btn-sm" data-cedit="${c.id}">Modifier</button>
-          <button class="btn btn-outline btn-sm" data-carch="${c.id}">Archiver</button>
+          <button class="btn btn-outline btn-sm" data-carch="${c.id}">Archiver</button>`}
         </div>`;
-      }).join('') || '<p style="color:var(--ink-faint);">Aucun client pour l\'instant — créez votre première fiche avec « + Nouveau client ».</p>';
+      }).join('') || (arch
+        ? '<p style="color:var(--ink-faint);">Aucun client archivé.</p>'
+        : '<p style="color:var(--ink-faint);">Aucun client pour l\'instant — créez votre première fiche avec « + Nouveau client ».</p>');
     }
+    $('clients-arch').addEventListener('change', () => {
+      state.showArchClients = $('clients-arch').checked;
+      loadClients();
+    });
 
     $('client-new').addEventListener('click', () => openClientForm(null));
     $('clients-list').addEventListener('click', async (e) => {
@@ -555,13 +706,28 @@ import Base from '../layouts/Base.astro';
       const ar = e.target.closest('[data-carch]');
       if (ar) {
         const c = state.clients.find((x) => x.id === ar.dataset.carch);
-        if (!confirm(`Archiver la fiche « ${c?.name} » ? Ses propales restent accessibles.`)) return;
-        const { error } = await sb.from('clients').update({ archived: true }).eq('id', ar.dataset.carch);
-        if (error) return toast('Erreur : ' + error.message);
-        toast('Client archivé');
-        loadClients().then(loadProposals);
+        if (!confirm(`Archiver la fiche « ${c?.name} » ?\n\nLe lien de son espace client cessera de fonctionner tout de suite. Ses propales restent accessibles par leur lien direct. Vous pourrez restaurer la fiche depuis « Voir les archivés ».`)) return;
+        await setArchived(ar, 'clients', ar.dataset.carch, true, 'Client archivé');
+        return;
       }
+      const rs = e.target.closest('[data-crest]');
+      if (rs) await setArchived(rs, 'clients', rs.dataset.crest, false, 'Client restauré — son espace client fonctionne à nouveau ✓');
     });
+
+    // Archivage / restauration (clients et propales) : une seule requête à la fois,
+    // et un message clair si rien n'a été modifié.
+    function setArchived(btn, table, id, archived, okMsg) {
+      return busy(btn, async () => {
+        const { data, error } = await sb.from(table).update({ archived }).eq('id', id).select('id');
+        if (error || !data?.length) {
+          toastErr(`${archived ? 'Archivage' : 'Restauration'} impossible : ${error?.message ?? 'aucune ligne modifiée'}`);
+          return;
+        }
+        toast(okMsg);
+        await loadClients();
+        await loadProposals();
+      });
+    }
 
     function openClientForm(client) {
       const f = $('client-form');
@@ -575,9 +741,9 @@ import Base from '../layouts/Base.astro';
         <div class="field"><label>Notes internes</label><textarea id="cf-notes" placeholder="Contexte, historique, points d'attention…">${esc(client?.notes ?? '')}</textarea></div>
         <button class="btn btn-dark" id="cf-save">${client ? 'Enregistrer' : 'Créer le client'}</button>
         <p id="cf-msg" style="font-size:13px; color:var(--ink-faint); margin-top:10px;"></p>`;
-      f.hidden = false;
-      $('cf-close').addEventListener('click', () => (f.hidden = true));
-      $('cf-save').addEventListener('click', async () => {
+      openForm(f);
+      $('cf-close').addEventListener('click', () => closeForm(f));
+      $('cf-save').addEventListener('click', () => busy($('cf-save'), async () => {
         const name = $('cf-name').value.trim();
         if (!name) { $('cf-msg').textContent = 'Le nom est requis.'; return; }
         const row = {
@@ -594,10 +760,10 @@ import Base from '../layouts/Base.astro';
           ({ error } = await sb.from('clients').insert({ ...row, created_by: user?.email }));
         }
         if (error) { $('cf-msg').textContent = 'Erreur : ' + error.message; return; }
-        f.hidden = true;
+        closeForm(f);
         toast(client ? 'Client mis à jour ✓' : 'Client créé ✓');
         loadClients().then(loadProposals);
-      });
+      }));
     }
 
     // ---------- Propales ----------
@@ -615,12 +781,18 @@ import Base from '../layouts/Base.astro';
       state.propFilter = $('props-client').value;
       loadProposals();
     });
+    $('props-arch').addEventListener('change', () => {
+      state.showArchProps = $('props-arch').checked;
+      loadProposals();
+    });
 
-    $('sel-create').addEventListener('click', async () => {
+    $('sel-create').addEventListener('click', () => busy($('sel-create'), async () => {
       const f = $('prop-form');
       const ids = [...state.selection.keys()];
-      const { data: tjms } = await sb.from('profiles').select('id, tjm_free, tarif_jour').in('id', ids);
-      const tjmMap = new Map((tjms ?? []).map((p) => [p.id, p.tjm_free ?? p.tarif_jour ?? null]));
+      if (!ids.length) return;
+      const { data: tjms, error: tjmErr } = await sb.from('profiles').select('id, tjm_free, tarif_jour').in('id', ids);
+      if (tjmErr) toastErr('TJM des profils non chargés : ' + tjmErr.message);
+      const tjmMap = new Map((tjms ?? []).map((p) => [p.id, tjmOf(p)]));
       f.innerHTML = `
         <button class="close" id="prop-close">×</button>
         <h2 style="margin-bottom:16px;">Nouvelle propale</h2>
@@ -654,58 +826,111 @@ import Base from '../layouts/Base.astro';
           </div>
         </div>
         <h4 style="margin: 10px 0;">Profils &amp; rôles — TJM client = TJM freelance + marge</h4>
-        ${[...state.selection.values()].map((s) => `
-          <div class="field" data-np-item="${s.id}" data-np-base="${tjmMap.get(s.id) ?? ''}">
-            <label>${esc(s.name)}${tjmMap.get(s.id) ? ` <span style="color:var(--ink-faint); font-weight:600;">(TJM freelance : ${tjmMap.get(s.id)} €)</span>` : ''} — rôle, TJM client &amp; nombre de jours</label>
+        ${[...state.selection.values()].map((s, i) => `
+          <div class="field" data-np-item="${esc(s.id)}" data-np-base="${tjmMap.get(s.id) ?? ''}">
+            <label for="np-role-${i}"><button type="button" class="np-open" data-np-open="${esc(s.id)}" title="Ouvrir la fiche du profil">${esc(s.name)}</button>${tjmMap.get(s.id) ? ` <span style="color:var(--ink-faint); font-weight:600;">(TJM freelance : ${tjmMap.get(s.id)} €)</span>` : ''} — rôle, TJM client &amp; nombre de jours</label>
             <div style="display:flex; gap:8px;">
-              <input class="np-role" placeholder="${esc(s.job || 'Rôle')}" style="flex:1;" />
-              <input class="np-tjm" type="number" placeholder="TJM €" style="width:100px;" />
-              <input class="np-days" type="number" value="10" min="0.5" max="365" step="0.5" title="Nombre de jours sur la mission" style="width:80px;" />
+              <input class="np-role" id="np-role-${i}" placeholder="${esc(s.job || 'Rôle (facultatif)')}" style="flex:1;" />
+              <input class="np-tjm" type="number" min="0" step="5" placeholder="TJM €" title="TJM facturé au client — vide = « sur devis » côté client" style="width:100px;" />
+              <input class="np-days" type="number" value="10" min="0.5" max="365" step="0.5" title="Nombre de jours sur la mission (0,5 à 365)" style="width:80px;" />
             </div>
           </div>`).join('')}
+        <p id="np-warn" class="np-warn" hidden></p>
         <button class="btn btn-dark" id="np-save">Créer la propale</button>
         <p id="np-msg" style="font-size:13px; color:var(--ink-faint); margin-top:10px;"></p>`;
-      f.hidden = false;
-      $('prop-close').addEventListener('click', () => (f.hidden = true));
-      $('np-save').addEventListener('click', createProposal);
+      openForm(f);
+      f.scrollTop = 0;
+      $('prop-close').addEventListener('click', () => closeForm(f));
+      $('np-save').addEventListener('click', () => busy($('np-save'), createProposal));
+      // La fiche d'un profil s'ouvre par-dessus le formulaire (sans toucher à la sélection).
+      f.querySelectorAll('[data-np-open]').forEach((b) => b.addEventListener('click', () => openProfile(b.dataset.npOpen)));
       // Création rapide d'un client sans quitter le formulaire de propale.
       $('np-client-new').addEventListener('click', () => {
         const inline = $('np-client-inline');
         inline.style.display = inline.style.display === 'none' ? 'flex' : 'none';
         if (inline.style.display === 'flex') $('np-client-name').focus();
       });
-      $('np-client-create').addEventListener('click', async () => {
+      $('np-client-create').addEventListener('click', () => busy($('np-client-create'), async () => {
         const name = $('np-client-name').value.trim();
         if (!name) return;
         const { data: { user } } = await sb.auth.getUser();
         const { data: c, error } = await sb.from('clients').insert({ name, created_by: user?.email }).select().single();
-        if (error) return toast('Erreur : ' + error.message);
+        if (error) return toastErr('Erreur : ' + error.message);
         state.clients.push({ ...c, proposals: [] });
         state.clients.sort((a, b) => a.name.localeCompare(b.name, 'fr'));
         $('np-client').insertAdjacentHTML('beforeend', `<option value="${c.id}">${esc(c.name)}</option>`);
         $('np-client').value = c.id;
+        $('np-client-name').value = '';
         $('np-client-inline').style.display = 'none';
         toast('Client créé ✓');
         loadClients();
-      });
-      // TJM client auto-calculé depuis la marge ; la saisie manuelle fige le champ.
+      }));
+      // Un TJM vide n'est pas bloquant mais doit se voir : côté client la ligne
+      // passe « sur devis » et sort du budget estimé.
+      const warnTjm = () => {
+        const names = [];
+        document.querySelectorAll('[data-np-item]').forEach((el) => {
+          const missing = !(Number(el.querySelector('.np-tjm').value) > 0);
+          el.classList.toggle('np-missing', missing);
+          if (missing) names.push(state.selection.get(el.dataset.npItem)?.name ?? '?');
+        });
+        const w = $('np-warn');
+        w.hidden = names.length === 0;
+        w.textContent = names.length
+          ? `⚠ TJM client manquant pour ${names.join(', ')} : côté client, ${names.length > 1 ? 'ces profils seront affichés' : 'ce profil sera affiché'} « sur devis » et ne comptera pas dans le budget estimé.`
+          : '';
+      };
+      // TJM client auto-calculé depuis la marge ; la saisie manuelle fige le champ,
+      // le vider le rend à nouveau au calcul automatique.
       const applyMarge = () => {
-        const m = Number($('np-marge').value) || 0;
+        const m = Math.max(0, Number($('np-marge').value) || 0);
         document.querySelectorAll('[data-np-item]').forEach((el) => {
           const base = Number(el.dataset.npBase);
           const input = el.querySelector('.np-tjm');
-          if (base && !input.dataset.dirty) input.value = Math.round(base * (1 + m / 100) / 5) * 5;
+          if (base > 0 && !input.dataset.dirty) input.value = tjmClient(base, m);
         });
+        warnTjm();
       };
       $('np-marge').addEventListener('input', applyMarge);
-      document.querySelectorAll('.np-tjm').forEach((i) => i.addEventListener('input', () => { i.dataset.dirty = '1'; }));
+      f.querySelectorAll('.np-tjm').forEach((i) => i.addEventListener('input', () => {
+        if (i.value.trim() === '') delete i.dataset.dirty;
+        else i.dataset.dirty = '1';
+        warnTjm();
+      }));
+      // Jours : la valeur affichée est celle qui sera enregistrée (0,5 à 365).
+      f.querySelectorAll('.np-days').forEach((i) => i.addEventListener('change', () => { i.value = clampDays(i.value) ?? 10; }));
       applyMarge();
-    });
+    }));
 
     async function createProposal() {
+      const msg = $('np-msg');
       const title = $('np-title').value.trim();
-      if (!title) { $('np-msg').textContent = 'Le titre est requis.'; return; }
+      if (!title) { msg.textContent = 'Le titre est requis.'; return; }
+      const rows = [...document.querySelectorAll('[data-np-item]')].map((el, i) => {
+        const sel = state.selection.get(el.dataset.npItem);
+        const tjm = Number(el.querySelector('.np-tjm').value);
+        return {
+          name: sel?.name ?? '?',
+          item: {
+            profile_id: el.dataset.npItem,
+            // Rôle vide : le métier du profil, sinon rien (jamais le texte indicatif du champ).
+            role_label: el.querySelector('.np-role').value.trim() || sel?.job?.trim() || null,
+            tjm: tjm > 0 ? tjm : null,
+            // days_week stocke désormais le nombre TOTAL de jours du consultant sur la mission.
+            days_week: clampDays(el.querySelector('.np-days').value) ?? 10,
+            sort: i,
+          },
+        };
+      });
+      if (!rows.length) { msg.textContent = 'Aucun profil dans la sélection.'; return; }
+      const missing = rows.filter((r) => r.item.tjm === null).map((r) => r.name);
+      if (missing.length && !confirm(`TJM client manquant pour : ${missing.join(', ')}.\n\nCôté client, ${missing.length > 1 ? 'ces profils seront affichés' : 'ce profil sera affiché'} « sur devis » et ne comptera pas dans le budget estimé.\n\nCréer la propale quand même ?`)) {
+        msg.textContent = 'Création annulée — complétez les TJM manquants.';
+        return;
+      }
+      msg.textContent = 'Création en cours…';
       const { data: { user } } = await sb.auth.getUser();
+      const pw = $('np-password').value.trim();
       const { data: prop, error } = await sb.from('proposals')
         .insert({
           title,
@@ -713,50 +938,58 @@ import Base from '../layouts/Base.astro';
           intro: $('np-intro').value.trim() || null,
           created_by: user?.email,
           start_date: $('np-start').value || null,
-          password: $('np-password').value.trim() || null,
+          password: pw || null,
         })
         .select().single();
-      if (error) { $('np-msg').textContent = 'Erreur : ' + error.message; return; }
-      const items = [...document.querySelectorAll('[data-np-item]')].map((el, i) => ({
-        proposal_id: prop.id,
-        profile_id: el.dataset.npItem,
-        role_label: el.querySelector('.np-role').value.trim() || el.querySelector('.np-role').placeholder,
-        tjm: Number(el.querySelector('.np-tjm').value) || null,
-        // days_week stocke désormais le nombre TOTAL de jours du consultant sur la mission.
-        days_week: Number(el.querySelector('.np-days').value) || 10,
-        sort: i,
-      }));
-      const { error: e2 } = await sb.from('proposal_items').insert(items);
-      if (e2) { $('np-msg').textContent = 'Erreur : ' + e2.message; return; }
-      $('prop-form').hidden = true;
+      if (error) { msg.textContent = 'Erreur : ' + error.message; return; }
+      const { error: e2 } = await sb.from('proposal_items').insert(rows.map((r) => ({ ...r.item, proposal_id: prop.id })));
+      if (e2) {
+        // Pas de transaction côté navigateur : on retire la propale restée sans profils.
+        const { data: del, error: e3 } = await sb.from('proposals').delete().eq('id', prop.id).select('id');
+        msg.textContent = 'Erreur à l\'enregistrement des profils : ' + e2.message
+          + (e3 || !del?.length
+            ? ` — une propale vide « ${title} » est restée en base : archivez-la depuis l'onglet Propales avant de réessayer.`
+            : ' — rien n\'a été créé, vous pouvez réessayer.');
+        return;
+      }
+      closeForm($('prop-form'));
       state.selection.clear();
-      renderSelection();
-      const pw = $('np-password').value.trim();
+      renderSelection(); // remet aussi les boutons ✓ des cartes à « + »
+      // La nouvelle propale doit être visible : filtres de l'onglet Propales remis à zéro.
+      state.propFilter = ''; $('props-client').value = '';
+      state.showArchProps = false; $('props-arch').checked = false;
       const share = `${location.origin}/p/${prop.token}${pw ? ` — mot de passe : ${pw}` : ''}`;
       try { await navigator.clipboard.writeText(share); toast(pw ? 'Propale créée — lien + mot de passe copiés ✓' : 'Propale créée — lien copié ✓'); }
       catch { toast('Propale créée'); }
-      loadProposals();
-      document.querySelector('[data-tab="propales"]').click();
+      document.querySelector('[data-tab="propales"]').click(); // recharge la liste
+      loadClients(); // compteurs de propales par client
     }
 
     const propRow = (p) => `
-        <div class="prop-row">
+        <div class="prop-row${state.showArchProps ? ' is-archived' : ''}">
           <h3>${esc(p.title)}</h3>
-          <span class="meta">${p.proposal_items.length} profil${p.proposal_items.length > 1 ? 's' : ''} · ${new Date(p.created_at).toLocaleDateString('fr-FR')} · ${esc(p.created_by ?? '')} · ${p.password ? `🔒 ${esc(p.password)}` : 'accès libre'}</span>
+          <span class="meta">${p.proposal_items.length} profil${p.proposal_items.length > 1 ? 's' : ''} · ${new Date(p.created_at).toLocaleDateString('fr-FR')} · ${esc(p.created_by ?? '')} · ${state.showArchProps ? 'archivée — lien client désactivé' : (p.password ? `🔒 ${esc(p.password)}` : 'accès libre')}</span>
+          ${state.showArchProps ? `<button class="btn btn-dark btn-sm" data-rest="${p.id}">Restaurer</button>` : `
           <a class="btn btn-outline btn-sm" href="/p/${p.token}" target="_blank" rel="noopener">Voir</a>
           <button class="btn btn-dark btn-sm" data-copy="${p.token}" data-pw="${esc(p.password ?? '')}">Copier le lien</button>
-          <button class="btn btn-outline btn-sm" data-arch="${p.id}">Archiver</button>
+          <button class="btn btn-outline btn-sm" data-arch="${p.id}">Archiver</button>`}
         </div>`;
 
+    let propSeq = 0;
     async function loadProposals() {
+      const seq = ++propSeq;
       let q = sb.from('proposals')
         .select('id, token, title, client_name, client_id, created_at, created_by, password, proposal_items(id), clients(name)')
-        .eq('archived', false)
+        .eq('archived', state.showArchProps)
         .order('created_at', { ascending: false });
       if (state.propFilter === 'none') q = q.is('client_id', null);
       else if (state.propFilter) q = q.eq('client_id', state.propFilter);
       const { data, error } = await q;
-      if (error) return;
+      if (seq !== propSeq) return;
+      if (error) {
+        $('props-list').innerHTML = `<p style="color:var(--ink-faint);">Propales non chargées : ${esc(error.message)}</p>`;
+        return;
+      }
       // Propales groupées par client (anciennes propales : client_name texte libre).
       const groups = new Map();
       (data ?? []).forEach((p) => {
@@ -769,9 +1002,11 @@ import Base from '../layouts/Base.astro';
       $('props-list').innerHTML = labels.map((label) =>
         `<h2 class="props-group">${esc(label)} <span>· ${groups.get(label).length}</span></h2>`
         + groups.get(label).map(propRow).join('')
-      ).join('') || (state.propFilter
-        ? '<p style="color:var(--ink-faint);">Aucune propale pour ce client — composez une sélection depuis l\'onglet Recherche.</p>'
-        : '<p style="color:var(--ink-faint);">Aucune propale pour l\'instant — composez une sélection depuis l\'onglet Recherche.</p>');
+      ).join('') || (state.showArchProps
+        ? '<p style="color:var(--ink-faint);">Aucune propale archivée.</p>'
+        : state.propFilter
+          ? '<p style="color:var(--ink-faint);">Aucune propale pour ce client — composez une sélection depuis l\'onglet Recherche.</p>'
+          : '<p style="color:var(--ink-faint);">Aucune propale pour l\'instant — composez une sélection depuis l\'onglet Recherche.</p>');
     }
 
     $('props-list').addEventListener('click', async (e) => {
@@ -783,9 +1018,13 @@ import Base from '../layouts/Base.astro';
       }
       const ar = e.target.closest('[data-arch]');
       if (ar) {
-        await sb.from('proposals').update({ archived: true }).eq('id', ar.dataset.arch);
-        loadProposals();
+        const title = ar.closest('.prop-row').querySelector('h3').textContent;
+        if (!confirm(`Archiver la propale « ${title} » ?\n\nLe lien envoyé au client cessera de fonctionner tout de suite. Vous pourrez la restaurer depuis « Voir les archivées ».`)) return;
+        await setArchived(ar, 'proposals', ar.dataset.arch, true, 'Propale archivée — lien client désactivé');
+        return;
       }
+      const rs = e.target.closest('[data-rest]');
+      if (rs) await setArchived(rs, 'proposals', rs.dataset.rest, false, 'Propale restaurée — le lien client fonctionne à nouveau ✓');
     });
 
     init();

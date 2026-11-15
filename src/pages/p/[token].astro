@@ -95,24 +95,41 @@ const refLines = (html?: string) => {
   return lines.every((l) => l.length <= 45) ? { chips: lines } : { html };
 };
 
-const allTjm = items.length > 0 && items.every((it) => Number(it.tjm) > 0);
 const dateFmt = proposal
   ? new Date(proposal.created_at).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
   : '';
 
 const defaultStart = proposal?.start_date ?? new Date(Date.now() + 14 * 864e5).toISOString().slice(0, 10);
-const euro = (n: number) => n.toLocaleString('fr-FR');
+const euro = (n: number) => n.toLocaleString('fr-FR', { maximumFractionDigits: 2 });
+// Jours : mêmes bornes que l'outil interne (0,5 à 365), décimales à la française.
+const clampDays = (v: unknown) => {
+  const n = Number(v);
+  return Number.isFinite(n) && n > 0 ? Math.min(365, Math.max(0.5, Math.round(n * 100) / 100)) : 10;
+};
+const jours = (n: number) => `${euro(n)} jour${n >= 2 ? 's' : ''}`;
 
 // Données du configurateur (aucun nom : « Consultant N »).
 // days = nombre TOTAL de jours du consultant sur la mission.
+// tjm = 0 → ligne « sur devis » : affichée, mais hors du budget estimé.
 const cfgItems = items.map((it, i) => ({
   n: i + 1,
-  role: it.role_label ?? it.profiles.job ?? 'Consultant',
-  tjm: Number(it.tjm) || 0,
-  days: Number(it.days_week) || 10,
+  role: it.role_label || it.profiles?.job || '',
+  tjm: Number(it.tjm) > 0 ? Number(it.tjm) : 0,
+  days: clampDays(it.days_week),
 }));
-const totalBudget = cfgItems.reduce((s, c) => s + c.tjm * c.days, 0);
+const priced = cfgItems.filter((c) => c.tjm > 0);
+const quoted = cfgItems.length - priced.length;
+const anyTjm = priced.length > 0;
+const totalBudget = priced.reduce((s, c) => s + c.tjm * c.days, 0);
 const totalDays = cfgItems.reduce((s, c) => s + c.days, 0);
+const pricedDays = priced.reduce((s, c) => s + c.days, 0);
+// Mêmes libellés que le script de recalcul en bas de page.
+const totalLabel = anyTjm ? `${euro(totalBudget)} € HT` : 'Sur devis';
+const subLabel = !anyTjm
+  ? `${jours(totalDays)} de mission — chiffrage sur devis`
+  : quoted
+    ? `pour ${jours(pricedDays)} chiffré${pricedDays >= 2 ? 's' : ''} · ${quoted} profil${quoted > 1 ? 's' : ''} sur devis en sus`
+    : `pour ${jours(totalDays)} de mission`;
 ---
 <!DOCTYPE html>
 <html lang="fr">
@@ -190,7 +207,9 @@ const totalDays = cfgItems.reduce((s, c) => s + c.days, 0);
                 <span class="p3-ico">📅</span>
                 <div>
                   <h2>1. Votre mission, à votre mesure</h2>
-                  <p>Ajustez le démarrage et la charge de chaque consultant : le budget se recalcule instantanément.</p>
+                  <p>{anyTjm
+                    ? `Ajustez le démarrage et la charge de chaque consultant : le budget se recalcule instantanément.${quoted ? ' Les profils « sur devis » sont chiffrés à part.' : ''}`
+                    : 'Ajustez le démarrage et la charge de chaque consultant — le chiffrage vous est communiqué sur devis.'}</p>
                 </div>
               </div>
               <div class="prop3-config-fields">
@@ -198,7 +217,7 @@ const totalDays = cfgItems.reduce((s, c) => s + c.days, 0);
                   <input type="date" id="cfg-start" value={defaultStart} />
                 </label>
                 <label>Charge totale proposée
-                  <span class="cfg-weeks-wrap"><strong id="cfg-days-total" style="font-size:18px;">{totalDays}</strong> jours</span>
+                  <span class="cfg-weeks-wrap"><strong id="cfg-days-total" style="font-size:18px;">{euro(totalDays)}</strong> jours</span>
                 </label>
               </div>
             </section>
@@ -208,12 +227,13 @@ const totalDays = cfgItems.reduce((s, c) => s + c.days, 0);
                 <span class="p3-ico">👥</span>
                 <div>
                   <h2>2. Talents sélectionnés</h2>
-                  <p>{items.length} profil{items.length > 1 ? 's' : ''} pour ce projet{allTjm ? ' · Vous pouvez ajuster le nombre de jours ou écarter un profil.' : ''}</p>
+                  <p>{items.length} profil{items.length > 1 ? 's' : ''} pour ce projet · Vous pouvez ajuster le nombre de jours ou écarter un profil.</p>
                 </div>
               </div>
               <div class="prop3-rows">
                 {items.map((it, i) => {
                   const p = it.profiles;
+                  const c = cfgItems[i];
                   const refs = refLines(p.reference_html);
                   const refChips = refs && 'chips' in refs ? refs.chips : [];
                   return (
@@ -227,7 +247,7 @@ const totalDays = cfgItems.reduce((s, c) => s + c.days, 0);
                       </span>
                       <div class="p3-id">
                         <strong>Consultant {i + 1}</strong>
-                        <span class="p3-role">{it.role_label ?? p.job}</span>
+                        <span class="p3-role">{c.role}</span>
                         <span class="p3-badges">
                           {p.experience && <span class="badge">{p.experience}</span>}
                           {p.stars > 0 && p.stars <= 5 && <span class="badge star">★ {p.stars}</span>}
@@ -241,20 +261,18 @@ const totalDays = cfgItems.reduce((s, c) => s + c.days, 0);
                           </span>
                         )}
                       </div>
-                      {allTjm && (
-                        <>
-                          <div class="p3-cell">
-                            <label>TJM</label>
-                            <span class="p3-tjm">{euro(Number(it.tjm))} €</span>
-                          </div>
-                          <div class="p3-cell">
-                            <label for={`days-${i}`}>Jours</label>
-                            <input type="number" id={`days-${i}`} class="p3-days" value={Number(it.days_week) || 10} min="0.5" max="365" step="0.5" />
-                          </div>
-                          <strong class="p3-line" data-line={i}>{euro((Number(it.tjm) || 0) * (Number(it.days_week) || 10))} €</strong>
-                          <button type="button" class="p3-x" data-x={i} title="Écarter ce profil de l'estimation">×</button>
-                        </>
-                      )}
+                      <div class="p3-cell">
+                        <label>TJM</label>
+                        {c.tjm > 0
+                          ? <span class="p3-tjm">{euro(c.tjm)} €</span>
+                          : <span class="p3-tjm p3-quote">sur devis</span>}
+                      </div>
+                      <div class="p3-cell">
+                        <label for={`days-${i}`}>Jours</label>
+                        <input type="number" id={`days-${i}`} class="p3-days" value={c.days} min="0.5" max="365" step="0.5" />
+                      </div>
+                      <strong class={`p3-line${c.tjm > 0 ? '' : ' p3-quote'}`} data-line={i}>{c.tjm > 0 ? `${euro(c.tjm * c.days)} €` : 'sur devis'}</strong>
+                      <button type="button" class="p3-x" data-x={i} title="Écarter ce profil de l'estimation">×</button>
                     </div>
                   );
                 })}
@@ -286,14 +304,16 @@ const totalDays = cfgItems.reduce((s, c) => s + c.days, 0);
                         </span>
                         <div>
                           <h2>Consultant {i + 1}</h2>
-                          <p class="role">{it.role_label ?? p.job}</p>
+                          <p class="role">{cfgItems[i].role}</p>
                           <div class="badges">
                             {p.experience && <span class="badge">{p.experience}</span>}
                             {p.stars > 0 && p.stars <= 5 && <span class="badge star">★ {p.stars} — note du Hub</span>}
                             {p.fluent_english && <span class="badge">Anglais courant</span>}
                           </div>
                         </div>
-                        {it.tjm && <div class="prop2-tjm"><strong>{Number(it.tjm).toLocaleString('fr-FR')} €</strong><span>par jour</span></div>}
+                        {cfgItems[i].tjm > 0
+                          ? <div class="prop2-tjm"><strong>{euro(cfgItems[i].tjm)} €</strong><span>par jour</span></div>
+                          : anyTjm && <div class="prop2-tjm"><strong class="p3-quote">Sur devis</strong></div>}
                       </div>
                       {it.note && <p class="prop2-note">{it.note}</p>}
                       {refs && (
@@ -317,14 +337,14 @@ const totalDays = cfgItems.reduce((s, c) => s + c.days, 0);
           </div>
 
           <aside class="prop3-side">
-            {allTjm && totalBudget > 0 && (
+            {cfgItems.length > 0 && (
               <div class="prop3-budget">
                 <div class="p3b-head"><span class="p3b-ico">🧮</span><div><strong>Budget estimé</strong><small>Mise à jour en temps réel</small></div></div>
-                <strong class="p3b-total" id="cfg-total">{euro(totalBudget)} € HT</strong>
-                <span class="p3b-sub" id="cfg-total-sub">pour {totalDays} jours de mission</span>
+                <strong class="p3b-total" id="cfg-total">{totalLabel}</strong>
+                <span class="p3b-sub" id="cfg-total-sub">{subLabel}</span>
                 <ul class="p3b-lines" id="cfg-lines">
                   {cfgItems.map((c, i) => (
-                    <li data-bline={i}><span>Consultant {c.n} · {c.role}</span><strong>{euro(c.tjm * c.days)} €</strong></li>
+                    <li data-bline={i}><span>Consultant {c.n}{c.role && ` · ${c.role}`}</span><strong>{c.tjm > 0 ? `${euro(c.tjm * c.days)} €` : 'sur devis'}</strong></li>
                   ))}
                 </ul>
                 <p class="p3b-note">ⓘ Estimation indicative, basée sur les rythmes proposés. Le périmètre exact est affiné ensemble avant démarrage.</p>
@@ -352,45 +372,89 @@ const totalDays = cfgItems.reduce((s, c) => s + c.days, 0);
       <script define:vars={{ cfgItems, title: proposal.title }}>
         const start = document.getElementById('cfg-start');
         if (start && document.getElementById('cfg-total')) {
-          const euro = (n) => n.toLocaleString('fr-FR');
+          const euro = (n) => n.toLocaleString('fr-FR', { maximumFractionDigits: 2 });
+          const jours = (n) => euro(n) + ' jour' + (n >= 2 ? 's' : '');
+          // Mêmes bornes que l'outil interne : 0,5 à 365 jours. null = saisie inexploitable.
+          const parseDays = (v) => {
+            const n = Number(String(v).replace(',', '.'));
+            if (!Number.isFinite(n) || n <= 0) return null;
+            return Math.min(365, Math.max(0.5, Math.round(n * 100) / 100));
+          };
           const state = cfgItems.map((c) => ({ ...c, on: true }));
 
           const update = () => {
             let total = 0;
             let days = 0;
+            let pricedDays = 0;
+            let priced = 0;
+            let quoted = 0;
             state.forEach((c, i) => {
-              const line = c.on ? c.tjm * c.days : 0;
-              total += line;
-              days += c.on ? c.days : 0;
+              const line = c.tjm * c.days;
+              if (c.on) {
+                days += c.days;
+                if (c.tjm > 0) { total += line; pricedDays += c.days; priced++; } else quoted++;
+              }
+              const lineText = c.tjm > 0 ? euro(line) + ' €' : 'sur devis';
               const lineEl = document.querySelector(`[data-line="${i}"]`);
-              if (lineEl) lineEl.textContent = euro(c.tjm * c.days) + ' €';
+              if (lineEl) lineEl.textContent = lineText;
               const bline = document.querySelector(`[data-bline="${i}"]`);
               if (bline) {
                 bline.classList.toggle('off', !c.on);
-                bline.querySelector('strong').textContent = c.on ? euro(line) + ' €' : 'écarté';
+                bline.querySelector('strong').textContent = c.on ? lineText : 'écarté';
               }
               const row = document.querySelector(`[data-row="${i}"]`);
               if (row) row.classList.toggle('off', !c.on);
             });
-            document.getElementById('cfg-total').textContent = euro(total) + ' € HT';
-            document.getElementById('cfg-total-sub').textContent = 'pour ' + days + ' jour' + (days > 1 ? 's' : '') + ' de mission';
+            // Budget = lignes chiffrées uniquement ; les lignes « sur devis » sont annoncées à part.
+            const totalText = priced ? euro(total) + ' € HT' : (quoted ? 'Sur devis' : '0 € HT');
+            const subText = !priced
+              ? jours(days) + ' de mission' + (quoted ? ' — chiffrage sur devis' : '')
+              : quoted
+                ? 'pour ' + jours(pricedDays) + ' chiffré' + (pricedDays >= 2 ? 's' : '') + ' · ' + quoted + ' profil' + (quoted > 1 ? 's' : '') + ' sur devis en sus'
+                : 'pour ' + jours(days) + ' de mission';
+            document.getElementById('cfg-total').textContent = totalText;
+            document.getElementById('cfg-total-sub').textContent = subText;
             const daysTotal = document.getElementById('cfg-days-total');
-            if (daysTotal) daysTotal.textContent = days;
+            if (daysTotal) daysTotal.textContent = euro(days);
 
             const d = start.value
               ? new Date(start.value).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
               : 'à définir';
-            const picked = state.filter((c) => c.on);
-            const lines = picked.map((c) => '• Consultant ' + c.n + ' (' + c.role + ') : ' + c.days + ' jour' + (c.days > 1 ? 's' : '') + ' × ' + euro(c.tjm) + ' €').join('%0D%0A');
-            const body = 'Bonjour,%0D%0A%0D%0ANous souhaitons avancer sur votre proposition « ' + encodeURIComponent(title) + ' » avec les options suivantes :%0D%0A%0D%0A• Démarrage souhaité : ' + encodeURIComponent(d) + '%0D%0A' + lines + '%0D%0A• Charge totale : ' + days + ' jours%0D%0A• Budget estimé : ' + encodeURIComponent(euro(total)) + ' € HT%0D%0A%0D%0A';
-            document.getElementById('cfg-cta').href = 'mailto:hello@digitags.work?subject=' + encodeURIComponent('Proposition « ' + title + ' » — nos options') + '&body=' + body;
+            // Corps du mail en texte clair, encodé UNE seule fois à la fin : un rôle
+            // contenant « & » ou « # » ne tronque plus le message.
+            const lines = state.filter((c) => c.on).map((c) =>
+              '• Consultant ' + c.n + (c.role ? ' (' + c.role + ')' : '') + ' : ' + jours(c.days)
+              + (c.tjm > 0 ? ' × ' + euro(c.tjm) + ' €' : ' — sur devis'));
+            const body = [
+              'Bonjour,',
+              '',
+              'Nous souhaitons avancer sur votre proposition « ' + title + ' » avec les options suivantes :',
+              '',
+              '• Démarrage souhaité : ' + d,
+              ...lines,
+              '• Charge totale : ' + jours(days),
+              '• Budget estimé : ' + totalText + (priced && quoted ? ' (hors ' + quoted + ' profil' + (quoted > 1 ? 's' : '') + ' sur devis)' : ''),
+              '',
+              '',
+            ].join('\r\n');
+            document.getElementById('cfg-cta').href = 'mailto:hello@digitags.work?subject='
+              + encodeURIComponent('Proposition « ' + title + ' » — nos options')
+              + '&body=' + encodeURIComponent(body);
           };
 
           start.addEventListener('input', update);
-          document.querySelectorAll('.p3-days').forEach((inp, i) => inp.addEventListener('input', () => {
-            state[i].days = Math.max(0.5, Math.min(365, Number(inp.value) || 0));
-            update();
-          }));
+          document.querySelectorAll('.p3-days').forEach((inp, i) => {
+            // Pendant la frappe : on ne recalcule que sur une valeur exploitable.
+            inp.addEventListener('input', () => {
+              const n = parseDays(inp.value);
+              if (n === null) return;
+              if (n < Number(inp.value)) inp.value = n; // au-delà de 365 : ramené tout de suite
+              state[i].days = n;
+              update();
+            });
+            // En sortie de champ : la valeur affichée est toujours celle du calcul.
+            inp.addEventListener('change', () => { inp.value = state[i].days; });
+          });
           document.querySelectorAll('[data-x]').forEach((btn) => btn.addEventListener('click', () => {
             const i = Number(btn.dataset.x);
             state[i].on = !state[i].on;
