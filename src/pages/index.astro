@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import HowItWorks from '../components/HowItWorks.astro';
 import Testimonials from '../components/Testimonials.astro';
 import CtaBanner from '../components/CtaBanner.astro';
-import { references, nbProfils, totalProfils } from '../data/references';
+import { references, nbProfils } from '../data/references';
 
 // Quatre références mises en avant sur la home (secteurs variés).
 const VEDETTES = ['Crédit Agricole · Digital Factory', 'Roger Vivier', 'Allianz Trade', 'Kantar Media'];
@@ -190,7 +190,7 @@ const expertises = [
     <div class="container">
       <p class="eyebrow section-eyebrow">Références</p>
       <h2 class="section-title">Ils nous ont confié la recherche de leurs experts.</h2>
-      <p class="home-refs-lead"><strong>{totalProfils} experts trouvés</strong> pour <strong>{references.length} clients</strong> depuis 2018, de la mission de quelques semaines à l'accompagnement sur plusieurs années.</p>
+      <p class="home-refs-lead">Quelques exemples parmi les missions qu'on nous a confiées depuis 2018, de quelques semaines à plusieurs années.</p>
       <div class="home-refs-grid">
         {vedettes.map((r) => {
           const n = nbProfils(r);
@@ -200,7 +200,7 @@ const expertises = [
               <h3>{r.nom ?? r.label}</h3>
               <p class="ref-need">{r.besoin}</p>
               <p class="ref-roles">{r.resume ?? r.profils[0].role}</p>
-              <p class="ref-found"><span aria-hidden="true">✓</span> {n} {n > 1 ? 'experts trouvés' : 'expert trouvé'}</p>
+              <p class="ref-found"><span aria-hidden="true">✓</span> {n > 1 ? 'Experts trouvés' : 'Expert trouvé'}</p>
             </article>
           );
         })}

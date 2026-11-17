@@ -2553,11 +2553,6 @@ html { scroll-padding-top: 92px; scroll-behavior: smooth; }
 
 /* ============ Références clients (/cas-clients) ============ */
 .blog-card h3 { font-size: 17px; font-weight: 700; line-height: 1.35; }
-.ref-stats { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 40px; }
-.ref-stats li { font-size: 13.5px; color: var(--ink-soft); }
-.ref-stats strong { display: block; font-size: 30px; font-weight: 800; letter-spacing: -.02em; color: var(--blue); line-height: 1.1; }
-.ref-stats li:nth-child(2) strong { color: var(--red); }
-.ref-stats li:nth-child(3) strong { color: var(--navy); }
 .ref-filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 28px; }
 .ref-filter {
   font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer;

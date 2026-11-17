@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 import { byOrder } from '../lib/sort';
-import { references, EXPERTISES, nbProfils, totalProfils } from '../data/references';
+import { references, EXPERTISES, nbProfils } from '../data/references';
 
 const cas = (await getCollection('casClients', ({ data }) => !data.draft))
   .sort(byOrder);
@@ -12,18 +12,13 @@ const VISIBLES = 6;
 ---
 <Base
   title="Références clients : les experts trouvés depuis 2018 | digitags.work"
-  description={`Crédit Agricole, Allianz Trade, Roger Vivier, Kantar, Bouygues Telecom… ${totalProfils} experts freelances trouvés pour ${references.length} clients depuis 2018 : ce qu'ils cherchaient, le profil trouvé, la durée.`}
+  description="Crédit Agricole, Allianz Trade, Roger Vivier, Kantar, Bouygues Telecom… Quelques exemples d'experts freelances trouvés pour nos clients depuis 2018 : ce qu'ils cherchaient, le profil trouvé, la durée."
 >
   <section class="page-hero">
     <div class="container">
       <p class="eyebrow">Références</p>
       <h1>Le bon expert, trouvé pour chaque besoin.</h1>
-      <p class="lead">Notre mission&nbsp;: trouver le freelance qui correspond exactement à ce que nos clients cherchent. Voici ce qu'ils nous ont demandé depuis 2018, et les profils que nous leur avons trouvés.</p>
-      <ul class="ref-stats">
-        <li><strong>{totalProfils}</strong> experts trouvés</li>
-        <li><strong>{references.length}</strong> clients</li>
-        <li><strong>2018</strong> première mission</li>
-      </ul>
+      <p class="lead">Notre mission&nbsp;: trouver le freelance qui correspond exactement à ce que nos clients cherchent. Quelques exemples de ce qu'ils nous ont demandé depuis 2018, et des profils que nous leur avons trouvés.</p>
     </div>
   </section>
 
@@ -61,7 +56,7 @@ const VISIBLES = 6;
                   <ul class="ref-list">{r.profils.slice(VISIBLES).map(row)}</ul>
                 </details>
               )}
-              <p class="ref-found"><span aria-hidden="true">✓</span> {n} {n > 1 ? 'experts trouvés' : 'expert trouvé'}</p>
+              <p class="ref-found"><span aria-hidden="true">✓</span> {n > 1 ? 'Experts trouvés' : 'Expert trouvé'}</p>
             </article>
           );
         })}

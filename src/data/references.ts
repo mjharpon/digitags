@@ -241,4 +241,3 @@ export const references: Reference[] = [
 ];
 
 export const nbProfils = (r: Reference) => r.profils.reduce((n, p) => n + (p.nb ?? 1), 0);
-export const totalProfils = references.reduce((n, r) => n + nbProfils(r), 0);
