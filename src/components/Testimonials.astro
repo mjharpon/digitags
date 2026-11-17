@@ -45,10 +45,12 @@ const testimonials = [
   },
 ];
 
-const title = en ? "They've worked with the Hub." : "Ils ont fait appel au Hub.";
+const title = en ? "What our clients say." : "Ce qu'en disent nos clients.";
+const eyebrow = en ? 'Testimonials' : 'Témoignages';
 ---
 <section class="section">
   <div class="container">
+    <p class="eyebrow section-eyebrow">{eyebrow}</p>
     <h2 class="section-title">{title}</h2>
     <div class="testi-grid">
       {testimonials.map((t) => (

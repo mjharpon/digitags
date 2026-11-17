@@ -3,6 +3,11 @@ import Base from '../layouts/Base.astro';
 import HowItWorks from '../components/HowItWorks.astro';
 import Testimonials from '../components/Testimonials.astro';
 import CtaBanner from '../components/CtaBanner.astro';
+import { references, nbProfils, totalProfils } from '../data/references';
+
+// Quatre références mises en avant sur la home (secteurs variés).
+const VEDETTES = ['Crédit Agricole · Digital Factory', 'Roger Vivier', 'Allianz Trade', 'Kantar Media'];
+const vedettes = VEDETTES.map((nom) => references.find((r) => r.nom === nom)!).filter(Boolean);
 
 const expertises = [
   { href: "/design", icon: "icon-uxui", title: "Design & UX", desc: "Expériences utiles qui convertissent." },
@@ -84,6 +89,7 @@ const expertises = [
   <!-- ============ EXPERTISES ============ -->
   <section class="expertises" id="expertises">
     <div class="container">
+      <p class="eyebrow section-eyebrow">Expertises</p>
       <h2 class="section-title">Une expertise pour chaque enjeu.</h2>
       <div class="expertise-grid">
         {expertises.map((e) => (
@@ -102,6 +108,7 @@ const expertises = [
   <!-- ============ CAS CLIENTS ============ -->
   <section class="cases" id="apropos">
     <div class="container">
+      <p class="eyebrow section-eyebrow">Résultats</p>
       <h2 class="section-title">Des talents qui font avancer les projets.</h2>
       <div class="cases-grid">
 
@@ -174,6 +181,32 @@ const expertises = [
           </article>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RÉFÉRENCES ============ -->
+  <section class="section home-refs" id="references">
+    <div class="container">
+      <p class="eyebrow section-eyebrow">Références</p>
+      <h2 class="section-title">Ils nous ont confié la recherche de leurs experts.</h2>
+      <p class="home-refs-lead"><strong>{totalProfils} experts trouvés</strong> pour <strong>{references.length} clients</strong> depuis 2018, de la mission de quelques semaines à l'accompagnement sur plusieurs années.</p>
+      <div class="home-refs-grid">
+        {vedettes.map((r) => {
+          const n = nbProfils(r);
+          return (
+            <article class="ref-card ref-card-compact">
+              <p class="case-label label-blue">{r.secteur}</p>
+              <h3>{r.nom ?? r.label}</h3>
+              <p class="ref-need">{r.besoin}</p>
+              <p class="ref-roles">{r.resume ?? r.profils[0].role}</p>
+              <p class="ref-found"><span aria-hidden="true">✓</span> {n} {n > 1 ? 'experts trouvés' : 'expert trouvé'}</p>
+            </article>
+          );
+        })}
+      </div>
+      <div class="home-refs-cta">
+        <a href="/cas-clients" class="btn btn-outline">Voir toutes nos références</a>
       </div>
     </div>
   </section>

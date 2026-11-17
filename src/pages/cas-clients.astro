@@ -3,39 +3,116 @@ import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 import { byOrder } from '../lib/sort';
+import { references, EXPERTISES, nbProfils, totalProfils } from '../data/references';
 
 const cas = (await getCollection('casClients', ({ data }) => !data.draft))
   .sort(byOrder);
+
+const VISIBLES = 6;
 ---
 <Base
-  title="Cas clients | digitags.work"
-  description="SEO, product, design, tech : découvrez comment les freelances et équipes du réseau digitags.work accompagnent leurs clients sur le terrain."
+  title="Références clients : les experts trouvés depuis 2018 | digitags.work"
+  description={`Crédit Agricole, Allianz Trade, Roger Vivier, Kantar, Bouygues Telecom… ${totalProfils} experts freelances trouvés pour ${references.length} clients depuis 2018 : ce qu'ils cherchaient, le profil trouvé, la durée.`}
 >
   <section class="page-hero">
     <div class="container">
-      <p class="eyebrow">Cas clients</p>
-      <h1>Ce que le Hub réalise sur le terrain.</h1>
-      <p class="lead">Des missions concrètes, menées par les freelances et équipes du réseau. Quelques exemples détaillés.</p>
+      <p class="eyebrow">Références</p>
+      <h1>Le bon expert, trouvé pour chaque besoin.</h1>
+      <p class="lead">Notre mission&nbsp;: trouver le freelance qui correspond exactement à ce que nos clients cherchent. Voici ce qu'ils nous ont demandé depuis 2018, et les profils que nous leur avons trouvés.</p>
+      <ul class="ref-stats">
+        <li><strong>{totalProfils}</strong> experts trouvés</li>
+        <li><strong>{references.length}</strong> clients</li>
+        <li><strong>2018</strong> première mission</li>
+      </ul>
     </div>
   </section>
 
-  <section class="section" style="padding-top: 30px;">
+  <section class="section" style="padding-top: 10px;">
     <div class="container">
-      <div class="blog-grid">
-        {cas.map((c) => (
-          <a class="blog-card" href={`/cas-client/${c.id}`}>
-            {c.data.image && <img src={c.data.image} alt="" loading="lazy" />}
-            <div class="blog-card-body">
-              <p class="case-label label-blue">Cas client</p>
-              <h2>{c.data.title}</h2>
-              {c.data.description && <p class="blog-desc">{c.data.description}</p>}
-              <span class="arrow-link">Lire le cas client <span aria-hidden="true">→</span></span>
-            </div>
-          </a>
+      <div class="ref-filters" role="group" aria-label="Filtrer par expertise">
+        <button type="button" class="ref-filter is-active" data-filter="all" aria-pressed="true">Toutes les expertises</button>
+        {EXPERTISES.map((e) => (
+          <button type="button" class="ref-filter" data-filter={e.key} aria-pressed="false">{e.label}</button>
         ))}
       </div>
+
+      <div class="ref-grid">
+        {references.map((r) => {
+          const n = nbProfils(r);
+          const exps = [...new Set(r.profils.map((p) => p.expertise))].join(' ');
+          const row = (p: (typeof r.profils)[number]) => (
+            <li data-exp={p.expertise}>
+              <span class="ref-role">
+                {p.metier ? <a href={`/metiers/${p.metier}`}>{p.role}</a> : p.role}
+                {p.nb && p.nb > 1 && <span class="ref-nb">×{p.nb}</span>}
+              </span>
+              <span class="ref-meta">{p.duree} · {p.annee}</span>
+            </li>
+          );
+          return (
+            <article class="ref-card" data-exp={exps}>
+              <p class="case-label label-blue">{r.secteur} · {r.periode}</p>
+              <h2>{r.nom ?? r.label}</h2>
+              <p class="ref-need"><strong>Ce qu'ils cherchaient&nbsp;:</strong> {r.besoin}</p>
+              <ul class="ref-list">{r.profils.slice(0, VISIBLES).map(row)}</ul>
+              {r.profils.length > VISIBLES && (
+                <details class="ref-more">
+                  <summary>+ {r.profils.length - VISIBLES} autres profils</summary>
+                  <ul class="ref-list">{r.profils.slice(VISIBLES).map(row)}</ul>
+                </details>
+              )}
+              <p class="ref-found"><span aria-hidden="true">✓</span> {n} {n > 1 ? 'experts trouvés' : 'expert trouvé'}</p>
+            </article>
+          );
+        })}
+      </div>
+      <p class="ref-note">Un client est anonymisé par confidentialité. Durées indicatives, d'après les contrats.</p>
     </div>
   </section>
 
-  <CtaBanner title="Un projet similaire&nbsp;?" text="Décrivez votre besoin,<br />nous composons l'équipe qui va avec." />
+  {cas.length > 0 && (
+    <section class="section" style="padding-top: 10px;">
+      <div class="container">
+        <p class="eyebrow" style="text-align:center;">Cas détaillé</p>
+        <h2 class="section-title">Une mission racontée de bout en bout</h2>
+        <div class="blog-grid">
+          {cas.map((c) => (
+            <a class="blog-card" href={`/cas-client/${c.id}`}>
+              {c.data.image && <img src={c.data.image} alt="" loading="lazy" />}
+              <div class="blog-card-body">
+                <p class="case-label label-blue">Cas client</p>
+                <h3>{c.data.title}</h3>
+                {c.data.description && <p class="blog-desc">{c.data.description}</p>}
+                <span class="arrow-link">Lire le cas client <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <CtaBanner title="Vous cherchez un expert&nbsp;?" text="Décrivez le profil recherché,<br />nous vous le trouvons." />
+
+  <script>
+    const buttons = document.querySelectorAll<HTMLButtonElement>('.ref-filter');
+    const cards = document.querySelectorAll<HTMLElement>('.ref-card');
+    buttons.forEach((btn) => btn.addEventListener('click', () => {
+      const f = btn.dataset.filter!;
+      buttons.forEach((b) => {
+        const on = b === btn;
+        b.classList.toggle('is-active', on);
+        b.setAttribute('aria-pressed', String(on));
+      });
+      cards.forEach((card) => {
+        const match = f === 'all' || card.dataset.exp!.split(' ').includes(f);
+        card.hidden = !match;
+        card.querySelectorAll<HTMLElement>('li[data-exp]').forEach((li) => {
+          li.classList.toggle('is-dim', f !== 'all' && li.dataset.exp !== f);
+        });
+        const more = card.querySelector('details');
+        if (more) more.open = f !== 'all' && !!more.querySelector(`li[data-exp="${f}"]`);
+      });
+    }));
+  </script>
 </Base>

@@ -5,6 +5,7 @@ const { lang = 'fr' } = Astro.props;
 
 const T = lang === 'en'
   ? {
+      eyebrow: 'Our approach',
       title: ['Not a marketplace.', 'A hand-picked collective.'],
       introA: 'Neither a platform nor a staffing firm: a closed network of 1,600+ freelancers and ',
       studiosHref: '/en/studios-and-collectives',
@@ -31,6 +32,7 @@ const T = lang === 'en'
       alts: ['Paid Media expert', 'CRO expert', 'Data & Tracking expert'],
     }
   : {
+      eyebrow: 'Notre approche',
       title: ['Pas une marketplace.', 'Un collectif sélectionné.'],
       introA: 'Ni une plateforme, ni une ESN : un réseau fermé de plus de 1 600 freelances et ',
       studiosHref: '/studios-et-collectifs',
@@ -62,6 +64,7 @@ const hexes = ['hex-icon-blue', 'hex-icon-yellow', 'hex-icon-red'];
 <section class="approche" id="approche">
   <div class="container approche-grid">
     <div class="approche-copy">
+      <p class="eyebrow">{T.eyebrow}</p>
       <h2>{T.title[0]}<br />{T.title[1]}</h2>
       <p>{T.introA}<a href={T.studiosHref} class="link-light">{T.studiosLabel}</a>{T.introB}</p>
       <div class="approche-shapes" aria-hidden="true">
