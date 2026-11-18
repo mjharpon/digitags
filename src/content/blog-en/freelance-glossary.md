@@ -3,6 +3,7 @@ title: "A short freelancing glossary for first-time clients"
 description: "Explore our freelance glossary, a clear guide to getting started and successfully hiring a freelancer. Ideal for first-time clients."
 date: 2025-12-23
 image: "/uploads/blog/lexique-freelance-cover.webp"
+tags: [freelancer]
 ---
 
 Stepping into the world of freelancing is a bit like arriving in a country where you understand a few words but don't really speak the language yet. You recognise some terms, you guess the meaning of others… and sometimes you nod politely, hoping it will all become clear later. This freelance glossary was designed to avoid those hazy moments.
@@ -17,9 +18,11 @@ Graphic designers, developers, consultants, acquisition specialists, content cre
 
 And it often starts with a word you'll see everywhere: the _engagement_ (in French, the *mission*).
 
-An engagement is the heart of the collaboration. It's your project: redoing a web page, launching a [social ads](/en/roles/freelance-social-ads-expert) campaign, creating a visual identity, structuring an SEO strategy. The freelancer commits to it, based on a level of expertise and an estimated amount of time.
+An engagement is the heart of the collaboration. It's your project: redoing a web page, launching a [social ads](/en/roles/freelance-social-ads-expert) campaign, creating a [visual identity](/en/projects/visual-identity), structuring an SEO strategy. The freelancer commits to it, based on a level of expertise and an estimated amount of time.
 
 At some point, you may come across the famous *TJM* (*Taux Journalier Moyen*, the average day rate). Not a secret code: just the rate per day of work. It reflects experience, speed of execution and the ability to manage a project autonomously.
+
+> **Read also:** [How to prepare for a freelance interview](/en/blog/how-to-prepare-a-freelance-interview)
 
 ## How does a collaboration really get started?
 

@@ -3,13 +3,14 @@ title: "Freelance tech: key skills"
 description: "Discover the most in-demand skills of 2025 and how to hire – or become – the talent every company is fighting over."
 date: 2025-07-29
 image: "/uploads/blog/freelance-tech-competences-cover.webp"
+tags: [tech-et-data, freelancer]
 ---
 
 In 2025, the **freelance tech** ecosystem is buzzing: 48% of CEOs plan to increase how many freelancers they bring in over the coming year. To stay (or become) indispensable talent, you need to aim for the skills that are in demand right now! Here's our ranking, put together by digitags.work, to help you optimise how you hire freelancers or shape your path as a [**freelance developer**](/en/roles/freelance-web-developer).
 
 ## Data & AI: the new backbone
 
--   **AI & Machine Learning** – from anomaly detection to generative AI, demand is exploding.
+-   **AI & Machine Learning** – from anomaly detection to [generative AI](/en/ai-product-team), demand is exploding.
 -   **Data analytics and visualisation** – turning gigabytes of data into business decisions.
 -   **Prompt engineering** – knowing how to "talk" to LLMs is becoming a superpower.
 
@@ -17,10 +18,12 @@ Product teams want to predict, personalise and automate. Engaging a data-special
 
 ‍
 
+> **Read also:** [How to evaluate a tech freelancer: a fast, effective method](/en/blog/how-to-evaluate-a-tech-freelancer)
+
 ## Cloud, DevOps & Cybersecurity: flawless infrastructure
 
 -   **Cloud computing (AWS, Azure, GCP)** – the foundation of scalable architectures.
--   **DevOps & CI/CD** – because a deployment that crashes on a Friday evening makes nobody laugh.
+-   **[DevOps](/en/roles/freelance-devops-engineer) & CI/CD** – because a deployment that crashes on a Friday evening makes nobody laugh.
 -   **Zero-Trust cybersecurity** – ransomware and AI-powered attacks make it a must.
 
 On cloud platforms, every second of downtime is costly, so securing and automating are the priorities.

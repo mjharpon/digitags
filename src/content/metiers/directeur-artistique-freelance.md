@@ -60,7 +60,7 @@ Une charte graphique ou un brandbook documente les règles d'usage, accompagnés
 
 La suite Adobe Creative Cloud reste le socle du métier : Photoshop pour l'image, Illustrator pour le vectoriel et les logos, InDesign pour l'édition et les chartes. Figma s'est imposé pour la direction artistique digitale et pour collaborer avec les équipes produit, tandis que Milanote, Pinterest ou FigJam servent à construire et partager les moodboards.
 
-Les outils d'IA générative, comme Adobe Firefly, accélèrent l'exploration et la recherche d'intentions. Un DA expérimenté sait les utiliser à bon escient, en gardant la maîtrise du concept et en vérifiant les conditions d'usage et les droits des visuels produits.
+Les outils d'[IA générative](/equipe-ia), comme Adobe Firefly, accélèrent l'exploration et la recherche d'intentions. Un DA expérimenté sait les utiliser à bon escient, en gardant la maîtrise du concept et en vérifiant les conditions d'usage et les droits des visuels produits.
 
 ## Quand faire appel à un directeur artistique freelance ?
 

@@ -24,6 +24,8 @@ Les freelances peuvent être un moyen rentable de gérer certaines tâches et pr
 
 ‍
 
+> **À lire aussi :** [Le growth recruiting, c’est quoi ?](/blog/le-growth-recruiting-cest-quoi)
+
 ## **Créer une marque employeur attrayante pour les freelances**
 
 Pour attirer les meilleurs freelances, il est essentiel de créer une marque employeur attrayante. La marque employeur est l'image et la réputation d'une entreprise en tant qu'employeur, et elle joue un rôle central dans la façon dont les freelances perçoivent l'entreprise et décident de travailler avec elle.

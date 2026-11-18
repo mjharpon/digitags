@@ -24,7 +24,7 @@ In all likelihood, JavaScript will keep evolving this year with regular updates 
 
 Python is a language that has grown in popularity in recent years thanks to its simplicity and power. In 2025, Python will remain a preferred choice for a wide range of applications, from web development to data analysis, AI and machine learning. Its clear, concise syntax lets developers focus on solving problems rather than on the complexity of the code, which makes it an excellent choice.
 
-Python's ecosystem is rich in libraries and frameworks, which also contributes to its success. Tools such as Django and Flask make web development easier, while libraries such as NumPy, Pandas and TensorFlow have become standards in data science and machine learning.
+Python's ecosystem is rich in libraries and frameworks, which also contributes to its success. Tools such as Django and Flask make web development easier, while libraries such as NumPy, Pandas and TensorFlow have become standards in [data science](/en/roles/freelance-data-scientist) and machine learning.
 
 The Python community is extremely active and keeps evolving. Contributions from developers all over the world allow Python to integrate new features and adapt to new trends.
 
@@ -51,6 +51,8 @@ TypeScript, a superset of JavaScript, is fast becoming an essential choice for w
 One of TypeScript's main advantages is its compatibility with the JavaScript ecosystem we've just discussed. Developers can easily bring TypeScript into their existing projects while benefiting from the advanced features it offers. That makes it a great solution for teams looking to improve their code without having to rewrite their applications entirely.
 
 With the rise of modern frameworks such as Angular and React, which support TypeScript, its adoption will keep growing. In 2025, TypeScript will be regarded as a de facto standard for developing complex web applications, enabling teams to build apps that are more robust and easier to maintain.
+
+> **Read also:** [Why work with a freelance developer?](/en/blog/why-work-with-a-freelance-developer)
 
 ## **Entrust your development projects to digitags.work**
 

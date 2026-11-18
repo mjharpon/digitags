@@ -3,6 +3,7 @@ title: "Les avantages de Webflow pour créer son site internet"
 description: "Webflow : un CMS puissant et flexible pour créer un site sans coder. Interface intuitive, templates, intégrations : découvrez ses avantages."
 date: 2025-03-17
 image: "/uploads/blog/les-avantages-de-webflow-pour-creer-son-site-internet-cover.webp"
+tags: [tech-et-data, design]
 ---
 
 On a précédemment fait un article sur [**les avantages de WordPress**](https://www.digitags.work/blog/les-avantages-de-wordpress-pour-la-creation-de-sites-web), alors il est temps de parler de Webflow. Je vous disais dans ce premier article que chaque cms a des avantages et inconvénients et qu’il en existe forcément un qui vous conviendra. Personnellement, j’utilise Webflow et je préfère ce cms pour créer des sites web mais promis, je vais rester la plus impartiale possible dans cette série d’articles.
@@ -22,6 +23,8 @@ LE truc qui différencie Webflow des autres, c’est qu’il génère automatiqu
 Webflow est aussi une solution complète pour la gestion de contenu. Vous pouvez créer des collections de contenu, ce qui facilite la mise à jour et la gestion d'articles de blog, de portfolios ou de pages produits.
 
 ‍
+
+> **À lire aussi :** [Comment choisir la meilleure agence de création de sites web ?](/blog/comment-choisir-la-meilleure-agence-de-creation-de-sites-web)
 
 ## **Les avantages de Webflow**
 

@@ -10,12 +10,12 @@ Connaissez vous l'[UX Writing](/metiers/ux-writer-freelance) ? Mélanie, UX Writ
 
 ### \> Qui es-tu et que fais-tu au quotidien?
 
-Je suis Mélanie Michou, UX Writer ! Mon métier consiste à **créer ou améliorer l’expérience utilisateur d’un produit digital grâce au contenu**. 
+Je suis Mélanie Michou, UX Writer ! Mon métier consiste à **créer ou améliorer l’expérience utilisateur d’un [produit digital](/projets/concevoir-un-produit-digital) grâce au contenu**. 
 
 **Au quotidien :** 
 
 -   Je travaille de manière très étroite avec les équipes design, produit et développement. L’idée est de collaborer pour comprendre ensemble les objectifs et besoins des utilisateurs, afin de leur proposer le meilleur parcours possible. 
--   Je conçois le contenu d’une plateforme en me basant sur de la recherche utilisateur, de la data, des tests d’usabilité.
+-   Je conçois le contenu d’une plateforme en me basant sur de la [recherche utilisateur](/projets/mener-une-phase-dux-research), de la data, des tests d’usabilité.
 -   J’utilise les bons mots, ceux qui vont à la fois faciliter la démarche des utilisateurs et aider l’entreprise pour laquelle je travaille à atteindre ses objectifs business ! 
 
 ![](/uploads/blog/linterview-de-melanie-michou-ux-writer-freelance-0.jpeg)
@@ -39,7 +39,7 @@ Je pense qu’il faut à la fois **avoir une passion pour les mots, une vision s
 Si je peux lister les compétences principales : 
 
 -   Savoir écrire simplement et efficacement
--   Design thinking : les UX Writers sont des designers des mots, qui utilisent les mêmes processus de travail que les designers. 
+-   [Design thinking](/projets/design-thinking) : les UX Writers sont des designers des mots, qui utilisent les mêmes processus de travail que les designers. 
 -   Content strategy : comment résoudre des problématiques UX grâce aux bons mots
 -   Savoir mener de la recherche et des tests utilisateurs : en UX Writing, on n’écrit pas de manière intuitive, on choisit consciemment les bons mots grâce à la data et aux recherches menées !  
 -   Et enfin, des compétences plus techniques, comme la compréhension des outils du type Figma 

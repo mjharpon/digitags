@@ -3,6 +3,7 @@ title: "Petit lexique du freelancing pour les clients novices"
 description: "Explorez notre lexique freelance, un guide clair pour débuter et réussir votre recrutement freelance. Idéal pour clients novices."
 date: 2025-12-23
 image: "/uploads/blog/lexique-freelance-cover.webp"
+tags: [freelancer]
 ---
 
 Entrer dans l’univers du freelancing, c’est un peu comme débarquer dans un pays dont on comprend quelques mots, mais pas encore vraiment la langue. On reconnaît certains termes, on devine le sens d’autres… et parfois on nodde poliment en espérant que tout s’éclaire plus tard. Ce lexique freelance a été pensé pour éviter ces moments flous.
@@ -19,11 +20,13 @@ Graphistes, développeurs, consultants, spécialistes acquisition, créateurs de
 
 Et ça commence souvent par un mot qui revient partout : la _mission_.
 
-Une mission, c’est le cœur de la collaboration. C’est votre projet : refaire une page web, lancer une campagne [social ads](/metiers/expert-social-ads-freelance), créer une identité visuelle, structurer une stratégie SEO. Le freelance s’y engage, en fonction d’un niveau d’expertise et d’un temps estimé.
+Une mission, c’est le cœur de la collaboration. C’est votre projet : refaire une page web, lancer une campagne [social ads](/metiers/expert-social-ads-freelance), créer une [identité visuelle](/projets/identite-visuelle-creation-ou-refonte), structurer une stratégie SEO. Le freelance s’y engage, en fonction d’un niveau d’expertise et d’un temps estimé.
 
 À des moments, vous croiserez peut-être le fameux “TJM”, le Taux Journalier Moyen. Pas un code secret : juste le tarif par jour de travail. Il reflète l'expérience, la rapidité d’exécution et la capacité à gérer un projet de façon autonome.
 
 ‍
+
+> **À lire aussi :** [Tarif journalier moyen : décryptage par métier et par secteur](/blog/tjm-freelance)
 
 ## Comment démarre réellement une collaboration ?
 

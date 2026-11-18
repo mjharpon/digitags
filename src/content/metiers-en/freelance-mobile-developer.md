@@ -16,7 +16,7 @@ A mobile app isn't just a smaller website. Mobile developers deal with constrain
 
 Their work spans the whole chain: app architecture, implementing the designs, consuming the APIs built by the [**back-end developer**](/en/roles/freelance-back-end-developer), testing, setting up the build pipeline and publishing to the stores. Once live, they track quality through crash reports and user feedback.
 
-Day to day, they work alongside the product owner, designers and back-end team, and can make the case for a technical choice: native or cross-platform, offline support, state management, update strategy.
+Day to day, they work alongside the [product owner](/en/roles/freelance-product-owner), designers and back-end team, and can make the case for a technical choice: native or cross-platform, offline support, state management, update strategy.
 
 ## Typical mobile development missions
 
@@ -78,6 +78,6 @@ Bringing in a freelance mobile developer answers several needs at once:
 - **Flexibility**: they join for an MVP, a rebuild or a busy period, with no commitment beyond the mission.
 - **Immediately operational**: used to joining existing teams, they get testable builds out very quickly.
 - **Advisory**: drawing on varied projects, they help you decide between native and cross-platform and steer clear of store pitfalls.
-- **Upskilling**: they help your web developers move into mobile and pass on good practices for quality and releases.
+- **Upskilling**: they help your [web developers](/en/roles/freelance-web-developer) move into mobile and pass on good practices for quality and releases.
 
 At digitags.work, we start by scoping your need with you: product context, existing stack, deadlines. We then propose mobile developers from our network of 1,600+ European freelancers, vetted and recommended by their peers. We contract directly with you and follow the mission through to the end. Got an app project? [**Let's talk**](/en/contact).

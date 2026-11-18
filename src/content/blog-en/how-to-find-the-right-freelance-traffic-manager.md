@@ -79,6 +79,8 @@ Now that you have a clearer idea of the skills required to be a good traffic man
 
 ![traffic manager dgitags web traffic statistics ](/uploads/blog/comment-trouver-le-bon-traffic-manager-en-freelance-2.webp)
 
+> **Read also:** [What is growth recruiting?](/en/blog/what-is-growth-recruiting)
+
 ## **How to find the best freelance traffic manager for your business**
 
 By following these tips, you can find the ideal professional to meet your needs:

@@ -42,6 +42,8 @@ De plus, les designers freelances disposent généralement de plus de temps pour
 
   
 
+> **À lire aussi :** [Découvrez le métier d'UX Writer avec Mélanie !](/blog/linterview-de-melanie-michou-ux-writer-freelance)
+
 ## Comment devenir freelance designer?
 
 Si vous souhaitez travailler en tant que freelance designer, voici quelques étapes à suivre :

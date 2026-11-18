@@ -3,6 +3,7 @@ title: "Freelance day rates: a breakdown by craft and sector"
 description: "How to calculate a day rate, 2025 freelance rates by craft (dev, marketing, design) — and find the best experts on digitags.work."
 date: 2025-12-19
 image: "/uploads/blog/tjm-freelance-cover.webp"
+tags: [freelancer]
 ---
 
 In 2025, the day rate remains the reference metric: understanding it properly helps independents set the right price just as much as it helps companies engage the right profiles. In this guide, we break down marketing, development and design day rates, so you can bring in talent (or be brought in) with complete peace of mind.
@@ -16,6 +17,8 @@ The day rate is what a freelancer bills for one day of work. It generally covers
 -   **The margin** needed to invest and afford time off.
 
 For a quick calculation: target annual income ÷ billable days (around 180 in France) = floor day rate. Add 20% for negotiation margin, and you have your "list price" day rate.
+
+> **Read also:** [The best platforms to hire freelancers in 2025](/en/blog/best-freelance-platforms-2025)
 
 ## Marketing & communication day rates: 2025 benchmarks and adjustment factors
 
@@ -50,7 +53,7 @@ UX/UI designers range between **€450 and €650** a day, with peaks at €800 
 **What pushes the number up**:
 
 -   Mastery of Figma plus advanced prototyping.
--   A double hat (UX research + UI).
+-   A double hat ([UX research](/en/projects/ux-research) + UI).
 -   High-stakes sectors (fintech, healthcare).
 
 Buyer's tip: on digitags.work, send your user flow or wireframe with the brief, and let us find the perfect designer for your needs.

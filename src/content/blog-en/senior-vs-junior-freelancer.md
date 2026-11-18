@@ -3,6 +3,7 @@ title: "Senior vs junior: how to choose"
 description: "Junior or senior? Learn how to choose the right profile for your needs and missions. digitags.work helps you find the right talent."
 date: 2025-11-03
 image: "/uploads/blog/freelance-senior-vs-junior-comment-choisir-cover.webp"
+tags: [freelancer, recrutement]
 ---
 
 Choosing between a **junior freelancer** and a **senior freelancer**: both will get you to your destination, but not in the same way.
@@ -26,6 +27,8 @@ But be careful: they need a minimum of framing. A clear brief, a precise directi
 **The advantage for you:** their rate, often between €200 and €400 a day, lets you test, iterate and experiment without blowing the budget.
 
 ‍
+
+> **Read also:** [Flash audit: score your “freelance ready” maturity in 10 questions](/en/blog/freelance-ready-flash-audit)
 
 ## The senior freelancer: experience, perspective and full autonomy
 
@@ -103,7 +106,7 @@ The result: costs are under control, quality is consistent, and skills develop n
 ## Concrete examples of engagements
 
 -   **Social media campaign** → Dynamic junior, supervised by a [project manager](/en/roles/freelance-project-manager).
--   **Full SEO audit before a website redesign** → Experienced senior.
+-   **Full SEO audit before a [website redesign](/en/projects/website-redesign)** → Experienced senior.
 -   **Creating visuals or Canva templates** → Creative junior.
 -   **Leading brand or UX strategy** → Senior in branding.
 -   **Setting up a HubSpot CRM** → Senior for framing, junior for integration.

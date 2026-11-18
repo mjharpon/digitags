@@ -16,7 +16,7 @@ Knowing that, how do you find your way around? Do you need a full team or a sing
 
 There's also a sixth — of a rather mythical nature — which we're saving for the end of this article.
 
-To give you a better introduction to this fascinating world, we called on Levent Ozata, who has been a UX research expert for many years.
+To give you a better introduction to this fascinating world, we called on Levent Ozata, who has been a [UX research](/en/projects/ux-research) expert for many years.
 
 ![UX designer research user experience interface copywriter architect unicorn digital dgitags](/uploads/blog/les-metiers-de-lux-0.webp)
 
@@ -31,6 +31,8 @@ It all started with Donald Norman, a psychologist and cognitive scientist, when 
 People hold a crucial place in UX design, because everything depends on their interaction with everyday products and services such as websites, apps and even coffee machines. It's an extremely varied discipline, combining elements of psychology, business, market research, design and technology. It can range from the feel of a physical product in your hand to the simplicity of the checkout process when you buy online. The goal of UX design is to create experiences that are easy, efficient, relevant and enjoyable for the user.
 
 By combining the different aspects mentioned above, the UX designer builds a bridge between a company and its customers' needs. When you think about it, the UX designer would make a great viaduct.
+
+> **Read also:** [Discovering Figma](/en/blog/discovering-figma)
 
 ## **UI designer: _user interface_**
 
@@ -54,7 +56,7 @@ It's a role that requires excellent communication skills, as well as the ability
 
 "_There are tons of ways an app speaks to you: sometimes it fits your culture, your expectations, who you are, and other times it doesn't, because it wasn't written for you._"
 
-Just like the visual side, the text of every interface must be designed. A UX writer's role is to write all kinds of text for apps, websites and other digital products. They're the ones tasked with finding the right words for content known as "microcopy", such as menus, definitions, buttons, labels, _chatbots_ or error messages. A good UX writer has a knack for creating microcopy that's highly intuitive for any user, without straying from the voice of the brand they work for.
+Just like the visual side, the text of every interface must be designed. A UX writer's role is to write all kinds of text for apps, websites and other [digital products](/en/projects/digital-product-design). They're the ones tasked with finding the right words for content known as "microcopy", such as menus, definitions, buttons, labels, _chatbots_ or error messages. A good UX writer has a knack for creating microcopy that's highly intuitive for any user, without straying from the voice of the brand they work for.
 
 "_It's about much more than creating content or just the aesthetics of a text. At the heart of this role, you speak to the user in the best possible way, in both design and content._"
 

@@ -24,6 +24,8 @@ _Si vous souhaitez en savoir plus sur la vie des digital nomades,_ [_cliquez ici
 
 ![dgitags digital nomad freelance](/uploads/blog/un-visa-pour-digital-nomade-0.jpeg)
 
+> **À lire aussi :** [Rédiger un CV percutant et faire la différence auprès des recruteurs](/blog/rediger-un-cv-percutant-et-faire-la-difference-aupres-des-recruteurs)
+
 ## **Qu’est-ce que c’est qu’un visa digital nomade?**
 
 Ce type de visa est en réalité une **autorisation de voyage** qui permet de régulariser le statut des travailleurs en mouvement.

@@ -22,6 +22,8 @@ Freelancers have specific needs and must find tools that let them manage their p
 -   Dashboards
 -   Calendars, planning and notifications.
 
+> **Read also:** [Hiring freelancers: adapting your strategy to your company size](/en/blog/freelance-strategy-by-company-size)
+
 ## **The essential collaboration tools for working with freelancers**
 
 Here are some of the best collaboration tools for working with freelancers:

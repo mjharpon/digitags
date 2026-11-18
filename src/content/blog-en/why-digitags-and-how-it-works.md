@@ -6,7 +6,7 @@ tags: [freelancer, design, webmarketing, tech-et-data, product, recrutement]
 image: "/uploads/blog/pourquoi-dgitags-io-et-comment-ca-marche-cover.webp"
 ---
 
-Managing and optimising your online presence means building digital products (websites, platforms, apps) and digital marketing strategies (SEO, SEA, social media).
+Managing and optimising your online presence means building [digital products](/en/projects/digital-product-design) (websites, platforms, apps) and digital marketing strategies (SEO, SEA, social media).
 
 But saying it isn't enough—you have to do it. And to do it, a company needs to rely on 2 main pillars: working with the right people (expertise) and getting that expertise to work efficiently (organisation). That's where digitags comes in.
 
@@ -27,6 +27,8 @@ digitags stands out thanks to unique characteristics that make it an ideal choic
 digitags is a Hub comprising a private platform of 1,500 freelance digital experts (marketing, product, design), web development collectives and studios, and a 100% wholly owned international digital marketing agency, Donutz digital.
 
 > _"The idea is to be able to support each of our clients with their digital challenges and to bring them turnkey solutions, like an architect would, but for their digital projects. Sometimes our clients just need a freelancer who'll join their teams, sometimes a development studio or an agency. That's what we're here for,"_ explains Chrystal, talent agent.
+
+> **Read also:** [What is growth recruiting?](/en/blog/what-is-growth-recruiting)
 
 ## digitags 3-in-1: Hub, studio and agency
 
@@ -72,9 +74,9 @@ The digitags community brings together more than 1,500 talents specialising in [
 
 Don't just take our word for it—hear what our users have to say about [**digitags.work**](/en):
 
-> "On our projects, we need experienced Designers. Whether for user research, design production or UX training, digitags has helped us find the right person every time." Thibaut Villamur, Head of Design at La Manufacture Digitale du Crédit Agricole.
+> "On our projects, we need experienced Designers. Whether for [user research](/en/projects/ux-research), design production or UX training, digitags has helped us find the right person every time." Thibaut Villamur, Head of Design at La Manufacture Digitale du Crédit Agricole.
 
-> "The Hub helped us find top-level freelance talent for the UX Design overhaul of our customer area as well as for Data Science projects. We easily found the right person, avoided a long hiring process and limited the risk of failure." Thibaut Pfeiffer (we promise you don't have to be called Thibaut to work with us), CEO of [**EmprunteMonToutout.com**](http://EmprunteMonToutout.com).
+> "The Hub helped us find top-level freelance talent for the UX Design overhaul of our customer area as well as for [Data Science](/en/roles/freelance-data-scientist) projects. We easily found the right person, avoided a long hiring process and limited the risk of failure." Thibaut Pfeiffer (we promise you don't have to be called Thibaut to work with us), CEO of [**EmprunteMonToutout.com**](http://EmprunteMonToutout.com).
 
 These testimonials reflect our commitment to our clients and our ability to deliver concrete results.
 

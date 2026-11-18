@@ -3,6 +3,7 @@ title: "Sustainable code: measuring your code's footprint"
 description: "Sustainable code: methods, tools and best practices for measuring the carbon footprint of web development. Find green freelancers on digitags.work."
 date: 2025-09-03
 image: "/uploads/blog/code-durable-cover.webp"
+tags: [tech-et-data]
 ---
 
 **Sustainable code** isn't a gimmick: it's a very concrete way of aligning performance, costs and responsibility. When you measure the real footprint of your code — and act on it — you win on every front: faster pages, a lighter cloud bill, stronger SEO and a boosted brand image. Methodologically, there's nothing esoteric about it: we're talking about **sustainable web development** and **web eco-design** applied day to day. And if you need a boost, digitags.work quickly connects you with freelancers who know how to turn theory into results.

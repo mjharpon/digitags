@@ -70,7 +70,7 @@ L'éducation numérique est une tendance croissante dans le monde du travail. Le
 
 -   Formations : Mastère, Bachelor, Formation sur-mesure, Prépa Digital
 -   La particularité : trois entreprises du digital HelloWork, MV Group et Klaxoon se sont associés pour créer une école dans l’entreprise.
--   Métiers enseignés : webdesigner, expert webmarketing, [chef de projet](/metiers/chef-de-projet-freelance) digital, web analyst, référenceur SEO, [community manager](/metiers/community-manager-freelance), data analyst
+-   Métiers enseignés : webdesigner, expert webmarketing, [chef de projet](/metiers/chef-de-projet-freelance) digital, web analyst, référenceur SEO, [community manager](/metiers/community-manager-freelance), [data analyst](/metiers/data-analyst-freelance)
 
 ‍
 
@@ -146,7 +146,7 @@ L'éducation numérique est une tendance croissante dans le monde du travail. Le
 
 -   Formations : bachelor, master, double diplôme
 -   Domaines enseignés : Cybersécurité, IOT et Robotique, Système embarqués, IA et Machine Learning, Informatique Quantique, Réalité Virtuelle et Augmentée, Blockchain
--   La particularité : Si tu veux une carrière à l’internationale, EPITA est fait pour toi. L’école propose des semestres et des stages à l’étranger, des formations en anglais, et même des programmes d’études internationaux. Une autre particularité ? EPITA s’est associé à l’ISG pour créer un nouveau cursus ambitieux alliant l’IA et le data engineering !
+-   La particularité : Si tu veux une carrière à l’internationale, EPITA est fait pour toi. L’école propose des semestres et des stages à l’étranger, des formations en anglais, et même des programmes d’études internationaux. Une autre particularité ? EPITA s’est associé à l’ISG pour créer un nouveau cursus ambitieux alliant l’IA et le [data engineering](/metiers/data-engineer-freelance) !
 -   Le petit plus ? EPITA inculpe des compétences techniques et managériales à ses étudiants.
 
 ‍

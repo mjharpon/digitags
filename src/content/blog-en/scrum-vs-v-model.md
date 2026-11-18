@@ -61,6 +61,8 @@ The main advantage of this method is that it delivers economies of scale by tack
 
 The risks created by the V-model encouraged the emergence of new, so-called Agile methods, such as Scrum.
 
+> **Read also:** [Generative AI: the typical freelance mission and the key profiles](/en/blog/generative-ai-freelance-missions)
+
 ## **An introduction to the Scrum method**
 
 The word Scrum refers to the scrum in rugby. Indeed, this method focuses on team spirit and the drive to move forward together towards the same goal.
@@ -74,7 +76,7 @@ In the Scrum method, the product is developed in **time-boxed iterations** (call
 There are three key players:
 
 -   **The [Product Owner](/en/roles/freelance-product-owner)**: has a complete vision of the product,
--   **The Scrum master**: makes sure the project runs smoothly and keeps the method on track,
+-   **The [Scrum master](/en/roles/freelance-agile-coach)**: makes sure the project runs smoothly and keeps the method on track,
 -   **The Scrum team**: develops the product.
 
 The Product Owner defines the **product backlog**. This backlog is a prioritised list of the product's target features. As the project takes shape, the list can evolve according to needs. Once the backlog is in place, the first sprint can begin.

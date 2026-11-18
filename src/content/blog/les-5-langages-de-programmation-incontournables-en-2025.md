@@ -26,7 +26,7 @@ A priori, JavaScript continuera d'évoluer avec des mises à jour régulières e
 
 Python est un langage qui a gagné en popularité ces dernières années grâce à sa simplicité et sa puissance. En 2025, Python continuera d'être un choix privilégié pour une variété d'applications, allant du développement web à l'analyse de données, en passant par l'IA et le machine learning. Sa syntaxe claire et concise permet aux développeurs de se concentrer sur la résolution de problèmes plutôt que sur la complexité du code, ce qui en fait un excellent choix.
 
-L'écosystème de Python est riche en bibliothèques et en frameworks et contribue également à son succès. Des outils comme Django et Flask facilitent le développement web, et des bibliothèques comme NumPy, Pandas et TensorFlow sont devenues des standards dans le domaine de la data science et de l'apprentissage automatique.
+L'écosystème de Python est riche en bibliothèques et en frameworks et contribue également à son succès. Des outils comme Django et Flask facilitent le développement web, et des bibliothèques comme NumPy, Pandas et TensorFlow sont devenues des standards dans le domaine de la [data science](/metiers/data-scientist-freelance) et de l'apprentissage automatique.
 
 La communauté Python est extrêmement active et continue d'évoluer. Les contributions des développeurs du monde entier permettent à Python d'intégrer de nouvelles fonctionnalités et de s'adapter aux nouvelles tendances.
 
@@ -61,6 +61,8 @@ L'un des principaux avantages de TypeScript est sa compatibilité avec l'écosys
 Avec l'essor des frameworks modernes comme Angular et React, qui prennent en charge TypeScript, son adoption continuera de croître. En 2025, TypeScript sera considéré comme un standard de facto pour le développement d'applications web complexes, permettant aux équipes de créer des apps plus robustes et plus faciles à maintenir.
 
 ‍
+
+> **À lire aussi :** [Freelance tech : compétences clés](/blog/freelance-tech-competences)
 
 ## **Confiez vos projets de développement à Digitags.work**
 

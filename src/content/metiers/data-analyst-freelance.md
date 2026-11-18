@@ -22,7 +22,7 @@ Les besoins pour lesquels nos clients font le plus souvent appel à un data anal
 
 - **Reporting et tableaux de bord** : conception des KPI, construction de dashboards par équipe, automatisation des reportings manuels.
 - **Analyse produit** : funnels, cohortes, rétention, adoption des fonctionnalités, en appui des décisions de l'équipe produit.
-- **Performance marketing** : mesure du ROI par canal, attribution, suivi des campagnes en lien avec le traffic manager.
+- **Performance marketing** : mesure du ROI par canal, attribution, suivi des campagnes en lien avec le [traffic manager](/metiers/traffic-manager-freelance).
 - **Plan de marquage** : définition des événements à suivre, recette du tracking, mise en conformité avec le consentement des utilisateurs.
 - **Analyses ponctuelles** : étude de marché à partir de données internes, analyse de pricing, diagnostic d'une baisse d'activité.
 

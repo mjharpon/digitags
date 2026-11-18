@@ -60,7 +60,7 @@ Brand guidelines or a brandbook document the rules of use, along with templates 
 
 Adobe Creative Cloud remains the backbone of the craft: Photoshop for imagery, Illustrator for vector work and logos, InDesign for editorial layouts and guidelines. Figma has become the go-to for digital art direction and for working with product teams, while Milanote, Pinterest or FigJam help build and share moodboards.
 
-Generative AI tools such as Adobe Firefly speed up exploration and the search for a direction. An experienced art director uses them deliberately, keeping control of the concept and checking the terms of use and rights attached to generated visuals.
+[Generative AI](/en/ai-product-team) tools such as Adobe Firefly speed up exploration and the search for a direction. An experienced art director uses them deliberately, keeping control of the concept and checking the terms of use and rights attached to generated visuals.
 
 ## When to bring in a freelance art director
 

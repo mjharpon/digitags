@@ -28,6 +28,8 @@ En tant que freelance, vous venez pour un besoin précis, donc ne cherchez pas �
 
 ![entretien préparation digital freelance dgitags embauche mission](/uploads/blog/comment-preparer-un-entretien-freelance-0.jpeg)
 
+> **À lire aussi :** [Recrutement freelance : adapter sa stratégie selon la taille d’entrreprise](/blog/recrutement-freelance-adapter-sa-strategie-selon-la-taille-dentrreprise)
+
 ## **Comment se déroule un entretien freelance ?**
 
 Tout d’abord, il faut savoir que le process de recrutement lors des entretiens freelance est en général plus court qu’un process classique. L’entreprise qui recherche des freelances, souhaite que ça aille vite puisqu’on recherche quelqu’un pour un besoin spécifique. Le timing est donc serré.

@@ -14,7 +14,7 @@ Faire appel à un data scientist en freelance, c'est accéder à une expertise p
 
 Le data scientist se situe à la croisée des statistiques, du développement et du métier. Il explore les données disponibles, formule des hypothèses, construit et évalue des modèles, puis en explique les résultats à des interlocuteurs qui ne sont pas forcément techniques.
 
-En 2026, son périmètre s'est élargi. Au machine learning « classique » (régression, gradient boosting, séries temporelles, clustering) s'ajoutent l'IA générative et les architectures RAG, l'évaluation de modèles de langage et le MLOps. Le data scientist freelance sait aussi dire quand un modèle n'est pas nécessaire : une règle métier bien posée ou un tableau de bord suffit parfois.
+En 2026, son périmètre s'est élargi. Au machine learning « classique » (régression, gradient boosting, séries temporelles, clustering) s'ajoutent l'[IA générative](/equipe-ia) et les architectures RAG, l'évaluation de modèles de langage et le MLOps. Le data scientist freelance sait aussi dire quand un modèle n'est pas nécessaire : une règle métier bien posée ou un tableau de bord suffit parfois.
 
 ## **Les missions typiques**
 
@@ -55,7 +55,7 @@ Il analyse les données, construit une première référence simple puis des mod
 
 ### Industrialisation
 
-Le modèle retenu est packagé, versionné et intégré à vos systèmes avec l'équipe tech, en lien avec un [**développeur back-end**](/metiers/developpeur-back-end-freelance) ou un DevOps si nécessaire.
+Le modèle retenu est packagé, versionné et intégré à vos systèmes avec l'équipe tech, en lien avec un [**développeur back-end**](/metiers/developpeur-back-end-freelance) ou un [DevOps](/metiers/devops-freelance) si nécessaire.
 
 ### Suivi et transmission
 

@@ -26,6 +26,8 @@ We hope you enjoy the article. Let's go!
 
 Bubble is a **tool for developing mobile and web apps without coding**, with no tedious HTML or CSS programming. This platform lets users create and customise apps through a user-friendly interface using drag and drop. It makes coding obsolete and democratises the creation of innovative apps. More than 750,000 users build and launch their business on Bubble.
 
+> **Read also:** [The benefits of Webflow for building your website](/en/blog/benefits-of-webflow)
+
 ## **The objectives** 
 
 \-      **Develop**: you can build any web app without code. Bubble lets you create interactive, multi-user apps for desktop and mobile web browsers.

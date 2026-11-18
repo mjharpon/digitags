@@ -36,6 +36,8 @@ Le calendrier et le budget sont sans doute les plus importants des outils de ges
 
 Les bons outils technologiques peuvent faire gagner beaucoup de temps à une équipe pendant la gestion d’un projet freelance. Parmi ces outils, on trouve par exemple des systèmes web pour communiquer entre l’équipe et générer des rapports ; des solutions CRM pour gérer les prospects et clients ; des systèmes de sécurité pour la protection des sites web ; des services externes pour le stockage, etc.
 
+> **À lire aussi :** [Product Owner VS Chef de projet](/blog/product-owner-vs-chef-de-projet)
+
 ## **Gestion des délais et du budget**
 
 Pour réussir l’exécution d’un projet impliquant des freelances, il est important de bien gérer les délais et le budget. Une bonne gestion permet à l'équipe de respecter les échéances et d'atteindre les objectifs fixés dans les limites budgétaires.

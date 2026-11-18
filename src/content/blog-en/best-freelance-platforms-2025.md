@@ -20,6 +20,8 @@ Hiring freelancers can also help reduce overall costs for companies. Freelancers
 
 We've written a full article if you'd like to dig deeper into [**the reasons to hire a freelancer rather than on a permanent contract**](/en/blog/freelancer-vs-permanent-hire).
 
+> **Read also:** [Freelance hiring trends](/en/blog/freelance-hiring-trends)
+
 ## **The best platforms to hire freelancers**
 
 Several platforms stand out for their reputation, ease of use and the quality of the talent they offer. Each has its own unique features, suited to different types of projects and budgets. Whether you're a small business or a large organisation, these platforms give you solutions for finding the right freelancers.

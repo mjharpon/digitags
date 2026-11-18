@@ -37,6 +37,8 @@ Vous gardez la main sur la décision finale : nous vous présentons plusieurs pr
 
 ‍
 
+> **À lire aussi :** [Expert en webmarketing freelance - Stratégies et développement marketing numérique](/blog/expert-en-webmarketing-freelance-strategies-et-developpement-marketing-numerique)
+
 ## **Donutz Digital : l’agence de marketing digital qui vous accompagne en Europe**
 
 Si vous souhaitez aller plus loin et maximiser votre performance marketing, notre agence [**Donutz Digital**](https://donutzdigital.com/fr/) vous accompagne avec des stratégies sur-mesure, menés par des experts séniors qui exécutent des campagnes dans toute l’Europe, et au delà.
@@ -75,7 +77,7 @@ En combinant l’expertise de Digitags.work pour le recrutement des meilleurs fr
 
 -   **Un écosystème digital performant** : Recrutez des talents experts et profitez d’un accompagnement stratégique.
 -   **Un gain de temps et d’efficacité** : Nos équipes travaillent ensemble pour une exécution fluide et rapide.
--   **Une approche sur-mesure** : Que ce soit pour une refonte de site, une campagne publicitaire ou une stratégie SEO, nous avons une solution pour vous.
+-   **Une approche sur-mesure** : Que ce soit pour une [refonte de site](/projets/refonte-de-site-internet), une campagne publicitaire ou une stratégie SEO, nous avons une solution pour vous.
 
 **Besoin d’un freelance ?** Trouvez le bon talent sur [**Digitags.work**](/)
 

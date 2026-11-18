@@ -18,6 +18,8 @@ Knowing your way around accounting will help you make the best financial decisio
 
 As an auto-entrepreneur, you don't charge VAT, and each of your invoices must carry the statement "TVA non applicable – article 293 B du CGI" (VAT not applicable – article 293 B of the French General Tax Code). But that's only the case if you stay below the VAT threshold. Let's see what that means!
 
+> **Read also:** [What if you switched to portage salarial?](/en/blog/umbrella-companies-portage-salarial)
+
 ## **VAT thresholds and their impact on your micro-business**
 
 As an auto-entrepreneur, you're subject to turnover thresholds that determine whether you have to charge VAT to your clients. These thresholds are set by the tax authorities and vary depending on your activity.

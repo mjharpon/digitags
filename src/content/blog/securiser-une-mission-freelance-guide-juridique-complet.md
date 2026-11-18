@@ -3,6 +3,7 @@ title: "Sécuriser une mission freelance : guide juridique complet"
 description: "Contrat freelance, cadre juridique, requalification : découvrez comment sécuriser vos missions freelance et éviter les pièges lors du recrutement freelance."
 date: 2026-04-27
 image: "/uploads/blog/securiser-une-mission-freelance-guide-juridique-complet-cover.webp"
+tags: [freelancer]
 ---
 
 Engager un freelance, c'est souvent synonyme de flexibilité, d'expertise pointue et de gain de temps. Mais quand on se lance dans le recrutement freelance, une question revient souvent : comment s'assurer que tout est carré sur le plan juridique ? Parce qu'un malentendu contractuel, une clause floue ou un statut mal défini peuvent rapidement transformer une collaboration prometteuse en casse-tête administratif. Et personne n'a envie de recevoir un redressement de l'URSSAF ou de se retrouver pris dans un conflit avec un prestataire qu'on pensait autonome.
@@ -21,7 +22,7 @@ C'est la hantise de nombreuses entreprises. Si l'URSSAF ou un tribunal considèr
 
 ### La propriété intellectuelle : qui possède quoi ?
 
-Imaginons que vous engagiez un designer freelance pour refondre votre identité visuelle. Sans clause de cession de droits dans le contrat, c'est lui qui reste propriétaire de ses créations. Vous n'avez qu'un droit d'usage limité. Résultat : impossible d'exploiter pleinement le travail commandé sans renégocier, parfois à prix d'or. Cette situation arrive plus souvent qu'on ne le pense, notamment dans les secteurs créatifs et tech.
+Imaginons que vous engagiez un designer freelance pour refondre votre [identité visuelle](/projets/identite-visuelle-creation-ou-refonte). Sans clause de cession de droits dans le contrat, c'est lui qui reste propriétaire de ses créations. Vous n'avez qu'un droit d'usage limité. Résultat : impossible d'exploiter pleinement le travail commandé sans renégocier, parfois à prix d'or. Cette situation arrive plus souvent qu'on ne le pense, notamment dans les secteurs créatifs et tech.
 
 ‍
 
@@ -76,6 +77,8 @@ Personne n'aime y penser au moment de signer, mais prévoir les conditions de so
 <script>const checkboxes = document.querySelectorAll('.digitags-checkbox-input'); const progressBar = document.getElementById('progressBar'); const progressCount = document.getElementById('progressCount'); const completionAlert = document.getElementById('completionAlert'); const totalCheckboxes = checkboxes.length; function updateProgress() { const checkedCount = document.querySelectorAll('.digitags-checkbox-input:checked').length; const percentage = (checkedCount / totalCheckboxes) * 100; progressBar.style.width = percentage + '%'; progressCount.textContent = checkedCount; if (checkedCount === totalCheckboxes) { completionAlert.style.display = 'flex'; } else { completionAlert.style.display = 'none'; } } checkboxes.forEach(checkbox => { checkbox.addEventListener('change', updateProgress); });</script>
 
 ‍
+
+> **À lire aussi :** [Petit lexique du freelancing pour les clients novices](/blog/lexique-freelance)
 
 ## Distinguer prestation de service et lien de subordination
 

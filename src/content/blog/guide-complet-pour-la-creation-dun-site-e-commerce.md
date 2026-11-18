@@ -20,6 +20,8 @@ Un site e-commerce n'est pas seulement une question de techno. Il nécessite ég
 
 ‍
 
+> **À lire aussi :** [Comment choisir la meilleure agence de création de sites web ?](/blog/comment-choisir-la-meilleure-agence-de-creation-de-sites-web)
+
 ## **Les statistiques sur les achats en ligne**
 
 Les statistiques montrent que le commerce en ligne continue de croître à un bon rythme. Selon des études récentes, le marché mondial du e-commerce devrait atteindre plusieurs trillions de dollars au cours des prochaines années. De nombreux consommateurs préfèrent désormais faire leurs achats en ligne plutôt que de se rendre dans un magasin physique. Le nombre total de transactions en ligne s'est élevé à 2,3 milliards en 2024, marquant une hausse de 8 % par rapport à 2023.

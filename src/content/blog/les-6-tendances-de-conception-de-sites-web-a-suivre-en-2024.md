@@ -6,7 +6,7 @@ tags: [design]
 image: "/uploads/blog/les-6-tendances-de-conception-de-sites-web-a-suivre-en-2024-cover.webp"
 ---
 
-Les tendances vont et viennent, alors je vous partage les 6 tendances de conception de site web qui m’ont tapé dans l’oeil cette année. Entre design minimaliste, micro-interactions et IA, on a de quoi discuter ! Cet article résume la veille que j’ai réalisée au cours des 6 premiers mois de l’année, et certaines tendances peuvent aussi être transposées à d’autres actions marketing, je vous recommande vivement de les parcourir même si vous n’avez pas prévu une refonte de votre site.
+Les tendances vont et viennent, alors je vous partage les 6 tendances de conception de site web qui m’ont tapé dans l’oeil cette année. Entre design minimaliste, micro-interactions et IA, on a de quoi discuter ! Cet article résume la veille que j’ai réalisée au cours des 6 premiers mois de l’année, et certaines tendances peuvent aussi être transposées à d’autres actions marketing, je vous recommande vivement de les parcourir même si vous n’avez pas prévu une [refonte de votre site](/projets/refonte-de-site-internet).
 
 ## **Tendance 1 : Minimalisme et simplicité**
 

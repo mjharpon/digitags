@@ -3,6 +3,7 @@ title: "The benefits of WordPress for building websites"
 description: "The benefits of WordPress for building a website: ease of use, customisation, SEO… Let's see whether this CMS is right for you."
 date: 2025-02-24
 image: "/uploads/blog/les-avantages-de-wordpress-pour-la-creation-de-sites-web-cover.webp"
+tags: [tech-et-data]
 ---
 
 If you're here, you're probably in two minds: you need to create or rebuild your website but you don't know which CMS to choose. The aim of this article isn't to preach for WordPress at all costs (personally, I'm team Webflow), but simply to explain why this CMS might be right for you. We'll probably do a series of articles on the other CMSs on the market (Shopify, Webflow, etc.).
@@ -18,6 +19,8 @@ WordPress is a content management system (CMS) that makes it easy to create and 
 One of the main reasons for WordPress's popularity lies in its community. Thousands of developers and designers regularly contribute to improving the software by creating new themes, plugins and security updates. The community also offers a wide range of resources, forums and tutorials, making learning and troubleshooting much simpler for users, whether they're beginners or experienced.
 
 ![\_\_wf\_reserved\_inherit](/uploads/blog/les-avantages-de-wordpress-pour-la-creation-de-sites-web-0.webp)
+
+> **Read also:** [Webflow vs WordPress: which is the best website-building platform in 2021?](/en/blog/webflow-vs-wordpress)
 
 ## **Why choose WordPress to build your site?**
 

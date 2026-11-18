@@ -18,6 +18,8 @@ Dans le monde du travail actuel, la maîtrise des compétences numériques est d
 
 Un CV numérique est une version en ligne de votre curriculum vitae traditionnel, adapté aux exigences du secteur numérique. Il permet non seulement de présenter vos compétences et expériences, mais aussi d'intégrer des éléments interactifs tels que des liens vers vos réalisations ou projets en ligne. De plus, le CV numérique offre une meilleure visibilité sur les moteurs de recherche comme Google, augmentant ainsi vos chances d'être repéré par les recruteurs.
 
+> **À lire aussi :** [Comment tourner les tendances du recrutement à son avantage ?](/blog/comment-tourner-les-tendances-du-recrutement-a-son-avantage)
+
 ## **Les éléments clés d'un CV numérique percutant**
 
 Pour créer un CV numérique réussi, il est important de prendre en compte plusieurs éléments clés:

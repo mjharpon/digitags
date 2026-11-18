@@ -2609,3 +2609,4 @@ html { scroll-padding-top: 92px; scroll-behavior: smooth; }
 .home-refs-cta { text-align: center; margin-top: 30px; }
 @media (max-width: 1024px) { .home-refs-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .home-refs-grid { grid-template-columns: 1fr; } }
+.rel-service { margin-top: 18px; font-size: 14px; }

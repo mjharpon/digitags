@@ -8,8 +8,17 @@ import Base from '../layouts/Base.astro';
 import CtaBanner from './CtaBanner.astro';
 import Breadcrumb from './Breadcrumb.astro';
 import { tagLabelEn } from '../lib/i18n';
-import { byOrder, byDateDesc } from '../lib/sort';
+import { byOrder } from '../lib/sort';
 import { ogCoverPath } from '../lib/og.mjs';
+import { relatedPostsMap } from '../lib/related';
+
+// Page expertise associée au sujet de l'article (premier tag « métier » trouvé).
+const SERVICES: Record<string, { fr: [string, string]; en: [string, string] }> = {
+  design: { fr: ['/design', 'Design & UX'], en: ['/en/design', 'Design & UX'] },
+  'tech-et-data': { fr: ['/tech-data', 'Tech & Data'], en: ['/en/tech-and-data', 'Tech & Data'] },
+  product: { fr: ['/product-et-project', 'Product & Projet'], en: ['/en/product-and-project', 'Product & Project'] },
+  webmarketing: { fr: ['/sea-social-ads-seo', 'Marketing & Acquisition'], en: ['/en/digital-marketing', 'Marketing & Acquisition'] },
+};
 
 interface Props { post: any; lang?: 'fr' | 'en' }
 const { post, lang = 'fr' } = Astro.props;
@@ -27,13 +36,13 @@ const relatedMetiers = metiers
   .sort(byOrder)
   .slice(0, 3);
 
-// Articles liés : même tag principal, les plus récents, sinon derniers articles.
+// Articles liés : calculés par pertinence et équilibrés (voir src/lib/related.ts).
 const blogCollection = en ? 'blog-en' : 'blog';
-const allPosts = (await getCollection(blogCollection as 'blog', ({ data }) => !data.draft))
-  .filter((p) => p.id !== post.id)
-  .sort(byDateDesc);
-const sameTag = allPosts.filter((p) => p.data.tags.some((t) => post.data.tags.includes(t)));
-const relatedPosts = [...sameTag, ...allPosts.filter((p) => !sameTag.includes(p))].slice(0, 3);
+const allPosts = await getCollection(blogCollection as 'blog', ({ data }) => !data.draft);
+const relatedIds = (await relatedPostsMap(blogCollection)).get(post.id) ?? [];
+const relatedPosts = relatedIds.map((id) => allPosts.find((p) => p.id === id)!).filter(Boolean);
+const serviceTag = post.data.tags.find((tg: string) => SERVICES[tg]);
+const service = serviceTag ? SERVICES[serviceTag][en ? 'en' : 'fr'] : undefined;
 
 const t = en
   ? {
@@ -114,6 +123,9 @@ const articleJsonLd = JSON.stringify({
             </article>
           ))}
         </div>
+        {service && (
+          <p class="rel-service"><a href={service[0]} class="arrow-link">{en ? `All our ${service[1]} expertise` : `Toute l'expertise ${service[1]}`} <span aria-hidden="true">→</span></a></p>
+        )}
       </div>
     </section>
   )}

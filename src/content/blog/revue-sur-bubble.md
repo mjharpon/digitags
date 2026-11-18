@@ -24,11 +24,13 @@ Nous espérons que l’article vous plaira. C’est parti !
 
 ![](/uploads/blog/revue-sur-bubble-0.webp)
 
-Bubble est un **outil de développement d’applications mobiles et web sans codage**, sans programmation HTML ou CSS fastidieuse. Cette plateforme permet aux utilisateurs de créer et de personnaliser des applications via une interface conviviale en utilisant la technique du glisser-déposer. Elle rend le codage obsolète et démocratise la création d’applications innovantes. Plus de 750 000 utilisateurs créent et lancent leur business sur Bubble.
+Bubble est un **outil de développement d’[applications mobiles](/metiers/developpeur-mobile-freelance) et web sans codage**, sans programmation HTML ou CSS fastidieuse. Cette plateforme permet aux utilisateurs de créer et de personnaliser des applications via une interface conviviale en utilisant la technique du glisser-déposer. Elle rend le codage obsolète et démocratise la création d’applications innovantes. Plus de 750 000 utilisateurs créent et lancent leur business sur Bubble.
 
 ‍
 
 ‍
+
+> **À lire aussi :** [Les avantages de Webflow pour créer son site internet](/blog/les-avantages-de-webflow-pour-creer-son-site-internet)
 
 ## **Les objectifs** 
 

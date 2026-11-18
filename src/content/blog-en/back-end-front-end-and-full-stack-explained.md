@@ -16,6 +16,8 @@ The back-end handles user requests, interacts with the database, performs comple
 
 **[Back-end developers](/en/roles/freelance-back-end-developer)** use programming languages, databases, servers and frameworks. They solve problems efficiently and handle large volumes of data.
 
+> **Read also:** [10 tips to speed up your website](/en/blog/10-tips-to-speed-up-your-website)
+
 ## **Back-end programming languages and frameworks**
 
 There are many programming languages and frameworks used to develop the back-end. Here are a few of them:

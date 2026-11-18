@@ -6,7 +6,7 @@ image: "/uploads/metiers/ux-designer-freelance-cover.webp"
 blogCategory: "design"
 ---
 
-UX design — user experience design — plays an essential role in the creation of digital products and services. The freelance UX designer crafts interfaces that answer users' needs and expectations, while guaranteeing a smooth, enjoyable experience. Planning a [**website redesign**](/en/projects/website-redesign)? It may be the right moment to let us match you with the right freelance UX designer.
+UX design — user experience design — plays an essential role in the creation of [digital products](/en/projects/digital-product-design) and services. The freelance UX designer crafts interfaces that answer users' needs and expectations, while guaranteeing a smooth, enjoyable experience. Planning a [**website redesign**](/en/projects/website-redesign)? It may be the right moment to let us match you with the right freelance UX designer.
 
 ## **Roles and responsibilities of a freelance UX designer**
 
@@ -29,7 +29,7 @@ The UX designer's work helps you stand out from your competitors by offering use
 A UX designer needs a mix of technical and creative skills to succeed. Here are some of the essential skills our freelance UX design talent brings:
 
 1.  Deep knowledge of design principles and UX best practices.
-2.  Ability to run user research and analyse the data.
+2.  Ability to run [user research](/en/projects/ux-research) and analyse the data.
 3.  Skills in user interface design and wireframing.
 4.  Ability to collaborate effectively with the other members of the development team.
 5.  Excellent communication and presentation skills.

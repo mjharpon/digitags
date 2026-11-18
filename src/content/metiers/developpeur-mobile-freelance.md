@@ -16,7 +16,7 @@ Une application mobile ne se résume pas à un site web en plus petit. Le dével
 
 Son travail couvre toute la chaîne : architecture de l'application, intégration des maquettes, connexion aux API exposées par le [**développeur back-end**](/metiers/developpeur-back-end-freelance), tests, mise en place de la chaîne de build et publication sur les stores. Il suit ensuite la qualité en production grâce aux rapports de crash et aux retours des utilisateurs.
 
-Il travaille au quotidien avec le product owner, les designers et l'équipe back-end, et sait argumenter un choix technique : natif ou cross-platform, fonctionnement hors ligne, gestion de l'état, stratégie de mise à jour.
+Il travaille au quotidien avec le [product owner](/metiers/product-owner-freelance), les designers et l'équipe back-end, et sait argumenter un choix technique : natif ou cross-platform, fonctionnement hors ligne, gestion de l'état, stratégie de mise à jour.
 
 ## Missions typiques d'un développeur mobile
 
@@ -78,6 +78,6 @@ Faire appel à un développeur mobile en freelance répond à plusieurs enjeux :
 - **Flexibilité** : il intervient le temps d'un MVP, d'une refonte ou d'un pic d'activité, sans engagement au-delà de la mission.
 - **Opérationnel** : habitué à rejoindre des équipes existantes, il livre ses premières versions testables très rapidement.
 - **Conseil** : fort de projets variés, il vous aide à trancher entre natif et cross-platform et à éviter les pièges des stores.
-- **Montée en compétences** : il accompagne vos développeurs web vers le mobile et transmet les bonnes pratiques de qualité et de publication.
+- **Montée en compétences** : il accompagne vos [développeurs web](/metiers/developeur-web-freelance) vers le mobile et transmet les bonnes pratiques de qualité et de publication.
 
 Chez digitags.work, nous commençons par cadrer votre besoin avec vous : contexte produit, stack existante, échéances. Nous vous proposons ensuite des développeurs mobiles vérifiés et recommandés par leurs pairs au sein de notre réseau de plus de 1 600 freelances européens. Nous contractualisons directement avec vous et suivons la mission jusqu'à son terme. Un projet d'application ? [**Discutons-en**](/contact).

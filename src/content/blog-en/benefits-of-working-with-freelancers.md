@@ -38,6 +38,8 @@ Hiring freelancers lets you easily adjust the size of your team to the needs of 
 
 When you work with freelancers, you can hire talent from all over the world. Unlike taking on local staff, you can engage freelancers based anywhere. It's instant access to the best international talent without having to go through the long, complicated administrative procedures that are sometimes required when taking on someone abroad.
 
+> **Read also:** [The benefits of a freelance collective for your project](/en/blog/benefits-of-a-freelance-collective)
+
 ## **How do you find and hire qualified freelancers?**
 
 To find and hire the best freelancers, it's important to follow a few key steps. Here are some tips to help you find the freelancers you need:

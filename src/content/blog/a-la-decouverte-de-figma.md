@@ -34,6 +34,8 @@ L'ensemble des fonctionnalités de Figma se concentre sur l'utilisation dans la 
 
 ‍
 
+> **À lire aussi :** [Les avantages de Webflow pour créer son site internet](/blog/les-avantages-de-webflow-pour-creer-son-site-internet)
+
 ## **Les fonctionnalités** 
 
 ### **1/ Le design**

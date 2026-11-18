@@ -3,6 +3,7 @@ title: "HR scorecard: fast freelance hiring"
 description: "Discover our HR scorecard for lightning-fast freelance hiring: identify, assess and welcome the ideal talent through digitags.work."
 date: 2025-09-26
 image: "/uploads/blog/recrutement-freelance-scorecard-cover.webp"
+tags: [recrutement]
 ---
 
 **Hiring a freelancer** can sometimes happen in a rush: finding the right person, validating cultural fit, securing the budget, framing the deliverables… and doing it fast. Between LinkedIn profiles, specialist platforms and friends' recommendations, it's easy to scatter your efforts and lose sight of what matters: your short-term business objective.
@@ -16,6 +17,8 @@ The first virtue of a scorecard is clarity. Defining the criteria before opening
 The second virtue is objectivity. Interviews often leave contradictory impressions: "good feeling", "very creative", "a bit expensive". A scorecard turns those impressions into measurable elements. You rate a technical skill on tangible examples, you illustrate a **soft skill** with an observed behaviour, you link added value to a specific proposal. In the end, the score speaks for itself, and the decision becomes defensible.
 
 Finally, the scorecard brings traceability. It goes with you from the brief to onboarding and remains the reference for your reviews. It serves to validate the engagement, to objectify performance, and even to document a clean exit if priorities change. In short, it's your safeguard in a process that speed sometimes makes fragile.
+
+> **Read also:** [Flash audit: score your “freelance ready” maturity in 10 questions](/en/blog/freelance-ready-flash-audit)
 
 ## The six criteria that make the difference
 

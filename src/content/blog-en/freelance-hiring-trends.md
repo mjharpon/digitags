@@ -20,6 +20,8 @@ One of the main factors behind the rise of the independent economy is the evolut
 
 Freelancers are also drawn by the advantages this way of working offers. They enjoy greater freedom in managing their schedule, can choose the projects that interest them and often have the option of working remotely. This flexibility attracts a great deal of talent and fuels the growth of the independent economy.
 
+> **Read also:** [How to turn hiring trends to your advantage](/en/blog/turning-talent-trends-to-your-advantage)
+
 ## **The benefits of hiring freelancers**
 
 Hiring freelancers offers companies many benefits. First of all, it means access to a highly qualified, specialised workforce without having to take on full-time staff. Freelancers can bring specific expertise to a given project, which can be extremely beneficial for companies that need specialist skills in the short or medium term.
@@ -46,7 +48,7 @@ Some companies, like us at digitags, are also taking a more proactive approach t
 
 The most in-demand freelance skills vary depending on market needs. However, some skills are generally highly sought after. Here are a few examples of skills currently in strong demand among freelancers:
 
-1.  [**Web**](/en/roles/freelance-web-developer) and mobile development: with the growth of e-commerce and mobile apps, web and mobile development skills are in high demand. Freelancers specialising in programming languages such as HTML, CSS, JavaScript, Python and Java are highly sought after.
+1.  [**Web**](/en/roles/freelance-web-developer) and mobile development: with the growth of e-commerce and [mobile apps](/en/roles/freelance-mobile-developer), web and mobile development skills are in high demand. Freelancers specialising in programming languages such as HTML, CSS, JavaScript, Python and Java are highly sought after.
 2.  Design: companies are increasingly looking to stand out visually, which has led to strong demand for freelancers specialising in design. Skills in logo creation, user interface design and image retouching are particularly sought after.
 3.  Content writing: demand for quality content is constantly increasing, which has created strong demand for freelancers specialising in content writing, particularly [**SEO**](/en/roles/freelance-seo-consultant). Skills in copywriting, search engine optimisation and blog writing are highly sought after.
 

@@ -10,19 +10,19 @@ Are you familiar with [UX Writing](/en/roles/freelance-ux-writer)? Mélanie, an 
 
 ### \> Who are you and what do you do day to day?
 
-I'm Mélanie Michou, UX Writer! My job is to **create or improve the user experience of a digital product through content**.
+I'm Mélanie Michou, UX Writer! My job is to **create or improve the user experience of a [digital product](/en/projects/digital-product-design) through content**.
 
 **Day to day:**
 
 -   I work very closely with the design, product and development teams. The idea is to collaborate so we understand users' goals and needs together, in order to offer them the best possible journey.
--   I design a platform's content based on user research, data and usability tests.
+-   I design a platform's content based on [user research](/en/projects/ux-research), data and usability tests.
 -   I use the right words — the ones that both make things easier for users and help the company I work for reach its business goals!
 
 ![](/uploads/blog/linterview-de-melanie-michou-ux-writer-freelance-0.jpeg)
 
 ### \> What's your background, and how did you get into UX Writing?
 
-I have just over 5 years' experience in content. I first **studied at CELSA**, a communications school with a strong focus on sociology and research. My **first job was at BETC**, a big advertising agency, where I was an editorial project manager. **I helped companies find their voice**: one that would set them apart and let them speak to their customers better, in a more human, personalised way. I worked for great brands such as AccorHotels, Crédit Agricole, Europcar, EDF… And above all, I learnt an enormous amount, which I still use every day!
+I have just over 5 years' experience in content. I first **studied at CELSA**, a communications school with a strong focus on sociology and research. My **first job was at BETC**, a big advertising agency, where I was an editorial [project manager](/en/roles/freelance-project-manager). **I helped companies find their voice**: one that would set them apart and let them speak to their customers better, in a more human, personalised way. I worked for great brands such as AccorHotels, Crédit Agricole, Europcar, EDF… And above all, I learnt an enormous amount, which I still use every day!
 
 After that experience, **I went freelance as a Copywriter.** In 3 years, I worked for more than 50 different clients, in sectors ranging from banking to wellness, by way of spirits! The common thread in most of these experiences was my love of words and their power. I was increasingly being called in to build or optimise web platforms through words, and at the same time I was discovering the UX Writer role, still not very developed in France.
 
@@ -39,7 +39,7 @@ I think you need to **have a passion for words and a strategic vision of content
 If I had to list the main skills:
 
 -   Knowing how to write simply and effectively
--   Design thinking: UX Writers are designers of words, using the same work processes as designers.
+-   [Design thinking](/en/projects/design-thinking): UX Writers are designers of words, using the same work processes as designers.
 -   Content strategy: how to solve UX problems with the right words
 -   Knowing how to run user research and testing: in UX Writing, you don't write intuitively, you consciously choose the right words thanks to data and the research you've carried out!
 -   And finally, more technical skills, such as understanding tools like Figma
@@ -70,7 +70,7 @@ Fortunately, every choice is justified, since we rely on data and research to wr
 
 I was brought in by Digitags for a two-month freelance engagement. **I was the first UX Writer to join Crédit Agricole's digital factory**, to create a new app and a new innovative service!
 
-Very quickly, and after tailored support from digitags.work, I was integrated into a team made up of a PO, a [UX Designer](/en/roles/freelance-ux-designer), a UI designer and a developer. Within 3 weeks, we had carried out our first research and the outline of the app was taking shape!
+Very quickly, and after tailored support from digitags.work, I was integrated into a team made up of a PO, a [UX Designer](/en/roles/freelance-ux-designer), a [UI designer](/en/roles/freelance-ui-designer) and a developer. Within 3 weeks, we had carried out our first research and the outline of the app was taking shape!
 
 ### \> Resources to go further?
 

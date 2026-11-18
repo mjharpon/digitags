@@ -12,7 +12,7 @@ Il existe de nombreux types de designer, ici, nous parlerons notamment des [**UX
 
 ‍
 
-Le métier de designer est devenu une profession incontournable si vous travaillez dans le secteur du digital. En effet, un designer a pour mission de concevoir la mise en page, l’identité visuelle et la convivialité d'un site web.
+Le métier de designer est devenu une profession incontournable si vous travaillez dans le secteur du digital. En effet, un designer a pour mission de concevoir la mise en page, l’[identité visuelle](/projets/identite-visuelle-creation-ou-refonte) et la convivialité d'un site web.
 
 Un bon concepteur web doit à la fois être **créatif** et posséder des **compétences graphiques et techniques**. Il doit être capable de visualiser l'apparence d'un site (conception graphique du site) et son fonctionnement (conversion d'une conception en un site web fonctionnel).
 
@@ -25,6 +25,8 @@ Engager un designer freelance peut offrir de nombreux avantages pour votre proje
 Les designers freelances offrent une flexibilité et une adaptabilité accrues par rapport à un employé à temps plein, on en parle notamment dans notre article sur [**les raisons de recruter un freelance plutôt qu’un CDI**](https://www.digitags.work/blog/pourquoi-recruter-un-freelance-plutot-quun-cdi#:~:text=Lorsque%20vous%20recrutez%20un%20salari%C3%A9,que%20celui%20d'un%20CDI.). Ils peuvent par ailleurs travailler à distance, ce qui vous permet de collaborer avec des talents du monde entier.
 
 ‍
+
+> **À lire aussi :** [Comment choisir la meilleure agence de création de sites web ?](/blog/comment-choisir-la-meilleure-agence-de-creation-de-sites-web)
 
 ## **Les compétences à rechercher chez un designer freelance**
 
@@ -46,14 +48,14 @@ Comme je le disais dans l'intro, il existe plusieurs branches dans le métier de
 
 Le métier de web-designer se décline en deux spécialisations, l’[UX designer](/metiers/ux-designer-freelance) et l’[UI designer](/metiers/ui-designer-freelance) :
 
--   **Un UI designer** ou concepteur d’interface utilisateur est en charge du design graphique de l’interface des produits digitaux.
+-   **Un UI designer** ou concepteur d’interface utilisateur est en charge du design graphique de l’interface des [produits digitaux](/projets/concevoir-un-produit-digital).
 -   **Un UX Designer** a pour mission d’imaginer et de concevoir des parcours utilisateurs en s'appuyant sur le comportement des utilisateurs.
 
 -   **L’illustrateur** a un profil beaucoup plus artistique que technique. Il crée des dessins, des croquis ou des esquisses, au crayon ou via un logiciel, que vous pourrez mettre en avant dans la communication visuelle de votre entreprise. Les illustrateurs fournissent en quelque sorte des œuvres d'art complexes pour des supports allant des magazines aux sites web.
--   **Le Motion Designer** a pour objectif de réaliser des productions graphiques incorporant de la vidéo, de l’animation 3D, des effets spéciaux, des sons ou encore de la typographie.
--   **Le Product Designer** doit quant à lui concevoir des produits digitaux en respectant un cahier des charges.
+-   **Le [Motion Designer](/metiers/motion-designer-freelance)** a pour objectif de réaliser des productions graphiques incorporant de la vidéo, de l’animation 3D, des effets spéciaux, des sons ou encore de la typographie.
+-   **Le [Product Designer](/metiers/product-designer-freelance)** doit quant à lui concevoir des produits digitaux en respectant un cahier des charges.
 
-Vous pouvez également avoir des spécialistes en conception d'applications mobiles, de logos, d’animation, etc.
+Vous pouvez également avoir des spécialistes en conception d'[applications mobiles](/metiers/developpeur-mobile-freelance), de logos, d’animation, etc.
 
 Il est donc nécessaire que vos besoins soient bien définis pour que le freelance que vous choisirez aient les compétences adaptées à ce que vous recherchez.
 

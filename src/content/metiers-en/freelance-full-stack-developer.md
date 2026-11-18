@@ -51,7 +51,7 @@ Bringing in a freelance full-stack developer can be the ideal solution, for thes
 -   Technological versatility : Whether it's designing an attractive user interface, building a high-performing API or optimising the database, the freelance full-stack developer masters every technical layer needed to carry a project end to end.
 -   Adaptability to the project's needs : Used to handling varied projects, they can work on specific features or on the whole application, adapting to the constraints and priorities you set.
 -   Technical expertise : Through constant technology watch, they can propose the best tools and frameworks (React, Node.js, Angular, Django and more) to guarantee your projects' robustness, scalability and maintainability.
--   Smooth integration and collaboration : Used to working with multidisciplinary teams (designers, [project managers](/en/roles/freelance-project-manager), DevOps), they slot easily into your existing processes to keep development continuous and high quality.
+-   Smooth integration and collaboration : Used to working with multidisciplinary teams (designers, [project managers](/en/roles/freelance-project-manager), [DevOps](/en/roles/freelance-devops-engineer)), they slot easily into your existing processes to keep development continuous and high quality.
 -   Support and skills transfer : Beyond writing code, they can train your teams on modern tooling, development best practices (CI/CD, automated testing and more) and Agile methodologies to speed up your organisation's progression.
 
 digitags.work makes it easy to connect with qualified freelance full-stack developers, to help you reach your goals. [**Let's discuss your project**](/en/contact)!

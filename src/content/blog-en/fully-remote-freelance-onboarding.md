@@ -3,6 +3,7 @@ title: "Remote onboarding: a fully remote welcome kit"
 description: "How to onboard a fully remote freelancer well with our virtual welcome kit — and make bringing in freelancers easier than ever."
 date: 2025-11-23
 image: "/uploads/blog/onboarding-freelance-full-remote-cover.webp"
+tags: [freelancer]
 ---
 
 Imagine welcoming your new fully remote freelancer with no office coffee, no badge and no desk. In a 100% remote setting, remote onboarding becomes the decisive step in turning an engagement into a genuine partnership. This guide shows you how to put together a memorable virtual welcome kit, make bringing in freelancers smoother, and reflect the friendly (and expert) spirit of digitags.work.
@@ -14,6 +15,8 @@ A digital "welcome pack" serves three purposes:
 -   **Clarify**: your expectations, your tools, your deadlines.
 -   **Humanise**: show that a warm Slack is worth just as much as a handshake.
 -   **Retain**: a smooth start keeps fully remote freelance talent on board for the long term.
+
+> **Read also:** [A short freelancing glossary for first-time clients](/en/blog/freelance-glossary)
 
 ## The 7 must-have elements of the digital kit
 

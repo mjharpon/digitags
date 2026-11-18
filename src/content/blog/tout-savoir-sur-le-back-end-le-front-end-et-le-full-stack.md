@@ -18,6 +18,8 @@ Les **[développeurs back-end](/metiers/developpeur-back-end-freelance)** utilis
 
 ‍
 
+> **À lire aussi :** [Code durable : mesurer l’empreinte du code](/blog/code-durable)
+
 ## **Langages de programmation et frameworks back-end**
 
 Il existe de nombreux langages de programmation et frameworks utilisés pour développer le back-end. Voici quelques-uns d'entre eux :

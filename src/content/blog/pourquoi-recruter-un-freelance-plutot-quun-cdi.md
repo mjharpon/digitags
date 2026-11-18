@@ -79,6 +79,8 @@ Nous vous conseillons tout de même de ne pas dépasser 20-25% de freelances au 
 
 ‍
 
+> **À lire aussi :** [Les meilleures plateformes pour recruter des freelances en 2025](/blog/les-meilleures-plateformes-pour-recruter-des-freelances-en-2025)
+
 ## **Comment recruter un freelance qualifié ?**
 
 Vous êtes décidé, il vous faut un ferelance. Maintenant la prochaine étape, c’est de le recruter. Voici nos meilleurs conseils de recrutement, en tant qu’agence de talents freelances.

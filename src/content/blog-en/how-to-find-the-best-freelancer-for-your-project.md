@@ -26,6 +26,8 @@ Once you have a clear idea of the services you're looking for, you can set a bud
 
 Next, you need to consider how the project will be divided up and how much time will be needed to complete it. Don't forget that any extension of the timeline will have a direct impact on your budget.
 
+> **Read also:** [Freelance Product Owner | Find the right person for my project](/en/blog/freelance-product-owner-find-the-right-fit)
+
 ## **Where to find qualified freelancers**
 
 Once you've clearly defined the type of service you're looking for and all the requirements and constraints, you can start looking for a competent, reliable freelancer. There are several places where you can find qualified freelancers for your project.

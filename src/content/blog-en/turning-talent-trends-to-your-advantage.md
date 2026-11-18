@@ -12,7 +12,7 @@ Technology is without doubt the main driver of this change. It has shaped this y
 
 On top of all this comes the post-coronavirus era, which keeps us at home. More than ever, we have become dependent on technology to entertain ourselves, do our shopping and now work. Even though many professionals and sectors still see technology as a threat to their roles, [54% of HR talent specialists](https://www.northeastern.edu/graduate/blog/human-resources-statistics/) see it more as an opportunity.
 
-With all this context in mind, we called on Chrystal Robet-Tamborini, talent agent for [Digitags](/en), and Louis Deslus, a "Growth Marketing" influencer, to shed light on the best way to hire!
+With all this context in mind, we called on Chrystal Robet-Tamborini, talent agent for [Digitags](/en), and Louis Deslus, a "[Growth Marketing](/en/roles/freelance-growth-marketer)" influencer, to shed light on the best way to hire!
 
 ## **Transparency**
 
@@ -25,6 +25,8 @@ This first trend is about hiding nothing — not even the company's financial an
 "It makes us more efficient and shows the candidate how serious we are, and that we're not trying to push their cost down as far as possible."
 
 ![digital transparency hiring dgitags work ](/uploads/blog/comment-tourner-les-tendances-du-recrutement-a-son-avantage-0.jpeg)
+
+> **Read also:** [The benefits of working with freelancers](/en/blog/benefits-of-working-with-freelancers)
 
 ## **Remote work**
 

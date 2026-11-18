@@ -12,7 +12,7 @@ La technologie est sans nul doute le principal moteur de ce changement. Elle a f
 
 À tout cela s’ajoute l'ère post-coronavirus qui nous contraint à rester chez nous. Plus que jamais, nous sommes devenus dépendants de la technologie pour nous divertir, faire nos courses et maintenant travailler. Même si de nombreux professionnels et secteurs voient encore la technologie comme une menace pour leurs fonctions, [54% des recruteurs](https://www.northeastern.edu/graduate/blog/human-resources-statistics/) RH la voient davantage comme une opportunité.
 
-En tenant compte de tout ce contexte, nous avons appelé à la rescousse Chrystal Robet-Tamborini, agent de talent pour [Digitags](/) et Louis Deslus, influenceur en « Growth Marketing » pour vous éclairer sur la meilleure manière de recruter !
+En tenant compte de tout ce contexte, nous avons appelé à la rescousse Chrystal Robet-Tamborini, agent de talent pour [Digitags](/) et Louis Deslus, influenceur en « [Growth Marketing](/metiers/growth-marketer-freelance) » pour vous éclairer sur la meilleure manière de recruter !
 
 ## **La transparence**
 
@@ -27,6 +27,8 @@ Cette première tendance consiste à ne rien cacher, pas même les informations 
 ‍
 
 ![transparence digital recrutement dgitags travail ](/uploads/blog/comment-tourner-les-tendances-du-recrutement-a-son-avantage-0.jpeg)
+
+> **À lire aussi :** [Notre processus de matching freelance / entreprise expliqué](/blog/notre-processus-de-matching-freelance-entreprise)
 
 ## **Le travail à distance**
 

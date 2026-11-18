@@ -14,6 +14,8 @@ the two tools you need to know
 
 ## ‍**‍**
 
+> **Read also:** [The benefits of WordPress for building websites](/en/blog/benefits-of-wordpress)
+
 ## **What are the main differences between Webflow and WordPress?**
 
 ![wordpress freelance webflow dgitags ](/uploads/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021-0.webp)
@@ -108,7 +110,7 @@ o  A short learning curve, especially if you've never done web development befor
 
 o  More expensive than WordPress
 
-o  Features still in development (POS integrations, discounts, coupons, subscription sales, digital products)
+o  Features still in development (POS integrations, discounts, coupons, subscription sales, [digital products](/en/projects/digital-product-design))
 
 ### **Webflow pricing**
 

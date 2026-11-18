@@ -18,6 +18,8 @@ Working on web accessibility takes several usage scenarios into account, which m
 
 In short, accessibility aims to remove obstacles and make sure every user has a good — no, a superb — experience browsing your site. It isn't an ethical or legal obligation, at least not in every country, but above all a way of reaching a wider audience and improving satisfaction.
 
+> **Read also:** [Sustainable code: measuring your code's footprint](/en/blog/sustainable-code)
+
 ## **Why work on web accessibility?**
 
 Around 15% of the world's population lives with some form of disability, according to the World Health Organization (WHO). That represents a large group of users who could be excluded if accessibility isn't taken into account. Older people, whose numbers are rising as the population ages, are also more likely to run into difficulties when browsing websites. Older people aren't always your target audience, we agree, but either way there are people in your target audience who need your site to be accessible.

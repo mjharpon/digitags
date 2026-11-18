@@ -20,7 +20,7 @@ Here are some of a product manager's main responsibilities:
 
 ### **Building the product strategy**
 
-The PM is responsible for developing the product strategy. That means identifying market needs, running competitive research, defining the product's goals and creating a plan to reach them. Ultimately, it's about shaping a clear product vision by understanding the market, customers' needs and industry trends — then setting a product roadmap that prioritises features and improvements by their potential impact.
+The PM is responsible for developing the [product strategy](/en/projects/product-strategy). That means identifying market needs, running competitive research, defining the product's goals and creating a plan to reach them. Ultimately, it's about shaping a clear product vision by understanding the market, customers' needs and industry trends — then setting a product roadmap that prioritises features and improvements by their potential impact.
 
 ### **Project management**
 

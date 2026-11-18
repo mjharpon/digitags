@@ -3,6 +3,7 @@ title: "Les étapes clés pour la refonte de votre site web"
 description: "Les étapes clés d'une refonte de site web : audit, objectifs clairs, optimisation du contenu, design moderne et tests approfondis pour la réussir."
 date: 2025-03-03
 image: "/uploads/blog/les-etapes-cles-pour-la-refonte-de-votre-site-web-cover.webp"
+tags: [design, tech-et-data]
 ---
 
 Un site web n’est malheureusement pas éternel, et au fil du temps, il peut devenir obsolète, inefficace ou tout simplement ne plus répondre à vos besoins actuels. Vous pensez donc à refondre votre site, et vous avez bien raison !
@@ -18,6 +19,8 @@ Une refonte permet de corriger les éventuels problèmes de votre site actuel, c
 Une refonte est aussi une bonne occasion de réévaluer votre marque et de vous assurer que votre site web reflète bien votre [**identité visuelle**](https://www.digitags.work/projets/identite-visuelle-creation-ou-refonte). Les tendances évoluent, il faut donc s’assurer que votre présence en ligne soit en phase avec l'image que vous souhaitez véhiculer.
 
 ‍
+
+> **À lire aussi :** [Guide complet pour la création d'un site e-commerce](/blog/guide-complet-pour-la-creation-dun-site-e-commerce)
 
 ## **Étape 1 : audit de l'état actuel de votre site web**
 

@@ -34,6 +34,8 @@ A confidentiality clause is very important to protect privileged or confidential
 
 It can also cover any document, commercial or personal information whose disclosure could damage the company or the freelancer. It is essential that this clause is clearly defined and that both parties accept it. It must absolutely provide for a penalty in the event of a breach, set out in writing in the contract. You can also include clauses relating to unfair competition, non-solicitation and a ban on using professional contacts for personal purposes.
 
+> **Read also:** [How to attract the best freelance talent and keep them](/en/blog/attract-and-retain-top-freelance-talent)
+
 ## **Information protection measures**
 
 Any company that engages a freelancer must take measures to protect its confidential information, whether personal or commercial data. These measures mainly consist of putting systems and procedures in place so that the freelancer cannot access sensitive information.

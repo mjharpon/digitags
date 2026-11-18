@@ -20,6 +20,8 @@ An e-commerce site isn't just a question of technology. It also requires an in-d
 
 ‍
 
+> **Read also:** [The key steps of a website redesign](/en/blog/key-steps-of-a-website-redesign)
+
 ## **Online shopping statistics**
 
 Statistics show that online commerce continues to grow at a healthy pace. According to recent studies, the global e-commerce market is expected to reach several trillion dollars over the next few years. Many consumers now prefer to shop online rather than go to a physical shop. The total number of online transactions reached 2.3 billion in 2024, an increase of 8% compared with 2023.

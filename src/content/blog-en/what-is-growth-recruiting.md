@@ -16,7 +16,7 @@ Gone are the days when companies had total control over the hiring process. Acco
 
 As a result, developing a talent brand becomes particularly important. To attract more and more candidates, hiring teams need to think like marketers to revolutionise the candidate experience. To explain it better, we interviewed the founder of a hiring tool we use a lot, Louis Deslus, founder of [Neo Staff](https://neostaff.fr). For Chrystal Robet-Tomborini, talent agent at [Digitags](/en), it's an essential tool for managing all her talent as well as all her hiring campaigns.
 
-Louis is an influencer in what we might call "**_Growth Marketing_**" on LinkedIn. You only have to look at his number of followers (around 21,000) to see the interest in this new practice.
+Louis is an influencer in what we might call "**_[Growth Marketing](/en/roles/freelance-growth-marketer)_**" on LinkedIn. You only have to look at his number of followers (around 21,000) to see the interest in this new practice.
 
 Growth Marketing "is quite simply applying marketing techniques to hiring", Louis explains. It can be broken down into two hiring strategies: **_Inbound_** and **_Outbound_**. "As in marketing, we'll distribute channels differently with inbound and outbound. We mustn't forget that we're addressing human beings who are looking for values, for pieces of life they can connect with."
 

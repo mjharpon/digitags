@@ -16,6 +16,8 @@ Avant de recruter un freelance, vous devez prendre le temps de définir claireme
 
 Les freelances peuvent avoir une variété de compétences. Identifiez les compétences techniques, les connaissances spécifiques du secteur et les compétences interpersonnelles nécessaires pour assurer une intégration harmonieuse dans votre équipe.
 
+> **À lire aussi :** [Pourquoi embaucher un CMO part-time ?](/blog/pourquoi-embaucher-un-cmo-part-time)
+
 ## **Comment trouver les meilleurs freelances ?**
 
 Le moyen le plus simple pour trouver des  freelances qualifiés, c’est d’utiliser des plateformes en ligne spécialisées. Il existe de nombreuses plateformes qui vous permettent de publier des offres d'emploi et de trouver des freelances correspondant à vos critères.

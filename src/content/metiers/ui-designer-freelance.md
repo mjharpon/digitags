@@ -67,7 +67,7 @@ En tant qu'UI designer, il est important de disposer des outils et des logiciels
 Si vous faites face à l’un des défis suivants, faire appel à un UI Designer en freelance est une solution :
 
 -   **Flexibilité** : Il peut intervenir pour quelques semaines ou quelques mois, selon les besoins de vos projets de conception visuelle et d'interface utilisateur.
--   **Opérationnel** : Le UI Designer freelance peut s'intégrer rapidement à vos équipes pour créer des interfaces attrayantes, cohérentes et optimisées, en accord avec l'identité visuelle de votre marque.
+-   **Opérationnel** : Le UI Designer freelance peut s'intégrer rapidement à vos équipes pour créer des interfaces attrayantes, cohérentes et optimisées, en accord avec l'[identité visuelle](/projets/identite-visuelle-creation-ou-refonte) de votre marque.
 -   **Conseil** : Grâce à son expérience diversifiée auprès de différents clients, il apporte des solutions créatives et efficaces pour améliorer la qualité visuelle et l'ergonomie de vos interfaces digitales.
 -   **Formation** : Il peut former vos équipes internes ou accompagner un UI designer junior pour développer leurs compétences en design d’interface, gestion de design system et prototypage.
 

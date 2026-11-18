@@ -36,6 +36,8 @@ The schedule and the budget are arguably the most important project management t
 
 The right technology tools can save a team a lot of time while managing a freelance project. These tools include, for example, web systems for team communication and generating reports; CRM solutions for managing leads and customers; security systems for protecting websites; external storage services, and so on.
 
+> **Read also:** [Advice for integrating freelancers into an existing team](/en/blog/integrating-freelancers-into-your-team)
+
 ## **Managing the timeline and budget**
 
 To successfully deliver a project involving freelancers, it's important to manage the timeline and budget well. Good management enables the team to meet deadlines and reach the objectives set, within budget.

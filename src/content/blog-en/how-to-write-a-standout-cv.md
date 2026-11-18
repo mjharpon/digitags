@@ -16,6 +16,8 @@ In today's world of work, mastering digital skills has become essential to stand
 
 A digital CV is an online version of your traditional curriculum vitae, adapted to the requirements of the digital sector. It lets you not only present your skills and experience, but also include interactive elements such as links to your work or online projects. What's more, a digital CV offers better visibility on search engines like Google, increasing your chances of being spotted by hiring managers.
 
+> **Read also:** [How to turn hiring trends to your advantage](/en/blog/turning-talent-trends-to-your-advantage)
+
 ## **The key elements of a standout digital CV**
 
 To create a successful digital CV, it's important to take several key elements into account:

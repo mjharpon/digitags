@@ -48,6 +48,8 @@ Si le client change d’avis sur certains points, le chef de projet doit être c
 
 Le chef de projet doit donc savoir **s’adapter** rapidement lorsque des obstacles apparaissent.
 
+> **À lire aussi :** [Roadmap produit : intégrer un Product Manager](/blog/product-manager-freelance-roadmap)
+
 ## **Quel est son rôle ?**
 
 De plus, le chef de projet a de nombreuses tâches et responsabilités à accomplir au quotidien :

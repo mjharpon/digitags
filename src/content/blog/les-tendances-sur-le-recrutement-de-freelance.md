@@ -22,6 +22,8 @@ Les freelances sont également attirés par les avantages qu'offre ce mode de tr
 
 ‍
 
+> **À lire aussi :** [Recrutement freelance : adapter sa stratégie selon la taille d’entrreprise](/blog/recrutement-freelance-adapter-sa-strategie-selon-la-taille-dentrreprise)
+
 ## **Les avantages de l'embauche de freelances**
 
 L'embauche de freelancers présente de nombreux avantages pour les entreprises. Tout d'abord, c’est un accès à une main-d'œuvre hautement qualifiée et spécialisée, sans avoir à engager des employés à temps plein. Les freelances peuvent apporter une expertise spécifique à un projet donné, ce qui peut être extrêmement bénéfique pour les entreprises qui ont besoin de compétences spécialisées à court terme ou moyen terme.
@@ -52,7 +54,7 @@ Certaines entreprises, comme nous chez Digitags, adoptent également une approch
 
 Les compétences les plus demandées chez les freelances varient en fonction des besoins du marché. Cependant, certaines compétences sont généralement très recherchées. Voici quelques exemples de compétences qui sont actuellement en forte demande chez les freelances :
 
-1.  [**Développement web**](https://www.digitags.work/metiers/developeur-web-freelance) et mobile : Avec la croissance de l'e-commerce et des applications mobiles, les compétences en développement web et mobile sont très demandées. Les freelancers spécialisés dans les langages de programmation tels que HTML, CSS, JavaScript, Python et Java sont très recherchés.
+1.  [**Développement web**](https://www.digitags.work/metiers/developeur-web-freelance) et mobile : Avec la croissance de l'e-commerce et des [applications mobiles](/metiers/developpeur-mobile-freelance), les compétences en développement web et mobile sont très demandées. Les freelancers spécialisés dans les langages de programmation tels que HTML, CSS, JavaScript, Python et Java sont très recherchés.
 2.  Design : Les entreprises cherchent de plus en plus à se démarquer visuellement, ce qui a conduit à une forte demande de freelances spécialisés dans le design. Les compétences en création de logos, en conception d'interfaces utilisateur et en retouche d'images sont particulièrement recherchées.
 3.  Rédaction de contenu : La demande de contenu de qualité est en constante augmentation, ce qui a créé une forte demande pour les freelances spécialisés dans la rédaction de contenu, en particulier [**SEO**](https://www.digitags.work/metiers/freelance-seo). Les compétences en rédaction, en optimisation pour les moteurs de recherche et en rédaction de blogs sont très recherchées.
 

@@ -3,6 +3,7 @@ title: "Code durable : mesurer l’empreinte du code"
 description: "Code durable : méthodes, outils et bonnes pratiques pour mesurer l'empreinte carbone du développement web. Trouvez vos freelances green sur digitags.work."
 date: 2025-09-03
 image: "/uploads/blog/code-durable-cover.webp"
+tags: [tech-et-data]
 ---
 
 Le **code durable** n’est pas un gadget : c’est une façon très concrète d’aligner performance, coûts et responsabilité. Quand vous mesurez l’empreinte réelle de votre code, et que vous agissez dessus, vous gagnez sur tous les tableaux : pages plus rapides, facture cloud plus légère, SEO plus costaud et image de marque dopée. Côté méthode, rien d’ésotérique : on parle de **développement web durable** et d’**eco-conception web** appliqués au quotidien. Et si vous avez besoin d’un coup d’accélérateur, Digitags.work vous connecte rapidement à des freelances qui savent transformer la théorie en résultats.

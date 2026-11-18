@@ -3,6 +3,7 @@ title: "Our freelance / company matching process, explained"
 description: "Our freelance / company matching process: qualified sourcing and human support to find the right freelancer in 3 to 7 days."
 date: 2026-04-07
 image: "/uploads/blog/notre-processus-de-matching-freelance-entreprise-cover.webp"
+tags: [freelancer, recrutement]
 ---
 
 Finding the right freelancer for your project isn't always easy. Between CVs that all look the same, availability that never lines up and skills that are hard to evaluate, finding a freelancer can quickly turn into an obstacle course. At digitags.work, we decided to radically simplify the process. Our mission? Connecting you with the independent talent that genuinely matches your needs — no wasted time, no nasty surprises. In this article, we take you behind the scenes of our matching method and show why it makes all the difference.
@@ -17,13 +18,15 @@ Another classic pitfall: availability. How many times have you identified the pe
 
 Not to mention the administrative headache: invoicing, contracts, legal statuses, insurance… Bringing in a freelancer often means improvising as an expert in labour law and admin management. Not exactly your cup of tea when you run a small business or you're a CTO with 1,000 priorities.
 
+> **Read also:** [How to make a long-term collaboration with a freelancer work](/en/blog/long-term-freelance-collaboration)
+
 ## Our philosophy: quality before quantity
 
 At digitags.work, we made the radical choice of relevance over volume. Our freelance matching process doesn't aim to drown you in profiles, but to present only the talent that ticks your boxes. Three ultra-qualified candidates beat fifty approximate profiles.
 
 This approach rests on a simple conviction: your time is precious. You have neither the desire nor the resources to become a full-time recruiter. You want an available, competent, reliable expert who starts quickly and delivers results. Full stop.
 
-Our role? Playing translator between your business needs and freelancers' technical skills. Because a small-business founder doesn't necessarily speak the same language as a [full-stack developer](/en/roles/freelance-full-stack-developer) or a growth hacker. We decode, clarify and refine until the brief is perfectly understood on both sides.
+Our role? Playing translator between your business needs and freelancers' technical skills. Because a small-business founder doesn't necessarily speak the same language as a [full-stack developer](/en/roles/freelance-full-stack-developer) or a [growth hacker](/en/roles/freelance-growth-marketer). We decode, clarify and refine until the brief is perfectly understood on both sides.
 
 ## The 5 stages of our matching process
 
@@ -33,7 +36,7 @@ Everything starts with an in-depth conversation with you — a real human exchan
 
 We also ask questions you may not have asked yourself. Will the freelancer need to integrate into an existing team? Will they work fully remote, or will on-site sessions be needed? Do they need access to specific tools or sensitive data?
 
-This discovery phase lets us avoid 90% of casting mistakes. Because a well-crafted brief is already half the way to a successful freelance engagement.
+This [discovery phase](/en/projects/product-discovery) lets us avoid 90% of casting mistakes. Because a well-crafted brief is already half the way to a successful freelance engagement.
 
 ### Stage 2: Targeted sourcing in our qualified pool
 
@@ -73,7 +76,7 @@ This approach is what lets us maintain an excellent client satisfaction rate and
 
 ### Real business understanding
 
-We don't just do keyword matching between a need and a CV. Our team has the domain expertise to understand the technical, business and organisational stakes of your project. We know that a CTO looking for a back-end developer isn't just looking for someone who knows a language, but a profile able to scale an architecture, write clean code and work as part of a team.
+We don't just do keyword matching between a need and a CV. Our team has the domain expertise to understand the technical, business and organisational stakes of your project. We know that a CTO looking for a [back-end developer](/en/roles/freelance-back-end-developer) isn't just looking for someone who knows a language, but a profile able to scale an architecture, write clean code and work as part of a team.
 
 ### A closed, qualified network
 
@@ -101,7 +104,7 @@ Finally, you benefit from total flexibility. Need to scale up on a project? We f
 
 ## For which types of missions?
 
-Our matching process adapts to a wide variety of needs. Web and mobile development of course, with front-end, back-end, full-stack and DevOps profiles… But also digital marketing: SEO, growth hacking, social media management, content marketing.
+Our matching process adapts to a wide variety of needs. Web and mobile development of course, with front-end, back-end, full-stack and [DevOps](/en/roles/freelance-devops-engineer) profiles… But also digital marketing: SEO, growth hacking, social media management, content marketing.
 
 We also connect companies with freelancers in design and UX, data and AI, project management, digital strategy consulting… In short, every digital craft that can be externalised.
 

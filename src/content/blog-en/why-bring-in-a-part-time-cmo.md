@@ -16,6 +16,8 @@ A part-time CMO works for a company on a contract basis and part time. Unlike a 
 
 A part-time CMO can work on a wide variety of projects, such as creating and implementing marketing strategies, optimising communication channels, managing advertising campaigns and much more. Their main aim is to help the company reach its growth targets by maximising the efficiency and impact of its marketing efforts.
 
+> **Read also:** [The benefits of a freelance collective for your project](/en/blog/benefits-of-a-freelance-collective)
+
 ## **The benefits of bringing in a part-time CMO**
 
 ### **1\. Expertise at a lower cost**

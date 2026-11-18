@@ -20,6 +20,8 @@ Our agents support you in rolling out your digital strategy and your digital tra
 
 If you want to launch your digital projects with experts from the digital world, then gain market share and get ahead of your competitors, our strategic and operational advice is for you! Benefit from all the services of our private consultant platform to build your project.
 
+> **Read also:** [Bringing in the best European talent for your digital projects](/en/blog/top-european-talent-for-digital-projects)
+
 ## **The benefits of finding a freelance designer on digitags.work**
 
 Using [digitags.work](/en) has many benefits for finding a freelance designer. First of all, the platform offers you a wide choice of talented, creative designers. You can easily browse designers' profiles, look at their portfolios and find the one that best matches your specific needs.
@@ -76,7 +78,7 @@ It's our ecosystem of qualified experts! Our experts can step in across their va
 
 So we find you the freelancer **who matches your needs**. You won't need to spend hours searching for the ideal freelancer. We do it for you!
 
-As Thibaut Villamur, Head of Design at La Manufacture Digitale du Crédit Agricole, puts it: "digitags.work has become a preferred partner for strengthening our team effectively. On our projects, we need experienced, talented Designers. Whether for user research, Design production or UX training, the Tags Community has enabled us every time to find the right specialist Designer when we didn't have the resources in-house."
+As Thibaut Villamur, Head of Design at La Manufacture Digitale du Crédit Agricole, puts it: "digitags.work has become a preferred partner for strengthening our team effectively. On our projects, we need experienced, talented Designers. Whether for [user research](/en/projects/ux-research), Design production or UX training, the Tags Community has enabled us every time to find the right specialist Designer when we didn't have the resources in-house."
 
 ## **Conclusion: why choose** [**digitags.work**](/en) **to find your freelance designer?**
 

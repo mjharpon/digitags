@@ -14,7 +14,7 @@ Working with a freelance data scientist gives you sharp expertise exactly when y
 
 Data scientists sit where statistics, software and business meet. They explore the data available, frame hypotheses, build and evaluate models, then explain the results to people who aren't necessarily technical.
 
-By 2026 the scope has widened. On top of "classic" machine learning — regression, gradient boosting, time series, clustering — come generative AI and RAG architectures, language model evaluation and MLOps. A seasoned freelance data scientist also knows when you don't need a model at all: sometimes a well-defined business rule or a dashboard does the job.
+By 2026 the scope has widened. On top of "classic" machine learning — regression, gradient boosting, time series, clustering — come [generative AI](/en/ai-product-team) and RAG architectures, language model evaluation and MLOps. A seasoned freelance data scientist also knows when you don't need a model at all: sometimes a well-defined business rule or a dashboard does the job.
 
 ## **Typical missions**
 
@@ -55,7 +55,7 @@ They analyse the data, set a simple baseline, then try more advanced models. The
 
 ### Industrialisation
 
-The chosen model is packaged, versioned and integrated into your systems with the tech team, alongside a [**back-end developer**](/en/roles/freelance-back-end-developer) or DevOps engineer where needed.
+The chosen model is packaged, versioned and integrated into your systems with the tech team, alongside a [**back-end developer**](/en/roles/freelance-back-end-developer) or [DevOps](/en/roles/freelance-devops-engineer) engineer where needed.
 
 ### Monitoring and handover
 

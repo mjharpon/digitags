@@ -3,6 +3,7 @@ title: "The benefits of Webflow for building your website"
 description: "Webflow: a powerful, flexible CMS for building a site without code. Intuitive interface, templates, integrations: discover its benefits."
 date: 2025-03-17
 image: "/uploads/blog/les-avantages-de-webflow-pour-creer-son-site-internet-cover.webp"
+tags: [tech-et-data, design]
 ---
 
 We previously wrote an article on [**the benefits of WordPress**](/en/blog/benefits-of-wordpress), so it's time to talk about Webflow. In that first article, I said that every CMS has its pros and cons and that there's bound to be one that suits you. Personally, I use Webflow and it's my preferred CMS for building websites, but I promise I'll stay as impartial as possible throughout this series of articles.
@@ -19,6 +20,8 @@ THE thing that sets Webflow apart from the others is that it automatically gener
 
 Webflow is also a complete content management solution. You can create content collections, which makes it easier to update and manage blog posts, portfolios or product pages.
 
+> **Read also:** [How to choose the best web design agency?](/en/blog/how-to-choose-a-web-design-agency)
+
 ## **The benefits of Webflow**
 
 One of Webflow's main advantages is its ability to combine design flexibility with the power of a CMS. With this tool, you can build websites that are not only beautiful but also functional. Unlike other platforms that limit customisation, Webflow gives you total design freedom. And if you'd rather not bother, there are tons of free and paid templates created by [**UX**](/en/roles/freelance-ux-designer) and [**UI designers**](/en/roles/freelance-ui-designer).
@@ -31,7 +34,7 @@ Webflow is pretty good when it comes to search engine optimisation (SEO). You ca
 
 Webflow offers a [**marketplace of templates**](https://webflow.com/marketplace) and themes that can serve as a starting point for building websites. These templates are designed by pros, and there's something for every taste and every industry. Using these templates saves time, especially if you don't have the time, the skills or the desire to start from scratch. It's what I recommend for people who are new to Webflow and want to launch a site and test their market quickly.
 
-Choosing a template doesn't lock you in: you can always change the colours, fonts and layouts to match your brand identity. That lets you keep a consistent image. Templates are fully responsive, even if they sometimes need a few tweaks once you've reworked the design.
+Choosing a template doesn't lock you in: you can always change the colours, fonts and layouts to match your [brand identity](/en/projects/visual-identity). That lets you keep a consistent image. Templates are fully responsive, even if they sometimes need a few tweaks once you've reworked the design.
 
 ![\_\_wf\_reserved\_inherit](/uploads/blog/les-avantages-de-webflow-pour-creer-son-site-internet-1.webp)
 

@@ -24,6 +24,8 @@ Si vous souhaitez lancer vos projets digitaux avec des experts du milieu digital
 
 ‍
 
+> **À lire aussi :** [Comment trouver le bon designer en freelance ?](/blog/comment-trouver-le-bon-designer-en-freelance)
+
 ## **Les avantages de trouver un designer freelance sur digitags.work**
 
 L'utilisation de [digitags.work](/) présente de nombreux avantages pour trouver un designer freelance. Tout d'abord, la plateforme vous offre un large éventail de choix parmi des designers talentueux et créatifs. Vous pouvez parcourir facilement les profils des designers, consulter leurs portfolios et trouver celui qui correspond le mieux à vos besoins spécifiques.

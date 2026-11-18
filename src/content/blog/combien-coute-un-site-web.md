@@ -24,6 +24,8 @@ Et puis la création d'un site web s'étend également à la phase de développe
 
 ‍
 
+> **À lire aussi :** [Guide complet pour la création d'un site e-commerce](/blog/guide-complet-pour-la-creation-dun-site-e-commerce)
+
 ## **Les coûts associés à la conception d'un site web**
 
 Lorsqu'il s'agit de concevoir un site web, il est important de comprendre qu'il existe une multitude de coûts associés au processus. Il y a évidemment les frais de conception, qui incluent le travail des designers et des développeurs. Ces coûts peuvent varier considérablement en fonction de l'expérience et de vos besoins, mais on en parle juste après. Un designer freelance peut facturer moins qu'une agence, ce qui peut être une bonne option si vous souhaitez optimiser le rapport coût/qualité.

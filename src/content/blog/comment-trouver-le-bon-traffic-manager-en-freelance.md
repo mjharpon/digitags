@@ -83,6 +83,8 @@ Maintenant que vous avez une idée plus précise des compétences requises pour 
 
 ![traffic manager dgitags statistiques web traffic ](/uploads/blog/comment-trouver-le-bon-traffic-manager-en-freelance-2.webp)
 
+> **À lire aussi :** [Le growth recruiting, c’est quoi ?](/blog/le-growth-recruiting-cest-quoi)
+
 ## **Comment trouver le meilleur traffic manager freelance pour votre entreprise ?**
 
 En suivant ces conseils, vous pouvez trouver le professionnel idéal pour répondre à vos besoins :

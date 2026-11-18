@@ -3,6 +3,7 @@ title: "E-invoicing: ready for September 2026?"
 description: "Mandatory e-invoicing in 2026: everything about the reform, platforms, compliance and the key steps for a successful transition."
 date: 2026-05-30
 image: "/uploads/blog/facturation-electronique-pret-pour-septembre-2026-cover.webp"
+tags: [freelancer]
 ---
 
 September 2026. That date is etched into the diary of every French company, whatever its size. Why? Because by then, **e-invoicing** will become mandatory for all economic players in the country. An unavoidable digital shift that upends habits, shakes up admin processes and raises quite a few questions. Are you the head of a *TPE* (a French very small business), an HR director, a CMO or a CTO? Then this article is for you. Let's take stock together, without unnecessary jargon, of what really lies ahead.
@@ -22,6 +23,8 @@ September 2026. That date is etched into the diary of every French company, what
 The **e-invoicing obligation** is part of a broader digital transition driven by the French State. The goal? Simplify exchanges between companies (the famous B2B), fight VAT fraud, speed up payment times and, incidentally, reduce the carbon footprint linked to paper. Ambitious, isn't it?
 
 But be careful: this isn't just an option or a recommendation. From September 2026, all companies subject to VAT will have to be able to receive electronic invoices. For issuing invoices, a phased timetable has been put in place according to company size. Large companies and *ETI* (mid-sized companies) will lead the way, followed by very small businesses and SMEs (*TPE* and *PME*). Suffice it to say it's time to get serious about it.
+
+> **Read also:** [Why hire freelancers in 2026?](/en/blog/why-hire-freelancers-in-2026)
 
 ## Why this e-invoicing reform?
 

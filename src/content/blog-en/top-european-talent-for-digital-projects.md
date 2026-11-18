@@ -33,6 +33,8 @@ You keep control of the final decision: we present several profiles that we beli
 
 [**Hire a freelancer**](/en/hire-a-freelancer) or a freelance studio with digitags.work by [**sending us your requirements.**](/en/contact)
 
+> **Read also:** [Freelance web marketing expert - Digital marketing strategies and development](/en/blog/freelance-web-marketing-expert)
+
 ## **Donutz Digital: the digital marketing agency supporting you across Europe**
 
 If you want to go further and maximise your marketing performance, our agency [**Donutz Digital**](https://donutzdigital.com/fr/) supports you with tailored strategies, led by senior experts who run campaigns across Europe, and beyond.
@@ -65,7 +67,7 @@ By combining digitags.work's expertise in finding the best freelancers with Donu
 
 -   **A high-performing digital ecosystem**: bring in expert talent and benefit from strategic support.
 -   **Time and efficiency gains**: our teams work together for smooth, fast execution.
--   **A tailored approach**: whether it's a website redesign, an advertising campaign or an SEO strategy, we have a solution for you.
+-   **A tailored approach**: whether it's a [website redesign](/en/projects/website-redesign), an advertising campaign or an SEO strategy, we have a solution for you.
 
 **Need a freelancer?** Find the right talent on [**digitags.work**](/en)
 

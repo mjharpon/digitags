@@ -16,7 +16,7 @@ En sachant cela, comment vous y retrouvez ? Avez-vous besoin d’une équipe c
 
 Il en existe également un sixième – aux allures plutôt mythiques – que nous vous réservons pour la fin de cet article.
 
-Pour mieux vous présenter cet univers fascinant, nous avons appelé à la rescousse Levent Ozata, expert UX research depuis de nombreuses années.
+Pour mieux vous présenter cet univers fascinant, nous avons appelé à la rescousse Levent Ozata, expert [UX research](/projets/mener-une-phase-dux-research) depuis de nombreuses années.
 
 ‍
 
@@ -33,6 +33,8 @@ Tout débute avec DonaldNorman, psychologue et chercheur cognitif, lorsqu’il f
 L’humain occupe une place cruciale dans le domaine de l’UX design, car tout dépend de son interaction avec des produits et services quotidiens comme des sites web, des applications, et même des machines à café. C’est une discipline extrêmement variée, combinant des éléments de psychologie, de business, d’études de marché, de design et de technologie. Cela peut aller de la sensation d’un produit physique dans votre main à la simplicité du processus de paiement lors d’un achat en ligne. L’objectif de la conception UX est de créer des expériences faciles, efficaces, pertinentes et agréables pour l’utilisateur.
 
 En combinant les différents aspects cités précédemment, l’UX designer permet de créer un pont entre une entreprise et les besoins de leurs clients. Quand on y pense, l’UX Designer ferait un super viaduc.
+
+> **À lire aussi :** [Webflow vs WordPress :  Quelle est la meilleure plateforme de création de site Web en 2021 ?](/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021)
 
 ## **UI designer : _user interface_**
 
@@ -58,7 +60,7 @@ C’est un rôle qui requiert une excellente faculté de communication, mais aus
 
 « _Il y a une tonne de manières dont une application s’adresse à vous :  parfois cela colle à votre culture, à vos attentes, à qui vous êtes et d’autres cela ne correspond pas parce que ce n’est pas écrit pour vous._ »
 
-Tout comme l’aspect visuel, le texte de chaque interface doit être conçu avec design. Le rôle d’un UX writer va être d’écrire tout type de texte pour des applications, des sites internet et d’autres produits numériques. C’est lui qui aura la tâche de trouver les mots justes pour du contenu appelé « microcopie » comme les menus, les définitions, les boutons, les étiquettes, les _chatbots_ ou encore les messages d’erreurs. Un bon UX writer aura le talent de créer des microcopies très intuitives pour n’importe quel utilisateur, sans s’éloigner de la voix de la marque pour laquelle il travaille.
+Tout comme l’aspect visuel, le texte de chaque interface doit être conçu avec design. Le rôle d’un UX writer va être d’écrire tout type de texte pour des applications, des sites internet et d’autres [produits numériques](/projets/concevoir-un-produit-digital). C’est lui qui aura la tâche de trouver les mots justes pour du contenu appelé « microcopie » comme les menus, les définitions, les boutons, les étiquettes, les _chatbots_ ou encore les messages d’erreurs. Un bon UX writer aura le talent de créer des microcopies très intuitives pour n’importe quel utilisateur, sans s’éloigner de la voix de la marque pour laquelle il travaille.
 
 « _Cela s’adresse à bien plus que la création de contenu ou juste l’esthétique d’un texte. Au cœur de cette fonction, on s’adresse à l’utilisateur de la meilleure façon possible, tant dans la conception que dans le contenu._ »
 

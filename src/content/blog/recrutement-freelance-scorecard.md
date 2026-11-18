@@ -3,6 +3,7 @@ title: "Scorecard RH : recrutement  rapide"
 description: "Découvrez notre scorecard RH pour un recrutement éclair : identifiez, évaluez et accueillez le talent idéal via Digitags.work."
 date: 2025-09-26
 image: "/uploads/blog/recrutement-freelance-scorecard-cover.webp"
+tags: [recrutement]
 ---
 
 Le **recrutement freelance** peut parfois se faire dans l’urgence : dénicher la bonne personne, valider l’adéquation culturelle, sécuriser le budget, cadrer les livrables… et le faire vite. Entre profils LinkedIn, plateformes spécialisées et recommandations d’amis, il est pourtant facile de s’éparpiller et de perdre de vue l’essentiel : votre objectif business à court terme.
@@ -20,6 +21,8 @@ La deuxième vertu, c’est l’objectivité. Les entretiens nourrissent souvent
 Enfin, la scorecard apporte de la traçabilité. Elle vous accompagne du brief à l’onboarding et reste la référence de vos revues. Elle sert à valider la mission, à objectiver la performance, et même à documenter une sortie propre si les priorités changent. En clair, elle est votre garde-fou dans un processus que la vitesse rend parfois fragile.
 
 ‍
+
+> **À lire aussi :** [senior vs junior : comment choisir](/blog/freelance-senior-vs-junior-comment-choisir)
 
 ## Les six critères qui font la différence,
 

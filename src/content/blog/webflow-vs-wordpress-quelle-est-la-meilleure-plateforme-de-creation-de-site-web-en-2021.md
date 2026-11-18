@@ -16,6 +16,8 @@ les deux outils à connaitre
 
 ## ‍**‍**
 
+> **À lire aussi :** [Les avantages de WordPress pour la création de sites web](/blog/les-avantages-de-wordpress-pour-la-creation-de-sites-web)
+
 ## **Quelles sont les principales différences entre Webflow et WordPress ?**
 
 ‍
@@ -142,7 +144,7 @@ o  Petit temps d’apprentissage, sur tout si vous n'avez jamais fait de déve
 
 o  Plus cher que Wordpress
 
-o  Fonctionnalités en cours de développement (intégrations POS, les remises, les coupons, la vente d’abonnement, les produits numériques)
+o  Fonctionnalités en cours de développement (intégrations POS, les remises, les coupons, la vente d’abonnement, les [produits numériques](/projets/concevoir-un-produit-digital))
 
 ### **Prix de Webflow**
 

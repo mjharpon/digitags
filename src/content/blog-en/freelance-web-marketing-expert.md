@@ -24,6 +24,8 @@ However, there are certain limits to the relationship with a freelance web marke
 
 In addition, there can sometimes be a lack of transparency or accountability when it comes to monitoring projects or achieving the objectives set.
 
+> **Read also:** [Why bring in a part-time CMO?](/en/blog/why-bring-in-a-part-time-cmo)
+
 ## How to find a freelance web marketing expert
 
 There are several ways to find a web marketing expert: searching the web, looking on specialist social networks, using freelance marketplaces, or contacting a specialist talent agency.

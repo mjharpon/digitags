@@ -10,7 +10,7 @@ Find the ideal freelance [Product Owner](/en/roles/freelance-product-owner) to t
 
 You have a project idea, but you need a capable leader to turn it into reality? Find the ideal freelance Product Owner to support you. With project management skills, a freelance Product Owner can help you make the right decisions and steer your project to success.
 
-Whether you want to develop a mobile app, build a website or [**launch a new digital product**](/en/projects/digital-product-design), a freelance Product Owner can support you at every step of the process. They can help you set a clear roadmap, identify short- and long-term objectives, and align your project with the needs of your target audience.
+Whether you want to develop a [mobile app](/en/roles/freelance-mobile-developer), build a website or [**launch a new digital product**](/en/projects/digital-product-design), a freelance Product Owner can support you at every step of the process. They can help you set a clear roadmap, identify short- and long-term objectives, and align your project with the needs of your target audience.
 
 By engaging a freelance Product Owner, you benefit from the experience and skills of qualified talent without bearing the cost and long-term commitment of a full-time staff member. You get the opportunity to access a higher level of talent, while keeping the flexibility to work together according to your needs.
 
@@ -19,6 +19,8 @@ By engaging a freelance Product Owner, you benefit from the experience and skill
 A Product Owner (PO) is a person who manages the design and delivery of a digital product with an IT dimension, such as websites, apps or software. The PO steers the delivery of digital projects using [**agile practices**](/en/roles/freelance-agile-coach) and Scrum to manage product development and the backlog.
 
 A freelance Product Owner is an independent professional with in-depth expertise in project management and in a specific field. As project leader, their role is to understand the client's needs, define a clear vision for the product and work closely with the development team to ensure the objectives set are achieved.
+
+> **Read also:** [Freelance web marketing expert - Digital marketing strategies and development](/en/blog/freelance-web-marketing-expert)
 
 ## **Skills of a freelance Product Owner**
 

@@ -3,6 +3,7 @@ title: "The benefits of a freelance collective for your project"
 description: "Why work with a freelance collective? Flexibility, varied expertise and controlled costs: discover the benefits of a tailor-made team."
 date: 2025-03-24
 image: "/uploads/blog/les-avantages-dun-collectif-de-freelances-pour-votre-projet-cover.webp"
+tags: [freelancer]
 ---
 
 Looking for one or more independent professionals for your next project? Working with a freelance collective might be the perfect solution for you – let's check that together in this article.
@@ -14,6 +15,8 @@ They can adapt to your needs and step in at different stages of your project. Le
 ## What is a freelance collective?
 
 A freelance collective is a group of several freelancers (you'd probably guessed that much) from different areas of expertise, who work together to pool their skills, share mission opportunities and take on somewhat bigger projects. Unlike agencies, these collectives operate without a hierarchy, allowing each member to keep their independence while enjoying the benefits of teamwork. A freelance collective can be a great alternative to the traditional dev agency. Here are its advantages.
+
+> **Read also:** [Why bring in a part-time CMO?](/en/blog/why-bring-in-a-part-time-cmo)
 
 ## **The benefits of freelance collectives**
 

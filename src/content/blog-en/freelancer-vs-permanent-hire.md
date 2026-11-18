@@ -51,7 +51,7 @@ One of the main advantages of hiring a freelancer is the specialist expertise th
 
 Freelancers are often the most up to date on the latest trends and best practices in their area of expertise. That lets you stay competitive and benefit from the most recent knowledge in your sector. Discover all the [**benefits of working with a freelancer**](/en/blog/benefits-of-working-with-freelancers).
 
-_" On some projects, we needed very specific skills that we didn't have in-house. For example, one engagement required a Jahia CMS developer, another needed a very experienced digital architect, and so on. It also happened that we had the necessary expertise in-house but not enough available resources. For example for [Product Owner](/en/roles/freelance-product-owner), front-end developer or designer roles. "_ adds André Tonic.  
+_" On some projects, we needed very specific skills that we didn't have in-house. For example, one engagement required a Jahia CMS developer, another needed a very experienced digital architect, and so on. It also happened that we had the necessary expertise in-house but not enough available resources. For example for [Product Owner](/en/roles/freelance-product-owner), [front-end developer](/en/roles/freelance-front-end-developer) or designer roles. "_ adds André Tonic.  
 
 So independent workers can be very useful if the company needs sharp expertise at a given moment, because they can generally be more productive than junior salaried staff, especially if they're experienced or senior.
 
@@ -68,6 +68,8 @@ You need to ask yourself a few questions:
 To conclude, there isn't necessarily one hiring choice that's better than another. Your decision depends above all on your needs and expectations.
 
 We do, however, advise you not to exceed 20-25% freelancers overall within the organisation or on a given project, as this risks creating coordination or management problems within the engagement. Also, make sure you properly integrate your freelancers into your company's professional and social activities, to create genuine immersion and help them thrive.
+
+> **Read also:** [How to find the right freelance traffic manager](/en/blog/how-to-find-the-right-freelance-traffic-manager)
 
 ## **How do you hire a qualified freelancer?**
 

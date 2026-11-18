@@ -3,6 +3,7 @@ title: "Securing a freelance engagement: the complete legal guide"
 description: "Freelance contracts, legal framework, reclassification risk: how to secure your freelance engagements and avoid the pitfalls when bringing in a freelancer."
 date: 2026-04-27
 image: "/uploads/blog/securiser-une-mission-freelance-guide-juridique-complet-cover.webp"
+tags: [freelancer]
 ---
 
 Engaging a freelancer often means flexibility, sharp expertise and time saved. But when you start bringing in freelancers, one question keeps coming up: how do you make sure everything is watertight from a legal standpoint? Because a contractual misunderstanding, a vague clause or a poorly defined status can quickly turn a promising collaboration into an administrative headache. And nobody wants to receive a reassessment from the *URSSAF* (France's social contributions collection agency) or find themselves caught up in a dispute with a contractor they thought was independent.
@@ -17,7 +18,7 @@ This is the nightmare of many companies. If the URSSAF or a court considers that
 
 ### Intellectual property: who owns what?
 
-Imagine you engage a freelance designer to overhaul your visual identity. Without an assignment of rights clause in the contract, they remain the owner of their creations. You only have a limited right of use. The result: it's impossible to fully exploit the work you commissioned without renegotiating, sometimes at a steep price. This happens more often than you'd think, especially in the creative and tech sectors.
+Imagine you engage a freelance designer to overhaul your [visual identity](/en/projects/visual-identity). Without an assignment of rights clause in the contract, they remain the owner of their creations. You only have a limited right of use. The result: it's impossible to fully exploit the work you commissioned without renegotiating, sometimes at a steep price. This happens more often than you'd think, especially in the creative and tech sectors.
 
 ### Confidentiality and non-compete clauses
 
@@ -56,6 +57,8 @@ Nobody likes to think about it at signing time, but planning the exit conditions
  
 
 <script>const checkboxes = document.querySelectorAll('.digitags-checkbox-input'); const progressBar = document.getElementById('progressBar'); const progressCount = document.getElementById('progressCount'); const completionAlert = document.getElementById('completionAlert'); const totalCheckboxes = checkboxes.length; function updateProgress() { const checkedCount = document.querySelectorAll('.digitags-checkbox-input:checked').length; const percentage = (checkedCount / totalCheckboxes) * 100; progressBar.style.width = percentage + '%'; progressCount.textContent = checkedCount; if (checkedCount === totalCheckboxes) { completionAlert.style.display = 'flex'; } else { completionAlert.style.display = 'none'; } } checkboxes.forEach(checkbox => { checkbox.addEventListener('change', updateProgress); });</script>
+
+> **Read also:** [Freelance contracts: the guide for large accounts (clauses, process, negotiation)](/en/blog/freelance-contract)
 
 ## Distinguishing a service relationship from subordination
 

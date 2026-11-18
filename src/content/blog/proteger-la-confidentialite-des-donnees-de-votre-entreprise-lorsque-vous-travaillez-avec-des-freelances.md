@@ -36,6 +36,8 @@ Une clause de confidentialité est très importante pour protéger les informati
 
 Elle peut également couvrir tout document, information commerciale ou personnelle dont la divulgation serait susceptible d’endommager l’entreprise ou le freelance. Il est essentiel que cette clause soit clairement définie et que les deux parties l'acceptent. Elle doit absolument prévoir une sanction en cas de violation, et ce par écrit dans le contrat. On peut aussi intégrer des clauses relatives à la concurrence déloyale, à la non-sollicitation et à l’interdiction d’utilisation des contacts professionnels pour un usage personnel.
 
+> **À lire aussi :** [Les erreurs à éviter lors d’une collaboration avec des freelances](/blog/les-erreurs-a-eviter-lors-dune-collaboration-avec-des-freelances)
+
 ## **Les mesures de protection des informations**
 
 Toute entreprise qui engage un freelance doit prendre des mesures pour protéger ses informations confidentielles, qu'il s'agisse de données personnelles ou commerciales. Ces mesures consistent principalement à mettre en place des systèmes et procédures afin que le freelance ne puisse pas accéder aux informations sensibles.

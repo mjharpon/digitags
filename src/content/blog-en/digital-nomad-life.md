@@ -32,6 +32,8 @@ According to Jeremy, a digital nomad is "someone who knows how to **manage their
 
 ‍
 
+> **Read also:** [How to prepare for a freelance interview](/en/blog/how-to-prepare-a-freelance-interview)
+
 ## Jeremy's portrait: how did he become a digital nomad?
 
 ### 1/ Career path and first jobs

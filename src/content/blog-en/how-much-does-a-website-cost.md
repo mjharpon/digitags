@@ -20,6 +20,8 @@ Good website design starts with understanding the business's objectives and user
 
 Then, building a website also extends to the development phase, where the mock-ups and prototypes come to life. There are two options from there: either code, using programming languages such as HTML, CSS and JavaScript to build the site's features, or no-code or low-code. In short, designing a website is an art that combines creativity and technique.
 
+> **Read also:** [Webflow, the designer's CMS in 2020?](/en/blog/webflow-the-designers-cms)
+
 ## **The costs involved in designing a website**
 
 When it comes to designing a website, it's important to understand that there are a multitude of costs involved in the process. There are, of course, the design fees, which include the work of designers and developers. These costs can vary considerably depending on experience and your needs — but we'll come to that right after. A freelance designer may charge less than an agency, which can be a good option if you want to optimise the cost/quality ratio.
@@ -32,7 +34,7 @@ That leaves hosting and domain name costs. A domain name is your site's web addr
 
 Several factors can influence the final cost of designing a website. One of the main ones is the complexity of the project. A simple showcase site, with a few pages and basic features, will generally cost less than a full e-commerce site with integrated payment systems, product catalogues and advanced features. The more complex the project, the more time and resources it will require, which will increase the total cost.
 
-Then comes the level of customisation expected. A bespoke design that perfectly reflects your brand identity will take more effort than a standard template used by lots of businesses. Customisation often involves additional research and design iterations, which can push prices up.
+Then comes the level of customisation expected. A bespoke design that perfectly reflects your [brand identity](/en/projects/visual-identity) will take more effort than a standard template used by lots of businesses. Customisation often involves additional research and design iterations, which can push prices up.
 
 The technology used for the design can also have a significant impact on costs. For example, a 100% coded site will always be more expensive than its low-code or no-code equivalent.
 

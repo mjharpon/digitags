@@ -48,6 +48,8 @@ Les références et les recommandations sont essentielles pour les freelances qu
 
 ‍
 
+> **À lire aussi :** [Recrutement freelance : la FAQ pour les C-level](/blog/recrutement-freelance-faq)
+
 ## **Gérer les conflits avec les freelances**
 
 Même si je ne vous le souhaite pas, il est possible que des conflits surgissent lors de la collaboration avec des freelances. Il peut s'agir de divergences d'opinions sur la manière de réaliser le projet, de retards dans la livraison du travail ou de problèmes de communication. Lorsque cela se produit, il est important d'aborder les problèmes de manière professionnelle et respectueuse. Commencez par avoir une conversation ouverte avec le freelance pour comprendre les problèmes et trouver des solutions mutuellement acceptables. Si cela ne résout pas le conflit, vous pouvez envisager de faire appel à un médiateur externe pour vous aider à trouver une résolution.

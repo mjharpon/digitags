@@ -53,7 +53,7 @@ En suivant ces étapes, un UX designer peut créer des produits et des services 
 Les UX designers utilisent une variété d'outils pour faciliter leur travail. Voici quelques-uns des outils les plus couramment utilisés :
 
 1.  Logiciels de conception d'interfaces utilisateur, tels que Sketch, Adobe XD et Figma, qui permettent de créer des maquettes et des prototypes interactifs.
-2.  Outils de recherche utilisateur, tels que des questionnaires en ligne, des entretiens et des tests utilisateurs, pour collecter des informations sur les besoins des utilisateurs.
+2.  Outils de [recherche utilisateur](/projets/mener-une-phase-dux-research), tels que des questionnaires en ligne, des entretiens et des tests utilisateurs, pour collecter des informations sur les besoins des utilisateurs.
 3.  Outils d'analyse de données, tels que Google Analytics, pour analyser les comportements des utilisateurs et obtenir des informations exploitables.
 4.  Outils de collaboration, tels que Trello et Slack, pour faciliter la communication et la collaboration au sein de l'équipe de développement. Découvrez [**les meilleurs outils pour collaborer avec des freelances**](/blog/les-meilleurs-outils-pour-collaborer-avec-des-freelances).
 5.  Outils de test utilisateur, tels que UserTesting, qui permettent de recueillir des commentaires et des insights des utilisateurs réels.

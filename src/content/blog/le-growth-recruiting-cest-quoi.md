@@ -16,7 +16,7 @@ Fini le temps où les entreprises avaient un contrôle total sur le processus d'
 
 Ainsi, le développement d’une marque employeur devient tout particulièrement importante. Pour attirer de plus en plus de candidats, les recruteurs doivent penser comme les marketeurs pour révolutionner l’expérience candidat. Pour mieux vous expliquer, nous avons interrogé le fondateur d’un outil de recrutement que nous utilisons particulièrement, Louis Deslus, fondateur de [Neo Staff](https://neostaff.fr). Pour Chrystal Robet-Tomborini, agent de talents chez [Digitags](/), c’est un outil indispensable pour gérer tous ses talents et aussi toutes ses campagnes de recrutement.
 
-Louis est influenceur dans ce qu'on appellerait le "**_Growth Marketing_**" sur Linkedin. Il suffit de regarder son nombre d’abonnés(environ 21 000) pour se rendre compte de l'intérêt de cette nouvelle pratique.
+Louis est influenceur dans ce qu'on appellerait le "**_[Growth Marketing](/metiers/growth-marketer-freelance)_**" sur Linkedin. Il suffit de regarder son nombre d’abonnés(environ 21 000) pour se rendre compte de l'intérêt de cette nouvelle pratique.
 
 Le Growth Marketing, « c'est tout simplement appliquer des techniques du marketing au recrutement », nous explique Louis. Il peut être décomposé en deux stratégies de recrutement **_Inbound_** (entrant) et **_Outbound_** (sortant). « Comme dans le marketing, on va distribuer des canaux différemment avec l’inbound et l’outbound. Il ne faut pas oublier qu’on s'adresse à des humains qui recherchent des valeurs, des morceaux de vie auquel se rattacher. »
 

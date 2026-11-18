@@ -22,6 +22,8 @@ En résumé, l'accessibilité vise à éliminer les obstacles et à s'assurer qu
 
 ‍
 
+> **À lire aussi :** [Combien coûte un site web ?](/blog/combien-coute-un-site-web)
+
 ## **Pourquoi travailler sur l'accessibilité web ?**
 
 Environ 15 % de la population mondiale vit avec une forme de handicap, selon l'Organisation mondiale de la santé (OMS). Ce qui représente un grand groupe d'utilisateurs qui pourraient être exclus si l'accessibilité n'est pas prise en compte. Les personnes âgées, dont le nombre augmente avec le vieillissement de la population, sont également plus susceptibles de rencontrer des difficultés lorsqu'elles naviguent sur des sites webs. Les personnes âgées ne sont pas toujours votre cible, on est d’accord, mais il y quoi qu’il en soit des personnes de votre cible qui ont besoin que votre site soit accessible.

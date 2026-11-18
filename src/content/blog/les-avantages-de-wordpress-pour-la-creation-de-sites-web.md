@@ -3,6 +3,7 @@ title: "Les avantages de WordPress pour la création de sites web"
 description: "Les avantages de WordPress pour créer un site web : facilité d'utilisation, personnalisation, SEO… Voyons si ce CMS est fait pour vous."
 date: 2025-02-24
 image: "/uploads/blog/les-avantages-de-wordpress-pour-la-creation-de-sites-web-cover.webp"
+tags: [tech-et-data]
 ---
 
 Si vous êtes ici c’est certainement que vous êtes en plein doute : vous devez créer ou recréer votre site web mais vous ne savez pas quel cms choisir. Le but de cet article n’est pas de prêcher à tout prix pour Wordpress (je suis personnellement team Webflow), mais simplement de vous expliquer en quoi ce cms est peut-être fait pour vous. On fera certainement une série d’articles sur les autres cms du marché (shopify, webflow, etc).
@@ -22,6 +23,8 @@ L'une des raisons majeures de la popularité de WordPress réside dans sa commun
 ![\_\_wf\_reserved\_inherit](/uploads/blog/les-avantages-de-wordpress-pour-la-creation-de-sites-web-0.webp)
 
 ‍
+
+> **À lire aussi :** [Webflow vs WordPress :  Quelle est la meilleure plateforme de création de site Web en 2021 ?](/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021)
 
 ## **Pourquoi choisir Wordpress pour concevoir son site ?**
 

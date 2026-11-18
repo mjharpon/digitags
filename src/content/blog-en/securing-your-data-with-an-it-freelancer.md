@@ -3,6 +3,7 @@ title: "Securing your data with an IT freelancer"
 description: "Securing your data with an IT freelancer: contract clauses, NDAs, access management. The complete guide for business leaders."
 date: 2026-02-14
 image: "/uploads/blog/securiser-vos-donnees-avec-un-freelance-it-cover.webp"
+tags: [tech-et-data]
 ---
 
 Working with an IT freelancer is often the ideal way to move fast on your tech projects without adding to your payroll. But here's the thing: as soon as an external contractor accesses your systems, your source code or your customer databases, data security becomes a central issue. Because a leak, an oversight or poorly managed access can cost a lot, a great deal, both in reputation and in GDPR compliance.
@@ -26,6 +27,8 @@ Finally, in the event of a cyberattack targeting the freelancer themselves, your
 The GDPR makes no distinction between staff and freelancers: as soon as someone processes personal data on your behalf, they're considered a processor in the legal sense. You remain responsible for protecting that data. In the event of a leak, it's your company that gets the fine, not the freelancer.
 
 In concrete terms, what does that mean? That you must be able to prove you took all the necessary measures to govern access to the data: contract, confidentiality clause, access management, traceability. Otherwise, the *CNIL* (France's data protection authority) can fine you up to 4% of your annual worldwide turnover. Not exactly the kind of budget line you plan for.
+
+> **Read also:** [The criteria for choosing a web development agency](/en/blog/how-to-choose-a-web-development-agency)
 
 ## The contractual fundamentals to protect your information
 

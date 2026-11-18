@@ -46,6 +46,8 @@ If the client changes their mind on certain points, the project manager must be 
 
 The project manager must therefore be able to **adapt** quickly when obstacles appear.
 
+> **Read also:** [How to set the budget and timeline for a project that needs freelancers](/en/blog/budget-and-timeline-for-a-freelance-project)
+
 ## **What is their role?**
 
 In addition, the project manager has many day-to-day tasks and responsibilities:

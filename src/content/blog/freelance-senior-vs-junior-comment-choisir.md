@@ -3,6 +3,7 @@ title: "senior vs junior : comment choisir"
 description: "Junior ou senior ? Découvrez comment choisir le bon profil selon vos besoins et missions. Digitags.work vous aide à recruter le bon talent."
 date: 2025-11-03
 image: "/uploads/blog/freelance-senior-vs-junior-comment-choisir-cover.webp"
+tags: [freelancer, recrutement]
 ---
 
 Choisir entre un **freelance junior** et un **freelance senior** : les deux vous emmènent à destination, mais pas de la même façon.
@@ -26,6 +27,8 @@ Mais attention : il a besoin d’un minimum de cadrage. Un brief clair, une dire
 **L’avantage pour vous :** son tarif, souvent entre 200 € et 400 € par jour, vous permet de tester, d’itérer et d’expérimenter sans exploser le budget.
 
 ‍
+
+> **À lire aussi :** [Audit flash : évaluer votre maturité “freelance ready” en 10 questions](/blog/audit-flash-evaluer-votre-maturite-freelance-ready-en-10-questions)
 
 ## Le freelance senior : expérience, recul et autonomie totale
 
@@ -103,7 +106,7 @@ Résultat : les coûts sont maîtrisés, la qualité est constante, et la monté
 ## Exemples concrets de missions
 
 -   **Campagne social media** → Junior dynamique, supervisé par un [chef de projet](/metiers/chef-de-projet-freelance).
--   **Audit SEO complet avant refonte de site** → Senior expérimenté.
+-   **Audit SEO complet avant [refonte de site](/projets/refonte-de-site-internet)** → Senior expérimenté.
 -   **Création de visuels ou templates Canva** → Junior créatif.
 -   **Pilotage de stratégie de marque ou UX** → Senior en branding.
 -   **Mise en place d’un CRM HubSpot** → Senior pour le cadrage, junior pour l’intégration.

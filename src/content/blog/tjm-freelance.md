@@ -3,6 +3,7 @@ title: "Tarif journalier moyen : décryptage par métier et par secteur"
 description: "Découvrez comment calculer votre TJM, les tarifs freelances 2025 par métier (dev, marketing, design) et recrutez les meilleurs experts sur Digitags.work."
 date: 2025-12-19
 image: "/uploads/blog/tjm-freelance-cover.webp"
+tags: [freelancer]
 ---
 
 En 2025, le TJM (taux journalier moyen) reste la métrique de référence, bien le comprendre aide autant les indépendants à fixer le bon prix que les entreprises à recruter correctement. Dans ce guide, on décortique les TJM marketing, dev et designer, pour que vous puissiez recruter (ou être recruté) en toute sérénité.
@@ -18,6 +19,8 @@ Le TJM correspond au tarif facturé pour une journée de travail d’un freelanc
 Pour un calcul rapide : revenu annuel visé ÷ jours facturables (environ 180 en France) = TJM plancher. Ajoutez 20 % pour la marge de négo, et vous obtenez votre TJM “catalogue”.
 
 ‍
+
+> **À lire aussi :** [Petit lexique du freelancing pour les clients novices](/blog/lexique-freelance)
 
 ## TJM marketing & communication : repères 2025 et facteurs d’ajustement
 
@@ -56,7 +59,7 @@ Les UX/UI designers oscillent entre **450 € et 650 €** de TJM, avec des pics
 **Ce qui fait grimper la note** :
 
 -   Maîtrise Figma + prototyping avancé..
--   Double casquette (UX research + UI).
+-   Double casquette ([UX research](/projets/mener-une-phase-dux-research) + UI).
 -   Secteur high-stakes (fintech, santé).
 
 Astuce recruteur : sur Digitags.work, envoyez votre user-flow ou wireframe dès la prise de brief, et [**laissez nous trouver le designer parfait**](https://www.digitags.work/blog/freelance-designer-trouvez-le-bon-professionnel-pour-votre-projet) pour vos besoins.

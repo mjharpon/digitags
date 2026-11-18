@@ -3,6 +3,7 @@ title: "How to evaluate a tech freelancer: a fast, effective method"
 description: "How to quickly evaluate a freelancer's technical level with tailored tests, key signals and a 4-step process to choose without mistakes."
 date: 2026-03-16
 image: "/uploads/blog/evaluer-un-freelance-tech-methode-rapide-et-efficace-cover.webp"
+tags: [tech-et-data, recrutement]
 ---
 
 Bringing in a freelancer for a strategic project is a bit like choosing a driver for a rally: you don't have three months for test runs. You need to know very quickly whether the person in front of you masters their craft or is bluffing with a well-marketed CV. Choosing a freelancer demands a clear, fast, reliable method to qualify technical skills without wasting time or money.
@@ -13,7 +14,9 @@ In this article, I share the concrete techniques we use at digitags.work to eval
 
 Unlike a permanent hire, where a probation period lets you correct course, a freelancer dives straight into the thick of it. No margin for error: every day counts, every deliverable impacts your project. Poorly qualifying an IT freelancer can cost you weeks of delay, blown budgets and an internal team frustrated at having to pick up the pieces.
 
-The problem is that many decision-makers rely solely on the portfolio or LinkedIn recommendations. The result: three weeks later you discover that your "confirmed React expert" struggles with hooks, or that your "senior DevOps" can't actually automate a CI/CD pipeline. That's where a technical test comes in.
+The problem is that many decision-makers rely solely on the portfolio or LinkedIn recommendations. The result: three weeks later you discover that your "confirmed React expert" struggles with hooks, or that your "senior [DevOps](/en/roles/freelance-devops-engineer)" can't actually automate a CI/CD pipeline. That's where a technical test comes in.
+
+> **Read also:** [Freelance tech: key skills](/en/blog/freelance-tech-skills)
 
 ## The classic mistakes that sink your selection process
 
@@ -23,7 +26,7 @@ Before talking method, let's talk about the traps 80% of recruiters fall into:
 
 **The chit-chat interview.** You spend an hour discussing company culture, agile methodology and vision. Nice — but it tells you nothing about whether the person writes clean code. The interview must validate concrete skills, not just the vibe.
 
-**The out-of-context test.** You send an ultra-academic "sorting algorithm" exercise when your real need is integrating a REST API into a mobile app. The test must match your business context, or it's useless.
+**The out-of-context test.** You send an ultra-academic "sorting algorithm" exercise when your real need is integrating a REST API into a [mobile app](/en/roles/freelance-mobile-developer). The test must match your business context, or it's useless.
 
 **Leaving the tech side out.** HR or the manager filters alone, without technical validation. The result: you bring in someone who talks well but doesn't deliver. When choosing a freelance developer, the tech side must always have a say.
 
@@ -73,11 +76,11 @@ The technical test remains the most effective tool for measuring real skills —
 
 Even if you have an in-house CTO, have the profile validated by another developer. Peer review avoids confirmation bias and brings a fresh eye. Concretely:
 
-Your lead developer spends 30 minutes on a video call with the freelancer on a sharp technical topic. Not a formal interview — just a peer-to-peer exchange on a concrete problem. Technical chemistry verifies itself in real conditions.
+Your [lead developer](/en/roles/freelance-tech-lead) spends 30 minutes on a video call with the freelancer on a sharp technical topic. Not a formal interview — just a peer-to-peer exchange on a concrete problem. Technical chemistry verifies itself in real conditions.
 
 The goal isn't to trap the candidate, but to see whether they can hold a high-level technical conversation, whether they know the state of the art of their technology, whether they have well-argued opinions on architecture choices.
 
-If your internal team doesn't have the skills to validate a highly specialised profile (data science, blockchain, AI), bring in an external expert. It costs €200-300 for an hour-long validation, but it can save you from burning €50K on an incompetent freelancer.
+If your internal team doesn't have the skills to validate a highly specialised profile ([data science](/en/roles/freelance-data-scientist), blockchain, AI), bring in an external expert. It costs €200-300 for an hour-long validation, but it can save you from burning €50K on an incompetent freelancer.
 
   The 4-step freelancer evaluation process 
 

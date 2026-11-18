@@ -3,6 +3,7 @@ title: "The key steps of a website redesign"
 description: "The key steps of a website redesign: audit, clear objectives, content optimisation, modern design and thorough testing to get it right."
 date: 2025-03-03
 image: "/uploads/blog/les-etapes-cles-pour-la-refonte-de-votre-site-web-cover.webp"
+tags: [design, tech-et-data]
 ---
 
 Sadly, a website doesn't last forever, and over time it can become outdated, ineffective or simply no longer meet your current needs. So you're thinking about redesigning your site — and you're absolutely right!
@@ -16,6 +17,8 @@ With advances in technology and changes in user behaviour, a site that was once 
 A redesign lets you fix any problems with your current site, such as technical issues (slow loading times, broken links or complicated navigation). These issues can not only frustrate users but also hurt your search engine rankings. By reworking them, you improve not only the user experience but also your online visibility, which is essential for attracting and retaining your audience.
 
 A redesign is also a good opportunity to reassess your brand and make sure your website properly reflects your [**visual identity**](/en/projects/visual-identity). Trends evolve, so you need to make sure your online presence is in step with the image you want to convey.
+
+> **Read also:** [The benefits of Webflow for building your website](/en/blog/benefits-of-webflow)
 
 ## **Step 1: audit the current state of your website**
 

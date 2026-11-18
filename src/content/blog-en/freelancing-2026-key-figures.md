@@ -3,6 +3,7 @@ title: "Freelancing in 2026: key figures and trends in independent work"
 description: "Freelancing in 2026: the key figures and trends of independent work. A strategic analysis for leaders, HR directors and CMOs."
 date: 2026-03-02
 image: "/uploads/blog/freelancing-2026-chiffres-cles-cover.webp"
+tags: [freelancer]
 ---
 
 You've probably noticed it in your own company: hiring is getting harder, talent is looking for more flexibility, and freelancing has become an unavoidable reality. Whether you're an HR director, a CMO or a small-business leader, understanding how the independent work market is evolving is a necessity.
@@ -27,13 +28,15 @@ For companies, these numbers mean one thing: the pool of freelance talent is bec
 
 <script>(function() { function animateBars() { const bars = document.querySelectorAll('.freelance-widget .fw-bar'); bars.forEach((bar, index) => { setTimeout(() => { bar.style.width = bar.getAttribute('data-width'); setTimeout(() => { bar.textContent = bar.getAttribute('data-value'); }, 800); }, index * 200); }); } if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', animateBars); } else { animateBars(); } })();</script>
 
+> **Read also:** [E-invoicing: ready for September 2026?](/en/blog/e-invoicing-ready-for-september-2026)
+
 ## The sectors most impacted by independent work
 
 While freelancing now touches every industry, some fields are seeing adoption so massive it completely redefines how they operate.
 
 ### Tech and digital: the vanguard of the movement
 
-No surprise — digital crafts lead the way. [Web developers](/en/roles/freelance-web-developer), data scientists, cybersecurity experts, [UX](/en/roles/freelance-ux-designer)/UI designers… These highly qualified profiles massively favour the freelance status. According to the latest Malt barometer, 68% of developers under 35 are seriously considering going independent within the next two years.
+No surprise — digital crafts lead the way. [Web developers](/en/roles/freelance-web-developer), [data scientists](/en/roles/freelance-data-scientist), cybersecurity experts, [UX](/en/roles/freelance-ux-designer)/UI designers… These highly qualified profiles massively favour the freelance status. According to the latest Malt barometer, 68% of developers under 35 are seriously considering going independent within the next two years.
 
 For a CTO, this reality demands a complete rethink of the staffing strategy. Gone are the days when you could rely solely on permanent hires to build your tech teams. The best talent now moves in project mode, and the organisations that have understood this are pulling ahead.
 

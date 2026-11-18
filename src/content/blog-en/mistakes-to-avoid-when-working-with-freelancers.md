@@ -40,6 +40,8 @@ Before wrapping up a collaboration, give the freelancer honest, objective feedba
 
 References and recommendations are essential for freelancers looking to grow professionally. Offer them recommendations on relevant community websites, or spread the word about them among your professional contacts.
 
+> **Read also:** [Advice for integrating freelancers into an existing team](/en/blog/integrating-freelancers-into-your-team)
+
 ## **Managing conflicts with freelancers**
 
 Even though I wouldn't wish it on you, conflicts may arise when working with freelancers. They might involve differences of opinion on how to carry out the project, delays in delivering the work or communication problems. When this happens, it's important to address the issues in a professional, respectful way. Start by having an open conversation with the freelancer to understand the problems and find mutually acceptable solutions. If that doesn't resolve the conflict, you can consider calling on an external mediator to help you find a resolution.

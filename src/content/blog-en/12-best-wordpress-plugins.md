@@ -18,6 +18,8 @@ One of the main advantages of plugins is how easy they are to use. Even if you'r
 
 Plugin developers regularly update their products to add new features and fix bugs.
 
+> **Read also:** [How much does a website cost?](/en/blog/how-much-does-a-website-cost)
+
 ## **WordPress plugins for security**
 
 Security is very often a major concern, especially with the constant rise in cyberattacks. WordPress security plugins are designed to protect your site against various types of threats: hacking attempts, malware and spam. Among the options available, plugins such as **Wordfence** and **Sucuri** are very popular. They offer features such as firewalls, security scans and blocking options to shield your site from malicious attacks.

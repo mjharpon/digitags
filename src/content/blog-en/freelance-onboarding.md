@@ -26,6 +26,8 @@ The figure that stings
 -   Loss of internal credibility (especially when the C-level has bet on the project).
 -   Back to square one on **finding a freelancer**, with—you guessed it—fresh sourcing costs.
 
+> **Read also:** [HR scorecard: fast freelance hiring](/en/blog/freelance-selection-scorecard)
+
 ## Step 1 – Before D-0: prepare the ground
 
 ### 1.1 Write a SMART brief

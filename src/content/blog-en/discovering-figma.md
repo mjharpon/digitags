@@ -26,6 +26,8 @@ Figma is a vector graphics editor and prototyping tool that is primarily web-bas
 
 Figma's feature set focuses on use in user interface and user experience design, with an emphasis on real-time collaboration. (Wikipedia)
 
+> **Read also:** [Webflow vs WordPress: which is the best website-building platform in 2021?](/en/blog/webflow-vs-wordpress)
+
 ## **The features** 
 
 ### **1/ Design**

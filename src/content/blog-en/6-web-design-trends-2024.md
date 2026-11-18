@@ -6,7 +6,7 @@ tags: [design]
 image: "/uploads/blog/les-6-tendances-de-conception-de-sites-web-a-suivre-en-2024-cover.webp"
 ---
 
-Trends come and go, so I'm sharing the 6 web design trends that caught my eye this year. Between minimalist design, micro-interactions and AI, there's plenty to talk about! This article sums up the trend watch I carried out over the first 6 months of the year, and some of these trends can also be applied to other marketing activities, so I strongly recommend reading through them even if you're not planning a website redesign.
+Trends come and go, so I'm sharing the 6 web design trends that caught my eye this year. Between minimalist design, micro-interactions and AI, there's plenty to talk about! This article sums up the trend watch I carried out over the first 6 months of the year, and some of these trends can also be applied to other marketing activities, so I strongly recommend reading through them even if you're not planning a [website redesign](/en/projects/website-redesign).
 
 ## **Trend 1: Minimalism and simplicity**
 
@@ -17,6 +17,8 @@ You'll find neutral colours, white space and minimalist typography that convey a
 Minimalism doesn't mean websites are boring or lack personality, though. On the contrary, images and illustrations are used strategically to add visual interest without overloading the page.
 
 Here's [**an example of a minimalist site**](https://studiod.nu/en/).
+
+> **Read also:** [The benefits of Webflow for building your website](/en/blog/benefits-of-webflow)
 
 ## **Trend 2: Using virtual and augmented reality**
 

@@ -20,6 +20,8 @@ By engaging freelancers, companies can tap into a global talent pool, which allo
 
 Freelancers can be a cost-effective way of handling certain tasks and projects. Instead of taking on full-time staff, companies can engage freelancers according to specific needs, which reduces the costs of benefits and the overheads associated with taking on permanent staff. Read our article on the reasons to [**hire a freelancer rather than sign a permanent contract (CDI)**](/en/blog/freelancer-vs-permanent-hire).
 
+> **Read also:** [Freelance hiring trends](/en/blog/freelance-hiring-trends)
+
 ## **Build a talent brand that appeals to freelancers**
 
 To attract the best freelancers, it's essential to build an appealing talent brand. Your talent brand is a company's image and reputation as a place to work, and it plays a central role in how freelancers perceive the company and decide whether to work with it.

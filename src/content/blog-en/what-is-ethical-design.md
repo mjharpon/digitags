@@ -68,7 +68,7 @@ Here are the 5 aspects of UX ethics:
 
 For example: _imagine you need to test an app_. _You decide to sign up for the free version just to try it. Suddenly, a big red pop-up window appears. It says the premium version is 10% off today and that you should sign up for that instead. The button to close the pop-up is nowhere to be found. Instead, there's a "Sign me up" button. You have two options: close the app and give up, or sign up for the paid version with no free trial. This kind of_ _persuasion tactic is highly unethical_.
 
-Estelle Leotard, UX writer at Studicus, says: "_If the intention of a design project is to downgrade or ignore users' needs and convince them to buy or use something, then ethics will be a problem_."
+Estelle Leotard, [UX writer](/en/roles/freelance-ux-writer) at Studicus, says: "_If the intention of a design project is to downgrade or ignore users' needs and convince them to buy or use something, then ethics will be a problem_."
 
 ‍
 
@@ -90,7 +90,7 @@ Every designer chooses to have an impact on the people who come into contact wit
 
 ![ethical designer design dgitags](/uploads/blog/le-design-ethique-quest-ce-que-cest-2.jpeg)
 
-The designer must do their best to put the target users' needs at the centre of every decision they make (and not, for example, their company's needs). You should start with **user-centred UX research**: creating user personas and carrying out surveys, observations, in-house and remote tests, and interviews.
+The designer must do their best to put the target users' needs at the centre of every decision they make (and not, for example, their company's needs). You should start with **user-centred [UX research](/en/projects/ux-research)**: creating user personas and carrying out surveys, observations, in-house and remote tests, and interviews.
 
 The feedback gathered should be used to inform the designer's decisions as well as possible. As a result, the **final product is user-centred**. It will be designed to help users achieve their goals easily and efficiently.
 

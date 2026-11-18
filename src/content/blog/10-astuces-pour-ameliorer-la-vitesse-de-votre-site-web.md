@@ -3,6 +3,7 @@ title: "10 astuces pour améliorer la vitesse de votre site web"
 description: "Améliorer la vitesse de votre site web : 10 astuces simples pour booster ses performances, son SEO et l'expérience utilisateur."
 date: 2025-05-20
 image: "/uploads/blog/10-astuces-pour-ameliorer-la-vitesse-de-votre-site-web-cover.webp"
+tags: [tech-et-data, webmarketing]
 ---
 
 Votre site web met autant de temps à charger qu’une photo sur la première version d’internet ? Il est temps de lui donner un coup de turbo ! Une page lente, c'est frustrant. Et devinez quoi ? Google n'aime pas ça non plus.
@@ -93,6 +94,8 @@ Le **lazy loading**, c’est le fait de charger les images uniquement quand l’
 -   ✅ Testez régulièrement et restez à jour
 
 ‍
+
+> **À lire aussi :** [Webflow vs WordPress :  Quelle est la meilleure plateforme de création de site Web en 2021 ?](/blog/webflow-vs-wordpress-quelle-est-la-meilleure-plateforme-de-creation-de-site-web-en-2021)
 
 ## Et si vous laissiez des pros s’en occuper ?
 

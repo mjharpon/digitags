@@ -59,7 +59,7 @@ As a UI designer, having the right tools and software matters. Here are some of 
 If you're facing any of the following challenges, bringing in a freelance UI designer is the answer:
 
 -   **Flexibility**: they can step in for a few weeks or a few months, depending on the needs of your visual design and user interface projects.
--   **Immediately operational**: a freelance UI designer quickly joins your teams to create attractive, consistent, optimised interfaces, in line with your brand's visual identity.
+-   **Immediately operational**: a freelance UI designer quickly joins your teams to create attractive, consistent, optimised interfaces, in line with your brand's [visual identity](/en/projects/visual-identity).
 -   **Advisory**: thanks to a diverse experience across clients, they bring creative, effective solutions to raise the visual quality and usability of your digital interfaces.
 -   **Training**: they can train your in-house teams, or mentor a junior UI designer to grow their skills in interface design, design system management and prototyping.
 

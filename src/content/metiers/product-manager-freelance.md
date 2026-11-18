@@ -22,7 +22,7 @@ Voici quelques-unes des principales responsabilités d’un product manager :
 
 ### **Développement de la stratégie produit**
 
-Le PM est responsable de développer la stratégie produit. Cela implique d'identifier les besoins du marché, d'effectuer des recherches concurrentielles, de définir les objectifs du produit et de créer un plan pour atteindre ces objectifs. C’est finalement créer une vision claire du produit en comprenant le marché, les besoins des clients, et les tendances de l'industrie. Puis établir une roadmap produit qui priorise les fonctionnalités et les améliorations en fonction de leur impact potentiel.
+Le PM est responsable de développer la [stratégie produit](/projets/strategie-produit). Cela implique d'identifier les besoins du marché, d'effectuer des recherches concurrentielles, de définir les objectifs du produit et de créer un plan pour atteindre ces objectifs. C’est finalement créer une vision claire du produit en comprenant le marché, les besoins des clients, et les tendances de l'industrie. Puis établir une roadmap produit qui priorise les fonctionnalités et les améliorations en fonction de leur impact potentiel.
 
 ### **Gestion de projet**
 

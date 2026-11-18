@@ -85,7 +85,7 @@ Faire appel à un développeur back-end freelance peut être la solution idéale
 -   Adaptabilité aux besoins du projet : Que ce soit pour développer un module spécifique, migrer des données ou créer une API sur mesure, le développeur back-end freelance répond avec précision aux exigences techniques de vos projets.
 -   Intégration rapide : Habitué à intervenir dans des contextes variés, il s’intègre facilement à vos processus pour garantir une continuité dans le développement et la livraison des fonctionnalités clés.
 -   Expertise technique : Grâce à une expérience diversifiée, il peut recommander des choix technologiques adaptés (frameworks, architectures, outils) pour optimiser les performances et la scalabilité de vos systèmes.
--   Accompagnement et montée en compétence : Il peut non seulement résoudre des problématiques techniques, mais aussi accompagner vos équipes en partageant ses connaissances sur les bonnes pratiques, les méthodologies DevOps ou encore les optimisations côté serveur.
+-   Accompagnement et montée en compétence : Il peut non seulement résoudre des problématiques techniques, mais aussi accompagner vos équipes en partageant ses connaissances sur les bonnes pratiques, les méthodologies [DevOps](/metiers/devops-freelance) ou encore les optimisations côté serveur.
 
 Digitags.work facilite la mise en relation avec des développeurs back-end freelances qualifiés, pour vous aider à mener vos projets techniques à bien.
 

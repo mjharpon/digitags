@@ -42,6 +42,8 @@ In addition, freelance designers generally have more time to focus on each proje
 
   
 
+> **Read also:** [digitags.work finds your freelance designer in 24 hours!](/en/blog/find-your-freelance-designer-in-24-hours)
+
 ## How do you become a freelance designer?
 
 If you'd like to work as a freelance designer, here are a few steps to follow:

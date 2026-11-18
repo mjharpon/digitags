@@ -22,7 +22,7 @@ These are the needs our clients most often bring a freelance data analyst in for
 
 - **Reporting and dashboards**: designing KPIs, building team-level dashboards, automating manual reports.
 - **Product analytics**: funnels, cohorts, retention and feature adoption, supporting the product team's decisions.
-- **Marketing performance**: ROI by channel, attribution, campaign tracking alongside the traffic manager.
+- **Marketing performance**: ROI by channel, attribution, campaign tracking alongside the [traffic manager](/en/roles/freelance-traffic-manager).
 - **Tracking plan**: defining the events to track, testing the implementation, aligning it with user consent.
 - **One-off analyses**: market sizing from internal data, pricing analysis, diagnosing a drop in activity.
 

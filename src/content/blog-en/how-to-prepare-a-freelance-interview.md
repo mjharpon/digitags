@@ -26,6 +26,8 @@ As a freelancer, you're coming in for a specific need, so don't try to set out a
 
 ![freelance digital interview preparation dgitags hiring engagement](/uploads/blog/comment-preparer-un-entretien-freelance-0.jpeg)
 
+> **Read also:** [Our freelance / company matching process, explained](/en/blog/our-freelance-matching-process)
+
 ## **How does a freelance interview work?**
 
 First of all, you should know that the selection process for freelance interviews is generally shorter than a traditional process. A company looking for freelancers wants things to move quickly, since it's looking for someone for a specific need. The timing is therefore tight.
@@ -46,7 +48,7 @@ Once the introductions are over, the client may ask you fairly standard question
 
 The company is also likely to take some time to go over the engagement in detail again and re-explain what it expects from the freelancer. Use this time to make sure you've fully grasped the engagement's challenges and the objectives being targeted.
 
-In addition, depending on the selection process, you may have a case study to complete. For example, if you're applying for a freelance developer role, the client may ask you to carry out a quick audit of their site and then give them a few recommendations for improving it. Another example: if you're a traffic manager, you may be asked to look at one of the company's past [Google Ads](/en/roles/freelance-google-ads-expert) campaigns and give your opinion.
+In addition, depending on the selection process, you may have a case study to complete. For example, if you're applying for a freelance developer role, the client may ask you to carry out a quick audit of their site and then give them a few recommendations for improving it. Another example: if you're a [traffic manager](/en/roles/freelance-traffic-manager), you may be asked to look at one of the company's past [Google Ads](/en/roles/freelance-google-ads-expert) campaigns and give your opinion.
 
 ## **What are our tips for a successful freelance interview?**
 

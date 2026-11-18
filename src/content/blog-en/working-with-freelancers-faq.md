@@ -3,6 +3,7 @@ title: "Working with freelancers: the FAQ for C-level leaders"
 description: "Learn how to get more from hiring freelancers, sidestep the pitfalls and find the ideal expert through digitags.work."
 date: 2025-08-25
 image: "/uploads/blog/recrutement-freelance-faq-cover.webp"
+tags: [recrutement, freelancer]
 ---
 
 **Hiring freelancers** is no longer a plan B: it's a growth strategy adopted by 73% of large companies. For C-level leaders, finding the right independent expert, at the right time and without friction, is becoming a major competitive advantage. In this FAQ, we go over everything you need to know to source, select and manage external talent while enjoying the friendly (and remarkably effective) support of [**digitags.work**](/en).
@@ -10,9 +11,11 @@ image: "/uploads/blog/recrutement-freelance-faq-cover.webp"
 ## Why are C-level leaders embracing **freelance hiring** today?
 
 -   **Budget flexibility**: turn CapEx into OpEx — handy in uncertain times.
--   **Immediate access to rare skills**: data scientists, CRO managers, senior content creators… all available in a few clicks.
+-   **Immediate access to rare skills**: [data scientists](/en/roles/freelance-data-scientist), CRO managers, senior content creators… all available in a few clicks.
 -   **Shorter time-to-market**: no long notice periods or endless onboarding.
 -   **A culture of innovation**: freelancers bring fresh ideas, then move on without upending the org chart.
+
+> **Read also:** [Hiring freelancers: adapting your strategy to your company size](/en/blog/freelance-strategy-by-company-size)
 
 ## When and how to launch an effective **freelance hiring** process?
 
@@ -50,7 +53,7 @@ digitags.work isn't content with being just a platform: we act as a _Talent Part
 -   **48 hours on average** between the brief and the talent proposals.
 -   **Project follow-up**: from A to Z.
 
-👉 Need a Growth Marketer or a Product Designer, for example? [**Talk to our team**](/en/contact).
+👉 Need a [Growth Marketer](/en/roles/freelance-growth-marketer) or a [Product Designer](/en/roles/freelance-product-designer), for example? [**Talk to our team**](/en/contact).
 
 ![\_\_wf\_reserved\_inherit](/uploads/blog/recrutement-freelance-faq-0.webp)
 

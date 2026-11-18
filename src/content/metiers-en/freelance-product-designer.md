@@ -12,7 +12,7 @@ Where other profiles own one step, the product designer holds the thread from di
 
 ## What a freelance product designer does
 
-Product designers work at the intersection of three questions: does this product solve a real need, is it easy to use, and can it be built and maintained sensibly? They run or build on user research, frame hypotheses, turn them into flows, wireframes and high-fidelity interfaces, then test to make sure the solution delivers.
+Product designers work at the intersection of three questions: does this product solve a real need, is it easy to use, and can it be built and maintained sensibly? They run or build on [user research](/en/projects/ux-research), frame hypotheses, turn them into flows, wireframes and high-fidelity interfaces, then test to make sure the solution delivers.
 
 Their output isn't a frozen mockup but a well-informed product decision. They take part in prioritisation, write acceptance criteria with the team, track metrics after release and suggest the next iterations. They also build accessibility in from the start (contrast, keyboard navigation, content structure) with WCAG 2.2 conformance as the target.
 
@@ -20,13 +20,13 @@ Their output isn't a frozen mockup but a well-informed product decision. They ta
 
 The lines move from one organisation to the next, but a useful distinction holds. A [**UX designer**](/en/roles/freelance-ux-designer) focuses on understanding behaviour, information architecture and the usability of flows. A [**UI designer**](/en/roles/freelance-ui-designer) gives the interface its form: grid, type, colour, components and states.
 
-A product designer covers both and adds product ownership: they commit to outcomes (activation, retention, task success), not just to the quality of the screens. They pair closely with the [**product manager**](/en/roles/freelance-product-manager), who owns the vision and roadmap, and with front-end developers to make sure what ships matches what was designed.
+A product designer covers both and adds product ownership: they commit to outcomes (activation, retention, task success), not just to the quality of the screens. They pair closely with the [**product manager**](/en/roles/freelance-product-manager), who owns the vision and roadmap, and with [front-end developers](/en/roles/freelance-front-end-developer) to make sure what ships matches what was designed.
 
 ## Typical product design missions
 
 Depending on how mature your product is, missions look very different:
 
-- **Product discovery**: user interviews, pain-point mapping, an opportunity solution tree and a clear view of which problems to solve before anyone writes code.
+- **[Product discovery](/en/projects/product-discovery)**: user interviews, pain-point mapping, an opportunity solution tree and a clear view of which problems to solve before anyone writes code.
 - **MVP design**: key flows and interactive prototypes tested within a few weeks, to validate a value proposition before you commit to development.
 - **Design system**: audit of what exists, a Figma component library with variables and modes, documentation and alignment with coded components.
 - **Flow redesign**: onboarding, sign-up funnel, customer account; diagnosis, new proposals and A/B tests to measure the uplift.
@@ -60,7 +60,7 @@ After release, they track the metrics agreed at scoping, analyse feedback and fe
 
 Figma sits at the centre of the job: mockups, prototypes, shared libraries, variables and Dev Mode for handing over to engineers. FigJam and Miro support workshops and journey mapping, while Protopie or Framer come in for advanced prototypes when an interaction needs to be tested realistically.
 
-For research and measurement, our product designers use remote user testing tools, product analytics such as Amplitude, Mixpanel or PostHog, and session recording to ground decisions in actual behaviour. They also use generative AI assistants to speed up research synthesis or explore variants, without handing over design judgement.
+For research and measurement, our product designers use remote user testing tools, product analytics such as Amplitude, Mixpanel or PostHog, and session recording to ground decisions in actual behaviour. They also use [generative AI](/en/ai-product-team) assistants to speed up research synthesis or explore variants, without handing over design judgement.
 
 ## When to bring in a freelance product designer
 

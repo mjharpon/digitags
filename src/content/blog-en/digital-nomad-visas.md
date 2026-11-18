@@ -24,6 +24,8 @@ _If you'd like to find out more about the life of digital nomads,_ [_click here_
 
 ![dgitags digital nomad freelance](/uploads/blog/un-visa-pour-digital-nomade-0.jpeg)
 
+> **Read also:** [Freelancers in 2026: remote, hybrid or on-site?](/en/blog/freelance-remote-hybrid-or-on-site)
+
 ## **What is a digital nomad visa?**
 
 This type of visa is actually a **travel permit** that regularises the status of workers on the move.

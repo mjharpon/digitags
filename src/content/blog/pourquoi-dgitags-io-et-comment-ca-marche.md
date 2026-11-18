@@ -6,7 +6,7 @@ tags: [freelancer, design, webmarketing, tech-et-data, product, recrutement]
 image: "/uploads/blog/pourquoi-dgitags-io-et-comment-ca-marche-cover.webp"
 ---
 
-Manager et optimiser sa présence en ligne passe par la création de produits digitaux (sites, plateformes apps) et des stratégies de marketing digital (seo, sea, social media).
+Manager et optimiser sa présence en ligne passe par la création de [produits digitaux](/projets/concevoir-un-produit-digital) (sites, plateformes apps) et des stratégies de marketing digital (seo, sea, social media).
 
 Cependant il ne suffit pas de le dire, il faut le faire. Et pour le faire une entreprise doit s’appuyer sur 2 piliers principaux : travailler avec les bonnes personnes (l'expertise) et faire travailler ses expertises avec efficacité (l'organisation). C’est là que Digitags intervient.
 
@@ -27,6 +27,8 @@ Digitags se distingue par ses caractéristiques uniques qui en font un choix id�
 Digitags c’est un Hub comprenant une plateforme privée de 1500 freelances experts dans le digital (marketing, produit, design), des collectifs et studios de développement de site internet et une agence de marketing digital internationale 100% propriétaire, Donutz digital.
 
 > _« L'idée,  c'est de pouvoir accompagner chacun de nos clients dans leurs problématiques digitales et  que nous soyons porteurs de solutions clef en main pour eux, comme le ferait un architecte mais pour leurs projets digitaux. Parfois nos clients ont seulement besoin d’un freelance qui intégrera leurs équipes, parfois d’un studio de développeurs ou d’une agence. On est là pour cela »_ explique Chrystal, agent de talent.
+
+> **À lire aussi :** [Expert en webmarketing freelance - Stratégies et développement marketing numérique](/blog/expert-en-webmarketing-freelance-strategies-et-developpement-marketing-numerique)
 
 ## Digitags 3 en 1 : Hub, studio et agence
 
@@ -74,7 +76,7 @@ Ne prenez pas seulement notre parole pour acquis, écoutez ce que nos utilisateu
 
 > "Sur nos projets, nous avons besoin de Designers expérimentés.  Que ce soit pour de la recherche utilisateurs, de la production Design ou de la formation UX, digitags ous a permis de trouver à chaque fois la bonne personne." Thibaut Villamur, Head of Design à La Manufacture Digitale du Crédit Agricole.
 
-> "Le Hub nous a permis de trouver des talents freelances de haut niveau pour la refonte UX Design de notre espace client ainsi que pour des projets de Data Science. Nous avons avons facilement trouvé la bonne personne, évité un long processus de recrutement et limité le risque d'échecs.” Thibaut Pfeiffer (promis il ne faut pas s’appeler Thibaut pour travailler avec nous), CEO de [**EmprunteMonToutout.com**](http://EmprunteMonToutout.com).
+> "Le Hub nous a permis de trouver des talents freelances de haut niveau pour la refonte UX Design de notre espace client ainsi que pour des projets de [Data Science](/metiers/data-scientist-freelance). Nous avons avons facilement trouvé la bonne personne, évité un long processus de recrutement et limité le risque d'échecs.” Thibaut Pfeiffer (promis il ne faut pas s’appeler Thibaut pour travailler avec nous), CEO de [**EmprunteMonToutout.com**](http://EmprunteMonToutout.com).
 
 Ces témoignages sont un reflet de notre engagement envers nos clients et de notre capacité à fournir des résultats concrets.
 

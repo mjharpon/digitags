@@ -77,6 +77,8 @@ Les risques générés par la méthode du cycle en V a favorisé l’émergence 
 
 ‍
 
+> **À lire aussi :** [Scrum Master  : boostez vos sprints](/blog/scrum-master-freelance-boostez-vos-sprints)
+
 ## **Présentation de la méthode Scrum** 
 
 Le mot Scrum (« mêlée » en anglais) fait référence à la mêlée du rugby. En effet, cette méthode se concentre sur l’esprit d’équipe et la volonté d’avancer ensemble vers la réalisation d’un même objectif.
@@ -96,7 +98,7 @@ Dans la méthode Scrum, le produit est développé par **itération de temps** (
 Il y a trois acteurs clés :
 
 -   **Le [Product Owner](/metiers/product-owner-freelance)** : il a une vision complète du produit,
--   **Le Scrum master** : il assure le bon déroulement du projet et rappelle la     méthode,
+-   **Le [Scrum master](/metiers/coach-agile)** : il assure le bon déroulement du projet et rappelle la     méthode,
 -   **L’équipe Scrum** : elle développe le produit.
 
 ‍

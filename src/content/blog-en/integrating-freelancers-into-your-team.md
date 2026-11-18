@@ -14,6 +14,8 @@ Before bringing in a freelancer, take the time to clearly define your team's nee
 
 Freelancers can bring a wide variety of skills. Identify the technical skills, the industry-specific knowledge and the interpersonal skills needed for a harmonious integration into your team.
 
+> **Read also:** [Mistakes to avoid when working with freelancers](/en/blog/mistakes-to-avoid-when-working-with-freelancers)
+
 ## **How do you find the best freelancers?**
 
 The simplest way to find qualified freelancers is to use specialised online networks. Many let you post your brief and find freelancers matching your criteria.

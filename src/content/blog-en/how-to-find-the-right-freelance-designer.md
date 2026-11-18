@@ -10,7 +10,7 @@ Looking for the ideal freelance designer for your project? In this article, I'll
 
 There are many types of designer; here we'll talk in particular about [**UX Designers**](/en/roles/freelance-ux-designer), [**UI Designers**](/en/roles/freelance-ui-designer) and Graphic Designers.
 
-Design has become an essential profession if you work in the digital sector. A designer's mission is to create the layout, visual identity and usability of a website.
+Design has become an essential profession if you work in the digital sector. A designer's mission is to create the layout, [visual identity](/en/projects/visual-identity) and usability of a website.
 
 A good web designer must be both **creative** and have **graphic and technical skills**. They need to be able to visualise how a site looks (the site's graphic design) and how it works (turning a design into a functional website).
 
@@ -21,6 +21,8 @@ Here are our key tips for finding the right freelance designer!
 Engaging a freelance designer can bring many benefits to your project. First of all, designers can bring a fresh, creative perspective to your projects, as well as specialist skills in specific areas such as graphic design, user interface design or user experience design.
 
 Freelance designers offer greater flexibility and adaptability than a full-time member of staff — we talk about this in our article on [**why hire a freelancer rather than a permanent contract (CDI)**](/en/blog/freelancer-vs-permanent-hire). They can also work remotely, which lets you collaborate with talent from all over the world.
+
+> **Read also:** [How to find the best freelancer for your project](/en/blog/how-to-find-the-best-freelancer-for-your-project)
 
 ## **The skills to look for in a freelance designer**
 
@@ -40,14 +42,14 @@ As I said in the introduction, there are several branches of the design professi
 
 The web designer role breaks down into two specialisations, the [UX designer](/en/roles/freelance-ux-designer) and the [UI designer](/en/roles/freelance-ui-designer):
 
--   **A UI designer**, or user interface designer, is in charge of the graphic design of digital products' interfaces.
+-   **A UI designer**, or user interface designer, is in charge of the graphic design of [digital products](/en/projects/digital-product-design)' interfaces.
 -   **A UX Designer**'s mission is to imagine and design user journeys based on user behaviour.
 
 -   **The illustrator** has a far more artistic than technical profile. They create drawings, sketches or rough drafts, in pencil or using software, which you can feature in your company's visual communication. Illustrators essentially provide complex works of art for media ranging from magazines to websites.
--   **The Motion Designer** aims to create graphic productions incorporating video, 3D animation, special effects, sound or typography.
--   **The Product Designer**, for their part, designs digital products according to a set of specifications.
+-   **The [Motion Designer](/en/roles/freelance-motion-designer)** aims to create graphic productions incorporating video, 3D animation, special effects, sound or typography.
+-   **The [Product Designer](/en/roles/freelance-product-designer)**, for their part, designs digital products according to a set of specifications.
 
-You can also find specialists in mobile app design, logos, animation, and so on.
+You can also find specialists in [mobile app](/en/roles/freelance-mobile-developer) design, logos, animation, and so on.
 
 So your needs must be clearly defined, so that the freelancer you choose has the skills that match what you're looking for.
 

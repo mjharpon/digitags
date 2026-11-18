@@ -12,7 +12,7 @@ Là où d'autres profils interviennent sur une étape précise, il tient le fil 
 
 ## Le rôle du Product Designer freelance
 
-Le Product Designer travaille au croisement de trois questions : ce produit répond-il à un vrai besoin, est-il simple à utiliser, et peut-on le construire et le maintenir dans de bonnes conditions ? Il mène ou s'appuie sur la recherche utilisateur, formule des hypothèses, les traduit en parcours, en wireframes puis en interfaces haute fidélité, et vérifie par le test que la solution tient ses promesses.
+Le Product Designer travaille au croisement de trois questions : ce produit répond-il à un vrai besoin, est-il simple à utiliser, et peut-on le construire et le maintenir dans de bonnes conditions ? Il mène ou s'appuie sur la [recherche utilisateur](/projets/mener-une-phase-dux-research), formule des hypothèses, les traduit en parcours, en wireframes puis en interfaces haute fidélité, et vérifie par le test que la solution tient ses promesses.
 
 Son livrable n'est pas une maquette figée mais une décision produit éclairée. Il participe aux arbitrages de priorisation, écrit avec l'équipe les critères d'acceptation, suit les métriques après livraison et propose les itérations suivantes. Il veille aussi à l'accessibilité dès la conception (contrastes, navigation clavier, structure des contenus) pour viser la conformité WCAG 2.2 et RGAA.
 
@@ -20,13 +20,13 @@ Son livrable n'est pas une maquette figée mais une décision produit éclairée
 
 Les frontières varient d'une organisation à l'autre, mais une distinction utile existe. L'[**UX designer**](/metiers/ux-designer-freelance) se concentre sur la compréhension des usages, l'architecture de l'information et l'ergonomie des parcours. L'[**UI designer**](/metiers/ui-designer-freelance) donne forme à l'interface : grille, typographie, couleurs, composants et états.
 
-Le Product Designer couvre ces deux dimensions et y ajoute une responsabilité produit : il s'engage sur les résultats (activation, rétention, réussite d'une tâche) et pas seulement sur la qualité des écrans. Il travaille en binôme étroit avec le [**Product Manager**](/metiers/product-manager-freelance), qui porte la vision et la roadmap, et avec les développeurs front-end pour garantir une implémentation fidèle.
+Le Product Designer couvre ces deux dimensions et y ajoute une responsabilité produit : il s'engage sur les résultats (activation, rétention, réussite d'une tâche) et pas seulement sur la qualité des écrans. Il travaille en binôme étroit avec le [**Product Manager**](/metiers/product-manager-freelance), qui porte la vision et la roadmap, et avec les [développeurs front-end](/metiers/developpeur-front-end-freelance) pour garantir une implémentation fidèle.
 
 ## Les missions confiées à un Product Designer freelance
 
 Selon la maturité de votre produit, les missions prennent des formes très différentes :
 
-- **Discovery produit** : entretiens utilisateurs, cartographie des irritants, opportunity solution tree et priorisation des problèmes à résoudre avant d'écrire une ligne de code.
+- **[Discovery produit](/projets/discovery-produit)** : entretiens utilisateurs, cartographie des irritants, opportunity solution tree et priorisation des problèmes à résoudre avant d'écrire une ligne de code.
 - **Conception d'un MVP** : parcours clés, prototypes interactifs testés en quelques semaines pour valider une proposition de valeur avant d'investir dans le développement.
 - **Design system** : inventaire de l'existant, bibliothèque de composants Figma avec variables et modes, documentation et alignement avec les composants du code.
 - **Refonte de parcours** : onboarding, tunnel de souscription, espace client ; diagnostic, nouvelles propositions et tests A/B pour mesurer le gain.
@@ -60,7 +60,7 @@ Après la mise en production, il suit les indicateurs définis au cadrage, analy
 
 Figma est devenu l'outil central du métier : maquettes, prototypes, bibliothèques partagées, variables et Dev Mode pour le passage de relais aux développeurs. FigJam et Miro servent aux ateliers et à la cartographie des parcours, Protopie ou Framer aux prototypes avancés quand une interaction doit être testée de manière réaliste.
 
-Côté recherche et mesure, nos Product Designers utilisent des outils de test utilisateur à distance, des solutions d'analytics produit comme Amplitude, Mixpanel ou PostHog et des outils de session recording pour objectiver les comportements. Ils intègrent aussi les assistants d'IA générative dans leur pratique, pour accélérer la synthèse de recherche ou l'exploration de variantes, sans déléguer le jugement de design.
+Côté recherche et mesure, nos Product Designers utilisent des outils de test utilisateur à distance, des solutions d'analytics produit comme Amplitude, Mixpanel ou PostHog et des outils de session recording pour objectiver les comportements. Ils intègrent aussi les assistants d'[IA générative](/equipe-ia) dans leur pratique, pour accélérer la synthèse de recherche ou l'exploration de variantes, sans déléguer le jugement de design.
 
 ## Quand faire appel à un Product Designer freelance ?
 

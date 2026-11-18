@@ -18,6 +18,8 @@ Although everyone contributes and takes an active part, it's wise to appoint CSR
 
 Organising a collection drive, taking on a sports challenge or devoting half a day to volunteering are other examples that strengthen the sense of belonging, give meaning and, ultimately, improve quality of life at work.
 
+> **Read also:** [Remote onboarding: a fully remote welcome kit](/en/blog/fully-remote-freelance-onboarding)
+
 ## Increasing work flexibility
 
 Digital companies are often well ahead when it comes to work flexibility. Working from home, flex office, more or less à la carte hours, part-time work and the 4-day week are more widespread practices in this sector than elsewhere. These are clearly habits very much in line with a CSR policy, and a digital company has every interest in continuing and expanding this movement.

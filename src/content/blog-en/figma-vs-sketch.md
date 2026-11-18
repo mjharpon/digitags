@@ -32,6 +32,8 @@ But you do have to ask yourself the following question: **is Figma as powerful a
 
 In our experience, it seems so.
 
+> **Read also:** [How to find the right freelance designer](/en/blog/how-to-find-the-right-freelance-designer)
+
 ## **2/ Figma vs Sketch: pricing**
 
 #### **Sketch pricing:**

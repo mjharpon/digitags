@@ -26,6 +26,8 @@ Les freelances ont des besoins spécifiques et doivent trouver des outils qui le
 -   Tableau de bord
 -   Calendrier, planification et notifications.
 
+> **À lire aussi :** [Rédiger un CV percutant et faire la différence auprès des recruteurs](/blog/rediger-un-cv-percutant-et-faire-la-difference-aupres-des-recruteurs)
+
 ## **Outils de collaboration essentiels pour travailler avec des freelances**
 
 Voici quelques-uns des meilleurs outils de collaboration pour travailler avec des freelances :

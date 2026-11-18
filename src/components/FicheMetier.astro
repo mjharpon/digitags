@@ -7,7 +7,8 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Breadcrumb from './Breadcrumb.astro';
-import { byOrder, byDateDesc } from '../lib/sort';
+import { byOrder } from '../lib/sort';
+import { postsForMetier } from '../lib/related';
 
 interface Props { fiche: any; lang?: 'fr' | 'en' }
 const { fiche, lang = 'fr' } = Astro.props;
@@ -130,13 +131,14 @@ const allMetiers = (await getCollection(collectionName as 'metiers', ({ data }) 
 const sameFamily = allMetiers.filter((m) => m.data.blogCategory === fiche.data.blogCategory);
 const relatedMetiers = [...sameFamily, ...allMetiers.filter((m) => !sameFamily.includes(m))].slice(0, 4);
 
-// Bloc « Pour aller plus loin » : FR uniquement (le blog n'est pas traduit).
-const relatedPosts = en
-  ? []
-  : (await getCollection('blog', ({ data }) => !data.draft))
-      .filter((p) => fiche.data.blogCategory && p.data.tags.includes(fiche.data.blogCategory))
-      .sort(byDateDesc)
-      .slice(0, 3);
+// Bloc « Pour aller plus loin » (FR et EN) : articles qui citent la fiche,
+// puis ceux qui parlent le plus du métier (voir src/lib/related.ts).
+const blogCollection = en ? 'blog-en' : 'blog';
+const blogPosts = await getCollection(blogCollection as 'blog', ({ data }) => !data.draft);
+const relatedPosts = (await postsForMetier(blogCollection, metierHref(fiche.id), fiche.data.title, fiche.data.blogCategory))
+  .map((id) => blogPosts.find((p) => p.id === id)!)
+  .filter(Boolean);
+const postHref = (id: string) => (en ? `/en/blog/${id}` : `/blog/${id}`);
 
 const t = en
   ? {
@@ -275,13 +277,13 @@ const t = en
   {relatedPosts.length > 0 && (
     <section class="rel-section">
       <div class="container">
-        <h2 class="rel-title">Pour aller plus loin</h2>
+        <h2 class="rel-title">{en ? 'Further reading' : 'Pour aller plus loin'}</h2>
         <div class="rel-grid">
           {relatedPosts.map((p) => (
             <article class="rel-card">
-              <h3><a href={`/blog/${p.id}`} class="stretch-link">{p.data.title}</a></h3>
+              <h3><a href={postHref(p.id)} class="stretch-link">{p.data.title}</a></h3>
               {p.data.description && <p>{p.data.description.slice(0, 130)}…</p>}
-              <span class="arrow-link">Lire l'article <span aria-hidden="true">→</span></span>
+              <span class="arrow-link">{en ? 'Read the article' : "Lire l'article"} <span aria-hidden="true">→</span></span>
             </article>
           ))}
         </div>

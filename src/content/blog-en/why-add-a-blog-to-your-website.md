@@ -16,6 +16,8 @@ A built-in blog isn't that thing lost somewhere on Medium that nobody can ever f
 
 It's a natural extension of your brand. Your visitors can read an article, click on an offer, discover your services, then come back to another article… without ever feeling like they've stepped into a teleporter. And Google loves that consistency.
 
+> **Read also:** [The benefits of WordPress for building websites](/en/blog/benefits-of-wordpress)
+
 ## How can a built-in blog boost your business?
 
 ### 1\. **Rock-solid organic visibility**

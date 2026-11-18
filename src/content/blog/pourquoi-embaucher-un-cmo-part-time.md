@@ -20,6 +20,8 @@ Un CMO part-time peut travailler sur une grande variété de projets, tels que l
 
 ‍
 
+> **À lire aussi :** [Comment trouver le bon traffic manager en freelance ?](/blog/comment-trouver-le-bon-traffic-manager-en-freelance)
+
 ## **Les avantages d'embaucher un CMO part-time**
 
 ### **1\. Expertise à moindre coût**

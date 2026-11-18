@@ -28,6 +28,8 @@ Une fois que vous aurez une idée précise des services recherchés, vous pourre
 
 Ensuite, vous devez considérer comment le projet sera divisé et combien de temps sera nécessaire pour sa réalisation complète. N'oubliez pas que toute extension du calendrier aura un impact direct sur votre budget.
 
+> **À lire aussi :** [Les erreurs à éviter lors d’une collaboration avec des freelances](/blog/les-erreurs-a-eviter-lors-dune-collaboration-avec-des-freelances)
+
 ## **Où trouver des freelances qualifiés ?**
 
 Une fois que vous aurez défini clairement le type de service recherché et l'ensemble des exigences et contraintes, vous pourrez commencer à rechercher un freelance compétent et fiable. Il existe plusieurs endroits où vous pouvez trouver des freelances qualifiés pour votre projet.

@@ -3,6 +3,7 @@ title: "10 tips to speed up your website"
 description: "Speed up your website: 10 simple tips to boost its performance, its SEO and the user experience."
 date: 2025-05-20
 image: "/uploads/blog/10-astuces-pour-ameliorer-la-vitesse-de-votre-site-web-cover.webp"
+tags: [tech-et-data, webmarketing]
 ---
 
 Does your website take as long to load as a photo did on the very first version of the internet? Time to give it a turbo boost! A slow page is frustrating. And guess what? Google doesn't like it either.
@@ -69,6 +70,8 @@ You've added 5 widgets, 3 tracking pixels and a weather pop-up? Sort through you
 -   ✅ Reduce the number of requests
 -   ✅ Use caching, a CDN and compression
 -   ✅ Test regularly and stay up to date
+
+> **Read also:** [Webflow vs WordPress: which is the best website-building platform in 2021?](/en/blog/webflow-vs-wordpress)
 
 ## What if you let the pros handle it?
 
