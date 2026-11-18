@@ -1,182 +1,140 @@
 ---
-title: "Figma vs Sketch: which is the best tool for designers?"
-description: "Figma and Sketch are two design tools with incredible potential. But which one is best for designers?"
+title: "Figma vs Sketch in 2026: which tool to choose in the age of AI?"
+description: "Figma or Sketch in 2026? An up-to-date comparison: pricing, collaboration, AI features (Figma Make, Figma agent, MCP servers), the Penpot alternative and our verdict for your profile."
 date: 2021-08-27
+updated: 2026-11-18
 tags: [design]
 image: "/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-cover.webp"
+faq:
+  - q: "Is Figma better than Sketch?"
+    a: "For a product team, yes in most cases: Figma runs on every operating system, lets people work together in real time and ships far more AI features. Sketch remains an excellent choice for a designer or studio working on Mac who wants a native app that works offline and prefers a license bought once."
+  - q: "Why did Figma beat Sketch?"
+    a: "Because it bet on the browser and collaboration from day one: a simple link is enough for a developer, product manager or client to open the file, without installing anything or owning a Mac. Its free plan and its community of plugins and shared files did the rest."
+  - q: "Is anyone still using Sketch?"
+    a: "Yes. Sketch is still actively developed (several major releases a year: frames, stacks, component variants…) and remains popular with Mac-based studios, designers who work offline and those who want to keep their files local."
+  - q: "Is Figma free?"
+    a: "Figma has a free Starter plan with a limited AI credit allowance (150 a day, up to 500 a month). To work as a team without limits you need a paid seat: $16 a month for a Full seat on the Professional plan."
+  - q: "Can you use AI with Sketch?"
+    a: "Sketch has no built-in generative AI, but its Mac app includes a free MCP server: you connect your own AI assistant (Claude, Codex, Cursor…), which can then read and edit your documents. The server runs locally, and your AI provider bills the usage, not Sketch."
+  - q: "What is the best free alternative to Figma?"
+    a: "Penpot: open source, usable in the browser or self-hosted on your own servers, with a fully featured free plan. It also offers an MCP server to work with AI agents."
 ---
 
-Let's explore these 2 tools
+In 2021, the question was whether Figma would dethrone Sketch. In 2026, we know the answer: **Figma has become the go-to tool for product teams**. But Sketch hasn't disappeared; it has actually changed a lot. And the arrival of AI in design tools reshuffles part of the deck.
 
-> For some time now, Sketch has been designers' **tool of choice**. However, with Figma's arrival on the market, its number 1 spot has been called into question. What makes it special? Figma is the first interface design tool based in an **online browser**.
+In this updated comparison, we look at what really sets the two tools apart today: pricing, collaboration, AI features, and who each one is still the right choice for.
 
-> Dylan Field, one of Figma's co-founders, wanted "_to do for interface design what Google Docs did for text editing_".
+![Figma vs Sketch](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-0.webp)
 
-> Its aim is to revolutionise the way **design teams collaborate**. And that's exactly what's happening, as Figma is increasingly used by designers.
+## Figma vs Sketch: the comparison at a glance
 
-In this article, we'll try to answer the following questions: How does Figma compare with Sketch today? Is Figma dethroning Sketch?
+| | **Figma** | **Sketch** |
+|---|---|---|
+| Platform | Browser + Mac and Windows apps | Native macOS app (macOS 15 or later) + web app to share and inspect |
+| Offline | No, a connection is required | Yes, local files possible |
+| Real-time collaboration | Yes, at the heart of the tool | Yes, on subscription plans |
+| Free plan | Yes (Starter, limited) | No |
+| Entry price for a designer | $16/month (Full seat, Professional) | $12/month (Standard, billed yearly) or $120 Mac license |
+| Built-in AI | Yes: Figma Make, Figma agent, image generation, productivity tools | No |
+| Connection to your AI agents (MCP) | Yes, remote or local server | Yes, local server built into the Mac app, free |
+| Prototyping | Advanced (interactions, variables, coded prototypes with Make) | Yes, prototypes shared via the web app |
+| Best for | Product teams, designer-developer-PM collaboration | Designers and studios on Mac, offline work |
 
-So today the [Digitags team](/en/studios-and-collectives) will try to answer these questions. If you'd like to know more about these two competitors, read on.  
+*Public prices in US dollars excluding tax, checked in November 2026 on the Figma and Sketch websites.*
 
-So, let's go!
+## Platform and collaboration: the historical difference
 
-## **1/ Figma vs Sketch: Introduction**
+This is what made Figma successful. It runs in a **browser**, on Mac and Windows alike, and every file has its own URL. A developer, product manager or client opens the design in one click, comments and inspects styles without installing anything. Several designers work in the same file at the same time. The trade-off: without a connection, you can't open a new file.
 
-To begin with, one of the main differences between the two tools is that Sketch is a **desktop application** available only on Apple computers, whereas Figma runs in a **browser**. So unlike Sketch, it's accessible to everyone. You just need to create an account and have a computer.
+Sketch remains a **native Mac application**. That is a deliberate choice: the app is fast, works offline and your files can stay on your machine. Collaboration has improved a lot: subscription plans let you work together in real time and share documents in a web app, where developers can inspect them from any operating system. But editing still requires a Mac.
 
-![figma sketch introduction dgitags](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-0.webp)
+**In practice:** as soon as a team mixes Macs and PCs, or non-designers need to work in the files, Figma is simpler.
 
-You can also **download Figma** directly onto your computer (Mac or Windows) so that it appears on your desktop. However, it's important to note that if you're not connected to the internet, you won't be able to open a new file. For designers who need to work **offline**, this can be a problem.
+## Pricing in 2026
 
-But you do have to ask yourself the following question: **is Figma as powerful and high-performing as Sketch, given that it's web-based?**
+**Figma** (price per seat per month):
 
-In our experience, it seems so.
+- **Starter**: free, with 150 AI credits a day (up to 500 a month).
+- **Professional**: $16 for a Full seat (designer), $12 for a Dev seat, $3 for a Collab seat (comments, FigJam).
+- **Organization**: $55 per Full seat, billed yearly.
+- **Enterprise**: $90 per Full seat, billed yearly.
 
-> **Read also:** [How to find the right freelance designer](/en/blog/how-to-find-the-right-freelance-designer)
+Every paid seat includes monthly **AI credits** (3,000 for a Full seat on Professional), used by Figma Make and the other AI features.
 
-## **2/ Figma vs Sketch: pricing**
+**Sketch** (price per editor per month, billed yearly):
 
-#### **Sketch pricing:**
+- **Standard**: $12, with real-time collaboration and free developer handoff.
+- **Professional**: $24, with SSO and permission management.
+- **Enterprise**: $44.
+- **Mac license**: $120 once, yours forever, with one year of updates. It includes neither collaboration nor online sharing.
 
-![dgitags figma sketch pricing](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-1.webp)
+**In practice:** for a solo designer, Sketch stays cheaper over time thanks to its license. For a team, it depends on the number of seats: at Figma, developers and other contributors pay for a cheaper seat; at Sketch, developer handoff is free.
 
-You have to pay **$99 for a licence that lasts one year**. Throughout that year, you'll receive all updates to the Sketch application.
+## What AI changes in both tools
 
-Once the licence has expired, you can keep using Sketch for life, but you need a current licence to receive updates.
+This is the real change since our first comparison. The two companies have made very different choices.
 
-You also have the option of a **Business subscription**. You need to contact Sketch to find out more.
+### Figma: AI built in everywhere
 
-#### **Figma pricing:**
+Figma has built AI directly into the tool:
 
-![dgitags figma sketch pricing](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-2.webp)
+- **Figma Make** turns a description or an existing design into a **working prototype or web app**. The output is code, which you can also edit visually on the canvas. You can give it your design system as context and plug in data through connectors.
+- **The Figma agent** generates and reworks screens, automates repetitive tasks and gives feedback on a design.
+- **Figma Weave** and the image editing tools generate images and vectors, or remove an object from a photo.
+- **Productivity** tools: rename layers, replace content, add interactions, find a component with visual search.
 
-The tool is currently **free** for individuals. A **professional team plan** costs **$12** per editor per month if billed annually, or **$15** per editor per month if billed monthly.
+These features use the AI credits included in each seat.
 
-You can also take out an **Organisation subscription**, which costs **$45** per editor per month.
+### Sketch: no generative AI, but an open door to your own AI
 
-The advantage of these two tools is that they both offer a **free trial**. This lets you see which tool you prefer before making a financial commitment!
+Sketch has no built-in generative AI. However, its Mac app includes an **MCP server** (Model Context Protocol), free on every plan, Mac license included. You connect the AI assistant of your choice, such as Claude, Codex or Cursor, which can then read and edit your Sketch documents. The server runs **locally** on your Mac, you decide when to turn it on, and there are no AI credits: your AI provider bills the usage.
 
-## **3/ Figma vs Sketch: the interfaces**
+### MCP, the real topic for product teams
 
-From an **ergonomic** point of view, the two interfaces are fairly **similar**. Figma took quite a lot of inspiration from Sketch. You won't feel out of place switching from one to the other.
+Figma also offers an **MCP server**, hosted or local. In practice, it lets a coding agent read a design (components, variables, layout) to generate faithful code and, in beta, even write directly into Figma files or turn a live interface into editable layers.
 
-When you open the Figma application, you go straight to the "**recently viewed**" section of the file browser. There you'll find your current projects or fully editable preloaded folders, whose elements you can copy into any new templates you create. It depends on whether you want to create your project from scratch or draw inspiration from a template.
+This is what changes product teams' day-to-day work the most: the handoff from design to development increasingly goes through AI agents. Our [AI product teams](/en/ai-product-team) already work this way.
 
-In terms of interface, the only difference lies in the **terminology used**. In Sketch, you work with **artboards**, whereas in Figma you work with **frames**. **Symbols** in Sketch are called **components** in Figma. In reality, it's just a question of wording, and if you're familiar with Sketch, you'll quickly find your way around Figma.
+**In practice:** if you want turnkey AI to prototype fast, Figma is clearly ahead. If you want to stay in control of your files and use your own AI assistant, Sketch (and Penpot, see below) let you do so without buying credits.
 
-**Symbols**
+> **Read also:** [Figma in 2026: what the tool is for and what AI changes (Make, agent, MCP)](/en/blog/discovering-figma)
 
-![dgitags figma sketch symbol](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-3.webp)
+## Interface and design features
 
-**Components**
+For pure interface design, the two tools are now **very close**, and their vocabulary has converged.
 
-![dgitags figma sketch component](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-4.webp)
+- **Frames**: Sketch has replaced its "artboards" with frames, like Figma.
+- **Components**: Sketch renamed its "symbols" to components and added variants in 2026. Figma has offered components, variants and properties for a long time.
+- **Automatic layout**: Figma's Auto Layout has its Sketch equivalent, "stacks".
+- **Vectors**: Figma uses vector networks, more flexible for drawing; Sketch's vector tools are still known for their precision.
 
-#### **Frame vs Artboard**
+The difference lies in the ecosystem: the **Figma community** (plugins, UI kits, shared files) is now the richest. In 2021 we gave Sketch the edge on plugins; that's no longer the case.
 
-**Frame:**
+## Prototyping and developer handoff
 
-Figma uses the term "**Frame**" to describe the top-level container of your design content. What makes frames more powerful than Sketch's artboards is the **ability to nest them**. Each frame can have its own layout grid, its own sizing preferences and its own content clipping.
+Figma goes further: prototypes with advanced interactions and variables, Dev Mode for developers, and now coded prototypes with Figma Make. Sketch lets you build prototypes and share them through its web app, and gives developers free file inspection, with no paid seat.
 
- **Artboard:**
+## What about Penpot?
 
-Sketch uses the term "**Artboard**" to describe the highest-level container of your design content.
+You can't compare design tools in 2026 without mentioning **Penpot**, the **open source** alternative to Figma. It runs in the browser on any operating system and can be **self-hosted on your own servers**, a real argument for organizations that want to keep control of their data.
 
-Sketch and Figma both support pinning and resizing rules within the "Artboard" and work in essentially the same way, except that Sketch doesn't support nested artboards.
+- **Pricing**: a fully featured free plan; $7 per editor per month for the Unlimited plan, capped at $175 a month whatever the team size.
+- **AI**: no built-in generative AI, but a free and open MCP server to connect your AI agents.
 
-#### **Component vs Symbol**
+It's the option to consider if the cost of Figma seats or dependence on a single vendor holds you back.
 
-**Component:**
+## Figma or Sketch: which one to choose?
 
-Unlike Sketch, Figma **doesn't move** or **duplicate your master component** onto its own page. Your master component lives where it was created and can be moved to whichever page you choose. This can be a little tricky if you're used to seeing all your symbols neatly displayed on one page. But don't panic: you can access and edit them just as quickly as in Sketch by finding each master component in the Assets panel, similar to Sketch's Components panel. The Assets panel shows all locally created components as well as components from any enabled library.
+- **You're a product team** (designers, developers, PMs): **Figma**. Collaboration, Dev Mode, built-in AI and the MCP server make it the best fit.
+- **You're a freelance designer**: Figma is still what clients ask for most, and they often provide the access. Sketch holds up if you work alone on Mac and deliver finished files.
+- **You're a Mac-based studio** that values offline work and local files: **Sketch**, with the Mac license or the Standard plan.
+- **You want an open source or self-hosted solution**: **Penpot**.
+- **You want to prototype an app with AI**: **Figma Make**.
 
-**Symbol:**
+The right questions are the same as in 2021: which computers does the team use, how many people need access to the files, which tools must the design integrate with. With one new question: **what role do you want AI to play**, built into the tool or driven by your own agents?
 
-Sketch creates a page in your file called "**Symbols**" as soon as you designate your first symbol. This page can be very useful for keeping track of and updating your symbols. Editing your master component will apply that change to every instance that doesn't have an existing override. You can also quickly locate symbols in the "Components" panel to search through them.
+## Need a designer who masters these tools?
 
-## **4/ Figma vs. Sketch: features**
+The designers in our network work daily in Figma, Sketch or Penpot, and increasingly with AI. Whether you need to design an interface, structure a design system or prototype with Figma Make, discover our [freelance UI designers](/en/roles/freelance-ui-designer), our [freelance product designers](/en/roles/freelance-product-designer) and our tips to [find the right freelance designer](/en/blog/how-to-find-the-right-freelance-designer).
 
-![dgitags figma sketch ](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-5.webp)
-
-One of Figma's best features is **teamwork**. Figma is a very good option if you want to work remotely with your team.
-
-For example, there's a **real-time collaboration** feature. Several team members can work on the same design project simultaneously. Each participant can see changes directly in the tool, as they happen.
-
-In Sketch, collaborating on a file with other designers can be **complicated**. For example, changes you make to text styles will affect every component that contains text. So you need to stay in constant communication with the other members of your team so as not to **overwrite** a teammate's work.
-
-Another interesting advantage is that Figma is web-based, so a developer who wants to view a particular project, for example, doesn't need to install a design tool they won't otherwise use. Each project has its **own URL**, which makes sharing files easy.
-
-In terms of design tools, Figma also has some tools that could be considered better than Sketch's. **Grids** and **constraints** allow **total flexibility** when it comes to creating resizable, responsive layouts. You can also do this in Sketch with the group resizing feature, but you're limited to just four options.
-
-Figma has also taken Sketch's **traditional drawing tool** and improved it by using **vector networks instead of paths**. As Figma co-founder Evan Wallace explains: "_A vector network improves on the path model by allowing lines and curves between any two points instead of requiring that they all join up to form a single chain_." In practice, this allows greater flexibility when drawing.
-
-![dgitags figma sketch plugin](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-6.webp)
-
-However, when it comes to the variety of **plugins**, Sketch takes back the lead. In fact, there's practically nothing you can't do in Sketch if you have the right plugin. While it's true that Figma comes with native prototyping and developer handoff capabilities, there are many plugins that integrate Sketch with the most popular tools in the industry, such as **Zeplin** for developer handoff. For many designers, having to install a plugin isn't a real problem, which gives them little incentive to switch from Sketch to Figma.
-
-As for **prototyping**, neither Figma nor Sketch had prototyping features when they first launched, but as the market becomes more and more competitive, applications also need constant updates so as not to fall behind. Figma introduced a prototyping feature in **2017**, and Sketch did the same in **2018**.
-
-On this front, Figma can be more flexible than Sketch, because it supports **overlays** when linking objects to other artboards. Figma stands out for its **intuitive construction**, since designers can easily connect user interface elements and choose the respective interactions and animations. What's more, Figma is **optimised for mobile phones**, which is a big advantage for device frames and dynamic scrolling. This lets designers understand how the user will **"experience"** the prototypes. Prototypes are shared via a **simple link**, since Figma is cloud-based. In Sketch, the process is also fairly simple, but it requires designers to upload files to **Sketch Cloud** before sharing them.
-
-If you'd like to find out more about Figma, it's [this way](/en/blog/discovering-figma).
-
-## **5/ Figma vs Sketch: which one should you choose?**
-
-**Who's the big winner?**
-
-![dgitags figma sketch design battle](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-7.webp)
-
-There's no immediate answer to this question.
-
-In terms of **collaboration**, Figma is probably the **big winner**. What's more, the fact that it runs in a browser is a considerable advantage for anyone who doesn't own a Mac, or who needs to access certain files but doesn't want to download and install design tools. Figma's primary aim was to meet a need in terms of **teamwork**. That bet has paid off completely. Its **real-time collaboration** and **detailed version control** features are certainly its strong points.
-
-Recently, Sketch realised how valuable the collaboration feature is for designers. So in July 2020, the public beta of **Sketch for Teams** was launched. It gives users a better way to collaborate on the same files. You can add participants, who can each view or edit the file. Sketch for Teams also has a comments section where users can discuss.
-
-One point that can make the difference between these two tools is that Sketch is ultimately **cheaper** than Figma. Figma can turn out to be an **expensive option**, especially for large teams.
-
-In terms of native design features, the two tools are more or less **on a par**. We still think Sketch beats Figma on the **variety of plugins available**. That's no surprise, since Sketch was created before Figma.
-
-In the future, Figma may well catch up with Sketch on this point.
-
-## **Conclusion** 
-
-Figma and Sketch are therefore two design tools with **incredible potential**. They keep offering new features and improving existing ones, which makes it very difficult for designers to decide which one to use.
-
-In the end, it all **comes down to the designer's preference**.
-
-Some favour plugins, others are more concerned with collaboration. What's more, Figma's vector networks may be faster for drawing, but also less rigorous and precise than Sketch's vector tools.
-
-So the real questions to ask yourself are the following:
-
-\-      Does the designer work as a freelancer or within a company? _Interested in freelancers? Come and take a look at our_ [_dedicated page_](/en/design).
-
-\-      What computers do the designers use for work?
-
-\-      How big is the team?
-
-\-      What other tools will the designer use?
-
-These are some of the most important questions to ask yourself in order to choose between these two pieces of software.
-
-So the choice between the two tools depends on **the balance between performance, functionality and features that each designer is looking for**. Beyond individual preferences, you also need to take **external factors** into account, such as the number of team members, the availability of operating systems within the company, and collaboration capabilities.
-
-And that's the end of this article. Yes, already… Don't worry, we'll be back soon with even more content!
-
-The [Digitags team](/en) nevertheless hopes you found this article interesting and that it taught you a few things about these two essential tools, Figma and Sketch.
-
-See you very soon!
-
-### **Appendix:**
-
-![figma sketch dgitags comparison](/uploads/blog/figma-vs-sketch-quel-est-le-meilleur-outil-pour-les-designers-8.webp)
-
-Image source: [Imaginary Cloud](https://www.imaginarycloud.com/blog/figma-vs-sketch/)
-
-Sources:
-
--   [Medium](https://medium.com/@aminataballo16/the-sketch-vs-figma-dilemma-110a1e40a96)
--   [Career foundry](https://careerfoundry.com/en/blog/ui-design/figma-vs-sketch-the-new-ui-design-tool-that-everyones-talking-about/)
--   [Imaginary Cloud](https://www.imaginarycloud.com/blog/figma-vs-sketch/)
--   [Fyresite](https://www.fyresite.com/figma-vs-sketch-which-ui-design-tool-is-better-in-2019/)
--   [Figma](https://www.figma.com/?fuid=)
--   [Sketch](https://www.sketch.com/)
+*Sources: official websites of [Figma](https://www.figma.com/pricing/) (pricing, [AI features](https://www.figma.com/ai/), [MCP server](https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Figma-MCP-server)), [Sketch](https://www.sketch.com/pricing/) and [Penpot](https://penpot.app/pricing), checked in November 2026.*

@@ -1,257 +1,117 @@
 ---
-title: "Discovering Figma"
-description: "Figma is a design tool for web interfaces and mobile apps. In just a few years, it has become an essential tool for marketers."
+title: "Figma in 2026: what the tool is for and what AI changes (Make, agent, MCP)"
+description: "What is Figma in 2026? The tools in the platform, pricing, and everything AI changes: Figma Make, the Figma agent, Weave and the MCP server for coding agents."
 date: 2021-08-26
+updated: 2026-11-18
 tags: [design]
 image: "/uploads/blog/a-la-decouverte-de-figma-cover.webp"
+faq:
+  - q: "What is Figma?"
+    a: "Figma is an interface design platform that runs in the browser (and as a Mac or Windows app). You use it to design mockups and prototypes of apps and websites, together and in real time. It has expanded into whiteboarding (FigJam), presentations (Slides), developer handoff (Dev Mode) and, with AI, coded prototypes (Figma Make)."
+  - q: "Is Figma free?"
+    a: "Yes, with the Starter plan, which includes a small AI credit allowance (150 a day, up to 500 a month). For professional team use, a Full seat costs $16 a month on the Professional plan."
+  - q: "What is Figma Make?"
+    a: "It's Figma's AI tool that turns a description or an existing design into a working prototype or web app. The output is code, which you can also edit visually on the canvas."
+  - q: "What is the Figma MCP server for?"
+    a: "It lets an AI assistant or coding agent (Claude Code, Cursor, Codex, VS Code…) read your Figma designs — components, variables, layout — to generate code that matches the design. In beta, the agent can also write directly into your Figma files."
+  - q: "Do you need to code to use Figma Make?"
+    a: "Not to get a first prototype: you describe what you want in plain language. But to reach a reliable, maintainable and secure product, you need design and development skills to review, fix and structure what the AI produces."
+  - q: "Will Figma's AI replace designers?"
+    a: "No. It speeds up exploration and prototyping, but the core work stays human: understanding users, making UX decisions, keeping a design system consistent. Designers who master these tools mostly just move faster."
 ---
 
-Figma, the tool you need to know
+In 2021, we introduced Figma as the rising design tool. Five years later, it has become **the go-to platform for product teams**, and AI now plays a central role in it. Here's what you need to know about Figma in 2026: what it's for, how much it costs and what AI concretely changes for designers and developers.
 
-> Founded in 2013, Figma has become an essential tool for marketers in just a few years. Figma had raised $3.8 million in seed funding.
+## What is Figma?
 
-> Today, Figma is valued at more than $10 billion (end of May 2021).
+Figma is an **interface design tool**: you design the screens of an app or website, build clickable prototypes and organize components into a design system. What has set it apart from the start: it runs **in the browser** (with Mac and Windows apps) and several people can work **in the same file at the same time**. Every file has its own URL, which makes sharing with developers, product managers or clients easy.
 
-> Incredible growth, isn't it?
+Figma has since grown into a **platform** with several tools:
 
-Today, the Digitags team brings you a review of Figma to help you discover its main features.
+| Tool | What it's for |
+|---|---|
+| **Figma Design** | Design and prototype interfaces |
+| **Dev Mode** | Go from design to code: measurements, styles, code snippets |
+| **FigJam** | Collaborative whiteboard for workshops and scoping |
+| **Figma Slides** | Presentations built together |
+| **Figma Draw** | Advanced vector illustration |
+| **Figma Make** | Turn an idea or a design into a coded prototype with AI |
+| **Figma Weave** | AI workflows to generate images, video and audio |
+| **Figma Motion** | Animate your designs |
+| **Figma Sites** (beta) | Publish responsive websites |
+| **Figma Buzz** (beta) | Produce on-brand assets at scale |
+| **Figma Specs** (beta) | Capture a product's intent and context |
 
-We hope you enjoy the article. If you're interested, it's just below!
+## Key features for designers
 
-![Figma dgitags ](/uploads/blog/a-la-decouverte-de-figma-0.webp)
+- **Components and variants**: create an element once (a button, a card) and reuse it everywhere; a change applies to all its instances.
+- **Auto Layout**: elements adapt automatically to their content and to the screen size.
+- **Variables**: centralized colors, spacing or text, with modes (light and dark, languages…).
+- **Shared libraries**: the team's design system is available in every file.
+- **Prototyping**: interactions, transitions and simple logic, without code.
+- **Community**: thousands of plugins, UI kits and shared files.
 
-## **Introducing the tool**
+## What AI changes in Figma
 
-Figma is a vector graphics editor and prototyping tool that is primarily web-based, with additional offline features enabled by desktop applications for macOS and Windows.
+### Figma Make: from prompt to coded prototype
 
-Figma's feature set focuses on use in user interface and user experience design, with an emphasis on real-time collaboration. (Wikipedia)
+**Figma Make** turns a plain-language description, or an existing design, into a **working prototype or web app**. Everything it generates is code, but stays visually editable on the canvas: you switch between the two. You can give it your design system as context, attach files, plug in data through connectors and even add a content back office.
 
-> **Read also:** [Webflow vs WordPress: which is the best website-building platform in 2021?](/en/blog/webflow-vs-wordpress)
+For a product manager, it's a way to test an idea in a few hours. For a designer, it's a way to show a journey that "works" rather than a series of screens.
 
-## **The features** 
+### The Figma agent and everyday AI tools
 
-### **1/ Design**
+- **The Figma agent** generates and reworks screens, automates repetitive tasks and gives feedback on a design.
+- **Figma Weave** and image editing generate images and vectors, or remove an object from a photo.
+- **Productivity tools** rename layers, replace content, adjust the tone of a text, add interactions or find a component with visual search.
 
-#### o  **Easy-to-use design tools**
+These features use **AI credits**, included in limited amounts in the free plan and more generously in every paid seat.
 
-Þ   A **modern pen tool**: you can draw in any direction with vector networks.
+### The MCP server: when coding agents read your designs
 
-Þ   **Instant arc drawing**: you can easily design clocks, watch faces or pie charts with the **Arc tool**.
+This is probably the deepest change for product teams. **Figma's MCP server** (Model Context Protocol) connects Figma to AI assistants and coding agents: Claude Code, Cursor, Codex, VS Code and many more. Among other things, it lets you:
 
-Þ   **Be expressive with OpenType**: you'll have access to advanced font features to fully express your creativity in line with your brand.
+- **generate code** from a selection of screens;
+- pass the **design context** to the agent: components, variables, layout;
+- reuse the actual components from your codebase thanks to **Code Connect**;
+- in beta, **write directly into Figma**: the agent creates or edits screens, or turns a live interface into editable layers.
 
-#### o  **Automatic layout (Auto Layout)**
+The server comes in a hosted version, recommended and available on every plan, and a local version through the desktop app, reserved for Dev or Full seats on paid plans.
 
-Þ   You can **resize** buttons along with their text and reorder lists when items are moved. You'll have less manual resizing to do.
+The result: the handoff from design to development, long done "by hand", increasingly goes through AI agents. That's exactly how our [AI product teams](/en/ai-product-team) work.
 
-Þ   You can **stretch** Auto Layout components left and right (or up and down) to make responsive design easier.
+> **Read also:** [Figma vs Sketch in 2026: which tool to choose in the age of AI?](/en/blog/figma-vs-sketch)
 
-Þ   Auto Layout's padding, direction and spacing settings **translate directly into code**, which makes developers' work simpler.
+## How much does Figma cost in 2026?
 
-#### o  **Work more efficiently thanks to plugins**
+| Plan | Full seat (designer) | Dev seat | Collab seat |
+|---|---|---|---|
+| **Starter** | Free | – | – |
+| **Professional** | $16/month | $12/month | $3/month |
+| **Organization** | $55/month (yearly) | $25/month | $5/month |
+| **Enterprise** | $90/month (yearly) | $35/month | $5/month |
 
-You can eliminate repetitive tasks, import data and optimise custom workflows.
+*Public prices in US dollars excluding tax, checked in November 2026.*
 
-Þ   **Plugins for different uses**: images stored on your computer, flow diagrams, accessibility and colour choices, charts, icons, etc.
+On the AI side, the free plan gives 150 credits a day (up to 500 a month). A Full seat on Professional includes 3,000 a month, Dev and Collab seats 500.
 
-Þ   **No need for developers**: you can create a plugin yourself without help from a programmer
+## Figma's strengths and limits
 
-Þ   **Private plugins**: companies that use Figma can create and distribute private plugins within their organisation.
+**Strengths**
 
-### **2/ Prototyping**
+- Real-time collaboration, with designers, developers and product managers in the same files.
+- A complete platform, from scoping (FigJam) to code (Dev Mode, Make, MCP server).
+- The most advanced built-in AI among design tools.
+- A very rich community and plugin ecosystem.
 
-#### o  **Create prototypes that look like the real experience**
+**Limits**
 
-You can turn your static design files into an interactive experience. You don't need to know how to code.
+- An internet connection is a must.
+- Costs climb quickly with the number of seats, on top of AI credit usage.
+- Files are hosted by Figma: organizations that want to keep everything in-house will look at Penpot, open source and self-hostable.
 
-Þ   **Creating interactions**: you can connect user interface (UI) elements to each other and choose your interactions and animations — for example, on a click or a button press.
+## Need a Figma expert?
 
-Þ  **Different frames**: you can choose an interface suited to a mobile device, a computer or even a tablet, so you're immersed in a real experience.
+Mastering Figma in 2026 also means using it with AI: prototyping with Make, structuring a design system that agents can read, connecting designs to code. The designers in our network do it every day. Discover our [freelance UI designers](/en/roles/freelance-ui-designer), our [freelance product designers](/en/roles/freelance-product-designer) and our [freelance UX designers](/en/roles/freelance-ux-designer).
 
-#### o  **Interactions with no programming required**
-
-Þ   **Create advanced transitions with Smart Animate**: you can automatically animate similar objects and create detailed transitions.
-
-Þ   **Creating dynamic overlays**: you can create several layers of interactive content overlays.
-
-Þ   **Using animated GIFs**: GIFs let you represent motion designs, video elements and subtle animations.
-
-### **3/ Design system features**
-
-Þ   **A search tool**: this feature lets you find the assets you're looking for. Drag and drop them into your file.
-
-Þ   You can **create styles** that everyone can use and apply to any object.
-
-Þ   Publish **libraries** containing all your shareable assets (icons, backgrounds, images, avatars, fonts, etc.)
-
-Did the features interest you? If so, stay with us. We'll now move on to installing and using Figma.
-
-## **Installation** 
-
-1/ **Launch Figma on your computer**
-
-![Figma dgitags homepage](/uploads/blog/a-la-decouverte-de-figma-1.webp)
-
-Or **download Figma** onto your computer
-
-![Figma dgitags download](/uploads/blog/a-la-decouverte-de-figma-2.webp)
-
-2/ **Sign up or log in**
-
-If you need to sign up, the screen will look like this:
-
-![Figma dgitags sign in sign up](/uploads/blog/a-la-decouverte-de-figma-3.webp)
-
-You can sign up in two ways:
-
-\-      By entering your email address
-
-\-      By using your Google account
-
-If you need to log in, the screen will look like this:
-
-![Figma dgitags log in](/uploads/blog/a-la-decouverte-de-figma-4.webp)
-
-Let's get started!
-
-## **Using Figma** 
-
-Once you're logged in or signed up, you can start using Figma. The following page will appear:
-
-![Figma dgitags create project](/uploads/blog/a-la-decouverte-de-figma-5.webp)
-
- Choose a name for your **project team**.
-
-![Figma dgitags invite collaborators](/uploads/blog/a-la-decouverte-de-figma-6.webp)
-
- **Invite your collaborators** by sharing a link or sending them an email.
-
-![Figma dgitags plan team](/uploads/blog/a-la-decouverte-de-figma-7.webp)
-
- Choose the **version** you want. In this review, we'll use the free version.
-
-Once you've completed these steps, you'll land on the following page:
-
-![Figma dgitags project dashboard](/uploads/blog/a-la-decouverte-de-figma-8.webp)
-
-Some of the folders already there are designed to help you use Figma. You have access to example prototypes. Say I click on "**Prototyping in Figma**".
-
-The page below will appear with an example prototype. You can perfectly well use an existing template by copying it into another folder to save time, or simply take inspiration from it.
-
-![Figma dgitags project](/uploads/blog/a-la-decouverte-de-figma-9.webp)
-
-On the right, you can create two different types of "**files**":
-
-![Figma dgitags design file](/uploads/blog/a-la-decouverte-de-figma-10.webp)
-
-\-      **Design file:** a file for designing, prototyping and developing a project
-
-![](/uploads/blog/a-la-decouverte-de-figma-11.webp)
-
-Before you start, you can click on "**show me around**" at the bottom to get an explanation of some of the design tools.
-
-\-      **FigJam file**: a file for collaborating on a whiteboard
-
-![figma dgitags figjam file](/uploads/blog/a-la-decouverte-de-figma-12.webp)
-
-So you have two main tools in Figma: the **Design File** and the **FigJam File**. Let's start with the Design File.
-
-## **Part one: Design File**
-
-If you want to create your own prototype from scratch, this part should interest you.
-
-![figma dgitags layers assets design](/uploads/blog/a-la-decouverte-de-figma-13.webp)
-
-At the top left, in the black sidebar, you have all the tools.
-
-In **Layers** and **Assets**, you'll find the different layers.
-
-At the top right, you have the settings for the layers, or for the workspace if no layer is selected.
-
-![figma dgitags design](/uploads/blog/a-la-decouverte-de-figma-14.webp)
-
- You can work directly on the interface you see, or create a frame — in other words, a screen.
-
-To create this frame, you can use the frame tool at the top left.
-
-In the example below, I created two frames:
-
-\-      **Homepage**
-
-\-      **Product 1**
-
-Then I inserted a rectangle to turn it into a banner. I also inserted some text.
-
-![figma dgitags design frame](/uploads/blog/a-la-decouverte-de-figma-15.webp)
-
-In **Prototype**, then **Device**, I can choose which type of device I want to create this project for.
-
-![figma dgitags design rules](/uploads/blog/a-la-decouverte-de-figma-16.webp)
-
-Figma lets you create reusable **components** (icons, backgrounds, avatars, fonts...) that can be shared between different users or different projects. These components are referenced only once in the **design system**, so any change to one of them is reflected in every project where it's used.
-
-For more tips and analysis of the tools, you can check out [this video](https://www.youtube.com/watch?v=e68PKFYWfoQ) on YouTube, which we found interesting.
-
-Did you enjoy this first part? Stay with us! It's not over yet.
-
-## **Part two: FigJam File**
-
-Would you like to see a quick video introduction to FigJam? It's [here](https://www.youtube.com/watch?v=axDzyLEfYgU).
-
-FigJam offers an **online whiteboard** to allow teams to collaborate.
-
-There are several possible uses for this board:
-
-\-      **Brainstorming** with your teams
-
-\-      **Drawing flows and diagrams**
-
-\-      **Adding sticky notes**
-
-\-      **Building a user flow**
-
-\-      Etc.
-
-The goal is to allow everyone to **take part and share their ideas**.
-
-FigJam recently launched a built-in audio feature that lets teams talk live without having to start a video call.
-
-FigJam is **free** for the time being. A paid plan is expected to launch in 2022. FigJam now competes with tools such as **Miro, Mural** or **Freehand**.
-
-We hope this detailed introduction to Figma's two main tools has interested you. Let's now move on to Figma's pricing.
-
-## **Pricing** 
-
-![](/uploads/blog/a-la-decouverte-de-figma-22.webp)
-
-## **Our final verdict**
-
-**Figma is therefore a very comprehensive design tool.** All the features of its competitors (Sketch and Adobe XD) can be found in a simplified, intuitive interface.
-
-Figma has many advantages and also some drawbacks, but it can nonetheless be considered a superb UX/UI design tool for teamwork.
-
-#### **Figma's strengths** 
-
-\-       The ability for several people to collaborate on a project
-
-\-       Building a prototype from A to Z without any programming
-
-\-       Handy for developing a design system (a large library of graphic components)
-
-\-       Lots of plugins
-
-#### **Figma's weaknesses** 
-
-\-       The free version is enough for 2-3 people, but beyond that it isn't possible
-
-\-       Requires a good internet connection
-
-It's a **4.5/5** for Figma!
-
-And that's the end of this review. Yes, already… Don't worry, we'll be back soon with even more content!
-
-The Digitags team nevertheless hopes this article has interested you and taught you a few things about Figma, an essential tool.
-
-See you soon!
-
-Source: Figma website
+*Sources: official [Figma](https://www.figma.com/) website ([pricing](https://www.figma.com/pricing/), [AI features](https://www.figma.com/ai/), [Figma Make](https://www.figma.com/make/), [MCP server guide](https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Figma-MCP-server)), checked in November 2026.*

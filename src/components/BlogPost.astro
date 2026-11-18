@@ -25,7 +25,10 @@ const { post, lang = 'fr' } = Astro.props;
 const en = lang === 'en';
 
 const { Content } = await render(post);
-const dateFmt = post.data.date?.toLocaleDateString(en ? 'en-GB' : 'fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+const fmt = (d?: Date) => d?.toLocaleDateString(en ? 'en-GB' : 'fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+const dateFmt = fmt(post.data.date);
+const updatedFmt = fmt(post.data.updated);
+const faq: { q: string; a: string }[] = post.data.faq ?? [];
 
 // Maillage interne automatique — priorité aux fiches métiers.
 // Les tags du blog et le blogCategory des fiches partagent la même taxonomie.
@@ -79,6 +82,7 @@ const articleJsonLd = JSON.stringify({
   headline: post.data.title,
   ...(post.data.description ? { description: post.data.description } : {}),
   ...(post.data.date ? { datePublished: post.data.date.toISOString() } : {}),
+  ...(post.data.updated ? { dateModified: post.data.updated.toISOString() } : {}),
   image: new URL(post.data.image ?? '/assets/og-default.png', Astro.site).href,
   inLanguage: lang,
   url: postUrl,
@@ -87,9 +91,22 @@ const articleJsonLd = JSON.stringify({
   author: { "@id": ORG_ID },
   publisher: { "@id": ORG_ID },
 });
+// FAQ de fin d'article : questions/réponses en texte brut (le markdown léger
+// des réponses — **gras**, [liens](/url) — est rendu côté page, retiré du JSON-LD).
+const inline = (txt: string) => txt
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+  .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+  .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2">$1</a>');
+const plain = (txt: string) => txt.replace(/\*\*([^*]+)\*\*/g, '$1').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+const faqJsonLd = faq.length ? JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map(({ q, a }) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: plain(a) } })),
+}) : null;
 ---
 <Base title={`${post.data.title} | digitags.work`} description={post.data.description} image={post.data.image && ogCoverPath(post.data.image)} ogType="article">
   <script type="application/ld+json" set:html={articleJsonLd} />
+  {faqJsonLd && <script type="application/ld+json" set:html={faqJsonLd} />}
   <article>
     <section class="page-hero" style="padding-bottom: 36px;">
       <div class="container">
@@ -98,6 +115,7 @@ const articleJsonLd = JSON.stringify({
         <h1>{post.data.title}</h1>
         <p class="post-meta">
           {dateFmt && <span>{dateFmt}</span>}
+          {updatedFmt && <span>{en ? 'Updated' : 'Mis à jour le'} {updatedFmt}</span>}
           {en
             ? post.data.tags.map((tg: string) => <span class="post-tag">#{tagLabelEn(tg)}</span>)
             : post.data.tags.map((tg: string) => <a href={`/tag/${tg}`} class="post-tag">#{tg}</a>)}
@@ -106,6 +124,17 @@ const articleJsonLd = JSON.stringify({
     </section>
     <div class="container prose">
       <Content />
+      {faq.length > 0 && (
+        <section class="post-faq">
+          <h2>{en ? 'Frequently asked questions' : 'Questions fréquentes'}</h2>
+          {faq.map(({ q, a }) => (
+            <details class="faq-item">
+              <summary>{q}</summary>
+              <p class="faq-body" set:html={inline(a)} />
+            </details>
+          ))}
+        </section>
+      )}
     </div>
   </article>
 

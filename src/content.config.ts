@@ -7,8 +7,12 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string().optional(),
     date: z.coerce.date().optional(),
+    // Date de dernière mise à jour éditoriale (affichée + dateModified).
+    updated: z.coerce.date().optional(),
     tags: z.array(z.string()).default([]),
     image: z.string().optional(),
+    // Questions fréquentes affichées en fin d'article (+ données FAQPage).
+    faq: z.array(z.object({ q: z.string(), a: z.string() })).default([]),
     draft: z.boolean().default(false),
   }),
 });
@@ -21,8 +25,12 @@ const blogEn = defineCollection({
     title: z.string(),
     description: z.string().optional(),
     date: z.coerce.date().optional(),
+    // Date de dernière mise à jour éditoriale (affichée + dateModified).
+    updated: z.coerce.date().optional(),
     tags: z.array(z.string()).default([]),
     image: z.string().optional(),
+    // Questions fréquentes affichées en fin d'article (+ données FAQPage).
+    faq: z.array(z.object({ q: z.string(), a: z.string() })).default([]),
     draft: z.boolean().default(false),
   }),
 });

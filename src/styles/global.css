@@ -1294,6 +1294,10 @@ a.chip:hover { border-color: var(--blue); }
 .faq-item[open] summary::after { transform: rotate(90deg); color: var(--blue); }
 .faq-item .faq-body { padding: 0 22px 20px; font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
 .faq-item .faq-body a { color: var(--blue); font-weight: 600; }
+/* FAQ en fin d'article : les styles .prose (marges des p, h2) ne s'appliquent pas aux cartes. */
+.post-faq { margin-top: 48px; }
+.post-faq h2 { margin-bottom: 18px; }
+.prose .post-faq .faq-body { margin: 0; }
 
 @media (max-width: 980px) {
   .split-section, .atoz { grid-template-columns: 1fr; gap: 28px; }
