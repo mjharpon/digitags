@@ -1,83 +1,124 @@
 ---
-// Version anglaise de src/pages/politique-de-protection-des-donnees.astro.
+// English version of src/pages/politique-de-protection-des-donnees.astro — keep both aligned.
 import Base from '../../layouts/Base.astro';
+import { SOCIETE as S } from '../../data/societe';
 ---
 <Base
   title="Data protection policy | digitags.work"
-  description="digitags.work data protection policy: data collected, cookies, rights of access, rectification and erasure (GDPR)."
+  description="digitags.work data protection policy: data collected, purposes, legal bases, retention periods, processors, transfers outside the EU and your rights (GDPR)."
 >
   <section class="page-hero" style="padding-bottom: 20px;">
     <div class="container">
       <p class="eyebrow">Privacy</p>
       <h1>The Hub's data protection policy</h1>
-      <p class="lead">We take data protection seriously.</p>
+      <p class="lead">What we collect, why, for how long, and how to exercise your rights.</p>
+      <p class="post-meta" style="justify-content: flex-start;">Updated 21 November 2026</p>
     </div>
   </section>
-
   <div class="container prose">
-    <h2>Introduction</h2>
-    <p>digitags.work is committed to protecting the privacy of all visitors to www.digitags.work. This privacy statement covers our practices in relation to our website. It is designed to help you understand how we collect, use and safeguard the personal information you provide to us, and to help you make informed decisions when using our site and services. digitags.work fully respects your right to privacy: we do not collect any personal information about you when you visit our site, unless you choose to provide it through one of our forms.</p>
-    <p>By using this site, you consent to the collection and use of your information under the terms of this statement, in accordance with the Data Protection Acts 1988 to 2018, the ePrivacy Regulations 2011, and the EU General Data Protection Regulation (GDPR).</p>
-    <p>We update this policy regularly: please check it from time to time.</p>
+    <h2>Data controller</h2>
+    <p>Personal data collected on www.digitags.work is processed by <strong>{S.denomination}</strong>, {S.formeEn}, {S.siege}, {S.rcs} (see our <a href="/en/legal-notice">legal notice</a>). For any question about your data: <a href={`mailto:${S.email}`}>{S.email}</a>.</p>
+    <p>This policy applies under the General Data Protection Regulation (GDPR, EU Regulation 2016/679) and the French Data Protection Act of 6 January 1978 as amended ("Informatique et Libertés"). We have not appointed a data protection officer: the address above is dedicated to these requests.</p>
 
-    <h2>Information we collect</h2>
-    <p>In the course of operating our website, we may collect and process the following data about you:</p>
+    <h2>Visiting the site: no tracking cookies</h2>
+    <p>We measure audience with <strong>Plausible Analytics</strong>, a European tool that uses <strong>no cookies</strong>, collects no personal data and cannot follow you from one site to another. Statistics are aggregated and anonymous (pages viewed, referring sites, country, device type). That's why the site shows no consent banner.</p>
+    <p>The site sets no advertising or audience-measurement cookies. Only strictly necessary items may be stored in your browser: remembering that you closed the information message (local storage) and, on private pages reserved for our clients or our team, a session or access cookie. These items are exempt from consent.</p>
+    <p>Our hosting provider, Cloudflare, technically processes visitors' IP addresses to deliver pages and protect the site against attacks, on the basis of our legitimate interest in keeping the service secure.</p>
+
+    <h2>The data we collect and why</h2>
+    <div style="overflow-x: auto;">
+      <table>
+        <thead>
+          <tr><th>Situation</th><th>Data</th><th>Purpose</th><th>Legal basis</th><th>Retention</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>You contact us (contact form)</td>
+            <td>Name, email, company, expertise needed, message, attached brief (optional)</td>
+            <td>Answer your request, propose profiles and a quote</td>
+            <td>Pre-contractual steps taken at your request</td>
+            <td>3 years after our last exchange</td>
+          </tr>
+          <tr>
+            <td>You sign up as a freelancer</td>
+            <td>First name, last name, email, job, specialty, day rate, availability, references, notes, portfolio link, CV, photo and portfolio PDF (optional)</td>
+            <td>Review your profile, offer you matching missions, present your profile to our clients</td>
+            <td>Pre-contractual steps taken at your request</td>
+            <td>While your profile is active, then 3 years after our last exchange</td>
+          </tr>
+          <tr>
+            <td>Anonymized preview of your profile (freelancer)</td>
+            <td>Job, expertise and main references, without name or contact details</td>
+            <td>Showcase the network's profiles on the site and in our newsletters</td>
+            <td>Legitimate interest; you can object when signing up (checkbox) or at any time</td>
+            <td>Until you object or the profile is deleted</td>
+          </tr>
+          <tr>
+            <td>Emails about your sign-up or availability (freelancer)</td>
+            <td>First name, email, job</td>
+            <td>Confirm your sign-up, check that your information is up to date</td>
+            <td>Legitimate interest in keeping the network up to date; you can ask to stop receiving them</td>
+            <td>Same as the profile</td>
+          </tr>
+          <tr>
+            <td>You are a client or prospect</td>
+            <td>Business contact details, exchanges, proposals and mission documents</td>
+            <td>Prepare and carry out our missions, invoice</td>
+            <td>Contract, legal obligations (accounting)</td>
+            <td>Duration of the relationship, then 3 years; accounting records 10 years</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>CVs you send are kept in a private storage space that only the digitags team can access. When a CV is shared with a client, we favor an anonymized version, through a link that expires after 7 days. We make no automated decisions producing legal effects concerning you. <strong>We do not sell or rent your data.</strong></p>
+
+    <h2>Who can access your data</h2>
     <ul>
-      <li>Details of your visits to our site and the resources you access (traffic data, pages viewed, communication data), as well as the information you provide to us when listing your profile on the platform. All IP addresses are anonymised: no information can be linked to a visitor of the site.</li>
-      <li>The data provided when you sign up or when you communicate with us through our contact forms or the "I'm a freelancer" button.</li>
+      <li><strong>The digitags team</strong>, only as far as needed to handle your request or offer you missions.</li>
+      <li><strong>Our clients</strong>, for freelancers: only the information relevant to a given mission, preferably in anonymized form.</li>
+      <li><strong>The companies of the <a href="/en/the-group">Digitags - Donutz group</a></strong>, when a project involves them.</li>
+      <li><strong>Our technical processors</strong>, who act on our instructions:</li>
     </ul>
     <div style="overflow-x: auto;">
       <table>
         <thead>
-          <tr><th>Type of collection</th><th>Categories</th><th>Details</th></tr>
+          <tr><th>Provider</th><th>Role</th><th>Data location</th></tr>
         </thead>
         <tbody>
-          <tr><td rowspan="2">Provided by the freelancer</td><td>Personal information</td><td>First name, last name, email</td></tr>
-          <tr><td>Professional information</td><td>Role, specialty, portfolio, professional references, willingness to appear in newsletters or on the site, CV (document provided by the freelancer)</td></tr>
-          <tr><td>Generated by your use of the site</td><td>Browsing data</td><td>Necessary cookies and, subject to your consent, other cookies and IP address</td></tr>
+          <tr><td>Cloudflare, Inc. (United States)</td><td>Site hosting, security, internal notifications</td><td>Global network, including the United States</td></tr>
+          <tr><td>Supabase, Inc. (United States)</td><td>Database and file storage (forms, profiles, CVs)</td><td>European Union (Sweden)</td></tr>
+          <tr><td>Resend (United States)</td><td>Emails sent to freelancers</td><td>European Union (Ireland)</td></tr>
+          <tr><td>Google (Google Workspace)</td><td>Team email</td><td>European Union and United States</td></tr>
+          <tr><td>Plausible Insights OÜ (Estonia)</td><td>Cookieless audience measurement, no personal data</td><td>European Union</td></tr>
         </tbody>
       </table>
     </div>
 
-    <h2>Use of cookies</h2>
-    <h3>What are cookies?</h3>
-    <p>Like most professional websites, this site may use cookies — small files downloaded to your computer — to improve your experience. This section describes the information they collect, how we use them and why we sometimes need to store them, as well as how to prevent them from being stored (which may, however, degrade certain features of the site).</p>
-    <h3>Disabling cookies</h3>
-    <p>You can prevent cookies from being set by adjusting your browser settings (see its help section for how to do so). Disabling cookies may affect certain features of this site and of many other sites you visit.</p>
-    <h3>Third-party cookies</h3>
-    <p>When an audience measurement solution is used (such as Google Analytics), it helps us understand how you use the site in order to improve your experience: time spent on the site, pages visited. All IP addresses are anonymised at collection, so that no data can be linked to a visitor, thereby guaranteeing your privacy.</p>
+    <h2>Transfers outside the European Union</h2>
+    <p>Some of our providers are US companies (Cloudflare, Google, Supabase, Resend). Even when data is hosted in the European Union, it may be accessed from the United States, for example for maintenance or support. These transfers are covered by the safeguards provided by the GDPR: the EU–US Data Privacy Framework for certified companies and, failing that, the standard contractual clauses adopted by the European Commission.</p>
 
-    <h2>Use of your information</h2>
-    <p>The information we collect and store is mainly used to provide you with our services (offering you freelance missions, and our newsletters). We may also use it for the following purposes:</p>
-    <p><strong>For freelancers:</strong></p>
+    <h2>Security</h2>
+    <p>The site is served over HTTPS only. CVs and internal documents are stored in a private space, protected by access rules that restrict them to the team. Document sharing links expire automatically, and commercial proposal pages can be password-protected.</p>
+
+    <h2>Your rights</h2>
+    <p>You have the following rights over your data:</p>
     <ul>
-      <li>Allowing the digitags.work teams to check whether your profile may suit the missions proposed by our clients;</li>
-      <li>Contacting you where appropriate;</li>
-      <li>Proposing and sharing your profile with clients who may be interested in your services;</li>
-      <li>Featuring your profile (limited information: first name, last name, role, main references), if you have authorised us to do so via the relevant checkbox on the sign-up form, in our newsletters presenting the latest profiles to join.</li>
+      <li><strong>Access</strong>: get a copy of the data we hold about you;</li>
+      <li><strong>Rectification</strong>: correct inaccurate or incomplete data;</li>
+      <li><strong>Erasure</strong>: ask us to delete your data, for example your freelancer profile;</li>
+      <li><strong>Restriction</strong>: temporarily freeze the use of your data;</li>
+      <li><strong>Objection</strong>: object to processing based on our legitimate interest, including the display of your anonymized profile or our emails;</li>
+      <li><strong>Portability</strong>: receive the data you provided in a machine-readable format;</li>
+      <li><strong>Withdrawal of consent</strong>, where processing is based on it;</li>
+      <li><strong>Post-mortem instructions</strong>: decide what happens to your data after your death (French law).</li>
     </ul>
-    <p><strong>For prospects:</strong></p>
-    <ul>
-      <li>Contacting you when you have expressed a need;</li>
-      <li>Sharing the latest news about digitags.work with you.</li>
-    </ul>
+    <p>To exercise them, email us at <a href={`mailto:${S.email}`}>{S.email}</a> or write to {S.denomination}, {S.siege}. We will reply within one month. We may ask you to prove your identity if we have reasonable doubts.</p>
+    <p>If, after contacting us, you believe your rights are not respected, you can lodge a complaint with the French data protection authority, the <strong>CNIL</strong>: <a href="https://www.cnil.fr/en/home">www.cnil.fr</a> or 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07, France.</p>
 
-    <h2>Disclosure of your information</h2>
-    <p>Where applicable, we may disclose your personal information to any member of our group (subsidiaries, holding company and its other subsidiaries, where relevant). We may also disclose your personal information to third parties in the event of a legal claim. <strong>We do not sell your data.</strong></p>
+    <h2>Links to other sites</h2>
+    <p>The site contains links to third-party sites, which apply their own privacy policies. We are not responsible for their practices.</p>
 
-    <h2>Third-party links</h2>
-    <p>You may find links to third-party websites on our site. These sites have their own privacy policies, which we invite you to review. We accept no responsibility for their practices, over which we have no control.</p>
-
-    <h2>Access to your information</h2>
-    <p>Your data is only accessible to digitags.work, as data controller, for the purposes for which you provide it. You have the right to request a copy of the personal data we hold about you; we will provide it within 30 days.</p>
-
-    <h2>Right to erasure of your data</h2>
-    <p>You can request the deletion of your data at any time by writing to <a href="mailto:contact@digitags.work">contact@digitags.work</a>. We will delete it within 36 hours and confirm by email.</p>
-
-    <h2>Right to rectification of your data</h2>
-    <p>You can request changes to your data at any time by writing to <a href="mailto:contact@digitags.work">contact@digitags.work</a>.</p>
-
-    <h2>Contact</h2>
-    <p>Questions about this privacy policy are welcome: through our <a href="/en/contact">contact form</a> or directly at <a href="mailto:contact@digitags.work">contact@digitags.work</a>.</p>
+    <h2>Changes</h2>
+    <p>We may update this policy, for example if we add a service or a provider. The date of the last update appears at the top of this page.</p>
   </div>
 </Base>
