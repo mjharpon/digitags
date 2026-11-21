@@ -17,7 +17,7 @@ import { SOCIETE as S } from '../../data/societe';
     <h2>Site publisher</h2>
     <p>www.digitags.work is published by:</p>
     <ul>
-      <li><strong>{S.denomination}</strong>, {S.formeEn}{S.capital && <> with a share capital of {S.capital}</>}</li>
+      <li><strong>{S.denomination}</strong>, {S.formeEn}{S.capitalEn && <> with a share capital of {S.capitalEn}</>}</li>
       <li>Registered office: {S.siege}</li>
       <li>{S.rcs} — SIRET {S.siret}</li>
       <li>EU VAT number: {S.tva}</li>
