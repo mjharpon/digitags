@@ -164,7 +164,25 @@ const specialites = [
       btn.disabled = true;
       btn.textContent = 'Envoi en cours…';
       try {
-        const res = await fetch('/api/candidature', { method: 'POST', body: new FormData(form) });
+        const body = new FormData(form);
+        // La photo est réduite dans le navigateur (≤ 640 px, JPEG) : elle est affichée en vignette,
+        // inutile de stocker 5 Mo. En cas d'échec on envoie l'original.
+        const photo = body.get('photo');
+        if (photo instanceof File && photo.size > 150 * 1024) {
+          try {
+            const bmp = await createImageBitmap(photo);
+            const k = Math.min(1, 640 / Math.max(bmp.width, bmp.height));
+            const canvas = document.createElement('canvas');
+            canvas.width = Math.round(bmp.width * k);
+            canvas.height = Math.round(bmp.height * k);
+            canvas.getContext('2d')!.drawImage(bmp, 0, 0, canvas.width, canvas.height);
+            const blob = await new Promise<Blob | null>((ok) => canvas.toBlob(ok, 'image/jpeg', 0.8));
+            if (blob && blob.size < photo.size) {
+              body.set('photo', new File([blob], 'photo.jpg', { type: 'image/jpeg' }));
+            }
+          } catch { /* on garde la photo d'origine */ }
+        }
+        const res = await fetch('/api/candidature', { method: 'POST', body });
         const data = await res.json().catch(() => ({ ok: false }));
         if (!res.ok || !data.ok) throw new Error(data.error || 'Erreur serveur');
         for (const el of Array.from(form.children)) {
