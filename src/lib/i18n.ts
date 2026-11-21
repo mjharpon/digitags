@@ -181,6 +181,7 @@ export const ROUTES: Record<string, string> = {
   '/devenir-freelance': '/en/become-a-freelancer',
   '/merci': '/en/thank-you',
   '/politique-de-protection-des-donnees': '/en/privacy-policy',
+  '/mentions-legales': '/en/legal-notice',
 };
 
 // Les fiches métiers rejoignent le mapping global (hreflang, sitemap, sélecteur).

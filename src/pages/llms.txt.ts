@@ -76,6 +76,7 @@ ${line('The Digitags - Donutz group', '/en/the-group', 'the European digital gro
 ${line('Become a Hub freelancer', '/en/become-a-freelancer', 'freelancers get listed in 30 seconds to receive missions.')}
 ${line('Contact — Discuss your project', '/en/contact', 'describe a need; quick callback and profile proposals.')}
 ${line('Privacy policy', '/en/privacy-policy')}
+${line('Legal notice', '/en/legal-notice')}
 
 ## Role guides (English)
 ${metiersEn.map((m) => line(m.data.title, `/en/roles/${m.id}`, m.data.description)).join('\n')}
@@ -96,6 +97,7 @@ ${blog.slice(0, 10).map((b) => line(b.data.title, `/blog/${b.id}`, b.data.descri
 ${line('All blog articles (English)', '/en/blog', `index of the ${blogEn.length} English articles.`)}
 ${line('Tous les articles du blog', '/blog', `index des ${blog.length} articles : collaboration freelance, design, product, tech & data.`)}
 ${line('Politique de protection des données', '/politique-de-protection-des-donnees')}
+${line('Mentions légales', '/mentions-legales')}
 ${line('Plan du site (XML)', '/sitemap-index.xml')}
 `;
 

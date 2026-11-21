@@ -2614,3 +2614,7 @@ html { scroll-padding-top: 92px; scroll-behavior: smooth; }
 @media (max-width: 1024px) { .home-refs-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .home-refs-grid { grid-template-columns: 1fr; } }
 .rel-service { margin-top: 18px; font-size: 14px; }
+/* Bloc « L'agence du groupe » sur les fiches métiers marketing. */
+.agence-groupe .agence-texte { max-width: 720px; color: var(--ink-soft); line-height: 1.65; }
+.agence-groupe .agence-texte a { color: var(--blue); font-weight: 600; }
+.agence-groupe-lien { margin-top: 14px; font-size: 14px; }

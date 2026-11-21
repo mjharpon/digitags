@@ -1,0 +1,47 @@
+---
+// English version of src/pages/mentions-legales.astro.
+import Base from '../../layouts/Base.astro';
+import { SOCIETE as S } from '../../data/societe';
+---
+<Base
+  title="Legal notice | digitags.work"
+  description="digitags.work legal notice: site publisher (DIGITAGS SAS), publication director, hosting provider, intellectual property."
+>
+  <section class="page-hero" style="padding-bottom: 20px;">
+    <div class="container">
+      <p class="eyebrow">Legal information</p>
+      <h1>Legal notice</h1>
+    </div>
+  </section>
+  <div class="container prose">
+    <h2>Site publisher</h2>
+    <p>www.digitags.work is published by:</p>
+    <ul>
+      <li><strong>{S.denomination}</strong>, {S.formeEn}{S.capital && <> with a share capital of {S.capital}</>}</li>
+      <li>Registered office: {S.siege}</li>
+      <li>{S.rcs} — SIRET {S.siret}</li>
+      <li>EU VAT number: {S.tva}</li>
+      <li>Email: <a href={`mailto:${S.email}`}>{S.email}</a></li>
+      {S.telephone && <li>Phone: {S.telephone}</li>}
+    </ul>
+    <p>DIGITAGS is part of the <a href="/en/the-group">Digitags - Donutz European digital group</a>.</p>
+
+    <h2>Publication director</h2>
+    <p>{S.directeurPublication}, President of {S.denomination}.</p>
+
+    <h2>Hosting</h2>
+    <p>The site is hosted by <strong>{S.hebergeur.nom}</strong>, {S.hebergeur.adresse} — phone: {S.hebergeur.telephone} — <a href={S.hebergeur.site}>{S.hebergeur.site.replace('https://', '')}</a>.</p>
+
+    <h2>Intellectual property</h2>
+    <p>All content on this site (text, visuals, logos, brand, layout) is the property of {S.denomination} or used with permission. Any reproduction, representation or adaptation, in whole or in part, without prior written consent is prohibited.</p>
+
+    <h2>Personal data</h2>
+    <p>How we collect and process your data, and your rights (access, rectification, erasure), are described in our <a href="/en/privacy-policy">privacy policy</a>.</p>
+
+    <h2>Links and liability</h2>
+    <p>The site may contain links to third-party sites over which {S.denomination} has no control and for which it cannot be held responsible. {S.denomination} strives to keep the information published accurate, without guaranteeing that it is complete.</p>
+
+    <h2>Contact</h2>
+    <p>For any question: <a href={`mailto:${S.email}`}>{S.email}</a> or through our <a href="/en/contact">contact form</a>.</p>
+  </div>
+</Base>

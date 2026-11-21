@@ -9,6 +9,7 @@ import Base from '../layouts/Base.astro';
 import Breadcrumb from './Breadcrumb.astro';
 import { byOrder } from '../lib/sort';
 import { postsForMetier } from '../lib/related';
+import { lienAgence } from '../data/agence-groupe';
 
 interface Props { fiche: any; lang?: 'fr' | 'en' }
 const { fiche, lang = 'fr' } = Astro.props;
@@ -121,6 +122,8 @@ const SERVICE_BY_CATEGORY: Record<string, { href: string; label: string }> = en
       recrutement: { href: '/recrutement-freelance', label: 'Collaboration freelance' },
     };
 const parent = fiche.data.blogCategory ? SERVICE_BY_CATEGORY[fiche.data.blogCategory] : undefined;
+// Lien contextuel vers la page de service de l'agence du groupe (fiches marketing).
+const agence = lienAgence(fiche.id, en);
 
 const collectionName = en ? 'metiers-en' : 'metiers';
 const metierHref = (id: string) => (en ? `/en/roles/${id}` : `/metiers/${id}`);
@@ -259,6 +262,17 @@ const t = en
       </div>
     )}
   </article>
+
+  {agence && (
+    <section class="rel-section agence-groupe">
+      <div class="container">
+        <p class="eyebrow">{en ? "The group's agency" : "L'agence du groupe"}</p>
+        <h2 class="rel-title">Donutz Digital</h2>
+        <p class="agence-texte">{agence.texte} <a href={agence.href}>{agence.ancre}</a>.</p>
+        <p class="agence-groupe-lien"><a href={en ? '/en/the-group' : '/le-groupe'} class="arrow-link">{en ? 'About the Digitags - Donutz group' : 'Le groupe Digitags - Donutz'} <span aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+  )}
 
   {relatedMetiers.length > 0 && (
     <section class="rel-section">

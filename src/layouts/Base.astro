@@ -84,6 +84,8 @@ const t = en
       contactFooter: 'Tell us what you need',
       rights: 'All rights reserved',
       privacyHref: '/en/privacy-policy',
+      legalHref: '/en/legal-notice',
+      legalLabel: 'Legal notice',
       privacyLabel: 'Privacy policy',
       fExpertises: [
         { href: '/en/design', label: 'Design & UX' },
@@ -123,6 +125,8 @@ const t = en
       contactFooter: 'Décrire mon besoin',
       rights: 'Tous droits réservés',
       privacyHref: '/politique-de-protection-des-donnees',
+      legalHref: '/mentions-legales',
+      legalLabel: 'Mentions légales',
       privacyLabel: 'Politique de confidentialité',
       fExpertises: [
         { href: '/design', label: 'Design & UX' },
@@ -305,6 +309,7 @@ const orgJsonLd = JSON.stringify({
       <div class="footer-bottom">
         <p>&copy; {new Date().getFullYear()} digitags.work &mdash; {t.rights}</p>
         <div class="footer-legal">
+          <a href={t.legalHref}>{t.legalLabel}</a>
           <a href={t.privacyHref}>{t.privacyLabel}</a>
         </div>
       </div>

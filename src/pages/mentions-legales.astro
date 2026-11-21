@@ -1,0 +1,48 @@
+---
+// Mentions légales (art. 6 de la loi n° 2004-575 du 21 juin 2004, LCEN).
+// Données de l'éditeur centralisées dans src/data/societe.ts (FR + EN).
+import Base from '../layouts/Base.astro';
+import { SOCIETE as S } from '../data/societe';
+---
+<Base
+  title="Mentions légales | digitags.work"
+  description="Mentions légales de digitags.work : éditeur du site (DIGITAGS SAS), directeur de la publication, hébergeur, propriété intellectuelle."
+>
+  <section class="page-hero" style="padding-bottom: 20px;">
+    <div class="container">
+      <p class="eyebrow">Informations légales</p>
+      <h1>Mentions légales</h1>
+    </div>
+  </section>
+  <div class="container prose">
+    <h2>Éditeur du site</h2>
+    <p>Le site www.digitags.work est édité par&nbsp;:</p>
+    <ul>
+      <li><strong>{S.denomination}</strong>, {S.formeFr}{S.capital && <> au capital de {S.capital}</>}</li>
+      <li>Siège social&nbsp;: {S.siege}</li>
+      <li>{S.rcs} — SIRET {S.siret}</li>
+      <li>N° de TVA intracommunautaire&nbsp;: {S.tva}</li>
+      <li>Email&nbsp;: <a href={`mailto:${S.email}`}>{S.email}</a></li>
+      {S.telephone && <li>Téléphone&nbsp;: {S.telephone}</li>}
+    </ul>
+    <p>DIGITAGS fait partie du <a href="/le-groupe">groupe digital européen Digitags - Donutz</a>.</p>
+
+    <h2>Directeur de la publication</h2>
+    <p>{S.directeurPublication}, Président de {S.denomination}.</p>
+
+    <h2>Hébergement</h2>
+    <p>Le site est hébergé par <strong>{S.hebergeur.nom}</strong>, {S.hebergeur.adresse} — téléphone&nbsp;: {S.hebergeur.telephone} — <a href={S.hebergeur.site}>{S.hebergeur.site.replace('https://', '')}</a>.</p>
+
+    <h2>Propriété intellectuelle</h2>
+    <p>L'ensemble des contenus de ce site (textes, visuels, logos, marque, mise en page) est la propriété de {S.denomination} ou fait l'objet d'une autorisation d'utilisation. Toute reproduction, représentation ou adaptation, totale ou partielle, sans autorisation écrite préalable est interdite.</p>
+
+    <h2>Données personnelles</h2>
+    <p>Les informations sur la collecte et le traitement de vos données, ainsi que vos droits (accès, rectification, suppression), figurent dans notre <a href="/politique-de-protection-des-donnees">politique de protection des données</a>.</p>
+
+    <h2>Liens et responsabilité</h2>
+    <p>Le site peut contenir des liens vers des sites tiers, sur lesquels {S.denomination} n'exerce aucun contrôle et dont elle ne saurait être tenue responsable. {S.denomination} s'efforce d'assurer l'exactitude des informations publiées, sans pouvoir en garantir l'exhaustivité.</p>
+
+    <h2>Contact</h2>
+    <p>Pour toute question&nbsp;: <a href={`mailto:${S.email}`}>{S.email}</a> ou via notre <a href="/contact">formulaire de contact</a>.</p>
+  </div>
+</Base>
